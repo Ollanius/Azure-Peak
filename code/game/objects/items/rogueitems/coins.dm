@@ -229,7 +229,7 @@
 // Ancient - Valueless
 /obj/item/roguecoin/aalloy
 	name = "psilen"
-	desc = "Withered empires can never endure."
+	desc = "A coin of polished gilbranze, beholden to a fallen kingdom that hadn't endured the passage of tyme."
 	icon_state = "a1"
 	sellprice = 0
 	base_type = CTYPE_ANCIENT
