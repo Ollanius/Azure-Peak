@@ -279,6 +279,9 @@
 		/datum/skill/misc/swimming = SKILL_LEVEL_NOVICE,
 		/datum/skill/misc/climbing = SKILL_LEVEL_NOVICE,
 	)
+	subclass_stashed_items = list(
+		"Bottling Kit" = /obj/item/bottle_kit
+	)
 
 /datum/outfit/job/roguetown/adventurer/brewer/pre_equip(mob/living/carbon/human/H)
 	..()
