@@ -312,3 +312,19 @@
 	desc = "Part robe, part butcher's apron."
 	icon_state = "surgrobe"
 	item_state = "surgrobe"
+
+//
+
+/obj/item/clothing/suit/roguetown/shirt/robe/tabardscarlet //Generic versions of the currently-unused Feldsher and Physicker robes, for use in the loadout.
+	name = "scarlet tabard"
+	desc = "Sleeveless robes, hued like rosas."
+	color = null
+	icon_state = "feldrobe"
+	item_state = "feldrobe"
+
+/obj/item/clothing/suit/roguetown/shirt/robe/tabardblack
+	name = "black tabard"
+	desc = "Sleeveless robes, tinged like charcoal."
+	color = null
+	icon_state = "surgrobe"
+	item_state = "surgrobe"
