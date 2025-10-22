@@ -341,6 +341,13 @@
 		arrows += A
 	update_icon()
 
+/obj/item/quiver/sling/bronze/Initialize()
+	. = ..()
+	for(var/i in 1 to max_storage)
+		var/obj/item/ammo_casing/caseless/rogue/sling_bullet/bronze/A = new()
+		arrows += A
+	update_icon()
+
 /obj/item/quiver/sling/paalloy/Initialize()
 	. = ..()
 	for(var/i in 1 to max_storage)
