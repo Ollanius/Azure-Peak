@@ -119,7 +119,7 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/knight
 	name = "knight's armet"
-	desc = "A noble knight's helm in the current style popular with nobility. Add a feather to show the colors of your family or allegiance."
+	desc = "A noble knight's greathelm, and the reigning symbol of sixteenth-century nobility. Add a feather to show the colors of your family or allegiance."
 	icon_state = "knight"
 	item_state = "knight"
 	adjustable = CAN_CADJUST
@@ -165,16 +165,18 @@
 /obj/item/clothing/head/roguetown/helmet/heavy/knight/iron
 	name = "iron knight's armet"
 	icon_state = "iknight"
-	desc = "A noble knight's helm made of iron."
+	desc = "A noble knight's greathelm made of iron; a popular choice in the preceding centuries, before many knew the answer to the riddle of steel.  Add a feather to show the colors of your family or allegiance."
 	smeltresult = /obj/item/ingot/iron
 	max_integrity = ARMOR_INT_HELMET_HEAVY_IRON
 
 /obj/item/clothing/head/roguetown/helmet/heavy/knight/old
 	name = "knight's helmet"
+	desc = "A knight's greathelm, forged from steel in the antiquated 'Rockhillic' style. Add a feather to show the colors of your family or allegiance. </br>‎  </br>'She waited in the dragon's keep, in the highest room of the tallest tower, for her true love, and true love's first kiss..'"
 	icon_state = "knightclassic"
 
 /obj/item/clothing/head/roguetown/helmet/heavy/knight/old/iron
 	name = "iron knight's helmet"
+	desc = "A knight's greathelm, forged from iron in the antiquated 'Rockhillic' style. Add a feather to show the colors of your family or allegiance. </br>‎  </br>'Despite everything, it's still you.'"
 	icon_state = "iknightclassic"
 	smeltresult = /obj/item/ingot/iron
 	max_integrity = ARMOR_INT_HELMET_HEAVY_IRON
