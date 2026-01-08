@@ -27,7 +27,7 @@
 
 /obj/item/clothing/wrists/roguetown/bracers
 	name = "bracers"
-	desc = "Steel bracers that protect the arms."
+	desc = "A pair of steel vambraces, protecting the arms from blows-most-foul."
 	body_parts_covered = ARMS
 	icon_state = "bracers"
 	item_state = "bracers"
@@ -132,7 +132,7 @@
 
 /obj/item/clothing/wrists/roguetown/bracers/copper
 	name = "copper bracers"
-	desc = "Copper forearm guards that offer some protection while looking rather stylish"
+	desc = "Crude vambraces of copper, claspable around the wrists; stylish, if nothing else."
 	icon_state = "copperarm"
 	item_state = "copperarm"
 	smeltresult = /obj/item/ingot/copper
@@ -256,7 +256,7 @@
 
 /obj/item/clothing/wrists/roguetown/bracers/iron
 	name = "iron bracers"
-	desc = "Iron bracers that protect the arms."
+	desc = "A pair of iron vambraces, thick-and-ridged."
 	body_parts_covered = ARMS
 	icon_state = "ibracers"
 	item_state = "ibracers"
