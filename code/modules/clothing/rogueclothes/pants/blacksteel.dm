@@ -1,6 +1,6 @@
 /obj/item/clothing/under/roguetown/platelegs/blacksteel/modern
 	name = "blacksteel plate chausses"
-	desc = "Reinforced leg plates forged of durable blacksteel, using a modern design."
+	desc = "Tasseted leggings of blacksteel, adorned with hooks to suspend both sabatons-and-faulds alike. Let its wearer never kneel again; be it in surrender or death."
 	gender = PLURAL
 	icon = 'icons/roguetown/clothing/special/blkknight.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
@@ -18,7 +18,7 @@
 
 /obj/item/clothing/under/roguetown/platelegs/blacksteel
 	name = "ancient blacksteel plate chausses"
-	desc = "Reinforced leg plates forged of durable blacksteel."
+	desc = "An antiquated set of alloyed chausses, shingled-over with blacksteel. Despite its ungaitly appearance, these trousers are concerningly light and nimble."
 	gender = PLURAL
 	icon = 'icons/roguetown/clothing/special/blkknight.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
