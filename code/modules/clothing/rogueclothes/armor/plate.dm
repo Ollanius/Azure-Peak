@@ -2,7 +2,7 @@
 /obj/item/clothing/suit/roguetown/armor/plate
 	slot_flags = ITEM_SLOT_ARMOR
 	name = "steel half-plate"
-	desc = "A padded steel cuirass, adorned with segmented pauldrons. Its prevalence amongst the pious is indisputable - deceptively light, sturdy, and accomidating to a Cleric's miracle-casting gestures."
+	desc = "A padded steel cuirass, adorned with segmented pauldrons. Its prevalence amongst the pious is indisputable - deceptively light, sturdy, and accomadating to a Cleric's miracle-casting gestures."
 	body_parts_covered = COVERAGE_TORSO
 	icon_state = "halfplate"
 	item_state = "halfplate"
