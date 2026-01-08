@@ -18,7 +18,7 @@
 /obj/item/clothing/suit/roguetown/armor/chainmail/iron
 	icon_state = "ihaubergeon"
 	name = "iron haubergeon"
-	desc = "A maille-shirt, fashioned from hundreds of interlinked iron rings. The humble combination of a haubergeon-and-gambeson is favored amongst Psydonia's levymen, alongside a sharpened spear and a cooled pint of ale."
+	desc = "A maille shirt fashioned from hundreds of interlinked iron rings. The humble combination of a haubergeon and gambeson is favored amongst Psydonia's levymen, alongside a sharpened spear and a cooled pint of ale."
 	max_integrity = ARMOR_INT_CHEST_MEDIUM_IRON
 	smeltresult = /obj/item/ingot/iron
 
