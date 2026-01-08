@@ -39,7 +39,7 @@
 
 /obj/item/clothing/neck/roguetown/coif/padded
 	name = "padded coif"
-	desc = "A cheap and simple gambeson coif meant to be worn on its own or under a helmet. It's better than nothing."
+	desc = "A cheap and simple gambeson coif meant to be worn on its own or under a helmet."
 	icon_state = "ccoif"
 	item_state = "ccoif"
 	color = "#ad977d"
@@ -122,7 +122,7 @@
 
 /obj/item/clothing/neck/roguetown/chaincoif
 	name = "chain coif"
-	desc = "Offers superior coverage to a simple gorget, though it sacrifices some protection in return."
+	desc = "A maille-hood, fashioned from interlinked steel rings. It offers superior coverage to a simple gorget, though it sacrifices some protection in return."
 	icon_state = "chaincoif"
 	item_state = "chaincoif"
 	drop_sound = 'sound/foley/dropsound/chain_drop.ogg'
@@ -176,7 +176,7 @@
 
 /obj/item/clothing/neck/roguetown/chaincoif/iron
 	name = "iron chain coif"
-	desc = "A coif of meticulously crafted iron rings. It isn't steel, but metal is metal, and it might just save your life."
+	desc = "A maille-hood, fashioned from interlinked iron rings."
 	icon_state = "ichaincoif"
 	anvilrepair = /datum/skill/craft/armorsmithing
 	smeltresult = /obj/item/ingot/iron
@@ -285,7 +285,7 @@
 /obj/item/clothing/neck/roguetown/gorget/copper
 	name = "neck protector"
 	icon_state = "copperneck"
-	desc = "An antique and simple protection for the neck, used more as an accessory by the common folk. But poor protection is still better than nothing."
+	desc = "A curved disk of copper, rounded out to cradle one's neck; vulnerable, but far better than nothing at all."
 	armor = ARMOR_PLATE_BAD
 	smeltresult = /obj/item/ingot/copper
 
@@ -341,6 +341,8 @@
 
 /obj/item/clothing/neck/roguetown/gorget/steel
 	name = "steel gorget"
+	name = "gorget"
+	desc = "A series of steel plates designed to protect the neck."
 	smeltresult = /obj/item/ingot/steel
 	max_integrity = ARMOR_INT_SIDE_STEEL
 	icon_state = "sgorget"
