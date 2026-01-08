@@ -299,7 +299,7 @@
 /obj/item/clothing/shoes/roguetown/boots/armor/zizo
 	max_integrity = ARMOR_INT_SIDE_ANTAG
 	name = "avantyne boots"
-	desc = "Ensnaring paradoxies, rended beneath logic and solidified into tangible footguards. Called forth from the edge of what should be known, in Her name."
+	desc = "Ensnaring paradoxes, rended beneath logic and solidified into tangible footguards. Called forth from the edge of what should be known, in Her name."
 	icon_state = "zizoboots"
 	chunkcolor = "#363030"
 	armor = ARMOR_ASCENDANT
@@ -398,7 +398,7 @@
 
 /obj/item/clothing/shoes/roguetown/boots/furlinedboots
 	name = "fur lined boots"
-	desc = "Leather boots lined with fur."
+	desc = "Leather boots, lined-and-cuffed with the fur of a forest-dwelling beaste."
 	gender = PLURAL
 	icon_state = "furlinedboots"
 	item_state = "furlinedboots"
