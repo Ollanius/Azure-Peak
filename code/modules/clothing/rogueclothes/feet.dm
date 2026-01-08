@@ -250,7 +250,7 @@
 
 /obj/item/clothing/shoes/roguetown/boots/armor
 	name = "plated boots"
-	desc = "Boots forged of a set of steel plates to protect your fragile toes."
+	desc = "Alloyed sabatons, fitted to guard one's toes from blows-most-unpleasant."
 	body_parts_covered = FEET
 	icon_state = "armorboots"
 	item_state = "armorboots"
@@ -299,7 +299,7 @@
 /obj/item/clothing/shoes/roguetown/boots/armor/zizo
 	max_integrity = ARMOR_INT_SIDE_ANTAG
 	name = "avantyne boots"
-	desc = "Plate boots. Called forth from the edge of what should be known. In Her name."
+	desc = "Ensnaring paradoxies, rended beneath logic and solidified into tangible footguards. Called forth from the edge of what should be known, in Her name."
 	icon_state = "zizoboots"
 	chunkcolor = "#363030"
 	armor = ARMOR_ASCENDANT
@@ -316,7 +316,7 @@
 
 /obj/item/clothing/shoes/roguetown/boots/armor/iron
 	name = "light plated boots"
-	desc = "Boots with iron for added protection."
+	desc = "A pair of boots, further reinforced with leather-strapped plates."
 	body_parts_covered = FEET
 	icon_state = "soldierboots"
 	item_state = "soldierboots"
@@ -443,7 +443,7 @@
 
 /obj/item/clothing/shoes/roguetown/boots/blacksteel/modern/plateboots
 	name = "blacksteel plate boots"
-	desc = "Boots forged of durable blacksteel, using a modern design."
+	desc = "Magnificent sabatons of blacksteel, pointed-yet-restrained. A click of the heel, and the rest of this world is yours; twice-more, and you might wake up somewhere completely different."
 	body_parts_covered = FEET
 	icon = 'icons/roguetown/clothing/special/blkknight.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
@@ -461,7 +461,7 @@
 
 /obj/item/clothing/shoes/roguetown/boots/blacksteel/plateboots
 	name = "ancient blacksteel plate boots"
-	desc = "Boots forged of durable blacksteel."
+	desc = "Antiquated sabatons, forged from segmented plates of blacksteel. Unlike most boots, these armored clogs are bereft of any coverings beyond the ankle; a curious schema, yet one that doesn't compromise its protectiveness in the slightest."
 	body_parts_covered = FEET
 	icon = 'icons/roguetown/clothing/special/blkknight.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
