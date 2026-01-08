@@ -1,6 +1,6 @@
 /obj/item/clothing/gloves/roguetown/plate
 	name = "plate gauntlets"
-	desc = "Plate gauntlets made out of steel. Good all-around protection for the hands."
+	desc = "A pair of alloyed gauntlets. Each finger is afforded a trinity of segments; with it, one can use a quill as precisely as an arming sword."
 	icon_state = "gauntlets"
 	armor = ARMOR_PLATE
 	resistance_flags = FIRE_PROOF
@@ -23,7 +23,7 @@
 
 /obj/item/clothing/gloves/roguetown/plate/iron
 	name = "iron plate gauntlets"
-	desc = "Plate gauntlets made out of iron. Good all-around protection for the hands. Slightly less durable than its steel counterpart."
+	desc = "A pair of armored gauntlets. The joints, though simplistic, nevertheless allow for the strumming of both a bowstring and lute."
 	icon_state = "igauntlets"
 	smeltresult = /obj/item/ingot/iron
 	max_integrity = ARMOR_INT_SIDE_IRON
@@ -74,7 +74,7 @@
 
 /obj/item/clothing/gloves/roguetown/plate/zizo
 	name = "avantyne gauntlets"
-	desc = "avantyne plate gauntlets. Called forth from the edge of what should be known. In Her name."
+	desc = "Unknowing truths, veiling the hands that prayed. Called forth from the edge of what should be known, in Her name."
 	icon_state = "zizogauntlets"
 	max_integrity = ARMOR_INT_SIDE_ANTAG
 	chunkcolor = "#363030"
