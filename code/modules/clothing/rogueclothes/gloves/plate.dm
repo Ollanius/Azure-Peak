@@ -47,7 +47,7 @@
 
 /obj/item/clothing/gloves/roguetown/plate/graggar
 	name = "vicious gauntlets"
-	desc = "Plate gauntlets which carry the motive force of this world, violence."
+	desc = "Fluted gauntlets, razor-tipped and fluidic in motion. Most are led to believe that 'might makes right', yet Graggar's truth is far more succinct - 'might makes'. Murder is the ultimate force; the only difference between you and them is that they're too afraid to admit it."
 	max_integrity = ARMOR_INT_SIDE_ANTAG
 	icon_state = "graggarplategloves"
 
