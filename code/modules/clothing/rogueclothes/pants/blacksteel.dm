@@ -18,7 +18,7 @@
 
 /obj/item/clothing/under/roguetown/platelegs/blacksteel
 	name = "ancient blacksteel plate chausses"
-	desc = "An antiquated set of alloyed chausses, shingled-over with blacksteel. Despite its ungaitly appearance, these trousers are concerningly light and nimble."
+	desc = "An antiquated set of alloyed chausses, guarded with thick blacksteel plates. It looks like it'd burden the hips with unmatched weight, yet - 'pon a trained wearer's rump - feels like wearing nothing at all.. nothing at all!"
 	gender = PLURAL
 	icon = 'icons/roguetown/clothing/special/blkknight.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
