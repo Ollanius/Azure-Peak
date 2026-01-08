@@ -642,27 +642,4 @@
 	armor_class = ARMOR_CLASS_MEDIUM
 	smelt_bar_num = 3
 
-// LEGACY
-/obj/item/clothing/suit/roguetown/armor/plate/cuirass/legacy
-	name = "valorian cuirass"
-	desc = "A steel cuirass. Do you still remember the first time you tasted blood; that sanguine succor, dribbling from a busted lip?"
-	icon_state = "cuirass" //Will change this, once the new icons are added. Keep these unused for now, until then.
-	item_state = "cuirass" //Ditto.
-
-/obj/item/clothing/suit/roguetown/armor/plate/legacy
-	name = "valorian half-plate"
-	desc = "A padded steel cuirass, 'adventurer-fitted' with a pair of pauldrons. Before you is your weapon; when was the last time you had ever thought without its presence?"
-	icon_state = "halfplate"
-	item_state = "halfplate"
-
-/obj/item/clothing/suit/roguetown/armor/plate/full/legacy
-	name = "valorian plate armor"
-	desc = "A complete set of steel plate armor, fitted with tassets and bracers for additional coverage. When the kingdom comes crashing down, will you deliver its people from evil; or will you be the one to string up 'pon the pyre?"
-	icon_state = "plate"
-	item_state = "plate"
-
-/obj/item/clothing/suit/roguetown/armor/plate/full/fluted/legacy
-	name = "fluted valorian plate"
-	desc = "A resplendant set of steel plate armor, decorated with silver flutings. Blessed dreamer, accursed heathen, lowly fool; the curtain call is a mere heartbeat away. Are you ready for one last dance, before midnight calls?"
-	icon_state = "ornateplate"
 	item_state = "ornateplate"
