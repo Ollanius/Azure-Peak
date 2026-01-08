@@ -142,7 +142,7 @@
 
 /obj/item/clothing/under/roguetown/chainlegs/captain
 	name = "captain's chausses"
-	desc = "A resplendant set of plated chausses, gilded and besilked. Such a masterwork can only be found upon the finest of Azuria's Knights."
+	desc = "A resplendent set of plated chausses, gilded and besilked. Such a masterwork can only be found upon the finest of Azuria's knights."
 	icon_state = "capplateleg"
 	item_state = "capplateleg"
 	icon = 'icons/roguetown/clothing/special/captain.dmi'
