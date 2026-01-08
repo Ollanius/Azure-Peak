@@ -2,7 +2,7 @@
 /obj/item/clothing/suit/roguetown/armor/chainmail
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
 	name = "haubergeon"
-	desc = "A maille-shirt, fashioned from hundreds of interlinked steel chains. Though fragile, it is a coveted article of nobility - and when worn beneath a silk blouse, it can thwart an unsuspecting assassin's blow."
+	desc = "A maille-shirt, fashioned from hundreds of interlinked steel rings. Though fragile, it is a coveted article of nobility - and when worn beneath a silk blouse, it can thwart an unsuspecting assassin's blow."
 	body_parts_covered = COVERAGE_ALL_BUT_LEGS
 	icon_state = "haubergeon"
 	armor = ARMOR_MAILLE
@@ -18,7 +18,7 @@
 /obj/item/clothing/suit/roguetown/armor/chainmail/iron
 	icon_state = "ihaubergeon"
 	name = "iron haubergeon"
-	desc = "A maille-shirt, fashioned from hundreds of interlinked iron chains. The humble combination of a haubergeon-and-gambeson is favored amongst Psydonia's levymen, alongside a sharpened spear and a cooled pint of ale."
+	desc = "A maille-shirt, fashioned from hundreds of interlinked iron rings. The humble combination of a haubergeon-and-gambeson is favored amongst Psydonia's levymen, alongside a sharpened spear and a cooled pint of ale."
 	max_integrity = ARMOR_INT_CHEST_MEDIUM_IRON
 	smeltresult = /obj/item/ingot/iron
 
