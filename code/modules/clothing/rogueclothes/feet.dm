@@ -269,7 +269,7 @@
 
 /obj/item/clothing/shoes/roguetown/boots/armor/graggar
 	name = "vicious boots"
-	desc = "Plated boots which stir with the same violence driving our world. They have treaded a thousand skulls."
+	desc = "Fluted sabatons, dusted with the bonedust of a thousand crushed skulls. Spit this final act, thine embodiment of sin - why would you ever want for something else, when you are God?"
 	max_integrity = ARMOR_INT_SIDE_ANTAG
 	armor = ARMOR_ASCENDANT
 	icon_state = "graggarplateboots"
@@ -443,7 +443,7 @@
 
 /obj/item/clothing/shoes/roguetown/boots/blacksteel/modern/plateboots
 	name = "blacksteel plate boots"
-	desc = "Magnificent sabatons of blacksteel, pointed-yet-restrained. A click of the heel, and the rest of this world is yours; twice-more, and you might wake up somewhere completely different."
+	desc = "Magnificent sabatons of blacksteel, pointed-yet-restrained. By the click of your heels, a thousand levymen shall march without question - and 'pon a leaping start, they shall see the bravery that earned such alloyed gifts to begin with."
 	body_parts_covered = FEET
 	icon = 'icons/roguetown/clothing/special/blkknight.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/blkknight.dmi'
