@@ -52,7 +52,7 @@
 
 /obj/item/clothing/under/roguetown/platelegs/graggar
 	name = "vicious leggings"
-	desc = "Plate chausses which stir with the innate violence driving our world forth."
+	desc = "Fluted chausses, marinated in the afterbirth of disemboweled tyrants. Never kneel, again - never fall, again; cripple the ones who sought to keep you a slave, and force them to see the monster they've made of you."
 	icon_state = "graggarplatelegs"
 	armor = ARMOR_ASCENDANT
 	max_integrity = ARMOR_INT_LEG_STEEL_PLATE // Good good resistances, but less crit resist than the other ascendant armors. In trade, we can take off our pants to repair, and they are medium rather than heavy.
