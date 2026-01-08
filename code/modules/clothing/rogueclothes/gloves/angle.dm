@@ -1,6 +1,6 @@
 /obj/item/clothing/gloves/roguetown/angle
 	name = "heavy leather gloves"
-	desc = "A pair of heavy leather gloves. The lengthened cuffs, crested with fur, are equally stylish and oppressive."
+	desc = "A pair of heavy leather gloves, padded with the fur of a fallen beaste."
 	icon_state = "angle"
 	armor = ARMOR_LEATHER_GOOD
 	resistance_flags = FIRE_PROOF
