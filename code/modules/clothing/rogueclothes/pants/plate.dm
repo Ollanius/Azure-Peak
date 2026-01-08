@@ -1,6 +1,6 @@
 /obj/item/clothing/under/roguetown/platelegs
 	name = "steel plate chausses"
-	desc = "Armored leggings, covered in segmented plates of steel."
+	desc = "Armored leggings, covered in segmented plates of steel. The trouseres beneath are lined with quilted cloth, ensuring that neither pintle-nor-gudgeon shall succumb to the motions-of-war."
 	gender = PLURAL
 	icon_state = "plate_legs"
 	item_state = "plate_legs"
@@ -27,7 +27,7 @@
 
 /obj/item/clothing/under/roguetown/platelegs/iron
 	name = "iron plate chausses"
-	desc = "Armored leggings, covered in segmented plates of iron."
+	desc = "Armored leggings, covered in segmented plates of iron. The leather trousers beneath do chafe under longer marches, but it's nothing that a smidge of smeared fat can't soothe."
 	icon_state = "iplate_legs"
 	item_state = "iplate_legs"
 	max_integrity = ARMOR_INT_LEG_IRON_PLATE
@@ -85,7 +85,7 @@
 /obj/item/clothing/under/roguetown/platelegs/zizo
 	max_integrity = ARMOR_INT_LEG_ANTAG
 	name = "avantyne garments"
-	desc = "Legged garments worn by the truest - those, anointed by the Dame of Progress. In Her name."
+	desc = "An unstemmable cognitovirus, laminated into thrice-parted leggings worn by only the truest - those, anointed by the Dame of Progress. In Her name."
 	icon_state = "zizocloth"
 	armor = ARMOR_ASCENDANT
 	prevent_crits = PREVENT_CRITS_ALL
