@@ -399,7 +399,7 @@
 	warnie = "sydwarning"
 	movement_interrupt = FALSE
 	sound = null
-	invocations = list(span_blue("quietly mouths a prayer..")
+	invocations = list(span_blue("quietly mouths a prayer.."))
 	invocation_type = "emote"
 	associated_skill = /datum/skill/magic/holy
 	antimagic_allowed = FALSE
@@ -505,7 +505,7 @@
 	warnie = "sydwarning"
 	movement_interrupt = FALSE
 	sound = null
-	invocations = list(span_blue("quietly mouths a prayer..")
+	invocations = list(span_blue("quietly mouths a prayer.."))
 	invocation_type = "emote"
 	associated_skill = /datum/skill/magic/holy
 	antimagic_allowed = FALSE
@@ -610,7 +610,7 @@
 	range = 2
 	warnie = "sydwarning"
 	movement_interrupt = FALSE
-	invocations = list(span_blue("quietly mouths a prayer..")
+	invocations = list(span_blue("quietly mouths a prayer.."))
 	invocation_type = "emote"
 	sound = null
 	associated_skill = /datum/skill/magic/holy
