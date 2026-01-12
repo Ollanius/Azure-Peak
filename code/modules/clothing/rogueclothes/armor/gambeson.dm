@@ -24,6 +24,34 @@
 /obj/item/clothing/suit/roguetown/armor/gambeson/ComponentInitialize()
 	AddComponent(/datum/component/armour_filtering/positive, TRAIT_FENCERDEXTERITY)
 
+/obj/item/clothing/suit/roguetown/armor/gambeson/attack_right(mob/user)
+	if(!shiftable)
+		return
+	if(shifted)
+		if(alert("Would you like to wear your gambeson normally? Restores greyscaling - the new style.",, "Yes", "No") != "No")
+			icon_state = "gambeson"
+			color = "#976E6B"
+			update_icon()
+			shifted = FALSE
+			if(user)
+				if(ishuman(user))
+					var/mob/living/carbon/H = user
+					H.update_inv_shirt()
+					H.update_inv_armor()
+			return
+	else
+		if(alert("Would you like to wear your gambeson traditionally? Removes greyscaling - the old style.",, "Yes", "No") != "No")
+			icon_state = "gambesonold"
+			color = null
+			update_icon()
+			shifted = TRUE
+			if(user)
+				if(ishuman(user))
+					var/mob/living/carbon/H = user
+					H.update_inv_shirt()
+					H.update_inv_armor()
+			return
+
 /obj/item/clothing/suit/roguetown/armor/gambeson/dark
 	color = "#646464"
 
@@ -75,7 +103,7 @@
 	if(!shiftable)
 		return
 	if(shifted)
-		if(alert("Would you like to wear your gambeson normally? -Restores greyscaling, new style.",, "Yes", "No") != "No")
+		if(alert("Would you like to wear your gambeson normally? Restores greyscaling - the new style.",, "Yes", "No") != "No")
 			icon_state = "gambesonp"
 			color = "#976E6B"
 			update_icon()
@@ -87,7 +115,7 @@
 					H.update_inv_armor()
 			return
 	else
-		if(alert("Would you like to wear your gambeson traditionally? -Removes Greyscaling, old style.",, "Yes", "No") != "No")
+		if(alert("Would you like to wear your gambeson traditionally? Removes greyscaling - the old style.",, "Yes", "No") != "No")
 			icon_state = "gambesonpold"
 			color = null
 			update_icon()
