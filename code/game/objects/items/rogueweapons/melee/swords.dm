@@ -508,12 +508,16 @@
 
 /obj/item/rogueweapon/sword/long/judgement
 	name = "\"Judgement\""
-	desc = "An intricately forged longsword, it's blade is made from Aavnr's finest Vyšvou steel - held from an ornate carved ivory grip from the region's \"Mamük\" megafauna. A sight that's truly unique."
+	desc = "A noble longsword, and the cherished heirloom of Azuria's royal bloodline. Its blade is made from Aavnr's finest Vyšvou steel - held from an ornate carved ivory grip from the region's \"Mamük\" megafauna, and decorated with heraldric engravings of silver. </br>'When you stand before thine lord, you cannot say, "..but I was told by others to do thus..", or that, "..virtue was not convenient at the time." This will not suffice. Remember that.'"
 	icon_state = "judgement"
 	item_state = "judgement"
 	sheathe_icon = "judgement"
+	force = 40
+	force_wielded = 50
+	max_blade_int = 100 //Roughly on par with Decrepit-tier weapons, as a heirloom that should be sparingly used.
+	max_integrity = 333
 	wbalance = WBALANCE_HEAVY
-	sellprice = 363
+	sellprice = 333
 	static_price = TRUE
 
 /obj/item/rogueweapon/sword/long/judgement/getonmobprop(tag)
@@ -531,23 +535,23 @@
 
 /obj/item/rogueweapon/sword/long/judgement/ascendant //meant to be insanely OP; solo antag wep
 	name = "\"The Redentor\""
-	desc = "An intricately forged sword of great power. And the preacher said: \"For the Lord is my tower, and He gives me the power to tear down the works of the enemy.\""
-	force = 50
-	force_wielded = 70
+	desc = "A resplendent longsword, assembled from an otherworldly alloy. Intersecting visions from beyond-and-before cross your mind, as your fingers curl along the leather; all merging into a final truth, sailing across the star-speckled phlogiston. </br>'And the preacher said: \"For the Lord is my tower, and He gives me the power to tear down the works of the enemy.\""
+	force = 66
+	force_wielded = 99
 	possible_item_intents = list(/datum/intent/sword/cut, /datum/intent/sword/thrust, /datum/intent/sword/strike)
 	gripped_intents = list(/datum/intent/sword/cut, /datum/intent/sword/thrust, /datum/intent/sword/strike, /datum/intent/sword/chop)
 	icon_state = "crucified"
 	sheathe_icon = "crucified"
 	item_state = "judgement"
-	smeltresult = /obj/item/ingot/steel
 	sellprice = 999
 	static_price = TRUE
 	max_integrity = 9999
+	max_blade_int = 999
 
 /obj/item/rogueweapon/sword/long/judgement/vlord
 	name = "\"Ichor Fang\""
-	desc = "An unholy longsword made of odd steel. A green crystalline mass covers the blade and pommel, its edges and serrations tougher and sharper than anything forged by a master swordsmith."
-	force = 40
+	desc = "An unholy longsword, who's crystalline blade radiates with insurmountable sharpness. It has been brought forth unto this world for a singular purpose; not to bring peace, but to dominate all who'd dare to oppose the coming darkness. </br>'And I looked, and beheld a pale horse - the name that sat upon Her was Death, and Hell followed with them.'"
+	force = 45
 	force_wielded = 55
 	possible_item_intents = list(/datum/intent/sword/cut, /datum/intent/sword/thrust, /datum/intent/sword/strike, /datum/intent/sword/peel)
 	gripped_intents = list(/datum/intent/sword/cut, /datum/intent/sword/thrust, /datum/intent/sword/strike, /datum/intent/sword/chop)
@@ -555,7 +559,8 @@
 	item_state = "vlord"
 	wbalance = WBALANCE_NORMAL
 	max_integrity = 9999
-	sellprice = 363
+	max_blade_int = 666
+	sellprice = 666
 	static_price = TRUE
 	equip_delay_self = 0
 	unequip_delay_self = 0
