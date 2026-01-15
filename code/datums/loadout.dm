@@ -13,7 +13,7 @@ GLOBAL_LIST_EMPTY(loadout_items)
 		if(ckeywhitelist)
 			donoritem = TRUE
 	if (triumph_cost)
-		desc += "<b>Costs [triumph_cost] TRIUMPH.</b>"
+		desc += "<b>Costs [triumph_cost] TRIUMPHS.</b>"
 
 /datum/loadout_item/proc/donator_ckey_check(key)
 	if(ckeywhitelist && ckeywhitelist.Find(key))
@@ -39,12 +39,6 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	path = /obj/item/book/rogue/loadoutbook
 
 //TOOLS
-
-/datum/loadout_item/bauernwehr
-	name = "Bauernwehr (-3 TRI)"
-	path = /obj/item/rogueweapon/huntingknife/throwingknife/bauernwehr
-	triumph_cost = 3
-
 /datum/loadout_item/paper_parasol
 	name = "Paper Parasol"
 	path = /obj/item/rogueweapon/mace/parasol
@@ -672,6 +666,17 @@ GLOBAL_LIST_EMPTY(loadout_items)
 /datum/loadout_item/caparison/eora
 	name = "Eoran Caparison"
 	path = /obj/item/caparison/eora
+
+
+//Triumph Section
+//Everything in this section costs TRI. Very rudimentary, but it should help us gradually realign some sense of value to this otherwise-neglected system.
+//General rule of thumb's that most items here shouldn't exceed what your average Adventurer can spawn with, or can easily acquire within the first dae of any given week.
+//
+//A
+/datum/loadout_item/bauernwehr
+	name = "Knife (-3 TRI)"
+	path = /obj/item/rogueweapon/huntingknife/throwingknife/bauernwehr
+	triumph_cost = 3
 
 //Donator Section
 //All these items are stored in the donator_fluff.dm in the azure modular folder for simplicity.
