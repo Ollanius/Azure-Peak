@@ -675,7 +675,7 @@
 	name = "heirloom amulet"
 	desc = "An ornate amulet representing a prestigious noble house."
 	slot_flags = ITEM_SLOT_NECK|ITEM_SLOT_WRISTS|ITEM_SLOT_HIP
-	sellprice = 10
+	sellprice = 0
 
 /obj/item/clothing/neck/roguetown/ornateamulet/noble/attack_right(mob/user)
 	if(choicename)
