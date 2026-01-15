@@ -856,7 +856,7 @@
 /obj/item/rogueweapon/huntingknife/throwingknife/bauernwehr
 	name = "knife"
 	desc = "A stout blade affixed to a stouter handle, fit for any labor that the dae thrusts upon it. Keeping one tucked inside the boot is a favored trick amongst overcautious adventurers; a surprise for disarming presences."
-	icon_state = "throw_knifei"
+	icon_state = "vdagger"
 	wdefense = 1
 	max_blade_int = 150
 	max_integrity = 225
