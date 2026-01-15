@@ -575,6 +575,11 @@
 	resistance_flags = FIRE_PROOF
 	sellprice = 100
 
+/obj/item/clothing/neck/roguetown/psicross/g/triumph
+	name = "heraldric golden psycross"
+	desc = "'Despite everything, it's still you.'"
+	sellprice = 0 //Triumph-purchasable.
+
 /obj/item/clothing/neck/roguetown/psicross/pearl //put it as a psycross so it can be used for miracles
 	name = "pearl amulet"
 	icon_state = "pearlcross"
