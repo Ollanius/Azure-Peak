@@ -147,7 +147,7 @@
 /obj/item/clothing/ring/signet
 	name = "signet ring"
 	icon_state = "signet"
-	desc = "A ring of opulent gold, bearing the symbol of Psydon. By dipping it in melted redtallow, it can seal writs of religious importance - a matter better known to the Inquisition, rather than the Church or Crown."
+	desc = "A ring of opulent gold, bearing the Lord's symbol. By dipping it in melted redtallow, it can seal writs of religious importance - a matter better known to the Inquisition, rather than the Church or Crown."
 	sellprice = 135
 	var/tallowed = FALSE
 
@@ -157,6 +157,11 @@
 	desc = "A ring of blessed silver, bearing the Archbishop's symbol. By dipping it in melted redtallow, it can seal writs of religious importance."
 	sellprice = 90
 	is_silver = TRUE
+
+/obj/item/clothing/ring/signet/triumph
+	name = "heraldric signet ring"
+	desc = "A ring of opulent gold, bearing the Aristocracy's symbol. By dipping it in melted redtallow, it can seal writs of religious importance - a matter better known to the Inquisition, rather than the Church or Crown."
+	sellprice = 0 //Triumph-obtainable. Prevents people from freely selling it off at roundstart for a crisp +135 mammons.
 
 /obj/item/clothing/ring/signet/attack_right(mob/user)
 	. = ..()
