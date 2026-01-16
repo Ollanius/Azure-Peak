@@ -649,7 +649,7 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	name = "Fitted Coat"
 	path = /obj/item/clothing/cloak/cotehardie
 
-// caparisons
+//CAPARISONS
 
 /datum/loadout_item/caparison
 	name = "Caparison"
@@ -668,17 +668,10 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	path = /obj/item/caparison/eora
 
 
-//Triumph Section
-//Everything in this section costs TRI. Very rudimentary, but it should help us gradually realign some sense of value to this otherwise-neglected system.
-//General rule of thumb's that most items here shouldn't exceed what your average Adventurer can spawn with, or can easily acquire within the first dae of any given week.
-//
-//A
-/datum/loadout_item/bauernwehr
-	name = "Knife (-3 TRI)"
-	path = /obj/item/rogueweapon/huntingknife/throwingknife/bauernwehr
-	triumph_cost = 3
+//////////////////
+//  DONATORS !  //
+//////////////////
 
-//Donator Section
 //All these items are stored in the donator_fluff.dm in the azure modular folder for simplicity.
 //All should be subtypes of existing weapons/clothes/armor/gear, whatever, to avoid balance issues I guess. Idk, I'm not your boss.
 
@@ -793,3 +786,154 @@ GLOBAL_LIST_EMPTY(loadout_items)
 /datum/loadout_item/donator_ryan/psy_helm
 	name = "Donator Kit - Unorthodoxist Psydonite Helm"
 	path = /obj/item/enchantingkit/ryan_psyhelm
+
+
+//////////////////
+//  TRIUMPHS !  //
+//////////////////
+
+//Everything in this section costs TRI. Very rudimentary, but it should help us gradually realign some sense of value to this otherwise-neglected system.
+//Additions should be judged on a case-by-case basis. Generally, you should refrain from adding anything that an Adventurer - or non-combative Noble - couldn't feasibly spawn with.
+//Like with most rules, however, there can be expections. 'Follow the vibe', so-to-speak. Anything with 'Heraldric' shouldn't be smeltable, sellable, or otherwise economic-impacting.
+
+// -3 TRI Minisection.
+// Most players earn +3-5 TRI per week. Fit for trinkets, tools, and lesser-armored footwear and handwear.
+
+/datum/loadout_item/bauernwehr
+	name = "Laborer's Knife (-3 TRI)"
+	path = /obj/item/rogueweapon/huntingknife/throwingknife/bauernwehr
+	triumph_cost = 3
+
+/datum/loadout_item/triumph_heavygloves
+	name = "Heavy Leather Gloves (-3 TRI)"
+	path = /obj/item/clothing/gloves/roguetown/angle
+	triumph_cost = 3
+
+/datum/loadout_item/triumph_heavyboots
+	name = "Heavy Leather Boots (-3 TRI)"
+	path = /obj/item/clothing/shoes/roguetown/boots/leather/reinforced
+	triumph_cost = 3
+
+/datum/loadout_item/triumph_necklace
+	name = "Ornate Amulet, Heirloom (-3 TRI)"
+	path = /obj/item/clothing/neck/roguetown/ornateamulet/noble
+	triumph_cost = 3
+
+/datum/loadout_item/triumph_signet
+	name = "Golden Signet Ring, Heirloom (-3 TRI)"
+	path = /obj/item/clothing/ring/signet/triumph
+	triumph_cost = 3
+
+/datum/loadout_item/triumph_psycross
+	name = "Golden Psycross, Heirloom (-3 TRI)"
+	path = /obj/item/clothing/neck/roguetown/psicross/g/triumph
+	triumph_cost = 3
+
+/datum/loadout_item/triumph_circulet
+	name = "Golden Circulet, Heirloom (-3 TRI)"
+	path = /obj/item/clothing/head/roguetown/circlet/triumph
+	triumph_cost = 3
+
+// -5 TRI Minisection.
+// Stores more opulent alternatives, including those with some additional mechanical sway. Normally restricted to nobility, craftsmen, or certain imports.
+
+/datum/loadout_item/triumph_shortsatchel
+	name = "Short Satchel (-5 TRI)"
+	path = /obj/item/storage/backpack/rogue/satchel/short
+	triumph_cost = 5
+
+/datum/loadout_item/triumph_scabbardnoble
+	name = "Decorated Scabbard, Silver (-5 TRI)"
+	path = /obj/item/rogueweapon/scabbard/sword/noble
+	triumph_cost = 5
+
+/datum/loadout_item/triumph_sheathnoble
+	name = "Decorated Sheath, Silver (-5 TRI)"
+	path = /obj/item/rogueweapon/scabbard/sheath/noble
+	triumph_cost = 5
+
+/datum/loadout_item/triumph_gildedshirt
+	name = "Gilded Dress Shirt (-5 TRI)"
+	path = /obj/item/clothing/suit/roguetown/shirt/dress/royal/prince
+	triumph_cost = 5
+
+/datum/loadout_item/triumph_pristinedress
+	name = "Pristine Dress (-5 TRI)"
+	path = /obj/item/clothing/suit/roguetown/shirt/dress/royal/princess
+	triumph_cost = 5
+
+/datum/loadout_item/triumph_royalsleeves
+	name = "Royal Sleeves (-5 TRI)"
+	path = /obj/item/clothing/wrists/roguetown/royalsleeves
+	triumph_cost = 5
+
+// -7 TRI Minisection.
+// No matter what, just taking one'll be a net loss. Highest standarized tier, involving very expensive garb and combat-ready - if reskinned - equipment.
+
+/datum/loadout_item/triumph_froggemund
+	name = "Froggemund Helmet, Heraldric (-7 TRI)"
+	path = /obj/item/clothing/head/roguetown/helmet/heavy/frogmouth/triumph
+	triumph_cost = 7
+
+/datum/loadout_item/triumph_lordcloak
+	name = "Lordly Cloak (-7 TRI)"
+	path = /obj/item/clothing/cloak/lordcloak
+	triumph_cost = 7
+
+/datum/loadout_item/triumph_ladycloak
+	name = "Ladylike Cloak (-7 TRI)"
+	path = /obj/item/clothing/cloak/lordcloak/ladycloak
+	triumph_cost = 7
+
+/datum/loadout_item/triumph_scabbardroyal
+	name = "Decorated Scabbard, Golden (-7 TRI)"
+	path = /obj/item/rogueweapon/scabbard/sword/royal
+	triumph_cost = 7
+
+/datum/loadout_item/triumph_sheathroyal
+	name = "Decorated Sheath, Golden (-7 TRI)"
+	path = /obj/item/rogueweapon/scabbard/sheath/royal
+	triumph_cost = 7
+
+/datum/loadout_item/triumph_longsword
+	name = "Longsword, Heraldric (-7 TRI)"
+	path = /obj/item/rogueweapon/sword/long/triumph
+	triumph_cost = 7
+
+/datum/loadout_item/triumph_longswords
+	name = "Longsword, Sabreguard (-7 TRI)"
+	path = /obj/item/rogueweapon/sword/long/triumph/sabre
+	triumph_cost = 7
+
+/datum/loadout_item/triumph_longswordw
+	name = "Longsword, Wideguard (-7 TRI)"
+	path = /obj/item/rogueweapon/sword/long/triumph/wideguard
+	triumph_cost = 7
+
+/datum/loadout_item/triumph_longswordl
+	name = "Longsword, Lordly (-7 TRI)"
+	path = /obj/item/rogueweapon/sword/long/triumph/lordly
+	triumph_cost = 7
+
+/datum/loadout_item/triumph_longswordh
+	name = "Longsword, Heroic (-7 TRI)"
+	path = /obj/item/rogueweapon/sword/long/triumph/heroic
+	triumph_cost = 7
+
+/datum/loadout_item/triumph_longswordp
+	name = "Longsword, Psycrucifix (-7 TRI)"
+	path = /obj/item/rogueweapon/sword/long/triumph/psydon
+	triumph_cost = 7
+
+// -??? TRI Minisection.
+// Thar be dragons!
+
+/datum/loadout_item/triumph_swinehog
+	name = "An Entire Godsdamned Hog (-10 TRI)"
+	path = /mob/living/simple_animal/hostile/retaliate/rogue/swine/hog
+	triumph_cost = 10
+
+/datum/loadout_item/triumph_buffpot
+	name = "Vial of Distilled Triumphance (-50 TRI)"
+	path = /obj/item/reagent_containers/glass/bottle/alchemical/tripot
+	triumph_cost = 50
