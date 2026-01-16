@@ -261,6 +261,15 @@
 	M.apply_status_effect(/datum/status_effect/buff/alch/fortunepot)
 	return ..()
 
+/datum/reagent/buff/tri
+	name = STATKEY_ALL
+	color = "#74cde0"
+	taste_description = "triumphance"
+	scent_description = "memories of a former triumph"
+
+/datum/reagent/buff/tri/on_mob_life(mob/living/carbon/M)
+	M.apply_status_effect(/datum/status_effect/buff/alch/tripot)
+	return ..()
 
 //Poisons
 /* Tested this quite a bit. Heres the deal. Metabolism REAGENTS_SLOW_METABOLISM is 0.1 and needs to be that so poison isnt too fast working but
