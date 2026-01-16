@@ -41,3 +41,9 @@
 	icon_state = "circlet"
 	item_state = "circlet"
 	sellprice = 50
+
+/obj/item/clothing/head/roguetown/circlet/triumph
+	name = "golden heraldric circlet"
+	icon_state = "circlet"
+	item_state = "circlet"
+	sellprice = 0 //Triumph-exclusive.
