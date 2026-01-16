@@ -262,7 +262,7 @@
 	return ..()
 
 /datum/reagent/buff/tri
-	name = STATKEY_ALL
+	name = STATKEY_TRI //Triumph-exclusive. Shouldn't be brewable under any circumstances.
 	color = "#74cde0"
 	taste_description = "triumphance"
 	scent_description = "memories of a former triumph"
