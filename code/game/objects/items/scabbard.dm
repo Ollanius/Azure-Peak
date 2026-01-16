@@ -276,6 +276,7 @@
 
 	valid_blade = /obj/item/rogueweapon/huntingknife
 	w_class = WEIGHT_CLASS_SMALL
+	slot_flags = ITEM_SLOT_HIP|ITEM_SLOT_BACK|ITEM_SLOT_WRISTS //An intended design, albeit rather late-in-timing. Sacrifice arm protection for more versatile storage.
 
 	grid_width = 32
 	grid_height = 64
