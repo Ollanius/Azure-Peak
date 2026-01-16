@@ -576,7 +576,7 @@
 	sellprice = 100
 
 /obj/item/clothing/neck/roguetown/psicross/g/triumph
-	name = "heraldric golden psycross"
+	name = "golden heraldric psycross"
 	desc = "'Despite everything, it's still you.'"
 	sellprice = 0 //Triumph-purchasable.
 
