@@ -910,9 +910,9 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	path = /obj/item/rogueweapon/sword/long/triumph/wideguard
 	triumph_cost = 7
 
-/datum/loadout_item/triumph_longswordl
-	name = "Longsword, Lordly (-7 TRI)"
-	path = /obj/item/rogueweapon/sword/long/triumph/lordly
+/datum/loadout_item/triumph_longswordp
+	name = "Longsword, Psycrucifix (-7 TRI)"
+	path = /obj/item/rogueweapon/sword/long/triumph/psydon
 	triumph_cost = 7
 
 /datum/loadout_item/triumph_longswordh
@@ -920,18 +920,8 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	path = /obj/item/rogueweapon/sword/long/triumph/heroic
 	triumph_cost = 7
 
-/datum/loadout_item/triumph_longswordp
-	name = "Longsword, Psycrucifix (-7 TRI)"
-	path = /obj/item/rogueweapon/sword/long/triumph/psydon
-	triumph_cost = 7
-
 // -??? TRI Minisection.
 // Thar be dragons!
-
-/datum/loadout_item/triumph_swinehog
-	name = "An Entire Godsdamned Hog (-10 TRI)"
-	path = /mob/living/simple_animal/hostile/retaliate/rogue/swine/hog
-	triumph_cost = 10
 
 /datum/loadout_item/triumph_buffpot
 	name = "Vial of Distilled Triumphance (-50 TRI)"
