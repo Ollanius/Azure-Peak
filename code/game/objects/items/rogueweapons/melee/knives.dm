@@ -683,6 +683,7 @@
 	desc = "A wave-bladed dagger of Elven design, who's silvered beauty is only rivaled by its deceptive lethality."
 	force = 22 //One of the rare silver-edged weapons that has a positive damage boost, due to it requiring both silver and gold to create.
 	icon_state = "elfdagger"
+	sheathe_icon = "elfdagger"
 	item_state = "elfdag"
 	last_used = 0
 	smeltresult = /obj/item/ingot/gold
@@ -857,6 +858,7 @@
 	name = "knife"
 	desc = "A stout blade affixed to a stouter handle, fit for any labor that the dae thrusts upon it. Keeping one tucked inside the boot is a favored trick amongst overcautious adventurers; a surprise for disarming presences."
 	icon_state = "vdagger"
+	sheathe_icon = "warden_machete" //Close enough!
 	wdefense = 1
 	max_blade_int = 150
 	max_integrity = 225
