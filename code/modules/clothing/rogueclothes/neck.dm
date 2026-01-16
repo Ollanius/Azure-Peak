@@ -437,6 +437,13 @@
 	icon_state = "zcross_iron"
 	resistance_flags = FIRE_PROOF
 
+/obj/item/clothing/neck/roguetown/psicross/inhumen/g
+	name = "golden inverted psycross"
+	desc = "'Doth thee wish to live deliciously? Mortality is but a shackle; and if you wish to break free from its steely grasp, all you need to do.. is put thine faith in me.'"
+	icon_state = "zcross_g"
+	resistance_flags = FIRE_PROOF
+	sellprice = 100
+
 /obj/item/clothing/neck/roguetown/psicross/inhumen/matthios
 	name = "amulet of Matthios"
 	desc = "He was but one flame in the dark. Together, his flock shall outblaze the tyrant sun."
@@ -459,10 +466,28 @@
 	icon_state = "undivided"
 	slot_flags = ITEM_SLOT_NECK|ITEM_SLOT_HIP|ITEM_SLOT_WRISTS|ITEM_SLOT_RING
 
+/obj/item/clothing/neck/roguetown/psicross/silver/undivided
+	name = "silver amulet of Ten"
+	desc = "Ward of silver, sigil of eternity; by the Ten, I command thee back to Hell!"
+	icon_state = "undivided_s"
+	sellprice = 50
+
 /obj/item/clothing/neck/roguetown/psicross/astrata
 	name = "amulet of Astrata"
 	desc = "As sure as the sun rises, tomorrow will come."
 	icon_state = "astrata"
+
+/obj/item/clothing/neck/roguetown/psicross/silver/astrata
+	name = "silver amulet of Astrata"
+	desc = "Let no monster hold comfort in Her brother's shadow."
+	icon_state = "astrata_s"
+	sellprice = 50
+
+/obj/item/clothing/neck/roguetown/psicross/astrata/g
+	name = "golden amulet of Astrata"
+	desc = "The sun's blinding glare, adorning the faithful and scorning the faithless."
+	icon_state = "astrata_g"
+	sellprice = 100
 
 /obj/item/clothing/neck/roguetown/psicross/noc
 	name = "amulet of Noc"
@@ -742,6 +767,34 @@
 	dropshrink = 0.5
 	slot_flags = ITEM_SLOT_NECK|ITEM_SLOT_MASK
 	body_parts_covered = NECK|FACE
+
+////////////////////////
+// Triumph Exclusive! //
+////////////////////////
+
+//Purchasable via Triumphs. Blacklisted from the Stockpile and fitted with a reduced saleprice.
+/obj/item/clothing/neck/roguetown/ornateamulet/noble/triumph
+	name = "ornate amulet"
+	desc = "An opulent, golden necklace. When it catches the candelight, it offers a warped yet unmarred reflection of its wearer's guise."
+	sellprice = 33
+
+/obj/item/clothing/neck/roguetown/psicross/g/triumph
+	name = "ornate golden psycross"
+	desc = "'It does not matter, whether He is lyving or gone. His greatest creation still persists; the very world that our feet tread 'pon, now. That, alone, makes everything worth fighting for.'"
+	sellprice = 55
+
+/obj/item/clothing/neck/roguetown/psicross/inhumen/g/triumph
+	name = "ornate inverted psycross"
+	desc = "'Meet your lord, and know your place. Let progress be my chariot, and let my hands be the vessel that rips paradise free from its heavenly grasp. Let Psydonia's carcass not spell the death of Man, but the birth of Gods.'"
+	sellprice = 66
+
+/obj/item/clothing/neck/roguetown/psicross/astrata/g/triumph
+	name = "ornate amulet of Astrata"
+	desc = "Her command is absolute, and Her tyranny is unmarrable. Reclaim this world, child of mine, from those who'd seek to destroy it."
+	icon_state = "astrata_g"
+	sellprice = 77
+
+//
 
 /obj/item/clothing/neck/roguetown/luckcharm
 	name = "luck charm"
