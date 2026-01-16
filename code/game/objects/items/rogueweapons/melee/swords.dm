@@ -1892,17 +1892,31 @@
 	desc = "A lethal and perfectly balanced weapon. The longsword is the protagonist of endless tales and myths \
 	all across Psydonia, seen in the hands of noblemen and an ever-decreasing quantity of master duelists. \
 	It has great cultural significance in the empires of Grenzelhoft and Etrusca, where legendary swordsmen \
-	have created and perfected many fighting techniques of todae. This particular variant has a stouter crossguard \
+	have created and perfected many fighting techniques of todae. </br>This particular variant has a stouter crossguard \
 	and wider blade; a prevaling design from the preceding century, oft-mantled in the homes of now-retired adventurers."
 	icon = 'icons/roguetown/weapons/64.dmi'  //Framework for Triumph-purchasable longswords.
 	icon_state = "longswordtri_heirloom"
 	item_state = "longswordtri_heirloom"
 
+/obj/item/rogueweapon/sword/long/triumph/getonmobprop(tag)
+	. = ..()
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.5,"sx" = -14,"sy" = -8,"nx" = 15,"ny" = -7,"wx" = -10,"wy" = -5,"ex" = 7,"ey" = -6,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -13,"sturn" = 110,"wturn" = -60,"eturn" = -30,"nflip" = 1,"sflip" = 1,"wflip" = 8,"eflip" = 1)
+			if("onback")
+				return list("shrink" = 0.5,"sx" = -1,"sy" = 2,"nx" = 0,"ny" = 2,"wx" = 2,"wy" = 1,"ex" = 0,"ey" = 1,"nturn" = 0,"sturn" = 0,"wturn" = 70,"eturn" = 15,"nflip" = 1,"sflip" = 1,"wflip" = 1,"eflip" = 1,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0)
+			if("wielded")
+				return list("shrink" = 0.5,"sx" = 5,"sy" = -2,"nx" = -6,"ny" = -2,"wx" = -6,"wy" = -2,"ex" = 7,"ey" = -2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -28,"sturn" = 29,"wturn" = -35,"eturn" = 32,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
+			if("onbelt")
+				return list("shrink" = 0.4,"sx" = -4,"sy" = -6,"nx" = 5,"ny" = -6,"wx" = 0,"wy" = -6,"ex" = -1,"ey" = -6,"nturn" = 100,"sturn" = 156,"wturn" = 90,"eturn" = 180,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
+
+
 /obj/item/rogueweapon/sword/long/triumph/wideguard
 	desc = "A lethal and perfectly balanced weapon. The longsword is the protagonist of endless tales and myths \
 	all across Psydonia, seen in the hands of noblemen and an ever-decreasing quantity of master duelists. \
 	It has great cultural significance in the empires of Grenzelhoft and Etrusca, where legendary swordsmen \
-	have created and perfected many fighting techniques of todae. This particular variant has a widened crossguard, \
+	have created and perfected many fighting techniques of todae. </br>This particular variant has a widened crossguard, \
 	adored by lightly-armored mercenaries who cannot afford to leave a single riposte without interception."
 	icon_state = "longswordtri_wideguard"
 	item_state = "longswordtri_wideguard"
@@ -1912,7 +1926,7 @@
 	desc = "A lethal and perfectly balanced weapon. The longsword is the protagonist of endless tales and myths \
 	all across Psydonia, seen in the hands of noblemen and an ever-decreasing quantity of master duelists. \
 	It has great cultural significance in the empires of Grenzelhoft and Etrusca, where legendary swordsmen \
-	have created and perfected many fighting techniques of todae. This particular variant has a psycruciformed \
+	have created and perfected many fighting techniques of todae. </br>This particular variant has a psycruciformed \
 	crossguard and manaleathered grip; a masterwork, held in silent reverance for the ultimate sacrifice."
 	icon_state = "longswordtri_psydon"
 	item_state = "longswordtri_psydon"
@@ -1922,27 +1936,17 @@
 	desc = "A lethal and perfectly balanced weapon. The longsword is the protagonist of endless tales and myths \
 	all across Psydonia, seen in the hands of noblemen and an ever-decreasing quantity of master duelists. \
 	It has great cultural significance in the empires of Grenzelhoft and Etrusca, where legendary swordsmen \
-	have created and perfected many fighting techniques of todae. This particular variant has a curved crossguard \
+	have created and perfected many fighting techniques of todae. </br>This particular variant has a curved crossguard \
 	and shorter blade; hallmarks of nobility, whether professed atop a saiga or against a villain's edge."
 	icon_state = "longswordtri_sabre"
 	item_state = "longswordtri_sabre"
 	sheathe_icon = "cutlass"
 
-/obj/item/rogueweapon/sword/long/triumph/lordly
-	desc = "A lethal and perfectly balanced weapon. The longsword is the protagonist of endless tales and myths \
-	all across Psydonia, seen in the hands of noblemen and an ever-decreasing quantity of master duelists. \
-	It has great cultural significance in the empires of Grenzelhoft and Etrusca, where legendary swordsmen \
-	have created and perfected many fighting techniques of todae. This particular variant has a golden crossguard \
-	and rosaleathered grip; opulent, tasteful, and befitting only the hands of a true lord."
-	icon_state = "longswordtri_lordly"
-	item_state = "longswordtri_lordly"
-	sheathe_icon = "decsword2"
-
 /obj/item/rogueweapon/sword/long/triumph/heroic
 	desc = "A lethal and perfectly balanced weapon. The longsword is the protagonist of endless tales and myths \
 	all across Psydonia, seen in the hands of noblemen and an ever-decreasing quantity of master duelists. \
 	It has great cultural significance in the empires of Grenzelhoft and Etrusca, where legendary swordsmen \
-	have created and perfected many fighting techniques of todae. This particular variant has a narrow crossguard \
+	have created and perfected many fighting techniques of todae. </br>This particular variant has a narrow crossguard \
 	and lengthened blade; the proportions of an ancient hero's sword, resurrected through modern smithing techniques."
 	icon_state = "longswordtri_heroic"
 	item_state = "longswordtri_heroic"
