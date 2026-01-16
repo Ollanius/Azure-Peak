@@ -72,6 +72,21 @@
 	name = STATKEY_LCK
 	icon_state = "buff"
 
+///
+
+/datum/status_effect/buff/alch/tripot
+	id = "tripot" //Triumph-exclusive. Shouldn't be craftable or obtainable under any other circumstance.
+	alert_type = /atom/movable/screen/alert/status_effect/buff/alch/tripot
+	effectedstats = list(STATKEY_STR = 1, STATKEY_PER = 1, STATKEY_INT = 1, STATKEY_CON = 1, STATKEY_WIL = 1, STATKEY_SPD = 1, STATKEY_LCK = 1)
+	duration = 777 MINUTES //Functionally infinite, as most rounds end by the 180-240 minute mark.
+
+/atom/movable/screen/alert/status_effect/buff/alch/tripot
+	name = "Triumphance"
+	desc = "My latest triumph has left me feeling stronger than ever before!"
+	icon_state = "buff"
+
+///
+
 /datum/status_effect/buff/alch/fire_resist
 	id = "fire resistance"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/alch/fire_resist
