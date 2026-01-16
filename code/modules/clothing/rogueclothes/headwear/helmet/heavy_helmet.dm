@@ -657,6 +657,10 @@
 			pic.color = get_detail_color()
 		add_overlay(pic)
 
+/obj/item/clothing/head/roguetown/helmet/heavy/frogmouth/triumph
+	name = "heraldric froggemund helmet"
+	desc = "An imposing frogmouth-style helm, popular amongst nobility-and-champions alike in the highest plateaus of the Azure Peak. It covers not only the entire head and face, but the neck as well. Add a cloth to show the colors of your family or allegiance."
+	smelt_bar_num = 1 //Triumph-exclusive. No more than one smeltable ingot per piece.
 
 /obj/item/clothing/head/roguetown/helmet/heavy/matthios
 	name = "gilded visage"
