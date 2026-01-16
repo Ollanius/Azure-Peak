@@ -147,7 +147,7 @@
 /obj/item/clothing/ring/signet
 	name = "signet ring"
 	icon_state = "signet"
-	desc = "A ring of opulent gold, bearing the symbol of Psydon. By dipping it in melted redtallow, it can seal writs of religious importance - a matter better known to the Inquisition, rather than the Church or Crown."
+	desc = "A ring of opulent gold, bearing the Lord's symbol. By dipping it in melted redtallow, it can seal writs of religious importance - a matter better known to the Inquisition, rather than the Church or Crown."
 	sellprice = 135
 	var/tallowed = FALSE
 
@@ -274,7 +274,7 @@
 	sellprice = 3	//You don't get to smelt this down or sell it. No free mams for a loadout item.
 	var/choicename = FALSE
 	var/choicedesc = FALSE
-	is_silver = TRUE
+	is_silver = FALSE //Love wins.
 
 /obj/item/clothing/ring/band/attack_right(mob/user)
 	if(choicename)
@@ -296,8 +296,9 @@
 		return
 
 /////////////////////////
-// Blacksteel Rings //
+// Blacksteel Rings    //
 /////////////////////////
+
 /obj/item/clothing/ring/emeraldbs
 	name = "gemerald ring"
 	icon_state = "bs_ring_emerald"
@@ -334,6 +335,23 @@
 	desc = "A beautiful golden ring with a polished Dorpel set into it."
 	sellprice = 370
 
+////////////////////////
+// Triumph Exclusive! //
+////////////////////////
+
+//Purchasable via Triumphs. Blacklisted from the Stockpile and fitted with a reduced saleprice.
+/obj/item/clothing/ring/signet/triumph
+	name = "ornate signet ring"
+	icon_state = "signet"
+	desc = "A ring of opulent gold, bearing the symbol of an aristocratic household. By dipping it in melted redtallow, it can seal writs of religious importance - a matter better known to the Inquisition, rather than the Church or Crown."
+	sellprice = 77 
+	var/tallowed = FALSE
+
+/obj/item/clothing/ring/gold/triumph
+	name = "ornate gold ring"
+	desc = "A ring of golden beauty, who's story could only be retold by a lonesome tongue."
+	icon_state = "ring_g"
+	sellprice = 33
 
 /////////////////////////
 // Stat-Boosting Rings //
