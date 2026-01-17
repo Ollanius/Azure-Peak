@@ -657,6 +657,9 @@
 			pic.color = get_detail_color()
 		add_overlay(pic)
 
+/obj/item/clothing/head/roguetown/helmet/heavy/frogmouth/legacy //Triumph-exclusive.
+	name = "valorian froggemund helmet"
+	desc = "A triumphant greathelm, crested with a steel gorget that - while cumbersome - offers the finest protection in all of Azuria. Will you succumb to despair, or will you fight for your happiness?"
 
 /obj/item/clothing/head/roguetown/helmet/heavy/matthios
 	name = "gilded visage"
