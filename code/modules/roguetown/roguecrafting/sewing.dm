@@ -793,7 +793,7 @@
 /datum/crafting_recipe/roguetown/sewing/monkheadband
 	name = "padded headband"
 	category = "Coifs"
-	result = list(/obj/item/clothing/head/roguetown/headband/monk)
+	result = list(/obj/item/clothing/head/roguetown/headband/monk/barbarian)
 	reqs = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/fibers = 2)
 	craftdiff = 3
