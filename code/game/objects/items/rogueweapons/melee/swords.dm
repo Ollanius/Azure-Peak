@@ -1907,10 +1907,10 @@
 	sellprice = 100 // lets not make it too profitable
 	smeltresult = /obj/item/ingot/blacksteel
 
-/obj/item/rogueweapon/sword/blacksteel
-	name = "blacksteel arming sword"
+/obj/item/rogueweapon/sword/gold
+	name = "golden arming sword"
 	desc = "A long blacksteel blade attached to a hilt, separated by a crossguard. The arming sword has been Psydonia's implement of war by excellence for generations. This one is a great deal more expensive than its steel counterparts."
-	icon_state = "bs_sword"
+	icon_state = "goldsword"
 	smeltresult = /obj/item/ingot/blacksteel
 	force = 24 // +2
 	force_wielded = 27 
@@ -1919,10 +1919,28 @@
 	sellprice = 100
 	sheathe_icon = "sword1"
 
+/obj/item/rogueweapon/sword/blacksteel
+	name = "blacksteel arming sword"
+	desc = "A broad blade of blacksteel, mounted to a rosawooden handle that perfectly compliments its wielder's grasp. The arming sword has been Psydonia's implement of war by excellence for generations."
+	icon_state = "bs_sword"
+	smeltresult = /obj/item/ingot/blacksteel
+	force = 25
+	force_wielded = 30
+	max_integrity = 350
+	max_blade_int = 350
+	sellprice = 100
+	sheathe_icon = "bs_sword"
+
 /obj/item/rogueweapon/sword/decorated/blacksteel
-	name = "decorated arming sword"
-	desc = "A valuable ornate arming sword made for the purpose of ceremonial fashion. It has a fine leather grip, a carefully engraved gold-plated crossguard, and its blade is made entirely of blacksteel."
+	name = "decorated blacksteel arming sword"
+	desc = "A  made for the purpose of ceremonial fashion. It has a fine leather grip, a carefully engraved gold-plated crossguard, and its blade is made entirely of blacksteel."
+	force = 25
+	force_wielded = 30
+	smeltresult = /obj/item/ingot/blacksteel
+	max_integrity = 350
+	max_blade_int = 350
 	icon_state = "bs_swordregal"
+	sheathe_icon = "bs_swordregal"
 	sellprice = 200
 
 /obj/item/rogueweapon/sword/short/gronn
