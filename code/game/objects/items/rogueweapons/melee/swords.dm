@@ -320,7 +320,7 @@
 ////////////////////////
 
 /obj/item/rogueweapon/sword/long/triumph
-	name = "heraldric longsword"
+	name = "valorian longsword"
 	desc = "A lethal and perfectly balanced weapon, the longsword the protagonist of endless tales and myths \
 	all across Psydonia. This particular variant has a stouter crossguard and wider blade; a prevaling design \
 	from the preceding century, oft-mantled in the homes of now-retired adventurers."
