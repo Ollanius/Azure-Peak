@@ -2160,7 +2160,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 							continue
 						loadouts_available[loadout.name] = loadout
 
-					var/loadout_input = tgui_input_list(user, "Choose your character's loadout item. RMB a tree, statue or clock to collect. I cannot stress this enough. YOU DON'T SPAWN WITH THESE. YOU HAVE TO MANUALLY PICK THEM UP!!", "LOADOUT THAT YOU GET FROM A TREE OR STATUE OR CLOCK", loadouts_available)
+					var/loadout_input = tgui_input_list(user, "Choose an item for your character's stashed loadout. Your character can access their stash by right-clicking a tree, statue, or clock. Note that any Triumph-costing items in your loadout will be automatically purchased, only after you've joined the round.", "LOADOUT", loadouts_available)
 					if(loadout_input)
 						if(loadout_input == "None")
 							loadout = null
@@ -2181,7 +2181,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 							continue
 						loadouts_available[loadout2.name] = loadout2
 
-					var/loadout_input2 = tgui_input_list(user, "Choose your character's loadout item. RMB a tree, statue or clock to collect. I cannot stress this enough. YOU DON'T SPAWN WITH THESE. YOU HAVE TO MANUALLY PICK THEM UP!!", "LOADOUT THAT YOU GET FROM A TREE OR STATUE OR CLOCK", loadouts_available)
+					var/loadout_input2 = tgui_input_list(user, "Choose an item for your character's stashed loadout. Your character can access their stash by right-clicking a tree, statue, or clock. Note that any Triumph-costing items in your loadout will be automatically purchased, only after you've joined the round.", "LOADOUT", loadouts_available)
 					if(loadout_input2)
 						if(loadout_input2 == "None")
 							loadout2 = null
@@ -2202,7 +2202,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 							continue
 						loadouts_available[loadout3.name] = loadout3
 
-					var/loadout_input3 = tgui_input_list(user, "Choose your character's loadout item. RMB a tree, statue or clock to collect. I cannot stress this enough. YOU DON'T SPAWN WITH THESE. YOU HAVE TO MANUALLY PICK THEM UP!!", "LOADOUT THAT YOU GET FROM A TREE OR STATUE OR CLOCK", loadouts_available)
+					var/loadout_input3 = tgui_input_list(user, "Choose an item for your character's stashed loadout. Your character can access their stash by right-clicking a tree, statue, or clock. Note that any Triumph-costing items in your loadout will be automatically purchased, only after you've joined the round.", "LOADOUT", loadouts_available)
 					if(loadout_input3)
 						if(loadout_input3 == "None")
 							loadout3 = null
