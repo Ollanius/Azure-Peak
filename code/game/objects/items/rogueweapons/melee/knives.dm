@@ -712,7 +712,7 @@
 	desc = "A wave-bladed dagger of Elven design, who's silvered beauty is only rivaled by its deceptive lethality."
 	force = 22 //One of the rare silver-edged weapons that has a positive damage boost, due to it requiring both silver and gold to create.
 	icon_state = "elfdagger"
-	sheathe_state = "elfdagger"
+	sheathe_icon = "elfdagger"
 	item_state = "elfdag"
 	last_used = 0
 	smeltresult = /obj/item/ingot/gold
