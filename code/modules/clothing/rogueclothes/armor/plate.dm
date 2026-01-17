@@ -653,6 +653,8 @@
     desc = "A steel cuirass. Do you still remember the first time you tasted blood; that sanguine succor, dribbling from a busted lip?"
     icon_state = "legacycuirass"
     item_state = "legacycuirass"
+
+	smeltresult = /obj/item/ingot/steel
 	smelt_bar_num = 1
 
 /obj/item/clothing/suit/roguetown/armor/plate/legacy
@@ -660,6 +662,8 @@
     desc = "A padded steel cuirass, 'adventurer-fitted' with a pair of pauldrons. Before you is your weapon; when was the last time you had ever thought without its presence?"
     icon_state = "legacyhalfplate"
     item_state = "legacyhalfplate"
+
+	smeltresult = /obj/item/ingot/steel
 	smelt_bar_num = 1
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/legacy
@@ -667,6 +671,7 @@
     desc = "A complete set of steel plate armor, fitted with tassets and bracers for additional coverage. When the kingdom comes crashing down, will you deliver its people from evil; or will you be the one to string up 'pon the pyre?"
     icon_state = "legacyplate"
     item_state = "legacyplate"
+	smeltresult = /obj/item/ingot/steel
 	smelt_bar_num = 1
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/fluted/legacy
@@ -674,4 +679,5 @@
     desc = "A resplendant set of steel plate armor, decorated with silver flutings. Blessed dreamer, accursed heathen, lowly fool; the curtain call is a mere heartbeat away. Are you ready for one last dance, before midnight calls?"
     icon_state = "legacyornateplate"
 	item_state = "legacyornateplate"
+	smeltresult = /obj/item/ingot/steel
 	smelt_bar_num = 1
