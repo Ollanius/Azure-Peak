@@ -315,6 +315,66 @@
 	. = ..()
 	AddComponent(/datum/component/skill_blessed, TRAIT_LONGSWORDSMAN, /datum/skill/combat/swords, SKILL_LEVEL_MASTER)
 
+////////////////////////
+// TRIUMPH-EXCLUSIVE! //
+////////////////////////
+
+/obj/item/rogueweapon/sword/long/triumph
+	name = "heraldric longsword"
+	desc = "A lethal and perfectly balanced weapon, the longsword the protagonist of endless tales and myths \
+	all across Psydonia. This particular variant has a stouter crossguard and wider blade; a prevaling design \
+	from the preceding century, oft-mantled in the homes of now-retired adventurers."
+	icon = 'icons/roguetown/weapons/64.dmi'  //Framework for Triumph-purchasable longswords.
+	icon_state = "longsword_triumph"
+	icon_state = "longsword_triumph"
+
+/obj/item/rogueweapon/sword/long/triumph/getonmobprop(tag)
+	. = ..()
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.5,"sx" = -14,"sy" = -8,"nx" = 15,"ny" = -7,"wx" = -10,"wy" = -5,"ex" = 7,"ey" = -6,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -13,"sturn" = 110,"wturn" = -60,"eturn" = -30,"nflip" = 1,"sflip" = 1,"wflip" = 8,"eflip" = 1)
+			if("onback")
+				return list("shrink" = 0.5,"sx" = -1,"sy" = 2,"nx" = 0,"ny" = 2,"wx" = 2,"wy" = 1,"ex" = 0,"ey" = 1,"nturn" = 0,"sturn" = 0,"wturn" = 70,"eturn" = 15,"nflip" = 1,"sflip" = 1,"wflip" = 1,"eflip" = 1,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0)
+			if("wielded")
+				return list("shrink" = 0.5,"sx" = 5,"sy" = -2,"nx" = -6,"ny" = -2,"wx" = -6,"wy" = -2,"ex" = 7,"ey" = -2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -28,"sturn" = 29,"wturn" = -35,"eturn" = 32,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
+			if("onbelt")
+				return list("shrink" = 0.4,"sx" = -4,"sy" = -6,"nx" = 5,"ny" = -6,"wx" = 0,"wy" = -6,"ex" = -1,"ey" = -6,"nturn" = 100,"sturn" = 156,"wturn" = 90,"eturn" = 180,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
+
+/obj/item/rogueweapon/sword/long/triumph/rockhill
+	desc = "A lethal and perfectly balanced weapon, the longsword the protagonist of endless tales and myths \
+	all across Psydonia. This particular variant has a narrow crossguard and lengthened blade; the proportions \
+	of an ancient hero's claymore, resurrected through modern smithing techniques."
+	icon_state = "longsword_rockhill"
+	icon_state = "longsword_rockhill"
+	sheathe_icon = "gensword"
+
+/obj/item/rogueweapon/sword/long/triumph/sabreguard
+	desc = "A lethal and perfectly balanced weapon, the longsword the protagonist of endless tales and myths \
+	all across Psydonia. This particular variant has a curved crossguard and stouter blade; hallmarks of nobility, \
+	whether professed atop a saiga or against a villain's edge."
+	icon_state = "longsword_sabreguard"
+	icon_state = "longsword_sabreguard"
+	sheathe_icon = "cutlass"
+
+/obj/item/rogueweapon/sword/long/triumph/wideguard
+	desc = "A lethal and perfectly balanced weapon, the longsword the protagonist of endless tales and myths \
+	all across Psydonia. This particular variant has a widened crossguard, adored by lightly-armored mercenaries \
+	who cannot afford to leave a single riposte without interception."
+	icon_state = "longsword_wideguard"
+	icon_state = "longsword_wideguard"
+	sheathe_icon = "opsysword"
+
+/obj/item/rogueweapon/sword/long/triumph/psycrucifix
+	desc = "A lethal and perfectly balanced weapon, the longsword the protagonist of endless tales and myths \
+	all across Psydonia. This particular variant has a psycruciformed crossguard; a masterwork, held in silent \
+	reverance by those who've vowed to never forget the ultimate sacrifice."
+	icon_state = "longsword_psycrucifix"
+	icon_state = "longsword_psycrucifix"
+	sheathe_icon = "opsysword"
+
+//
+
 /obj/item/rogueweapon/sword/long/training
 	name = "training sword"
 	desc = "Swords like these, with blunted tips and dull edges, are often used for practice without much risk of injury."
@@ -1060,6 +1120,7 @@
 	desc = "A single-edged masterwork of Elven design, who's silvered blade glimmers under the sun's glare."
 	icon_state = "esaber"
 	item_state = "esaber"
+	sheathe_icon = "esaber"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	force = 23 //Equalized with the Stalker Sabre, with a +1DMG boost to its original stats.
