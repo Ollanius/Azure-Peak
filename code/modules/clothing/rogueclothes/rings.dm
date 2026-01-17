@@ -342,15 +342,12 @@
 //Purchasable via Triumphs. Blacklisted from the Stockpile and fitted with a reduced saleprice.
 /obj/item/clothing/ring/signet/triumph
 	name = "ornate signet ring"
-	icon_state = "signet"
 	desc = "A ring of opulent gold, bearing the symbol of an aristocratic household. By dipping it in melted redtallow, it can seal writs of religious importance - a matter better known to the Inquisition, rather than the Church or Crown."
 	sellprice = 77 
-	var/tallowed = FALSE
 
 /obj/item/clothing/ring/gold/triumph
 	name = "ornate gold ring"
 	desc = "A ring of golden beauty, who's story could only be retold by a lonesome tongue."
-	icon_state = "ring_g"
 	sellprice = 33
 
 /////////////////////////
