@@ -135,7 +135,7 @@
 	name = "royal golden helmet"
 	desc = "A resplendant barbute, masterfully forged from pure gold. Its nasalguard is marked by a holy sigil, and its interior is fitted with a besilked arming cap. The dorpeled crown atop its brow invokes authority, be it misbegotten or endowed."
 	icon_state = "goldbarbute_crown"
-	max_integrity = ARMOR_INT_HELMET_CLOTH // Doubled integrity.
+	max_integrity = ARMOR_INT_SIDE_GOLDPLUS // Doubled integrity.
 	sellprice = 300
 
 /obj/item/clothing/head/roguetown/helmet/heavy/knight

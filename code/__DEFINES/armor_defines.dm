@@ -68,7 +68,8 @@
 #define ARMOR_INT_SIDE_LEATHER 200 // Integrity for leather / copper pieces
 #define ARMOR_INT_SIDE_DECREPIT 150 // Integrity for decrepit pieces
 #define ARMOR_INT_SIDE_CLOTH 100 // Integrity for cloth / aesthetic oriented pieces
-#define ARMOR_INT_SIDE_GOLD 50 // Integrity for ALL golden / ceremonial pieces
+#define ARMOR_INT_SIDE_GOLDPLUS 10 // Integrity for royal variants of golden / cermemonial pieces
+#define ARMOR_INT_SIDE_GOLD 5 // Integrity for golden / ceremonial pieces
 
 /*--------------------\
 | ARMOR VALUE DEFINES |	
@@ -119,4 +120,4 @@
 #define ARMOR_RUMACLAN	list("blunt" = 5,"slash" = 90, "stab" = 90, "piercing" = 50, "fire" = 0, "acid" = 0)
 // Blocks every hit, at least once
 #define ARMOR_GRONN_LIGHT list("blunt" = 80, "slash" = 80, "stab" = 30, "piercing" = 30, "fire" = 0, "acid" = 0)
-#define ARMOR_GOLD list("blunt" = 200, "slash" = 200, "stab" = 200, "piercing" = 200, "fire" = 200, "acid" = 200) // Stops all incoming damage. Stupidly low integrity, however.
+#define ARMOR_GOLD list("blunt" = 200, "slash" = 200, "stab" = 200, "piercing" = 200, "fire" = 200, "acid" = 200) // Effective invulnerability on the covered limb(s). Can only be damaged through attacks with an integrity damage modifier.
