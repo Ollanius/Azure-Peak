@@ -984,6 +984,7 @@
 	name = "elven kriegsmesser"
 	desc = "An elegant greatsword, crested with a mithril blade that - in spite of its intimidating length - is mysteriously light. Unlike most elven masterworks, the grip is dressed in rosaleather; a foreboding symbol, christening it as a weapon of war against those who'd threaten elvekind."
 	icon_state = "elfkriegsmesser"
+	item_state = "elfkriegsmesser"
 	minstr = 10
 	wdefense = 7
 	sellprice = 120
@@ -1003,7 +1004,7 @@
 
 /obj/item/rogueweapon/greatsword/iron
 	name = "iron greatsword"
-	desc = "Wrought in iron. Heftier and less sturdier than its steel equivalent - but it still does the job."
+	desc = "A massive sword of iron, requiring both hands to properly wield. Heftier and less sturdier than its steel equivalent - but it still does the job."
 	icon_state = "igsw"
 	max_blade_int = 200
 	max_integrity = 200
