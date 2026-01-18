@@ -41,6 +41,8 @@
 		return FALSE // Prevents 'free coinage' exploitage.
 	if(istype(I, /obj/item/clothing/ring/gold/triumph))
 		return FALSE // Ditto, going down.
+	if(istype(I, /obj/item/clothing/ring/diamond/triumph))
+		return FALSE
 	if(istype(I, /obj/item/clothing/neck/roguetown/ornateamulet/noble/triumph))
 		return FALSE
 	if(istype(I, /obj/item/clothing/neck/roguetown/psicross/g/triumph))
