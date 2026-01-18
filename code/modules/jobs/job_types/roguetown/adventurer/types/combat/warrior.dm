@@ -557,13 +557,6 @@
 
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather/reinforced
 	pants = /obj/item/clothing/under/roguetown/tights/puritan
-	switch(H.patron?.type)
-			if(/datum/patron/old_god)
-				wrists = /obj/item/clothing/neck/roguetown/psicross/silver
-			if(/datum/patron/divine/astrata)
-				wrists = /obj/item/clothing/neck/roguetown/psicross/silver/astrata
-			else
-				wrists = /obj/item/clothing/neck/roguetown/psicross/silver/undivided
 	cloak = /obj/item/clothing/cloak/cape/puritan
 	neck = /obj/item/clothing/neck/roguetown/chaincoif
 	gloves = /obj/item/clothing/gloves/roguetown/angle
@@ -575,6 +568,13 @@
 		/obj/item/rogueweapon/scabbard/sheath = 1,
 		/obj/item/rogueweapon/huntingknife = 1, //Ensures that Exorcists who take the Shovel can still butcher wildlife. Minor oversight on my part.
 		)
+	switch(H.patron?.type)
+			if(/datum/patron/old_god)
+				wrists = /obj/item/clothing/neck/roguetown/psicross/silver
+			if(/datum/patron/divine/astrata)
+				wrists = /obj/item/clothing/neck/roguetown/psicross/silver/astrata
+			else
+				wrists = /obj/item/clothing/neck/roguetown/psicross/silver/undivided
 	//Old people get the option to become glass cannons. Expert Knives + Expert in their chosen weapon, but a permenant -I STR, -I PER, -2 SPD and -2 CON debuff.
 
 /datum/advclass/sfighter/deprived
