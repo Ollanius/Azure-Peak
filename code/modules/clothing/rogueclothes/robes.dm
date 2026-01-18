@@ -14,6 +14,16 @@
 	l_sleeve_status = SLEEVE_NORMAL
 	experimental_inhand = FALSE
 
+/obj/item/clothing/suit/roguetown/shirt/robe/unholy
+	name = "foreboding robes"
+	desc = "An otherworldly veil, crackling with the constant ponderance of a runic enigma. She watches over you; and Her grin is crooked into one of eternal malice."
+	max_integrity = 666
+	armor = ARMOR_SPELLSINGER
+	color = null
+	boobed = null
+	item_state = "ewarlock"
+	icon_state = "ewarlock"
+
 /obj/item/clothing/suit/roguetown/shirt/robe/astrata
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT|ITEM_SLOT_CLOAK
 	name = "sun robe"

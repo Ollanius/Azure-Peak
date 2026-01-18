@@ -209,6 +209,16 @@
 	salvage_amount = 1
 	block2add = null
 
+// UN-Holy Hoods!
+/obj/item/clothing/head/roguetown/roguehood/unholy
+	name = "foreboding hood" //Lich-exclusive?
+	desc = "An otherworldly veil, crackling with the constant ponderance of a runic enigma. She watches over you; and Her grin is crooked into one of eternal malice."
+	max_integrity = 666
+	armor = ARMOR_SPELLSINGER
+	adjustable = null
+	item_state = "ewarlockhood"
+	icon_state = "ewarlockhood"
+
 //............... Feldshers Hood ............... //
 /obj/item/clothing/head/roguetown/roguehood/feld
 	name = "feldsher's hood"
