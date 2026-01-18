@@ -795,14 +795,15 @@ GLOBAL_LIST_EMPTY(loadout_items)
 //////////////////
 
 //Everything in this section costs TRI. Very rudimentary, but it should help us gradually realign some sense of value to this otherwise-neglected system.
-//Most people
+//When it comes to equipment, avoid adding anything that an Adventurer - or non-combative Noble - couldn't spawn with, or otherwise acquire within the first dae of the week.
+//If adding more items, ensure they're a Triumph-exclusive child. If they can be smelted down, reduce the sum to one ingot. If they can be sold, blacklist it from the Stockpile.
 
 // -3 TRI Minisection.
-// Most players earn +3-5 TRI per week. Fit for trinkets, tools, and lesser-armored footwear and handwear.
+// Nearly all characters can comfortably earn +3-5 TRI per week, assuming they sleep ever-so-often.
 
-/datum/loadout_item/bauernwehr
+/datum/loadout_item/triumph_knife
 	name = "Laborer's Knife (-3 TRI)"
-	path = /obj/item/rogueweapon/huntingknife/throwingknife/bauernwehr
+	path = /obj/item/rogueweapon/huntingknife/throwingknife/triumph
 	triumph_cost = 3
 
 /datum/loadout_item/triumph_heavygloves
@@ -816,31 +817,45 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	triumph_cost = 3
 
 /datum/loadout_item/triumph_necklace
-	name = "Ornate Amulet, Heirloom (-3 TRI)"
-	path = /obj/item/clothing/neck/roguetown/ornateamulet/noble
+	name = "Golden Necklace, Ornate (-3 TRI)"
+	path = /obj/item/clothing/neck/roguetown/ornateamulet/noble/triumph
 	triumph_cost = 3
 
-/datum/loadout_item/triumph_signet
-	name = "Golden Signet Ring, Heirloom (-3 TRI)"
-	path = /obj/item/clothing/ring/signet/triumph
+/datum/loadout_item/triumph_ring
+	name = "Golden Ring, Ornate (-3 TRI)"
+	path = /obj/item/clothing/ring/gold/triumph
 	triumph_cost = 3
 
-/datum/loadout_item/triumph_psycross
-	name = "Golden Psycross, Heirloom (-3 TRI)"
-	path = /obj/item/clothing/neck/roguetown/psicross/g/triumph
-	triumph_cost = 3
-
-/datum/loadout_item/triumph_circulet
-	name = "Golden Circulet, Heirloom (-3 TRI)"
+/datum/loadout_item/triumph_circlet
+	name = "Golden Circlet, Ornate (-3 TRI)"
 	path = /obj/item/clothing/head/roguetown/circlet/triumph
 	triumph_cost = 3
 
 // -5 TRI Minisection.
-// Stores more opulent alternatives, including those with some additional mechanical sway. Normally restricted to nobility, craftsmen, or certain imports.
 
 /datum/loadout_item/triumph_shortsatchel
 	name = "Short Satchel (-5 TRI)"
 	path = /obj/item/storage/backpack/rogue/satchel/short
+	triumph_cost = 5
+
+/datum/loadout_item/triumph_bedroll
+	name = "Waterskin (-5 TRI)"
+	path = /obj/item/reagent_containers/glass/bottle/waterskin
+	triumph_cost = 5
+
+/datum/loadout_item/triumph_messkit
+	name = "Mess Kit (-5 TRI)"
+	path = /datum/component/storage/concrete/roguetown/messkit
+	triumph_cost = 5
+
+/datum/loadout_item/triumph_foldtable
+	name = "Folding Table (-5 TRI)"
+	path = /obj/structure/table/wood/folding
+	triumph_cost = 5
+
+/datum/loadout_item/triumph_bedroll
+	name = "Bedroll (-5 TRI)"
+	path = /obj/structure/bed/rogue/bedroll
 	triumph_cost = 5
 
 /datum/loadout_item/triumph_scabbardnoble
@@ -851,6 +866,26 @@ GLOBAL_LIST_EMPTY(loadout_items)
 /datum/loadout_item/triumph_sheathnoble
 	name = "Decorated Sheath, Silver (-5 TRI)"
 	path = /obj/item/rogueweapon/scabbard/sheath/noble
+	triumph_cost = 5
+
+/datum/loadout_item/triumph_psycross
+	name = "Golden Psycross, Ornate (-5 TRI)"
+	path = /obj/item/clothing/neck/roguetown/psicross/g/triumph
+	triumph_cost = 5
+
+/datum/loadout_item/triumph_zcross
+	name = "Golden Zizote Amulet, Ornate (-5 TRI)"
+	path = /obj/item/clothing/neck/roguetown/psicross/inhumen/g/triumph
+	triumph_cost = 5
+
+/datum/loadout_item/triumph_astcross
+	name = "Golden Astratan Amulet, Ornate (-5 TRI)"
+	path = /obj/item/clothing/neck/roguetown/psicross/astrata/g/triumph
+	triumph_cost = 5
+
+/datum/loadout_item/triumph_signet
+	name = "Golden Signet Ring, Ornate (-5 TRI)"
+	path = /obj/item/clothing/ring/signet/triumph
 	triumph_cost = 5
 
 /datum/loadout_item/triumph_gildedshirt
@@ -869,12 +904,6 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	triumph_cost = 5
 
 // -7 TRI Minisection.
-// No matter what, just taking one'll be a net loss. Highest standarized tier, involving very expensive garb and combat-ready - if reskinned - equipment.
-
-/datum/loadout_item/triumph_froggemund
-	name = "Froggemund Helmet, Heraldric (-7 TRI)"
-	path = /obj/item/clothing/head/roguetown/helmet/heavy/frogmouth/triumph
-	triumph_cost = 7
 
 /datum/loadout_item/triumph_lordcloak
 	name = "Lordly Cloak (-7 TRI)"
@@ -896,35 +925,49 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	path = /obj/item/rogueweapon/scabbard/sheath/royal
 	triumph_cost = 7
 
+/datum/loadout_item/triumph_gdorpelring
+	name = "Golden Dorpel Ring, Ornate (-7 TRI)"
+	path = /obj/item/clothing/ring/diamond/triumph
+	triumph_cost = 7
+
 /datum/loadout_item/triumph_longsword
-	name = "Longsword, Heraldric (-7 TRI)"
+	name = "Valorian Longsword (-7 TRI)"
 	path = /obj/item/rogueweapon/sword/long/triumph
 	triumph_cost = 7
 
-/datum/loadout_item/triumph_longswords
-	name = "Longsword, Sabreguard (-7 TRI)"
-	path = /obj/item/rogueweapon/sword/long/triumph/sabre
+/datum/loadout_item/triumph_longswordr
+	name = "Valorian Longsword, Rockhillic (-7 TRI)"
+	path = /obj/item/rogueweapon/sword/long/triumph/rockhill
 	triumph_cost = 7
 
 /datum/loadout_item/triumph_longswordw
-	name = "Longsword, Wideguard (-7 TRI)"
+	name = "Valorian Longsword, Wideguard (-7 TRI)"
 	path = /obj/item/rogueweapon/sword/long/triumph/wideguard
 	triumph_cost = 7
 
+/datum/loadout_item/triumph_longswords
+	name = "Valorian Longsword, Sabreguard (-7 TRI)"
+	path = /obj/item/rogueweapon/sword/long/triumph/sabreguard
+	triumph_cost = 7
+
 /datum/loadout_item/triumph_longswordp
-	name = "Longsword, Psycrucifix (-7 TRI)"
-	path = /obj/item/rogueweapon/sword/long/triumph/psydon
+	name = "Valorian Longsword, Psycrucifix (-7 TRI)"
+	path = /obj/item/rogueweapon/sword/long/triumph/psycrucifix
 	triumph_cost = 7
 
-/datum/loadout_item/triumph_longswordh
-	name = "Longsword, Heroic (-7 TRI)"
-	path = /obj/item/rogueweapon/sword/long/triumph/heroic
-	triumph_cost = 7
+// -10 to -??? TRI Minisection.
 
-// -??? TRI Minisection.
-// Thar be dragons!
+/datum/loadout_item/triumph_froggemund
+	name = "Valorian Froggemund Helmet (-10 TRI)"
+	path = /obj/item/clothing/head/roguetown/helmet/heavy/frogmouth/legacy
+	triumph_cost = 10
+
+/datum/loadout_item/triumph_cuirass
+	name = "Valorian Cuirass (-10 TRI)"
+	path = /datum/anvil_recipe/armor/steel/cuirass/legacy
+	triumph_cost = 10
 
 /datum/loadout_item/triumph_buffpot
-	name = "Vial of Distilled Triumphance (-50 TRI)"
+	name = "Vial of Distilled Triumphance (-70 TRI)"
 	path = /obj/item/reagent_containers/glass/bottle/alchemical/tripot
-	triumph_cost = 50
+	triumph_cost = 70
