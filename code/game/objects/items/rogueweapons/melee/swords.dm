@@ -566,7 +566,7 @@
 
 /obj/item/rogueweapon/sword/long/judgement
 	name = "\"Judgement\""
-	desc = "An intricately forged longsword, it's blade is made from Aavnr's finest Vyšvou steel - held from an ornate carved ivory grip from the region's \"Mamük\" megafauna. A sight that's truly unique."
+	desc = "A noble longsword, and the cherished heirloom of Azuria's royal bloodline. Its blade is made from Aavnr's finest Vyšvou steel - held from an ornate carved ivory grip from the region's \"Mamük\" megafauna, and decorated with heraldric engravings of silver. ‎</br>‎‎ </br>'When you stand before thine lord, you cannot say, '..but I was told by others to do thus..', or that, '..virtue was not convenient at the time.' This will not suffice. Remember that.'"
 	icon_state = "judgement"
 	item_state = "judgement"
 	sheathe_icon = "judgement"
@@ -589,7 +589,7 @@
 
 /obj/item/rogueweapon/sword/long/judgement/ascendant //meant to be insanely OP; solo antag wep
 	name = "\"The Redentor\""
-	desc = "An intricately forged sword of great power. And the preacher said: \"For the Lord is my tower, and He gives me the power to tear down the works of the enemy.\""
+	desc = "A resplendent longsword, assembled from an otherworldly alloy. Intersecting visions from beyond-and-before cross your mind, as your fingers curl along the leather; all merging into a final truth, sailing across the star-speckled phlogiston. ‎</br>‎‎ </br>'And the preacher said: \"For the Lord is my tower, and He gives me the power to tear down the works of the enemy.\""
 	force = 50
 	force_wielded = 70
 	possible_item_intents = list(/datum/intent/sword/cut, /datum/intent/sword/thrust, /datum/intent/sword/strike)
@@ -604,7 +604,7 @@
 
 /obj/item/rogueweapon/sword/long/judgement/vlord
 	name = "\"Ichor Fang\""
-	desc = "An unholy longsword made of odd steel. A green crystalline mass covers the blade and pommel, its edges and serrations tougher and sharper than anything forged by a master swordsmith."
+	desc = "An unholy longsword, who's crystalline blade radiates with insurmountable sharpness. It has been brought forth unto this world for a singular purpose; not to bring peace, but to dominate all who'd dare to oppose the coming darkness. ‎</br>‎‎ </br>'And I looked, and beheld a pale horse - the name that sat upon Her was Death, and Hell followed with them.'"
 	force = 40
 	force_wielded = 55
 	possible_item_intents = list(/datum/intent/sword/cut, /datum/intent/sword/thrust, /datum/intent/sword/strike, /datum/intent/sword/peel)
@@ -613,7 +613,7 @@
 	item_state = "vlord"
 	wbalance = WBALANCE_NORMAL
 	max_integrity = 9999
-	sellprice = 363
+	sellprice = 777
 	static_price = TRUE
 	equip_delay_self = 0
 	unequip_delay_self = 0
@@ -1909,39 +1909,103 @@
 
 /obj/item/rogueweapon/sword/gold
 	name = "golden arming sword"
-	desc = "A long blacksteel blade attached to a hilt, separated by a crossguard. The arming sword has been Psydonia's implement of war by excellence for generations. This one is a great deal more expensive than its steel counterparts."
+	desc = "A heavenly arming sword, who's golden blade and roaswooden handle lays separated by a duocruciformic crossguard. This particular weapon seems to have innovatively combined the lethal cutting prowess of Psydonia's oldest weapon with the psychological damage of knowing that its wielder could likely bribe the Carriageman himself, and still chose to personally kill you."
 	icon_state = "goldsword"
-	smeltresult = /obj/item/ingot/blacksteel
-	force = 24 // +2
-	force_wielded = 27 
-	max_integrity = 200
+	smeltresult = /obj/item/ingot/gold
+	force = 35
+	force_wielded = 40
+	max_integrity = 70
+	max_blade_int = 70
+	anvilrepair = null //Ceremonial. This should break comedically easily, but still have just enough toughness to work with a few strikes.
+	sellprice = 250
+	sheathe_icon = "goldsword"
+	wbalance = WBALANCE_HEAVY
+
+/obj/item/rogueweapon/sword/gold/lordscepter
+	name = "\"Godshande\""
+	desc = "A royal arming sword, who's golden blade and roaswooden handle lays separated by a duocruciformic crossguard. Nestled within its glistening bosom is a shard of Astrata's divinity authority; when reason fails to rank amongst rage, let Her speak for you. ‎</br>‎‎ </br>'..And I will strike down upon thee with great vengeance and furious anger - those who would attempt to poison and destroy my brothers. And you will know that I am the Lord when I lay my vengeance upon thee!'"
+	icon_state = "goldswordking"
+	sheathe_icon = "goldswordking"
+	anvilrepair = /datum/skill/craft/weaponsmithing
+	max_integrity = 250
 	max_blade_int = 250
-	sellprice = 100
-	sheathe_icon = "sword1"
+	sellprice = 363
+	possible_item_intents = list(/datum/intent/sword/cut/arming, /datum/intent/sword/thrust/arming, /datum/intent/lord_electrocute, /datum/intent/lord_silence)
+	gripped_intents = list(/datum/intent/sword/cut/arming, /datum/intent/sword/thrust/arming, /datum/intent/sword/strike, /datum/intent/sword/peel)
+
+/obj/item/rogueweapon/sword/gold/lordscepter/afterattack(atom/target, mob/user, flag)
+	. = ..()
+	if(get_dist(user, target) > 7)
+		return
+	
+	user.changeNext_move(CLICK_CD_MELEE)
+
+	if(ishuman(user))
+		var/mob/living/carbon/human/HU = user
+
+		if(HU.job != "Grand Duke")
+			to_chat(user, span_danger("The rod doesn't obey me."))
+			return
+
+		if(ishuman(target))
+			var/mob/living/carbon/human/H = target
+			var/area/target_area = get_area(H)
+
+			if(!istype(target_area, /area/rogue/indoors/town/manor))
+				to_chat(user, span_danger("The sword's divine authority cannot be invoked on targets outside of the manor!"))
+				return
+
+			if(H == HU)
+				return
+
+			if(!COOLDOWN_FINISHED(src, scepter))
+				to_chat(user, span_danger("The [src] is not ready yet! [round(COOLDOWN_TIMELEFT(src, scepter) / 10, 1)] seconds left!"))
+				return
+
+			if(H.anti_magic_check())
+				to_chat(user, span_danger("Something is disrupting the sword's divine authority!"))
+				return
+
+			if(istype(user.used_intent, /datum/intent/lord_electrocute))
+				HU.visible_message(span_warning("[HU] electrocutes [H] with the [src]."))
+				user.Beam(target,icon_state="lightning[rand(1,12)]",time=5)
+				H.electrocute_act(5, src)
+				COOLDOWN_START(src, scepter, 20 SECONDS)
+				to_chat(H, span_danger("I'm electrocuted by the sword's divine authority!"))
+				return
+
+			if(istype(user.used_intent, /datum/intent/lord_silence))
+				HU.visible_message("<span class='warning'>[HU] silences [H] with \the [src].</span>")
+				H.set_silence(20 SECONDS)
+				COOLDOWN_START(src, scepter, 10 SECONDS)
+				to_chat(H, "<span class='danger'>I'm silenced by the sword's divine authority!</span>")
+				return
 
 /obj/item/rogueweapon/sword/blacksteel
 	name = "blacksteel arming sword"
-	desc = "A broad blade of blacksteel, mounted to a rosawooden handle that perfectly compliments its wielder's grasp. The arming sword has been Psydonia's implement of war by excellence for generations."
+	desc = "A broad blade of blacksteel, mounted to a rosawooden handle that perfectly compliments its wielder's grasp. It is the culmination of Psydonia's storied history with arming swords; a mastersmith's triumph, only fit for the hands of a true hero.. or a truer villain."
 	icon_state = "bs_sword"
+	sheathe_icon = "bs_sword"
 	smeltresult = /obj/item/ingot/blacksteel
-	force = 25
-	force_wielded = 30
+	force = 30
+	force_wielded = 35
+	wdefense = 6
 	max_integrity = 350
 	max_blade_int = 350
-	sellprice = 100
-	sheathe_icon = "bs_sword"
+	sellprice = 200
 
 /obj/item/rogueweapon/sword/decorated/blacksteel
 	name = "decorated blacksteel arming sword"
-	desc = "A  made for the purpose of ceremonial fashion. It has a fine leather grip, a carefully engraved gold-plated crossguard, and its blade is made entirely of blacksteel."
-	force = 25
-	force_wielded = 30
+	desc = "A broad blade of blacksteel, mounted atop a golden sabreguard that's been meticulously engraved with its commissoner's heraldry. It is a masterwork of unmatched opulance and lethality, and - perhaps - is the finest arming sword your eyes'll ever lay upon."
+	icon_state = "bs_swordregal"
+	sheathe_icon = "bs_swordregal"
+	force = 30
+	force_wielded = 35
+	wdefense = 7
 	smeltresult = /obj/item/ingot/blacksteel
 	max_integrity = 350
 	max_blade_int = 350
-	icon_state = "bs_swordregal"
-	sheathe_icon = "bs_swordregal"
-	sellprice = 200
+	sellprice = 300
 
 /obj/item/rogueweapon/sword/short/gronn
 	name = "gronnic hinterblade"
