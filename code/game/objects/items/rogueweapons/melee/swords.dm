@@ -2032,7 +2032,7 @@
 				return
 
 			if(!COOLDOWN_FINISHED(src, sceptersword))
-				to_chat(user, span_danger("The [src] is not ready yet! [round(COOLDOWN_TIMELEFT(src, scepter) / 10, 1)] seconds left!"))
+				to_chat(user, span_danger("The [src] is not ready yet! [round(COOLDOWN_TIMELEFT(src, sceptersword) / 10, 1)] seconds left!"))
 				return
 
 			if(H.anti_magic_check())
