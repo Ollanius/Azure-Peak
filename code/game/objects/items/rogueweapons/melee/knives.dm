@@ -567,11 +567,28 @@
 		added_def = 2,\
 	)
 
+/obj/item/rogueweapon/huntingknife/idagger/stake
+	name = "stake"
+	desc = "A branch that has been broken off of an azurielve tree, sharpened to a fine point. It can lay some unholy creechers to rest, but only by piercing their hearts."
+	icon_state = "stake"
+	possible_item_intents = list(/datum/intent/dagger/thrust, /datum/intent/dagger/thrust/pick, /datum/intent/dagger/sucker_punch, /datum/intent/dagger/thrust/quick)
+	force = 13
+	throwforce = 13
+	wdefense = 0
+	max_integrity = 50
+	sellprice = 50
+	slot_flags = ITEM_SLOT_HIP
+	smeltresult = /obj/item/rogueore/coal
+	last_used = 0
+	equip_delay_self = 0 //No delay when stowing away, without a scabbard.
+	unequip_delay_self = 0 //No delay when drawing.
+	inv_storage_delay = 0 //No delay when retrieving from a storage slot.
+
 /obj/item/rogueweapon/huntingknife/idagger/silver/stake
 	name = "silver-tipped stake"
 	desc = "A branch that has been broken off of a boswellia tree, sharpened to a fine point and tipped with blessed silver. It can lay most unholy creechers to rest, but only by piercing their hearts."
-	icon_state = "stake" //Should hopefully autogenerate an inhand. Need to politely ask a coder to import a custom sprite for this stake, later.
-	icon = 'icons/roguetown/items/natural.dmi'
+	icon_state = "stake_silver"
+	possible_item_intents = list(/datum/intent/dagger/thrust, /datum/intent/dagger/thrust/pick, /datum/intent/dagger/sucker_punch, /datum/intent/dagger/thrust/quick)
 	force = 20
 	throwforce = 20
 	wdefense = 0
