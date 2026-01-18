@@ -38,9 +38,12 @@
 
 /obj/item/clothing/head/roguetown/circlet
 	name = "golden circlet"
+	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_MASK
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/head_items.dmi'
 	icon_state = "circlet"
 	item_state = "circlet"
 	sellprice = 50
+	alternate_worn_layer = 8.9 //On top of helmet
 
 ////////////////////////
 // Triumph Exclusive! //
