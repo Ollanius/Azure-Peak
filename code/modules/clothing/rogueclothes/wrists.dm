@@ -147,7 +147,7 @@
 	sellprice = 10
 	salvage_amount = 1
 	salvage_result = /obj/item/natural/hide/cured
-	color = "#4d4d4d"
+	color = "#7f829d"
 
 /obj/item/clothing/wrists/roguetown/bracers/copper
 	name = "copper bracers"
