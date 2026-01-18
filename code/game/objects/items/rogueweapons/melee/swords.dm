@@ -141,6 +141,39 @@
 /datum/intent/rend/krieg
 	intent_intdamage_factor = 0.2
 
+/datum/intent/sword/chop/cleave
+	name = "cleave"
+	chargedrain = 1
+	chargetime = 5
+	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR
+	desc = "A powerful, charged-up swing that deals increased damage and can throw a standing opponent back and slow them down, based on your strength. Ineffective below 10 strength. Slowdown & Knockback scales to your Strength up to 13 (1 - 3 tiles). Cannot be used consecutively more than every 5 seconds on the same target. Prone targets halve the knockback distance. Not fully charging the attack limits knockback to 1 tile."
+	var/maxrange = 3
+
+/datum/intent/sword/chop/cleave/spec_on_apply_effect(mob/living/H, mob/living/user, params)
+	var/chungus_khan_str = user.STASTR 
+	if(H.has_status_effect(/datum/status_effect/debuff/yeetcd))
+		return // Recently knocked back, cannot be knocked back again yet
+	if(chungus_khan_str < 10)
+		return // Too weak to have any effect
+	var/scaling = CLAMP((chungus_khan_str - 10), 1, maxrange)
+	H.apply_status_effect(/datum/status_effect/debuff/yeetcd)
+	H.Slowdown(scaling)
+	// Copypasta from knockback proc cuz I don't want the math there
+	var/knockback_tiles = scaling // 1 to 4 tiles based on strength
+	if(H.resting)
+		knockback_tiles = max(1, knockback_tiles / 2)
+	if(user?.client?.chargedprog < 100)
+		knockback_tiles = 1 // Minimal knockback on non-charged smash.
+	var/turf/edge_target_turf = get_edge_target_turf(H, get_dir(user, H))
+	if(istype(edge_target_turf))
+		H.safe_throw_at(edge_target_turf, \
+		knockback_tiles, \
+		scaling, \
+		user, \
+		spin = FALSE, \
+		force = H.move_force)
+
+
 //sword objs ฅ^•ﻌ•^ฅ
 
 /obj/item/rogueweapon/sword
@@ -710,6 +743,43 @@
 	SEND_SIGNAL(src, COMSIG_COMPONENT_CLEAN_ACT, CLEAN_STRONG)
 	user.visible_message(span_warning("[user] wipes [src] down with its cloth."),span_notice("I wipe [src] down with its cloth."))
 	return
+
+/obj/item/rogueweapon/sword/long/exe/berserk
+	name = "berserkers sword"
+	desc = "A raw heap of iron, hewn into an intimidatingly massive cleaver. Most could never aspire to effectively swing such a laborsome blade about; those few that have the strength, however, can force even the strongest opponents to stagger back."
+	icon = 'icons/roguetown/weapons/swords64.dmi'
+	icon_state = "dragonslayer"
+	possible_item_intents = list(/datum/intent/sword/cut, /datum/intent/sword/thrust, /datum/intent/sword/strike, /datum/intent/axe/chop)
+	gripped_intents = list(/datum/intent/sword/cut, /datum/intent/sword/thrust/exe, /datum/intent/rend, /datum/intent/sword/chop/cleave)
+	wbalance = WBALANCE_HEAVY //Stronger but sturdier executioner's sword, exchanging its peelage for an armor-piercing variant of Ansari's knockback variable.
+	alt_intents = null 
+	minstr = 13 //Should be uncraftable, but obtainable through other variants. Challenge classes, dungeon rewards?
+	wdefense = 9
+	max_blade_int = 333
+
+/obj/item/rogueweapon/sword/long/exe/berserk/dragonslayer
+	name = "\"Daemonslayer\""
+	desc = "The ultimate triumph. </br>His despair, channeled through His children's hands into hope-made-manifest. </br>Her bane, silvered with the very same power that empowered Her ascension. </br>Your world's fate; not to be decided by neither Man nor God - only you."
+	icon_state = "machaslayer"
+	force = 40
+	force_wielded = 55
+	minstr = 14
+	wdefense = 14
+	max_integrity = 777
+	max_blade_int = 777
+	is_silver = TRUE
+	smeltresult = /obj/item/rogueweapon/greatsword/silver //How many forges does it take to get to the center of a superweapon?
+
+/obj/item/rogueweapon/sword/long/exe/berserk/dragonslayer/ComponentInitialize()
+	AddComponent(\
+		/datum/component/silverbless,\
+		pre_blessed = BLESSING_PSYDONIAN,\
+		silver_type = SILVER_PSYDONIAN,\
+		added_force = 0,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
+	)
 
 /obj/item/rogueweapon/sword/long/oldpsysword
 	name = "enduring longsword"
@@ -1914,10 +1984,11 @@
 	smeltresult = /obj/item/ingot/gold
 	force = 35
 	force_wielded = 40
-	max_integrity = 70
-	max_blade_int = 70
+	minstr = 10
+	max_integrity = 50
+	max_blade_int = 50
 	anvilrepair = null //Ceremonial. This should break comedically easily, but still have just enough toughness to work with a few strikes.
-	sellprice = 250
+	sellprice = 300
 	sheathe_icon = "goldsword"
 	wbalance = WBALANCE_HEAVY
 
@@ -1927,6 +1998,7 @@
 	icon_state = "goldswordking"
 	sheathe_icon = "goldswordking"
 	anvilrepair = /datum/skill/craft/weaponsmithing
+	minstr = 7
 	max_integrity = 250
 	max_blade_int = 250
 	sellprice = 363
@@ -1944,7 +2016,7 @@
 		var/mob/living/carbon/human/HU = user
 
 		if(HU.job != "Grand Duke")
-			to_chat(user, span_danger("The rod doesn't obey me."))
+			to_chat(user, span_danger("The sword's divine authority doesn't recognize me."))
 			return
 
 		if(ishuman(target))
