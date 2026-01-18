@@ -1992,7 +1992,7 @@
 	wdefense = 6
 	max_integrity = 350
 	max_blade_int = 350
-	sellprice = 200
+	sellprice = 150
 
 /obj/item/rogueweapon/sword/decorated/blacksteel
 	name = "decorated blacksteel arming sword"
@@ -2005,7 +2005,7 @@
 	smeltresult = /obj/item/ingot/blacksteel
 	max_integrity = 350
 	max_blade_int = 350
-	sellprice = 300
+	sellprice = 250
 
 /obj/item/rogueweapon/sword/short/gronn
 	name = "gronnic hinterblade"
