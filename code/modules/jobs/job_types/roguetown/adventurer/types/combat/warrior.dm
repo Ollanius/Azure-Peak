@@ -555,13 +555,19 @@
 					if("Fluted Armet")
 						head = /obj/item/clothing/head/roguetown/helmet/heavy/knight/fluted
 
-	backl = /obj/item/storage/backpack/rogue/satchel
-	wrists = /obj/item/clothing/neck/roguetown/psicross/silver
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather/reinforced
 	pants = /obj/item/clothing/under/roguetown/tights/puritan
+	switch(H.patron?.type)
+			if(/datum/patron/old_god)
+				wrists = /obj/item/clothing/neck/roguetown/psicross/silver
+			if(/datum/patron/divine/astrata)
+				wrists = /obj/item/clothing/neck/roguetown/psicross/silver/astrata
+			else
+				wrists = /obj/item/clothing/neck/roguetown/psicross/silver/undivided
 	cloak = /obj/item/clothing/cloak/cape/puritan
 	neck = /obj/item/clothing/neck/roguetown/chaincoif
 	gloves = /obj/item/clothing/gloves/roguetown/angle
+	backl = /obj/item/storage/backpack/rogue/satchel
 	backpack_contents = list(
 		/obj/item/flashlight/flare/torch/metal = 1,
 		/obj/item/recipe_book/survival = 1,
