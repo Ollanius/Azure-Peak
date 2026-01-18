@@ -50,7 +50,7 @@
 
 /obj/item/clothing/head/roguetown/necramask
 	name = "death mask"
-	desc = "A hood with a decorated jaw bone at the chin, normally worn by some followers of Necra as a form of devotion"
+	desc = "A hood with a decorated jaw bone at the chin, normally worn by some followers of Necra as a form of devotion."
 	color = null
 	icon_state = "deathface"
 	item_state = "deathface"
