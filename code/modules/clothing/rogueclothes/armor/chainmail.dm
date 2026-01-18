@@ -145,13 +145,15 @@
 	result = list(/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/heavy)
 	reqs = list(/obj/item/clothing/suit/roguetown/armor/plate/cuirass = 1,
 	            /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk = 1)
-	craftdiff = 0
+	craftdiff = 0 //Straight-forward. Note that this is a copy of Draganfrukt's helmet-and-hat combination system, which also has the slight caveat..
+	req_table = TRUE //..of resetting the durability of both items, when crafted and uncrafted. This check helps to reduce a lot of potential cheese, but should be tweaked later.
 
 /datum/crafting_recipe/roguetown/survival/mailledhauberk/off
 	name = "take steel cuirass off the hauberk"
 	result = list(/obj/item/clothing/suit/roguetown/armor/plate/cuirass = 1, /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk = 1)
 	reqs = list(/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/heavy = 1)
 	craftdiff = 0
+	req_table = TRUE
 
 /datum/crafting_recipe/roguetown/survival/ironmailledhauberk
 	name = "layer a iron cuirass atop hauberk"
@@ -159,25 +161,29 @@
 	reqs = list(/obj/item/clothing/suit/roguetown/armor/plate/cuirass/iron = 1,
 	            /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/iron = 1)
 	craftdiff = 0
+	req_table = TRUE
 
 /datum/crafting_recipe/roguetown/survival/ironmailledhauberk/off
 	name = "take iron cuirass off the hauberk"
 	result = list(/obj/item/clothing/suit/roguetown/armor/plate/cuirass/iron = 1, /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/iron = 1)
 	reqs = list(/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/iron/heavy = 1)
 	craftdiff = 0
+	req_table = TRUE
 
 /datum/crafting_recipe/roguetown/survival/ancientmailledhauberk
 	name = "layer an ancient cuirass atop hauberk"
 	result = list(/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/paalloy/heavy)
 	reqs = list(/obj/item/clothing/suit/roguetown/armor/plate/cuirass/paalloy = 1,
 	            /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/paalloy = 1)
-	craftdiff = 0 //The Decrepit-tier variant is excluded from this, though someone can add it if they wish.
+	craftdiff = 0 //Note that its Decrepit-tier variant is intended to largely be used by mobs and not players; hence, the lack of a crafting recipe.
+	req_table = TRUE //If someone wants to add that in post, hwoever, I don't mind. You can easily do so by copy-pasting the format, here.
 
 /datum/crafting_recipe/roguetown/survival/ancientmailledhauberk/off
 	name = "take ancient cuirass off the hauberk"
 	result = list(/obj/item/clothing/suit/roguetown/armor/plate/cuirass/paalloy = 1, /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/paalloy = 1)
 	reqs = list(/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/paalloy/heavy = 1)
 	craftdiff = 0
+	req_table = TRUE
 
 //
 
