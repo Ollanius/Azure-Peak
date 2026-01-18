@@ -211,11 +211,18 @@
 
 // UN-Holy Hoods!
 /obj/item/clothing/head/roguetown/roguehood/unholy
-	name = "foreboding hood" //Lich-exclusive?
-	desc = "An otherworldly veil, crackling with the constant ponderance of a runic enigma. She watches over you; and Her grin is crooked into one of eternal malice."
-	max_integrity = 666
+	name = "ominous hood"
+	desc = "A veil to the cultic and capricious. The runic sigils stitched along the hems teem with unimaginable knowledge, in the most literal sense of the word."
+	max_integrity = 150
 	armor = ARMOR_SPELLSINGER
 	adjustable = null
+	item_state = "warlockhood"
+	icon_state = "warlockhood"
+
+/obj/item/clothing/head/roguetown/roguehood/unholy/lich
+	name = "ominously enchanted hood"
+	desc = "An otherworldly veil, crackling with the constant ponderance of a runic enigma. She watches over you; and Her grin is crooked into one of eternal malice."
+	max_integrity = 600
 	item_state = "ewarlockhood"
 	icon_state = "ewarlockhood"
 
