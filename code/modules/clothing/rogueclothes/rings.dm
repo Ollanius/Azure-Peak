@@ -340,6 +340,12 @@
 ////////////////////////
 
 //Purchasable via Triumphs. Blacklisted from the Stockpile and fitted with a reduced saleprice.
+/obj/item/clothing/ring/diamond/triumph
+	name = "ornate dorpel ring"
+	icon_state = "g_newring_diamond"
+	desc = "A ring of royal splendor, crested with a magnificently-cut dorpel. Its prismesque reflections remind you of a dream, from long ago; a ship, sailing across a sea of rainbowed phlogiston, to a castle far beyond the clouds.."
+	sellprice = 99
+
 /obj/item/clothing/ring/signet/triumph
 	name = "ornate signet ring"
 	desc = "A ring of opulent gold, bearing the symbol of an aristocratic household. By dipping it in melted redtallow, it can seal writs of religious importance - a matter better known to the Inquisition, rather than the Church or Crown."
