@@ -101,8 +101,8 @@
 	slot_flags = ITEM_SLOT_ARMOR
 	icon_state = "cuirasshauberk"
 	item_state = "cuirasshauberk"
-	armor_class = ARMOR_CLASS_HEAVY
-	max_integrity = ARMOR_INT_CHEST_PLATE_STEELLIGHT // To note, this is about 450 INT, or +50 over regular hauberk and -50 under regular plate.
+	armor_class = ARMOR_CLASS_HEAVY // Prevents slot-stoackage by those who aren't already specialzed in wearing plate armor.
+	max_integrity = ARMOR_INT_CHEST_PLATE_STEELLIGHT // To note, this is about 450 INT, or +150 over regular hauberk and -50 under regular plate.
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/iron/heavy
 	name = "iron mailled hauberk"
@@ -111,7 +111,7 @@
 	icon_state = "icuirasshauberk"
 	item_state = "icuirasshauberk"
 	armor_class = ARMOR_CLASS_HEAVY
-	max_integrity = ARMOR_INT_CHEST_PLATE_IRONLIGHT // Roughly 325 INT. +50 over regular hauberk, and -50 under regular plate.
+	max_integrity = ARMOR_INT_CHEST_PLATE_IRONLIGHT // Roughly 325 INT. +150 over regular hauberk, and -50 under regular plate.
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/aalloy/heavy
 	name = "decrepit hauberk"
@@ -138,6 +138,48 @@
 	max_integrity = ARMOR_INT_CHEST_PLATE_PSYDON
 	smeltresult = /obj/item/ingot/silverblessed
 
+///////// CRAFTING DATUMS FOR MAILLED HAUBERK /////////
+
+/datum/crafting_recipe/roguetown/survival/mailledhauberk
+	name = "layer a steel cuirass atop hauberk"
+	result = list(/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/heavy)
+	reqs = list(/obj/item/clothing/suit/roguetown/armor/plate/cuirass = 1,
+	            /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk = 1)
+	craftdiff = 0
+
+/datum/crafting_recipe/roguetown/survival/mailledhauberk/off
+	name = "take steel cuirass off the hauberk"
+	result = list(/obj/item/clothing/suit/roguetown/armor/plate/cuirass = 1, /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk = 1)
+	reqs = list(/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/heavy = 1)
+	craftdiff = 0
+
+/datum/crafting_recipe/roguetown/survival/ironmailledhauberk
+	name = "layer a iron cuirass atop hauberk"
+	result = list(/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/iron/heavy)
+	reqs = list(/obj/item/clothing/suit/roguetown/armor/plate/cuirass/iron = 1,
+	            /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/iron = 1)
+	craftdiff = 0
+
+/datum/crafting_recipe/roguetown/survival/ironmailledhauberk/off
+	name = "take iron cuirass off the hauberk"
+	result = list(/obj/item/clothing/suit/roguetown/armor/plate/cuirass/iron = 1, /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/iron = 1)
+	reqs = list(/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/iron/heavy = 1)
+	craftdiff = 0
+
+/datum/crafting_recipe/roguetown/survival/ancientmailledhauberk
+	name = "layer an ancient cuirass atop hauberk"
+	result = list(/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/paalloy/heavy)
+	reqs = list(/obj/item/clothing/suit/roguetown/armor/plate/cuirass/paalloy = 1,
+	            /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/paalloy = 1)
+	craftdiff = 0 //The Decrepit-tier variant is excluded from this, though someone can add it if they wish.
+
+/datum/crafting_recipe/roguetown/survival/ancientmailledhauberk/off
+	name = "take ancient cuirass off the hauberk"
+	result = list(/obj/item/clothing/suit/roguetown/armor/plate/cuirass/paalloy = 1, /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/paalloy = 1)
+	reqs = list(/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/paalloy/heavy = 1)
+	craftdiff = 0
+
+//
 
 //UNIQUE ARMOR//
 
