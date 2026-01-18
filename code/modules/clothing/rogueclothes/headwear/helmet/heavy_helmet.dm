@@ -117,6 +117,27 @@
 	smeltresult = /obj/item/ingot/steel
 	smelt_bar_num = 2
 
+/obj/item/clothing/head/roguetown/helmet/heavy/sheriff/gold
+	name = "golden helmet"
+	desc = "A resplendant barbute, masterfully forged from pure gold. Its nasalguard is marked by a holy sigil, and its interior is fitted with a besilked arming cap. Even in absolute darkness, the polished surface sparkles with imbued sunlight."
+	icon_state = "goldbarbute"
+	armor = ARMOR_GOLD //Renders its wearer completely invulnerable to damage. The caveat is, however..
+	max_integrity = ARMOR_INT_HELMET_GOLD // ..is that it's extraordinarily fragile. To note, this is lower than even Decrepit-tier armor.
+	armor_class = ARMOR_CLASS_HEAVY //Ceremonial. Heavy is the head that bares the burden.
+	anvilrepair = null
+	smeltresult = /obj/item/ingot/gold
+	smelt_bar_num = 1 //Prevents resmelting to easily recreate.
+	grid_height = 96 //Prevents 'armorstacking'. That, and it's like.. carrying a golden watermelon.
+	grid_width = 96
+	sellprice = 200
+
+/obj/item/clothing/head/roguetown/helmet/heavy/sheriff/gold/king
+	name = "royal golden helmet"
+	desc = "A resplendant barbute, masterfully forged from pure gold. Its nasalguard is marked by a holy sigil, and its interior is fitted with a besilked arming cap. The dorpeled crown atop its brow invokes authority, be it misbegotten or endowed."
+	icon_state = "goldbarbute_crown"
+	max_integrity = ARMOR_INT_HELMET_CLOTH // Doubled integrity.
+	sellprice = 300
+
 /obj/item/clothing/head/roguetown/helmet/heavy/knight
 	name = "knight's armet"
 	desc = "A noble knight's greathelm, and the reigning symbol of sixteenth-century nobility. Add a feather to show the colors of your family or allegiance."
