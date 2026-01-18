@@ -26,7 +26,7 @@
 	desc = "A ring of silvered glimmerance."
 	icon_state = "ring_s"
 	sellprice = 33
-	is_silver = TRUE
+	is_silver = FALSE //Temporary measure to prevent people from easily metachecking vampyres. Replace with a more sophisticated alternative if-or-when available.
 
 /obj/item/clothing/ring/gold
 	name = "gold ring"
@@ -156,7 +156,7 @@
 	icon_state = "signet_silver"
 	desc = "A ring of blessed silver, bearing the Archbishop's symbol. By dipping it in melted redtallow, it can seal writs of religious importance."
 	sellprice = 90
-	is_silver = TRUE
+	is_silver = FALSE //Temporary measure to prevent people from easily metachecking vampyres. Replace with a more sophisticated alternative if-or-when available.
 
 /obj/item/clothing/ring/signet/attack_right(mob/user)
 	. = ..()
@@ -179,7 +179,7 @@
 	icon_state = "s_ring_emerald"
 	smeltresult = /obj/item/roguegem/green
 	sellprice = 155
-	is_silver = TRUE
+	is_silver = FALSE //Temporary measure to prevent people from easily metachecking vampyres. Replace with a more sophisticated alternative if-or-when available.
 
 /obj/item/clothing/ring/rubys
 	name = "silver rontz ring"
@@ -187,7 +187,7 @@
 	icon_state = "s_ring_ruby"
 	smeltresult = /obj/item/roguegem/ruby
 	sellprice = 215
-	is_silver = TRUE
+	is_silver = FALSE //Ditto.
 
 /obj/item/clothing/ring/topazs
 	name = "toper ring"
@@ -195,7 +195,7 @@
 	icon_state = "s_ring_topaz"
 	smeltresult = /obj/item/roguegem/yellow
 	sellprice = 140
-	is_silver = TRUE
+	is_silver = FALSE
 
 /obj/item/clothing/ring/quartzs
 	name = "silver blortz ring"
@@ -203,7 +203,7 @@
 	icon_state = "s_ring_quartz"
 	smeltresult = /obj/item/roguegem/blue
 	sellprice = 205
-	is_silver = TRUE
+	is_silver = FALSE
 
 /obj/item/clothing/ring/sapphires
 	name = "silver saffira ring"
@@ -211,7 +211,7 @@
 	icon_state = "s_ring_sapphire"
 	smeltresult = /obj/item/roguegem/violet
 	sellprice = 160
-	is_silver = TRUE
+	is_silver = FALSE
 
 /obj/item/clothing/ring/diamonds
 	name = "silver dorpel ring"
@@ -219,7 +219,7 @@
 	icon_state = "s_ring_diamond"
 	smeltresult = /obj/item/roguegem/diamond
 	sellprice = 230
-	is_silver = TRUE
+	is_silver = FALSE
 
 /obj/item/clothing/ring/duelist
 	name = "duelist's ring"
