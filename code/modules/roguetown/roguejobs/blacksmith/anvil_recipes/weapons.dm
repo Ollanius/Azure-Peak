@@ -1290,13 +1290,13 @@
 // GOLD
 
 /datum/anvil_recipe/weapons/gold/arming
-	name = "Golden Arming Sword (+2 Gold)"
+	name = "Golden Arming Sword (+2 Gold, +2 Silk)"
 	req_bar = /obj/item/ingot/gold
-	additional_items = list(/obj/item/ingot/gold, /obj/item/ingot/gold)
+	additional_items = list(/obj/item/ingot/gold, /obj/item/ingot/gold, /obj/item/natural/silk, /obj/item/natural/silk)
 	created_item = /obj/item/rogueweapon/sword/gold
 
 /datum/anvil_recipe/weapons/gold/mace
-	name = "Golden Mace (+2 Gold)"
+	name = "Golden Mace (+2 Gold, +2 Silk)"
 	req_bar = /obj/item/ingot/gold
-	additional_items = list(/obj/item/ingot/gold, /obj/item/ingot/gold)
+	additional_items = list(/obj/item/ingot/gold, /obj/item/ingot/gold, /obj/item/natural/silk, /obj/item/natural/silk)
 	created_item = /obj/item/rogueweapon/mace/gold
