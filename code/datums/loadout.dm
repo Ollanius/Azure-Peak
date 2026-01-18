@@ -39,12 +39,6 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	path = /obj/item/book/rogue/loadoutbook
 
 //TOOLS
-
-/datum/loadout_item/bauernwehr
-	name = "Bauernwehr (-3 TRI)"
-	path = /obj/item/rogueweapon/huntingknife/throwingknife/bauernwehr
-	triumph_cost = 3
-
 /datum/loadout_item/paper_parasol
 	name = "Paper Parasol"
 	path = /obj/item/rogueweapon/mace/parasol
@@ -655,7 +649,7 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	name = "Fitted Coat"
 	path = /obj/item/clothing/cloak/cotehardie
 
-// caparisons
+//CAPARISONS
 
 /datum/loadout_item/caparison
 	name = "Caparison"
