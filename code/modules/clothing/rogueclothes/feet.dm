@@ -284,7 +284,7 @@
 
 /obj/item/clothing/shoes/roguetown/boots/armor/gold/king
 	name = "royal golden greaves"
-	max_integrity = ARMOR_INT_HELMET_CLOTH // Doubled integrity.
+	max_integrity = ARMOR_INT_SIDE_GOLDPLUS // Doubled integrity.
 	sellprice = 300
 
 /obj/item/clothing/shoes/roguetown/boots/armor/graggar
