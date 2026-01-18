@@ -568,13 +568,16 @@
 		/obj/item/rogueweapon/scabbard/sheath = 1,
 		/obj/item/rogueweapon/huntingknife = 1, //Ensures that Exorcists who take the Shovel can still butcher wildlife. Minor oversight on my part.
 		)
+
+	H.set_blindness(0)
 	switch(H.patron?.type)
-			if(/datum/patron/old_god)
-				wrists = /obj/item/clothing/neck/roguetown/psicross/silver
-			if(/datum/patron/divine/astrata)
-				wrists = /obj/item/clothing/neck/roguetown/psicross/silver/astrata
-			else
-				wrists = /obj/item/clothing/neck/roguetown/psicross/silver/undivided
+		if(/datum/patron/old_god)
+			wrists = /obj/item/clothing/neck/roguetown/psicross/silver
+		if(/datum/patron/divine/astrata)
+			wrists = /obj/item/clothing/neck/roguetown/psicross/silver/astrata
+		else
+			wrists = /obj/item/clothing/neck/roguetown/psicross/silver/undivided
+
 	//Old people get the option to become glass cannons. Expert Knives + Expert in their chosen weapon, but a permenant -I STR, -I PER, -2 SPD and -2 CON debuff.
 
 /datum/advclass/sfighter/deprived
