@@ -122,7 +122,7 @@
 	desc = "A resplendant barbute, masterfully forged from pure gold. Its nasalguard is marked by a holy sigil, and its interior is fitted with a besilked arming cap. Even in absolute darkness, the polished surface sparkles with imbued sunlight."
 	icon_state = "goldbarbute"
 	armor = ARMOR_GOLD //Renders its wearer completely invulnerable to damage. The caveat is, however..
-	max_integrity = ARMOR_INT_HELMET_GOLD // ..is that it's extraordinarily fragile. To note, this is lower than even Decrepit-tier armor.
+	max_integrity = ARMOR_INT_SIDE_GOLD // ..is that it's extraordinarily fragile. To note, this is lower than even Decrepit-tier armor.
 	armor_class = ARMOR_CLASS_HEAVY //Ceremonial. Heavy is the head that bares the burden.
 	anvilrepair = null
 	smeltresult = /obj/item/ingot/gold
