@@ -1300,3 +1300,10 @@
 	req_bar = /obj/item/ingot/gold
 	additional_items = list(/obj/item/ingot/gold, /obj/item/ingot/gold, /obj/item/natural/silk, /obj/item/natural/silk)
 	created_item = /obj/item/rogueweapon/mace/gold
+
+/datum/anvil_recipe/weapons/gold/shield
+	name = "Golden Shield (+3 Gold, +1 Fur)"
+	req_bar = /obj/item/ingot/gold
+	additional_items = list(/obj/item/ingot/gold, /obj/item/ingot/gold, /obj/item/ingot/gold, /obj/item/natural/fur)
+	created_item = /obj/item/rogueweapon/shield/tower/metal/gold
+
