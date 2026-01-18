@@ -17,7 +17,6 @@
 #define ARMOR_INT_HELMET_HARDLEATHER 250
 #define ARMOR_INT_HELMET_LEATHER 200
 #define ARMOR_INT_HELMET_CLOTH 100
-#define ARMOR_INT_HELMET_GOLD 50
 
 // Chest / Armor Pieces 
 
@@ -32,7 +31,6 @@
 #define ARMOR_INT_CHEST_PLATE_IRONLIGHT 325
 #define ARMOR_INT_CHEST_PLATE_DECREPIT 250
 #define ARMOR_INT_CHEST_PLATE_DECREPITLIGHT 200
-#define ARMOR_INT_CHEST_PLATE_GOLD 50
 
 // MEDIUM
 #define ARMOR_INT_CHEST_MEDIUM_STEEL 300
@@ -70,7 +68,7 @@
 #define ARMOR_INT_SIDE_LEATHER 200 // Integrity for leather / copper pieces
 #define ARMOR_INT_SIDE_DECREPIT 150 // Integrity for decrepit pieces
 #define ARMOR_INT_SIDE_CLOTH 100 // Integrity for cloth / aesthetic oriented pieces
-#define ARMOR_INT_SIDE_GOLD 50 // Integrity for golden / ceremonial pieces
+#define ARMOR_INT_SIDE_GOLD 50 // Integrity for ALL golden / ceremonial pieces
 
 /*--------------------\
 | ARMOR VALUE DEFINES |	
