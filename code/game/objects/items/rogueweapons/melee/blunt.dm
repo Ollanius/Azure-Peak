@@ -194,7 +194,7 @@
 	smeltresult = /obj/item/ingot/gold
 
 /obj/item/rogueweapon/mace/gold/lordscepter
-	name = " "\"Morningstar\""
+	name = "\"Maerningstyr\""
 	desc = "A heavenly staff of rosawood, crested with the golden sigil of royalty. Nestled within its glistening bosom is a shard of Astrata's divinity authority; let Her judgement course through those who'd dare to lessen your presence. ‎</br>‎‎ </br>'..The end of the matter - for all has been heard. Fear the Lord and keep their commandments, for this is the whole duty of man.'"
 	possible_item_intents = list(/datum/intent/mace/strike, /datum/intent/lord_electrocute, /datum/intent/lord_silence)
 	gripped_intents = list(/datum/intent/mace/strike, /datum/intent/mace/smash, /datum/intent/effect/daze)
