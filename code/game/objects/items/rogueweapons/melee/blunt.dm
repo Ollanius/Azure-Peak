@@ -203,6 +203,7 @@
 	anvilrepair = /datum/skill/craft/weaponsmithing
 	minstr = 7
 	sellprice = 363
+	COOLDOWN_DECLARE(sceptermace)
 
 /obj/item/rogueweapon/mace/gold/lordscepter/afterattack(atom/target, mob/user, flag)
 	. = ..()
@@ -229,7 +230,7 @@
 			if(H == HU)
 				return
 
-			if(!COOLDOWN_FINISHED(src, scepter))
+			if(!COOLDOWN_FINISHED(src, sceptermace))
 				to_chat(user, span_danger("The [src] is not ready yet! [round(COOLDOWN_TIMELEFT(src, scepter) / 10, 1)] seconds left!"))
 				return
 
@@ -241,14 +242,14 @@
 				HU.visible_message(span_warning("[HU] electrocutes [H] with the [src]."))
 				user.Beam(target,icon_state="lightning[rand(1,12)]",time=5)
 				H.electrocute_act(5, src)
-				COOLDOWN_START(src, scepter, 20 SECONDS)
+				COOLDOWN_START(src, sceptermace, 20 SECONDS)
 				to_chat(H, span_danger("I'm electrocuted by the mace's divine authority!"))
 				return
 
 			if(istype(user.used_intent, /datum/intent/lord_silence))
 				HU.visible_message("<span class='warning'>[HU] silences [H] with \the [src].</span>")
 				H.set_silence(20 SECONDS)
-				COOLDOWN_START(src, scepter, 10 SECONDS)
+				COOLDOWN_START(src, sceptermace, 10 SECONDS)
 				to_chat(H, "<span class='danger'>I'm silenced by the mace's divine authority!</span>")
 				return
 
