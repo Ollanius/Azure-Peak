@@ -102,6 +102,10 @@
 /obj/item/clothing/head/roguetown/menacing/bandit
 	icon_state = "bandithood"
 
+/obj/item/clothing/head/roguetown/menacing/executioner
+	name = "executioners hood"
+	icon_state = "dungeoneer"
+
 /obj/item/clothing/head/roguetown/jester
 	name = "jester's hat"
 	desc = "A funny-looking hat with jingly bells attached to it."
