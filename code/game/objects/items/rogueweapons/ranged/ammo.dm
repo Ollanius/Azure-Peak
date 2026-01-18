@@ -52,6 +52,17 @@
 	caliber = "regbolt"
 	icon_state = "bolt_holywater"
 
+/obj/item/ammo_casing/caseless/rogue/bolt/silver
+	name = "silver bolt"
+	desc = "A masterworked bolt of silver, fitted to a winged rod of boswellia wood. Expensive, yet uncompromisingly lethal; the final adjucation of abberants, delivered from afar. </br>'Non timebo mala..' - '..I will fear no evil.'"
+	projectile_type = /obj/projectile/bullet/reusable/bolt/silver
+	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/thrust)
+	caliber = "regbolt"
+	icon_state = "silvbolt"
+	max_integrity = 1
+	anvilrepair = null
+	is_silver = TRUE
+
 /obj/projectile/bullet/reusable/bolt
 	name = "bolt"
 	damage = BOLT_DAMAGE
@@ -100,6 +111,16 @@
 	poisonamount = 5
 	npc_simple_damage_mult = 5 //175, compared to the regular bolt's 140. Slightly more damage, as to imitate its anti-unholy properties on mobs who aren't affected by any form of poison.
 
+/obj/projectile/bullet/reusable/bolt/silver
+	name = "silver bolt"
+	damage = 100 //One shot. Make it count. Should not be craftable under any circumstance.
+	armor_penetration = 77
+	icon_state = "silvbolt_proj"
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/bolt/silver
+	embedchance = 100
+	is_silver = TRUE
+	npc_simple_damage_mult = 10 //777. Add a cool-ass tracers to this, if possible.
+
 /obj/projectile/bullet/reusable/bolt/blunt
 	damage = 25
 	armor_penetration = 0
@@ -145,6 +166,17 @@
 	to iron-heads on another. With flight feathers lashed it will fly true to its \
 	shooters will."
 	projectile_type = /obj/projectile/bullet/reusable/arrow/iron
+
+/obj/item/ammo_casing/caseless/rogue/arrow/silver
+	name = "silver arrow"
+	icon_state = "silvarrow"
+	desc = "A masterworked arrow; boswellia wood, lovingly carved into a javelin \
+	that has been fitted with a spearhead of silver. It is expensive, yet unrivaled \
+	in power - pray that you have the will to see its aim unfettered-and-true."
+	projectile_type = /obj/projectile/bullet/reusable/arrow/silver
+	max_integrity = 1
+	is_silver = TRUE
+	anvilrepair = null
 
 /obj/item/ammo_casing/caseless/rogue/arrow/iron/aalloy
 	name = "decrepit broadhead arrow"
@@ -215,6 +247,15 @@
 	armor_penetration = 20
 	embedchance = 30
 	npc_simple_damage_mult = 2
+
+/obj/projectile/bullet/reusable/arrow/silver
+	name = "silver arrow"
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/arrow/silver
+	damage = 77
+	armor_penetration = 77
+	embedchance = 100
+	is_silver = TRUE
+	npc_simple_damage_mult = 10 //777. Aim true!
 
 /obj/projectile/bullet/reusable/arrow/iron/aalloy
 	name = "decrepit broadhead arrow"
