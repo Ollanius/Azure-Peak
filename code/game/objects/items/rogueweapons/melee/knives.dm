@@ -444,6 +444,13 @@
 	max_integrity = 150
 	smeltresult = /obj/item/ingot/steel
 
+/obj/item/rogueweapon/huntingknife/idagger/steel/decorated
+	name = "decorated dagger"
+	desc = "A valuable ornate dagger made for the purpose of ceremonial fashion, with a fine leather grip and a carefully engraved golden crossguard."
+	icon_state = "decdagger"
+	sheathe_icon = "decdagger"
+	sellprice = 100
+
 /obj/item/rogueweapon/huntingknife/idagger/steel/corroded
 	name = "corroded dagger"
 	desc = "A wicked deliverer of poison, serrated and notched. Curved steel cradles the knuckles, ensuring that the wielder doesn't inflict the fatal dose on themselves. </br>I can coat this dagger in most poisons, ensuring that my next strike leaves a festering surprise."
