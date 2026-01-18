@@ -230,7 +230,7 @@
 	req_bar = /obj/item/ingot/silver
 	hides_from_books = TRUE //Note to self - adding more than five additional items to a crafting recipe might result in unintended consequences.
 	additional_items = list(/obj/item/rogueweapon/greatsword/silver, /obj/item/rogueweapon/greatsword/paalloy, /obj/item/ingot/draconic, /obj/item/ingot/weeping, /obj/item/riddleofsteel)
-	created_item = /obj/item/rogueweapon/greatsword/psygsword/dragonslayer
+	created_item = /obj/item/rogueweapon/sword/long/exe/berserk/dragonslayer
 	appro_skill = /datum/skill/craft/weaponsmithing
 	i_type = "Weapons"
 	craftdiff = SKILL_LEVEL_LEGENDARY
