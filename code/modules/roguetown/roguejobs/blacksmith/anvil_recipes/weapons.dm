@@ -47,6 +47,9 @@
 	abstract_type = /datum/anvil_recipe/weapons/blacksteel
 	craftdiff = SKILL_LEVEL_MASTER
 
+/datum/anvil_recipe/weapons/gold
+	abstract_type = /datum/anvil_recipe/weapons/gold
+	craftdiff = SKILL_LEVEL_LEGENDARY
 
 // DECREPIT/ANCIENT ALLOY
 
@@ -192,7 +195,7 @@
 	created_item = /obj/item/rogueweapon/mace/goden/steel/paalloy
 
 /datum/anvil_recipe/weapons/aalloy/spear
-	name = "Spear, Decrepit(+1 Small Log)"
+	name = "Spear, Decrepit (+1 Small Log)"
 	req_bar = /obj/item/ingot/aalloy
 	additional_items = list(/obj/item/grown/log/tree/small)
 	created_item = /obj/item/rogueweapon/spear/aalloy
@@ -734,7 +737,7 @@
 	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/steel)
 	created_item = /obj/item/rogueweapon/mace/maul/grand
 
-// GOLD
+// DECORATED
 
 /datum/anvil_recipe/weapons/decorated/sword
 	name = "Sword, Decorated (+1 Steel Sword)"
@@ -753,6 +756,12 @@
 	req_bar = /obj/item/ingot/gold
 	additional_items = list(/obj/item/rogueweapon/sword/rapier)
 	created_item = /obj/item/rogueweapon/sword/rapier/dec
+
+/datum/anvil_recipe/weapons/decorated/dagger
+	name = "Dagger, Decorated (+1 Steel Dagger)"
+	req_bar = /obj/item/ingot/gold
+	additional_items = list(/obj/item/rogueweapon/huntingknife/idagger/steel)
+	created_item = /obj/item/rogueweapon/huntingknife/idagger/steel/decorated
 
 /datum/anvil_recipe/weapons/decorated/longsword
 	name = "Longsword, Decorated (+1 Steel Longsword)"
@@ -1062,11 +1071,16 @@
 
 // BLACKSTEEL
 
-
 /datum/anvil_recipe/weapons/blacksteel/arming
 	name = "Blacksteel Arming Sword"
 	req_bar = /obj/item/ingot/blacksteel
 	created_item = /obj/item/rogueweapon/sword/blacksteel
+
+/datum/anvil_recipe/weapons/blacksteel/decsword
+	name = "Blacksteel Arming Sword, Decorated (+1 Steel Arming Sword, +1 Gold)"
+	req_bar = /obj/item/ingot/blacksteel
+	additional_items = list(/obj/item/rogueweapon/sword, /obj/item/ingot/gold)
+	created_item = /obj/item/rogueweapon/sword/decorated/blacksteel
 
 /datum/anvil_recipe/weapons/blacksteel/flamberge
 	name = "Blacksteel Flamberge (+1 Blacksteel, +1 Rontz)"
@@ -1074,16 +1088,8 @@
 	additional_items = list(/obj/item/ingot/blacksteel, /obj/item/roguegem/ruby)
 	created_item = /obj/item/rogueweapon/greatsword/grenz/flamberge/blacksteel
 
-/datum/anvil_recipe/weapons/blacksteel/decsword
-	name = "Blacksteel Sword, Decorated (+1 Steel Sword)"
-	req_bar = /obj/item/ingot/blacksteel
-	additional_items = list(/obj/item/rogueweapon/sword)
-	created_item = /obj/item/rogueweapon/sword/decorated/blacksteel
-	craftdiff = 5
-
-//Church Weapons forged from Holy Steel
-
 // HOLY STEEL
+// Specifically, Church weapons made from the 'Holy Steel' ingot.
 
 /datum/anvil_recipe/weapons/holysteel/church_longsword
 	name = "Longsword, Templaric"
@@ -1280,3 +1286,17 @@
 	created_item = /obj/item/rogueweapon/whip/psywhip_lesser
 	additional_items = list(/obj/item/natural/hide/cured, /obj/item/natural/hide/cured, /obj/item/natural/hide/cured)
 	i_type = "Weapons"
+
+// GOLD
+
+/datum/anvil_recipe/weapons/gold/arming
+	name = "Golden Arming Sword (+2 Gold)"
+	req_bar = /obj/item/ingot/gold
+	additional_items = list(/obj/item/ingot/gold, /obj/item/ingot/gold)
+	created_item = /obj/item/rogueweapon/sword/gold
+
+/datum/anvil_recipe/weapons/gold/mace
+	name = "Golden Mace (+2 Gold)"
+	req_bar = /obj/item/ingot/gold
+	additional_items = list(/obj/item/ingot/gold, /obj/item/ingot/gold)
+	created_item = /obj/item/rogueweapon/mace/gold
