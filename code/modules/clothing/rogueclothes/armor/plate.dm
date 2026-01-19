@@ -33,7 +33,6 @@
     desc = "A steel cuirass. Do you still remember the first time you tasted blood; that sanguine succor, dribbling from a busted lip?"
     icon_state = "legacycuirass"
     item_state = "legacycuirass"
-	smelt_bar_num = 1
 
 /obj/item/clothing/suit/roguetown/armor/plate/legacy
     name = "valorian half-plate"
@@ -499,7 +498,7 @@
 	anvilrepair = /datum/skill/craft/armorsmithing
 	smeltresult = /obj/item/ingot/steel
 	armor_class = ARMOR_CLASS_MEDIUM
-	smelt_bar_num = 2
+	smelt_bar_num = 1
 
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fencer
 	name = "fencer's cuirass"
