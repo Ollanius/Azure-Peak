@@ -208,7 +208,7 @@
 
 /obj/item/quiver/bolts
 	name = "bolt pouch"
-	desc = "A leather canister that can be used to carry bolts."
+	desc = "A leather canister that can be used to carry bolts. Smaller, sleeker, yet nevertheless spacious enough to pack enough ammunition for a full nite's hunt."
 	icon_state = "boltpouch0"
 	item_state = "boltpouch"
 	max_storage = 20
