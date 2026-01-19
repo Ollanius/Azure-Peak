@@ -109,6 +109,73 @@
 
 //superbolts ฅ^•ﻌ•^ฅ
 
+//
+
+/obj/item/ammo_casing/caseless/rogue/heavy_bolt
+	name = "heavy bolt"
+	desc = "A massive steel bolt that is designed to pulverize the defenses of another, whether it be a castle's parapit or a knight's plate."
+	projectile_type = /obj/projectile/bullet/reusable/heavy_bolt
+	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/thrust)
+	caliber = "heabolt"
+	icon = 'icons/roguetown/weapons/ammo.dmi'
+	icon_state = "heavybolt"
+	dropshrink = 0.8
+	max_integrity = 15
+	force = 15
+	grid_height = 64
+	grid_width = 32
+
+/obj/projectile/bullet/reusable/heavy_bolt
+	name = "heavy bolt"
+	damage = 120 //+50% the damage of a regular crossbow bolt.
+	damage_type = BRUTE
+	armor_penetration = 0 //No penetration. 
+	icon = 'icons/roguetown/weapons/ammo.dmi'
+	icon_state = "heavybolt_proj"
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/heavy_bolt
+	range = 30
+	hitsound = 'sound/combat/hits/hi_bolt (2).ogg'
+	embedchance = 100
+	woundclass = BCLASS_PIERCE
+	flag = "piercing"
+	speed = 0.3
+	npc_simple_damage_mult = 3 //..or 360 damage. See them put down.
+
+/obj/item/ammo_casing/caseless/rogue/heavy_bolt/aalloy
+	name = "decrepit heavy bolt"
+	desc = "A length of frayed bronze, quilled to take flight and tear down the living. Metal flakes occassionally peel off from its core, mysteriously hovering about - tolerable by the undying, but unbearibly noxious to the living."
+	icon_state = "ancientheavybolt"
+	projectile_type = /obj/projectile/bullet/reusable/heavy_bolt/aalloy
+	color = "#bb9696"
+
+/obj/projectile/bullet/reusable/heavy_bolt/alloy
+	name = "decrepit heavy bolt"
+	damage = 90 
+	embedchance = 50
+	poisontype = /datum/reagent/stampoison
+	poisonamount = 2 //You are, in essence, giving them tenantus.
+	slur = 7
+	eyeblur = 7
+	drowsy = 3
+
+/obj/item/ammo_casing/caseless/rogue/heavy_bolt/paalloy
+	name = "ancient heavy bolt"
+	desc = "A polished length of gilbranze, which chisels away stone-and-spirit alike with each vaulting. It whispers to you; a half-glance to the right, further up to compensate, so that the living's humors may taste utter disruption."
+	icon_state = "ancientheavybolt"
+	projectile_type = /obj/projectile/bullet/reusable/heavy_bolt/paalloy
+
+/obj/projectile/bullet/reusable/heavy_bolt/paalloy
+	name = "ancient heavy bolt"
+	damage = 100
+	embedchance = 100
+	poisontype = /datum/reagent/stampoison
+	poisonamount = 4 //You are, in essence, giving them tenantus. Roughly 50% stronger than a poisoned iron arrow.
+	slur = 10
+	eyeblur = 10
+	drowsy = 6
+
+//
+
 //arrows ฅ^•ﻌ•^ฅ
 
 /obj/item/ammo_casing/caseless/rogue/arrow
@@ -269,6 +336,66 @@
 	name = "poison stone arrow"
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/arrow/stone
 
+//SILVER AMMO
+/obj/item/ammo_casing/caseless/rogue/arrow/silver
+	name = "silver arrow"
+	icon_state = "silvarrow"
+	desc = "A masterworked arrow; boswellia wood, lovingly carved into a javelin \
+	that has been fitted with a spearhead of silver. It is expensive, yet unrivaled \
+	in power - pray that you have the will to see its aim unfettered-and-true."
+	projectile_type = /obj/projectile/bullet/reusable/arrow/silver
+	is_silver = FALSE //Give these to the bad guys, if you want to be a little evil. Realistically wouldn't blight someone, unless they're touching the tip.
+
+/obj/projectile/bullet/reusable/arrow/silver
+	name = "silver arrow"
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/arrow/silver
+	damage = 60 //The rarest, but most powerful arrow subtype. Intended to be incredibly scarce, in practice - a 'silver bullet', to the most literal extent.
+	armor_penetration = 60
+	embedchance = 100
+	poisontype = /datum/reagent/water/blessed
+	poisonamount = 10
+	npc_simple_damage_mult = 7 //..or 420 damage against a mindless mob. Strike true; reduce if these become craftable or more easily acquirable, through any means.
+
+/obj/item/ammo_casing/caseless/rogue/bolt/silver
+	name = "silver bolt"
+	desc = "A masterworked bolt of silver, fitted to a winged rod of boswellia wood. Expensive, yet uncompromisingly lethal; the final adjucation of abberants, delivered from afar. </br>'Non timebo mala..' - '..I will fear no evil.'"
+	projectile_type = /obj/projectile/bullet/reusable/bolt/silver
+	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/thrust)
+	caliber = "regbolt"
+	icon_state = "silvbolt"
+	is_silver = FALSE //Ditto.
+
+/obj/projectile/bullet/reusable/bolt/silver
+	name = "silver bolt"
+	damage = 80 //One shot. Make it count. Pray your aim is true - and that whoever's on the other side isn't packing a shield or knows how to sidestep.
+	armor_penetration = 80
+	icon_state = "silvbolt_proj"
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/bolt/silver
+	embedchance = 100
+	npc_simple_damage_mult = 6 //..or 480 damage against a mindless mob. Only if you're desperate.
+	poisontype = /datum/reagent/water/blessed
+	poisonamount = 10
+
+/obj/item/ammo_casing/caseless/rogue/heavy_bolt/holy
+	name = "heavy silver bolt"
+	desc = "A silvered lance, poised to impale the unimaginable. You feel the hands of another guiding your own, as you prepare to load; may it be guidence from a higher power, or your wit upon the verge of breaking? </br>'God, please..'"
+	projectile_type = /obj/projectile/bullet/reusable/heavy_bolt/holy
+	icon_state = "silvheavybolt"
+	max_integrity = 30
+	force = 12
+	is_silver = TRUE
+
+/obj/projectile/bullet/reusable/heavy_bolt/holy
+	name = "heavy silver bolt"
+	damage = 120
+	armor_penetration = 100 //Same damage, but with absolute penetration. 
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/heavy_bolt/holy
+	icon_state = "silvheavybolt_proj"
+	hitsound = 'sound/combat/hits/hi_bolt (3).ogg'
+	speed = 0.5
+	poisontype = /datum/reagent/water/blessed
+	poisonamount = 20
+	npc_simple_damage_mult = 10 //..or 1200 damage against a mindless mob. If you're using this against one, you're either a fool or have no other choice left. Godspeed.
 
 // PYRO AMMO
 /obj/item/ammo_casing/caseless/rogue/bolt/pyro
@@ -614,46 +741,6 @@
 	..()
 	if(!iscarbon(hit_atom))
 		return//abort
-
-//Silver-specific ammunition's down here, to avoid conflict.
-/obj/item/ammo_casing/caseless/rogue/arrow/silver
-	name = "silver arrow"
-	icon_state = "silvarrow"
-	desc = "A masterworked arrow; boswellia wood, lovingly carved into a javelin \
-	that has been fitted with a spearhead of silver. It is expensive, yet unrivaled \
-	in power - pray that you have the will to see its aim unfettered-and-true."
-	projectile_type = /obj/projectile/bullet/reusable/arrow/silver
-	is_silver = TRUE
-
-/obj/projectile/bullet/reusable/arrow/silver
-	name = "silver arrow"
-	ammo_type = /obj/item/ammo_casing/caseless/rogue/arrow/silver
-	damage = 60 //The rarest, but most powerful arrow subtype. Intended to be incredibly scarce, in practice - a 'silver bullet', to the most literal extent.
-	armor_penetration = 60
-	embedchance = 100
-	poisontype = /datum/reagent/water/blessed
-	poisonamount = 20
-	npc_simple_damage_mult = 6
-
-/obj/item/ammo_casing/caseless/rogue/bolt/silver
-	name = "silver bolt"
-	desc = "A masterworked bolt of silver, fitted to a winged rod of boswellia wood. Expensive, yet uncompromisingly lethal; the final adjucation of abberants, delivered from afar. </br>'Non timebo mala..' - '..I will fear no evil.'"
-	projectile_type = /obj/projectile/bullet/reusable/bolt/silver
-	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/thrust)
-	caliber = "regbolt"
-	icon_state = "silvbolt"
-	is_silver = TRUE
-
-/obj/projectile/bullet/reusable/bolt/silver
-	name = "silver bolt"
-	damage = 80 //One shot. Make it count. Pray your aim is true - and that whoever's on the other side isn't packing a shield or knows how to sidestep.
-	armor_penetration = 80
-	icon_state = "silvbolt_proj"
-	ammo_type = /obj/item/ammo_casing/caseless/rogue/bolt/silver
-	embedchance = 100
-	npc_simple_damage_mult = 6
-	poisontype = /datum/reagent/water/blessed
-	poisonamount = 20
 
 //sling bullets
 /obj/item/ammo_casing/caseless/rogue/sling_bullet //parent of sling ammo and the temporary sling bullet for stones. shouldn't ever be seen
