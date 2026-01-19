@@ -983,8 +983,8 @@
 /obj/item/rogueweapon/greatsword/elfgsword
 	name = "elven kriegsmesser"
 	desc = "An elegant greatsword, crested with a mithril blade that - in spite of its intimidating length - is mysteriously light. Unlike most elven masterworks, the grip is dressed in rosaleather; a foreboding symbol, christening it as a weapon of war against those who'd threaten elvekind."
-	icon_state = "elfkriegsmesser"
-	item_state = "elfkriegsmesser"
+	icon_state = "elfkriegmesser"
+	item_state = "elfkriegmesser"
 	minstr = 10
 	wdefense = 7
 	sellprice = 120
