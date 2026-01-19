@@ -345,6 +345,7 @@
 	icon_state = "g_newring_diamond"
 	desc = "A ring of royal splendor, crested with a magnificently-cut dorpel. Its prismesque reflections remind you of a dream, from long ago; a ship, sailing across a sea of rainbowed phlogiston, to a castle far beyond the clouds.."
 	sellprice = 99
+	smeltresult = /obj/item/clothing/ring/signet/triumph
 
 /obj/item/clothing/ring/signet/triumph
 	name = "ornate signet ring"
