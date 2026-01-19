@@ -105,6 +105,7 @@
 /obj/item/clothing/head/roguetown/menacing/executioner
 	name = "executioners hood"
 	icon_state = "dungeoneer"
+	color = null
 
 /obj/item/clothing/head/roguetown/jester
 	name = "jester's hat"
