@@ -1,7 +1,7 @@
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
 	name = "crossbow"
-	desc = "A deadly weapon that shoots a bolt with terrific power."
+	desc = "A deadly weapon that shoots a bolt with terrific power. Unlike the common bow, it uses a sophisticated mechanism to renock - and retain - its half-length bolts; a matter that relies more on raw strength than dexterity to master. </br>A favorite amongst the Keep's ever-dutiful watchmen, both for its relative ease-of-use and effectiveness against Psydonia's unchivalrous inhabitants."
 	icon = 'icons/roguetown/weapons/misc32.dmi'
 	icon_state = "crossbow0"
 	item_state = "crossbow"
@@ -19,7 +19,7 @@
 	var/movingreload = FALSE
 	var/onehanded = FALSE
 	var/hasloadedsprite = FALSE
-	force = 10
+	force = 14
 	var/cocked = FALSE
 	cartridge_wording = "bolt"
 	load_sound = 'sound/foley/nockarrow.ogg'
@@ -231,10 +231,11 @@
 	max_ammo = 1
 	start_empty = TRUE
 
+//
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/slurbow
 	name = "slurbow"
-	desc = "A lighter weight crossbow with a distinct barrel shroud holding the bolt in place. Light enough to arm by hand. <br>They're popular among among highwaymen and the patrolling lamplighters of Otava."
+	desc = "A lighter weight crossbow with a distinct barrel shroud holding the bolt in place. While its reduced draw-weight does hamper the power of its bolts, it's consequently much easier to rearm and aim than the common crossbow; doubly-so, while on the move. </br>They're popular among among highwaymen and the patrolling lamplighters of Otava."
 	icon = 'icons/roguetown/weapons/misc32.dmi'
 	icon_state = "slurbow0"
 	item_state = "slurbow"
@@ -243,9 +244,34 @@
 	damfactor = 0.6
 	accfactor = 1.3
 	reloadtime = 20
+	force = 10
 	hasloadedsprite = TRUE
 	movingreload = TRUE
 	onehanded = TRUE
 	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_HIP
 	penfactor = 0.5		//Bolts have 50 pen, this decreases to 25. Should only pen armor with less than 67 protection.
+
+//
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy
+	name = "siegebow"
+	desc = "A heavier weight crossbow - the basis of a mounted ballista, made fit for handheld usage. Integrated just beneath the stock is a windlass mechanism, necessary to surmount the siegebow's titanic draw-strength. It loads heavier, full-length bolts; purpose-made to pulverize. </br>Assembled in Grenzelhoft, championed by Valoria, and unfamiliar to the highlands of Azure Peak."
+	icon = 'icons/roguetown/weapons/misc32.dmi'
+	icon_state = "heavybow0"
+	item_state = "heavybow"
+	load_sound = 'sound/foley/doors/lockmetal.ogg'
+	fire_sound = 'sound/combat/Ranged/crossbow-big-shot.ogg'
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/heavy_xbow
+	force = 18 
+	chargingspeed = 60 //+20
+	reloadtime = 8 SECONDS //Emulates the use of a windlass, similar to its real life counterparts.
+	hasloadedsprite = TRUE
+	accfactor = 0.7 //Hey, I'd like to see you try to aim a siege weapon while standing up!
+
+/obj/item/ammo_box/magazine/internal/shot/heavy_xbow
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/heavy_bolt
+	caliber = "heabolt"
+	max_ammo = 1
+	start_empty = TRUE
+
 
