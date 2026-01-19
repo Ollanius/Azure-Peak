@@ -206,7 +206,7 @@
 // BOLTS  //
 ////////////
 
-/obj/item/quiver/bolts
+/obj/item/quiver/bolt
 	name = "bolt pouch"
 	desc = "A leather canister that can be used to carry bolts. Smaller, sleeker, yet nevertheless spacious enough to pack enough ammunition for a full nite's hunt."
 	icon_state = "boltpouch0"
@@ -214,7 +214,7 @@
 	max_storage = 20
 	sellprice = 10
 
-/obj/item/quiver/bolts/attack_turf(turf/T, mob/living/user)
+/obj/item/quiver/bolt/attack_turf(turf/T, mob/living/user)
 	if(arrows.len >= max_storage)
 		to_chat(user, span_warning("My [src.name] is full!"))
 		return
@@ -224,7 +224,7 @@
 			if(!eatarrow(bolt))
 				break
 
-/obj/item/quiver/bolts/attackby(obj/A, loc, params)
+/obj/item/quiver/bolt/attackby(obj/A, loc, params)
 	if(A.type in subtypesof(/obj/item/ammo_casing/caseless/rogue/bolt))
 		if(arrows.len < max_storage)
 			if(ismob(loc))
@@ -239,7 +239,7 @@
 		return
 	..()
 
-/obj/item/quiver/bolts/attack_right(mob/user)
+/obj/item/quiver/bolt/attack_right(mob/user)
 	if(arrows.len)
 		var/obj/O = arrows[arrows.len]
 		arrows -= O
@@ -248,28 +248,85 @@
 		update_icon()
 		return TRUE
 
-/obj/item/quiver/bolts/examine(mob/user)
+/obj/item/quiver/bolt/examine(mob/user)
 	. = ..()
 	if(arrows.len)
 		. += span_notice("[arrows.len] inside.")
 
-/obj/item/quiver/bolts/update_icon()
+/obj/item/quiver/bolt/update_icon()
 	if(arrows.len)
 		icon_state = "boltpouch1"
 	else
 		icon_state = "boltpouch0"
 
-/obj/item/quiver/bolts/standard/Initialize()
+/obj/item/quiver/bolt/standard/Initialize()
 	..()
 	for(var/i in 1 to max_storage)
 		var/obj/item/ammo_casing/caseless/rogue/bolt/A = new()
 		arrows += A
 	update_icon()
 
-/obj/item/quiver/bolts/holy/Initialize()
+/////////////
+// BOLT, H.//
+/////////////
+
+/obj/item/quiver/bolt/heavy
+	name = "heavy bolt pouch"
+	desc = "A heavy leather canister that can be used to carry heavier bolts. Casketed inside are the missiles that, whether launched from a mounted ballista or handheld siegebow, will devastate without quarter."
+	icon_state = "boltpouch0"
+	item_state = "boltpouch"
+	max_storage = 8
+	sellprice = 10
+
+/obj/item/quiver/bolt/heavy/attack_turf(turf/T, mob/living/user)
+	if(arrows.len >= max_storage)
+		to_chat(user, span_warning("My [src.name] is full!"))
+		return
+	to_chat(user, span_notice("I begin to gather the ammunition..."))
+	for(var/obj/item/ammo_casing/caseless/rogue/heavy_bolt in T.contents)
+		if(do_after(user, 5))
+			if(!eatarrow(heavybolt))
+				break
+
+/obj/item/quiver/bolt/heavy/attackby(obj/A, loc, params)
+	if(A.type in subtypesof(/obj/item/ammo_casing/caseless/rogue/heavy_bolt))
+		if(arrows.len < max_storage)
+			if(ismob(loc))
+				var/mob/M = loc
+				M.doUnEquip(A, TRUE, src, TRUE, silent = TRUE)
+			else
+				A.forceMove(src)
+			arrows += A
+			update_icon()
+		else
+			to_chat(loc, span_warning("Full!"))
+		return
+	..()
+
+/obj/item/quiver/bolt/heavy/attack_right(mob/user)
+	if(arrows.len)
+		var/obj/O = arrows[arrows.len]
+		arrows -= O
+		O.forceMove(user.loc)
+		user.put_in_hands(O)
+		update_icon()
+		return TRUE
+
+/obj/item/quiver/bolt/heavy/examine(mob/user)
+	. = ..()
+	if(arrows.len)
+		. += span_notice("[arrows.len] inside.")
+
+/obj/item/quiver/bolt/heavy/update_icon()
+	if(arrows.len)
+		icon_state = "boltpouch1"
+	else
+		icon_state = "boltpouch0"
+
+/obj/item/quiver/bolt/heavy/standard/Initialize()
 	..()
 	for(var/i in 1 to max_storage)
-		var/obj/item/ammo_casing/caseless/rogue/bolt/holy/A = new()
+		var/obj/item/ammo_casing/caseless/rogue/heavy_boltA = new()
 		arrows += A
 	update_icon()
 
@@ -362,7 +419,7 @@
 	icon_state = "slingpouch"
 	item_state = "slingpouch"
 	slot_flags = ITEM_SLOT_HIP | ITEM_SLOT_NECK
-	max_storage = 30
+	max_storage = 20
 	w_class = WEIGHT_CLASS_NORMAL
 	grid_height = 64
 	grid_width = 32
