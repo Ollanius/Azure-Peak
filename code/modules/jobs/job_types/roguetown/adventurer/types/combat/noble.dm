@@ -37,7 +37,7 @@
 	neck = /obj/item/storage/belt/rogue/pouch/coins/rich
 	id = /obj/item/clothing/ring/silver
 	beltl = /obj/item/rogueweapon/sword/sabre/dec
-	l_hand = /obj/item/rogueweapon/scabbard/sword
+	l_hand = /obj/item/rogueweapon/scabbard/sword/noble
 	if(should_wear_masc_clothes(H))
 		cloak = /obj/item/clothing/cloak/half/red
 		shirt = /obj/item/clothing/suit/roguetown/shirt/tunic/red
@@ -134,7 +134,7 @@
 			if("Longsword")
 				H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_JOURNEYMAN, TRUE)
 				beltr = /obj/item/rogueweapon/sword/long
-				r_hand = /obj/item/rogueweapon/scabbard/sword
+				r_hand = /obj/item/rogueweapon/scabbard/sword/noble
 			if("Mace + Shield")
 				H.adjust_skillrank_up_to(/datum/skill/combat/maces, SKILL_LEVEL_JOURNEYMAN, TRUE)
 				H.adjust_skillrank_up_to(/datum/skill/combat/shields, SKILL_LEVEL_JOURNEYMAN, TRUE)
