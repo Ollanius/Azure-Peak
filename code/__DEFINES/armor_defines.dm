@@ -88,6 +88,7 @@
 // Capped to 90 blunt rating. This means light armor will take approx. 75% damage from blunt-weapon blunt attacks.
 // So blunt weapon can still be used against light armor but just not as effective.  
 #define ARMOR_CLOTHING list("blunt" = 0, "slash" = 10, "stab" = 20, "piercing" = 0, "fire" = 0, "acid" = 0)
+#define ARMOR_CLOTHING_GOOD list("blunt" = 10, "slash" = 20, "stab" = 20, "piercing" = 0, "fire" = 0, "acid" = 0)
 #define ARMOR_PADDED_BAD list("blunt" = 50, "slash" = 30, "stab" = 20, "piercing" = 40, "fire" = 0, "acid" = 0)
 #define ARMOR_PADDED list("blunt" = 70, "slash" = 40, "stab" = 30, "piercing" = 50, "fire" = 0, "acid" = 0)
 #define ARMOR_PADDED_GOOD list("blunt" = 90, "slash" = 50, "stab" = 50, "piercing" = 80, "fire" = 0, "acid" = 0)
