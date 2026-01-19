@@ -425,6 +425,12 @@
 	additional_items = list(/obj/item/ingot/iron, /obj/item/grown/log/tree/small)
 	created_item = /obj/item/rogueweapon/eaglebeak/lucerne
 
+/datum/anvil_recipe/weapons/iron/greatflail
+	name = "Greatflail, Iron (+1 Iron, +1 Chain, +1 Small Log)"
+	req_bar = /obj/item/ingot/iron
+	additional_items = list(/obj/item/ingot/iron, /obj/item/rope/chain, /obj/item/grown/log/tree/small)
+	created_item = /obj/item/rogueweapon/flail/peasantwarflail/iron
+
 /datum/anvil_recipe/weapons/iron/polemace
 	name = "Goedendag, Iron (+1 Small Log)"
 	req_bar = /obj/item/ingot/iron
@@ -1068,6 +1074,12 @@
 	created_item = /obj/item/rogueweapon/sword/long/exe
 	i_type = "Weapons"
 
+/datum/anvil_recipe/valuables/iron/berserksword
+	name = "Berserker's Sword (+1 Executioner Sword, +1 Iron)"
+	req_bar = /obj/item/ingot/iron
+	additional_items = list(/obj/item/rogueweapon/sword/long/exe, /obj/item/ingot/iron)
+	created_item = /obj/item/rogueweapon/sword/long/exe/berserk
+	i_type = "Weapons"
 
 // BLACKSTEEL
 
