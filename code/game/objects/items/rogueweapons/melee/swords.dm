@@ -33,7 +33,7 @@
 	damfactor = 1.0
 	no_early_release = TRUE
 
-/datum/intent/sword/thrust
+/datum/intent//thrust
 	name = "stab"
 	icon_state = "instab"
 	attack_verb = list("stabs")
@@ -45,23 +45,23 @@
 	swingdelay = 0
 	item_d_type = "stab"
 
-/datum/intent/sword/thrust/short
+/datum/intent//thrust/short
 	clickcd = 8
 	damfactor = 1.1
 	penfactor = 30
 
-/datum/intent/sword/thrust/arming
+/datum/intent//thrust/arming
 	clickcd = 10 // Less than rapier
 	penfactor = 35 // 22 + 35 = 57. Beats light leather slightly more than rapier per strike, but less strike
 
-/datum/intent/sword/thrust/long
-	penfactor = 30 // 2h Longsword already have 30 damage. This let it pierce light armor easily
+/datum/intent//thrust/long
+	penfactor = 30 // 2h Long already have 30 damage. This let it pierce light armor easily
 	// Their cut is actually pretty decent when 2handed and should be inferior to zwei.
 
-/datum/intent/sword/thrust/krieg
+/datum/intent//thrust/krieg
 	damfactor = 0.9
 
-/datum/intent/sword/thrust/blunt
+/datum/intent//thrust/blunt
 	blade_class = BCLASS_BLUNT
 	hitsound = list('sound/combat/hits/blunt/metalblunt (1).ogg', 'sound/combat/hits/blunt/metalblunt (2).ogg', 'sound/combat/hits/blunt/metalblunt (3).ogg')
 	attack_verb = list("prods", "pokes")
@@ -69,7 +69,7 @@
 	item_d_type = "blunt"
 	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR
 
-/datum/intent/sword/strike
+/datum/intent//strike
 	name = "pommel strike"
 	icon_state = "instrike"
 	attack_verb = list("bashes", "clubs")
@@ -83,8 +83,8 @@
 	item_d_type = "blunt"
 	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR
 
-// A weaker strike for sword with high damage so that it don't end up becoming better than mace
-/datum/intent/sword/strike/bad
+// A weaker strike for  with high damage so that it don't end up becoming better than mace
+/datum/intent//strike/bad
 	damfactor = 0.7 
 
 /datum/intent/sword/peel
@@ -616,7 +616,7 @@
 			if("onback")
 				return list("shrink" = 0.5,"sx" = -1,"sy" = 2,"nx" = 0,"ny" = 2,"wx" = 2,"wy" = 1,"ex" = 0,"ey" = 1,"nturn" = 0,"sturn" = 0,"wturn" = 70,"eturn" = 15,"nflip" = 1,"sflip" = 1,"wflip" = 1,"eflip" = 1,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0)
 			if("wielded")
-				return list("shrink" = 0.4,"sx" = 3,"sy" = 4,"nx" = -1,"ny" = 4,"wx" = -8,"wy" = 3,"ex" = 7,"ey" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 15,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
+				return list("shrink" = 0.5,"sx" = 5,"sy" = -2,"nx" = -6,"ny" = -2,"wx" = -6,"wy" = -2,"ex" = 7,"ey" = -2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -28,"sturn" = 29,"wturn" = -35,"eturn" = 32,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
 			if("onbelt")
 				return list("shrink" = 0.4,"sx" = -4,"sy" = -6,"nx" = 5,"ny" = -6,"wx" = 0,"wy" = -6,"ex" = -1,"ey" = -6,"nturn" = 100,"sturn" = 156,"wturn" = 90,"eturn" = 180,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
