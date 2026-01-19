@@ -529,6 +529,11 @@
 	desc = "The certainty of death is a reminder to enjoy the time you have."
 	icon_state = "necra"
 
+/obj/item/clothing/neck/roguetown/psicross/silver/necra
+	name = "silver amulet of Necra"
+	desc = "Guide the lost, the forgotten, and the damned to their final resting place."
+	icon_state = "necra_s"
+
 /obj/item/clothing/neck/roguetown/psicross/pestra
 	name = "amulet of Pestra"
 	desc = "The healthy wear a crown only the sick can see."
