@@ -96,6 +96,11 @@
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer = 50)
 	desc = "A bottle that contains a generic housebrewed small-beer. It has an improvised corkseal made of hardened clay."
 
+/obj/item/reagent_containers/glass/bottle/rogue/triumphbeer
+	name = "bottle of beer"
+	list_reagents = list(/datum/reagent/consumable/ethanol/beer = 50)
+	desc = "A glass bottle with a laced cork-seal. It swishes with fizzled goodness; a cure to the parched throat, a remedy to the sleepless nites, and a toast for the journey ahead."
+
 /obj/item/reagent_containers/glass/bottle/rogue/beer/zagul
 	name = "bottle of Zagul"
 	icon_state = "beer_2"
