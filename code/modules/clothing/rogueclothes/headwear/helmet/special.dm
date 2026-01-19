@@ -101,7 +101,7 @@
 ///
 
 /obj/item/clothing/head/roguetown/helmet/sallet/grenzelhoft/triumph
-	name = "sallet w/plumed berett"
+	name = "sallet w/plumed beret"
 	desc = "A Grenzelhoftian 'tellerbarret' placed atop a regular steel sallet, staying fashionable while protecting the wearer's head to a better degree."
 	icon_state = "grenzelmid"
 	item_state = "grenzelmid"
@@ -110,7 +110,6 @@
 	detail_tag = "_detail"
 	altdetail_tag = "_detailalt"
 	resistance_flags = FIRE_PROOF
-	var/picked = FALSE
 	color = "#FFFFFF"
 	detail_color = "#262927"
 	altdetail_color = "#FFFFFF"
@@ -142,7 +141,6 @@
 	detail_tag = "_detail"
 	altdetail_tag = "_detailalt"
 	resistance_flags = FIRE_PROOF
-	var/picked = FALSE
 	color = "#FFFFFF"
 	detail_color = "#262927"
 	altdetail_color = "#FFFFFF"
@@ -174,7 +172,6 @@
 	detail_tag = "_detail"
 	altdetail_tag = "_detailalt"
 	resistance_flags = FIRE_PROOF
-	var/picked = FALSE
 	color = "#FFFFFF"
 	detail_color = "#262927"
 	altdetail_color = "#FFFFFF"
