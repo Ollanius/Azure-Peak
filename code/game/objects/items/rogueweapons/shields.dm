@@ -548,7 +548,7 @@
 /obj/item/rogueweapon/shield/tower/metal/gold/king/attack_self(mob/user)
 	if(cooldowny)
 		if(world.time < cooldowny + cdtime)
-			to_chat(user, span_warning("[src] weakly crackles, its dorpel still needing to fully recharge!"))
+			to_chat(user, span_warning("[src] weakly crackles, yet to be ready for another repulsation!"))
 			return
 	if(prob(25))
 		smoke_path = /obj/effect/particle_effect/smoke
@@ -557,8 +557,8 @@
 	var/list/thrownatoms = list()
 	var/atom/throwtarget
 	var/distfromcaster
-	user.visible_message(span_notice("The holy sigil's dorpel on [src] crackles to life, fully recharged."))
-	to_chat(user, span_warning("[user] invokes the power within [src], releasing a holy shockwave!"))
+	user.visible_message(span_notice("The dorpel mounted upon [src] crackles, crackling with restored power!"))
+	to_chat(user, span_warning("[user] invokes the power within [src], releasing a powerful shockwave!"))
 	sleep(15)
 	playsound(user, 'sound/items/steamrelease.ogg', 100, FALSE, -1)
 	cooldowny = world.time
