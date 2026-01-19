@@ -214,7 +214,8 @@
 	name = "ominous hood"
 	desc = "A veil to the cultic and capricious. The runic sigils stitched along the hems teem with unimaginable knowledge, in the most literal sense of the word."
 	max_integrity = ARMOR_INT_HELMET_CLOTH
-	armor = ARMOR_SPELLSINGER
+	armor = ARMOR_PADDED
+	color = null
 	adjustable = null
 	item_state = "warlockhood"
 	icon_state = "warlockhood"
