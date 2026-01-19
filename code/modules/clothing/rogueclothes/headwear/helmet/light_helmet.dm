@@ -163,7 +163,6 @@
 	dynamic_hair_suffix = ""
 	armor = ARMOR_CLOTHING_GOOD //One-to-one replication of the original Plume Hat's protections.
 	resistance_flags = FLAMMABLE
-	var/picked = FALSE
 	color = "#262927"
 	detail_color = "#FFFFFF"
 	altdetail_color = "#256e9c" //A darker shade of Azure Blue.
