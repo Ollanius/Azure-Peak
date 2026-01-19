@@ -572,11 +572,11 @@
 	desc = "A branch that has been broken off of an azurielve tree, sharpened to a fine point. It can lay some unholy creechers to rest, but only by piercing their hearts."
 	icon_state = "stake"
 	possible_item_intents = list(/datum/intent/dagger/thrust, /datum/intent/dagger/thrust/pick, /datum/intent/dagger/sucker_punch, /datum/intent/dagger/thrust/quick)
-	force = 13
-	throwforce = 13
+	force = 12
+	throwforce = 12
 	wdefense = 0
-	max_integrity = 50
-	sellprice = 50
+	max_integrity = 25
+	sellprice = 5
 	slot_flags = ITEM_SLOT_HIP
 	smeltresult = /obj/item/rogueore/coal
 	last_used = 0
