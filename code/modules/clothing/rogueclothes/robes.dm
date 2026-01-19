@@ -15,12 +15,21 @@
 	experimental_inhand = FALSE
 
 /obj/item/clothing/suit/roguetown/shirt/robe/unholy
-	name = "foreboding robes"
-	desc = "An otherworldly veil, crackling with the constant ponderance of a runic enigma. She watches over you; and Her grin is crooked into one of eternal malice."
-	max_integrity = 666
+	name = "ominous robes"
+	desc = "Burlap, silk, cloth; it is none of this. The fabric itself is a paradox - lighter than a cloud, but heavier than blacksteel. Do not ponder the implication, lest you go inzane."
+	max_integrity = ARMOR_INT_CHEST_LIGHT_BASE
+	allowed_race = NON_DWARVEN_RACE_TYPES
 	armor = ARMOR_SPELLSINGER
 	color = null
 	boobed = null
+	item_state = "warlock"
+	icon_state = "warlock"
+
+/obj/item/clothing/suit/roguetown/shirt/robe/unholy/lich
+	name = "ominously enchanted robes"
+	desc = "An otherworldly veil, crackling with the constant ponderance of a runic enigma. Her hand guides your grandest missive; to bring forth progress, no matter the cost."
+	max_integrity = ARMOR_INT_CHEST_PLATE_ANTAG
+	allowed_race = ALL_RACES_TYPES
 	item_state = "ewarlock"
 	icon_state = "ewarlock"
 
