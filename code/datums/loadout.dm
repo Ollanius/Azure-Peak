@@ -899,6 +899,11 @@ GLOBAL_LIST_EMPTY(loadout_items)
 
 // -7 TRI Minisection.
 
+/datum/loadout_item/triumph_buttpack
+	name = "Belted Satchel (-7 TRI)"
+	path = /obj/item/storage/backpack/rogue/satchel/beltpack
+	triumph_cost = 7
+
 /datum/loadout_item/triumph_lordcloak
 	name = "Lordly Cloak (-7 TRI)"
 	path = /obj/item/clothing/cloak/lordcloak
