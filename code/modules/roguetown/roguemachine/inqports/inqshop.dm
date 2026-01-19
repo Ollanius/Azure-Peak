@@ -244,7 +244,7 @@
 /datum/inqports/articles/indexers
 	name = "3 INDEXERs"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/articles/indexers
-	marquescost = 4
+	marquescost = 3
 
 /obj/structure/closet/crate/chest/inqcrate/articles/indexers/Initialize()
 	. = ..()
@@ -268,7 +268,7 @@
 /datum/inqports/articles/confessions
 	name = "3 Writs of Confession"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/articles/confessions
-	marquescost = 8
+	marquescost = 6
 
 /obj/structure/closet/crate/chest/inqcrate/articles/confessions/Initialize()
 	. = ..()
@@ -318,8 +318,8 @@
 	marquescost = 16
 
 /datum/inqports/supplies/blessedbolts
-	name = "1 Quiver of Sunderbolts"
-	item_type = /obj/item/quiver/holybolts
+	name = "1 Pouch of Sunderbolts"
+	item_type = /obj/item/quiver/bolts/holy
 	marquescost = 8
 
 /datum/inqports/equipment/psydonthorns
