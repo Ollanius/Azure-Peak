@@ -33,7 +33,7 @@
 	damfactor = 1.0
 	no_early_release = TRUE
 
-/datum/intent//thrust
+/datum/intent/sword/thrust
 	name = "stab"
 	icon_state = "instab"
 	attack_verb = list("stabs")
@@ -45,23 +45,23 @@
 	swingdelay = 0
 	item_d_type = "stab"
 
-/datum/intent//thrust/short
+/datum/intent/sword/thrust/short
 	clickcd = 8
 	damfactor = 1.1
 	penfactor = 30
 
-/datum/intent//thrust/arming
+/datum/intent/sword/thrust/arming
 	clickcd = 10 // Less than rapier
 	penfactor = 35 // 22 + 35 = 57. Beats light leather slightly more than rapier per strike, but less strike
 
-/datum/intent//thrust/long
-	penfactor = 30 // 2h Long already have 30 damage. This let it pierce light armor easily
+/datum/intent/sword/thrust/long
+	penfactor = 30 // 2h Longsword already have 30 damage. This let it pierce light armor easily
 	// Their cut is actually pretty decent when 2handed and should be inferior to zwei.
 
-/datum/intent//thrust/krieg
+/datum/intent/sword/thrust/krieg
 	damfactor = 0.9
 
-/datum/intent//thrust/blunt
+/datum/intent/sword/thrust/blunt
 	blade_class = BCLASS_BLUNT
 	hitsound = list('sound/combat/hits/blunt/metalblunt (1).ogg', 'sound/combat/hits/blunt/metalblunt (2).ogg', 'sound/combat/hits/blunt/metalblunt (3).ogg')
 	attack_verb = list("prods", "pokes")
@@ -69,7 +69,7 @@
 	item_d_type = "blunt"
 	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR
 
-/datum/intent//strike
+/datum/intent/sword/strike
 	name = "pommel strike"
 	icon_state = "instrike"
 	attack_verb = list("bashes", "clubs")
@@ -83,8 +83,8 @@
 	item_d_type = "blunt"
 	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR
 
-// A weaker strike for  with high damage so that it don't end up becoming better than mace
-/datum/intent//strike/bad
+// A weaker strike for swords with high damage so that it don't end up becoming better than mace
+/datum/intent/sword/strike/bad
 	damfactor = 0.7 
 
 /datum/intent/sword/peel
