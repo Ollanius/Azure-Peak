@@ -287,8 +287,7 @@
 
 	invalid_blades = list(
 		/obj/item/rogueweapon/huntingknife/idagger/stake,
-		/obj/item/rogueweapon/huntingknife/idagger/silver/stake
-	)
+		/obj/item/rogueweapon/huntingknife/idagger/silver/stake)
 
 /obj/item/rogueweapon/scabbard/sheath/weapon_check(mob/living/user, obj/item/A)
 	. = ..()
