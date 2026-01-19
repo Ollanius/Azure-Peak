@@ -89,7 +89,7 @@ GLOBAL_LIST_EMPTY(lord_titles)
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/black
 		armor = /obj/item/clothing/suit/roguetown/shirt/dress/royal
 		cloak = /obj/item/clothing/cloak/lordcloak/ladycloak
-		l_hand = /obj/item/rogueweapon/scabbard/sheath/royal
+		r_hand = /obj/item/rogueweapon/scabbard/sheath/royal
 		wrists = /obj/item/clothing/wrists/roguetown/royalsleeves
 		shoes = /obj/item/clothing/shoes/roguetown/shortboots
 	else if(should_wear_masc_clothes(H))
