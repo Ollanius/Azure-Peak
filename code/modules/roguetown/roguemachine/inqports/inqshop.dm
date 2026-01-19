@@ -318,8 +318,8 @@
 	marquescost = 16
 
 /datum/inqports/supplies/blessedbolts
-	name = "1 Pouch of Sunderbolts"
-	item_type = /obj/item/quiver/bolts/holy
+	name = "1 Quiver of Sunderbolts"
+	item_type = /obj/item/quiver/holybolts
 	marquescost = 8
 
 /datum/inqports/equipment/psydonthorns
