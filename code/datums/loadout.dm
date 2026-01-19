@@ -877,6 +877,11 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	path = /obj/item/clothing/neck/roguetown/psicross/astrata/g/triumph
 	triumph_cost = 5
 
+/datum/loadout_item/triumph_grenzhat
+	name = "Grenzelhoftian Beret (-5 TRI)"
+	path = /obj/item/clothing/head/roguetown/grenzelhofthat/triumph
+	triumph_cost = 5
+
 /datum/loadout_item/triumph_signet
 	name = "Golden Signet Ring, Ornate (-5 TRI)"
 	path = /obj/item/clothing/ring/signet/triumph
@@ -902,6 +907,11 @@ GLOBAL_LIST_EMPTY(loadout_items)
 /datum/loadout_item/triumph_buttpack
 	name = "Belted Satchel (-7 TRI)"
 	path = /obj/item/storage/backpack/rogue/satchel/beltpack
+	triumph_cost = 7
+
+/datum/loadout_item/triumph_lunchpouch
+	name = "Pouch of Luncheons (-7 TRI)"
+	path = /obj/item/storage/belt/rogue/pouch/triumphlunch
 	triumph_cost = 7
 
 /datum/loadout_item/triumph_lordcloak
