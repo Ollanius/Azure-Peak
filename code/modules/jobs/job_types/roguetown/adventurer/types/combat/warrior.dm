@@ -583,6 +583,8 @@
 			wrists = /obj/item/clothing/neck/roguetown/psicross/silver
 		if(/datum/patron/divine/astrata)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/silver/astrata
+		if(/datum/patron/divine/necra)
+			wrists = /obj/item/clothing/neck/roguetown/psicross/silver/necra
 		else
 			wrists = /obj/item/clothing/neck/roguetown/psicross/silver/undivided
 
