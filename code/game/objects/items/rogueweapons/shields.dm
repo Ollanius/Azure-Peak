@@ -538,7 +538,7 @@
 
 /obj/item/rogueweapon/shield/tower/metal/gold/king
 	name = "\"Bulwarke\""
-	desc = "A resplendant kite shield, assembled from six golden plates that've been hooked together by a glimmering holy sigil. Mounted in its core is a shard of Astrata's divinity authority, crackling with the strength to violently repulse man-and-monster alike. ‎</br>‎‎ </br>'Tyranny and honor! Glory to thine kingdome-come! Let thine will be done!'" "
+	desc = "A resplendant kite shield, assembled from six golden plates that've been hooked together by a glimmering holy sigil. Mounted in its core is a shard of Astrata's divinity authority, crackling with the strength to violently repulse man-and-monster alike. ‎</br>‎‎ </br>'Tyranny and honor! Glory to thine kingdome-come! Let thine will be done!'"
 	icon_state = "goldshieldking"
 	max_integrity = 350
 	var/smoke_path = /obj/effect/particle_effect/smoke/transparent

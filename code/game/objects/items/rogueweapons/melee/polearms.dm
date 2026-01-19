@@ -472,7 +472,7 @@
 	force = 18
 	force_wielded = 22
 	name = "bone spear"
-	desc = "A spear made of bones..."
+	desc = "Yesterday's hunt, tomorrow's weapon."
 	icon_state = "bonespear"
 	pixel_y = -16
 	pixel_x = -16
