@@ -235,5 +235,5 @@
 	populate_contents = list(
 	/obj/item/reagent_containers/food/snacks/rogue/cheddarwedge,
 	/obj/item/reagent_containers/food/snacks/rogue/handpie/meat,
-	/obj/item/reagent_containers/glass/bottle/rogue/beer/triumph,
+	/obj/item/reagent_containers/glass/bottle/rogue/triumphbeer,
 	)
