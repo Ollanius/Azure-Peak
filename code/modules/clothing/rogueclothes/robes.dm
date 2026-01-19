@@ -19,7 +19,7 @@
 	desc = "Burlap, silk, cloth; it is none of this. The fabric itself is a paradox - lighter than a cloud, but heavier than blacksteel. Do not ponder the implication, lest you go inzane."
 	max_integrity = ARMOR_INT_CHEST_LIGHT_BASE
 	allowed_race = NON_DWARVEN_RACE_TYPES
-	armor = ARMOR_SPELLSINGER
+	armor = ARMOR_PADDED
 	color = null
 	boobed = null
 	item_state = "warlock"
