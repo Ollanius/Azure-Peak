@@ -389,22 +389,6 @@
 	name = "poison stone arrow"
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/arrow/stone
 
-/obj/item/ammo_casing/caseless/rogue/arrow/bronze/poison
-	name = "poisoned bronze arrow"
-	desc = "Jagged frills along the bronze speartip drool with a noxious concoction, daring to disrupt the humors of anyone unfortunate enough to be struck.
-	projectile_type = /obj/projectile/bullet/reusable/arrow/bronze/poison
-	icon_state = "bronzearrow_poison"
-
-/obj/projectile/bullet/reusable/arrow/bronze/poison
-	name = "poison bronze arrow"
-	ammo_type = /obj/item/ammo_casing/caseless/rogue/arrow/bronze/poison
-	poisontype = /datum/reagent/stampoison
-	poisonamount = 2
-	slur = 10
-	eyeblur = 10
-	drowsy = 5
-	icon_state = "arrowpoison_proj"
-
 //SILVER AMMO
 /obj/item/ammo_casing/caseless/rogue/arrow/silver
 	name = "silver arrow"
