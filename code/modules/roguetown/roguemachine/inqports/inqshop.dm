@@ -406,7 +406,7 @@
 /datum/inqports/wardrobe/satchelbelted
 	name = "1 Satchel, Belted"
 	item_type = /obj/item/storage/backpack/rogue/satchel/beltpack
-	marquescost = 6
+	marquescost = 8
 
 /datum/inqports/wardrobe/psysack
 	name = "1 Psydonian Facemask"
