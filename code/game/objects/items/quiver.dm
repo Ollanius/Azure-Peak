@@ -155,7 +155,6 @@
 		arrows += A
 	update_icon()
 
-
 /obj/item/quiver/poisonarrows/Initialize()
 	. = ..()
 	for(var/i in 1 to max_storage)
@@ -208,8 +207,8 @@
 		arrows += A
 	update_icon()
 
-////////////
-// BOLTS  //
+//////////// Note - silver quivers and bolt pouches shouldn't be obtainable through normal circumstances.
+// BOLTS  // For now, they should only be available as uncraftable singles.
 ////////////
 
 /obj/item/quiver/bolt
