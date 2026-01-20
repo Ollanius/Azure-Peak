@@ -273,5 +273,3 @@
 	caliber = "heabolt"
 	max_ammo = 1
 	start_empty = TRUE
-
-
