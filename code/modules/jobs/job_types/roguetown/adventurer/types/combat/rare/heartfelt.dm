@@ -1,8 +1,8 @@
 
 /datum/advclass/heartfeltlord
 	name = "Lord of Heartfelt"
-	tutorial = "You are the proud lord of heartfelt \
-	but why did you come to the isle of enigma?"
+	tutorial = "You are the proud Lord of Heartfelt, this is true,  \
+	but why did you come to the Isle of Enigma?"
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_NO_CONSTRUCT
 	outfit = /datum/outfit/job/roguetown/adventurer/heartfeltlord
@@ -46,7 +46,7 @@
 	cloak = /obj/item/clothing/cloak/heartfelt
 	armor = /obj/item/clothing/suit/roguetown/armor/heartfelt/lord
 	neck = /obj/item/storage/belt/rogue/pouch/coins/rich
-	beltl = /obj/item/rogueweapon/scabbard/sword
+	beltl = /obj/item/rogueweapon/scabbard/sword/royal
 	l_hand = /obj/item/rogueweapon/sword/long/marlin
 	beltr = /obj/item/rogueweapon/huntingknife
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
