@@ -122,7 +122,7 @@
 	dropshrink = 0.8
 	max_integrity = 15
 	force = 15
-	grid_height = 64
+	grid_height = 96 //Effectively as large as a shortsword. Two in a belt, four in a satchel. Unideal for carrying without a purpose-made pouch.
 	grid_width = 32
 
 /obj/projectile/bullet/reusable/heavy_bolt
