@@ -260,7 +260,7 @@
 	icon_state = "heavybow0"
 	item_state = "heavybow"
 	load_sound = 'sound/foley/doors/lockmetal.ogg'
-	fire_sound = 'sound/combat/Ranged/crossbow-big-shot.ogg'
+	fire_sound = 'sound/combat/Ranged/crossbow_big_shot.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/heavy_xbow
 	force = 18 
 	chargingspeed = 60 //+20
