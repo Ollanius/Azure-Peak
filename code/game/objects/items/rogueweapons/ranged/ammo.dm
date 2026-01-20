@@ -36,6 +36,12 @@
 	icon_state = "ancientbolt"
 	projectile_type = /obj/projectile/bullet/reusable/bolt/paalloy
 
+/obj/item/ammo_casing/caseless/rogue/bolt/bronze
+	name = "bronze bolt"
+	desc = "Bronze and wood, fitted by-hand to fashion a bolt's fuselage. The design, perfected over a millennium of trial-and-error, sails with tremendous haste."
+	icon_state = "bronzebolt"
+	projectile_type = /obj/projectile/bullet/reusable/bolt/bronze
+
 /obj/item/ammo_casing/caseless/rogue/bolt/blunt
 	name = "blunt bolt"
 	desc = "A crossbow bolt without the part that pierces skulls. That doesn't mean it won't kill you."
@@ -84,11 +90,21 @@
 	damage = 40
 	armor_penetration = 30
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/bolt/aalloy
+	icon_state = "ancientbolt_proj"
 
 /obj/projectile/bullet/reusable/bolt/paalloy
-	damage = 50
-	armor_penetration = 35
+	damage = 65
+	armor_penetration = 45
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/bolt/paalloy
+	icon_state = "ancientbolt_proj"
+
+/obj/projectile/bullet/reusable/bolt/bronze
+	damage = 70
+	armor_penetration = 35
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/bolt/aalloy
+	icon_state = "bronzebolt_proj"
+	npc_simple_damage_mult = 3 //More damage over simplemobs!
+	speed = 1.5 // Faster!
 
 /obj/projectile/bullet/reusable/bolt/holy
 	name = "sunderbolt"
@@ -136,6 +152,7 @@
 	range = 30
 	hitsound = 'sound/combat/hits/hi_bolt (2).ogg'
 	embedchance = 100
+	demolition_mod = 2
 	woundclass = BCLASS_PIERCE
 	flag = "piercing"
 	speed = 0.3
@@ -152,6 +169,7 @@
 	name = "decrepit heavy bolt"
 	damage = 90 
 	embedchance = 50
+	icon_state = "ancientbolt_proj"
 	poisontype = /datum/reagent/stampoison
 	poisonamount = 2 //You are, in essence, giving them tenantus.
 	slur = 7
@@ -168,11 +186,25 @@
 	name = "ancient heavy bolt"
 	damage = 100
 	embedchance = 100
+	icon_state = "ancientbolt_proj"
 	poisontype = /datum/reagent/stampoison
 	poisonamount = 4 //You are, in essence, giving them tenantus. Roughly 50% stronger than a poisoned iron arrow.
 	slur = 10
 	eyeblur = 10
 	drowsy = 6
+
+/obj/item/ammo_casing/caseless/rogue/heavy_bolt/bronze
+	name = "bronze heavy bolt"
+	desc = "A siege-weapon's most treasured compatriot, fitted with a surprisingly light spearhead of bronze. It screams through the air, releasing a haunting whistle that's purported to be purpose-made; an added caveat to wither away the wits of a besieged defender."
+	icon_state = "bronzeheavybolt"
+	projectile_type = /obj/projectile/bullet/reusable/heavy_bolt/bronze
+
+/obj/projectile/bullet/reusable/heavy_bolt/bronze
+	name = "bronze heavy bolt"
+	damage = 100
+	embedchance = 100
+	icon_state = "bronzebolt_proj"
+	speed = 0.7 //Travels twice as quickly as a regular bolt, at the cost of some damage.
 
 //
 
@@ -206,6 +238,13 @@
 	on impact with armor."
 	max_integrity = 5
 	projectile_type = /obj/projectile/bullet/reusable/arrow/stone
+
+/obj/item/ammo_casing/caseless/rogue/arrow/bronze
+	name = "bronze arrow"
+	icon_state = "bronzearrow"
+	desc = "Bronze, quenched and batonned onto a feathered stick. The stories scribed along its imperfect edge could fill a hundred tomes; lost to antiquity, but remembered through sheer generational instinct."
+	max_integrity = 8
+	projectile_type = /obj/projectile/bullet/reusable/arrow/bronze
 
 /obj/item/ammo_casing/caseless/rogue/arrow/iron
 	name = "iron broadhead arrow"
@@ -288,8 +327,10 @@
 /obj/projectile/bullet/reusable/arrow/iron/aalloy
 	name = "decrepit broadhead arrow"
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/arrow/iron/aalloy
-	damage = 20
-	armor_penetration = 0
+	icon_state = "ancientarrow_proj"
+	damage = 45
+	armor_penetration = 15
+	embedchance = 40
 
 /obj/projectile/bullet/reusable/arrow/steel
 	name = "bodkin arrow"
@@ -301,11 +342,22 @@
 	npc_simple_damage_mult = 3
 
 /obj/projectile/bullet/reusable/arrow/steel/paalloy
-	name = "decrepit bodkin arrow"
+	name = "ancient bodkin arrow"
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/arrow/steel/paalloy
-	damage = 15
-	armor_penetration = 25
-	embedchance = 30
+	icon_state = "ancientarrow_proj"
+	damage = 35
+	armor_penetration = 35
+	embedchance = 60 
+
+/obj/projectile/bullet/reusable/arrow/bronze
+	name = "bronze arrow"
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/arrow/bronze
+	icon_state = "bronzearrow_proj"
+	damage = 60
+	armor_penetration = 10
+	embedchance = 60 //+20 damage and embedding, -50% AP. 
+	npc_simple_damage_mult = 3 //More damage over simplemobs!
+	speed = 1.3 // Faster!
 
 // POISON AMMO
 /obj/item/ammo_casing/caseless/rogue/arrow/poison
@@ -331,10 +383,27 @@
 	slur = 10
 	eyeblur = 10
 	drowsy = 5
+	icon_state = "arrowpoison_proj"
 
 /obj/projectile/bullet/reusable/arrow/poison/stone
 	name = "poison stone arrow"
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/arrow/stone
+
+/obj/item/ammo_casing/caseless/rogue/arrow/bronze/poison
+	name = "poisoned bronze arrow"
+	desc = "Jagged frills along the bronze speartip drool with a noxious concoction, daring to disrupt the humors of anyone unfortunate enough to be struck.
+	projectile_type = /obj/projectile/bullet/reusable/arrow/bronze/poison
+	icon_state = "bronzearrow_poison"
+
+/obj/projectile/bullet/reusable/arrow/bronze/poison
+	name = "poison bronze arrow"
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/arrow/bronze/poison
+	poisontype = /datum/reagent/stampoison
+	poisonamount = 2
+	slur = 10
+	eyeblur = 10
+	drowsy = 5
+	icon_state = "arrowpoison_proj"
 
 //SILVER AMMO
 /obj/item/ammo_casing/caseless/rogue/arrow/silver
@@ -691,10 +760,22 @@
 	desc = "A missile of frayed bronze. Before you is your weapon; that which rose Man out of the mud, and brought the Beasts of Old Syon to heel. When were you last aware of any other part of you? Do you recall seeing the world in any other way?"
 	icon_state = "ajavelin"
 	throwforce = 20
-	force = 9
+	force = 10
 	color = "#bb9696"
+	embedding = list("embedded_pain_multiplier" = 6, "embed_chance" = 65, "embedded_fall_chance" = 5)
 	smeltresult = null // Override iron inherit
 	anvilrepair = null
+
+/obj/item/ammo_casing/caseless/rogue/javelin/bronze
+	name = "bronze javelin"
+	desc = "A tool used for centuries, as early as recorded history. This one is tipped with a bronze head, wide and serrated - a death knell to the unarmored, and a staggering wound to the beplated."
+	icon_state = "bjavelin"
+	force = 20
+	throwforce = 36	//Devastating against unarmored foes, but with nearly halved armor penetration.
+	armor_penetration = 30
+	embedding = list("embedded_pain_multiplier" = 4, "embed_chance" = 80, "embedded_fall_chance" = 5)
+	thrown_bclass = BCLASS_PICK	
+	smeltresult = /obj/item/ingot/bronze
 
 /obj/item/ammo_casing/caseless/rogue/javelin/steel
 	force = 16
@@ -858,6 +939,7 @@
 	damage = 35
 	armor_penetration = 20 //Slightly more damage, but with -33% AP.
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/sling_bullet/bronze
+	speed = 0.7 // Faster!
 
 /obj/projectile/bullet/reusable/sling_bullet/iron
 	name = "iron sling bullet"
