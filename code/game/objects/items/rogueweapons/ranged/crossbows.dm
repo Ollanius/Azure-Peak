@@ -7,7 +7,7 @@
 	item_state = "crossbow"
 	experimental_onhip = TRUE
 	experimental_onback = TRUE
-	possible_item_intents = list(/datum/intent/shoot/crossbow, /datum/intent/arc/crossbow, INTENT_GENERIC)
+	possible_item_intents = list(/datum/intent/shoot/crossbow, /datum/intent/arc/crossbow, /datum/intent/mace/strike)
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/xbow
 	slot_flags = ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
@@ -19,7 +19,7 @@
 	var/movingreload = FALSE
 	var/onehanded = FALSE
 	var/hasloadedsprite = FALSE
-	force = 14
+	force = 15
 	var/cocked = FALSE
 	cartridge_wording = "bolt"
 	load_sound = 'sound/foley/nockarrow.ogg'
@@ -239,7 +239,7 @@
 	icon = 'icons/roguetown/weapons/misc32.dmi'
 	icon_state = "slurbow0"
 	item_state = "slurbow"
-	possible_item_intents = list(/datum/intent/shoot/crossbow/slurbow, /datum/intent/arc/crossbow/slurbow, INTENT_GENERIC)
+	possible_item_intents = list(/datum/intent/shoot/crossbow/slurbow, /datum/intent/arc/crossbow/slurbow, /datum/intent/mace/strike)
 	chargingspeed = 20
 	damfactor = 0.6
 	accfactor = 1.3
@@ -259,13 +259,14 @@
 	icon = 'icons/roguetown/weapons/misc32.dmi'
 	icon_state = "heavybow0"
 	item_state = "heavybow"
+	possible_item_intents = list(/datum/intent/shoot/crossbow, /datum/intent/arc/crossbow, /datum/intent/mace/strike, /datum/intent/effect/daze) //Remember, this is quite heavy.
 	load_sound = 'sound/foley/doors/lockmetal.ogg'
 	fire_sound = 'sound/combat/Ranged/crossbow_big_shot.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/heavy_xbow
-	force = 18 
+	minstr = 12 //Should only affect melee damage. Sells the impression that you're hauling some serious artillery around.
+	force = 20
 	chargingspeed = 60 //+20
 	reloadtime = 8 SECONDS //Emulates the use of a windlass, similar to its real life counterparts.
-	hasloadedsprite = TRUE
 	accfactor = 0.7 //Hey, I'd like to see you try to aim a siege weapon while standing up!
 
 /obj/item/ammo_box/magazine/internal/shot/heavy_xbow
