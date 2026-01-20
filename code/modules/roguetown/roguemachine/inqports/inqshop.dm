@@ -36,42 +36,12 @@
 
 /// ✤ RELIQUARY ✤ START HERE! WOW!
 
-/datum/inqports/reliquary/crankbox
-	name = "The Crankbox, Everwarding"
-	item_type = /obj/structure/closet/crate/chest/inqreliquary/relic/crankbox/
-	marquescost = 16
-	maximum = 1
-
-/obj/structure/closet/crate/chest/inqreliquary/relic/crankbox/Initialize()
-	. = ..()
-	new /obj/item/psydonmusicbox(src)
-
-/datum/inqports/reliquary/bmirror
-	name = "The Mirrors, Everseeing"
-	item_type = /obj/structure/closet/crate/chest/inqreliquary/relic/bmirror/
-	marquescost = 8
-	maximum = 2
-
-/obj/structure/closet/crate/chest/inqreliquary/relic/bmirror/Initialize()
-	. = ..()
-	new /obj/item/inqarticles/bmirror(src)
-
-/datum/inqports/reliquary/superbow
-	name = "The Ballista, Evercracking"
-	item_type = /obj/structure/closet/crate/chest/inqreliquary/relic/superbow/
-	marquescost = 16
-	maximum = 1
-
-/obj/structure/closet/crate/chest/inqreliquary/relic/superbow/Initialize()
-	. = ..()
-	new /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy(src)
-	new /obj/item/quiver/bolt/heavy/standard(src)
-	new /obj/item/ammo_casing/caseless/rogue/heavy_bolt/silver(src)
+//No idea how to make this show up. Relocate 'relic'-type items here, when able.
 
 /// ✤ SUPPLIES ✤ START HERE! WOW!
 
 /datum/inqports/supplies/extrafunding
-	name = "The Archbishop's Allowance (80 Ziliquae)"
+	name = "The Archbishop's Allowance - Hundreds Of Mammons"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/extrafunding
 	marquescost = 16
 	maximum = 1
@@ -88,7 +58,7 @@
 	new /obj/item/roguecoin/silver/inqpile(src)
 
 /datum/inqports/supplies/bullion
-	name = "The Archibishop's Bullion (6 Silver Ingots)"
+	name = "The Archibishop's Bullion - Blessed Silver Ingots"
 	item_type = /obj/structure/closet/crate/chest/inqreliquary/relic/bullion/
 	marquescost = 16
 	maximum = 3
@@ -226,6 +196,38 @@
 	maximum = 2
 
 // ✤ ARTICLES ✤ RIGHT HERE! THAT'S RIGHT!
+
+/datum/inqports/rarticles/crankbox
+	name = "Relic - The Crankbox, Everwarding"
+	item_type = /obj/structure/closet/crate/chest/inqreliquary/relic/crankbox/
+	marquescost = 16
+	maximum = 1
+
+/obj/structure/closet/crate/chest/inqreliquary/relic/crankbox/Initialize()
+	. = ..()
+	new /obj/item/psydonmusicbox(src)
+
+/datum/inqports/articles/bmirror
+	name = "Relic - The Mirrors, Everseeing"
+	item_type = /obj/structure/closet/crate/chest/inqreliquary/relic/bmirror/
+	marquescost = 8
+	maximum = 2
+
+/obj/structure/closet/crate/chest/inqreliquary/relic/bmirror/Initialize()
+	. = ..()
+	new /obj/item/inqarticles/bmirror(src)
+
+/datum/inqports/articles/superbow
+	name = "Relic - The Ballista, Evercracking"
+	item_type = /obj/structure/closet/crate/chest/inqreliquary/relic/superbow/
+	marquescost = 16
+	maximum = 1
+
+/obj/structure/closet/crate/chest/inqreliquary/relic/superbow/Initialize()
+	. = ..()
+	new /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy(src)
+	new /obj/item/quiver/bolt/heavy/standard(src)
+	new /obj/item/ammo_casing/caseless/rogue/heavy_bolt/silver(src)
 
 /datum/inqports/articles/stampstuff
 	name = "1 Lump of Redtallow"
