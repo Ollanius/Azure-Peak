@@ -101,7 +101,7 @@
 /obj/projectile/bullet/reusable/bolt/bronze
 	damage = 70
 	armor_penetration = 35
-	ammo_type = /obj/item/ammo_casing/caseless/rogue/bolt/aalloy
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/bolt/bronze
 	icon_state = "bronzebolt_proj"
 	npc_simple_damage_mult = 3 //More damage over simplemobs!
 	speed = 1.5 // Faster!
