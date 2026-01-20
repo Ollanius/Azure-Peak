@@ -182,6 +182,7 @@
 				beltr = /obj/item/quiver/bolt/heavy/standard/ //Eight bolts. More than enough to kill anything that moves.
 				r_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy
 				H.change_stat(STATKEY_STR, 1) //Without any statpack or racial modifier, this meets the bare minimum for using the Siegebow as a melee weapon.
+				H.change_stat(STATKEY_SPD, -1)
 	wrists = /obj/item/clothing/wrists/roguetown/bracers
 	belt = /obj/item/storage/belt/rogue/leather
 	neck = /obj/item/clothing/neck/roguetown/gorget
