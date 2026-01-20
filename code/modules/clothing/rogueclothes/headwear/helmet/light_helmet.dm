@@ -165,7 +165,7 @@
 	resistance_flags = FLAMMABLE
 	color = "#262927"
 	detail_color = "#FFFFFF"
-	altdetail_color = "#256e9c" //A darker shade of Azure Blue.
+	altdetail_color = "#007fff"
 
 /obj/item/clothing/head/roguetown/grenzelhofthat/triumph/attack_right(mob/user)
 	..()
