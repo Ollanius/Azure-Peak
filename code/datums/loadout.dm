@@ -897,6 +897,21 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	path = /obj/item/clothing/wrists/roguetown/royalsleeves
 	triumph_cost = 5
 
+/datum/loadout_item/triumph_goldhalfmask
+	name = "Golden Halfmask, Ornate (-5 TRI)"
+	path = /obj/item/clothing/mask/rogue/lordmask/triumph
+	triumph_cost = 5
+
+/datum/loadout_item/triumph_goldfullmask
+	name = "Golden Mask, Ornate (-5 TRI)"
+	path = /obj/item/clothing/mask/rogue/facemask/goldmask/triumph
+	triumph_cost = 5
+
+/datum/loadout_item/triumph_goldfullmaskc
+	name = "Crestless Golden Mask, Ornate (-5 TRI)"
+	path = /obj/item/clothing/mask/rogue/facemask/goldmaskc/triumph
+	triumph_cost = 5
+
 // -7 TRI Minisection.
 
 /datum/loadout_item/triumph_buttpack
