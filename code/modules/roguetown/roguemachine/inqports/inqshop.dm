@@ -197,7 +197,7 @@
 
 // ✤ ARTICLES ✤ RIGHT HERE! THAT'S RIGHT!
 
-/datum/inqports/rarticles/crankbox
+/datum/inqports/articles/crankbox
 	name = "Relic - The Crankbox, Everwarding"
 	item_type = /obj/structure/closet/crate/chest/inqreliquary/relic/crankbox/
 	marquescost = 16
