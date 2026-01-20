@@ -403,7 +403,7 @@
 	item_type = /obj/item/storage/backpack/rogue/satchel/otavan
 	marquescost = 3
 
-/datum/inqports/wardrobe/otavansatchel
+/datum/inqports/wardrobe/satchelbelted
 	name = "1 Satchel, Belted"
 	item_type = /obj/item/storage/backpack/rogue/satchel/beltpack
 	marquescost = 6
