@@ -376,7 +376,7 @@
 	poisontype = /datum/reagent/water/blessed
 	poisonamount = 10
 
-/obj/item/ammo_casing/caseless/rogue/heavy_bolt/holy
+/obj/item/ammo_casing/caseless/rogue/heavy_bolt/silver
 	name = "heavy silver bolt"
 	desc = "A silvered lance, poised to impale the unimaginable. You feel the hands of another guiding your own, as you prepare to load; may it be guidence from a higher power, or your wit upon the verge of breaking? </br>'God, please..'"
 	projectile_type = /obj/projectile/bullet/reusable/heavy_bolt/holy
@@ -385,7 +385,7 @@
 	force = 12
 	is_silver = TRUE
 
-/obj/projectile/bullet/reusable/heavy_bolt/holy
+/obj/projectile/bullet/reusable/heavy_bolt/silver
 	name = "heavy silver bolt"
 	damage = 120
 	armor_penetration = 100 //Same damage, but with absolute penetration. 
@@ -470,7 +470,7 @@
 	icon_state = "arrow_pyroclastic"
 
 /obj/projectile/bullet/arrow/pyro
-	name = "pyroclatic arrow"
+	name = "pyroclastic arrow"
 	desc = "An arrow with its tip drenched in a flammable tincture."
 	damage = 15
 	icon_state = "arrowpyro_proj"
