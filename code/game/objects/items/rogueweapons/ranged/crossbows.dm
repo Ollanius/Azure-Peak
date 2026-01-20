@@ -266,8 +266,8 @@
 	minstr = 12 //Should only affect melee damage. Sells the impression that you're hauling some serious artillery around.
 	force = 20
 	chargingspeed = 60 //+20
-	reloadtime = 8 SECONDS //Emulates the use of a windlass, similar to its real life counterparts.
-	accfactor = 0.7 //Hey, I'd like to see you try to aim a siege weapon while standing up!
+	reloadtime = 20 SECONDS //Emulates the use of a windlass, similar to its real life counterparts.
+	accfactor = 0.5 //Hey, I'd like to see you try to aim a siege weapon while standing up!
 	penfactor = 0.1 //In essence: a ranged integrity cracker.
 
 /obj/item/ammo_box/magazine/internal/shot/heavy_xbow
