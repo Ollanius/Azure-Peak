@@ -52,7 +52,7 @@
 	marquescost = 8
 	maximum = 2
 
-/obj/structure/closet/crate/chest/inqreliquary/relic/bmirror//Initialize()
+/obj/structure/closet/crate/chest/inqreliquary/relic/bmirror/Initialize()
 	. = ..()
 	new /obj/item/inqarticles/bmirror(src)
 
