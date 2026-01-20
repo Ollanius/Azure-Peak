@@ -34,7 +34,7 @@
 	name = "inquisitorial wardrobe crate"
 	desc = "A crate of boswellia wood, marked with the sigil of the Holy Psydonic Inquisition." 
 
-/// ✤ RELICS ✤ START HERE! WOW!
+/// ✤ RELIQUARY ✤ START HERE! WOW!
 
 /datum/inqports/reliquary/crankbox
 	name = "The Crankbox, Everwarding"
