@@ -392,8 +392,8 @@
 /obj/item/ammo_casing/caseless/rogue/arrow/bronze/poison
 	name = "poisoned bronze arrow"
 	desc = "Jagged frills along the bronze speartip drool with a noxious concoction, daring to disrupt the humors of anyone unfortunate enough to be struck.
-	projectile_type = /obj/projectile/bullet/reusable/arrow/bronze/poison
 	icon_state = "bronzearrow_poison"
+	projectile_type = /obj/projectile/bullet/reusable/arrow/bronze/poison
 
 /obj/projectile/bullet/reusable/arrow/bronze/poison
 	name = "poison bronze arrow"

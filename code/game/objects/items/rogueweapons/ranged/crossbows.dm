@@ -231,6 +231,13 @@
 	max_ammo = 1
 	start_empty = TRUE
 
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/aalloy
+	name = "ancient crossbow"
+	desc = "A deadly weapon from another tyme, which shoots a bolt with terrific power. Unlike the common bow, it uses a sophisticated mechanism to renock - and retain - its half-length bolts; a matter that relies more on raw strength than dexterity to master. </br>Once, these mechanical delights bristled the arms of Zaelorian's ancient empire; now, it shudders in the grasp of Zizo's deathless crusade."
+	icon = 'icons/roguetown/weapons/misc32.dmi'
+	icon_state = "ancientcrossbow0"
+	item_state = "ancientcrossbow"
+
 //
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/slurbow
@@ -275,3 +282,9 @@
 	caliber = "heabolt"
 	max_ammo = 1
 	start_empty = TRUE
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy/paalloy
+	name = "ancient siegebow"
+	desc = "A heavier weight crossbow from another tyme - the basis of a mounted ballista, made fit for handheld usage. Integrated just beneath the stock is a windlass mechanism, necessary to surmount the siegebow's titanic draw-strength. It loads heavier, full-length bolts; purpose-made to pulverize. </br>'Rudmarsch's walls broke beneath the volley, and Her sickness petered through the cracks..'"
+	icon_state = "ancientheavybow0"
+	item_state = "ancientheavybow"
