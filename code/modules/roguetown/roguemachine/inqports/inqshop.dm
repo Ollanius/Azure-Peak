@@ -163,7 +163,7 @@
 /datum/inqports/supplies/lifebloodvials
 	name = "3 Vials of Strong Lifeblood"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/sredvials
-	maximum = 2
+	maximum = 3
 	marquescost = 8
 
 /obj/structure/closet/crate/chest/inqcrate/supplies/sredvials/Initialize()
@@ -175,7 +175,7 @@
 /datum/inqports/supplies/strongbluevials
 	name = "3 Vials of Strong Manna"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/sbluevials
-	maximum = 2
+	maximum = 3
 	marquescost = 8
 
 /obj/structure/closet/crate/chest/inqcrate/supplies/sbluevials/Initialize()
@@ -199,7 +199,7 @@
 	name = "3 Bottlebombs"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/bottlebombs
 	marquescost = 8
-	maximum = 2
+	maximum = 3
 
 /obj/structure/closet/crate/chest/inqcrate/supplies/bottlebombs/Initialize()
 	. = ..()
@@ -210,8 +210,8 @@
 /datum/inqports/supplies/tnt
 	name = "3 Blastpowder Sticks"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/tnt
-	marquescost = 12
-	maximum = 1
+	marquescost = 10
+	maximum = 3
 
 /obj/structure/closet/crate/chest/inqcrate/supplies/tnt/Initialize()
 	. = ..()
@@ -223,13 +223,7 @@
 	name = "1 Blastpowder Satchel"
 	item_type = /obj/item/satchel_bomb
 	marquescost = 16
-	maximum = 1
-
-/obj/structure/closet/crate/chest/inqcrate/supplies/tnt/Initialize()
-	. = ..()
-	new /obj/item/tntstick(src)
-	new /obj/item/tntstick(src)
-	new /obj/item/tntstick(src)
+	maximum = 2
 
 // ✤ ARTICLES ✤ RIGHT HERE! THAT'S RIGHT!
 
@@ -296,20 +290,20 @@
 /datum/inqports/equipment/silvarrow
 	name = "1 Silver Arrow"
 	item_type = /obj/item/ammo_casing/caseless/rogue/arrow/silver
-	maximum = 1
-	marquescost = 16
+	maximum = 3
+	marquescost = 8
 
 /datum/inqports/equipment/silvbolt
 	name = "1 Silver Bolt"
 	item_type = /obj/item/ammo_casing/caseless/rogue/bolt/silver
-	maximum = 1
-	marquescost = 16
+	maximum = 3
+	marquescost = 8
 
 /datum/inqports/equipment/silvheavybolt
 	name = "1 Silver Heavy Bolt"
 	item_type = /obj/item/ammo_casing/caseless/rogue/heavy_bolt/silver
-	maximum = 1
-	marquescost = 16
+	maximum = 3
+	marquescost = 8
 
 /datum/inqports/supplies/blessedbolts
 	name = "1 Quiver of Sunderbolts"
@@ -320,6 +314,11 @@
 	name = "1 Pair of Nocshade-Lenses"
 	item_type = /obj/item/clothing/mask/rogue/spectacles/inq
 	marquescost = 12
+
+/datum/inqports/equipment/climbinggear
+	name = "1 Set of Climbing Gear"
+	item_type = /obj/item/clothing/climbing_gear
+	marquescost = 6
 
 /datum/inqports/equipment/garrote
 	name = "1 Seizing Garrote"
@@ -400,9 +399,14 @@
 	marquescost = 16
 
 /datum/inqports/wardrobe/otavansatchel
-	name = "1 Otavan Leather Satchel"
+	name = "1 Satchel, Otavan Leather"
 	item_type = /obj/item/storage/backpack/rogue/satchel/otavan
-	marquescost = 4
+	marquescost = 3
+
+/datum/inqports/wardrobe/otavansatchel
+	name = "1 Satchel, Belted"
+	item_type = /obj/item/storage/backpack/rogue/satchel/beltpack
+	marquescost = 6
 
 /datum/inqports/wardrobe/psysack
 	name = "1 Psydonian Facemask"
