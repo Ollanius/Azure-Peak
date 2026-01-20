@@ -1,7 +1,7 @@
 /datum/advclass/heartfelthand
 	name = "Hand of Heartfelt"
-	tutorial = "You serve your lord as the royal hand, taking care of all diplomatic actions in your relm. \
-	maybe one day you will become lord too."
+	tutorial = "You serve the Lord of Heartfelt as their royal hand, taking care of all diplomatic actions in your realm. \
+	maybe one day you will become Lord, too."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = ACCEPTED_RACES
 	outfit = /datum/outfit/job/roguetown/adventurer/heartfelthand
@@ -37,7 +37,7 @@
 	armor = /obj/item/clothing/suit/roguetown/armor/heartfelt/hand
 	neck = /obj/item/storage/belt/rogue/pouch/coins/rich
 	gloves =/obj/item/clothing/gloves/roguetown/angle
-	beltl = /obj/item/rogueweapon/scabbard/sword
+	beltl = /obj/item/rogueweapon/scabbard/sword/royal
 	l_hand = /obj/item/rogueweapon/sword/sabre/dec
 	beltr = /obj/item/rogueweapon/huntingknife
 	backr = /obj/item/storage/backpack/rogue/satchel/heartfelt
