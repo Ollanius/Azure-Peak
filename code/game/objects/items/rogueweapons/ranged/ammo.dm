@@ -148,7 +148,7 @@
 	projectile_type = /obj/projectile/bullet/reusable/heavy_bolt/aalloy
 	color = "#bb9696"
 
-/obj/projectile/bullet/reusable/heavy_bolt/alloy
+/obj/projectile/bullet/reusable/heavy_bolt/aalloy
 	name = "decrepit heavy bolt"
 	damage = 90 
 	embedchance = 50
@@ -379,7 +379,7 @@
 /obj/item/ammo_casing/caseless/rogue/heavy_bolt/silver
 	name = "heavy silver bolt"
 	desc = "A silvered lance, poised to impale the unimaginable. You feel the hands of another guiding your own, as you prepare to load; may it be guidence from a higher power, or your wit upon the verge of breaking? </br>'God, please..'"
-	projectile_type = /obj/projectile/bullet/reusable/heavy_bolt/holy
+	projectile_type = /obj/projectile/bullet/reusable/heavy_bolt/silver
 	icon_state = "silvheavybolt"
 	max_integrity = 30
 	force = 12
@@ -389,7 +389,7 @@
 	name = "heavy silver bolt"
 	damage = 120
 	armor_penetration = 100 //Same damage, but with absolute penetration. 
-	ammo_type = /obj/item/ammo_casing/caseless/rogue/heavy_bolt/holy
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/heavy_bolt/silver
 	icon_state = "silvheavybolt_proj"
 	hitsound = 'sound/combat/hits/hi_bolt (3).ogg'
 	speed = 0.5
