@@ -204,7 +204,7 @@
 /datum/crafting_recipe/roguetown/engineering/heavycrossbow
 	name = "siegebow with heavy bolt pouch"
 	category = "Weapons"
-	result = list(/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy
+	result = list(/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy,
 						/obj/item/quiver/bolt/heavy,
 					)
 	reqs = list(/obj/item/roguegear = 2, /obj/item/ingot/steel = 2, /obj/item/natural/fibers = 4, /obj/item/natural/wood/plank = 4, /obj/item/natural/hide/cured = 2)
