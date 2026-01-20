@@ -332,7 +332,7 @@
 	to_chat(user, span_notice("I begin to gather the ammunition..."))
 	for(var/obj/item/ammo_casing/caseless/rogue/heavy_bolt in T.contents)
 		if(do_after(user, 5))
-			if(!eatarrow(heavybolt))
+			if(!eatarrow(heavy_bolt))
 				break
 
 /obj/item/quiver/bolt/heavy/attackby(obj/A, loc, params)
