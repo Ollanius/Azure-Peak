@@ -51,6 +51,12 @@
 		return FALSE
 	if(istype(I, /obj/item/clothing/head/roguetown/circlet/triumph))
 		return FALSE
+	if(istype(I, /obj/item/clothing/mask/rogue/lordmask/triumph))
+		return FALSE
+	if(istype(I, /obj/item/clothing/mask/rogue/facemask/goldmask/triumph))
+		return FALSE
+	if(istype(I, /obj/item/clothing/mask/rogue/facemask/goldmaskc/triumph))
+		return FALSE
 	if(istype(I, /obj/item/rogueweapon/scabbard))
 		return FALSE // If you have to sell your decorated scabbards for ozium-money, you'll have to barter.
 	if(I.get_real_price() > 0)
