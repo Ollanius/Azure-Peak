@@ -201,6 +201,12 @@
 		arrows += A
 	update_icon()
 
+/obj/item/quiver/silver/Initialize()
+	..()
+	for(var/i in 1 to max_storage)
+		var/obj/item/ammo_casing/caseless/rogue/arrow/silver/A = new()
+		arrows += A
+	update_icon()
 
 ////////////
 // BOLTS  //
@@ -211,7 +217,7 @@
 	desc = "A leather canister that can be used to carry bolts. Smaller, sleeker, yet nevertheless spacious enough to pack enough ammunition for a full nite's hunt."
 	icon_state = "boltpouch0"
 	item_state = "boltpouch"
-	max_storage = 20
+	max_storage = 16
 	sellprice = 10
 
 /obj/item/quiver/bolt/attack_turf(turf/T, mob/living/user)
@@ -263,6 +269,48 @@
 	..()
 	for(var/i in 1 to max_storage)
 		var/obj/item/ammo_casing/caseless/rogue/bolt/A = new()
+		arrows += A
+	update_icon()
+
+/obj/item/quiver/bolt/paalloy/Initialize()
+	..()
+	for(var/i in 1 to max_storage)
+		var/obj/item/ammo_casing/caseless/rogue/bolt/paalloy/A = new()
+		arrows += A
+	update_icon()
+
+/obj/item/quiver/bolt/blunt/Initialize()
+	..()
+	for(var/i in 1 to max_storage)
+		var/obj/item/ammo_casing/caseless/rogue/bolt/blunt/A = new()
+		arrows += A
+	update_icon()
+
+/obj/item/quiver/bolt/holy/Initialize()
+	..()
+	for(var/i in 1 to max_storage)
+		var/obj/item/ammo_casing/caseless/rogue/bolt/holy/A = new()
+		arrows += A
+	update_icon()
+
+/obj/item/quiver/bolt/pyro/Initialize()
+	..()
+	for(var/i in 1 to max_storage)
+		var/obj/item/ammo_casing/caseless/rogue/bolt/pyro/A = new()
+		arrows += A
+	update_icon()
+
+/obj/item/quiver/bolt/water/Initialize()
+	..()
+	for(var/i in 1 to max_storage)
+		var/obj/item/ammo_casing/caseless/rogue/bolt/water/A = new()
+		arrows += A
+	update_icon()
+
+/obj/item/quiver/bolt/silver/Initialize()
+	..()
+	for(var/i in 1 to max_storage)
+		var/obj/projectile/bullet/reusable/bolt/silver/A = new()
 		arrows += A
 	update_icon()
 
@@ -326,7 +374,28 @@
 /obj/item/quiver/bolt/heavy/standard/Initialize()
 	..()
 	for(var/i in 1 to max_storage)
-		var/obj/item/ammo_casing/caseless/rogue/heavy_boltA = new()
+		var/obj/item/ammo_casing/caseless/rogue/heavy_bolt/A = new()
+		arrows += A
+	update_icon()
+
+/obj/item/quiver/bolt/heavy/aalloy/Initialize()
+	..()
+	for(var/i in 1 to max_storage)
+		var/obj/item/ammo_casing/caseless/rogue/heavy_bolt/aalloy/A = new()
+		arrows += A
+	update_icon()
+
+/obj/item/quiver/bolt/heavy/paalloy/Initialize()
+	..()
+	for(var/i in 1 to max_storage)
+		var/obj/item/ammo_casing/caseless/rogue/heavy_bolt/paalloy/A = new()
+		arrows += A
+	update_icon()
+
+/obj/item/quiver/bolt/heavy/silver/Initialize()
+	..()
+	for(var/i in 1 to max_storage)
+		var/obj/item/ammo_casing/caseless/rogue/heavy_bolt/silver/A = new()
 		arrows += A
 	update_icon()
 
