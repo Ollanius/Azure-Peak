@@ -172,7 +172,7 @@
 				armor = /obj/item/clothing/suit/roguetown/armor/brigandine/light	// find a smithy to fix it
 			if("Studded Leather Vest")
 				armor = /obj/item/clothing/suit/roguetown/armor/leather/studded		// or maintain it yourself!
-		var/weapons = list("Crossbow & 20 Bolts","Siegebow & 8 Heavy Bolts")
+		var/weapons = list("Crossbow & 20 Bolts","Heavy Crossbow & 8 Heavy Bolts")
 		var/weapon_choice = input(H, "Choose your weapon.", "RENOCK AND REBOLT") as anything in weapons
 		switch(weapon_choice)
 			if("Crossbow & 20 Bolts")
