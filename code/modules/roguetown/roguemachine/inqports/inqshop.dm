@@ -1,17 +1,17 @@
 /datum/inqports/reliquary/
-	category = 1 // Category for the HERMES. They are - "✤ SUPPLIES ✤", "✤ ARTICLES ✤", ✤ RELIQUARY ✤, "✤ WARDROBE ✤", "✤ EQUIPMENT ✤".
+	category = 1 // Category for the HERMES. They are - "✤ SUPPLIES ✤", "✤ ARTICLES ✤", "✤ RELIQUARY ✤", "✤ WARDROBE ✤", "✤ EQUIPMENT ✤".
 
 /datum/inqports/supplies/
-	category = 2  // Category for the HERMES. They are - "✤ SUPPLIES ✤", "✤ ARTICLES ✤", ✤ RELIQUARY ✤, "✤ WARDROBE ✤", "✤ EQUIPMENT ✤".
+	category = 2  // Category for the HERMES. They are - "✤ SUPPLIES ✤", "✤ ARTICLES ✤", "✤ RELIQUARY ✤", "✤ WARDROBE ✤", "✤ EQUIPMENT ✤".
 
 /datum/inqports/articles/
-	category = 3  // Category for the HERMES. They are - "✤ SUPPLIES ✤", "✤ ARTICLES ✤", ✤ RELIQUARY ✤, "✤ WARDROBE ✤", "✤ EQUIPMENT ✤".
+	category = 3  // Category for the HERMES. They are - "✤ SUPPLIES ✤", "✤ ARTICLES ✤", "✤ RELIQUARY ✤", "✤ WARDROBE ✤", "✤ EQUIPMENT ✤".
 
 /datum/inqports/equipment/
-	category = 4 // Category for the HERMES. They are - "✤ SUPPLIES ✤", "✤ ARTICLES ✤", ✤ RELIQUARY ✤, "✤ WARDROBE ✤", "✤ EQUIPMENT ✤".
+	category = 4 // Category for the HERMES. They are - "✤ SUPPLIES ✤", "✤ ARTICLES ✤", "✤ RELIQUARY ✤", "✤ WARDROBE ✤", "✤ EQUIPMENT ✤".
 
 /datum/inqports/wardrobe/
-	category = 5 // Category for the HERMES. They are - "✤ SUPPLIES ✤", "✤ ARTICLES ✤", ✤ RELIQUARY ✤, "✤ WARDROBE ✤", "✤ EQUIPMENT ✤".
+	category = 5 // Category for the HERMES. They are - "✤ SUPPLIES ✤", "✤ ARTICLES ✤", "✤ RELIQUARY ✤", "✤ WARDROBE ✤", "✤ EQUIPMENT ✤".
 
 
 /obj/structure/closet/crate/chest/inqcrate/supplies/
@@ -66,6 +66,7 @@
 	. = ..()
 	new /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy(src)
 	new /obj/item/quiver/bolt/heavy/standard(src)
+	new /obj/item/ammo_casing/caseless/rogue/heavy_bolt/silver(src)
 
 /// ✤ SUPPLIES ✤ START HERE! WOW!
 
@@ -162,7 +163,7 @@
 /datum/inqports/supplies/lifebloodvials
 	name = "3 Vials of Strong Lifeblood"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/sredvials
-	maximum = 3
+	maximum = 2
 	marquescost = 8
 
 /obj/structure/closet/crate/chest/inqcrate/supplies/sredvials/Initialize()
@@ -174,7 +175,7 @@
 /datum/inqports/supplies/strongbluevials
 	name = "3 Vials of Strong Manna"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/sbluevials
-	maximum = 3
+	maximum = 2
 	marquescost = 8
 
 /obj/structure/closet/crate/chest/inqcrate/supplies/sbluevials/Initialize()
@@ -198,7 +199,7 @@
 	name = "3 Bottlebombs"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/bottlebombs
 	marquescost = 8
-	maximum = 3
+	maximum = 2
 
 /obj/structure/closet/crate/chest/inqcrate/supplies/bottlebombs/Initialize()
 	. = ..()
@@ -305,7 +306,7 @@
 	marquescost = 16
 
 /datum/inqports/equipment/silvheavybolt
-	name = "1 Heavy Silver Bolt"
+	name = "1 Silver Heavy Bolt"
 	item_type = /obj/item/ammo_casing/caseless/rogue/heavy_bolt/silver
 	maximum = 1
 	marquescost = 16
@@ -397,12 +398,6 @@
 	item_type = /obj/item/clothing/neck/roguetown/psicross/silver
 	maximum = 3
 	marquescost = 16
-
-/datum/inqports/wardrobe/psycrossgold
-	name = "1 Golden Psycross"
-	item_type = /obj/item/clothing/neck/roguetown/psicross/g
-	maximum = 1
-	marquescost = 24
 
 /datum/inqports/wardrobe/otavansatchel
 	name = "1 Otavan Leather Satchel"
@@ -511,7 +506,7 @@
 /datum/inqports/wardrobe/nobledressup
 	name = "The 'Cost Of Nobility' Crate"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/wardrobe/nobledressup
-	marquescost = 18
+	marquescost = 20
 
 /obj/structure/closet/crate/chest/inqcrate/wardrobe/nobledressup/Initialize()
 	. = ..()
@@ -521,3 +516,5 @@
 	new /obj/item/clothing/suit/roguetown/shirt/dress/royal(src)
 	new /obj/item/clothing/wrists/roguetown/royalsleeves(src)
 	new /obj/item/clothing/suit/roguetown/shirt/dress/royal/prince(src)
+	new /obj/item/clothing/neck/roguetown/psicross/g(src)
+	new /obj/item/clothing/neck/roguetown/psicross/g(src)
