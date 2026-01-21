@@ -119,7 +119,7 @@
 
 /obj/item/clothing/wrists/roguetown/bracers/bronze
 	name = "bronze wristguards"
-	desc = "A pair of bronze-plated bracers, fastened with leather and clasped around the forearms. Your fingers tingle with an unfamiliar purpose, as they graze across the marred surface."
+	desc = "Padded with hide and cuffed to comfort the joints, these bronze plates fit perfectly around both forearms. Your fingers tingle with an unspoken purpose, as the bracers clasp into place; primordial, yet everclear."
 	icon_state = "bronzebracers"
 	smeltresult = /obj/item/ingot/bronze
 	armor = ARMOR_PLATE_BAD
