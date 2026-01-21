@@ -468,7 +468,7 @@
 /obj/item/clothing/neck/roguetown/psicross/inhumen/bronze
 	name = "bronze inverted psycross"
 	desc = "'Look upon mine works, thee-mighty, and despair!'"
-	icon_state = "zcross_bronze"
+	icon_state = "zcross_b"
 	resistance_flags = FIRE_PROOF
 	sellprice = 25
 
