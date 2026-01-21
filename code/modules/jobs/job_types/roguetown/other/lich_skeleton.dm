@@ -132,22 +132,28 @@ LICH SKELETONS
 
 	beltr = /obj/item/rogueweapon/huntingknife/idagger/steel/padagger
 	H.adjust_blindness(-3)
-	var/weapons = list("Recurve Bow","Yew Longbow", "Crossbow", "Sling")
+	var/weapons = list("Bow & 20 Arrows", "Heavy Longbow & 20 Arrows", "Crossbow & 16 Bolts", "Heavy Crossbow & 8 Siegebolts", "Sling")
 	var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)
 	switch(weapon_choice)
-		if("Recurve Bow")
+		if("Bow & 20 Arrows")
 			l_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve
 			beltl = /obj/item/quiver/paalloy
 			H.adjust_skillrank(/datum/skill/combat/bows, 1, TRUE)
-		if("Crossbow")
-			l_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/aalloy
-			beltl = /obj/item/quiver/bolts/paalloy
-			H.adjust_skillrank(/datum/skill/combat/crossbows, 1, TRUE)
-		if("Yew Longbow")
+		if("Heavy Longbow & 20 Arrows")
 			l_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/longbow
 			beltl = /obj/item/quiver/paalloy
 			H.adjust_skillrank(/datum/skill/combat/bows, 1, TRUE)
+		if("Crossbow & 16 Bolts")
+			l_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
+			beltl = /obj/item/quiver/bolt/paalloy
+			H.adjust_skillrank(/datum/skill/combat/crossbows, 1, TRUE)
+		if("Heavy Crossbow & 8 Siegebolts")
+			l_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy
+			beltl = /obj/item/quiver/bolt/heavy/paalloy
+			H.adjust_skillrank(/datum/skill/combat/crossbows, 1, TRUE)
+			H.change_stat(STATKEY_STR, 2) //Without any statpack or racial modifier, this meets the bare minimum for using the Siegebow as a melee weapon.
+			H.change_stat(STATKEY_SPD, -3) //Minimum strength required to effectively use the Siegebow. Heavily reduced speed to denote their nature as high-profile targets.
 		if("Sling")
 			l_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/sling
 			beltl = /obj/item/quiver/sling/paalloy
