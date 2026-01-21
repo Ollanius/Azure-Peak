@@ -82,7 +82,7 @@
 /datum/anvil_recipe/valuables/statuebronze
 	name = "Statue, Bronze"
 	req_bar = /obj/item/ingot/bronze
-	created_item = /obj/item/clothing/ring/bronze/statue
+	created_item = /obj/item/roguestatue/bronze
 	craftdiff = SKILL_LEVEL_JOURNEYMAN
 
 /datum/anvil_recipe/valuables/ringg
