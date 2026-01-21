@@ -83,6 +83,23 @@
 	body_parts_covered = HEAD|HAIR|EARS
 	armor = ARMOR_PLATE
 
+/obj/item/clothing/head/roguetown/helmet/kettle/aalloy
+	name = "decrepit kettle helmet"
+	desc = "A frayed, bronze helmet which protects the top and sides of the head. Atop a resurrected levyman's scalp, it's a sign that forces-most-foul are soon to besiege; and atop a fleshless ballistaeman's skull, it's a sign that you should probably duck."
+	icon_state = "ancientkettle"
+	body_parts_covered = HEAD|HAIR|EARS
+	color = "#bb9696"
+	chunkcolor = "#532e25"
+	smeltresult = /obj/item/ingot/aaslag
+	anvilrepair = null
+	prevent_crits = PREVENT_CRITS_NONE
+
+/obj/item/clothing/head/roguetown/helmet/kettle/paalloy
+	name = "ancient kettle helmet"
+	desc = "A polished gilbranze helmet which protects the top and sides of the head. Zizo's glare musn't be interceded, when matters of unholy war are at hand. Undead ballistaemen practice a curious method of tying dyed cloth around its rim; can they, too, think and associate?"
+	icon_state = "ancientkettle"
+	body_parts_covered = HEAD|HAIR|EARS
+
 /obj/item/clothing/head/roguetown/helmet/kettle/iron
 	name = "iron kettle helmet"
 	desc = "An iron helmet which protects the top and sides of the head. From a distance, it can almost be mistaken for a waterlogged straw hat; one must only wonder if such garments of peasantry inspired its design, in the first place."
