@@ -117,6 +117,15 @@
 	icon_state = "ancientbracers"
 	smeltresult = /obj/item/ingot/aaslag
 
+/obj/item/clothing/wrists/roguetown/bracers/bronze
+	name = "bronze wristguards"
+	desc = "A pair of bronze-plated bracers, fastened with leather and clasped around the forearms. Your fingers tingle with an unfamiliar purpose, as they graze across the marred surface."
+	icon_state = "bronzebracers"
+	smeltresult = /obj/item/ingot/bronze
+	armor = ARMOR_PLATE_BAD
+	max_integrity = ARMOR_INT_SIDE_BRONZE
+	prevent_crits = PREVENT_CRITS_ALL
+
 /obj/item/clothing/wrists/roguetown/bracers/leather
 	name = "leather bracers"
 	desc = "A pair of leather wristguards, which can protect one's arms from both bludgeons and bites."
