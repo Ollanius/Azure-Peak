@@ -206,7 +206,7 @@ LICH SKELETONS
 	var/weapons = list("Greatsword", "Bardiche", "Grand Mace", "Mace + Shield","Spear", "Warhammer + Shield")
 	var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)
-	switch(weapon_choice) /obj/item/clothing/head/roguetown/helmet/heavy/knight/paalloy
+	switch(weapon_choice)
 		if("Greatsword")
 			r_hand = /obj/item/rogueweapon/greatsword/paalloy
 			H.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
