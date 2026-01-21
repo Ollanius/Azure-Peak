@@ -152,11 +152,11 @@
 	range = 30
 	hitsound = 'sound/combat/hits/hi_bolt (2).ogg'
 	embedchance = 100
-	demolition_mod = 2
+	demolition_mod = 3 //..or 360 damage against most structures. This should destroy most barricades, up to palisades and chest-high railings, with a single shot.
 	woundclass = BCLASS_PIERCE
 	flag = "piercing"
 	speed = 0.3
-	npc_simple_damage_mult = 3 //..or 360 damage. See them put down.
+	npc_simple_damage_mult = 3 //..or 360 damage against mindless opponents. Run them through!
 
 /obj/item/ammo_casing/caseless/rogue/heavy_bolt/aalloy
 	name = "decrepit heavy bolt"
