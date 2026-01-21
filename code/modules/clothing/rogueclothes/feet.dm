@@ -288,6 +288,16 @@
 	max_integrity = ARMOR_INT_SIDE_GOLDPLUS // Doubled integrity.
 	sellprice = 300
 
+/obj/item/clothing/shoes/roguetown/boots/armor/bronze
+	name = "bronze greaves"
+	desc = "Hefty sabatons of bronze, adorned with angled greaves and nestled atop a pair of flat-boarded sandals. Hold your ground against whatever may yet come, lest you be swept away in the tides-to-be."
+	icon_state = "bronzegreaves"
+	body_parts_covered = FEET | LEGS
+	smeltresult = /obj/item/ingot/bronze
+	armor = ARMOR_PLATE_BAD
+	max_integrity = ARMOR_INT_SIDE_BRONZE
+	prevent_crits = PREVENT_CRITS_ALL
+
 /obj/item/clothing/shoes/roguetown/boots/armor/graggar
 	name = "vicious boots"
 	desc = "Fluted sabatons, dusted with the bonedust of a thousand crushed skulls. Spit this final act, thine embodiment of sin - why would you ever want for something else, when you are God?"
