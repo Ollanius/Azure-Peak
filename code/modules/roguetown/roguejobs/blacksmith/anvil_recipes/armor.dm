@@ -103,10 +103,21 @@
 	req_bar = /obj/item/ingot/aalloy
 	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/guard/aalloy
 
+/datum/anvil_recipe/armor/aalloy/bascinet
+	name = "Bascinet, Decrepit (+1 Alloy)"
+	req_bar = /obj/item/ingot/aalloy
+	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/knight/aalloy
+
 /datum/anvil_recipe/armor/paalloy/savoyard
 	name = "Savoyard, Ancient (+1 Purified Alloy)"
 	req_bar = /obj/item/ingot/purifiedaalloy
 	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/guard/paalloy
+	additional_items = list(/obj/item/ingot/purifiedaalloy)
+
+/datum/anvil_recipe/armor/paalloy/bascinet
+	name = "Bascinet, Ancient (+1 Purified Alloy)"
+	req_bar = /obj/item/ingot/purifiedaalloy
+	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/knight/paalloy
 	additional_items = list(/obj/item/ingot/purifiedaalloy)
 
 /datum/anvil_recipe/armor/aalloy/mask
@@ -268,6 +279,12 @@
 	req_bar = /obj/item/ingot/bronze
 	additional_items = list(/obj/item/natural/hide/cured)
 	created_item = /obj/item/clothing/shoes/roguetown/boots/armor/bronze
+
+/datum/anvil_recipe/armor/bronze/skirt
+	name = "Chainskirt, Bronze (+1 Cured Leather)"
+	req_bar = /obj/item/ingot/bronze
+	additional_items = list(/obj/item/natural/hide/cured)
+	created_item = /obj/item/clothing/under/roguetown/heavy_leather_pants/bronzeskirt
 
 // IRON
 
