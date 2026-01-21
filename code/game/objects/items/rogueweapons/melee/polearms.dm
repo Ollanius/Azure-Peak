@@ -1091,18 +1091,6 @@
 	smeltresult = /obj/item/ingot/blacksteel
 	smelt_bar_num = 2 // Okay you CAN get a refund on the blacksteel
 
-/obj/item/rogueweapon/greatsword/grenz/flamberge/blacksteel/getonmobprop(tag)
-	if(tag)
-		switch(tag)
-			if("gen")
-				return list("shrink" = 0.47,"sx" = -10,"sy" = -6,"nx" = 8,"ny" = -4,"wx" = -8,"wy" = -6,"ex" = 7,"ey" = -7,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -70,"sturn" = -83,"wturn" = -69,"eturn" = 60,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
-			if("wielded")
-				return list("shrink" = 0.45,"sx" = 9,"sy" = -4,"nx" = -7,"ny" = 1,"wx" = -9,"wy" = 2,"ex" = 10,"ey" = 2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 5,"sturn" = -190,"wturn" = -170,"eturn" = -10,"nflip" = 8,"sflip" = 8,"wflip" = 1,"eflip" = 0)
-			if("onback")
-				return list("shrink" = 0.47,"sx" = -1,"sy" = 3,"nx" = -1,"ny" = 2,"wx" = 3,"wy" = 4,"ex" = -1,"ey" = 5,"nturn" = 0,"sturn" = 0,"wturn" = 70,"eturn" = 20,"nflip" = 5,"sflip" = 1,"wflip" = 1,"eflip" = 1,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0)
-			if("altgrip") 
-				return list("shrink" = 0.45,"sx" = 2,"sy" = 3,"nx" = -7,"ny" = 1,"wx" = -8,"wy" = 0,"ex" = 8,"ey" = -1,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -135,"sturn" = -35,"wturn" = 45,"eturn" = 145,"nflip" = 8,"sflip" = 8,"wflip" = 1,"eflip" = 0)
-
 /obj/item/rogueweapon/greatsword/silver
 	name = "silver greatsword"
 	desc = "A greatsword with a massive blade of pure silver. Such is favored amongst the Order of Syonica's paladins: a faith-militance that seeks to safeguard those who've taken pilgrimage towards Azuria. </br>'There is no fate, but what we make for ourselves. It is not the will of gods that will determine Psydonia's fate.. but instead, the hope of its children.'"
