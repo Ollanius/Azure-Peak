@@ -979,8 +979,7 @@
 /obj/item/rogueweapon/sword/short/gladius/decorated
 	name = "decorated gladius"
 	desc = "A beautiful depiction of justice, beflowered and besilked. The crimson engravings along its blade pay tribute to the ancient epics of Ravox's ascent to godlihood; for it was His wounding of the Sinistar's tentacled heart that forced the Archdevil to pause - first in disbelief, then in fascination."
-	icon_state = "gladius"
-	sheathe_icon = "gladius"
+	icon_state = "gladiusdec"
 	max_integrity = 250
 	smeltresult = /obj/item/ingot/gold
 	sellprice = 100
