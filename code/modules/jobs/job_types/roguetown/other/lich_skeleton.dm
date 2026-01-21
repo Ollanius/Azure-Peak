@@ -206,7 +206,7 @@ LICH SKELETONS
 	var/weapons = list("Greatsword", "Bardiche", "Grand Mace", "Mace + Shield","Spear", "Warhammer + Shield")
 	var/weapon_choice = input(H, "Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)
-	switch(weapon_choice)
+	switch(weapon_choice) /obj/item/clothing/head/roguetown/helmet/heavy/knight/paalloy
 		if("Greatsword")
 			r_hand = /obj/item/rogueweapon/greatsword/paalloy
 			H.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
@@ -227,6 +227,17 @@ LICH SKELETONS
 			l_hand = /obj/item/rogueweapon/shield/wood
 			H.adjust_skillrank(/datum/skill/combat/maces, 1, TRUE)
 			H.adjust_skillrank(/datum/skill/combat/shields, 1, TRUE)
+	var/armors = list("Sayovard + Cuirass & Hauberk", "Bascinet + Heavy Hauberk")
+	var/armor_choice = input(H, "Choose your armor.", "TAKE UP ARMOR") as anything in armors
+	switch(armor_choice)
+		if("Sayovard + Cuirass & Hauberk")
+			head = /obj/item/clothing/head/roguetown/helmet/heavy/guard/paalloy
+			shirt = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/paalloy
+			armor = /obj/item/clothing/suit/roguetown/armor/plate/cuirass/paalloy
+		if("Bascinet + Heavy Hauberk")
+			head = /obj/item/clothing/head/roguetown/helmet/heavy/knight/paalloy
+			shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/light
+			armor = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/paalloy/heavy
 
 	H.energy = H.max_energy
 
