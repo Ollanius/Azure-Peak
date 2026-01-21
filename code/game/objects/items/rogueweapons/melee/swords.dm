@@ -2078,8 +2078,8 @@
 	icon_state = "bs_sword"
 	sheathe_icon = "bs_sword"
 	smeltresult = /obj/item/ingot/blacksteel
-	force = 30
-	force_wielded = 35
+	force = 25
+	force_wielded = 30
 	wdefense = 6
 	max_integrity = 350
 	max_blade_int = 350
@@ -2090,8 +2090,8 @@
 	desc = "A broad blade of blacksteel, mounted atop a golden sabreguard that's been meticulously engraved with its commissoner's heraldry. It is a masterwork of unmatched opulance and lethality, and - perhaps - is the finest arming sword your eyes'll ever lay upon."
 	icon_state = "bs_swordregal"
 	sheathe_icon = "bs_swordregal"
-	force = 30
-	force_wielded = 35
+	force = 25
+	force_wielded = 30
 	wdefense = 7
 	smeltresult = /obj/item/ingot/blacksteel
 	max_integrity = 350

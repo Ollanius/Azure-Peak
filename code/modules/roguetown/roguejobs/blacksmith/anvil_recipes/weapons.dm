@@ -68,7 +68,6 @@
 	req_bar = /obj/item/ingot/aalloy
 	created_item = /obj/item/rogueweapon/huntingknife/idagger/adagger
 
-
 /datum/anvil_recipe/weapons/paalloy/dagger
 	name = "Dagger, Ancient"
 	req_bar = /obj/item/ingot/purifiedaalloy
@@ -88,7 +87,6 @@
 	name = "Gladius, Decrepit"
 	req_bar = /obj/item/ingot/aalloy
 	created_item = /obj/item/rogueweapon/sword/short/gladius/agladius
-
 
 /datum/anvil_recipe/weapons/paalloy/gladius
 	name = "Gladius, Ancient"
@@ -129,7 +127,6 @@
 	name = "Mace, Decrepit"
 	req_bar = /obj/item/ingot/aalloy
 	created_item = /obj/item/rogueweapon/mace/alloy
-
 
 /datum/anvil_recipe/weapons/paalloy/mace
 	name = "Mace, Ancient"
@@ -271,6 +268,11 @@
 	req_bar = /obj/item/ingot/bronze
 	created_item = /obj/item/rogueweapon/knuckles/bronzeknuckles
 
+/datum/anvil_recipe/weapons/bronze/dagger
+	name = "Dagger, Bronze"
+	req_bar = /obj/item/ingot/bronze
+	created_item = /obj/item/rogueweapon/huntingknife/bronze
+
 /datum/anvil_recipe/weapons/bronze/gladius
 	name = "Gladius, Bronze"
 	req_bar = /obj/item/ingot/bronze
@@ -291,10 +293,23 @@
 	req_bar = /obj/item/ingot/bronze
 	created_item = /obj/item/rogueweapon/mace/bronze
 
-/datum/anvil_recipe/weapons/bronze/dagger
-	name = "Dagger, Bronze"
+/datum/anvil_recipe/weapons/bronze/flail
+	name = "Flail, Bronze (+1 Bronze)"
 	req_bar = /obj/item/ingot/bronze
-	created_item = /obj/item/rogueweapon/huntingknife/bronze
+	additional_items = list(/obj/item/ingot/bronze)
+	created_item = /obj/item/rogueweapon/flail/bronze
+
+/datum/anvil_recipe/weapons/bronze/warclub
+	name = "Warclub, Bronze (+1 Small Log)"
+	req_bar = /obj/item/ingot/bronze
+	additional_items = list(/obj/item/grown/log/tree/small)
+	created_item = /obj/item/rogueweapon/mace/warhammer/bronze
+
+/datum/anvil_recipe/weapons/bronze/khopesh
+	name = "Khopesh, Bronze (+1 Bronze, +1 Small Log)"
+	req_bar = /obj/item/ingot/bronze
+	additional_items = list(/obj/item/ingot/bronze, /obj/item/grown/log/tree/small)
+	created_item = /obj/item/rogueweapon/sword/sabre/bronzekhopesh
 
 /datum/anvil_recipe/weapons/bronze/whip
 	name = "Whip, Bronze-Tipped (+3 Cured Leather)"
@@ -775,6 +790,18 @@
 	additional_items = list(/obj/item/rogueweapon/sword/long)
 	created_item = /obj/item/rogueweapon/sword/long/dec
 
+/datum/anvil_recipe/weapons/decorated/gladius
+	name = "Gladius, Decorated (+1 Bronze Gladius)"
+	req_bar = /obj/item/ingot/gold
+	additional_items = list(/obj/item/rogueweapon/sword/short/gladius)
+	created_item = /obj/item/rogueweapon/sword/short/gladius/decorated
+
+/datum/anvil_recipe/weapons/decorated/warclub
+	name = "Warclub, Decorated (+1 Bronze Warclub)"
+	req_bar = /obj/item/ingot/gold
+	additional_items = list(/obj/item/rogueweapon/mace/warhammer/bronze)
+	created_item = /obj/item/rogueweapon/mace/warhammer/bronze/decorated
+
 /datum/anvil_recipe/weapons/decorated/elfsaber
 	name = "Elegant Sabre, Elvish (+3 Silver)"
 	req_bar = /obj/item/ingot/gold
@@ -1088,25 +1115,6 @@
 	created_item = /obj/item/rogueweapon/sword/long/exe/berserk
 	i_type = "Weapons"
 
-// BLACKSTEEL
-
-/datum/anvil_recipe/weapons/blacksteel/arming
-	name = "Blacksteel Arming Sword"
-	req_bar = /obj/item/ingot/blacksteel
-	created_item = /obj/item/rogueweapon/sword/blacksteel
-
-/datum/anvil_recipe/weapons/blacksteel/decsword
-	name = "Blacksteel Arming Sword, Decorated (+1 Steel Arming Sword, +1 Gold)"
-	req_bar = /obj/item/ingot/blacksteel
-	additional_items = list(/obj/item/rogueweapon/sword, /obj/item/ingot/gold)
-	created_item = /obj/item/rogueweapon/sword/decorated/blacksteel
-
-/datum/anvil_recipe/weapons/blacksteel/flamberge
-	name = "Blacksteel Flamberge (+1 Blacksteel, +1 Rontz)"
-	req_bar = /obj/item/ingot/blacksteel
-	additional_items = list(/obj/item/ingot/blacksteel, /obj/item/roguegem/ruby)
-	created_item = /obj/item/rogueweapon/greatsword/grenz/flamberge/blacksteel
-
 // HOLY STEEL
 // Specifically, Church weapons made from the 'Holy Steel' ingot.
 
@@ -1305,6 +1313,26 @@
 	created_item = /obj/item/rogueweapon/whip/psywhip_lesser
 	additional_items = list(/obj/item/natural/hide/cured, /obj/item/natural/hide/cured, /obj/item/natural/hide/cured)
 	i_type = "Weapons"
+
+// BLACKSTEEL
+
+/datum/anvil_recipe/weapons/blacksteel/arming
+	name = "Blacksteel Arming Sword (+1 Silk)"
+	req_bar = /obj/item/ingot/blacksteel
+	additional_items = list(/obj/item/natural/silk)
+	created_item = /obj/item/rogueweapon/sword/blacksteel
+
+/datum/anvil_recipe/weapons/blacksteel/decsword
+	name = "Blacksteel Arming Sword, Decorated (+1 Steel Arming Sword, +1 Gold, +1 Silk)"
+	req_bar = /obj/item/ingot/blacksteel
+	additional_items = list(/obj/item/rogueweapon/sword, /obj/item/ingot/gold, /obj/item/natural/silk)
+	created_item = /obj/item/rogueweapon/sword/decorated/blacksteel
+
+/datum/anvil_recipe/weapons/blacksteel/flamberge
+	name = "Blacksteel Flamberge (+1 Blacksteel, +1 Rontz, +1 Silk)"
+	req_bar = /obj/item/ingot/blacksteel
+	additional_items = list(/obj/item/ingot/blacksteel, /obj/item/roguegem/ruby, /obj/item/natural/silk)
+	created_item = /obj/item/rogueweapon/greatsword/grenz/flamberge/blacksteel
 
 // GOLD
 
