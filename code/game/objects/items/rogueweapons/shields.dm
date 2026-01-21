@@ -465,7 +465,7 @@
 	max_integrity = 260
 	anvilrepair = /datum/skill/craft/weaponsmithing
 
-/obj/item/rogueweapon/shield/iron/getonmobprop(tag)
+/obj/item/rogueweapon/shield/bronze/getonmobprop(tag)
 	. = ..()
 	if(tag)
 		switch(tag)
