@@ -403,6 +403,16 @@
 	icon = 'icons/roguetown/weapons/tools.dmi'
 	force = 14
 
+/obj/item/rogueweapon/tongs/bronze/update_icon()
+	. = ..()
+	if(!hingot)
+		icon_state = "bronzetongs"
+	else
+		if(hott)
+			icon_state = "bronzetongsi1"
+		else
+			icon_state = "bronzetongsi0"
+
 /obj/item/rogueweapon/tongs/blacksteel
 	name = "blacksteel tongs"
 	desc = "A pair of blacksteel jaws almost certainly used as a sign of prestige."
