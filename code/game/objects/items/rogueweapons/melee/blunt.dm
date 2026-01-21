@@ -609,6 +609,29 @@
 	wdefense = 3
 	max_integrity = 200
 
+/obj/item/rogueweapon/mace/warhammer/bronze
+	force = 22
+	possible_item_intents = list(/datum/intent/mace/strike, /datum/intent/mace/smash, /datum/intent/mace/warhammer/pick)
+	gripped_intents = null
+	name = "bronze warclub"
+	desc = "The warhammer's ancestral link, carved from a weightsome log and studded with bronze. Elven natureguards carry it to both honor their forefathers, and as a way to sunder those who'd ravage Dendor's bounties without thought-or-restraint; a toss from afar turns into a sundering hurlbat."
+	icon_state = "bronzeclub"
+	wbalance = WBALANCE_HEAVY
+	throwforce = 30
+	embedding = list("embedded_pain_multiplier" = 4, "embed_chance" = 50, "embedded_fall_chance" = 20)
+	smeltresult = /obj/item/ingot/bronze
+	wdefense = 3
+	max_integrity = 180
+
+/obj/item/rogueweapon/mace/warhammer/bronze/decorated
+	name = "decorated bronze warclub"
+	desc = "Flowers, silk, and gold caress this carved-and-spiked log; a honored totem who's roots trace back to the daes before Syon's impact. Myths speak of ancient elve-and-humen alike, wielding such bronzen bludgeons against the Archdevil's rampaging hordes."
+	icon_state = "bronzeclubdec"
+	smeltresult = /obj/item/ingot/gold
+	sellprice = 100
+	wdefense = 5
+	max_integrity = 250
+
 /obj/item/rogueweapon/mace/warhammer/alloy
 	name = "decrepit warhammer"
 	desc = "A macehead of frayed bronze, spiked and perched atop a thin shaft. To see such a knightly implement abandoned to decay and neglect; that wounds the heart greater than any well-poised strike."
