@@ -183,7 +183,7 @@
 	name = "Thresher, Bronze (+1 Stick)"
 	req_bar = /obj/item/ingot/bronze
 	additional_items = list(/obj/item/grown/log/tree/stick)
-	created_item = /obj/item/rogueweapon/thresher/aalloy
+	created_item = /obj/item/rogueweapon/thresher/bronze
 	i_type = "Tools"
 
 /datum/anvil_recipe/tools/bronze/hoe
@@ -223,7 +223,7 @@
 /datum/anvil_recipe/tools/bronze/pick
 	name = "Axepick, Bronze (+1 Stick, +1 Bronze)"
 	req_bar = /obj/item/ingot/bronze
-	additional_items = list(/obj/item/grown/log/tree/stick, /obj/item/rogueweapon/sickle/bronze)
+	additional_items = list(/obj/item/grown/log/tree/stick, /obj/item/ingot/bronze)
 	created_item = /obj/item/rogueweapon/pick/bronze
 	i_type = "Tools"
 
@@ -261,11 +261,6 @@
 	req_bar = /obj/item/ingot/bronze
 	created_item = /obj/item/rogueweapon/chisel/bronze
 
-/datum/anvil_recipe/tools/bronze/blowrod
-	name = "Glass Blowing Rod"
-	req_bar = /obj/item/ingot/bronze
-	created_item = /obj/item/rogueweapon/blowrod
-
 /datum/anvil_recipe/tools/bronze/gobs
 	name = "Goblet, Bronze (x2)"
 	req_bar = /obj/item/ingot/bronze
@@ -300,6 +295,13 @@
 	req_bar = /obj/item/ingot/bronze
 	created_item = /obj/item/kitchen/spoon/bronze
 	createditem_num = 2
+
+/datum/anvil_recipe/tools/bronze/lamptern
+	name = "Lamptern, Bronze (+3 Sticks)"
+	req_bar = /obj/item/ingot/bronze
+	additional_items = list(/obj/item/grown/log/tree/stick, /obj/item/grown/log/tree/stick, /obj/item/grown/log/tree/stick)
+	created_item = /obj/item/flashlight/flare/torch/lantern/bronze
+
 
 // --------- IRON -----------
 
