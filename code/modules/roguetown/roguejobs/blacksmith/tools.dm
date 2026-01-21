@@ -216,6 +216,12 @@
 	color = "#bb9696"
 	sellprice = 15
 
+/obj/item/rogueweapon/hammer/bronze
+	name = "bronze hammer"
+	desc = "'I've been gripping this thing since before I could even walk - I didn't choose this, this is who I am. I just strike it. I don't think.' </br>'I spent my youth desperate to forge a better sword, become a more skilled smith, before I knew it..' </br>'I was old.' </br>'I don't even know what the hell I strike the iron for. But there is still one thing I like about it..' </br>'..the sparks. I like seeing sparks.. ..breathtaking, life, bursting before my eyes for just a moment..'"
+	icon_state = "hammer_bronze"
+	smeltresult = /obj/item/ingot/bronze
+	force = 24
 
 /obj/item/rogueweapon/hammer/copper
 	name = "copper hammer"
@@ -254,7 +260,6 @@
 	..()
 */
 /obj/item/rogueweapon/hammer/blacksteel
-	force = 25
 	name = "blacksteel hammer"
 	desc = "A hammer made of blacksteel, to drive even the hardest metals into submission."
 	icon = 'icons/roguetown/weapons/tools.dmi'
@@ -262,6 +267,8 @@
 	item_state = "bs_masterhammer"
 	quality = 2
 	smeltresult = /obj/item/ingot/blacksteel
+	max_integrity = 450
+	force = 28
 
 /obj/item/rogueweapon/hammer/blacksteel/getonmobprop(tag)
 	. = ..()
@@ -389,6 +396,25 @@
 		else
 			icon_state = "atongsi0"
 
+/obj/item/rogueweapon/tongs/bronze
+	name = "bronze tongs"
+	desc = "Pincers of bronze, handled of wood. Plunge into the coals without fear of burning, so that you may command alloy-and-stone to morph as you please."
+	icon_state = "bronzetongs"
+	wdefense = 6
+	smeltresult = /obj/item/ingot/bronze
+	icon = 'icons/roguetown/weapons/tools.dmi'
+	force = 14
+
+/obj/item/rogueweapon/tongs/bronze/update_icon()
+	. = ..()
+	if(!hingot)
+		icon_state = "bronzetongs"
+	else
+		if(hott)
+			icon_state = "bronzetongsi1"
+		else
+			icon_state = "bronzetongsi0"
+
 /obj/item/rogueweapon/tongs/blacksteel
 	name = "blacksteel tongs"
 	desc = "A pair of blacksteel jaws almost certainly used as a sign of prestige."
@@ -396,6 +422,7 @@
 	wdefense = 6
 	icon = 'icons/roguetown/weapons/tools.dmi'
 	smeltresult = /obj/item/ingot/blacksteel
+	force = 20
 
 /obj/item/rogueweapon/tongs/blacksteel/update_icon()
 	. = ..()
