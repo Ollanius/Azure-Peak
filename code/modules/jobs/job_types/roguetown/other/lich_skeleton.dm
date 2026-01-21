@@ -141,7 +141,7 @@ LICH SKELETONS
 			beltl = /obj/item/quiver/paalloy
 			H.adjust_skillrank(/datum/skill/combat/bows, 1, TRUE)
 		if("Crossbow")
-			l_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
+			l_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/aalloy
 			beltl = /obj/item/quiver/bolts/paalloy
 			H.adjust_skillrank(/datum/skill/combat/crossbows, 1, TRUE)
 		if("Yew Longbow")
@@ -271,6 +271,6 @@ LICH SKELETONS
 	backl = /obj/item/storage/backpack/rogue/satchel
 
 	beltr = /obj/item/rogueweapon/stoneaxe/woodcut
-	beltl = /obj/item/rogueweapon/pick/copper
+	beltl = /obj/item/rogueweapon/pick/paalloy
 
 	H.energy = H.max_energy

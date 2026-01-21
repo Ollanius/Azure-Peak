@@ -54,6 +54,37 @@
 	created_item = /obj/item/clothing/neck/roguetown/psicross/inhumen/graggar
 	craftdiff = 1
 
+/datum/anvil_recipe/valuables/ringb
+	name = "Rings, Bronze (x2)"
+	req_bar = /obj/item/ingot/bronze
+	created_item = /obj/item/clothing/ring/bronze
+	craftdiff = SKILL_LEVEL_JOURNEYMAN
+	createditem_num = 2
+
+/datum/anvil_recipe/valuables/psicrossbronze
+	name = "Amulet of Psydonia, Bronze"
+	req_bar = /obj/item/ingot/bronze
+	created_item = /obj/item/clothing/neck/roguetown/psicross/bronze
+	craftdiff = SKILL_LEVEL_JOURNEYMAN
+
+/datum/anvil_recipe/valuables/zcrossbronze
+	name = "Amulet of Inhumenity, Bronze"
+	req_bar = /obj/item/ingot/bronze
+	created_item = /obj/item/clothing/neck/roguetown/psicross/inhumen/bronze
+	craftdiff = SKILL_LEVEL_JOURNEYMAN
+
+/datum/anvil_recipe/valuables/ravoxbronze
+	name = "Amulet of Ravox, Bronze"
+	req_bar = /obj/item/ingot/bronze
+	created_item = /obj/item/clothing/neck/roguetown/psicross/ravox/bronze
+	craftdiff = SKILL_LEVEL_JOURNEYMAN
+
+/datum/anvil_recipe/valuables/statuebronze
+	name = "Statue, Bronze"
+	req_bar = /obj/item/ingot/bronze
+	created_item = /obj/item/clothing/ring/bronze/statue
+	craftdiff = SKILL_LEVEL_JOURNEYMAN
+
 /datum/anvil_recipe/valuables/ringg
 	name = "Rings, Gold (x3)"
 	req_bar = /obj/item/ingot/gold
