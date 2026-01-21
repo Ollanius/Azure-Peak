@@ -27,6 +27,10 @@
 	name = "iron bowl"
 	icon_state = "bowl_iron"
 
+/obj/item/reagent_containers/glass/bowl/bronze
+	name = "bronze bowl"
+	icon_state = "bowl_bronze"
+
 /obj/item/reagent_containers/glass/bowl/gold
 	name = "gold bowl"
 	icon_state = "bowl_gold"
