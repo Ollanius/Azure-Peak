@@ -27,6 +27,7 @@
 	smeltresult = /obj/item/ingot/bronze
 	max_integrity = ARMOR_INT_HELMET_HEAVY_BRONZE
 	armor_class = ARMOR_CLASS_MEDIUM
+	prevent_crits = PREVENT_CRITS_ALL
 	smelt_bar_num = 1
 	stack_fovs = TRUE
 
