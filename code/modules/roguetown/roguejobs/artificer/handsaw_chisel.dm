@@ -103,15 +103,6 @@
 		qdel(src)
 		return
 
-	else if(istype(W, /obj/item/rogueweapon/hammer/bronze))
-		playsound(get_turf(user.loc), 'sound/foley/brickdrop.ogg', 100)
-		user.visible_message("<span class='info'>[user] adds a striking tool to the chisel set.</span>")
-		var/obj/item/rogueweapon/chisel/assembly/bronzeh/F = new(src.loc)
-		qdel(W)
-		user.put_in_hands(F)
-		qdel(src)
-		return
-
 	else if(istype(W, /obj/item/rogueweapon/hammer/blacksteel))
 		playsound(get_turf(user.loc), 'sound/foley/brickdrop.ogg', 100)
 		user.visible_message("<span class='info'>[user] adds a striking tool to the chisel set.</span>")
@@ -173,15 +164,6 @@
 		playsound(get_turf(user.loc), 'sound/foley/brickdrop.ogg', 100)
 		user.visible_message("<span class='info'>[user] adds a striking tool to the chisel set.</span>")
 		var/obj/item/rogueweapon/chisel/assembly/mallet/bronze/F = new(src.loc)
-		qdel(W)
-		user.put_in_hands(F)
-		qdel(src)
-		return
-
-	else if(istype(W, /obj/item/rogueweapon/hammer/bronze))
-		playsound(get_turf(user.loc), 'sound/foley/brickdrop.ogg', 100)
-		user.visible_message("<span class='info'>[user] adds a striking tool to the chisel set.</span>")
-		var/obj/item/rogueweapon/chisel/assembly/bronzeh/bronze/F = new(src.loc)
 		qdel(W)
 		user.put_in_hands(F)
 		qdel(src)
