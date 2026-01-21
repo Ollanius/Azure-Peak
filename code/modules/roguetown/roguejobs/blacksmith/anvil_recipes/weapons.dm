@@ -993,6 +993,12 @@
 	additional_items = list(/obj/item/ingot/iron)
 	created_item = /obj/item/rogueweapon/shield/iron
 
+/datum/anvil_recipe/weapons/bronze/bronzeshield
+	name = "Shield, Bronze (+1 Bronze, +1 Cured Leather)"
+	req_bar = /obj/item/ingot/bronze
+	additional_items = list(/obj/item/ingot/bronze, /obj/item/natural/hide/cured)
+	created_item = /obj/item/rogueweapon/shield/bronze
+
 // CROSSBOW
 
 /datum/anvil_recipe/weapons/steel/xbow
