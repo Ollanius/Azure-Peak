@@ -16,6 +16,10 @@
 	name = "iron spoon"
 	icon_state = "spoon_iron"
 
+/obj/item/kitchen/spoon/bronze
+	name = "bronze spoon"
+	icon_state = "spoon_bronze"
+
 /obj/item/kitchen/spoon/tin
 	name = "pewter spoon"
 	icon_state = "spoon_iron"
