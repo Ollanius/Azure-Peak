@@ -2084,17 +2084,12 @@
 	max_blade_int = 350
 	sellprice = 150
 
-/obj/item/rogueweapon/sword/decorated/blacksteel
+/obj/item/rogueweapon/sword/blacksteel/decorated
 	name = "decorated blacksteel arming sword"
-	desc = "A broad blade of blacksteel, mounted atop a golden sabreguard that's been meticulously engraved with its commissoner's heraldry. It is a masterwork of unmatched opulance and lethality, and - perhaps - is the finest arming sword your eyes'll ever lay upon."
+	desc = "A broad blade of blacksteel, mounted atop a golden sabreguard that's been meticulously engraved with its commissoner's heraldry. It is a masterwork of unmatched opulance and lethality, and is - perhaps - the finest arming sword your eyes'll ever lay upon."
 	icon_state = "bs_swordregal"
 	sheathe_icon = "bs_swordregal"
-	force = 25
-	force_wielded = 30
 	wdefense = 7
-	smeltresult = /obj/item/ingot/blacksteel
-	max_integrity = 350
-	max_blade_int = 350
 	sellprice = 250
 
 /obj/item/rogueweapon/sword/short/gronn
