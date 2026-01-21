@@ -87,6 +87,18 @@
 	color = "#bb9696"
 	sellprice = 15
 
+/obj/item/rogueweapon/pick/paalloy
+	name = "ancient pick"
+	desc = "A chisel of polished gilbranze, unfettered in its pursuit of piercing the pebbled paunch of Psydonia. Don't dig too deep, now."
+	force = 18
+	force_wielded = 23
+	icon_state = "apick"
+	possible_item_intents = list(/datum/intent/pick/bad)
+	gripped_intents = list(/datum/intent/pick)
+	max_integrity = 550
+	smeltresult = /obj/item/ingot/aaslag
+	sellprice = 15
+
 /obj/item/rogueweapon/pick/copper
 	name = "copper pick"
 	desc = "A copper pick, slightly better than a stone pick."
