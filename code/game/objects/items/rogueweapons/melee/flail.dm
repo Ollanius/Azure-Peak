@@ -2,7 +2,7 @@
 	force = 25
 	possible_item_intents = list(/datum/intent/flail/strike, /datum/intent/mace/smash/flail)
 	name = "flail"
-	desc = "This is a swift, iron flail. Strikes hard and far."
+	desc = "A spiked macehead and wooden handle, linked together with a length of chain. It can be spun around to smash armored opponents with tremendous force, cracking plate and bone alike with unflinching impunity."
 	icon_state = "iflail"
 	icon = 'icons/roguetown/weapons/blunt32.dmi'
 	sharpness = IS_BLUNT
@@ -114,10 +114,20 @@
 	icon_state = "aflail"
 	smeltresult = /obj/item/ingot/aaslag
 
+/obj/item/rogueweapon/flail/bronze
+	force = 27
+	throwforce = 20
+	max_integrity = 150
+	icon_state = "bronzeflail"
+	name = "bronze flail"
+	desc = "A studded weight and a whittled handle, linked together with a length of bronze chain. It can be spun around to smash armored opponents with tremendous force, cracking plate and bone alike with unflinching impunity."
+	smeltresult = /obj/item/ingot/bronze
+	minstr = 7
+
 /obj/item/rogueweapon/flail/sflail
 	force = 30
 	icon_state = "flail"
-	desc = "This is a swift, steel flail. Strikes hard and far."
+	desc = "A flanged macehead and a carved handle, linked together with a length of steel chain. It can be spun around to smash armored opponents with tremendous force, cracking plate and bone alike with unflinching impunity."
 	smeltresult = /obj/item/ingot/steel
 	minstr = 5
 
