@@ -24,6 +24,7 @@
 
 /obj/item/rogueweapon/handsaw/bronze
 	name = "bronze handsaw"
+	icon_state = "bronzehandsaw"
 	desc = "The serrated half of a bronzen pair, keen to saw away at its problems."
 	max_blade_int = 350
 
@@ -112,12 +113,22 @@
 		qdel(src)
 		return
 
+	else if(istype(W, /obj/item/rogueweapon/hammer/bronze))
+		playsound(get_turf(user.loc), 'sound/foley/brickdrop.ogg', 100)
+		user.visible_message("<span class='info'>[user] adds a striking tool to the chisel set.</span>")
+		var/obj/item/rogueweapon/chisel/assembly/hammerbronze/F = new(src.loc)
+		qdel(W)
+		user.put_in_hands(F)
+		qdel(src)
+		return
+
 //
 
 /obj/item/rogueweapon/chisel/bronze
-	name = "bronzel chisel"
+	name = "bronze chisel"
 	desc = "The blunted half of a bronzen pair, for issues requiring a steady trepanning. Add something to strike it with before doing stonework, like a mallet or a stone."
 	max_blade_int = 350
+	icon_state = "bronzechisel"
 
 /obj/item/rogueweapon/chisel/bronze/attackby(obj/item/W, mob/living/user, params)
 	. = ..()
@@ -169,6 +180,15 @@
 		qdel(src)
 		return
 
+	else if(istype(W, /obj/item/rogueweapon/hammer/bronze))
+		playsound(get_turf(user.loc), 'sound/foley/brickdrop.ogg', 100)
+		user.visible_message("<span class='info'>[user] adds a striking tool to the chisel set.</span>")
+		var/obj/item/rogueweapon/chisel/assembly/hammerbronze/bronze/F = new(src.loc)
+		qdel(W)
+		user.put_in_hands(F)
+		qdel(src)
+		return
+
 	else if(istype(W, /obj/item/rogueweapon/hammer/blacksteel))
 		playsound(get_turf(user.loc), 'sound/foley/brickdrop.ogg', 100)
 		user.visible_message("<span class='info'>[user] adds a striking tool to the chisel set.</span>")
@@ -212,11 +232,11 @@
 	qdel(src)
 	user.put_in_hands(F)
 
-/obj/item/rogueweapon/chisel/assembly/hammer/bronze
+/obj/item/rogueweapon/chisel/assembly/hammerbronze
 	icon_state = "chiselbronze"
 	item_state = "hammer_bronze"
 
-/obj/item/rogueweapon/chisel/assembly/hammer/bronze/attack_right(mob/user)
+/obj/item/rogueweapon/chisel/assembly/hammerbronze/attack_right(mob/user)
 	var/obj/item/rogueweapon/chisel/F = new(user.loc)
 	var/obj/item/rogueweapon/hammer/bronze/E = new(user.loc)
 	user.put_in_hands(E)
@@ -322,11 +342,11 @@
 	qdel(src)
 	user.put_in_hands(F)
 
-/obj/item/rogueweapon/chisel/assembly/hammer/bronze/bronze
+/obj/item/rogueweapon/chisel/assembly/hammerbronze/bronze
 	icon_state = "bronzechiselbronze"
 	item_state = "hammer_bronze"
 
-/obj/item/rogueweapon/chisel/assembly/hammer/bronze/attack_right(mob/user)
+/obj/item/rogueweapon/chisel/assembly/hammerbronze/hammer/attack_right(mob/user)
 	var/obj/item/rogueweapon/chisel/bronze/F = new(user.loc)
 	var/obj/item/rogueweapon/hammer/bronze/E = new(user.loc)
 	user.put_in_hands(E)
