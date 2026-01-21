@@ -274,7 +274,7 @@
 
 /obj/item/clothing/neck/roguetown/gorget/bronze
 	name = "bronze neckguard"
-	desc = "An interlinked veil of bronze plates, shielding the throat from terrible wounds since the dawn of tyme."
+	desc = "An interlinked veil of bronze plates, shielding the throat from terrible wounds since the dawn of tyme. Piercing blows may sunder the plate, but - as long as the alloy persists - so shall you."
 	icon_state = "bronzegorget"
 	armor = ARMOR_PLATE_BAD
 	prevent_crits = PREVENT_CRITS_ALL
