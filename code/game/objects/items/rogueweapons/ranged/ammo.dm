@@ -134,7 +134,7 @@
 	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/thrust)
 	caliber = "heabolt"
 	icon = 'icons/roguetown/weapons/ammo.dmi'
-	icon_state = "heavybolt"
+	icon_state = "heavybolt" //NOTE!!! FIND A WAY TO MAKE BOLTS DEAL EXTRA DAMAGE TO BARRICADES AND STRUCTURES ASAP!!! IF YOU KNOW, FEEL FREE TO PR IT ASAP!!!
 	dropshrink = 0.8
 	max_integrity = 15
 	force = 15
@@ -152,7 +152,6 @@
 	range = 30
 	hitsound = 'sound/combat/hits/hi_bolt (2).ogg'
 	embedchance = 100
-	demolition_mod = 45 //..or 5000 damage against structures. This should be able to instantly destroy most barricades in a single shot.
 	woundclass = BCLASS_PIERCE
 	flag = "piercing"
 	speed = 0.3
