@@ -64,6 +64,18 @@
 	armor_class = ARMOR_CLASS_MEDIUM
 	smeltresult = /obj/item/ingot/iron
 
+/obj/item/clothing/suit/roguetown/armor/plate/bronze
+	name = "bronze cuirass"
+	desc = "A chiseled breastplate of bronze, further padded with hide to comfort its championing bod. The plates have been carefully forged to mimic the statuesque physiques of Psydonia's ancient heroes. Wearing it bolsters you with determination."
+	body_parts_covered = CHEST | VITALS | LEGS 
+	icon_state = "bronzecuirass"
+	armor = ARMOR_PLATE_BAD
+	smeltresult = /obj/item/ingot/bronze
+	max_integrity = ARMOR_INT_CHEST_MEDIUM_BRONZE
+	armor_class = ARMOR_CLASS_MEDIUM
+	prevent_crits = PREVENT_CRITS_ALL
+	boobed = FALSE
+
 /obj/item/clothing/suit/roguetown/armor/plate/aalloy
 	name = "decrepit half-plate"
 	desc = "Frayed bronze layers, wrought into plate armor. Once, the hauberk of a rising champion; now, nothing more than a fool's tomb."
