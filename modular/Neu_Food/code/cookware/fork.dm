@@ -17,6 +17,10 @@
 	name = "iron fork"
 	icon_state = "fork_iron"
 
+/obj/item/kitchen/fork/bronze
+	name = "bronze fork"
+	icon_state = "fork_bronze"
+
 /obj/item/kitchen/fork/tin
 	name = "pewter fork"
 	icon_state = "fork_iron"
