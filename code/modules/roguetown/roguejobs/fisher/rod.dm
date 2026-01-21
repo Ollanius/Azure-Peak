@@ -148,6 +148,10 @@
 		var/mob/M = loc
 		M.update_inv_hands()
 
+/obj/item/fishingrod/bronze
+	name = "bronze fishing rod"
+	desc = "A tool of religious importance, used by wide-brimmed priests who offer wriggling sacrifices to the endless waves beneath."
+	icon_state = "bronzerod"
 
 /obj/item/fishingrod/aalloy
 	name = "decrepit fishing rod"
