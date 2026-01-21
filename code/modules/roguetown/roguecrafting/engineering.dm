@@ -201,6 +201,16 @@
 	skillcraft = /datum/skill/craft/engineering
 	craftdiff = 3
 
+/datum/crafting_recipe/roguetown/engineering/lightcrossbow
+	name = "crossbow, stockless"
+	category = "Weapons"
+	result = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/light
+	reqs = list(/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow, /obj/item/roguegear = 1) //Helps with maintaining draw-strength without the extra leverage. 
+	structurecraft = /obj/machinery/artificer_table
+	skillcraft = /datum/skill/craft/engineering
+	tools = list(/obj/item/rogueweapon/huntingknife = 1) //You are, in essence, sawing down the stock.
+	craftdiff = 5 //Blindly hacking the stock off makes it impossible to wield. You got to carve it, lovingly.
+
 /datum/crafting_recipe/roguetown/engineering/heavycrossbow
 	name = "siegebow with heavy bolt pouch"
 	category = "Weapons"
