@@ -221,16 +221,16 @@
 	i_type = "Tools"
 
 /datum/anvil_recipe/tools/bronze/pick
-	name = "Pickaxe, Bronze (+1 Stick)"
+	name = "Axepick, Bronze (+1 Stick, +1 Bronze)"
 	req_bar = /obj/item/ingot/bronze
-	additional_items = list(/obj/item/grown/log/tree/stick)
+	additional_items = list(/obj/item/grown/log/tree/stick, /obj/item/rogueweapon/sickle/bronze)
 	created_item = /obj/item/rogueweapon/pick/bronze
 	i_type = "Tools"
 
 /datum/anvil_recipe/tools/bronze/shovel
 	name = "Shovel, Bronze (+2 Sticks)"
 	req_bar = /obj/item/ingot/bronze
-	additional_items = list(/obj/item/grown/log/tree/stick,/obj/item/grown/log/tree/stick)
+	additional_items = list(/obj/item/grown/log/tree/stick, /obj/item/grown/log/tree/stick)
 	created_item = /obj/item/rogueweapon/shovel/bronze
 	i_type = "Tools"
 
