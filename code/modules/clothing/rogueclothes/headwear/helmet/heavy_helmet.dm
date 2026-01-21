@@ -14,6 +14,44 @@
 	smelt_bar_num = 1
 	stack_fovs = TRUE
 
+/obj/item/clothing/head/roguetown/helmet/heavy/bronze
+	name = "bronze barbute"
+	desc = "A greathelm of bronze, who's nasalguard and mandibles leave the wearer's face cloaked in darkness. The heroes of yore have long since passed, yet their blood still courses through the veins of Psydonia's children; you are no different. Quiff a feather to its skullcap to bare your allegience with pride."
+	body_parts_covered = FULL_HEAD
+	icon_state = "bronzebarbute"
+	item_state = "bronzebarbute"
+	flags_inv = HIDEEARS|HIDEFACE|HIDESNOUT
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	armor = ARMOR_PLATE_BAD
+	block2add = FOV_BEHIND
+	smeltresult = /obj/item/ingot/bronze
+	max_integrity = ARMOR_INT_HELMET_HEAVY_BRONZE
+	armor_class = ARMOR_CLASS_MEDIUM
+	smelt_bar_num = 1
+	stack_fovs = TRUE
+
+/obj/item/clothing/head/roguetown/helmet/heavy/bronze/attackby(obj/item/W, mob/living/user, params)
+	..()
+	if(istype(W, /obj/item/natural/feather) && !detail_tag)
+		var/choice = input(user, "Choose a color.", "Plume") as anything in COLOR_MAP
+		detail_color = COLOR_MAP[choice]
+		detail_tag = "_detail"
+		user.visible_message(span_warning("[user] adds [W] to [src]."))
+		user.transferItemToLoc(W, src, FALSE, FALSE)
+		update_icon()
+		if(loc == user && ishuman(user))
+			var/mob/living/carbon/H = user
+			H.update_inv_head()
+
+/obj/item/clothing/head/roguetown/helmet/heavy/bronze/update_icon()
+	cut_overlays()
+	if(get_detail_tag())
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)
+
 /obj/item/clothing/head/roguetown/helmet/heavy/aalloy
 	name = "decrepit barbute"
 	desc = "Frayed bronze plates, pounded into a visored helmet. Scrapes and dents line the curved plating, weathered from centuries of neglect. The remains of a plume's stub hang atop its rim."
