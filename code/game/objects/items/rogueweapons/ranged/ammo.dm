@@ -152,7 +152,7 @@
 	range = 30
 	hitsound = 'sound/combat/hits/hi_bolt (2).ogg'
 	embedchance = 100
-	demolition_mod = 3 //..or 360 damage against most structures. This should destroy most barricades, up to palisades and chest-high railings, with a single shot.
+	demolition_mod = 10 //..or 1200 damage against structures. This should be able to instantly destroy most barricades - and non-metal doors - in a single shot.
 	woundclass = BCLASS_PIERCE
 	flag = "piercing"
 	speed = 0.3
