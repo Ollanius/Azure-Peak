@@ -220,6 +220,7 @@
 	name = "bronze hammer"
 	desc = "'I've been gripping this thing since before I could even walk - I didn't choose this, this is who I am. I just strike it. I don't think.' </br>'I spent my youth desperate to forge a better sword, become a more skilled smith, before I knew it..' </br>'I was old.' </br>'I don't even know what the hell I strike the iron for. But there is still one thing I like about it..' </br>'..the sparks. I like seeing sparks.. ..breathtaking, life, bursting before my eyes for just a moment..'"
 	icon_state = "hammer_bronze"
+	smeltresult = /obj/item/ingot/bronze
 	force = 24
 
 /obj/item/rogueweapon/hammer/copper
@@ -400,6 +401,7 @@
 	desc = "Pincers of bronze, handled of wood. Plunge into the coals without fear of burning, so that you may command alloy-and-stone to morph as you please."
 	icon_state = "bronzetongs"
 	wdefense = 6
+	smeltresult = /obj/item/ingot/bronze
 	icon = 'icons/roguetown/weapons/tools.dmi'
 	force = 14
 
