@@ -290,7 +290,7 @@
 
 /obj/item/clothing/shoes/roguetown/boots/armor/bronze
 	name = "bronze greaves"
-	desc = "Hefty sabatons of bronze, adorned with angled greaves and nestled atop a pair of flat-boarded sandals. Hold your ground against whatever may yet come, lest you be swept away in the tides-to-be."
+	desc = "Padded sabatons of bronze, tightly strapped together and padded with hide from a fearsome beaste. The sandals clack about, yet they do not feel obstructive; if anything, you've never felt more agile while beplated."
 	icon_state = "bronzegreaves"
 	body_parts_covered = FEET | LEGS
 	smeltresult = /obj/item/ingot/bronze
