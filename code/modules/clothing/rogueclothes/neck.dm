@@ -272,6 +272,15 @@
 	body_parts_covered = NECK
 	blocksound = PLATEHIT
 
+/obj/item/clothing/neck/roguetown/gorget/bronze
+	name = "bronze neckguard"
+	desc = "An interlinked veil of bronze plates, shielding the throat from terrible wounds since the dawn of tyme."
+	icon_state = "bronzegorget"
+	armor = ARMOR_PLATE_BAD
+	prevent_crits = PREVENT_CRITS_ALL
+	smeltresult = /obj/item/ingot/bronze
+	max_integrity = ARMOR_INT_SIDE_BRONZE
+
 /obj/item/clothing/neck/roguetown/gorget/aalloy
 	name = "decrepit gorget"
 	desc = "Frayed bronze plates, shingled together to shroud the neck. Primitive scrapes line the flanks, yet the center seems to've been cored out by a spear's thrust."
@@ -456,6 +465,13 @@
 	icon_state = "zcross_iron"
 	resistance_flags = FIRE_PROOF
 
+/obj/item/clothing/neck/roguetown/psicross/inhumen/bronze
+	name = "bronze inverted psycross"
+	desc = "'Look upon mine works, thee-mighty, and despair!'"
+	icon_state = "zcross_bronze"
+	resistance_flags = FIRE_PROOF
+	sellprice = 25
+
 /obj/item/clothing/neck/roguetown/psicross/inhumen/g
 	name = "golden inverted psycross"
 	desc = "'Doth thee wish to live deliciously? Mortality is but a shackle; and if you wish to break free from its steely grasp, all you need to do.. is put thine faith in me.'"
@@ -545,6 +561,11 @@
 	desc = "What are you fighting for?"
 	icon_state = "ravox"
 
+/obj/item/clothing/neck/roguetown/psicross/ravox/bronze
+	name = "bronze amulet of Ravox"
+	desc = "Never forget; I am with you in the dark."
+	icon_state = "ravox_b"
+
 /obj/item/clothing/neck/roguetown/psicross/malum
 	name = "amulet of Malum"
 	desc = "From the ashes, creation."
@@ -606,6 +627,14 @@
 	sellprice = 0
 	salvage_result = /obj/item/grown/log/tree/stick
 	salvage_amount = 1
+
+/obj/item/clothing/neck/roguetown/psicross/bronze
+	name = "bronze psycross"
+	desc = "'Until my heart ceases beating, and until my vigil ends - I will bring you down with me!'"
+	icon_state = "psycross_b"
+	item_state = "psycross_b"
+	sellprice = 25
+	is_silver = TRUE
 
 /obj/item/clothing/neck/roguetown/psicross/silver
 	name = "silver psycross"
