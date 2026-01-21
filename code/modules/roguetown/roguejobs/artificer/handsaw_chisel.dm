@@ -233,7 +233,7 @@
 	user.put_in_hands(F)
 
 /obj/item/rogueweapon/chisel/assembly/hammerbronze
-	icon_state = "chiselbronze"
+	icon_state = "chiselbronzeh"
 	item_state = "hammer_bronze"
 
 /obj/item/rogueweapon/chisel/assembly/hammerbronze/attack_right(mob/user)
@@ -343,7 +343,7 @@
 	user.put_in_hands(F)
 
 /obj/item/rogueweapon/chisel/assembly/hammerbronze/bronze
-	icon_state = "bronzechiselbronze"
+	icon_state = "bronzechiselbronzeh"
 	item_state = "hammer_bronze"
 
 /obj/item/rogueweapon/chisel/assembly/hammerbronze/hammer/attack_right(mob/user)
