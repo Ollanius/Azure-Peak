@@ -1332,7 +1332,7 @@
 	name = "Blacksteel Arming Sword, Decorated (+1 Steel Arming Sword, +1 Gold, +1 Silk)"
 	req_bar = /obj/item/ingot/blacksteel
 	additional_items = list(/obj/item/rogueweapon/sword, /obj/item/ingot/gold, /obj/item/natural/silk)
-	created_item = /obj/item/rogueweapon/sword/decorated/blacksteel
+	created_item = /obj/item/rogueweapon/sword/blacksteel/decorated
 
 /datum/anvil_recipe/weapons/blacksteel/flamberge
 	name = "Blacksteel Flamberge (+1 Blacksteel, +1 Rontz, +1 Silk)"
