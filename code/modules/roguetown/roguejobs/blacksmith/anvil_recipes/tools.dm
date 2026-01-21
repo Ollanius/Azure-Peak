@@ -342,13 +342,13 @@
 
 /* Movning under Engineering
 /datum/anvil_recipe/tools/iron/lockpicks
-	name = "Lockpicks x3"
+	name = "Lockpicks (x3)"
 	req_bar = /obj/item/ingot/iron
 	created_item = /obj/item/lockpick
 	createditem_num = 3
 
 /datum/anvil_recipe/tools/iron/lockpickring
-	name = "Lockpickrings x3"
+	name = "Lockpickrings (x3)"
 	req_bar = /obj/item/ingot/iron
 	created_item = /obj/item/lockpickring
 	createditem_num = 3
@@ -529,16 +529,19 @@
 	name = "Platter, Tin (x2)"
 	req_bar = /obj/item/ingot/tin
 	created_item = /obj/item/cooking/platter/pewter
+	createditem_num = 2
 
 /datum/anvil_recipe/tools/gold/platter
 	name = "Platter, Gold (x2)"
 	req_bar = /obj/item/ingot/gold
 	created_item = /obj/item/cooking/platter/gold
+	createditem_num = 2
 
 /datum/anvil_recipe/tools/silver/platter
 	name = "Platter, Silver (x2)"
 	req_bar = /obj/item/ingot/silver
 	created_item = /obj/item/cooking/platter/silver
+	createditem_num = 2
 
 /datum/anvil_recipe/tools/iron/spoon
 	name = "Spoon, Iron (x3)"
@@ -550,6 +553,7 @@
 	name = "Spoon, Tin (x3)"
 	req_bar = /obj/item/ingot/tin
 	created_item = /obj/item/kitchen/spoon/tin
+	createditem_num = 3
 
 /datum/anvil_recipe/tools/iron/fork
 	name = "Fork, Iron (x3)"
@@ -561,6 +565,7 @@
 	name = "Fork, Tin (x3)"
 	req_bar = /obj/item/ingot/tin
 	created_item = /obj/item/kitchen/fork/tin
+	createditem_num = 3
 
 /datum/anvil_recipe/tools/iron/bowl
 	name = "Bowl, Iron"
