@@ -21,6 +21,12 @@
 	icon_state = "ring_a"
 	sellprice = 11
 
+/obj/item/clothing/ring/bronze
+	name = "bronze ring"
+	desc = "A ring of bronzen resiliance."
+	icon_state = "ring_b"
+	sellprice = 22
+
 /obj/item/clothing/ring/silver
 	name = "silver ring"
 	desc = "A ring of silvered glimmerance."
