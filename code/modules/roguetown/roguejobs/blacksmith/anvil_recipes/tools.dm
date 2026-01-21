@@ -297,7 +297,7 @@
 	createditem_num = 2
 
 /datum/anvil_recipe/tools/bronze/lamptern
-	name = "Lamptern, Bronze (+3 Sticks)"
+	name = "Handlamptern, Bronze (+3 Sticks)"
 	req_bar = /obj/item/ingot/bronze
 	additional_items = list(/obj/item/grown/log/tree/stick, /obj/item/grown/log/tree/stick, /obj/item/grown/log/tree/stick)
 	created_item = /obj/item/flashlight/flare/torch/lantern/bronze
