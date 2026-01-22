@@ -41,3 +41,4 @@
 	icon_state = "bronzepan"
 	throwforce = 30 //We both know why.
 	sellprice = 15
+	max_integrity = 200
