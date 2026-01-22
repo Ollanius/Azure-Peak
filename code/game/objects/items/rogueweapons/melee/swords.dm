@@ -992,6 +992,7 @@
 	force = 22
 	possible_item_intents = list(/datum/intent/sword/cut/sabre, /datum/intent/sword/thrust, /datum/intent/sword/chop/falx, /datum/intent/sword/peel)
 	max_integrity = 175
+	smeltresult = /obj/item/ingot/bronze
 
 /obj/item/rogueweapon/sword/short/gladius/agladius
 	name = "decrepit gladius"
