@@ -72,6 +72,7 @@
 	force_wielded = 20
 	icon_state = "bronzethresh"
 	smeltresult = /obj/item/ingot/bronze
+	max_integrity = 300
 
 /obj/item/rogueweapon/sickle
 	force = 10
@@ -115,6 +116,7 @@
 	force = 15
 	icon_state = "bronzesickle"
 	smeltresult = /obj/item/ingot/bronze
+	max_integrity = 300
 
 /obj/item/rogueweapon/sickle/copper
 	name = "copper sickle"
@@ -162,6 +164,7 @@
 	desc = "Till the soil, so that it may receive your seed. Alongside the sickle and thresher, it forms the holy trinity of agriculturality. Don't ask about the pitchfork."
 	icon_state = "bronzehoe"
 	smeltresult = /obj/item/ingot/bronze
+	max_integrity = 300
 
 /obj/item/rogueweapon/hoe/stone
 	force = 7
@@ -352,6 +355,7 @@
 	desc = "'Ah, there you are! I tell you, the others simply do not appreciate the labors I pull to keep their hands clean. I'd like to see a hoe try to scoop a whole cart's worth of wheat on its own - see how that fares!'"
 	icon_state = "bronzepitchfork"
 	smeltresult = /obj/item/ingot/bronze
+	max_integrity = 300
 
 /obj/item/rogueweapon/pitchfork/copper
 	name = "copper pitchfork"
