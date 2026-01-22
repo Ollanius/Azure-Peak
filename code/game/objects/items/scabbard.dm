@@ -815,7 +815,7 @@
 
 /obj/item/rogueweapon/scabbard/gwstrap
 	name = "greatweapon strap"
-	desc = ""
+	desc = "A buckled sling that can support the weight of weapons too weighty for one's belt. Be mindful, as it takes a couple seconds to properly unfasten-and-refasten the latches."
 
 	icon_state = "gws0"
 	item_state = "gwstrap"

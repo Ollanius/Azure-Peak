@@ -41,8 +41,9 @@
 	sewrepair = FALSE
 	smeltresult = /obj/item/ingot/steel
 
-/obj/item/clothing/wrists/roguetown/bracers/leather/ComponentInitialize()
+/obj/item/clothing/wrists/roguetown/bracers/ComponentInitialize()
 	AddComponent(/datum/component/armour_filtering/negative, TRAIT_FENCERDEXTERITY)
+	AddComponent(/datum/component/armour_filtering/negative, TRAIT_HONORBOUND)
 
 /obj/item/clothing/wrists/roguetown/bracers/gold
 	name = "golden bracers"
@@ -147,6 +148,7 @@
 
 /obj/item/clothing/wrists/roguetown/bracers/leather/ComponentInitialize()
 	AddComponent(/datum/component/armour_filtering/positive, TRAIT_FENCERDEXTERITY)
+	AddComponent(/datum/component/armour_filtering/positive, TRAIT_HONORBOUND)
 
 /obj/item/clothing/wrists/roguetown/bracers/leather/heavy
 	name = "hardened leather bracers"
@@ -256,9 +258,9 @@
 	body_parts_covered = ARMS
 	icon_state = "splintarms"
 	item_state = "splintarms"
-	armor = ARMOR_PLATE
+	armor = ARMOR_LEATHER_STUDDED
 	blocksound = SOFTHIT
-	max_integrity = ARMOR_INT_SIDE_IRON
+	max_integrity = ARMOR_INT_SIDE_STEEL
 	anvilrepair = /datum/skill/craft/armorsmithing
 	smeltresult = /obj/item/ingot/steel
 	w_class = WEIGHT_CLASS_NORMAL
@@ -267,6 +269,7 @@
 
 /obj/item/clothing/wrists/roguetown/splintarms/ComponentInitialize()
 	AddComponent(/datum/component/armour_filtering/negative, TRAIT_FENCERDEXTERITY)
+	AddComponent(/datum/component/armour_filtering/negative, TRAIT_HONORBOUND)
 
 /obj/item/clothing/wrists/roguetown/splintarms/iron
 	name = "splint bracers"
@@ -306,6 +309,7 @@
 
 /obj/item/clothing/wrists/roguetown/bracers/jackchain/ComponentInitialize()
 	AddComponent(/datum/component/armour_filtering/positive, TRAIT_FENCERDEXTERITY)
+	AddComponent(/datum/component/armour_filtering/positive, TRAIT_HONORBOUND)
 
 //
 
