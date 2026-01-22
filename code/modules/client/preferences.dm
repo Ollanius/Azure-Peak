@@ -192,7 +192,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 
 	var/char_accent = "No accent"
 
-	var/datum/loadout_item/loadout
+	var/datum/_item/loadout
 	var/datum/loadout_item/loadout2
 	var/datum/loadout_item/loadout3
 
@@ -2144,7 +2144,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 							continue
 						loadouts_available[loadout.name] = loadout
 
-					var/loadout_input = tgui_input_list(user, "Choose an item for your character's stashed loadout. Your character can access their stash by right-clicking a tree, statue, or clock. Note that any Triumph-costing items in your loadout will be automatically purchased, only after you've joined the round.", "LOADOUT", loadouts_available)
+					var/loadout_input = tgui_input_list(user, "Choose an item for your character's stashed loadout. Your character can access their stash by right-clicking a tree, statue, or clock. </br>If you have a stashed item with a listed Triumph cost, it'll automatically be purchased whenever your character joins the round.", "LOADOUT", loadouts_available)
 					if(loadout_input)
 						if(loadout_input == "None")
 							loadout = null
@@ -2165,7 +2165,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 							continue
 						loadouts_available[loadout2.name] = loadout2
 
-					var/loadout_input2 = tgui_input_list(user, "Choose an item for your character's stashed loadout. Your character can access their stash by right-clicking a tree, statue, or clock. Note that any Triumph-costing items in your loadout will be automatically purchased, only after you've joined the round.", "LOADOUT", loadouts_available)
+					var/loadout_input2 = tgui_input_list(user, "Choose an item for your character's stashed loadout. Your character can access their stash by right-clicking a tree, statue, or clock. </br>If you have a stashed item with a listed Triumph cost, it'll automatically be purchased whenever your character joins the round.", "LOADOUT", loadouts_available)
 					if(loadout_input2)
 						if(loadout_input2 == "None")
 							loadout2 = null
@@ -2186,7 +2186,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 							continue
 						loadouts_available[loadout3.name] = loadout3
 
-					var/loadout_input3 = tgui_input_list(user, "Choose an item for your character's stashed loadout. Your character can access their stash by right-clicking a tree, statue, or clock. Note that any Triumph-costing items in your loadout will be automatically purchased, only after you've joined the round.", "LOADOUT", loadouts_available)
+					var/loadout_input3 = tgui_input_list(user, "Choose an item for your character's stashed loadout. Your character can access their stash by right-clicking a tree, statue, or clock. </br>If you have a stashed item with a listed Triumph cost, it'll automatically be purchased whenever your character joins the round.", "LOADOUT", loadouts_available)
 					if(loadout_input3)
 						if(loadout_input3 == "None")
 							loadout3 = null
