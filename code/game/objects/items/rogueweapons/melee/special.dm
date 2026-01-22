@@ -1186,3 +1186,6 @@
 /obj/item/rogueweapon/spear/keep_standard/Destroy()
 	GLOB.lordcolor -= src
 	return ..()
+
+/datum/intent/spear/thrust/ducal_standard
+	penfactor = 30
