@@ -75,6 +75,7 @@
 	armor_class = ARMOR_CLASS_MEDIUM
 	prevent_crits = PREVENT_CRITS_ALL
 	boobed = FALSE
+	smelt_bar_num = 2
 
 /obj/item/clothing/suit/roguetown/armor/plate/aalloy
 	name = "decrepit half-plate"

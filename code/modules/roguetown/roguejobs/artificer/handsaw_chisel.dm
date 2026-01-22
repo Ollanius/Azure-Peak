@@ -26,7 +26,8 @@
 	name = "bronze handsaw"
 	icon_state = "bronzehandsaw"
 	desc = "The serrated half of a bronzen pair, keen to saw away at its problems."
-	max_blade_int = 350
+	max_blade_int = 400
+	smeltresult = /obj/item/ingot/bronze
 
 //................	Chisel	............... //
 /obj/item/rogueweapon/chisel
@@ -127,8 +128,9 @@
 /obj/item/rogueweapon/chisel/bronze
 	name = "bronze chisel"
 	desc = "The blunted half of a bronzen pair, for issues requiring a steady trepanning. Add something to strike it with before doing stonework, like a mallet or a stone."
-	max_blade_int = 350
+	max_blade_int = 400
 	icon_state = "bronzechisel"
+	smeltresult = /obj/item/ingot/bronze
 
 /obj/item/rogueweapon/chisel/bronze/attackby(obj/item/W, mob/living/user, params)
 	. = ..()

@@ -351,6 +351,7 @@
 	name = "bronze pitchfork"
 	desc = "'Ah, there you are! I tell you, the others simply do not appreciate the labors I pull to keep their hands clean. I'd like to see a hoe try to scoop a whole cart's worth of wheat on its own - see how that fares!'"
 	icon_state = "bronzepitchfork"
+	smeltresult = /obj/item/ingot/bronze
 
 /obj/item/rogueweapon/pitchfork/copper
 	name = "copper pitchfork"
