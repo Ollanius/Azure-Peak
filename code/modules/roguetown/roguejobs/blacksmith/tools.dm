@@ -222,6 +222,7 @@
 	icon_state = "hammer_bronze"
 	smeltresult = /obj/item/ingot/bronze
 	force = 24
+	max_integrity = 300
 
 /obj/item/rogueweapon/hammer/copper
 	name = "copper hammer"
@@ -404,6 +405,7 @@
 	smeltresult = /obj/item/ingot/bronze
 	icon = 'icons/roguetown/weapons/tools.dmi'
 	force = 14
+	max_integrity = 300
 
 /obj/item/rogueweapon/tongs/bronze/update_icon()
 	. = ..()
@@ -423,6 +425,7 @@
 	icon = 'icons/roguetown/weapons/tools.dmi'
 	smeltresult = /obj/item/ingot/blacksteel
 	force = 20
+	max_integrity = 450
 
 /obj/item/rogueweapon/tongs/blacksteel/update_icon()
 	. = ..()
