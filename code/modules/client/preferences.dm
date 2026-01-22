@@ -192,7 +192,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 
 	var/char_accent = "No accent"
 
-	var/datum/_item/loadout
+	var/datum/loadout_item/loadout
 	var/datum/loadout_item/loadout2
 	var/datum/loadout_item/loadout3
 
