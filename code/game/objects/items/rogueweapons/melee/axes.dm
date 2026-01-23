@@ -264,7 +264,6 @@
 	throw_speed = 3 
 	armor_penetration = 25
 	
-
 /obj/item/rogueweapon/stoneaxe/woodcut/bronze
 	name = "bronze axe"
 	icon_state = "bronzeaxe"
@@ -274,6 +273,23 @@
 	max_blade_int = 550
 	smeltresult = /obj/item/ingot/bronze
 	wdefense = 2
+	armor_penetration = 22 //In-between a hurblat and hatchet. Far harder to reproduce.
+	throwforce = 32
+	throw_speed = 6
+	embedding = list("embedded_pain_multiplier" = 4, "embed_chance" = 33, "embedded_fall_chance" = 2)
+
+/obj/item/rogueweapon/stoneaxe/woodcut/bronzebattleaxe
+	name = "bronze waraxe"
+	icon_state = "bronzebattleaxe"
+	desc = "An antiquital handstaff, fitted with a thrice-wedged bronze axhead. The unique design of its edge, similar to the khopesh, ensures that each swing properly ferries all of its wielder's strength into its destination."
+	force = 23 // Similar presentation to a battle axe, albeit without the durability or full damage.
+	possible_item_intents = list(/datum/intent/axe/cut/battle, /datum/intent/axe/chop/battle, /datum/intent/axe/bash, /datum/intent/sword/peel)
+	gripped_intents = list(/datum/intent/axe/cut/battle, /datum/intent/axe/chop/battle, /datum/intent/axe/bash, /datum/intent/sword/peel)
+	force_wielded = 27
+	max_blade_int = 500
+	smeltresult = /obj/item/ingot/bronze
+	minstr = 8
+	wdefense = 4
 	armor_penetration = 22 //In-between a hurblat and hatchet. Far harder to reproduce.
 	throwforce = 32
 	throw_speed = 6
@@ -463,6 +479,23 @@
 	minstr = 11
 	max_blade_int = 250
 	smeltresult = /obj/item/ingot/steel
+
+/obj/item/rogueweapon/greataxe/bronze
+	force = 15
+	force_wielded = 30
+	possible_item_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, SPEAR_BASH) //bash is for nonlethal takedowns, only targets limbs
+	gripped_intents = list(/datum/intent/axe/cut/battle/greataxe, /datum/intent/axe/chop/battle/greataxe, SPEAR_BASH)
+	name = "bronze greataxe"
+	desc = "A massive staff with a bronze axhead mantled onto the wood. It splits and carves from afar with lethal force; be it lumber or limbs."
+	icon_state = "bronzegreataxe"
+	minstr = 11
+	wdefense = 7
+	max_blade_int = 400
+	smeltresult = /obj/item/ingot/bronze
+	armor_penetration = 16
+	throwforce = 32
+	throw_speed = 3
+	embedding = list("embedded_pain_multiplier" = 4, "embed_chance" = 33, "embedded_fall_chance" = 2)
 
 /obj/item/rogueweapon/greataxe/steel/knight
 	possible_item_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, /datum/intent/mace/strike)

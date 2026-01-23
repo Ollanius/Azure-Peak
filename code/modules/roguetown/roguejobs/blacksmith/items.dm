@@ -67,14 +67,14 @@
 
 /obj/item/roguestatue/bronze
 	name = "bronze statue"
-	desc = "A statue of sculpted bronze, forged in reverance to the mythical Epic of Ravox."
+	desc = "A statue of sculpted bronze, forged in the visage of an ancient hero."
 	icon_state = "bronzestatue1"
 	smeltresult = /obj/item/ingot/bronze
 	sellprice = 30
 
 /obj/item/roguestatue/bronze/Initialize()
 	. = ..()
-	icon_state = "bronzestatue[pick(1,2)]"
+	icon_state = "bronzestatue[pick(1,2,3)]"
 
 /obj/item/roguestatue/iron
 	name = "iron statue"
