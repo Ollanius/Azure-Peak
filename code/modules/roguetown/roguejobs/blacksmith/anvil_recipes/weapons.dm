@@ -320,11 +320,11 @@
 	created_item = /obj/item/rogueweapon/greataxe/bronze
 
 /datum/anvil_recipe/weapons/bronze/javelin
-	name = "Javelin, Bronze (+1 Small Log) (x3)"
+	name = "Javelin, Bronze (+1 Small Log) (x2)"
 	req_bar = /obj/item/ingot/bronze
 	additional_items = list(/obj/item/grown/log/tree/small)
 	created_item =  /obj/item/ammo_casing/caseless/rogue/javelin/bronze
-	createditem_num = 3
+	createditem_num = 2
 
 /datum/anvil_recipe/weapons/bronze/trident
 	name = "Trident, Bronze (+1 Steel, +1 Iron, +1 Small Log)"
