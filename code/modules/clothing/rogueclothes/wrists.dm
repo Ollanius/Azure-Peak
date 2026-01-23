@@ -122,6 +122,7 @@
 	name = "bronze wristguards"
 	desc = "Padded with hide and cuffed to comfort the joints, these bronze plates fit perfectly around both forearms. Your fingers tingle with an unspoken purpose, as the bracers clasp into place; primordial, yet everclear."
 	icon_state = "bronzebracers"
+	body_parts_covered = ARMS | HANDS //Experimental, but should play well with the increased durability.
 	smeltresult = /obj/item/ingot/bronze
 	armor = ARMOR_PLATE_BAD
 	max_integrity = ARMOR_INT_SIDE_BRONZE
