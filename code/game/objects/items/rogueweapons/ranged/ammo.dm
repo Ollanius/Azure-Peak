@@ -758,7 +758,7 @@
 	armor_penetration = 30
 	embedding = list("embedded_pain_multiplier" = 4, "embed_chance" = 80, "embedded_fall_chance" = 5)
 	thrown_bclass = BCLASS_PICK	
-	smeltresult = /obj/item/ingot/bronze
+	smeltresult = null // 1 Ingot = 2 Javelins
 
 /obj/item/ammo_casing/caseless/rogue/javelin/steel
 	force = 16
