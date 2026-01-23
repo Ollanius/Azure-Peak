@@ -248,7 +248,7 @@
 	smeltresult = /obj/item/ingot/bronze
 	max_blade_int = 250
 	max_integrity = 125
-	sheathe_icon = "decsword1" //Placeholder. Close enough.
+	sheathe_icon = "bronzesword" //Placeholder. Close enough.
 
 /obj/item/rogueweapon/sword/falx
 	name = "falx"
@@ -980,6 +980,7 @@
 	name = "decorated gladius"
 	desc = "A beautiful depiction of justice, beflowered and besilked. The crimson engravings along its blade pay tribute to the ancient epics of Ravox's ascent to godlihood; for it was His wounding of the Sinistar's tentacled heart that forced the Archdevil to pause - first in disbelief, then in fascination."
 	icon_state = "gladiusdec"
+	sheathe_icon = "decgladius"
 	max_integrity = 250
 	smeltresult = /obj/item/ingot/gold
 	sellprice = 100
