@@ -280,7 +280,7 @@
 	name = "bronze neckguard"
 	desc = "An interlinked veil of bronze plates, shielding the throat from terrible wounds since the dawn of tyme. Piercing blows may sunder the plate, but - as long as the alloy persists - so shall you."
 	icon_state = "bronzegorget"
-	armor = ARMOR_PLATE_BAD
+	armor = ARMOR_PLATE_BRONZE
 	prevent_crits = PREVENT_CRITS_ALL
 	smeltresult = /obj/item/ingot/bronze
 	max_integrity = ARMOR_INT_SIDE_BRONZE
