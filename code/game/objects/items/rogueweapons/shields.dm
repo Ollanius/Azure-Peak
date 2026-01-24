@@ -528,7 +528,7 @@
 	var/distfromcaster
 	user.visible_message(span_notice("Loud whizzing clockwork and the hiss of steam comes from within [src]."))
 	to_chat(user, span_warning("[user] activates a mechanism on [src]!"))
-	sleep(15)
+	addtimer(15)
 	playsound(user, 'sound/items/steamrelease.ogg', 100, FALSE, -1)
 	cooldowny = world.time
 	addtimer(CALLBACK(src,PROC_REF(steamready), user), cdtime)
