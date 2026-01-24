@@ -965,43 +965,43 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	triumph_cost = 7
 
 /datum/loadout_item/triumph_longsword
-	name = "Valorian Longsword (-7 TRI)"
+	name = "Valorian Longsword (-70 TRI)"
 	path = /obj/item/rogueweapon/sword/long/triumph
 	triumph_cost = 7
 
 /datum/loadout_item/triumph_longswordr
-	name = "Valorian Longsword, Rockhillic (-7 TRI)"
+	name = "Valorian Longsword, Rockhillic (-70 TRI)"
 	path = /obj/item/rogueweapon/sword/long/triumph/rockhill
 	triumph_cost = 7
 
 /datum/loadout_item/triumph_longswordw
-	name = "Valorian Longsword, Wideguard (-7 TRI)"
+	name = "Valorian Longsword, Wideguard (-70 TRI)"
 	path = /obj/item/rogueweapon/sword/long/triumph/wideguard
 	triumph_cost = 7
 
 /datum/loadout_item/triumph_longswords
-	name = "Valorian Longsword, Sabreguard (-7 TRI)"
+	name = "Valorian Longsword, Sabreguard (-70 TRI)"
 	path = /obj/item/rogueweapon/sword/long/triumph/sabreguard
 	triumph_cost = 7
 
 /datum/loadout_item/triumph_longswordp
-	name = "Valorian Longsword, Psycrucifix (-7 TRI)"
+	name = "Valorian Longsword, Psycrucifix (-70 TRI)"
 	path = /obj/item/rogueweapon/sword/long/triumph/psycrucifix
 	triumph_cost = 7
 
 // -10 to -??? TRI Minisection.
 
 /datum/loadout_item/triumph_froggemund
-	name = "Valorian Froggemund Helmet (-10 TRI)"
+	name = "Valorian Froggemund Helmet (-100 TRI)"
 	path = /obj/item/clothing/head/roguetown/helmet/heavy/frogmouth/legacy
 	triumph_cost = 10
 
 /datum/loadout_item/triumph_cuirass
-	name = "Valorian Cuirass (-10 TRI)"
+	name = "Valorian Cuirass (-100 TRI)"
 	path = /datum/anvil_recipe/armor/steel/cuirass/legacy
 	triumph_cost = 10
 
 /datum/loadout_item/triumph_buffpot
-	name = "Vial of Distilled Triumphance (-70 TRI)"
+	name = "Vial of Distilled Triumphance (-100 TRI)"
 	path = /obj/item/reagent_containers/glass/bottle/alchemical/tripot
 	triumph_cost = 70
