@@ -247,7 +247,7 @@
 	minstr = 5
 	smeltresult = /obj/item/ingot/bronze
 	max_blade_int = 250
-	max_integrity = 125
+	max_integrity = 200
 	sheathe_icon = "bronzesword" //Placeholder. Close enough.
 
 /obj/item/rogueweapon/sword/falx
