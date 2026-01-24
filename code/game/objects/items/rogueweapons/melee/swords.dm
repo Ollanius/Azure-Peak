@@ -354,7 +354,7 @@
 
 /obj/item/rogueweapon/sword/long/triumph
 	name = "valorian longsword"
-	desc = "A lethal and perfectly balanced weapon, the longsword the protagonist of endless tales and myths \
+	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths \
 	all across Psydonia. This particular variant has a stouter crossguard and wider blade; a prevaling design \
 	from the preceding century, oft-mantled in the homes of now-retired adventurers."
 	icon = 'icons/roguetown/weapons/64.dmi'  //Framework for Triumph-purchasable longswords.
@@ -375,7 +375,7 @@
 				return list("shrink" = 0.4,"sx" = -4,"sy" = -6,"nx" = 5,"ny" = -6,"wx" = 0,"wy" = -6,"ex" = -1,"ey" = -6,"nturn" = 100,"sturn" = 156,"wturn" = 90,"eturn" = 180,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/rogueweapon/sword/long/triumph/rockhill
-	desc = "A lethal and perfectly balanced weapon, the longsword the protagonist of endless tales and myths \
+	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths \
 	all across Psydonia. This particular variant has a narrow crossguard and lengthened blade; the proportions \
 	of an ancient hero's claymore, resurrected through modern smithing techniques."
 	icon_state = "longsword_rockhill"
@@ -383,15 +383,25 @@
 	sheathe_icon = "gensword"
 
 /obj/item/rogueweapon/sword/long/triumph/sabreguard
-	desc = "A lethal and perfectly balanced weapon, the longsword the protagonist of endless tales and myths \
+	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths \
 	all across Psydonia. This particular variant has a curved crossguard and stouter blade; hallmarks of nobility, \
 	whether professed atop a saiga or against a villain's edge."
 	icon_state = "longsword_sabreguard"
 	icon_state = "longsword_sabreguard"
 	sheathe_icon = "cutlass"
 
+/obj/item/rogueweapon/sword/long/kriegmesser/sabreguard //Alternative variant for the Kriegmesser.
+	name = "valorian greatsabre"
+	icon = 'icons/roguetown/weapons/64.dmi'
+	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths \
+	all across Psydonia. This broad-edged variant has a curved crossguard and stouter blade; hallmarks of nobility, \
+	whether professed atop a saiga or against a villain's edge."
+	icon_state = "longsword_sabreguard"
+	icon_state = "longsword_sabreguard"
+	sheathe_icon = "cutlass"
+
 /obj/item/rogueweapon/sword/long/triumph/wideguard
-	desc = "A lethal and perfectly balanced weapon, the longsword the protagonist of endless tales and myths \
+	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths \
 	all across Psydonia. This particular variant has a widened crossguard, adored by lightly-armored mercenaries \
 	who cannot afford to leave a single riposte without interception."
 	icon_state = "longsword_wideguard"
@@ -399,8 +409,18 @@
 	sheathe_icon = "opsysword"
 
 /obj/item/rogueweapon/sword/long/triumph/psycrucifix
-	desc = "A lethal and perfectly balanced weapon, the longsword the protagonist of endless tales and myths \
+	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths \
 	all across Psydonia. This particular variant has a psycruciformed crossguard; a masterwork, held in silent \
+	reverance by those who've vowed to never forget the ultimate sacrifice."
+	icon_state = "longsword_psycrucifix"
+	icon_state = "longsword_psycrucifix"
+	sheathe_icon = "opsysword"
+
+/obj/item/rogueweapon/sword/long/psysword/psycrucifix
+	name = "valorian silver longsword"
+	icon = 'icons/roguetown/weapons/64.dmi'
+	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths \
+	all across Psydonia. This silvered variant has a psycruciformed crossguard; a masterwork, held in silent \
 	reverance by those who've vowed to never forget the ultimate sacrifice."
 	icon_state = "longsword_psycrucifix"
 	icon_state = "longsword_psycrucifix"
