@@ -113,6 +113,7 @@
 // Also applicable to fully metallic armor (i.e. helmet)
 #define ARMOR_PLATE_BAD list("blunt" = 10, "slash" = 50, "stab" = 50, "piercing" = 20, "fire" = 0, "acid" = 0) // For really bad / copper plate
 #define ARMOR_PLATE list("blunt" = 10, "slash" = 100, "stab" = 80, "piercing" = 40, "fire" = 0, "acid" = 0)
+#define ARMOR_PLATE_BRONZE list("blunt" = 40, "slash" = 50, "stab" = 50, "piercing" = 20, "fire" = 0, "acid" = 0) // Bronze. Same as PLATE_BAD, but with better blunt force protection - padded with leather and fur.
 #define ARMOR_PLATE_BSTEEL list("blunt" = 80, "slash" = 100, "stab" = 90, "piercing" = 80, "fire" = 0, "acid" = 0) // It's EVIL. OH GOD.
 
 //Antag / Special / Unique armor defines
