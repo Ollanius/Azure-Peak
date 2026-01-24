@@ -922,6 +922,38 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	path = /obj/item/clothing/mask/rogue/facemask/goldmaskc/triumph
 	triumph_cost = 5
 
+//
+
+/datum/loadout_item/triumph_armorkit
+	name = "Morphing Elixer, 'Valorian Steel Armor' (-5 TRI)"
+	path = /obj/item/enchantingkit/triumph_armorkit
+	triumph_cost = 5
+
+/datum/loadout_item/triumph_weaponkittri
+	name = "Morphing Elixer, 'Valorian Longsword' (-5 TRI)"
+	path = /obj/item/enchantingkit/triumph_weaponkit_tri
+	triumph_cost = 5
+
+/datum/loadout_item/triumph_weaponkitwide
+	name = "Morphing Elixer, 'Wideguard Longsword' (-5 TRI)"
+	path = /obj/item/enchantingkit/triumph_weaponkit_wide
+	triumph_cost = 5
+
+/datum/loadout_item/triumph_weaponkitrock
+	name = "Morphing Elixer, 'Rockhillian Longsword' (-5 TRI)"
+	path = /obj/item/enchantingkit/triumph_weaponkit_rock
+	triumph_cost = 5
+
+/datum/loadout_item/triumph_weaponkitsabre
+	name = "Morphing Elixer, 'Sabreguard Longsword' (-5 TRI)"
+	path = /obj/item/enchantingkit/triumph_weaponkit_sabre
+	triumph_cost = 5
+
+/datum/loadout_item/triumph_weaponkitpsy
+	name = "Morphing Elixer, 'Psycrucifix Longsword' (-5 TRI)"
+	path = /obj/item/enchantingkit/triumph_weaponkit_psy
+	triumph_cost = 5
+
 // -7 TRI Minisection.
 
 /datum/loadout_item/triumph_buttpack
