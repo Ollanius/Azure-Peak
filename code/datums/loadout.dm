@@ -992,12 +992,12 @@ GLOBAL_LIST_EMPTY(loadout_items)
 // -10 to -??? TRI Minisection.
 
 /datum/loadout_item/triumph_froggemund
-	name = "Valorian Froggemund Helmet (-100 TRI)"
+	name = "Valorian Froggemund Helmet (-70 TRI)"
 	path = /obj/item/clothing/head/roguetown/helmet/heavy/frogmouth/legacy
 	triumph_cost = 10
 
 /datum/loadout_item/triumph_cuirass
-	name = "Valorian Cuirass (-100 TRI)"
+	name = "Valorian Cuirass (-70 TRI)"
 	path = /datum/anvil_recipe/armor/steel/cuirass/legacy
 	triumph_cost = 10
 
