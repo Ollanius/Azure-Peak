@@ -444,7 +444,7 @@
 	sheathe_icon = "opsysword"
 
 /obj/item/rogueweapon/sword/rapier/wideguard //Alternate variant for the Rapier.
-	name = "valorian broad-edged rapier"
+	name = "valorian greatrapier"
 	icon = 'icons/roguetown/weapons/64.dmi'
 	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths \
 	all across Psydonia. This well-honed variant has a widened crossguard, adored by lightly-armored mercenaries \
