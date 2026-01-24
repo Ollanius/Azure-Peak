@@ -124,7 +124,7 @@
 	icon_state = "bronzebracers"
 	body_parts_covered = ARMS | HANDS //Experimental, but should play well with the increased durability.
 	smeltresult = /obj/item/ingot/bronze
-	armor = ARMOR_PLATE_BAD
+	armor = ARMOR_PLATE_BRONZE
 	max_integrity = ARMOR_INT_SIDE_BRONZE
 	prevent_crits = PREVENT_CRITS_ALL
 
