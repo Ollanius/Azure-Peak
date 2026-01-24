@@ -140,6 +140,10 @@
 	force = 15
 	grid_height = 96 //Effectively as large as a shortsword. Two in a belt, four in a satchel. Unideal for carrying without a purpose-made pouch.
 	grid_width = 32
+	slot_flags = ITEM_SLOT_HIP|ITEM_SLOT_MOUTH //Carry it on the hip or bite down like a carrot, if you're out of options.
+	equip_delay_self = 1 SECONDS //Girth. Pack a siege bolt pouch if you want to circumvent it.
+	unequip_delay_self = 1 SECONDS
+	inv_storage_delay = 1 SECONDS
 
 /obj/projectile/bullet/reusable/heavy_bolt
 	name = "heavy bolt"
