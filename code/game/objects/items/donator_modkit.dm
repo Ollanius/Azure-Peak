@@ -186,22 +186,32 @@
 
 /obj/item/enchantingkit/triumph_weaponkit_wide
 	name = "'Wideguard' longsword morphing elixir"
-	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of.. </br>..a Steel Longsword."
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of.. </br>..a Steel Longsword </br>..or a Rapier."
 	target_items = list(/obj/item/rogueweapon/sword/long)
 	result_item = /obj/item/rogueweapon/sword/long/triumph/wideguard
 
+	target_items = list(
+		/obj/item/rogueweapon/sword/long					= /obj/item/rogueweapon/sword/long/triumph/wideguard,
+		/obj/item/rogueweapon/sword/rapier	  			= /obj/item/rogueweapon/sword/rapier/wideguard
+		)
+	result_item = null
+
+
 /obj/item/enchantingkit/triumph_weaponkit_rock
 	name = "'Rockhillian' longsword morphing elixir"
-	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of.. </br>..a Steel Longsword."
-	target_items = list(/obj/item/rogueweapon/sword/long)
-	result_item = /obj/item/rogueweapon/sword/long/triumph/rockhill
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of.. </br>..a Steel Longsword.. </br>..or an Executioner Sword."
+	target_items = list(
+		/obj/item/rogueweapon/sword/long					= /obj/item/rogueweapon/sword/long/triumph/rockhill,
+		/obj/item/rogueweapon/sword/long/exe	  			= /obj/item/rogueweapon/sword/long/exe/rockhill
+		)
+	result_item = null
 
 /obj/item/enchantingkit/triumph_weaponkit_sabre
 	name = "'Sabreguard' longsword morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of.. </br>..a Steel Longsword.. </br>..or a Kriegmesser."
 	target_items = list(
 		/obj/item/rogueweapon/sword/long							= /obj/item/rogueweapon/sword/long/triumph/sabreguard,
-		/obj/item/rogueweapon/sword/long/kriegmesser	  			= /obj/item/rogueweapon/sword/long/kriegmesser/sabreguard,
+		/obj/item/rogueweapon/sword/long/kriegmesser	  			= /obj/item/rogueweapon/sword/long/kriegmesser/sabreguard
 		)
 	result_item = null
 
@@ -212,6 +222,6 @@
 	result_item = /obj/item/rogueweapon/sword/long/triumph/psycrucifix
 	target_items = list(
 		/obj/item/rogueweapon/sword/long						= /obj/item/rogueweapon/sword/long/triumph/psycrucifix,
-		/obj/item/rogueweapon/sword/long/psysword	  			= /obj/item/rogueweapon/sword/long/psysword/psycrucifix,
+		/obj/item/rogueweapon/sword/long/psysword	  			= /obj/item/rogueweapon/sword/long/psysword/psycrucifix
 		)
 	result_item = null
