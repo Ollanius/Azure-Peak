@@ -184,7 +184,7 @@
 	target_items = list(/obj/item/rogueweapon/sword/long)
 	result_item = /obj/item/rogueweapon/sword/long/triumph
 
-v/obj/item/enchantingkit/triumph_weaponkit_wide
+/obj/item/enchantingkit/triumph_weaponkit_wide
 	name = "'Wideguard' longsword morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of.. </br>..a Steel Longsword."
 	target_items = list(/obj/item/rogueweapon/sword/long)
