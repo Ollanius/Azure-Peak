@@ -528,7 +528,7 @@
 	var/distfromcaster
 	user.visible_message(span_notice("Loud whizzing clockwork and the hiss of steam comes from within [src]."))
 	to_chat(user, span_warning("[user] activates a mechanism on [src]!"))
-	addtimer(15)
+	sleep(15)
 	playsound(user, 'sound/items/steamrelease.ogg', 100, FALSE, -1)
 	cooldowny = world.time
 	addtimer(CALLBACK(src,PROC_REF(steamready), user), cdtime)
@@ -592,7 +592,7 @@
 	var/distfromcaster
 	user.visible_message(span_notice("The dorpel mounted upon [src] crackles, crackling with restored power!"))
 	to_chat(user, span_warning("[user] invokes the power within [src], releasing a powerful shockwave!"))
-	addtimer(15)
+	sleep(15)
 	playsound(user, 'sound/items/steamrelease.ogg', 100, FALSE, -1)
 	cooldowny = world.time
 	addtimer(CALLBACK(src,PROC_REF(steamready), user), cdtime)
