@@ -1068,7 +1068,7 @@
 	createditem_num = 4
 	i_type = "Ammo"
 
-datum/anvil_recipe/weapons/paalloy/heavybolts
+/datum/anvil_recipe/weapons/paalloy/heavybolts
 	name = "Siegebolts, Ancient (+1 Purified Alloy, 2 Small Logs) (x4)"
 	req_bar = /obj/item/ingot/purifiedaalloy
 	additional_items = list(/obj/item/ingot/purifiedaalloy, /obj/item/grown/log/tree/small, /obj/item/grown/log/tree/small)
