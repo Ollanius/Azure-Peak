@@ -592,7 +592,7 @@
 	var/distfromcaster
 	user.visible_message(span_notice("The dorpel mounted upon [src] crackles, crackling with restored power!"))
 	to_chat(user, span_warning("[user] invokes the power within [src], releasing a powerful shockwave!"))
-	sleep(15)
+	addtimer(15)
 	playsound(user, 'sound/items/steamrelease.ogg', 100, FALSE, -1)
 	cooldowny = world.time
 	addtimer(CALLBACK(src,PROC_REF(steamready), user), cdtime)
