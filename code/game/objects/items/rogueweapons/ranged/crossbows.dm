@@ -298,9 +298,9 @@
 	reloadtime = 20 SECONDS //Emulates the use of a windlass, similar to its real life counterparts.
 	accfactor = 0.5 //Hey, I'd like to see you try to aim a siege weapon while standing up!
 	penfactor = 0.1 //In essence: a ranged integrity cracker.
-	equip_delay_self = 2.5 SECONDS //Slower than most weapons, but quicker than a greatweapon strap's delatching.
-    unequip_delay_self = 2.5 SECONDS
-    strip_delay = 1.5 SECONDS
+	equip_delay_self = 3 SECONDS //Slower than most weapons, but quicker than a greatweapon strap's delatching.
+    unequip_delay_self = 3 SECONDS
+    strip_delay = 2 SECONDS
 
 /obj/item/ammo_box/magazine/internal/shot/heavy_xbow
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/heavy_bolt
