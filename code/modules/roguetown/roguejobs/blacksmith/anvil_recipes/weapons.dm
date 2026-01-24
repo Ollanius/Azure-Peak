@@ -89,7 +89,6 @@
 	req_bar = /obj/item/ingot/aalloy
 	created_item = /obj/item/rogueweapon/sword/short/gladius/agladius
 
-
 /datum/anvil_recipe/weapons/paalloy/gladius
 	name = "Gladius, Ancient"
 	req_bar = /obj/item/ingot/purifiedaalloy
@@ -129,7 +128,6 @@
 	name = "Mace, Decrepit"
 	req_bar = /obj/item/ingot/aalloy
 	created_item = /obj/item/rogueweapon/mace/alloy
-
 
 /datum/anvil_recipe/weapons/paalloy/mace
 	name = "Mace, Ancient"
@@ -171,13 +169,13 @@
 	additional_items = list(/obj/item/ingot/purifiedaalloy, /obj/item/ingot/purifiedaalloy)
 
 /datum/anvil_recipe/weapons/aalloy/bardiche
-	name = "Bardiche, Decrepit (+1 log, +1 Alloy)"
+	name = "Bardiche, Decrepit (+1 Small Log, +1 Alloy)"
 	req_bar = /obj/item/ingot/aalloy
 	created_item = /obj/item/rogueweapon/halberd/bardiche/aalloy
 	additional_items = list(/obj/item/ingot/iron, /obj/item/grown/log/tree/small)
 
 /datum/anvil_recipe/weapons/paalloy/bardiche
-	name = "Bardiche, Ancient (+1 log, +1 Purified Alloy)"
+	name = "Bardiche, Ancient (+1 Small Log, +1 Purified Alloy)"
 	req_bar = /obj/item/ingot/purifiedaalloy
 	created_item = /obj/item/rogueweapon/halberd/bardiche/paalloy
 	additional_items = list(/obj/item/ingot/iron, /obj/item/grown/log/tree/small)
@@ -280,6 +278,11 @@
 	req_bar = /obj/item/ingot/bronze
 	created_item = /obj/item/rogueweapon/sword/bronze
 
+/datum/anvil_recipe/weapons/bronze/sabre
+	name = "Khopesh, Bronze"
+	req_bar = /obj/item/ingot/bronze
+	created_item = /obj/item/rogueweapon/sword/sabre/bronzekhopesh
+
 /datum/anvil_recipe/weapons/bronze/axe
 	name = "Axe, Bronze"
 	req_bar = /obj/item/ingot/bronze
@@ -295,11 +298,23 @@
 	req_bar = /obj/item/ingot/bronze
 	created_item = /obj/item/rogueweapon/huntingknife/bronze
 
+/datum/anvil_recipe/weapons/bronze/falchion
+	name = "Falchion, Bronze (+1 Bronze)"
+	req_bar = /obj/item/ingot/bronze
+	additional_items = list(/obj/item/ingot/bronze)
+	created_item = /obj/item/rogueweapon/sword/falchion/militia/bronze
+
 /datum/anvil_recipe/weapons/bronze/battleaxe
 	name = "Waraxe, Bronze (+1 Bronze)"
 	req_bar = /obj/item/ingot/bronze
 	additional_items = list(/obj/item/ingot/bronze)
 	created_item = /obj/item/rogueweapon/stoneaxe/woodcut/bronzebattleaxe
+
+/datum/anvil_recipe/weapons/bronze/battlemace
+	name = "Warclub, Bronze (+1 Bronze)"
+	req_bar = /obj/item/ingot/bronze
+	additional_items = list(/obj/item/ingot/bronze)
+	created_item = /obj/item/rogueweapon/mace/warhammer/bronze
 
 /datum/anvil_recipe/weapons/bronze/whip
 	name = "Whip, Bronze-Tipped (+3 Cured Leather)"
@@ -1013,6 +1028,14 @@
 	createditem_num = 10
 	i_type = "Ammo"
 
+/datum/anvil_recipe/weapons/bronze/bolts
+	name = "Hastequilled Bolts, Bronze (+2 Stick) (x10)"
+	req_bar = /obj/item/ingot/bronze
+	additional_items = list(/obj/item/grown/log/tree/stick, /obj/item/grown/log/tree/stick)
+	created_item = /obj/item/ammo_casing/caseless/rogue/bolt/bronze
+	createditem_num = 10
+	i_type = "Ammo"
+
 /datum/anvil_recipe/weapons/aalloy/bolts
 	name = "Bolts, Decrepit (+2 Stick) (x10)"
 	req_bar = /obj/item/ingot/aalloy
@@ -1035,6 +1058,38 @@
 	additional_items = list(/obj/item/grown/log/tree/stick, /obj/item/grown/log/tree/stick)
 	created_item = /obj/item/ammo_casing/caseless/rogue/bolt/blunt
 	createditem_num = 10
+	i_type = "Ammo"
+
+/datum/anvil_recipe/weapons/aalloy/heavybolts
+	name = "Siegebolts, Decrepit (+1 Alloy, 2 Small Logs) (x4)"
+	req_bar = /obj/item/ingot/aalloy
+	additional_items = list(/obj/item/ingot/aalloy, /obj/item/grown/log/tree/small, /obj/item/grown/log/tree/small)
+	created_item = /obj/item/ammo_casing/caseless/rogue/heavy_bolt/aalloy
+	createditem_num = 4
+	i_type = "Ammo"
+
+datum/anvil_recipe/weapons/paalloy/heavybolts
+	name = "Siegebolts, Ancient (+1 Purified Alloy, 2 Small Logs) (x4)"
+	req_bar = /obj/item/ingot/purifiedaalloy
+	additional_items = list(/obj/item/ingot/purifiedaalloy, /obj/item/grown/log/tree/small, /obj/item/grown/log/tree/small)
+	created_item = /obj/item/ammo_casing/caseless/rogue/heavy_bolt/paalloy
+	createditem_num = 4
+	i_type = "Ammo"
+
+/datum/anvil_recipe/weapons/iron/heavybolts
+	name = "Siegebolts, Steel (+1 Steel, 2 Small Logs) (x2)"
+	req_bar = /obj/item/ingot/steel
+	additional_items = list(/obj/item/ingot/steel, /obj/item/grown/log/tree/small, /obj/item/grown/log/tree/small)
+	created_item = /obj/item/ammo_casing/caseless/rogue/heavy_bolt
+	createditem_num = 2
+	i_type = "Ammo"
+
+/datum/anvil_recipe/weapons/bronze/heavybolts
+	name = "Siegebolts, Bronze (+1 Bronze, +2 Small Logs) (x2)"
+	req_bar = /obj/item/ingot/bronze
+	additional_items = list(/obj/item/ingot/bronze, /obj/item/grown/log/tree/small, /obj/item/grown/log/tree/small)
+	created_item = /obj/item/ammo_casing/caseless/rogue/heavy_bolt/bronze
+	createditem_num = 2
 	i_type = "Ammo"
 
 // BOW
@@ -1127,7 +1182,7 @@
 	i_type = "Weapons"
 
 /datum/anvil_recipe/weapons/lithmyc/mace
-	name = "Lithmyc mace (+ blueprint)"
+	name = "Lithmyc Mace (+ Blueprint)"
 	req_bar = /obj/item/ingot/lithmyc
 	additional_items = list(/obj/item/blueprint/mace_mushroom)
 	created_item = /obj/item/rogueweapon/mace/mushroom
