@@ -801,7 +801,9 @@
 	sheathe_icon = "kopis"
 	gripped_intents = list(/datum/intent/rend, /datum/intent/sword/chop/militia, /datum/intent/sword/thrust/krieg, /datum/intent/sword/strike)
 	force = 20
-	force_wielded = 27 // +2/3ish over the Maciejowski, roughly ir
+	force_wielded = 27 // +2/3ish over the Maciejowski. A proper killing machine.
+	max_integrity = 175
+	max_blade_int = 350
 	anvilrepair = /datum/skill/craft/weaponsmithing
 	smeltresult = /obj/item/ingot/bronze
 	wbalance = WBALANCE_HEAVY
