@@ -350,7 +350,7 @@
 	force_wielded = 22
 	possible_item_intents = list(/datum/intent/axe/cut,/datum/intent/axe/chop)
 	name = "bone axe"
-	desc = "A crude tool, hewn from cruder marror under what must've been the crudest circumstances."
+	desc = "A crude tool, hewn from cruder marrow under what must've been the crudest circumstances."
 	icon_state = "boneaxe"
 	lefthand_file = 'icons/mob/inhands/weapons/rogue_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/rogue_righthand.dmi'
