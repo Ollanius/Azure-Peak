@@ -999,6 +999,6 @@ GLOBAL_LIST_EMPTY(loadout_items)
 // Beyond.
 
 /datum/loadout_item/triumph_buffpot
-	name = "Vial of Distilled Triumphance (-100 TRI)"
+	name = "Vial of Distilled Triumphance (-70 TRI)"
 	path = /obj/item/reagent_containers/glass/bottle/alchemical/tripot
-	triumph_cost = 100
+	triumph_cost = 70
