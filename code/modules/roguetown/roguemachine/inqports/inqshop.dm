@@ -109,7 +109,7 @@
 /datum/inqports/supplies/medical
 	name = "5 Needles and Bandaged Rolls"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/medical
-	marquescost = 8
+	marquescost = 6
 
 /obj/item/natural/bundle/cloth/roll/Initialize()
 	. = ..()
@@ -157,7 +157,7 @@
 /datum/inqports/supplies/smokes
 	name = "3 Smokebombs"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/smokes
-	marquescost = 6
+	marquescost = 4
 
 /obj/structure/closet/crate/chest/inqcrate/supplies/smokes/Initialize()
 	. = ..()
@@ -168,7 +168,7 @@
 /datum/inqports/supplies/bottlebombs
 	name = "3 Bottlebombs"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/bottlebombs
-	marquescost = 8
+	marquescost = 6
 	maximum = 3
 
 /obj/structure/closet/crate/chest/inqcrate/supplies/bottlebombs/Initialize()
@@ -180,7 +180,7 @@
 /datum/inqports/supplies/tnt
 	name = "3 Blastpowder Sticks"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/tnt
-	marquescost = 10
+	marquescost = 8
 	maximum = 3
 
 /obj/structure/closet/crate/chest/inqcrate/supplies/tnt/Initialize()
@@ -192,7 +192,7 @@
 /datum/inqports/supplies/tntsatchel
 	name = "1 Blastpowder Satchel"
 	item_type = /obj/item/satchel_bomb
-	marquescost = 16
+	marquescost = 12
 	maximum = 2
 
 // ✤ ARTICLES ✤ RIGHT HERE! THAT'S RIGHT!
@@ -293,13 +293,13 @@
 	name = "1 Silver Arrow"
 	item_type = /obj/item/ammo_casing/caseless/rogue/arrow/silver
 	maximum = 3
-	marquescost = 8
+	marquescost = 4
 
 /datum/inqports/equipment/silvbolt
 	name = "1 Silver Bolt"
 	item_type = /obj/item/ammo_casing/caseless/rogue/bolt/silver
 	maximum = 3
-	marquescost = 8
+	marquescost = 6
 
 /datum/inqports/equipment/silvheavybolt
 	name = "1 Silver Heavy Bolt"
@@ -307,15 +307,21 @@
 	maximum = 3
 	marquescost = 8
 
+/datum/inqports/equipment/silverstake
+	name = "1 Silver-Tipped Stake"
+	item_type = /obj/item/rogueweapon/huntingknife/idagger/silver/stake
+	maximum = 5
+	marquescost = 8
+
 /datum/inqports/supplies/blessedbolts
 	name = "1 Quiver of Sunderbolts"
 	item_type = /obj/item/quiver/holybolts
-	marquescost = 8
+	marquescost = 6
 
 /datum/inqports/equipment/nocshades
 	name = "1 Pair of Nocshade-Lenses"
 	item_type = /obj/item/clothing/mask/rogue/spectacles/inq
-	marquescost = 12
+	marquescost = 10
 
 /datum/inqports/equipment/climbinggear
 	name = "1 Set of Climbing Gear"
@@ -330,25 +336,26 @@
 /datum/inqports/equipment/listener
 	name = "1 Listening Device"
 	item_type = /obj/item/listeningdevice
-	marquescost = 4
+	marquescost = 2
 
 /datum/inqports/equipment/whisperer
 	name = "1 Secret Whisperer"
 	item_type = /obj/item/speakerinq
-	marquescost = 4
+	marquescost = 2
 
 /datum/inqports/equipment/inqcordage
-	name = "2 Spools of Inquiry Cordage"
+	name = "3 Spools of Inquiry Cordage"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/equipment/inqcordage
-	marquescost = 4
+	marquescost = 3
 
 /obj/structure/closet/crate/chest/inqcrate/equipment/inqcordage/Initialize()
 	. = ..()
 	new /obj/item/rope/inqarticles/inquirycord(src)
 	new /obj/item/rope/inqarticles/inquirycord(src)
+	new /obj/item/rope/inqarticles/inquirycord(src)
 
 /datum/inqports/equipment/chains
-	name = "2 Lengths of Chain"
+	name = "3 Lengths of Chain"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/chains
 	marquescost = 6
 
@@ -356,11 +363,12 @@
 	. = ..()
 	new /obj/item/rope/chain(src)
 	new /obj/item/rope/chain(src)
+	new /obj/item/rope/chain(src)
 
 /datum/inqports/equipment/blackbags
 	name = "3 Black Bags"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/equipment/blackbags
-	marquescost = 8
+	marquescost = 6
 
 /obj/structure/closet/crate/chest/inqcrate/equipment/blackbags/Initialize()
 	. = ..()
@@ -371,7 +379,7 @@
 /datum/inqports/equipment/psybles
 	name = "3 Tomes of Psydonic Scripture"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/articles/psybles
-	marquescost = 6
+	marquescost = 3
 
 /obj/structure/closet/crate/chest/inqcrate/articles/psybles/Initialize()
 	. = ..()
@@ -398,27 +406,27 @@
 	name = "1 Silver Psycross"
 	item_type = /obj/item/clothing/neck/roguetown/psicross/silver
 	maximum = 3
-	marquescost = 16
+	marquescost = 12
 
 /datum/inqports/wardrobe/otavansatchel
 	name = "1 Satchel, Otavan Leather"
 	item_type = /obj/item/storage/backpack/rogue/satchel/otavan
-	marquescost = 4
+	marquescost = 3
 
 /datum/inqports/wardrobe/satchelbelted
 	name = "1 Satchel, Belted"
 	item_type = /obj/item/storage/backpack/rogue/satchel/beltpack
-	marquescost = 8
+	marquescost = 6
 
 /datum/inqports/wardrobe/psysack
 	name = "1 Psydonian Facemask"
 	item_type = /obj/item/clothing/mask/rogue/sack/psy
-	marquescost = 4
+	marquescost = 3
 
 /datum/inqports/wardrobe/strangemask
 	name = "1 Confessor's Strange Mask"
 	item_type = /obj/item/clothing/mask/rogue/facemask/steel/confessor
-	marquescost = 8
+	marquescost = 6
 
 /datum/inqports/wardrobe/psydonthorns
 	name = "1 Psydonian Crown of Thorns"
@@ -428,7 +436,7 @@
 /datum/inqports/wardrobe/psydonhelms
 	name = "The 'Greathelms of Psydon' Crate"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/equipment/psydonhelms
-	marquescost = 16
+	marquescost = 12
 	maximum = 1
 
 /obj/structure/closet/crate/chest/inqcrate/equipment/psydonhelms/Initialize()
