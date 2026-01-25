@@ -205,14 +205,14 @@
 	smeltresult = null // TODO: We don't have partial melt so coping time
 
 /obj/item/rogueweapon/huntingknife/bronze
-	name = "bronze dagger"
+	name = "bronze knife"
 	desc = "A wide blade of bronze, fitted to a wooden handle. Ancient laborers and priests coveted this tool above all else: both as a means to handle the dae's labors, and to indulge in the rituos of sacrifice."
-	icon_state = "bronzedagger"
-	sheathe_icon = "bronzedagger"
+	icon_state = "bronzeknife"
+	sheathe_icon = "genknife"
 	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/chop/bronze, /datum/intent/dagger/sucker_punch, /datum/intent/dagger/thrust/bronze)
 	force = 18
 	throwforce = 18
-	max_blade_int = 225
+	max_blade_int = 200
 	max_integrity = 175
 	smeltresult = /obj/item/ingot/bronze
 
@@ -303,35 +303,6 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	smeltresult = /obj/item/ingot/steel
 
-/obj/item/rogueweapon/huntingknife/cleaver/getonmobprop(tag)
-	. = ..()
-	if(tag)
-		switch(tag)
-			if("gen")
-				return list("shrink" = 0.5,
-"sx" = -10,
-"sy" = 0,
-"nx" = 13,
-"ny" = 2,
-"wx" = -8,
-"wy" = 2,
-"ex" = 5,
-"ey" = 2,
-"northabove" = 0,
-"southabove" = 1,
-"eastabove" = 1,
-"westabove" = 0,
-"nturn" = 21,
-"sturn" = -18,
-"wturn" = -18,
-"eturn" = 21,
-"nflip" = 0,
-"sflip" = 8,
-"wflip" = 8,
-"eflip" = 0)
-			if("onbelt")
-				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
-
 /obj/item/rogueweapon/huntingknife/chefknife
 	force = 15
 	name = "chef's knife"
@@ -373,6 +344,18 @@
 				return list("shrink" = 0.7,"sx" = -10,"sy" = 0,"nx" = 11,"ny" = 0,"wx" = -4,"wy" = 0,"ex" = 2,"ey" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 14,"sturn" = -14,"wturn" = 16,"eturn" = 17,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
 			if("onbelt")
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
+
+/obj/item/rogueweapon/huntingknife/combat/bronze
+	name = "sydearmme"
+	desc = "Wedged bronze and whittled rockwood, handfitted into the dagger's most ancient-of-ancestors. It bares marks of flintknaping along its middlewidth; a customary tradition that's purported to atune its edge to the forces of nature."
+	icon_state = "bronzedagger"
+	sheathe_icon = "bronzedagger"
+	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/chop/bronze, /datum/intent/dagger/sucker_punch, /datum/intent/dagger/thrust/bronze)
+	force = 20 //Sidegrade of the combat knife. Less damage and lower multipliers, but more blade integrity and a reduced pick variable.
+	throwforce = 20
+	max_blade_int = 250
+	max_integrity = 130 //Less integrity as well.
+	smeltresult = /obj/item/ingot/bronze
 
 /datum/intent/dagger/thrust/combat
 	name = "wedged thrust"
@@ -946,7 +929,7 @@
 	name = "knife"
 	desc = "A stout blade affixed to a stouter handle, fit for any labor that the dae thrusts upon it. Keeping one tucked inside the boot is a favored trick amongst overcautious adventurers; a surprise for disarming presences."
 	icon_state = "vdagger"
-	sheathe_icon = "warden_machete"
+	sheathe_icon = "genknife"
 	wdefense = 1
 	max_blade_int = 250
 	max_integrity = 250
