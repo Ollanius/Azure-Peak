@@ -49,15 +49,20 @@
 	cost = 250
 	contains = list(/obj/item/clothing/neck/roguetown/psicross/silver/astrata)
 
+/datum/supply_pack/rogue/luxury/silvertencross
+	name = "Silver Amulet of the Pantheon"
+	cost = 250
+	contains = list(/obj/item/clothing/neck/roguetown/psicross/silver/undivided)
+
 /datum/supply_pack/rogue/luxury/silvernecracross
 	name = "Silver Amulet of Necra"
 	cost = 250
 	contains = list(/obj/item/clothing/neck/roguetown/psicross/silver/necra)
 
-/datum/supply_pack/rogue/luxury/silvertencross
-	name = "Silver Amulet of the Pantheon"
+/datum/supply_pack/rogue/luxury/silvernoccross
+	name = "Silver Amulet of Noc"
 	cost = 250
-	contains = list(/obj/item/clothing/neck/roguetown/psicross/silver/undivided)
+	contains = list(/obj/item/clothing/neck/roguetown/psicross/silver/noc)
 
 /datum/supply_pack/rogue/luxury/silverdagger
 	name = "Silver Dagger"
