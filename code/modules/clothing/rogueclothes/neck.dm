@@ -533,6 +533,12 @@
 	desc = "There is always more to know, more to learn, more to be."
 	icon_state = "noc"
 
+/obj/item/clothing/neck/roguetown/psicross/silver/noc
+	name = "blessed amulet of Noc"
+	desc = "Within the Beyond, where dreams and daemons coalesce, lies the secret to all knowledge; both arcyne and aeternal. Under my ward, I shall guide thee forth to this pedestal."
+	icon_state = "noc"
+	sellprice = 50
+
 /obj/item/clothing/neck/roguetown/psicross/abyssor
 	name = "amulet of Abyssor"
 	desc = "To fear the unknown is to turn away from the greatest mysteries of all."
@@ -567,7 +573,7 @@
 
 /obj/item/clothing/neck/roguetown/psicross/ravox/bronze
 	name = "bronze amulet of Ravox"
-	desc = "Never forget; I am with you in the dark."
+	desc = "'YOU FIGHT WELL, RAVOX OF UR. YOUR CLEMENCY HATH BEEN EARNED. SURRENDER NOW, AND GRAGGAR SHALL-'</br>‎  </br>'No.' </br>‎  </br>'-WHAT? YOU'RE GOING TO THROW AWAY YOUR LYFE FOR A GOD THAT HAS NO LOVE FOR YOU?' </br>‎  </br>'One of us will.'"
 	icon_state = "ravox_b"
 
 /obj/item/clothing/neck/roguetown/psicross/malum

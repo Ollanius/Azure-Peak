@@ -763,7 +763,7 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/graggar
 	name = "vicious helmet"
-	desc = "'YOU FIGHT WELL. YOUR CLEMENCY HATH BEEN EARNED. SURRENDER NOW, AND THE SINISTAR SHALL-'</br>‎  </br>'No.' </br>‎  </br>'-WHAT? YOU'RE GOING TO THROW AWAY YOUR LYFE FOR A GOD THAT HAS NO LOVE FOR YOU?' </br>‎  </br>'One of us will.'"
+	desc = "Snarled teeth gnash the unholy bascinet's visor, drenched in scarlet. Your beluxed invocation; the dinnerbell for a feast of blood and steel."
 	icon_state = "graggarplatehelm"
 	max_integrity = ARMOR_INT_HELMET_ANTAG
 	flags_inv = HIDEEARS|HIDEFACE|HIDESNOUT|HIDEHAIR|HIDEFACIALHAIR
