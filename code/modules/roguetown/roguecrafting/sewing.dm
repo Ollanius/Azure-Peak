@@ -788,6 +788,7 @@
 	category = "Bracers"
 	result = list(/obj/item/clothing/wrists/roguetown/bracers/cloth/monk)
 	reqs = list(/obj/item/natural/cloth = 3,
+				/obj/item/natural/hide/cured = 1,
 				/obj/item/natural/fibers = 2)
 	craftdiff = 3
 
@@ -796,6 +797,7 @@
 	category = "Coifs"
 	result = list(/obj/item/clothing/head/roguetown/headband/monk/barbarian)
 	reqs = list(/obj/item/natural/cloth = 3,
+				/obj/item/natural/hide/cured = 1,
 				/obj/item/natural/fibers = 2)
 	craftdiff = 3
 
@@ -803,7 +805,8 @@
 	name = "padded headband, monk's style"
 	category = "Coifs"
 	result = list(/obj/item/clothing/head/roguetown/headband/monk)
-	reqs = list(/obj/item/natural/cloth = 4,
+	reqs = list(/obj/item/natural/cloth = 3,
+				/obj/item/natural/hide/cured = 2,
 				/obj/item/natural/fibers = 2)
 	craftdiff = 4
 
