@@ -261,6 +261,27 @@
 	smeltresult = /obj/item/ingot/iron
 	max_integrity = ARMOR_INT_HELMET_HEAVY_IRON
 
+/obj/item/clothing/head/roguetown/helmet/heavy/knight/gold
+	name = "golden knight's armet"
+	desc = "A resplendant armet, masterfully forged from pure gold. Hexagrammic etchings of a holy sigil line its visor, and its interior is fitted with a besilked arming cap. Even in absolute darkness, the polished surface sparkles with imbued sunlight."
+	icon_state = "goldknight"
+	armor = ARMOR_GOLD //Renders its wearer completely invulnerable to damage. The caveat is, however..
+	max_integrity = ARMOR_INT_SIDE_GOLD // ..is that it's extraordinarily fragile. To note, this is lower than even Decrepit-tier armor.
+	armor_class = ARMOR_CLASS_HEAVY //Ceremonial. Heavy is the head that bares the burden.
+	anvilrepair = null
+	smeltresult = /obj/item/ingot/gold
+	smelt_bar_num = 1 //Prevents resmelting to easily recreate.
+	grid_height = 96 //Prevents 'armorstacking'. That, and it's like.. carrying a golden watermelon.
+	grid_width = 96
+	sellprice = 200
+
+/obj/item/clothing/head/roguetown/helmet/heavy/knight/gold/king
+	name = "royal golden armet"
+	desc = "A resplendant armet, masterfully forged from pure gold. Hexagrammic etchings of a holy sigil line its visor, and its interior is fitted with a besilked arming cap. The dorpeled crown atop its brow invokes authority, be it misbegotten or endowed."
+	icon_state = "goldknight_crown"
+	max_integrity = ARMOR_INT_SIDE_GOLDPLUS // Doubled integrity.
+	sellprice = 300
+
 /obj/item/clothing/head/roguetown/helmet/heavy/knight/skettle
 	name = "slitted kettle helm"
 	desc = "A reinforced Eisenhut that's been extended downwards to cover the face, fully protecting the wearer but limiting his field of view. Pairs well with a bevor."
