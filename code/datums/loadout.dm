@@ -859,7 +859,7 @@ GLOBAL_LIST_EMPTY(loadout_items)
 
 /datum/loadout_item/triumph_bedroll
 	name = "Bedroll (-5 TRI)"
-	path = /obj/structure/bed/rogue/bedroll
+	path = /obj/item/bedroll
 	triumph_cost = 5
 
 /datum/loadout_item/triumph_scabbardnoble
