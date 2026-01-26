@@ -528,7 +528,8 @@
 	valid_blade = /obj/item/rogueweapon/sword
 	invalid_blades = list(
 		/obj/item/rogueweapon/sword/long/exe,
-		/obj/item/rogueweapon/sword/long/martyr
+		/obj/item/rogueweapon/sword/long/martyr,
+		/obj/item/rogueweapon/sword/long/exe/berserk
 	)
 
 	force = 7
