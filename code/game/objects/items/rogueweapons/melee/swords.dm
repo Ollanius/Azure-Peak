@@ -175,7 +175,6 @@
 
 
 //sword objs ฅ^•ﻌ•^ฅ
-
 /obj/item/rogueweapon/sword
 	name = "arming sword"
 	desc = "A long steel blade attached to a hilt, separated by a crossguard. The arming sword has been Psydonia's implement of war by excellence for generations."
@@ -348,6 +347,44 @@
 	. = ..()
 	AddComponent(/datum/component/skill_blessed, TRAIT_LONGSWORDSMAN, /datum/skill/combat/swords, SKILL_LEVEL_MASTER)
 
+/obj/item/rogueweapon/sword/long/broadsword
+	name = "broadsword"
+	desc = "A lethal and well-balanced weapon. The broadsword - better known as a 'hand-and-a-halfer' - has dutifully served the \
+	swordsmen of Psydonia in their clashes against man-and-monster alike since time immemmorial. It is one of Rockhill's greatest \
+	cultural hallmarks, just behind the concepts of 'zenny-a-mug' happy hours and 'killing people over minor disagreements.'"
+	icon_state = "broadsword"
+	sheathe_icon = "broadsword"
+	max_blade_int = 230 //Less of an edge than the longsword..
+	max_integrity = 180 //..but tougher.
+	wdefense_wbonus = 3 // Same defense when one-handed, but slightly reduced wielded defense compared to the longsword.
+	possible_item_intents = list(/datum/intent/sword/chop, /datum/intent/sword/thrust/long, /datum/intent/sword/strike, /datum/intent/sword/peel) 
+	smeltresult = /obj/item/ingot/iron //Note for the above line - otherwise 1:1 with the longsword, intent-wise. One-handed chop helps to fill the gap left by the lack of iron axes.
+
+/obj/item/rogueweapon/sword/long/broadsword/bronze
+	name = "spatha"
+	desc = "A hero needn't speak - for when they are gone, the world will speak for them."
+	icon_state = "spatha"
+	sheathe_icon = "spatha"
+	wdefense = 3 //On par with the Gladius, as the Spatha is.. essentially.. a longer Gladius. Lowest WDEF of all longswords.
+	wdefense_wbonus = 3
+	max_blade_int = 295 //Inverse. Sharper..
+	max_integrity = 125 //..but weaker.
+	possible_item_intents = list(/datum/intent/sword/chop, /datum/intent/sword/thrust/long, /datum/intent/sword/strike, /datum/intent/sword/peel) 
+	smeltresult = /obj/item/ingot/bronze //Like before, it falls under the unofficial 'broadsword' category with one-handed chops. Best to pack a shield!
+
+/obj/item/rogueweapon/sword/long/broadsword/steel
+	name = "steel broadsword"
+	desc = "A lethal and well-balanced weapon. The broadsword - better known as a 'hand-and-a-halfer' - has dutifully served the \
+	swordsmen of Psydonia in their clashes against man-and-monster alike since time immemmorial. Valoria's watchmen are renowned for \
+	their use of these steel-bladed iterations: an expensive necessity, in order to lay their undying besiegers to rest for good."
+	icon_state = "broadsword"
+	sheathe_icon = "sbroadsword"
+	max_blade_int = 330 //Sharper than a longsword, but with reduced defense. The use of steel balances its integrity out with a slight +10 bonus.
+	max_integrity = 160 
+	wdefense_wbonus = 3
+	possible_item_intents = list(/datum/intent/sword/chop, /datum/intent/sword/thrust/long, /datum/intent/sword/strike, /datum/intent/sword/peel) 
+	smeltresult = /obj/item/ingot/steel //Note for the above line - otherwise 1:1 with the longsword, intent-wise. One-handed chop helps to fill the gap left by the lack of iron axes.
+
 ////////////////////////
 // TRIUMPH-EXCLUSIVE! //
 ////////////////////////
@@ -385,13 +422,36 @@
 /obj/item/rogueweapon/sword/long/exe/rockhill //Alternate version of the Executioner Sword.
 	name = "valorian claymore"
 	icon = 'icons/roguetown/weapons/64.dmi'
-	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths \
+	desc = "A lethal and well-balanced weapon, the broadsword is the deuteragonist of endless tales and myths \
 	all across Psydonia. This sharp-edged variant has a narrow crossguard and lengthened blade; the proportions \
 	of an ancient hero's claymore, resurrected through modern smithing techniques."
 	icon_state = "longsword_rockhill"
 	icon_state = "longsword_rockhill"
 
 /obj/item/rogueweapon/sword/long/exe/rockhill/getonmobprop(tag)
+	. = ..()
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.5,"sx" = -14,"sy" = -8,"nx" = 15,"ny" = -7,"wx" = -10,"wy" = -5,"ex" = 7,"ey" = -6,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -13,"sturn" = 110,"wturn" = -60,"eturn" = -30,"nflip" = 1,"sflip" = 1,"wflip" = 8,"eflip" = 1)
+			if("onback")
+				return list("shrink" = 0.5,"sx" = -1,"sy" = 2,"nx" = 0,"ny" = 2,"wx" = 2,"wy" = 1,"ex" = 0,"ey" = 1,"nturn" = 0,"sturn" = 0,"wturn" = 70,"eturn" = 15,"nflip" = 1,"sflip" = 1,"wflip" = 1,"eflip" = 1,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0)
+			if("wielded")
+				return list("shrink" = 0.5,"sx" = 5,"sy" = -2,"nx" = -6,"ny" = -2,"wx" = -6,"wy" = -2,"ex" = 7,"ey" = -2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -28,"sturn" = 29,"wturn" = -35,"eturn" = 32,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
+			if("onbelt")
+				return list("shrink" = 0.4,"sx" = -4,"sy" = -6,"nx" = 5,"ny" = -6,"wx" = 0,"wy" = -6,"ex" = -1,"ey" = -6,"nturn" = 100,"sturn" = 156,"wturn" = 90,"eturn" = 180,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
+
+/obj/item/rogueweapon/sword/long/broadsword/steel/rockhill //Alternate version of the Broadsword.
+	name = "valorian broadsword"
+	icon = 'icons/roguetown/weapons/64.dmi'
+	desc = "A lethal and well-balanced weapon. The broadsword - better known as a 'hand-and-a-halfer' - has dutifully served the \
+	swordsmen of Psydonia in their clashes against man-and-monster alike since time immemmorial. The edge glimmers with the hopes \
+	and dreams of the Weeping God's children, imbuing your very soul with determination. ‎</br>‎‎ </br>'There's a light inside your \
+	soul, that’s still shining in the cold: the truth, the promise in our hearts.. ..don't forget, I'm with you in the dark.'"
+	icon_state = "longsword_rockhill"
+	icon_state = "longsword_rockhill"
+
+/obj/item/rogueweapon/sword/long/broadsword/steel/rockhill/getonmobprop(tag)
 	. = ..()
 	if(tag)
 		switch(tag)
