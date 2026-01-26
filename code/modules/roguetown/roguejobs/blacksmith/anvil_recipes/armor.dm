@@ -699,7 +699,7 @@
 	req_bar = /obj/item/ingot/steel
 	req_blade = /obj/item/blade/steel_plate
 	additional_items = list(/obj/item/ingot/steel, /obj/item/clothing/suit/roguetown/armor/gambeson/lord/heavy/silkjacket) //Quick patchwork to prevent loadouteers from gaming the system.
-	created_item = /obj/item/clothing/suit/roguetown/armor/chainmail/light
+	created_item = /obj/item/clothing/suit/roguetown/armor/chainmail/light/fencer
 
 /datum/anvil_recipe/armor/steel/lightcuirass
 	name = "Cuirass, Fencing, Steel (+1 Steel, +1 Fencing Jacket)" //needs cooperation with a tailor to make
