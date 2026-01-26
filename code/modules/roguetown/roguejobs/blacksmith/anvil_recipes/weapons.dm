@@ -1156,7 +1156,7 @@
 	createditem_num = 4
 	i_type = "Ammo"
 
-/datum/anvil_recipe/weapons/iron/heavybolts
+/datum/anvil_recipe/weapons/steel/heavybolts
 	name = "Siegebolts, Steel (+1 Steel, 2 Small Logs) (x2)"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel, /obj/item/grown/log/tree/small, /obj/item/grown/log/tree/small)
@@ -1164,8 +1164,16 @@
 	createditem_num = 2
 	i_type = "Ammo"
 
+/datum/anvil_recipe/weapons/iron/heavybolts
+	name = "Siegebolts, Blunt (+1 Iron, 2 Small Logs) (x2)"
+	req_bar = /obj/item/ingot/iron
+	additional_items = list(/obj/item/ingot/iron, /obj/item/grown/log/tree/small, /obj/item/grown/log/tree/small)
+	created_item = /obj/item/ammo_casing/caseless/rogue/heavy_bolt/blunt
+	createditem_num = 2
+	i_type = "Ammo"
+
 /datum/anvil_recipe/weapons/bronze/heavybolts
-	name = "Siegebolts, Bronze (+1 Bronze, +2 Small Logs) (x2)"
+	name = "Hastequilled Siegebolts, Bronze (+1 Bronze, +2 Small Logs) (x2)"
 	req_bar = /obj/item/ingot/bronze
 	additional_items = list(/obj/item/ingot/bronze, /obj/item/grown/log/tree/small, /obj/item/grown/log/tree/small)
 	created_item = /obj/item/ammo_casing/caseless/rogue/heavy_bolt/bronze
@@ -1244,6 +1252,12 @@
 	createditem_num = 10
 	i_type = "Ammo"
 
+/datum/anvil_recipe/weapons/steel/slingbullets
+	name = "Sling Bullets, Steel (x5)"
+	req_bar = /obj/item/ingot/steel
+	created_item = /obj/item/ammo_casing/caseless/rogue/sling_bullet/steel
+	createditem_num = 5
+	i_type = "Ammo"
 
 // UNIQUE
 

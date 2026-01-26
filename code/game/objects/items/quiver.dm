@@ -427,6 +427,13 @@
 		arrows += A
 	update_icon()
 
+/obj/item/quiver/bolt/heavy/blunt/Initialize()
+	..()
+	for(var/i in 1 to max_storage)
+		var/obj/item/ammo_casing/caseless/rogue/heavy_bolt/blunt/A = new()
+		arrows += A
+	update_icon()
+
 /obj/item/quiver/bolt/heavy/silver/Initialize()
 	..()
 	for(var/i in 1 to max_storage)
@@ -581,10 +588,24 @@
 /obj/item/quiver/sling/update_icon()
 	return
 
+/obj/item/quiver/sling/stone/Initialize()
+	. = ..()
+	for(var/i in 1 to max_storage)
+		var/obj/item/ammo_casing/caseless/rogue/sling_bullet/stone/A = new()
+		arrows += A
+	update_icon()
+
 /obj/item/quiver/sling/iron/Initialize()
 	. = ..()
 	for(var/i in 1 to max_storage)
 		var/obj/item/ammo_casing/caseless/rogue/sling_bullet/iron/A = new()
+		arrows += A
+	update_icon()
+
+/obj/item/quiver/sling/steel/Initialize()
+	. = ..()
+	for(var/i in 1 to max_storage)
+		var/obj/item/ammo_casing/caseless/rogue/sling_bullet/steel/A = new()
 		arrows += A
 	update_icon()
 
