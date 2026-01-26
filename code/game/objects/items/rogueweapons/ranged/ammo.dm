@@ -100,11 +100,11 @@
 
 /obj/projectile/bullet/reusable/bolt/bronze
 	damage = 70
-	armor_penetration = 35
+	armor_penetration = 30 //Same damage, but reduced penetration.
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/bolt/bronze
 	icon_state = "bronzebolt_proj"
 	npc_simple_damage_mult = 3 //More damage over simplemobs!
-	speed = 1.5 // Faster!
+	speed = 0.15 // Faster!
 
 /obj/projectile/bullet/reusable/bolt/holy
 	name = "sunderbolt"
@@ -149,7 +149,8 @@
 	name = "heavy bolt"
 	damage = 120 //+50% the damage of a regular crossbow bolt.
 	damage_type = BRUTE
-	armor_penetration = 0 //No penetration. 
+	armor_penetration = 0 //No penetration.
+	demolition_mod = 10 //Should destroy wooden barricades and doors in one shot, stone-and-iron doors in two, and The Gate in four.
 	icon = 'icons/roguetown/weapons/ammo.dmi'
 	icon_state = "heavybolt_proj"
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/heavy_bolt
@@ -158,7 +159,7 @@
 	embedchance = 100
 	woundclass = BCLASS_PIERCE
 	flag = "piercing"
-	speed = 0.3
+	speed = 0.8 //Half the speed of a traditional bolt. Between crossbows and NPC-fired projectiles, in terms of speed - evadable by PCs at longer ranges.
 	npc_simple_damage_mult = 3 //..or 360 damage against mindless opponents. Run them through!
 
 /obj/item/ammo_casing/caseless/rogue/heavy_bolt/blunt
@@ -170,8 +171,9 @@
 
 /obj/projectile/bullet/reusable/heavy_bolt/blunt
 	name = "blunt heavy bolt"
-	damage = 90 
+	damage = 90
 	embedchance = 50 //'If you're reading this, duck!'
+	demolition_mod = 12 //Ensures the bolt can still, at a minimum, destroy most wooden barricades and doors in one shot.
 	woundclass = BCLASS_BLUNT
 	icon_state = "heavybolt_proj"
 
@@ -186,6 +188,7 @@
 	name = "decrepit heavy bolt"
 	damage = 90 
 	embedchance = 50
+	demolition_mod = 12 //Ensures the bolt can still, at a minimum, destroy most wooden barricades and doors in one shot.
 	icon_state = "ancientbolt_proj"
 	poisontype = /datum/reagent/stampoison
 	poisonamount = 2 //You are, in essence, giving them tenantus.
@@ -221,7 +224,7 @@
 	damage = 100
 	embedchance = 100
 	icon_state = "bronzebolt_proj"
-	speed = 0.7 //Travels twice as quickly as a regular bolt, at the cost of some damage.
+	speed = 0.3 // Exchanges damage for being far quicker than its compatriots - roughly a little better than a regular crossbow bolt.
 
 //
 
@@ -374,7 +377,7 @@
 	armor_penetration = 10
 	embedchance = 60 //+20 damage and embedding, -50% AP. 
 	npc_simple_damage_mult = 3 //More damage over simplemobs!
-	speed = 1.3 // Faster!
+	speed = 0.15 // Faster!
 
 // POISON AMMO
 /obj/item/ammo_casing/caseless/rogue/arrow/poison
@@ -462,7 +465,7 @@
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/heavy_bolt/silver
 	icon_state = "silvheavybolt_proj"
 	hitsound = 'sound/combat/hits/hi_bolt (3).ogg'
-	speed = 0.5
+	speed = 0.4 //Same speed as a crossbow bolt. 
 	poisontype = /datum/reagent/water/blessed
 	poisonamount = 20
 	npc_simple_damage_mult = 10 //..or 1200 damage against a mindless mob. If you're using this against one, you're either a fool or have no other choice left. Godspeed.
@@ -953,7 +956,7 @@
 	damage = 35
 	armor_penetration = 20 //Slightly more damage, but with -33% AP.
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/sling_bullet/bronze
-	speed = 0.7 // Faster!
+	speed = 0.15 // Faster!
 
 /obj/projectile/bullet/reusable/sling_bullet/iron
 	name = "iron sling bullet"
