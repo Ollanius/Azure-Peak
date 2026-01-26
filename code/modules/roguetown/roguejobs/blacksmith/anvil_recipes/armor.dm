@@ -253,36 +253,42 @@
 /datum/anvil_recipe/armor/bronze/barbute
 	name = "Barbute, Bronze (+1 Bronze, +2 Cured Leather)"
 	req_bar = /obj/item/ingot/bronze
+	req_blade = /obj/item/blade/bronze_plate
 	additional_items = list(/obj/item/ingot/bronze, /obj/item/natural/hide/cured, /obj/item/natural/hide/cured)
 	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/bronze
 
 /datum/anvil_recipe/armor/bronze/cuirass
 	name = "Cuirass, Bronze (+1 Bronze, +2 Cured Leather)"
 	req_bar = /obj/item/ingot/bronze
+	req_blade = /obj/item/blade/bronze_plate
 	additional_items = list(/obj/item/ingot/bronze, /obj/item/natural/hide/cured, /obj/item/natural/hide/cured)
 	created_item = /obj/item/clothing/suit/roguetown/armor/plate/bronze
 
 /datum/anvil_recipe/armor/bronze/gorget
 	name = "Neckguard, Bronze (+1 Cured Leather)"
 	req_bar = /obj/item/ingot/bronze
+	req_blade = /obj/item/blade/bronze_plate
 	additional_items = list(/obj/item/natural/hide/cured)
 	created_item = /obj/item/clothing/neck/roguetown/gorget/bronze
 
 /datum/anvil_recipe/armor/bronze/bracers
 	name = "Bracers, Bronze (+1 Cured Leather)"
 	req_bar = /obj/item/ingot/bronze
+	req_blade = /obj/item/blade/bronze_plate
 	additional_items = list(/obj/item/natural/hide/cured)
 	created_item = /obj/item/clothing/wrists/roguetown/bracers/bronze
 
 /datum/anvil_recipe/armor/bronze/greaves
 	name = "Greaves, Bronze (+1 Cured Leather)"
 	req_bar = /obj/item/ingot/bronze
+	req_blade = /obj/item/blade/bronze_plate
 	additional_items = list(/obj/item/natural/hide/cured)
 	created_item = /obj/item/clothing/shoes/roguetown/boots/armor/bronze
 
 /datum/anvil_recipe/armor/bronze/skirt
 	name = "Chainskirt, Bronze (+1 Cured Leather)"
 	req_bar = /obj/item/ingot/bronze
+	req_blade = /obj/item/blade/bronze_plate
 	additional_items = list(/obj/item/natural/hide/cured)
 	created_item = /obj/item/clothing/under/roguetown/heavy_leather_pants/bronzeskirt
 
