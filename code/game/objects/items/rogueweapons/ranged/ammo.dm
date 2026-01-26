@@ -161,6 +161,20 @@
 	speed = 0.3
 	npc_simple_damage_mult = 3 //..or 360 damage against mindless opponents. Run them through!
 
+/obj/item/ammo_casing/caseless/rogue/heavy_bolt/blunt
+	name = "blunt heavy bolt"
+	desc = "Ostensibly, these wrought-iron siegebolts are meant for the calibration of a siegebow's ever-particular mechanisms. In practice, besieged artificers have discovered another use for these ten-kilogram battering rams."
+	possible_item_intents = list(/datum/intent/mace/strike)
+	icon_state = "bluntheavybolt"
+	projectile_type = /obj/projectile/bullet/reusable/heavy_bolt/blunt
+
+/obj/projectile/bullet/reusable/heavy_bolt/blunt
+	name = "blunt heavy bolt"
+	damage = 90 
+	embedchance = 50 //'If you're reading this, duck!'
+	woundclass = BCLASS_BLUNT
+	icon_state = "heavybolt_proj"
+
 /obj/item/ammo_casing/caseless/rogue/heavy_bolt/aalloy
 	name = "decrepit heavy bolt"
 	desc = "A length of frayed bronze, quilled to take flight and tear down the living. Metal flakes occassionally peel off from its core, mysteriously hovering about - tolerable by the undying, but unbearibly noxious to the living."
