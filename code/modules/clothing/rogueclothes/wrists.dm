@@ -146,7 +146,7 @@
 	smeltresult = null
 	salvage_amount = 0 // sry
 	salvage_result = /obj/item/natural/hide/cured
-	color = "#684338"
+	color = "#b76f61"
 
 /obj/item/clothing/wrists/roguetown/bracers/leather/ComponentInitialize()
 	AddComponent(/datum/component/armour_filtering/positive, TRAIT_FENCERDEXTERITY)
