@@ -791,13 +791,21 @@
 				/obj/item/natural/fibers = 2)
 	craftdiff = 3
 
-/datum/crafting_recipe/roguetown/sewing/monkheadband
-	name = "padded headband"
+/datum/crafting_recipe/roguetown/sewing/hunterheadband
+	name = "padded headband, hunter's style"
 	category = "Coifs"
 	result = list(/obj/item/clothing/head/roguetown/headband/monk/barbarian)
 	reqs = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/fibers = 2)
 	craftdiff = 3
+
+/datum/crafting_recipe/roguetown/sewing/monkheadband //Readded for expert seamstresses, and so that Light Armor-locked people can still have an option for stylemaxxing.
+	name = "padded headband, monk's style"
+	category = "Coifs"
+	result = list(/obj/item/clothing/head/roguetown/headband/monk)
+	reqs = list(/obj/item/natural/cloth = 4,
+				/obj/item/natural/fibers = 2)
+	craftdiff = 4
 
 /datum/crafting_recipe/roguetown/sewing/heavypadded
 	name = "heavy padded coif"
