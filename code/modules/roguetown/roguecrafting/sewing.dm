@@ -1034,6 +1034,28 @@
 	craftdiff = 5
 	sellprice = 30
 
+/datum/crafting_recipe/roguetown/sewing/formalsilks
+	name = "formal silks"
+	category = "Shirts"
+	result = list(/obj/item/clothing/suit/roguetown/shirt/undershirt/puritan)
+	reqs = list(/obj/item/natural/cloth = 2,
+				/obj/item/natural/fibers = 2,
+				/obj/item/natural/silk = 2)
+	tools = list(/obj/item/needle)
+	craftdiff = 5
+	sellprice = 30
+
+/datum/crafting_recipe/roguetown/sewing/formalbreeches
+	name = "formal breeches"
+	category = "Pants"
+	result = list(/obj/item/clothing/under/roguetown/tights/puritan)
+	reqs = list(/obj/item/natural/cloth = 2,
+				/obj/item/natural/fibers = 2,
+				/obj/item/natural/silk = 2)
+	tools = list(/obj/item/needle)
+	craftdiff = 5
+	sellprice = 30
+
 /datum/crafting_recipe/roguetown/sewing/regalrobes
 	name = "regal silks"
 	category = "Shirts"
