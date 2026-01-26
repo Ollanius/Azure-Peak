@@ -345,6 +345,15 @@
 			if("onbelt")
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
+/obj/item/rogueweapon/huntingknife/combat/iron
+	name = "bauernwehr"
+	desc = "The hunting knife's older brother: massive, girthsome, and legally implaceable between 'daggers' and 'shortswords'. With it, there is no tasking too laborious to overcome - and no wildebeaste too thick to hack apart."
+	icon_state = "icombatknife"
+	sheathe_icon = "idagger"
+	wdefense = 3
+	max_integrity = 250 //Less defense, but full damage and intents. A little more integrity as wel.
+	smeltresult = /obj/item/ingot/iron
+
 /obj/item/rogueweapon/huntingknife/combat/bronze
 	name = "sydearmme"
 	desc = "Wedged bronze and whittled rockwood, handfitted into the dagger's most ancient-of-ancestors. It bares marks of flintknaping along its middlewidth; a customary tradition that's purported to atune its edge to the forces of nature."
@@ -352,6 +361,7 @@
 	sheathe_icon = "bronzedagger"
 	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/chop/bronze, /datum/intent/dagger/sucker_punch, /datum/intent/dagger/thrust/bronze)
 	force = 20 //Sidegrade of the combat knife. Less damage and lower multipliers, but more blade integrity and a reduced pick variable.
+	wdefense = 3
 	throwforce = 20
 	max_blade_int = 250
 	max_integrity = 130 //Less integrity as well.
@@ -453,7 +463,7 @@
 	desc = "A blunted steel dagger with a flexible blade for practicing close-in combat with vicious welts \
 	instead of lethal wounds. Still hurts, though."
 	icon_state = "dagger_trainer"
-	sheathe_icon = "sheath_dagger_trainer"
+	sheathe_icon = "dagger_trainer"
 	force = 7
 	possible_item_intents = list(
 		/datum/intent/dagger/thrust/blunt,
@@ -530,6 +540,15 @@
 	sheathe_icon = "stiletto"
 	force = 25
 	max_integrity = 200
+	smeltresult = /obj/item/ingot/steel
+
+/obj/item/rogueweapon/huntingknife/idagger/steel/rondel
+	name = "rondel dagger"
+	desc = "This is the traditional sidearm of a knight: a lightweight dagger of solid steel, well-balanced for delivering rapid thrusts that can shuck grapplers like oysters."
+	icon_state = "rondeldagger"
+	sheathe_icon = "dagger_trainer"
+	possible_item_intents = list(/datum/intent/dagger/thrust/quick, /datum/intent/dagger/thrust/pick, /datum/intent/dagger/sucker_punch, /datum/intent/dagger/cut)
+	wdefense = 4 //Slightly more defense than a regular dagger. Intended to function as a tool for countering grapplers or finishing off armored opponents with broken pieces.
 	smeltresult = /obj/item/ingot/steel
 
 /obj/item/rogueweapon/huntingknife/idagger/steel/parrying
