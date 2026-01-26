@@ -422,7 +422,7 @@
 /obj/item/rogueweapon/sword/long/exe/rockhill //Alternate version of the Executioner Sword.
 	name = "valorian claymore"
 	icon = 'icons/roguetown/weapons/64.dmi'
-	desc = "A lethal and well-balanced weapon, the broadsword is the deuteragonist of endless tales and myths \
+	desc = "A lethal and perfectly balanced weapon, the longsword is the protagonist of endless tales and myths \
 	all across Psydonia. This sharp-edged variant has a narrow crossguard and lengthened blade; the proportions \
 	of an ancient hero's claymore, resurrected through modern smithing techniques."
 	icon_state = "longsword_rockhill"
