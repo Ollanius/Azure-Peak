@@ -849,6 +849,12 @@
 	projectile_type = /obj/projectile/bullet/reusable/sling_bullet/bronze
 	icon_state = "bronze_sling_bullet"
 
+/obj/item/ammo_casing/caseless/rogue/sling_bullet/steel
+	name = "steel sling bullet"
+	desc = "Not to be mistaken with an actual bullet. </br>'As one who binds a stone in a sling, so is he who gives honor to a fool.'"
+	projectile_type = /obj/projectile/bullet/reusable/sling_bullet/steel
+	icon_state = "steel_sling_bullet"
+
 /obj/item/ammo_casing/caseless/rogue/sling_bullet/aalloy
 	name = "decrepit sling bullet"
 	desc = "A pellet of frayed bronze. The alloy flakes apart in your grasp, staining the palm with flecks of brown-and-red."
@@ -871,7 +877,7 @@
 /obj/projectile/bullet/sling_bullet // Supposed to be a version that breaks on impact. Might be unused?
 	name = "stone sling bullet"
 	desc = "If you're reading this: duck."
-	damage = 25
+	damage = 30 //Parity check.
 	damage_type = BRUTE
 	armor_penetration = 0
 	npc_simple_damage_mult = 2
@@ -900,10 +906,10 @@
 /obj/projectile/bullet/reusable/sling_bullet //parent for proper reusable sling bullets
 	name = "metal sling bullet"
 	desc = "If you're reading this: duck."
-	damage = 25
+	damage = 30 //Parity check.
 	damage_type = BRUTE
 	armor_penetration = 0
-	icon_state = "musketball_proj"
+	icon_state = "slingbullet_proj"
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/sling_bullet
 	range = 15
 	hitsound = 'sound/combat/hits/blunt/bluntsmall (1).ogg'
@@ -954,6 +960,12 @@
 	damage = 30
 	armor_penetration = 30
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/sling_bullet/iron
+
+/obj/projectile/bullet/reusable/sling_bullet/steel
+	name = "steel sling bullet"
+	damage = 40 //Best-of-the-best. Harder to mass-produce, however.
+	armor_penetration = 40
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/sling_bullet/steel
 
 /obj/projectile/bullet/reusable/sling_bullet/paalloy
 	name = "ancient sling bullet"
