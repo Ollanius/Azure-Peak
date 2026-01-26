@@ -1056,6 +1056,17 @@
 	craftdiff = 5
 	sellprice = 30
 
+/datum/crafting_recipe/roguetown/sewing/formalsilkjacket
+	name = "besilked jacket"
+	category = "Shirts"
+	result = list(/obj/item/clothing/suit/roguetown/armor/gambeson/lord/heavy/silkjacket)
+	reqs = list(/obj/item/natural/cloth = 2,
+				/obj/item/natural/fibers = 2,
+				/obj/item/natural/silk = 6)
+	tools = list(/obj/item/needle)
+	craftdiff = 5
+	sellprice = 30
+
 /datum/crafting_recipe/roguetown/sewing/regalrobes
 	name = "regal silks"
 	category = "Shirts"
