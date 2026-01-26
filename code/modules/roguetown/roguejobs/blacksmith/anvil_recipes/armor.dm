@@ -694,6 +694,13 @@
 	additional_items = list(/obj/item/ingot/steel)
 	created_item = /obj/item/clothing/suit/roguetown/armor/plate/cuirass
 
+/datum/anvil_recipe/armor/steel/lighthaubergeon
+	name = "Haubergeon, Besilked, Steel (+1 Steel, +1 Formal Silk Jacket)" //needs cooperation with a tailor to make
+	req_bar = /obj/item/ingot/steel
+	req_blade = /obj/item/blade/steel_plate
+	additional_items = list(/obj/item/ingot/steel, /obj/item/clothing/suit/roguetown/shirt/undershirt/puritan)
+	created_item = /obj/item/clothing/suit/roguetown/armor/chainmail/light
+
 /datum/anvil_recipe/armor/steel/lightcuirass
 	name = "Cuirass, Fencing, Steel (+1 Steel, +1 Fencing Jacket)" //needs cooperation with a tailor to make
 	req_bar = /obj/item/ingot/steel
