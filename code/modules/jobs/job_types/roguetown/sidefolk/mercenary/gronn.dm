@@ -40,19 +40,19 @@
 
 	switch(H.patron?.type)
 		if(/datum/patron/inhumen/zizo)
-			ring = /obj/item/clothing/neck/roguetown/psicross/inhumen/gronn
+			id = /obj/item/clothing/neck/roguetown/psicross/inhumen/gronn
 		if(/datum/patron/inhumen/graggar)
-			ring = /obj/item/clothing/neck/roguetown/psicross/inhumen/graggar/gronn
+			id = /obj/item/clothing/neck/roguetown/psicross/inhumen/graggar/gronn
 		if(/datum/patron/inhumen/matthios)
-			ring = /obj/item/clothing/neck/roguetown/psicross/inhumen/matthios/gronn
+			id = /obj/item/clothing/neck/roguetown/psicross/inhumen/matthios/gronn
 		if(/datum/patron/inhumen/baotha)
-			ring = /obj/item/clothing/neck/roguetown/psicross/inhumen/baotha/gronn
+			id = /obj/item/clothing/neck/roguetown/psicross/inhumen/baotha/gronn
 		if(/datum/patron/divine/abyssor)
-			ring = /obj/item/clothing/neck/roguetown/psicross/abyssor/gronn
+			id = /obj/item/clothing/neck/roguetown/psicross/abyssor/gronn
 		if(/datum/patron/divine/dendor)
-			ring = /obj/item/clothing/neck/roguetown/psicross/dendor/gronn
+			id = /obj/item/clothing/neck/roguetown/psicross/dendor/gronn
 		else
-			ring = /obj/item/clothing/neck/roguetown/psicross/inhumen/gronn/special //Failsafe. Gives a specially-fluffed version of Zizo's talisman, which can be reinterpreted as needed.
+			id = /obj/item/clothing/neck/roguetown/psicross/inhumen/gronn/special //Failsafe. Gives a specially-fluffed version of Zizo's talisman, which can be reinterpreted as needed.
 
 	// CLASS ARCHETYPES
 	H.adjust_blindness(-3)
