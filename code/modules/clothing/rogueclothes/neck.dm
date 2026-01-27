@@ -754,6 +754,7 @@
 /obj/item/clothing/neck/roguetown/psicross/inhumen/gronn
 	name = "plotting talisman"
 	desc = "'The hunt, the studying of your prey, the learning of its routes, the knowledge our ancestors passed down, the empowerment of your people and yourself. Learn of the world, or fade away.'  </br>  </br>The Plotting Wolf embodies the virtues of progress and knowledge, so that no obstacle nor threat to the homeland remains insurmountable. To understand the truths of beast-and-bronze is to lighten the future's hardships. Do not humor magicka, however, for playing with fire shall always end in someone being burned."
+	icon_state = "gronnzizo"
 
 /obj/item/clothing/neck/roguetown/psicross/inhumen/baotha/gronn
 	name = "relishing talisman"
@@ -772,14 +773,17 @@
 
 /obj/item/clothing/neck/roguetown/psicross/dendor/gronn
 	name = "volfskinned talisman"
-	desc = "'The world above, of knifetoothed plants and rotting carrion. From jungle to desert, even the stones are nature. Heed its call with the respect it commands, or succumb to madness.'"  </br>  </br>The Volfskinned Man embodies the virtue of nature and temperance; to live in harmony with the world and its spirits. Pluck a jackberry, plant a seed - Slay a beast, see no part wasted. Yet, temperance must be shown; to take from the world without respect-nor-exchange is to curse the homeland with misfortune. Yet, to completely embrace the world's primality is to lose your humanity - and worse, to become the very beast you hunt."
+	desc = "'The world above, of knifetoothed plants and rotting carrion. From jungle to desert, even the stones are nature. Heed its call with the respect it commands, or succumb to madness.'  </br>  </br>The Volfskinned Man embodies the virtue of nature and temperance; to live in harmony with the world and its spirits. Pluck a jackberry, plant a seed - Slay a beast, see no part wasted. Yet, temperance must be shown; to take from the world without respect-nor-exchange is to curse the homeland with misfortune. Yet, to completely embrace the world's primality is to lose your humanity - and worse, to become the very beast you hunt."
 	icon_state = "gronndendor"
 
 /obj/item/clothing/neck/roguetown/psicross/abyssor/gronn
 	name = "hadal talisman"
-	desc = "'The chaos below, of coldblack pressure and crushing weight. Be the current. Control the waves. Reign your sails and hold fast against the storm, or be washed away onto an odyssey with no end.'"  </br>  </br>The Spiraling Kraken is no virtue, but a presence; the homeland's nautical warden, who's tentacled presence is as unpredictable as the oceans it lords over. To embrace the uncertainty of lyfe is to be rewarded with fortune and mercy when it is most needed. Do not embrace such futility, however, lest you are swept away with all the others into the abyss."
+	desc = "'The chaos below, of coldblack pressure and crushing weight. Be the current. Control the waves. Reign your sails and hold fast against the storm, or be washed away onto an odyssey with no end.'  </br>  </br>The Spiraling Kraken is no virtue, but a presence; the homeland's nautical warden, who's tentacled presence is as unpredictable as the oceans it lords over. To embrace the uncertainty of lyfe is to be rewarded with fortune and mercy when it is most needed. Do not embrace such futility, however, lest you are swept away with all the others into the abyss."
 	icon_state = "gronnabyssor"
 
+/obj/item/clothing/neck/roguetown/psicross/inhumen/gronn/special
+	name = "familial talisman"
+	desc = "'The memories of the past, and the dreams of the future. A fetish of a beaste, and the carvings of a force that no one beyond your homeland could understand. Sail gracefully, countryman.'"
 
 //
 
