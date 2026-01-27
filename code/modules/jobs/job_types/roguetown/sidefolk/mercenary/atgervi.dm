@@ -35,7 +35,7 @@
 	)
 
 /datum/outfit/job/roguetown/mercenary/atgervi
-	allowed_patrons = ALL_INHUMEN_PATRONS
+	allowed_patrons = ALL_GRONNIC_PATRONS //Subvariant of the 'ALL_INHUMEN_PATRONS' tag, with Abyssor and Dendor as situational additions. Do not add any more to this, no matter what.
 
 /datum/outfit/job/roguetown/mercenary/atgervi/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -54,6 +54,22 @@
 	belt = /obj/item/storage/belt/rogue/leather
 	neck = /obj/item/clothing/neck/roguetown/chaincoif/chainmantle //They didn't have neck protection before.
 	beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
+
+	switch(H.patron?.type)
+			if(/datum/patron/inhumen/zizo)
+				ring = /obj/item/clothing/neck/roguetown/psicross/inhumen/gronn
+			if(/datum/patron/inhumen/graggar)
+				ring = /obj/item/clothing/neck/roguetown/psicross/inhumen/graggar/gronn
+			if(/datum/patron/inhumen/matthios)
+				ring = /obj/item/clothing/neck/roguetown/psicross/inhumen/matthios/gronn
+			if(/datum/patron/inhumen/baotha)
+				ring = /obj/item/clothing/neck/roguetown/psicross/inhumen/baotha/gronn
+			if(/datum/patron/divine/abyssor)
+				ring = /obj/item/clothing/neck/roguetown/psicross/abyssor/gronn
+			if(/datum/patron/divine/dendor)
+				ring = /obj/item/clothing/neck/roguetown/psicross/dendor/gronn
+			else
+				ring = /obj/item/clothing/neck/roguetown/psicross/inhumen/gronn/special //Failsafe. Gives a specially-fluffed version of Zizo's talisman, which can be reinterpreted as needed.
 
 	var/datum/devotion/C = new /datum/devotion(H, H.patron)
 	C.grant_miracles(H, cleric_tier = CLERIC_T2, passive_gain = CLERIC_REGEN_WEAK, devotion_limit = CLERIC_REQ_2)	//Capped to T1 miracles.
@@ -92,7 +108,7 @@
 	)
 
 /datum/outfit/job/roguetown/mercenary/atgervishaman
-	allowed_patrons = ALL_INHUMEN_PATRONS
+	allowed_patrons = ALL_GRONNIC_PATRONS //Subvariant of the 'ALL_INHUMEN_PATRONS' tag, with Abyssor and Dendor as situational additions. Do not add any more to this, no matter what.
 
 /datum/outfit/job/roguetown/mercenary/atgervishaman/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -113,6 +129,22 @@
 	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
 	beltl = /obj/item/flashlight/flare/torch
 	H.put_in_hands(new /obj/item/rogueweapon/handclaw/gronn)
+
+	switch(H.patron?.type)
+			if(/datum/patron/inhumen/zizo)
+				ring = /obj/item/clothing/neck/roguetown/psicross/inhumen/gronn
+			if(/datum/patron/inhumen/graggar)
+				ring = /obj/item/clothing/neck/roguetown/psicross/inhumen/graggar/gronn
+			if(/datum/patron/inhumen/matthios)
+				ring = /obj/item/clothing/neck/roguetown/psicross/inhumen/matthios/gronn
+			if(/datum/patron/inhumen/baotha)
+				ring = /obj/item/clothing/neck/roguetown/psicross/inhumen/baotha/gronn
+			if(/datum/patron/divine/abyssor)
+				ring = /obj/item/clothing/neck/roguetown/psicross/abyssor/gronn
+			if(/datum/patron/divine/dendor)
+				ring = /obj/item/clothing/neck/roguetown/psicross/dendor/gronn
+			else
+				ring = /obj/item/clothing/neck/roguetown/psicross/inhumen/gronn/special //Failsafe. Gives a specially-fluffed version of Zizo's talisman, which can be reinterpreted as needed.
 
 	var/datum/devotion/C = new /datum/devotion(H, H.patron)
 	C.grant_miracles(H, cleric_tier = CLERIC_T2, passive_gain = CLERIC_REGEN_WEAK, devotion_limit = CLERIC_REQ_1)	//Capped to T2 miracles.
