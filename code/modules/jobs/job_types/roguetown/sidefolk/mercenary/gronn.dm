@@ -46,7 +46,7 @@
 		if(/datum/patron/inhumen/matthios)
 			id = /obj/item/clothing/neck/roguetown/psicross/inhumen/matthios/gronn
 		if(/datum/patron/inhumen/baotha)
-			id = /obj/item/clothing/neck/roguetown/psicross/inhumen/baotha/gronn
+			id = /obj/item/clothing/neck/roguetown/psicross/inhumen/baothagronn
 		if(/datum/patron/divine/abyssor)
 			id = /obj/item/clothing/neck/roguetown/psicross/abyssor/gronn
 		if(/datum/patron/divine/dendor)
