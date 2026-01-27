@@ -56,20 +56,20 @@
 	beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
 
 	switch(H.patron?.type)
-			if(/datum/patron/inhumen/zizo)
-				ring = /obj/item/clothing/neck/roguetown/psicross/inhumen/gronn
-			if(/datum/patron/inhumen/graggar)
-				ring = /obj/item/clothing/neck/roguetown/psicross/inhumen/graggar/gronn
-			if(/datum/patron/inhumen/matthios)
-				ring = /obj/item/clothing/neck/roguetown/psicross/inhumen/matthios/gronn
-			if(/datum/patron/inhumen/baotha)
-				ring = /obj/item/clothing/neck/roguetown/psicross/inhumen/baotha/gronn
-			if(/datum/patron/divine/abyssor)
-				ring = /obj/item/clothing/neck/roguetown/psicross/abyssor/gronn
-			if(/datum/patron/divine/dendor)
-				ring = /obj/item/clothing/neck/roguetown/psicross/dendor/gronn
-			else
-				ring = /obj/item/clothing/neck/roguetown/psicross/inhumen/gronn/special //Failsafe. Gives a specially-fluffed version of Zizo's talisman, which can be reinterpreted as needed.
+		if(/datum/patron/inhumen/zizo)
+			id = /obj/item/clothing/neck/roguetown/psicross/inhumen/gronn
+		if(/datum/patron/inhumen/graggar)
+			id = /obj/item/clothing/neck/roguetown/psicross/inhumen/graggar/gronn
+		if(/datum/patron/inhumen/matthios)
+			id = /obj/item/clothing/neck/roguetown/psicross/inhumen/matthios/gronn
+		if(/datum/patron/inhumen/baotha)
+			id = /obj/item/clothing/neck/roguetown/psicross/inhumen/baotha/gronn
+		if(/datum/patron/divine/abyssor)
+			id = /obj/item/clothing/neck/roguetown/psicross/abyssor/gronn
+		if(/datum/patron/divine/dendor)
+			id = /obj/item/clothing/neck/roguetown/psicross/dendor/gronn
+		else
+			id = /obj/item/clothing/neck/roguetown/psicross/inhumen/gronn/special //Failsafe. Gives a specially-fluffed version of Zizo's talisman, which can be reinterpreted as needed.
 
 	var/datum/devotion/C = new /datum/devotion(H, H.patron)
 	C.grant_miracles(H, cleric_tier = CLERIC_T2, passive_gain = CLERIC_REGEN_WEAK, devotion_limit = CLERIC_REQ_2)	//Capped to T1 miracles.
