@@ -802,7 +802,7 @@
 	icon = 'icons/roguetown/weapons/unarmed32.dmi'
 	wdefense = 5
 	force = 30
-	possible_item_intents = list(/datum/intent/claw/cut/iron, /datum/intent/claw/lunge/iron, /datum/intent/claw/rend)
+	possible_item_intents = list(/datum/intent/claw/cut/iron, /datum/intent/claw/lunge/iron, /datum/intent/claw/rend, /datum/intent/claw/shred)
 	wbalance = WBALANCE_NORMAL
 	max_blade_int = 300
 	max_integrity = 200
@@ -829,7 +829,7 @@
 	icon = 'icons/roguetown/weapons/unarmed32.dmi'
 	wdefense = 6
 	force = 35
-	possible_item_intents = list(/datum/intent/claw/cut/steel, /datum/intent/claw/lunge/steel, /datum/intent/claw/rend/steel)
+	possible_item_intents = list(/datum/intent/claw/cut/steel, /datum/intent/claw/lunge/steel, /datum/intent/claw/rend/steel, /datum/intent/claw/shred)
 	wbalance = WBALANCE_HEAVY
 	max_blade_int = 180
 	max_integrity = 200
@@ -845,7 +845,7 @@
 	icon = 'icons/roguetown/weapons/unarmed32.dmi'
 	wdefense = 3
 	force = 25
-	possible_item_intents = list(/datum/intent/claw/cut/gronn, /datum/intent/claw/lunge/gronn, /datum/intent/claw/rend)
+	possible_item_intents = list(/datum/intent/claw/cut/gronn, /datum/intent/claw/lunge/gronn, /datum/intent/claw/rend, /datum/intent/claw/shred)
 	wbalance = WBALANCE_SWIFT
 	max_blade_int = 200
 	max_integrity = 200
@@ -932,6 +932,26 @@
 
 /datum/intent/claw/rend/steel
 	damfactor = 3
+
+/datum/intent/claw/shred
+	name = "shred"
+	desc = "An incredibly quick swipe that deals additional integrity damage, but can't pierce armor on its own."
+	icon_state = "inclaw"
+	attack_verb = list("shreds", "claws")
+	animname = "chop"
+	blade_class = BCLASS_CHOP
+	reach = 1
+	penfactor = BLUNT_DEFAULT_PENFACTOR
+	swingdelay = 0
+	penfactor = 0 //No penetration, but..
+	intent_intdamage_factor = 1.33 //..higher integrity damage. 
+	damfactor = 1
+	clickcd = 4 //Half the attack-speed of a dagger. Intended to break through armor and shred the delicious meat underneath, as a finisher and weakpoint-seizer.
+	hitsound = list('sound/combat/hits/bladed/genslash (1).ogg', 'sound/combat/hits/bladed/genslash (2).ogg', 'sound/combat/hits/bladed/genslash (3).ogg')
+	miss_sound = "bluntwooshlarge"
+	miss_text = "shreds the air!"
+	item_d_type = "slash"
+	misscost = 15
 
 /datum/intent/peculate
 	name = "peculate"
