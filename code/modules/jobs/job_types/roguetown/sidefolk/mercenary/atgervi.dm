@@ -281,7 +281,7 @@
 /obj/item/clothing/neck/roguetown/psicross/inhumen/baotha/gronn
 	name = "relishing talisman"
 	desc = "'“The excess of desire, the want of more, the glory of victory, the lover's embrace. Embrace the Leopard, or forget your strength.'  </br>  </br>The Relishing Leopard embodies the virtues of love and glory, both in battle and at home. Enjoy the flesh, the drink, and the spice; but be wary to avoid overindulgence, for it shall leave you despondant and lethargic. To become too comfortable is to become weak, and such weakness would turn you into a delicious snack for the Leopard." 
-	icon_state = "gronneora"
+	icon_state = "gronnbaotha"
 
 /obj/item/clothing/neck/roguetown/psicross/inhumen/matthios/gronn
 	name = "starving talisman"
