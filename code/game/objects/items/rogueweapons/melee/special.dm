@@ -944,7 +944,7 @@
 	penfactor = BLUNT_DEFAULT_PENFACTOR
 	swingdelay = 0
 	penfactor = 0 //No penetration, but..
-	intent_intdamage_factor = 1.33 //..higher integrity damage. 
+	intent_intdamage_factor = 1.3 //..higher integrity damage. 
 	damfactor = 1
 	clickcd = 4 //Half the attack-speed of a dagger. Intended to break through armor and shred the delicious meat underneath, as a finisher and weakpoint-seizer.
 	hitsound = list('sound/combat/hits/bladed/genslash (1).ogg', 'sound/combat/hits/bladed/genslash (2).ogg', 'sound/combat/hits/bladed/genslash (3).ogg')
