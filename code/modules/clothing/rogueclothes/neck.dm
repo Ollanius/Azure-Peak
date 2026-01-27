@@ -747,6 +747,43 @@
 	slot_flags = ITEM_SLOT_NECK|ITEM_SLOT_MASK
 	body_parts_covered = NECK|FACE
 
+///////////////////////////////
+// GRONN-SPECIFIC PSICROSSES //
+///////////////////////////////
+
+/obj/item/clothing/neck/roguetown/psicross/inhumen/gronn
+	name = "plotting talisman"
+	desc = "'The hunt, the studying of your prey, the learning of its routes, the knowledge our ancestors passed down, the empowerment of your people and yourself. Learn of the world, or fade away.'
+	icon_state = "gronnzizo"
+
+/obj/item/clothing/neck/roguetown/psicross/inhumen/baotha/gronn
+	name = "relishing talisman"
+	desc = "'“The excess of desire, the want of more, the glory of victory, the lover's embrace. Embrace the Leopard, or forget your strength.'
+	icon_state = "gronneora"
+
+/obj/item/clothing/neck/roguetown/psicross/inhumen/matthios/gronn
+	name = "starving talisman"
+	desc = "'“The hunger, the destruction, the impending frost, the enemy of my enemy. Feed the Bear, or be consumed.'
+	icon_state = "gronnmatthios"
+
+/obj/item/clothing/neck/roguetown/psicross/inhumen/graggar/gronn
+	name = "grinning talisman"
+	desc = "'The battle, the combat, the violence, the rush of victory, the honored glories. Defeat the foe, or die with them.'
+	icon_state = "gronngraggar"
+
+/obj/item/clothing/neck/roguetown/psicross/dendor/gronn
+	name = "volfskinned talisman"
+	desc = "If you need something to worship, then worship life. Every last crawling bit of it."
+	icon_state = "gronndendor"
+
+/obj/item/clothing/neck/roguetown/psicross/abyssor/gronn
+	name = "hadal talisman"
+	desc = "'The abyss, the cradle of all that swims-and-sails, the "
+	icon_state = "gronnabyssor"
+
+
+//
+
 /obj/item/clothing/neck/roguetown/luckcharm
 	name = "luck charm"
 	desc = "A cabbit's foot necklace. Some say it brings good luck. It only feels more lucky when it's worn around the neck."
