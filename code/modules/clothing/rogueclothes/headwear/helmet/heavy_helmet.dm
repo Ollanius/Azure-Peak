@@ -146,6 +146,18 @@
 	icon_state = "ancientsavoyard"
 	smeltresult = /obj/item/ingot/aaslag
 
+/obj/item/clothing/head/roguetown/helmet/heavy/beakhelm
+	name = "beak helmet"
+	desc = "An odd spherical helmet with a beaklike visor."
+	icon = 'icons/roguetown/clothing/head.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/head.dmi'
+	icon_state = "beakhelmet"
+	item_state = "beakhelmet"
+	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
+	block2add = FOV_BEHIND
+	smeltresult = /obj/item/ingot/steel
+	smelt_bar_num = 2
+
 /obj/item/clothing/head/roguetown/helmet/heavy/sheriff
 	name = "barred helmet"
 	desc = "A helmet which offers good protection to the face at the expense of vision."
