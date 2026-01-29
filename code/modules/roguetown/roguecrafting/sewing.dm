@@ -1367,6 +1367,16 @@
 	craftdiff = 4
 	sellprice = 13
 
+/datum/crafting_recipe/roguetown/sewing/sleevelessrobewhite
+	name = "robed tabard"
+	category = "Robes"
+	result = list(/obj/item/clothing/suit/roguetown/shirt/robe/tabardwhite)
+	reqs = list(/obj/item/natural/cloth = 3,
+	            /obj/item/natural/fibers = 2)
+	tools = list(/obj/item/needle)
+	craftdiff = 4
+	sellprice = 13
+
 /datum/crafting_recipe/roguetown/sewing/hoodphys
 	name = "physicker's hood"
 	category = "Hoods"
@@ -1381,6 +1391,16 @@
 	name = "feldsher's hood"
 	category = "Hoods"
 	result = list(/obj/item/clothing/head/roguetown/roguehood/feld)
+	reqs = list(/obj/item/natural/cloth = 2,
+	            /obj/item/natural/fibers = 1)
+	tools = list(/obj/item/needle)
+	craftdiff = 4
+	sellprice = 13
+
+/datum/crafting_recipe/roguetown/sewing/hoodwhite
+	name = "robed tabard's hood"
+	category = "Hoods"
+	result = list(/obj/item/clothing/head/roguetown/roguehood/shroudwhite)
 	reqs = list(/obj/item/natural/cloth = 2,
 	            /obj/item/natural/fibers = 1)
 	tools = list(/obj/item/needle)
