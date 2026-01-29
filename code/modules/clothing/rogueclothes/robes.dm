@@ -354,3 +354,10 @@
 	color = null
 	icon_state = "surgrobe"
 	item_state = "surgrobe"
+
+/obj/item/clothing/suit/roguetown/shirt/robe/tabardwhite
+	name = "robed tabard"
+	desc = "Sleeveless robes, billowing in the breeze."
+	color = null
+	icon_state = "whiterobe"
+	item_state = "whiterobe"
