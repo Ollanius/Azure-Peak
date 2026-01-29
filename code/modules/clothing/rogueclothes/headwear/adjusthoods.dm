@@ -276,6 +276,16 @@
 	salvage_result = /obj/item/natural/cloth
 	salvage_amount = 1
 
+/obj/item/clothing/head/roguetown/roguehood/shroudwhite
+	name = "robed shroud"
+	desc = "A billowing hood, carrying the aroma of a distant memory."
+	icon_state = "whitehood"
+	item_state = "whitehood"
+	body_parts_covered = HEAD|EARS|NOSE
+	color = null
+	salvage_result = /obj/item/natural/cloth
+	salvage_amount = 1
+
 //
 
 /obj/item/clothing/head/roguetown/roguehood/psydon
