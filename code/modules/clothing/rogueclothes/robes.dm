@@ -356,8 +356,8 @@
 	item_state = "surgrobe"
 
 /obj/item/clothing/suit/roguetown/shirt/robe/tabardwhite
-	name = "white tabard"
-	desc = "Sleeveless robes, white like bone."
+	name = "robed tabard"
+	desc = "Sleeveless robes, billowing in the breeze."
 	color = null
 	icon_state = "whiterobe"
 	item_state = "whiterobe"
