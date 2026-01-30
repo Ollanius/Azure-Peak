@@ -12,7 +12,7 @@
 					/obj/item/rogueweapon/huntingknife/idagger/steel,
 				)
 
-/datum/supply_pack/rogue/steel_weapons/dagger
+/datum/supply_pack/rogue/steel_weapons/rondeldagger
 	name = "Rondel Dagger"
 	cost = 70 // 2 Steel Ingots
 	contains = list(
