@@ -11,6 +11,13 @@
 					/obj/item/rogueweapon/sword/iron,
 				)
 
+/datum/supply_pack/rogue/iron_weapons/broadsword
+	name = "Broadsword"
+	cost = 55 // 2 Iron Ingots + 1 Small Log
+	contains = list(
+					/obj/item/rogueweapon/sword/long/broadsword,
+				)
+
 /datum/supply_pack/rogue/iron_weapons/shortsword
 	name = "Shortsword"
 	cost = 25 // 1 Iron Ingot
@@ -44,6 +51,13 @@
 	cost = 25 // 1 Iron Ingot
 	contains = list(
 					/obj/item/rogueweapon/huntingknife/idagger,
+				)
+
+/datum/supply_pack/rogue/iron_weapons/heavydagger
+	name = "Heavy Knife"
+	cost = 50 // 2 Iron Ingots
+	contains = list(
+					/obj/item/rogueweapon/huntingknife/combat/iron,
 				)
 
 /datum/supply_pack/rogue/iron_weapons/axe
