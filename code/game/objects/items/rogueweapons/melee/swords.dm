@@ -377,7 +377,7 @@
 	desc = "A lethal and well-balanced weapon. The broadsword - better known as a 'hand-and-a-halfer' - has dutifully served the \
 	swordsmen of Psydonia in their clashes against man-and-monster alike since time immemmorial. Valoria's watchmen are renowned for \
 	their use of these steel-bladed iterations: an expensive necessity, in order to lay their undying besiegers to rest for good."
-	icon_state = "broadsword"
+	icon_state = "sbroadsword"
 	sheathe_icon = "sbroadsword"
 	max_blade_int = 330 //Sharper than a longsword, but with reduced defense. The use of steel balances its integrity out with a slight +10 bonus.
 	max_integrity = 160 
