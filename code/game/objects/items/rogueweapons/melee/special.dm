@@ -935,7 +935,7 @@
 
 /datum/intent/claw/shred
 	name = "shred"
-	desc = "An incredibly quick swipe that deals additional integrity damage, but can't pierce armor on its own."
+	desc = "A quick swipe that deals additional integrity damage, but can't pierce armor on its own."
 	icon_state = "inclaw"
 	attack_verb = list("shreds", "claws")
 	animname = "chop"
@@ -946,7 +946,7 @@
 	penfactor = 0 //No penetration, but..
 	intent_intdamage_factor = 1.3 //..higher integrity damage. 
 	damfactor = 1
-	clickcd = 4 //Half the attack-speed of a dagger. Intended to break through armor and shred the delicious meat underneath, as a finisher and weakpoint-seizer.
+	clickcd = 8
 	hitsound = list('sound/combat/hits/bladed/genslash (1).ogg', 'sound/combat/hits/bladed/genslash (2).ogg', 'sound/combat/hits/bladed/genslash (3).ogg')
 	miss_sound = "bluntwooshlarge"
 	miss_text = "shreds the air!"
