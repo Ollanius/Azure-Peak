@@ -303,6 +303,15 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	smeltresult = /obj/item/ingot/steel
 
+/obj/item/rogueweapon/huntingknife/cleaver/getonmobprop(tag)
+	. = ..()
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.6,"sx" = -10,"sy" = -8,"nx" = 13,"ny" = -8,"wx" = -8,"wy" = -7,"ex" = 7,"ey" = -8,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 90,"sturn" = -90,"wturn" = -80,"eturn" = 81,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
+			if("onbelt")
+				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
+
 /obj/item/rogueweapon/huntingknife/chefknife
 	force = 15
 	name = "chef's knife"
@@ -322,7 +331,7 @@
 	force = 22 //Hunting knife's bigger, meaner older brother. No pick intent, so it deserves a slight damage bump.
 	name = "seax"
 	desc = "An intimidatingly large dagger, fit for both hand-to-hand combat and dae-to-dae laboring. The ancenstry of this centuries-old design runs red with Gronnic and Grenzelhoftian blood, alike."
-	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/cut/combat, /datum/intent/dagger/sucker_punch, /datum/intent/dagger/thrust/combat)
+	possible_item_intents = list(/datum/intent/dagger/cut/heavy, /datum/intent/dagger/cut/combat, /datum/intent/dagger/sucker_punch, /datum/intent/dagger/thrust/combat)
 	icon_state = "combatknife"
 	sheathe_icon = "combatknife"
 	icon = 'icons/roguetown/weapons/daggers32.dmi'
@@ -341,7 +350,7 @@
 	if(tag)
 		switch(tag)
 			if("gen")
-				return list("shrink" = 0.7,"sx" = -10,"sy" = 0,"nx" = 11,"ny" = 0,"wx" = -4,"wy" = 0,"ex" = 2,"ey" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 14,"sturn" = -14,"wturn" = 16,"eturn" = 17,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
+				return list("shrink" = 0.6,"sx" = -10,"sy" = -8,"nx" = 13,"ny" = -8,"wx" = -8,"wy" = -7,"ex" = 7,"ey" = -8,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 90,"sturn" = -90,"wturn" = -80,"eturn" = 81,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
 			if("onbelt")
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
@@ -349,6 +358,7 @@
 	name = "bauernwehr"
 	desc = "The hunting knife's older brother: massive, girthsome, and legally implaceable between 'daggers' and 'shortswords'. With it, there is no tasking too laborious to overcome - and no wildebeaste too thick to hack apart."
 	icon_state = "icombatknife"
+	possible_item_intents = list(/datum/intent/dagger/cut/heavy, /datum/intent/dagger/chop/cleaver, /datum/intent/dagger/sucker_punch, /datum/intent/dagger/thrust/combat)
 	sheathe_icon = "idagger"
 	wdefense = 3
 	max_integrity = 250 //Less defense, but full damage and intents. A little more integrity as wel.
@@ -359,13 +369,17 @@
 	desc = "Wedged bronze and whittled rockwood, handfitted into the dagger's most ancient-of-ancestors. It bares marks of flintknaping along its middlewidth; a customary tradition that's purported to atune its edge to the forces of nature."
 	icon_state = "bronzedagger"
 	sheathe_icon = "bronzedagger"
-	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/chop/bronze, /datum/intent/dagger/sucker_punch, /datum/intent/dagger/thrust/bronze)
+	possible_item_intents = list(/datum/intent/dagger/cut/heavy, /datum/intent/dagger/chop/bronze, /datum/intent/dagger/sucker_punch, /datum/intent/dagger/thrust/bronze)
 	force = 20 //Sidegrade of the combat knife. Less damage and lower multipliers, but more blade integrity and a reduced pick variable.
 	wdefense = 3
 	throwforce = 20
 	max_blade_int = 250
 	max_integrity = 130 //Less integrity as well.
 	smeltresult = /obj/item/ingot/bronze
+
+/obj/item/rogueweapon/huntingknife/combat/steel
+	name = "combat knife"
+	possible_item_intents = list(/datum/intent/dagger/cut/heavy, /datum/intent/dagger/chop/cleaver, /datum/intent/dagger/sucker_punch, /datum/intent/dagger/thrust/combat)
 
 /datum/intent/dagger/thrust/combat
 	name = "wedged thrust"
