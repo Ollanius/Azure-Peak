@@ -288,7 +288,9 @@
 	clickcd = 10
 	item_d_type = "slash"
 
-/obj/item/rogueweapon/huntingknife/cleaver
+//
+
+/obj/item/rogueweapon/huntingknife/cleaver //DO NOT USE THIS VARIANT, GOING FORWARD. USE THE ONE FORKED OFF OF THE CHEF'S KNIFE. 
 	force = 15
 	name = "cleaver"
 	desc = "Chop, chop, chop!"
@@ -301,6 +303,8 @@
 	thrown_bclass = BCLASS_CHOP
 	w_class = WEIGHT_CLASS_NORMAL
 	smeltresult = /obj/item/ingot/steel
+
+//
 
 /obj/item/rogueweapon/huntingknife/chefknife
 	force = 15
