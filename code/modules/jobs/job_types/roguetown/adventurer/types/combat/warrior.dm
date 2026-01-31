@@ -246,7 +246,7 @@
 	if(!H.mind)
 		return
 
-	var/weapons = list("Bronze Katar","Bronze Sword","Bronze Axe","Bronze Mace","Bronze Spear","Discipline - Whiphunter","Discipline - Unarmed","Discipline - Bodybuilder")
+	var/weapons = list("Bronze Katar","Bronze Sword","Bronze Axe","Bronze Mace","Bronze Spear","Bronze Flail","Discipline - Gladiator","Discipline - Whiphunter","Discipline - Unarmed","Discipline - Bodybuilder")
 	var/weapon_choice = input(H, "Choose your WEAPON.", "TAKE UP ARMS.") as anything in weapons
 	switch(weapon_choice)
 		if("Bronze Katar")
@@ -275,6 +275,24 @@
 			head = /obj/item/clothing/head/roguetown/helmet/leather/volfhelm
 			r_hand = /obj/item/rogueweapon/spear/bronze
 			gloves = /obj/item/clothing/gloves/roguetown/bandages
+		if("Bronze Flail")
+			H.adjust_skillrank_up_to(/datum/skill/combat/whipsflails, SKILL_LEVEL_JOURNEYMAN, TRUE)
+			head = /obj/item/clothing/head/roguetown/helmet/leather/volfhelm
+			r_hand = /obj/item/rogueweapon/flail/bronze
+			gloves = /obj/item/clothing/gloves/roguetown/bandages
+		if("Discipline - Gladiator")
+			H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_JOURNEYMAN, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/shields, SKILL_LEVEL_JOURNEYMAN, TRUE)
+			head = /obj/item/clothing/head/roguetown/helmet/heavy/bronze
+			armor = /obj/item/clothing/suit/roguetown/armor/plate/bronze
+			backr = /obj/item/rogueweapon/shield/bronze
+			r_hand = /obj/item/rogueweapon/sword/short/gladius
+			beltr = /obj/item/rogueweapon/scabbard/sword
+			beltl = /obj/item/quiver/javelin/bronze
+			gloves = /obj/item/clothing/gloves/roguetown/bandages
+			H.change_stat(STATKEY_CON, -2) // Reduced from XII to X CON, with the armor's presence in mind.
+			H.change_stat(STATKEY_SPD, -2) // Much more protection, much less speed. Use the Javelins to even the odds.
+			H.change_stat(STATKEY_INT, 3) // Inverse of the Bodybuilder discipline, settling out to XI INT. 
 		if("Discipline - Whiphunter")
 			H.adjust_skillrank_up_to(/datum/skill/combat/whipsflails, SKILL_LEVEL_JOURNEYMAN, TRUE)
 			head = /obj/item/clothing/head/roguetown/headband/monk/barbarian
@@ -458,7 +476,7 @@
 	H.verbs |= /mob/living/carbon/human/proc/faith_test //Allows the Exorcist to interrogate others for their faith. Trait's agnostically worded, to allow more flexiable usage by Pantheoneers and Ascendants in this role.
 	H.verbs |= /mob/living/carbon/human/proc/torture_victim //Not as scary as it sounds. Mostly. Okay, just a little bit.
 	if(H.mind)
-		var/silver = list("Silver Dagger","Silver Shortsword","Silver Arming Sword","Silver Rapier","Silver Longsword","Silver Broadsword","Silver Mace","Silver Warhammer","Silver Morningstar","Silver Whip","Silver War Axe","Silver Poleaxe","Silver Spear","Silver Quarterstaff")
+		var/silver = list("Silver Dagger","Silver Shortsword","Silver Arming Sword","Silver Rapier","Silver Longsword","Silver Broadsword","Silver Mace","Silver Warhammer","Silver Morningstar","Silver Whip","Silver War Axe","Silver Poleaxe","Silver Spear","Silver Quarterstaff","Broadsword - Steel")
 		var/silver_choice = input(H, "Choose your WEAPON.", "PREPARE YOUR ARMS.") as anything in silver //Trim down to five or six choices, later? See what's the most popular, first. Gives people a chance to experiment with all of the new silver weapons.
 		switch(silver_choice)
 			if("Silver Dagger")
@@ -512,17 +530,21 @@
 				H.adjust_skillrank_up_to(/datum/skill/combat/staves, SKILL_LEVEL_JOURNEYMAN, TRUE)
 				r_hand = /obj/item/rogueweapon/woodstaff/quarterstaff/silver
 				backr = /obj/item/rogueweapon/scabbard/gwstrap
+			if("Broadsword - Steel") //For those who want a steel primary weapon, but a silver sidearm.
+				H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_JOURNEYMAN, TRUE)
+				r_hand = /obj/item/rogueweapon/sword/long/broadsword/steel
+				beltr = /obj/item/rogueweapon/scabbard/sword
 
-		var/sidearm = list("Dagger", "Parrying Dagger", "Seax", "Blessed Silver Stake", "Blessed Silver Shovel", "Greatshield")
+		var/sidearm = list("Dagger - Steel", "Parrying Dagger - Steel", "Combat Knife - Steel", "Blessed Silver Stake", "Blessed Silver Shovel", "Greatshield")
 		var/sidearm_choice = input(H, "Choose your SIDEARM.", "SAY YOUR PRAYERS.") as anything in sidearm
 		switch(sidearm_choice)
-			if("Dagger")
+			if("Dagger - Steel")
 				l_hand = /obj/item/rogueweapon/huntingknife/idagger/steel
 				H.adjust_skillrank_up_to(/datum/skill/combat/knives, SKILL_LEVEL_JOURNEYMAN, TRUE)
-			if("Parrying Dagger")
+			if("Parrying Dagger - Steel")
 				l_hand = /obj/item/rogueweapon/huntingknife/idagger/steel/parrying
 				H.adjust_skillrank_up_to(/datum/skill/combat/knives, SKILL_LEVEL_JOURNEYMAN, TRUE)
-			if("Seax")
+			if("Combat Knife - Steel")
 				l_hand = /obj/item/rogueweapon/huntingknife/combat
 				H.adjust_skillrank_up_to(/datum/skill/combat/knives, SKILL_LEVEL_JOURNEYMAN, TRUE)
 			if("Blessed Silver Stake")
