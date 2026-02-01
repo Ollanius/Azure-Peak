@@ -187,9 +187,6 @@
 /obj/item/enchantingkit/triumph_weaponkit_wide
 	name = "'Wideguard' longsword morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of.. </br>..a Steel Longsword </br>..or a Rapier."
-	target_items = list(/obj/item/rogueweapon/sword/long)
-	result_item = /obj/item/rogueweapon/sword/long/triumph/wideguard
-
 	target_items = list(
 		/obj/item/rogueweapon/sword/long					= /obj/item/rogueweapon/sword/long/triumph/wideguard,
 		/obj/item/rogueweapon/sword/rapier	  			= /obj/item/rogueweapon/sword/rapier/wideguard
@@ -219,10 +216,14 @@
 /obj/item/enchantingkit/triumph_weaponkit_psy
 	name = "'Psycrucifix' longsword morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of.. </br>..a Steel Longsword.. </br>..or a Psydonic Longsword."
-	target_items = list(/obj/item/rogueweapon/sword/long)
-	result_item = /obj/item/rogueweapon/sword/long/triumph/psycrucifix
 	target_items = list(
 		/obj/item/rogueweapon/sword/long						= /obj/item/rogueweapon/sword/long/triumph/psycrucifix,
 		/obj/item/rogueweapon/sword/long/psysword	  			= /obj/item/rogueweapon/sword/long/psysword/psycrucifix
 		)
 	result_item = null
+
+/obj/item/enchantingkit/triumph_weaponkit_axewood
+	name = "'Woodcutter' axe morphing elixir" //Restores the original iron axe sprite, with a fair boost to integrity and a +0.5 to its demolition modifier.
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of.. </br>..an Iron Axe."
+	target_items = list(/obj/item/rogueweapon/stoneaxe/woodcut)
+	result_item = /obj/item/rogueweapon/stoneaxe/woodcut/woodcutter
