@@ -64,19 +64,18 @@
 	icon_state = "inbash"
 	attack_verb = list("bashes", "clubs")
 	animname = "strike"
-	damfactor = 1.05
 	blade_class = BCLASS_BLUNT
 	hitsound = list('sound/combat/hits/blunt/metalblunt (1).ogg', 'sound/combat/hits/blunt/metalblunt (2).ogg', 'sound/combat/hits/blunt/metalblunt (3).ogg')
 	chargetime = 0
 	penfactor = BLUNT_DEFAULT_PENFACTOR
 	swingdelay = 5
-	damfactor = NONBLUNT_BLUNT_DAMFACTOR // Not a real blunt weapon, so less damage.
+	damfactor = NONBLUNT_BLUNT_DAMFACTOR //Not a real blunt weapon, so less damage.
 	item_d_type = "blunt"
 	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR
 
 /datum/intent/axe/bash/battle
 	name = "heavy bash"
-	damfactor = 1.15
+	damfactor = 0.8 //Buttstrokes, in essence. +20% damage over the standard variant.
 
 //axe objs ฅ^•ﻌ•^ฅ
 
