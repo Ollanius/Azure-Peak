@@ -8,6 +8,7 @@
 	hitsound = list('sound/combat/hits/bladed/smallslash (1).ogg', 'sound/combat/hits/bladed/smallslash (2).ogg', 'sound/combat/hits/bladed/smallslash (3).ogg')
 	animname = "cut"
 	penfactor = 20
+	damfactor = 1.15
 	chargetime = 0
 	item_d_type = "slash"
 
@@ -18,7 +19,8 @@
 	attack_verb = list("chops", "hacks")
 	animname = "chop"
 	hitsound = list('sound/combat/hits/bladed/genchop (1).ogg', 'sound/combat/hits/bladed/genchop (2).ogg', 'sound/combat/hits/bladed/genchop (3).ogg')
-	penfactor = 35
+	penfactor = 30
+	damfactor = 1.25
 	swingdelay = 10
 	clickcd = 14
 	item_d_type = "slash"
@@ -30,16 +32,32 @@
 	penfactor = 5
 
 /datum/intent/axe/chop/battle
-	damfactor = 1.2 //36 on battleaxe
-	penfactor = 40
+	name = "heavy chop"
+	penfactor = 30
+	damfactor = 1.35 //32.5 on one-handed swipes, 39 on two-handed swipes.
+
+/datum/intent/axe/cut/battle
+	name = "heavy swing"
+	penfactor = 20
+	damfactor = 1.25
 
 /datum/intent/axe/chop/battle/halberd
-	damfactor = 1.3
+	damfactor = 1.4
 	swingdelay = 12
 	penfactor = 20
 
-/datum/intent/axe/cut/battle
-	penfactor = 25
+/datum/intent/axe/thrust
+	name = "stab"
+	icon_state = "instab"
+	attack_verb = list("stabs")
+	animname = "stab"
+	blade_class = BCLASS_STAB
+	hitsound = list('sound/combat/hits/bladed/genstab (1).ogg', 'sound/combat/hits/bladed/genstab (2).ogg', 'sound/combat/hits/bladed/genstab (3).ogg')
+	penfactor = 20
+	damfactor = 0.9 //Lesser variant of the Stab intent for battle axes that have spikes on them. Mordhau-maxxing, as it were.
+	chargetime = 0
+	swingdelay = 0
+	item_d_type = "stab"
 
 /datum/intent/axe/bash
 	name = "bash"
@@ -51,9 +69,13 @@
 	chargetime = 0
 	penfactor = BLUNT_DEFAULT_PENFACTOR
 	swingdelay = 5
-	damfactor = NONBLUNT_BLUNT_DAMFACTOR // Not a real blunt weapon, so less damage.
+	damfactor = NONBLUNT_BLUNT_DAMFACTOR //Not a real blunt weapon, so less damage.
 	item_d_type = "blunt"
 	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR
+
+/datum/intent/axe/bash/battle
+	name = "heavy bash"
+	damfactor = 0.8 //Buttstrokes, in essence. +20% damage over the standard variant.
 
 //axe objs ฅ^•ﻌ•^ฅ
 
@@ -63,7 +85,7 @@
 	force_wielded = 20
 	possible_item_intents = list(/datum/intent/axe/chop/stone)
 	name = "stone axe"
-	desc = "A rough stone axe. Badly balanced."
+	desc = "A rough stone axe, fashioned from a wooden staff and a sharpened hunk of flint. It feels poorly balanced in your hands."
 	icon_state = "stoneaxe"
 	icon = 'icons/roguetown/weapons/axes32.dmi'
 	item_state = "axe"
@@ -100,15 +122,16 @@
 /obj/item/rogueweapon/stoneaxe/battle
 	force = 25
 	force_wielded = 30
-	possible_item_intents = list(/datum/intent/axe/cut/battle, /datum/intent/axe/chop/battle, /datum/intent/axe/bash, /datum/intent/sword/peel)
 	wlength = WLENGTH_LONG		//It's a big battle-axe.
 	name = "battle axe"
-	desc = "A steel battleaxe of war. Has a wicked edge."
+	desc = "A battle axe with a sharpened edge, ready for war."
 	icon_state = "battleaxe"
 	max_blade_int = 300
 	smeltresult = /obj/item/ingot/steel
 	smelt_bar_num = 2
-	gripped_intents = list(/datum/intent/axe/cut/battle ,/datum/intent/axe/chop/battle, /datum/intent/axe/bash, /datum/intent/sword/peel)
+	wbalance = WBALANCE_HEAVY
+	possible_item_intents = list(/datum/intent/axe/cut/battle, /datum/intent/axe/chop/battle, /datum/intent/axe/thrust, /datum/intent/axe/bash/battle)
+	gripped_intents = list(/datum/intent/axe/cut/battle, /datum/intent/axe/chop/battle, /datum/intent/axe/bash/battle, /datum/intent/sword/peel)
 	minstr = 9
 	wdefense = 4
 
@@ -131,7 +154,7 @@
 	bigboy = TRUE
 	gripsprite = TRUE
 	smeltresult = /obj/item/ingot/steel
-	gripped_intents = list(/datum/intent/axe/cut/battle ,/datum/intent/axe/chop/battle, /datum/intent/axe/bash)
+	gripped_intents = list(/datum/intent/axe/cut/battle, /datum/intent/axe/chop/battle, /datum/intent/axe/bash/battle)
 	minstr = 12
 	wdefense = 5
 
@@ -149,12 +172,12 @@
 	name = "axe"
 	force = 20
 	force_wielded = 26
-	possible_item_intents = list(/datum/intent/axe/cut,/datum/intent/axe/chop, /datum/intent/sword/peel)
-	desc = "A regular iron woodcutting axe."
+	possible_item_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, /datum/intent/axe/bash, /datum/intent/sword/peel)
+	desc = "It carves, it chops, and it cleaves without compromise; what more could you truly ask for?"
 	icon_state = "axe"
 	max_blade_int = 400
 	smeltresult = /obj/item/ingot/iron
-	gripped_intents = list(/datum/intent/axe/cut,/datum/intent/axe/chop, /datum/intent/sword/peel)
+	gripped_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, /datum/intent/axe/bash, /datum/intent/sword/peel)
 	wdefense = 2
 
 /obj/item/rogueweapon/stoneaxe/woodcut/aaxe
@@ -210,8 +233,8 @@
 	icon_state = "abyssoraxe"
 	icon = 'icons/roguetown/weapons/axes32.dmi'
 	max_integrity = 400 // higher int than usual
-	possible_item_intents = list(/datum/intent/axe/cut,/datum/intent/axe/chop, /datum/intent/mace/warhammer/pick, /datum/intent/axe/bash)
-	gripped_intents = list(/datum/intent/axe/cut,/datum/intent/axe/chop, /datum/intent/sword/peel, /datum/intent/axe/bash)
+	possible_item_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, /datum/intent/mace/warhammer/pick, /datum/intent/axe/bash/battle)
+	gripped_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, /datum/intent/sword/peel, /datum/intent/axe/bash/battle)
 
 //Pickaxe-axe ; Technically both a tool and a weapon, but it goes here due to weapon function. Subtype of woodcutter axe, mostly a weapon.
 /obj/item/rogueweapon/stoneaxe/woodcut/pick
@@ -279,15 +302,16 @@
 	embedding = list("embedded_pain_multiplier" = 4, "embed_chance" = 33, "embedded_fall_chance" = 2)
 
 /obj/item/rogueweapon/stoneaxe/woodcut/bronzebattleaxe
-	name = "bronze waraxe"
+	name = "bronze war axe"
 	icon_state = "bronzebattleaxe"
 	desc = "An antiquital handstaff, fitted with a thrice-wedged bronze axhead. The unique design of its edge, similar to the khopesh, ensures that each swing properly ferries all of its wielder's strength into its destination."
 	force = 23 // Similar presentation to a battle axe, albeit without the durability or full damage.
-	possible_item_intents = list(/datum/intent/axe/cut/battle, /datum/intent/axe/chop/battle, /datum/intent/axe/bash, /datum/intent/sword/peel)
-	gripped_intents = list(/datum/intent/axe/cut/battle, /datum/intent/axe/chop/battle, /datum/intent/axe/bash, /datum/intent/sword/peel)
+	possible_item_intents = list(/datum/intent/axe/cut/battle, /datum/intent/axe/chop/battle, /datum/intent/axe/bash/battle, /datum/intent/sword/peel)
+	gripped_intents = list(/datum/intent/axe/cut/battle, /datum/intent/axe/chop/battle, /datum/intent/axe/bash/battle, /datum/intent/sword/peel)
 	force_wielded = 27
 	max_blade_int = 500
 	smeltresult = /obj/item/ingot/bronze
+	wbalance = WBALANCE_HEAVY
 	minstr = 8
 	wdefense = 4
 	armor_penetration = 22 //In-between a hurblat and hatchet. Far harder to reproduce.
@@ -323,7 +347,7 @@
 	icon_state = "woodcutter"
 	desc = "A long-handled axe with a carved grip, made of high quality wood. Perfect for those in the lumber trade."
 	max_integrity = 300		//100 higher than normal; basically it's main difference.
-	possible_item_intents = list(/datum/intent/axe/cut,/datum/intent/axe/chop, /datum/intent/axe/bash, /datum/intent/sword/peel)
+	possible_item_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, /datum/intent/axe/bash, /datum/intent/sword/peel)
 	gripped_intents = list(/datum/intent/axe/cut/long, /datum/intent/axe/chop/long, /datum/intent/axe/bash, /datum/intent/sword/peel)
 	wlength = WLENGTH_LONG
 	w_class = WEIGHT_CLASS_BULKY
@@ -343,6 +367,13 @@
 				return list("shrink" = 0.7,"sx" = 4,"sy" = -4,"nx" = -6,"ny" = -3,"wx" = -4,"wy" = -4,"ex" = 4,"ey" = -3,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -44,"sturn" = 45,"wturn" = -33,"eturn" = 33,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
 			if("onbelt")
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
+
+/obj/item/rogueweapon/stoneaxe/woodcut/woodcutter
+	name = "woodcutter's handaxe"
+	icon_state = "axelegacy"
+	desc = "A short-handled axe with a carved grip, made of high quality wood. Perfect for the discerning carpenter."
+	max_integrity = 300
+	demolition_mod = 2.5
 
 /obj/item/rogueweapon/stoneaxe/boneaxe
 	slot_flags = ITEM_SLOT_HIP | ITEM_SLOT_BACK
@@ -436,9 +467,9 @@
 	force = 15
 	force_wielded = 30
 	possible_item_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, SPEAR_BASH) //bash is for nonlethal takedowns, only targets limbs
-	gripped_intents = list(/datum/intent/axe/cut/battle/greataxe, /datum/intent/axe/chop/battle/greataxe, SPEAR_BASH)
+	gripped_intents = list(/datum/intent/axe/cut/long, /datum/intent/axe/chop/long, SPEAR_BASH)
 	name = "greataxe"
-	desc = "A iron great axe, a long-handled axe with a single blade made for ruining someone's day beyond any measure.."
+	desc = "A iron great axe, a long-handled axe with a single blade made for ruining someone's day beyond any measure."
 	icon_state = "igreataxe"
 	icon = 'icons/roguetown/weapons/axes64.dmi'
 	pixel_y = -16
@@ -449,6 +480,7 @@
 	gripsprite = TRUE
 	wlength = WLENGTH_GREAT
 	w_class = WEIGHT_CLASS_BULKY
+	wbalance = WBALANCE_HEAVY
 	minstr = 11
 	max_blade_int = 200
 	anvilrepair = /datum/skill/craft/weaponsmithing
@@ -472,7 +504,7 @@
 	force = 15
 	force_wielded = 30
 	possible_item_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, SPEAR_BASH) //bash is for nonlethal takedowns, only targets limbs
-	gripped_intents = list(/datum/intent/axe/cut/battle/greataxe, /datum/intent/axe/chop/battle/greataxe, SPEAR_BASH)
+	gripped_intents = list(/datum/intent/axe/cut/long, /datum/intent/axe/chop/long, SPEAR_BASH)
 	name = "steel greataxe"
 	desc = "A steel great axe, a long-handled axe with a single blade made for ruining someone's day beyond any measure.."
 	icon_state = "sgreataxe"
@@ -484,7 +516,7 @@
 	force = 15
 	force_wielded = 30
 	possible_item_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, SPEAR_BASH) //bash is for nonlethal takedowns, only targets limbs
-	gripped_intents = list(/datum/intent/axe/cut/battle/greataxe, /datum/intent/axe/chop/battle/greataxe, SPEAR_BASH)
+	gripped_intents = list(/datum/intent/axe/cut/long, /datum/intent/axe/chop/long, SPEAR_BASH)
 	name = "bronze greataxe"
 	desc = "A massive staff with a bronze axhead mantled onto the wood. It splits and carves from afar with lethal force; be it lumber or limbs."
 	icon_state = "bronzegreataxe"
@@ -499,9 +531,9 @@
 
 /obj/item/rogueweapon/greataxe/steel/knight
 	possible_item_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, /datum/intent/mace/strike)
-	gripped_intents = list(/datum/intent/axe/cut/battle/greataxe, /datum/intent/axe/chop/battle/greataxe,  /datum/intent/mace/strike, /datum/intent/mace/rangedthrust)
+	gripped_intents = list(/datum/intent/axe/cut/battle/greataxe, /datum/intent/axe/chop/battle/greataxe, /datum/intent/mace/strike, /datum/intent/mace/rangedthrust)
 	name = "steel poleaxe"
-	desc = "A poleaxe, bearing axhead afront and beaked claw on the other. The natural evolution of the halberd it is the ultimate weapon to defeat any foe a knight could face."
+	desc = "A poleaxe, bearing axhead afront and beaked claw on the other. The natural evolution of the halberd - it is the ultimate weapon, fit to defeat any foe that a knight could face."
 	icon_state = "steelpoleaxe"
 	max_blade_int = 300
 
@@ -568,16 +600,17 @@
 	force = 15
 	force_wielded = 35
 	possible_item_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, SPEAR_BASH) //bash is for nonlethal takedowns, only targets limbs
-	gripped_intents = list(/datum/intent/axe/cut/battle/greataxe, /datum/intent/axe/chop/battle/greataxe, SPEAR_BASH)
+	gripped_intents = list(/datum/intent/axe/cut/long, /datum/intent/axe/chop/long, SPEAR_BASH)
 	name = "double-headed steel greataxe"
 	desc = "A steel great axe with a wicked double-bladed head. Perfect for cutting either men or trees into stumps.."
 	icon_state = "doublegreataxe"
 	max_blade_int = 175
-	minstr = 12
+	minstr = 13
 
 /obj/item/rogueweapon/greataxe/steel/doublehead/graggar
 	name = "vicious greataxe"
-	desc = "A greataxe who's edge thrums with the motive force, violence, oh, sweet violence!"
+	desc = "Crystalline violence, jagged and cruel - fit for only those of anointed strength. Though the edge thrums with unspeakable power, it is only your hands that can determine whether it will defy fate.. ..or fufill it."
+	gripped_intents = list(/datum/intent/axe/cut/battle/greataxe, /datum/intent/axe/chop/battle/greataxe, /datum/intent/mace/rangedthrust, SPEAR_BASH) //Spikes for thrusting.
 	icon_state = "graggargaxe"
 	force = 20
 	force_wielded = 40
@@ -595,7 +628,7 @@
 	name = "minotaur greataxe"
 	desc = "An incredibly heavy and large axe, pried from the cold-dead hands of Dendor's most wicked of beasts."
 	icon_state = "minotaurgreataxe"
-	max_blade_int = 250
+	max_blade_int = 333
 	minstr = 14 //Double-headed greataxe with extra durability. Rare dungeon loot in minotaur dungeons; no longer drops from every single minotaur.
 
 /obj/item/rogueweapon/stoneaxe/woodcut/troll
