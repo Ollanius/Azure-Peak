@@ -866,6 +866,8 @@
 	gripped_intents = list(/datum/intent/sword/cut, /datum/intent/sword/thrust, /datum/intent/sword/peel, /datum/intent/axe/chop)
 	vorpal = TRUE // snicker snack this shit cuts heads off effortlessly (DO NOT PUT THIS ON ANYTHING ELSE UNLESS IT'S SUPER FUCKING RARE!!!)
 
+/obj/item/rogueweapon/sword/long/exe/getonmobprop(tag)
+	. = ..()
 	if(tag)
 		switch(tag)
 			if("gen")
