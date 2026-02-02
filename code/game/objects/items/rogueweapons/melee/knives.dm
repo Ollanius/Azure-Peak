@@ -30,6 +30,11 @@
 	penfactor = 20
 	clickcd = 11
 
+// For thrusting-focused daggers. Thinner blade, less slashing damage.
+/datum/intent/dagger/cut/light
+	name = "light cut"
+	damfactor = 0.8
+
 /datum/intent/dagger/thrust
 	name = "thrust"
 	icon_state = "instab"
@@ -333,7 +338,7 @@
 	if(tag)
 		switch(tag)
 			if("gen")
-				return list("shrink" = 0.5,"sx" = -10,"sy" = -8,"nx" = 13,"ny" = -8,"wx" = -8,"wy" = -7,"ex" = 7,"ey" = -8,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 90,"sturn" = -90,"wturn" = -80,"eturn" = 81,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
+				return list("shrink" = 0.6,"sx" = -10,"sy" = -8,"nx" = 13,"ny" = -8,"wx" = -8,"wy" = -7,"ex" = 7,"ey" = -8,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 90,"sturn" = -90,"wturn" = -80,"eturn" = 81,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
 			if("onbelt")
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
@@ -399,7 +404,7 @@
 	clickcd = 8
 	item_d_type = "stab"
 
-/datum/intent/dagger/cut/combat
+/datum/intent/dagger/cut/rend
 	name = "wicked slice"
 	icon_state = "inrend"
 	attack_verb = list("slices", "dices")
@@ -440,8 +445,8 @@
 /obj/item/rogueweapon/huntingknife/combat/messser //Just as Grenzelhoft intended
 	name = "kampfmesser"
 	desc = "An undersized steel messer that barely fits into a conventional dagger sheath, the saving grace of any hunter. It lacks a tip for stabbing - yet the edge alone is sharp enough to hack most issues right away. \
-	While it was brought over by Grenzelhoftian migrants it is considered Azurean staple these daes - The right tool for the right job."
-	possible_item_intents = list(/datum/intent/dagger/cut/heavy, /datum/intent/dagger/cut/combat, /datum/intent/dagger/chop/cleaver, /datum/intent/dagger/sucker_punch)
+	While it was brought over by Grenzelhoftian migrants, it is considered an Azurean staple these daes - the right tool for the right job."
+	possible_item_intents = list(/datum/intent/dagger/cut/rend, /datum/intent/dagger/chop/cleaver, /datum/intent/dagger/cut/heavy, /datum/intent/dagger/sucker_punch)
 	icon_state = "minimesser"
 	sheathe_icon = "minimesser"
 	max_blade_int = 200
@@ -574,9 +579,9 @@
 /obj/item/rogueweapon/huntingknife/idagger/steel/rondel
 	name = "rondel dagger"
 	desc = "This is the traditional sidearm of a knight: a lightweight dagger of solid steel, well-balanced for delivering rapid thrusts that can shuck grapplers like oysters."
-	icon_state = "rondeldagger"
+	icon_state = "rondel"
 	sheathe_icon = "dagger_trainer"
-	possible_item_intents = list(/datum/intent/dagger/thrust/quick, /datum/intent/dagger/thrust/pick, /datum/intent/dagger/sucker_punch, /datum/intent/dagger/cut)
+	possible_item_intents = list(/datum/intent/dagger/thrust/quick, /datum/intent/dagger/thrust/pick, /datum/intent/dagger/cut/light, /datum/intent/dagger/sucker_punch)
 	wdefense = 4 //Slightly more defense than a regular dagger. Intended to function as a tool for countering grapplers or finishing off armored opponents with broken pieces.
 	smeltresult = /obj/item/ingot/steel
 
@@ -643,7 +648,7 @@
 	name = "sharpened stake"
 	desc = "A branch that has been broken off of an azurielve tree, sharpened to a fine point. It can lay some unholy creechers to rest, but only by piercing their hearts."
 	icon_state = "stake"
-	possible_item_intents = list(/datum/intent/dagger/thrust, /datum/intent/dagger/thrust/pick, /datum/intent/dagger/sucker_punch, /datum/intent/dagger/thrust/quick)
+	possible_item_intents = list(/datum/intent/dagger/thrust/pick, /datum/intent/dagger/thrust/quick, /datum/intent/dagger/cut/light, /datum/intent/dagger/sucker_punch)
 	force = 12
 	throwforce = 12
 	wdefense = 0
@@ -660,7 +665,7 @@
 	name = "silver-tipped stake"
 	desc = "A branch that has been broken off of a boswellia tree, sharpened to a fine point and tipped with blessed silver. It can lay most unholy creechers to rest, but only by piercing their hearts."
 	icon_state = "stake_silver"
-	possible_item_intents = list(/datum/intent/dagger/thrust, /datum/intent/dagger/thrust/pick, /datum/intent/dagger/sucker_punch, /datum/intent/dagger/thrust/quick)
+	possible_item_intents = list(/datum/intent/dagger/thrust/pick, /datum/intent/dagger/thrust/quick, /datum/intent/dagger/cut/light, /datum/intent/dagger/sucker_punch)
 	force = 20
 	throwforce = 20
 	wdefense = 0
@@ -820,7 +825,7 @@
 	force = 15 //On the FIRST ROUND this was added, someone managed to kill the Vampire Lord with the Poop Knife. Reducing the force 
 	max_integrity = 50 //Should render to ~100, at most. More fragile than alloyed knives. You know why.
 	max_blade_int = 333 //Exceedingly sharp. Ditto.
-	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/cut/combat, /datum/intent/dagger/sucker_punch, /datum/intent/dagger/thrust/combat) //Seax's intents, for self-explanatory reasons.
+	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/chop/bronze, /datum/intent/dagger/sucker_punch, /datum/intent/dagger/thrust/combat) //Seax's intents, for self-explanatory reasons.
 
 /obj/item/rogueweapon/huntingknife/idagger/silver/elvish/drow
 	name = "dark elvish dagger"
@@ -995,8 +1000,9 @@
 
 /datum/intent/dagger/thrust/quick
 	name = "quick thrust"
+	icon_state = "inthresh"
 	attack_verb = list("thrusts", "shanks")
-	penfactor = 20 //Counts as up to 30-35AP, when factoring in strength-modified damage. 
+	penfactor = 20 //Counts as up to 30-35AP, when factoring in strength-modified damage. Keep restricted to weapons that're meant to counter grapplers and wrestlers.
 	clickcd = 4 //Halved penetration, doubled attack speed. This is either going to be extremely funny, or extremely evil.
 
 /obj/item/rogueweapon/huntingknife/scissors
