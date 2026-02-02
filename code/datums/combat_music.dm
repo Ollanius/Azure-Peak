@@ -84,10 +84,24 @@ GLOBAL_LIST_EMPTY(cmode_tracks_by_name)
 
 /datum/combat_music/ascended
 	name = "Ascended"
-	desc = "No mortal could ever comprehend the heights to which I've risen."
+	desc = "No mortal could ever comprehend the heights to which I've risen.."
 	shortname = "Ascended"
 	credits = "TO PIERCE THE BLACK SKY /// ENVY INTERLUDE - UNFORTUNATE DEVELOPMENT"
 	musicpath = list('sound/music/combat_ascended.ogg')
+
+/datum/combat_music/ascendedsavior
+	name = "Ascended - 'Savior' Mix"
+	desc = "..and as long as I'm here to fight for them, they'll never have to."
+	shortname = "Savior"
+	credits = "OUTCOME MEMORIES /// DON'T BLINK"
+	musicpath = list('sound/music/combat_ascendedsavior.ogg')
+
+/datum/combat_music/ascendedzenith
+	name = "Ascended - 'Zenith' Mix"
+	desc = "Lowly fool - will you save your world? Or will you watch the birth of a new one?"
+	shortname = "Zenith"
+	credits = "OUTCOME MEMORIES /// SUPER SONIC HERO, FT. JOHNNY GIOELI"
+	musicpath = list('sound/music/combat_ascendedzenith.ogg')
 
 /datum/combat_music/astrata
 	name = "Astratan Light"
@@ -351,7 +365,7 @@ GLOBAL_LIST_EMPTY(cmode_tracks_by_name)
 	musicpath = list('sound/music/combat_noble.ogg')
 
 /datum/combat_music/ozium
-	name = "Ozium Abuse (loud!)"
+	name = "Ozium Abuse (Loud!)"
 	desc = ""
 	shortname = "Ozium"
 	credits = "Light Club - FAHKEET"
