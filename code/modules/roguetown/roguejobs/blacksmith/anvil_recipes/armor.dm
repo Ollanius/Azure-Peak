@@ -1297,18 +1297,6 @@
 	additional_items = list(/obj/item/ingot/gold, /obj/item/natural/silk, /obj/item/natural/silk, /obj/item/roguegem/diamond)
 	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/knight/gold/king
 
-/datum/anvil_recipe/armor/gold/helmet
-	name = "Golden Barbute (+1 Gold, +2 Silk)"
-	req_bar = /obj/item/ingot/gold
-	additional_items = list(/obj/item/ingot/gold, /obj/item/natural/silk, /obj/item/natural/silk)
-	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/sheriff/gold
-
-/datum/anvil_recipe/armor/gold/helmetcrown
-	name = "Golden Barbute, Royal (+1 Gold, +2 Silk, +1 Dorpel)"
-	req_bar = /obj/item/ingot/gold
-	additional_items = list(/obj/item/ingot/gold, /obj/item/natural/silk, /obj/item/natural/silk, /obj/item/roguegem/diamond)
-	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/sheriff/gold/king
-
 /datum/anvil_recipe/armor/gold/gorget
 	name = "Golden Gorget (+1 Gold, +2 Silk)"
 	req_bar = /obj/item/ingot/gold
