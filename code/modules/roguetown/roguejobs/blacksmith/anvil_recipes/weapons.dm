@@ -460,6 +460,13 @@
 	additional_items = list(/obj/item/grown/log/tree/stick)
 	created_item = /obj/item/rogueweapon/stoneaxe/woodcut
 
+/datum/anvil_recipe/weapons/iron/axelegacy
+	name = "Woodcutting Handaxe, Iron (+1 Small Log)"
+	req_bar = /obj/item/ingot/iron
+	req_blade = /obj/item/blade/iron_axe
+	additional_items = list(/obj/item/grown/log/tree/small)
+	created_item = /obj/item/rogueweapon/stoneaxe/woodcut/woodcutter
+
 /datum/anvil_recipe/weapons/iron/greataxe
 	name = "Greataxe, Iron (+1 Iron, +1 Small Log)"
 	req_bar = /obj/item/ingot/iron
