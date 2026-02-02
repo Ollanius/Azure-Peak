@@ -53,6 +53,13 @@
 					/obj/item/rogueweapon/stoneaxe/woodcut,
 				)
 
+/datum/supply_pack/rogue/iron_weapons/axelegacy
+	name = "Woodcutting Handaxe"
+	cost = 30 // 1 Iron Ingot + 1 Small Log
+	contains = list(
+					/obj/item/rogueweapon/stoneaxe/woodcut/woodcutter,
+				)
+
 /datum/supply_pack/rogue/iron_weapons/spear
 	name = "Spear"
 	cost = 25 // 1 Iron Ingot
