@@ -11,6 +11,13 @@
 					/obj/item/rogueweapon/sword/iron,
 				)
 
+/datum/supply_pack/rogue/iron_weapons/greatsword
+	name = "Iron Greatsword"
+	cost = 50
+	contains = list(
+					/obj/item/rogueweapon/greatsword/iron,
+				)
+
 /datum/supply_pack/rogue/iron_weapons/shortsword
 	name = "Shortsword"
 	cost = 25 // 1 Iron Ingot
@@ -109,7 +116,6 @@
 					/obj/item/rogueweapon/greataxe,
 				)
 
-
 /datum/supply_pack/rogue/iron_weapons/greatflail
 	name = "Greatflail"
 	cost = 50 // 2 Iron Ingot, 1 Small Log, 1 Chain
@@ -123,7 +129,6 @@
 	contains = list(
 					/obj/item/rogueweapon/halberd/bardiche,
 				)
-
 
 /datum/supply_pack/rogue/iron_weapons/lucerne
 	name = "Lucerne Hammer"
