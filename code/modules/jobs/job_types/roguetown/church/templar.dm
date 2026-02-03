@@ -1,4 +1,4 @@
-//shield flail or longsword, tief can be this with red cross
+	//shield flail or longsword, tief can be this with red cross
 
 /datum/job/roguetown/templar
 	title = "Templar"
@@ -145,31 +145,31 @@
 	var/weapon_choice = input(H,"Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	switch(weapon_choice)
 		if("Discipline - Unarmed")
-			H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_EXPERT, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/misc/athletics, SKILL_LEVEL_MASTER, TRUE)
 			gloves = /obj/item/clothing/gloves/roguetown/bandages/pugilist
 			ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 		if("Katar")
-			H.put_in_hands(new /obj/item/rogueweapon/katar(H))
 			gloves = /obj/item/clothing/gloves/roguetown/bandages/weighted
+			r_hand = /obj/item/rogueweapon/katar
 			ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 		if("Knuckledusters")
-			H.put_in_hands(new /obj/item/rogueweapon/knuckles(H))
 			gloves = /obj/item/clothing/gloves/roguetown/bandages/weighted
+			r_hand = /obj/item/rogueweapon/knuckles
 			ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 		if("Quarterstaff")
 			H.adjust_skillrank_up_to(/datum/skill/combat/staves, 4, TRUE) //Tested with Disciples, first. Should hopefully be not too busted - reduce to Journeyman, otherwise.
 			H.adjust_skillrank_up_to(/datum/skill/combat/polearms, 3, TRUE)
 			gloves = /obj/item/clothing/gloves/roguetown/bandages/weighted
-			H.put_in_hands(new /obj/item/rogueweapon/woodstaff/quarterstaff/steel(H))
-			H.put_in_hands(new /obj/item/rogueweapon/scabbard/gwstrap(H))
+			r_hand = /obj/item/rogueweapon/woodstaff/quarterstaff/steel
+			l_hand = /obj/item/rogueweapon/scabbard/gwstrap
 			H.change_stat(STATKEY_PER, 1) //Matches the Disciple's balance; exchanges the 'dodge expert' trait for additional accuracy with the staff.
 		if("Close Caress")
-			H.put_in_hands(new /obj/item/rogueweapon/knuckles/eora(H))
 			gloves = /obj/item/clothing/gloves/roguetown/bandages/weighted
+			r_hand = /obj/item/rogueweapon/knuckles/eora
 			ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 		if("Barotrauma")
-			H.put_in_hands(new /obj/item/rogueweapon/katar/abyssor(H))
 			gloves = /obj/item/clothing/gloves/roguetown/bandages/weighted
+			r_hand = /obj/item/rogueweapon/katar/abyssor
 			ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 
 	// -- Start of section for god specific bonuses --
