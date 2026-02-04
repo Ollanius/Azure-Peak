@@ -16,7 +16,6 @@
 	var/exp_light = 0
 	var/exp_flash = 0
 	var/exp_fire = 0
-	var/atom/throw_target = get_edge_target_turf(firer, get_dir(firer, target))
 
 //bolts ฅ^•ﻌ•^ฅ
 
@@ -185,7 +184,8 @@
 		M.Slowdown(65)
 		M.OffBalance(35)
 		M.Immobilize(20)
-		M.throw_at(throw_target, 2, 1)
+		explosion(T, heavy_impact_range = 0, light_impact_range = 0, flame_range = 0, smoke = TRUE, soundin = pick('sound/misc/explode/incendiary (1).ogg','sound/misc/explode/incendiary (2).ogg'))
+		qdel(src)
 
 /obj/item/ammo_casing/caseless/rogue/heavy_bolt/blunt
 	name = "blunt heavy bolt"
