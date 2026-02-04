@@ -144,7 +144,7 @@
 	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/thrust)
 	caliber = "heabolt"
 	icon = 'icons/roguetown/weapons/ammo.dmi'
-	icon_state = "heavybolt" //NOTE!!! FIND A WAY TO MAKE BOLTS DEAL EXTRA DAMAGE TO BARRICADES AND STRUCTURES ASAP!!! IF YOU KNOW, FEEL FREE TO PR IT ASAP!!!
+	icon_state = "heavybolt"
 	dropshrink = 0.8
 	max_integrity = 15
 	force = 15
@@ -169,7 +169,7 @@
 	range = 30
 	hitsound = 'sound/combat/hits/hi_bolt (2).ogg'
 	embedchance = 100
-	woundclass = BCLASS_BLUNT //Prevents penetration.
+	woundclass = BCLASS_PICK //Prevents penetration.
 	flag = "blunt"
 	speed = 0.8 //Half the speed of a traditional bolt. Between crossbows and NPC-fired projectiles, in terms of speed - evadable by PCs at longer ranges.
 	npc_simple_damage_mult = 3 //..or 360 damage against mindless opponents. Run them through!
@@ -212,13 +212,13 @@
 /obj/projectile/bullet/reusable/heavy_bolt/aalloy
 	name = "decrepit heavy bolt"
 	damage = 90 
-	embedchance = 50
+	embedchance = 100
 	demolition_mod = 12 //Ensures the bolt can still, at a minimum, destroy most wooden barricades and doors in one shot.
 	icon_state = "ancientbolt_proj"
 	poisontype = /datum/reagent/stampoison
 	poisonamount = 2 //You are, in essence, giving them tenantus.
-	slur = 7
-	eyeblur = 7
+	slur = 3
+	eyeblur = 3
 	drowsy = 3
 
 /obj/item/ammo_casing/caseless/rogue/heavy_bolt/paalloy
@@ -233,9 +233,9 @@
 	embedchance = 100
 	icon_state = "ancientbolt_proj"
 	poisontype = /datum/reagent/stampoison
-	poisonamount = 4 //You are, in essence, giving them tenantus. Roughly 50% stronger than a poisoned iron arrow.
-	slur = 10
-	eyeblur = 10
+	poisonamount = 
+	slur = 6
+	eyeblur = 6
 	drowsy = 6
 
 /obj/item/ammo_casing/caseless/rogue/heavy_bolt/bronze
