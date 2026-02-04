@@ -10,6 +10,13 @@
 	firing_effect_type = null
 	icon = 'icons/roguetown/weapons/ammo.dmi'
 
+//explosion variables ฅ^•ﻌ•^ฅ
+	var/explode_sound = list('sound/misc/explode/incendiary (1).ogg','sound/misc/explode/incendiary (2).ogg')
+	var/exp_heavy = 0
+	var/exp_light = 0
+	var/exp_flash = 0
+	var/exp_fire = 0
+
 //bolts ฅ^•ﻌ•^ฅ
 
 /obj/item/ammo_casing/caseless/rogue/bolt
@@ -176,9 +183,9 @@
 		M.Slowdown(4 SECONDS)
 		M.OffBalance(6 SECONDS)
 		M.Immobilize(1 SECONDS)
-		M.visible_message(span_warning("[owner] staggers back from the tremendous impact!"))
-		M.emote("breathgasp", forced = TRUE)
-		M.throw_at(throw_target, 2, 1)
+		target.visible_message(span_warning("[owner] staggers back from the tremendous impact!"))
+		target.emote("breathgasp", forced = TRUE)
+		target.throw_at(throw_target, 2, 1)
 	var/turf/T
 	if(isturf(target))
 		T = target
@@ -546,12 +553,6 @@
 	embedchance = 0
 	woundclass = BCLASS_BLUNT
 	flag = "piercing"
-	var/explode_sound = list('sound/misc/explode/incendiary (1).ogg','sound/misc/explode/incendiary (2).ogg')
-	//explosion values
-	var/exp_heavy = 0
-	var/exp_light = 0
-	var/exp_flash = 0
-	var/exp_fire = 1
 
 /obj/projectile/bullet/bolt/water/on_hit(target)
 	. = ..()
