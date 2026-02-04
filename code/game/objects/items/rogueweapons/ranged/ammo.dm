@@ -233,7 +233,7 @@
 	embedchance = 100
 	icon_state = "ancientbolt_proj"
 	poisontype = /datum/reagent/stampoison
-	poisonamount = 
+	poisonamount = 3
 	slur = 6
 	eyeblur = 6
 	drowsy = 6
