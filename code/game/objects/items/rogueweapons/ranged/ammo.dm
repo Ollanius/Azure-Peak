@@ -168,9 +168,9 @@
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/heavy_bolt
 	range = 30
 	hitsound = 'sound/combat/hits/hi_bolt (2).ogg'
-	embedchance = 100
+	embedding = list("embedded_pain_multiplier" = 4, "embed_chance" = 100, "embedded_fall_chance" = 0)
 	woundclass = BCLASS_BLUNT //Prevents penetration.
-	flag = "piercing"
+	flag = "blunt"
 	speed = 0.8 //Half the speed of a traditional bolt. Between crossbows and NPC-fired projectiles, in terms of speed - evadable by PCs at longer ranges.
 	npc_simple_damage_mult = 3 //..or 360 damage against mindless opponents. Run them through!
 
@@ -178,13 +178,12 @@
 	. = ..()
 	if(ismob(target))
 		var/mob/living/M = target
-		M.apply_status_effect(/datum/status_effect/debuff/staggered, 4 SECONDS)
-		M.apply_status_effect(/datum/status_effect/debuff/exposed, 4 SECONDS)
-		M.Slowdown(40)
-		M.OffBalance(40)
-		M.Immobilize(10)
+		M.apply_status_effect(/datum/status_effect/debuff/staggered, 5 SECONDS)
+		M.apply_status_effect(/datum/status_effect/debuff/exposed, 5 SECONDS)
+		M.Slowdown(50)
+		M.OffBalance(50)
+		M.Immobilize(15)
 		M.visible_message(span_warning("[M] staggers back from the tremendous impact!"))
-		M.emote("breathgasp", forced = TRUE)
 
 /obj/item/ammo_casing/caseless/rogue/heavy_bolt/blunt
 	name = "blunt heavy bolt"
