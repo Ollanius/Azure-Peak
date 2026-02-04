@@ -178,6 +178,7 @@
 		M.Immobilize(1 SECONDS)
 		M.visible_message(span_warning("[owner] staggers back from the tremendous impact!"))
 		M.emote("breathgasp", forced = TRUE)
+		M.throw_at(throw_target, 2, 1)
 	var/turf/T
 	if(isturf(target))
 		T = target
