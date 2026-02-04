@@ -16,6 +16,7 @@
 	var/exp_light = 0
 	var/exp_flash = 0
 	var/exp_fire = 0
+	var/atom/throw_target = get_edge_target_turf(firer, get_dir(firer, target))
 
 //bolts ฅ^•ﻌ•^ฅ
 
@@ -178,12 +179,13 @@
 	. = ..()
 	if(ismob(target))
 		var/mob/living/M = target
-		M.apply_status_effect(/datum/status_effect/debuff/staggered, 5 SECONDS)
-		M.apply_status_effect(/datum/status_effect/debuff/exposed, 5 SECONDS)
-		M.Slowdown(50)
-		M.OffBalance(50)
-		M.Immobilize(15)
 		M.visible_message(span_warning("[M] staggers back from the tremendous impact!"))
+		M.apply_status_effect(/datum/status_effect/debuff/staggered, 6 SECONDS)
+		M.apply_status_effect(/datum/status_effect/debuff/exposed, 6 SECONDS)
+		M.Slowdown(65)
+		M.OffBalance(35)
+		M.Immobilize(20)
+		M.throw_at(throw_target, 2, 1)
 
 /obj/item/ammo_casing/caseless/rogue/heavy_bolt/blunt
 	name = "blunt heavy bolt"
