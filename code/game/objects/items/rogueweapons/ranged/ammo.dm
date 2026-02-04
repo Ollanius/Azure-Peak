@@ -168,7 +168,7 @@
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/heavy_bolt
 	range = 30
 	hitsound = 'sound/combat/hits/hi_bolt (2).ogg'
-	embedding = list("embedded_pain_multiplier" = 4, "embed_chance" = 100, "embedded_fall_chance" = 0)
+	embedchance = 100
 	woundclass = BCLASS_BLUNT //Prevents penetration.
 	flag = "blunt"
 	speed = 0.8 //Half the speed of a traditional bolt. Between crossbows and NPC-fired projectiles, in terms of speed - evadable by PCs at longer ranges.
