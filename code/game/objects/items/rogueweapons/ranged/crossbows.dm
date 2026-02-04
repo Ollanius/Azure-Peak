@@ -1,7 +1,11 @@
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
 	name = "crossbow"
-	desc = "A deadly weapon that shoots a bolt with terrific power. Unlike the common bow, it uses a sophisticated mechanism to renock - and retain - its half-length bolts; a matter that relies more on raw strength than dexterity to master. </br>A favorite amongst the Keep's ever-dutiful watchmen, both for its relative ease-of-use and effectiveness against Psydonia's unchivalrous inhabitants."
+	desc = "A deadly weapon that shoots a bolt with terrific power. Unlike the common bow, \
+	it uses a sophisticated mechanism to renock - and retain - its half-length bolts; a \
+	matter that relies more on raw strength than dexterity to master. </br>A favorite \
+	amongst the Keep's ever-dutiful watchmen, both for its relative ease-of-use and \
+	effectiveness against Psydonia's unchivalrous inhabitants."
 	icon = 'icons/roguetown/weapons/misc32.dmi'
 	icon_state = "crossbow0"
 	item_state = "crossbow"
@@ -327,3 +331,7 @@
 	desc = "A heavier weight crossbow from another tyme - the basis of a mounted ballista, made fit for handheld usage. Integrated just beneath the stock is a windlass mechanism, necessary to surmount the siegebow's titanic draw-strength. It loads heavier, full-length bolts; purpose-made to pulverize. </br>'Rudmarsch's walls broke beneath the volley, and Her sickness petered through the cracks..'"
 	icon_state = "ancientheavybow0"
 	item_state = "ancientheavybow"
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy/test
+	name = "valorian siegebow"
+	reloadtime = 1 SECOND
