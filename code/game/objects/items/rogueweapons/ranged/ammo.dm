@@ -180,9 +180,9 @@
 		var/mob/living/M = target
 		M.apply_status_effect(/datum/status_effect/debuff/staggered, 4 SECONDS)
 		M.apply_status_effect(/datum/status_effect/debuff/exposed, 4 SECONDS)
-		M.Slowdown(4 SECONDS)
-		M.OffBalance(6 SECONDS)
-		M.Immobilize(1 SECONDS)
+		M.Slowdown(40)
+		M.OffBalance(40)
+		M.Immobilize(10)
 		M.visible_message(span_warning("[M] staggers back from the tremendous impact!"))
 		M.emote("breathgasp", forced = TRUE)
 
