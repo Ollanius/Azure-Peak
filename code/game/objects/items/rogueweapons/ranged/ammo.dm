@@ -183,15 +183,8 @@
 		M.Slowdown(4 SECONDS)
 		M.OffBalance(6 SECONDS)
 		M.Immobilize(1 SECONDS)
-		target.visible_message(span_warning("[owner] staggers back from the tremendous impact!"))
-		target.emote("breathgasp", forced = TRUE)
-		target.throw_at(throw_target, 2, 1)
-	var/turf/T
-	if(isturf(target))
-		T = target
-	else
-		T = get_turf(target)
-	explosion(T, -1, exp_heavy, exp_light, exp_flash, 0, flame_range = exp_fire, soundin = explode_sound)
+		M.visible_message(span_warning("[owner] staggers back from the tremendous impact!"))
+		M.emote("breathgasp", forced = TRUE)
 
 /obj/item/ammo_casing/caseless/rogue/heavy_bolt/blunt
 	name = "blunt heavy bolt"
