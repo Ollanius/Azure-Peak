@@ -334,4 +334,4 @@
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy/test
 	name = "valorian siegebow"
-	reloadtime = 1 SECOND
+	reloadtime = 1 SECONDS
