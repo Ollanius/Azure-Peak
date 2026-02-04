@@ -30,6 +30,15 @@
 	max_integrity = 10
 	force = 10
 
+/obj/item/ammo_casing/caseless/rogue/bolt/getonmobprop(tag)
+	. = ..()
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.4,"sx" = -10,"sy" = 0,"nx" = 11,"ny" = 0,"wx" = -4,"wy" = 0,"ex" = 2,"ey" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
+			if("onbelt")
+				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
+
 /obj/item/ammo_casing/caseless/rogue/bolt/aalloy
 	name = "decrepit bolt"
 	desc = "An ancient bolt, tipped with frayed bronze. It lacks the luster that it once held, many centuries ago."
@@ -66,6 +75,24 @@
 	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/thrust)
 	caliber = "regbolt"
 	icon_state = "bolt_holywater"
+
+/obj/item/ammo_casing/caseless/rogue/bolt/holy/stake
+	name = "sharpened stake"
+	desc = "A branch that has been broken off of an azurielve tree, sharpened to a fine point. It can lay some unholy creechers to rest, but only by piercing their hearts."
+	caliber = "regbolt"
+	projectile_type = /obj/projectile/bullet/reusable/bolt/holy/stake
+	icon_state = "heavystake"
+	force = 12
+	throwforce = 12
+	wdefense = 0
+	max_integrity = 25
+	sellprice = 5
+	slot_flags = ITEM_SLOT_HIP
+	smeltresult = /obj/item/rogueore/coal
+	last_used = 0
+	equip_delay_self = 0 //No delay when stowing away, without a scabbard.
+	unequip_delay_self = 0 //No delay when drawing.
+	inv_storage_delay = 0 //No delay when retrieving from a storage slot.
 
 /obj/projectile/bullet/reusable/bolt
 	name = "bolt"
@@ -132,6 +159,14 @@
 	woundclass = BCLASS_BLUNT
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/bolt/blunt
 
+/obj/projectile/bullet/reusable/bolt/holy/stake
+	name = "sharpened stake"
+	damage = 50 //+33% damage, -33% poison.
+	poisontype = /datum/reagent/water/blessed
+	poisonamount = 3
+	icon_state = "heavystake_proj"
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/bolt/holy/stake
+
 //superbolts ฅ^•ﻌ•^ฅ
 
 //
@@ -155,11 +190,20 @@
 	unequip_delay_self = 1 SECONDS
 	inv_storage_delay = 1 SECONDS
 
+/obj/item/ammo_casing/caseless/rogue/heavy_bolt/getonmobprop(tag)
+	. = ..()
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.4,"sx" = -10,"sy" = 0,"nx" = 11,"ny" = 0,"wx" = -4,"wy" = 0,"ex" = 2,"ey" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
+			if("onbelt")
+				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
+
 /obj/projectile/bullet/reusable/heavy_bolt
 	name = "heavy bolt"
 	damage = 120 //+50% the damage of a regular crossbow bolt.
 	damage_type = BRUTE
-	armor_penetration = 0 //No penetration.
+	armor_penetration = 0 //Works in tandem with the 'Blunt' flag to prevent standard penetration.
 	object_damage_multiplier = 10 //Determines the multiplier that's applied to the bolt's damage value, when striking a structure. By default, it can destroy any wooden defense - a door, barricade, wall - in one shot.
 	wall_impact_break_probability = 100 //Determines the chance that a bolt will destroy itself, when striking a structure. By default, it will always destroy itself after successfully impacting a wall.
 	damages_turf_walls = TRUE //Determines whether the bolt can damage turfs or not. By default, yes.
@@ -169,7 +213,7 @@
 	range = 30
 	hitsound = 'sound/combat/hits/hi_bolt (2).ogg'
 	embedchance = 100
-	woundclass = BCLASS_PICK //Prevents penetration.
+	woundclass = BCLASS_PICK //
 	flag = "blunt"
 	speed = 0.8 //Half the speed of a traditional bolt. Between crossbows and NPC-fired projectiles, in terms of speed - evadable by PCs at longer ranges.
 	npc_simple_damage_mult = 3 //..or 360 damage against mindless opponents. Run them through!
@@ -272,6 +316,15 @@
 	dropshrink = 0.6
 	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/thrust)
 	max_integrity = 10
+
+/obj/item/ammo_casing/caseless/rogue/arrow/getonmobprop(tag)
+	. = ..()
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.4,"sx" = -10,"sy" = 0,"nx" = 11,"ny" = 0,"wx" = -4,"wy" = 0,"ex" = 2,"ey" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
+			if("onbelt")
+				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/ammo_casing/caseless/rogue/arrow/blunt
 	name = "blunt arrow"
@@ -502,6 +555,7 @@
 	speed = 0.4 //Same speed as a crossbow bolt. 
 	poisontype = /datum/reagent/water/blessed
 	poisonamount = 20
+	flag = "piercing" //Works in tandem with the penetration values to always pierce a chosen target.
 	npc_simple_damage_mult = 10 //..or 1200 damage against a mindless mob. If you're using this against one, you're either a fool or have no other choice left. Godspeed.
 
 // PYRO AMMO
