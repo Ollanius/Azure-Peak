@@ -183,7 +183,7 @@
 		M.Slowdown(4 SECONDS)
 		M.OffBalance(6 SECONDS)
 		M.Immobilize(1 SECONDS)
-		M.visible_message(span_warning("[owner] staggers back from the tremendous impact!"))
+		M.visible_message(span_warning("[M] staggers back from the tremendous impact!"))
 		M.emote("breathgasp", forced = TRUE)
 
 /obj/item/ammo_casing/caseless/rogue/heavy_bolt/blunt
