@@ -178,7 +178,7 @@
 	. = ..()
 	if(ismob(target))
 		var/mob/living/M = target
-		var/turf/T = turf
+		var/turf/T
 		M.visible_message(span_warning("[M] staggers back from the tremendous impact!"))
 		M.apply_status_effect(/datum/status_effect/debuff/staggered, 6 SECONDS)
 		M.apply_status_effect(/datum/status_effect/debuff/exposed, 6 SECONDS)
