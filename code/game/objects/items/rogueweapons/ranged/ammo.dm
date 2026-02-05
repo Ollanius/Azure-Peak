@@ -152,20 +152,37 @@
 	name = "heavy bolt"
 	damage = 120 //+50% the damage of a regular crossbow bolt.
 	damage_type = BRUTE
-	armor_penetration = 0 //No penetration.
-	object_damage_multiplier = 10 //Should destroy wooden barricades and doors in one shot, stone-and-iron doors in two, and The Gate in four.
-	wall_impact_break_probability = 100
-	damages_turf_walls = TRUE
+	armor_penetration = 0 //Works in tandem with the 'Blunt' flag to prevent standard penetration.
+	object_damage_multiplier = 10 //Determines the multiplier that's applied to the bolt's damage value, when striking a structure. By default, it can destroy any wooden defense - a door, barricade, wall - in one shot.
+	wall_impact_break_probability = 100 //Determines the chance that a bolt will destroy itself, when striking a structure. By default, it will always destroy itself after successfully impacting a wall.
+	damages_turf_walls = TRUE //Determines whether the bolt can damage turfs or not. By default, yes.
 	icon = 'icons/roguetown/weapons/ammo.dmi'
 	icon_state = "heavybolt_proj"
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/heavy_bolt
 	range = 30
 	hitsound = 'sound/combat/hits/hi_bolt (2).ogg'
 	embedchance = 100
-	woundclass = BCLASS_PIERCE
-	flag = "piercing"
+	woundclass = BCLASS_PICK
+	flag = "blunt"
 	speed = 0.8 //Half the speed of a traditional bolt. Between crossbows and NPC-fired projectiles, in terms of speed - evadable by PCs at longer ranges.
 	npc_simple_damage_mult = 3 //..or 360 damage against mindless opponents. Run them through!
+
+/obj/projectile/bullet/reusable/heavy_bolt/on_hit(target)
+	. = ..()
+	var/mob/living/M = target
+	if(ismob(target))
+		M.visible_message(span_warning("[M] staggers back from the tremendous impact!"))
+		M.apply_status_effect(/datum/status_effect/debuff/staggered, 8 SECONDS)
+		M.apply_status_effect(/datum/status_effect/debuff/exposed, 4 SECONDS)
+		M.Slowdown(8 SECONDS)
+		M.OffBalance(4 SECONDS)
+		M.Immobilize(2 SECONDS)
+		return
+
+	var/turf/T = target
+	if(isturf(target))
+		explosion(T, heavy_impact_range = 0, light_impact_range = 1, flame_range = 0, smoke = FALSE, soundin = pick('sound/misc/explode/incendiary (1).ogg','sound/misc/explode/incendiary (2).ogg'))
+		return
 
 /obj/item/ammo_casing/caseless/rogue/heavy_bolt/blunt
 	name = "blunt heavy bolt"
@@ -480,6 +497,7 @@
 	poisontype = /datum/reagent/water/blessed
 	poisonamount = 20
 	npc_simple_damage_mult = 10 //..or 1200 damage against a mindless mob. If you're using this against one, you're either a fool or have no other choice left. Godspeed.
+	flag = "piercing"
 
 // PYRO AMMO
 /obj/item/ammo_casing/caseless/rogue/bolt/pyro
