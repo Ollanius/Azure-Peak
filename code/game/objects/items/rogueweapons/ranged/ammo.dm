@@ -195,19 +195,20 @@
 
 /obj/projectile/bullet/reusable/heavy_bolt/on_hit(target)
 	. = ..()
+	var/mob/living/M = target
 	if(ismob(target))
-		var/mob/living/M = target
 		M.visible_message(span_warning("[M] staggers back from the tremendous impact!"))
 		M.apply_status_effect(/datum/status_effect/debuff/staggered, 8 SECONDS)
 		M.apply_status_effect(/datum/status_effect/debuff/exposed, 4 SECONDS)
 		M.Slowdown(8 SECONDS)
 		M.OffBalance(4 SECONDS)
 		M.Immobilize(2 SECONDS)
-	else
-		var/turf/T
-		if(isturf(target))
-		T = target
+		return
+
+	var/turf/T = target
+	if(isturf(target))
 		explosion(T, heavy_impact_range = 0, light_impact_range = 1, flame_range = 0, smoke = FALSE, soundin = pick('sound/misc/explode/incendiary (1).ogg','sound/misc/explode/incendiary (2).ogg'))
+		return
 
 /obj/item/ammo_casing/caseless/rogue/heavy_bolt/blunt
 	name = "blunt heavy bolt"
@@ -884,7 +885,73 @@
 	if(!iscarbon(hit_atom))
 		return//abort
 
-//sling bullets
+//Stakes - Purpose-made to penetrate evylle foes.
+//Main gimmick would be its (eventual?) exclusivity for the multi-shot 'Staker' weapon. For now, however, this shall suffice.
+/obj/item/ammo_casing/caseless/rogue/stake
+	name = "holy stake"
+	desc = "A branch that has been broken off of an azurielve tree, sharpened to a fine point and anointed with blessed oils. It can lay unholy creechers to rest, but only by piercing their hearts."
+	icon_state = "heavystake"
+	wlength = WLENGTH_SHORT
+	w_class = WEIGHT_CLASS_SMALL
+	force = 12
+	throw_speed = 3
+	armor_penetration = 20			
+	max_integrity = 25					
+	wdefense = 0						
+	thrown_bclass = BCLASS_STAB				
+	throwforce = 20							
+	sellprice = 5
+	possible_item_intents = list(/datum/intent/dagger/thrust/pick, /datum/intent/dagger/thrust/quick, /datum/intent/dagger/cut/light, /datum/intent/dagger/sucker_punch)
+	embedding = list("embedded_pain_multiplier" = 4, "embed_chance" = 35, "embedded_fall_chance" = 10)
+	anvilrepair = /datum/skill/craft/weaponsmithing
+	smeltresult = /obj/item/rogueore/coal
+	slot_flags = ITEM_SLOT_HIP|ITEM_SLOT_MOUTH
+	associated_skill = /datum/skill/combat/knives
+	caliber = "regbolt"
+	projectile_type = /obj/projectile/bullet/reusable/stake
+
+/obj/item/ammo_casing/caseless/rogue/stake/getonmobprop(tag)
+	. = ..()
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.5,"sx" = -10,"sy" = -6,"nx" = 11,"ny" = -6,"wx" = -4,"wy" = -6,"ex" = 5,"ey" = -6,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
+			if("onbelt")
+				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
+
+/obj/projectile/bullet/reusable/stake
+	name = "holy stake"
+	damage = 50 //Inverted bolt statistics - less damage, but more penetration.
+	armor_penetration = 70
+	damage_type = BRUTE
+	icon_state = "heavystake_proj"
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/bolt
+	range = 15
+	hitsound = 'sound/combat/hits/pick/genpick (1).ogg'
+	woundclass = BCLASS_PICK
+	flag = "piercing"
+	speed = 0.6 // Between crossbow bolts and siegebow bolts.
+	npc_simple_damage_mult = 2
+	embedchance = 100
+	poisontype = /datum/reagent/water/blessed
+	poisonamount = 3
+	npc_simple_damage_mult = 4 
+
+/obj/projectile/bullet/reusable/stake/on_hit(atom/target)
+	. = ..()
+	var/mob/living/L = firer
+	if(!L || !L.mind)
+		return
+	var/skill_multiplier = 0
+	if(isliving(target)) // If the target theyre shooting at is a mob/living
+		var/mob/living/T = target
+		if(T.stat != DEAD) // If theyre alive
+			skill_multiplier = 4
+	if(skill_multiplier && can_train_combat_skill(L, /datum/skill/combat/crossbows, SKILL_LEVEL_EXPERT))
+		L.mind.add_sleep_experience(/datum/skill/combat/crossbows, L.STAINT * skill_multiplier)
+
+
+//Sling Bullets - Rapid fire, full auto. Pelt 'em down like it's David and Goliath.
 /obj/item/ammo_casing/caseless/rogue/sling_bullet //parent of sling ammo and the temporary sling bullet for stones. shouldn't ever be seen
 	name = "soaring stone"
 	desc = "You shouldn't be seeing this."
