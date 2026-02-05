@@ -22,6 +22,7 @@
 	dropshrink = 0.6
 	max_integrity = 10
 	force = 10
+	slot_flags = ITEM_SLOT_HIP|ITEM_SLOT_MOUTH
 
 /obj/item/ammo_casing/caseless/rogue/bolt/getonmobprop(tag)
 	. = ..()
@@ -83,6 +84,7 @@
 	flag = "piercing"
 	speed = 0.4
 	npc_simple_damage_mult = 2
+	slot_flags = ITEM_SLOT_HIP|ITEM_SLOT_MOUTH
 
 /obj/item/ammo_casing/caseless/rogue/arrow/getonmobprop(tag)
 	. = ..()
@@ -894,6 +896,7 @@
 	throwforce = 20 //you can still throw them
 	dropshrink = 0.6
 	possible_item_intents = list(INTENT_GENERIC) //not intended to attack with them
+	slot_flags = ITEM_SLOT_MOUTH
 	max_integrity = 20
 
 /obj/item/ammo_casing/caseless/rogue/sling_bullet/getonmobprop(tag)
