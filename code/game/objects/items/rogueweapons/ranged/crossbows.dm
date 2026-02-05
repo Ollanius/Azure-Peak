@@ -18,6 +18,7 @@
 	randomspread = 1
 	spread = 0
 	can_parry = TRUE
+	wdefense = 4
 	var/chargingspeed = 40
 	var/reloadtime = 40
 	var/movingreload = FALSE
@@ -274,6 +275,7 @@
 	accfactor = 1.3
 	reloadtime = 20
 	force = 10
+	wdefense = 3
 	hasloadedsprite = TRUE
 	movingreload = TRUE
 	onehanded = TRUE
@@ -315,6 +317,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/heavy_xbow
 	minstr = 12 //Should only affect melee damage. Sells the impression that you're hauling some serious artillery around.
 	force = 20
+	wdefense = 5
 	chargingspeed = 60 //+20
 	reloadtime = 20 SECONDS //Emulates the use of a windlass, similar to its real life counterparts.
 	accfactor = 0.5 //Hey, I'd like to see you try to aim a siege weapon while standing up!
