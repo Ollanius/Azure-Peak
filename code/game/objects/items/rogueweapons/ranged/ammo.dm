@@ -203,11 +203,10 @@
 		M.Slowdown(8 SECONDS)
 		M.OffBalance(2 SECONDS)
 		M.Immobilize(2 SECONDS)
-	else
-		var/turf/T
-		(isturf(target))
-		T = target
-		explosion(T, heavy_impact_range = 0, light_impact_range = 1, flame_range = 0, smoke = FALSE, soundin = pick('sound/misc/explode/incendiary (1).ogg','sound/misc/explode/incendiary (2).ogg'))
+	if(isturf(target))
+	  var/turf/T = target
+	  explosion(T, heavy_impact_range = 0, light_impact_range = 1, flame_range = 0, smoke = FALSE, soundin = pick('sound/misc/explode/incendiary (1).ogg','sound/misc/explode/incendiary (2).ogg'))
+	  return
 
 /obj/item/ammo_casing/caseless/rogue/heavy_bolt/blunt
 	name = "blunt heavy bolt"
