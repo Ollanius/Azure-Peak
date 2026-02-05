@@ -204,7 +204,7 @@
 		M.OffBalance(2 SECONDS)
 		M.Immobilize(2 SECONDS)
 	if(isturf(target))
-	  var/turf/T = target
+	var/turf/T = target
 	  explosion(T, heavy_impact_range = 0, light_impact_range = 1, flame_range = 0, smoke = FALSE, soundin = pick('sound/misc/explode/incendiary (1).ogg','sound/misc/explode/incendiary (2).ogg'))
 	  return
 
