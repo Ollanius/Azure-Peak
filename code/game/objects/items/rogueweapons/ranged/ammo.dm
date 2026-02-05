@@ -76,24 +76,6 @@
 	caliber = "regbolt"
 	icon_state = "bolt_holywater"
 
-/obj/item/ammo_casing/caseless/rogue/bolt/holy/stake
-	name = "sharpened stake"
-	desc = "A branch that has been broken off of an azurielve tree, sharpened to a fine point. It can lay some unholy creechers to rest, but only by piercing their hearts."
-	caliber = "regbolt"
-	projectile_type = /obj/projectile/bullet/reusable/bolt/holy/stake
-	icon_state = "heavystake"
-	force = 12
-	throwforce = 12
-	wdefense = 0
-	max_integrity = 25
-	sellprice = 5
-	slot_flags = ITEM_SLOT_HIP
-	smeltresult = /obj/item/rogueore/coal
-	last_used = 0
-	equip_delay_self = 0 //No delay when stowing away, without a scabbard.
-	unequip_delay_self = 0 //No delay when drawing.
-	inv_storage_delay = 0 //No delay when retrieving from a storage slot.
-
 /obj/projectile/bullet/reusable/bolt
 	name = "bolt"
 	damage = BOLT_DAMAGE
@@ -158,14 +140,6 @@
 	embedchance = 0
 	woundclass = BCLASS_BLUNT
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/bolt/blunt
-
-/obj/projectile/bullet/reusable/bolt/holy/stake
-	name = "sharpened stake"
-	damage = 50 //+33% damage, -33% poison.
-	poisontype = /datum/reagent/water/blessed
-	poisonamount = 3
-	icon_state = "heavystake_proj"
-	ammo_type = /obj/item/ammo_casing/caseless/rogue/bolt/holy/stake
 
 //superbolts ฅ^•ﻌ•^ฅ
 
