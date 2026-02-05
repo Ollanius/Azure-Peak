@@ -196,19 +196,19 @@
 /obj/projectile/bullet/reusable/heavy_bolt/on_hit(target)
 	. = ..()
 	if(ismob(target))
-	  var/mob/living/M = target
-	  M.visible_message(span_warning("[M] staggers back from the tremendous impact!"))
-	  M.apply_status_effect(/datum/status_effect/debuff/staggered, 8 SECONDS)
-	  M.apply_status_effect(/datum/status_effect/debuff/exposed, 4 SECONDS)
-	  M.Slowdown(8 SECONDS)
-	  M.OffBalance(4 SECONDS)
-	  M.Immobilize(2 SECONDS)
-	  return
+		  var/mob/living/M = target
+		  M.visible_message(span_warning("[M] staggers back from the tremendous impact!"))
+		  M.apply_status_effect(/datum/status_effect/debuff/staggered, 8 SECONDS)
+		  M.apply_status_effect(/datum/status_effect/debuff/exposed, 4 SECONDS)
+		  M.Slowdown(8 SECONDS)
+		  M.OffBalance(4 SECONDS)
+		  M.Immobilize(2 SECONDS)
+		  return
 	
 	if(isturf(target))
-	  var/turf/T = target
-	  explosion(T, heavy_impact_range = 0, light_impact_range = 1, flame_range = 0, smoke = FALSE, soundin = pick('sound/misc/explode/incendiary (1).ogg','sound/misc/explode/incendiary (2).ogg'))
-	  return
+		  var/turf/T = target
+		  explosion(T, heavy_impact_range = 0, light_impact_range = 1, flame_range = 0, smoke = FALSE, soundin = pick('sound/misc/explode/incendiary (1).ogg','sound/misc/explode/incendiary (2).ogg'))
+		  return
 
 /obj/item/ammo_casing/caseless/rogue/heavy_bolt/blunt
 	name = "blunt heavy bolt"
