@@ -201,7 +201,7 @@
 		M.apply_status_effect(/datum/status_effect/debuff/staggered, 8 SECONDS)
 		M.apply_status_effect(/datum/status_effect/debuff/exposed, 4 SECONDS)
 		M.Slowdown(8 SECONDS)
-		M.OffBalance(4 SECONDS)
+		M.OffBalance(2 SECONDS)
 		M.Immobilize(2 SECONDS)
 	else
 		var/turf/T
