@@ -84,7 +84,6 @@
 	flag = "piercing"
 	speed = 0.4
 	npc_simple_damage_mult = 2
-	slot_flags = ITEM_SLOT_HIP|ITEM_SLOT_MOUTH
 
 /obj/item/ammo_casing/caseless/rogue/arrow/getonmobprop(tag)
 	. = ..()
@@ -295,6 +294,7 @@
 	dropshrink = 0.6
 	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/thrust)
 	max_integrity = 10
+	slot_flags = ITEM_SLOT_HIP|ITEM_SLOT_MOUTH
 
 /obj/item/ammo_casing/caseless/rogue/arrow/blunt
 	name = "blunt arrow"
