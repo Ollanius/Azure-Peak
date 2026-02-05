@@ -304,6 +304,9 @@
 	reloadtime = 20 SECONDS //Emulates the use of a windlass, similar to its real life counterparts.
 	accfactor = 0.5 //Hey, I'd like to see you try to aim a siege weapon while standing up!
 	penfactor = 0.1 //In essence: a ranged integrity cracker.
+	equip_delay_self = 3 SECONDS
+	unequip_delay_self = 3 SECONDS
+	inv_storage_delay = 2 SECONDS
 
 /obj/item/ammo_box/magazine/internal/shot/heavy_xbow
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/heavy_bolt
