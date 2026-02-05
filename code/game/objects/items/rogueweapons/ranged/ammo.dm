@@ -151,7 +151,7 @@
 	desc = "A massive steel bolt that is designed to pulverize the defenses of \
 	another, whether it be a castle's parapit or a knight's plate."
 	projectile_type = /obj/projectile/bullet/reusable/heavy_bolt
-	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/thrust)
+	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/thrust, /datum/intent/dagger/thrust/pick)
 	caliber = "heabolt"
 	icon = 'icons/roguetown/weapons/ammo.dmi'
 	icon_state = "heavybolt"
@@ -200,14 +200,13 @@
 		M.visible_message(span_warning("[M] staggers back from the tremendous impact!"))
 		M.apply_status_effect(/datum/status_effect/debuff/staggered, 8 SECONDS)
 		M.apply_status_effect(/datum/status_effect/debuff/exposed, 4 SECONDS)
-		M.Slowdown(80)
-		M.OffBalance(40)
-		M.Immobilize(20)
-	else
-		var/turf/T
-		if(isturf(target))
-		T = target
+		M.Slowdown(8 SECONDS)
+		M.OffBalance(4 SECONDS)
+		M.Immobilize(2 SECONDS)
+	if(isturf(target))
+ 		var/turf/T = target
 		explosion(T, heavy_impact_range = 0, light_impact_range = 1, flame_range = 0, smoke = FALSE, soundin = pick('sound/misc/explode/incendiary (1).ogg','sound/misc/explode/incendiary (2).ogg'))
+  		return
 
 /obj/item/ammo_casing/caseless/rogue/heavy_bolt/blunt
 	name = "blunt heavy bolt"
