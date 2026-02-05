@@ -334,3 +334,14 @@
 	desc = "A heavier weight crossbow from another tyme - the basis of a mounted ballista, made fit for handheld usage. Integrated just beneath the stock is a windlass mechanism, necessary to surmount the siegebow's titanic draw-strength. It loads heavier, full-length bolts; purpose-made to pulverize. </br>'Rudmarsch's walls broke beneath the volley, and Her sickness petered through the cracks..'"
 	icon_state = "ancientheavybow0"
 	item_state = "ancientheavybow"
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy/repeater //Testing. Will remove afterwards.
+	name = "repeating siegebow"
+	desc = "A heavier weight repeater - the basis of a mounted ballista, made fit for handheld usage. Integrated just beneath the stock is a windlass mechanism, necessary to surmount the siegebow's titanic draw-strength. It loads heavier, full-length bolts; purpose-made to pulverize. </br>Assembled in Grenzelhoft, championed by Valoria, and unfamiliar to the highlands of Azure Peak."
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/heavy_xbow/repeater
+
+/obj/item/ammo_box/magazine/internal/shot/heavy_xbow/repeater
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/heavy_bolt
+	caliber = "heabolt"
+	max_ammo = 8
+	start_empty = TRUE
