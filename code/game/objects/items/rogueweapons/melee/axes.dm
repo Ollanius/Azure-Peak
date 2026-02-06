@@ -302,6 +302,7 @@
 	embedding = list("embedded_pain_multiplier" = 6, "embed_chance" = 30, "embedded_fall_chance" = 50) //Lesser variant of the Hurlbat's dedicated power.
 	wlength = WLENGTH_SHORT
 	w_class = WEIGHT_CLASS_SMALL
+	wbalance = WBALANCE_SWIFT
 	grid_height = 96 //Can be stowed in the belt as a larger - if slightly more intimidating - counterpart to the Hunting Knife.
 	grid_width = 32
 	throw_speed = 3 
@@ -500,6 +501,7 @@
 	gripsprite = TRUE
 	wlength = WLENGTH_GREAT
 	w_class = WEIGHT_CLASS_BULKY
+	wbalance = WBALANCE_HEAVY
 	minstr = 11
 	max_blade_int = 200
 	anvilrepair = /datum/skill/craft/weaponsmithing
