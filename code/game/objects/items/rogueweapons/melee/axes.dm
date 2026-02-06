@@ -8,7 +8,7 @@
 	hitsound = list('sound/combat/hits/bladed/smallslash (1).ogg', 'sound/combat/hits/bladed/smallslash (2).ogg', 'sound/combat/hits/bladed/smallslash (3).ogg')
 	animname = "cut"
 	penfactor = 20
-	damfactor = 1.15
+	damfactor = 1.10
 	chargetime = 0
 	item_d_type = "slash"
 
@@ -34,7 +34,7 @@
 /datum/intent/axe/cut/battle
 	name = "heavy swing"
 	penfactor = 20
-	damfactor = 1.25
+	damfactor = 1.15
 
 /datum/intent/axe/chop/battle
 	name = "heavy chop"
