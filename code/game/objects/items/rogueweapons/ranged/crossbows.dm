@@ -292,7 +292,7 @@
 	swingdelay = 0
 	icon_state = "instrike"
 	item_d_type = "blunt"
-	intent_intdamage_factor = NONBLUNT_BLUNT_DAMFACTOR //Reduced integrity damage.
+	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR
 
 //
 
