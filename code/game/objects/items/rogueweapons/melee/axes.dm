@@ -183,10 +183,15 @@
 
 /obj/item/rogueweapon/stoneaxe/woodcut/woodcutter
 	name = "woodcutter's handaxe"
-	icon_state = "axelegacy"
+	icon_state = "axeclassic"
 	desc = "A short-handled axe with a carved grip, made of high quality wood. Perfect for the discerning carpenter."
 	max_integrity = 275
 	demolition_mod = 2.3 //Slightly lesser than the dedicated variant.
+
+/obj/item/rogueweapon/stoneaxe/woodcut/triumph
+	name = "valorian axe"
+	icon_state = "axelegacy"
+	desc = "'Through thick-and-thin, I have never failed you. May we trounce through the Terrorbog, one last time, before Astrata's glare vanishes 'neath the horizon?'"
 
 /obj/item/rogueweapon/stoneaxe/woodcut/aaxe
 	name = "decrepit axe"
@@ -301,7 +306,12 @@
 	grid_width = 32
 	throw_speed = 3 
 	armor_penetration = 25
-	
+
+/obj/item/rogueweapon/stoneaxe/handaxe/triumph
+	name = "valorian hatchet"
+	icon_state = "hatchetlegacy"
+	desc = "'What is that rag for, anyways?'"
+
 /obj/item/rogueweapon/stoneaxe/woodcut/bronze
 	name = "bronze axe"
 	icon_state = "bronzeaxe"
