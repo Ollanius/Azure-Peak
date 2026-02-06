@@ -423,7 +423,7 @@
 	icon_state = "silveraxe"
 	force = 25 //Forgot this is forced to only be one-handed. My bad.
 	force_wielded = 25
-	possible_item_intents = list(/datum/intent/axe/cut/battle, /datum/intent/axe/chop/battle, /datum/intent/axe/bash, /datum/intent/sword/peel)
+	possible_item_intents = list(/datum/intent/axe/cut/battle, /datum/intent/axe/chop/battle, /datum/intent/axe/bash/battle, /datum/intent/sword/peel)
 	minstr = 11
 	max_blade_int = 400
 	smeltresult = /obj/item/ingot/silver
@@ -445,10 +445,12 @@
 
 /obj/item/rogueweapon/stoneaxe/battle/psyaxe
 	name = "psydonic war axe"
-	desc = "An ornate battle axe, plated in a ceremonial veneer of silver. The premiere instigator of conflict against elven attachees."
+	desc = "An ornate battle axe, plated in a ceremonial veneer of silver. Even with a one-handed grasp, an efforted swing carries enough momentum to cleave through maille-and-flesh alike. </br>The premiere instigator of conflict against elven attachees."
 	icon_state = "psyaxe"
-	force = 23 //Slightly increased damage, as to encoruage one-handed usage.
+	force = 25
 	force_wielded = 25
+	possible_item_intents = list(/datum/intent/axe/cut/battle, /datum/intent/axe/chop/battle, /datum/intent/axe/bash/battle, /datum/intent/sword/peel)
+	gripped_intents = list(/datum/intent/axe/cut/battle, /datum/intent/axe/chop/battle, datum/intent/axe/bash/battle, /datum/intent/sword/peel)
 	minstr = 11
 	wdefense = 6
 	blade_dulling = DULLING_SHAFT_METAL
