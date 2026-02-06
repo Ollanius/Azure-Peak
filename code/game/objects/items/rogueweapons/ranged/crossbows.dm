@@ -11,7 +11,7 @@
 	item_state = "crossbow"
 	experimental_onhip = TRUE
 	experimental_onback = TRUE
-	possible_item_intents = list(/datum/intent/shoot/crossbow, /datum/intent/arc/crossbow, /datum/intent/mace/strike)
+	possible_item_intents = list(/datum/intent/shoot/crossbow, /datum/intent/arc/crossbow, /datum/intent/buttstroke)
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/xbow
 	slot_flags = ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
@@ -268,7 +268,7 @@
 	icon = 'icons/roguetown/weapons/misc32.dmi'
 	icon_state = "crossbowshort0"
 	item_state = "crossbowshort"
-	possible_item_intents = list(/datum/intent/shoot/crossbow/slurbow, /datum/intent/arc/crossbow/slurbow, /datum/intent/mace/strike)
+	possible_item_intents = list(/datum/intent/shoot/crossbow/slurbow, /datum/intent/arc/crossbow/slurbow, /datum/intent/buttstroke)
 	chargingspeed = 30
 	accfactor = 0.75
 	penfactor = 0.75 //Full damage, but reduce armor-penetration. Rough sidegrade  
@@ -281,6 +281,19 @@
 	grid_height = 96
 	grid_width = 64
 
+/datum/intent/buttstroke
+	name = "buttstroke"
+	blade_class = BCLASS_BLUNT
+	attack_verb = list("strikes", "buttstrokes")
+	hitsound = list('sound/combat/hits/blunt/woodblunt (1).ogg', 'sound/combat/hits/blunt/woodblunt (2).ogg')
+	chargetime = 0
+	penfactor = BLUNT_DEFAULT_PENFACTOR
+	damfactor = 1.1 //Translates into 11 DMG for a Slurbow, 16.5 DMG for a Crossbow, and 23 DMG for a Siegebow.
+	swingdelay = 0
+	icon_state = "instrike"
+	item_d_type = "blunt"
+	intent_intdamage_factor = NONBLUNT_BLUNT_DAMFACTOR //Reduced integrity damage.
+
 //
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/slurbow
@@ -289,7 +302,7 @@
 	icon = 'icons/roguetown/weapons/misc32.dmi'
 	icon_state = "slurbow0"
 	item_state = "slurbow"
-	possible_item_intents = list(/datum/intent/shoot/crossbow/slurbow, /datum/intent/arc/crossbow/slurbow, /datum/intent/mace/strike)
+	possible_item_intents = list(/datum/intent/shoot/crossbow/slurbow, /datum/intent/arc/crossbow/slurbow, /datum/intent/buttstroke)
 	chargingspeed = 20
 	damfactor = 0.6
 	accfactor = 1.3
@@ -311,7 +324,7 @@
 	icon = 'icons/roguetown/weapons/misc32.dmi'
 	icon_state = "heavybow0"
 	item_state = "heavybow"
-	possible_item_intents = list(/datum/intent/shoot/crossbow, /datum/intent/arc/crossbow, /datum/intent/mace/strike, /datum/intent/effect/daze) //Remember, this is quite heavy.
+	possible_item_intents = list(/datum/intent/shoot/crossbow, /datum/intent/arc/crossbow, /datum/intent/buttstroke, /datum/intent/effect/daze) //Remember, this is quite heavy.
 	load_sound = 'sound/foley/doors/lockmetal.ogg'
 	fire_sound = 'sound/combat/Ranged/crossbow_big_shot.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/heavy_xbow
@@ -338,3 +351,5 @@
 	desc = "A heavier weight crossbow from another tyme - the basis of a mounted ballista, made fit for handheld usage. Integrated just beneath the stock is a windlass mechanism, necessary to surmount the siegebow's titanic draw-strength. It loads heavier, full-length bolts; purpose-made to pulverize. </br>'Rudmarsch's walls broke beneath the volley, and Her sickness petered through the cracks..'"
 	icon_state = "ancientheavybow0"
 	item_state = "ancientheavybow"
+
+//
