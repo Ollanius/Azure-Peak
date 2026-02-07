@@ -105,7 +105,7 @@
 /datum/intent/flail/smash/militia
 	damfactor = 0.9
 
-/datum/intent/flail/golgotha
+/datum/intent/flail/smsah/golgotha
 	chargetime = 3 SECONDS
 	hitsound = list('sound/items/beartrap2.ogg')
 
