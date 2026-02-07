@@ -23,7 +23,7 @@
 	chargedrain = 1 // Slight stamina drain on use.
 	chargetime = 5 // Half a second of charge for a bit of a warning.
 	swingdelay = 4 // Lesser swing delay to compliment the boosted smash.
-	var/chargedloop = /datum/sound/combat/shieldraise.ogg //Similar to the Flail, charging up a Mace should now be slightly telegraphed. Pseudo-placeholder, as it's hard to find good noises of someone 'readying' or 'swinging back' a bludgeon.
+	chargedloop = /sound/combat/shieldraise.ogg //Similar to the Flail, charging up a Mace should now be slightly telegraphed. Pseudo-placeholder, as it's hard to find good noises of someone 'readying' or 'swinging back' a bludgeon.
 	keep_looping = FALSE
 	icon_state = "insmash"
 	item_d_type = "blunt"
