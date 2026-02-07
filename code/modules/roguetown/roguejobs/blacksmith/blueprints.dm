@@ -24,3 +24,13 @@
 	. = ..()
 	. += span_notice("The scroll lists the following requirements: <b>1x Lithmyc Ingot, 1x blueprint, and a Weaponsmithing Anvil.</b>")
 	. += span_notice("Originally conceived of by the drow weaponsmith, Lithmyc is a liquid-solid metal made out of a particular metallic mushroom. This mushroom can be found in the underdark, but it's only seen some weeks rather than others.")
+
+/obj/item/blueprint/sword_berserker
+	name = "berserker sword blueprint"
+	desc = "A worn, crimson-tinged parchment that smells of dried haggis and soot."
+	color = "#880808"
+
+/obj/item/blueprint/sword_berserker/examine(mob/user)
+	. = ..()
+	. += span_notice("The scroll lists the following requirements: <b>1x Executioner's Sword, 2x Iron Ingots, 1x Blueprint, and a Weaponsmithing Anvil.</b>")
+	. += span_notice("Myths say that long ago, an Azurian nobleman commissioned the Town's finest smith to forge a weapon that could 'slay a drake'. The result honored the request, yet no man could wield it - for only the worthiest could wield its weight.")
