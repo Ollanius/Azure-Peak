@@ -30,11 +30,12 @@
 	icon_state = "iflailalt"
 
 /datum/intent/flail/strike
-	name = "strike"
+	name = "flailing strike"
 	blade_class = BCLASS_BLUNT
 	attack_verb = list("strikes", "hits")
 	hitsound = list('sound/combat/hits/blunt/flailhit.ogg')
 	chargetime = 0
+	damfactor = 1.1
 	penfactor = BLUNT_DEFAULT_PENFACTOR
 	icon_state = "instrike"
 	item_d_type = "blunt"
@@ -44,7 +45,7 @@
 	reach = 2
 
 /datum/intent/flail/strikerange
-	name = "ranged strike"
+	name = "ranged flailing strike"
 	blade_class = BCLASS_BLUNT
 	attack_verb = list("strikes", "hits")
 	hitsound = list('sound/combat/hits/blunt/flailhit.ogg')
@@ -59,9 +60,10 @@
 	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR
 
 /datum/intent/mace/smash/flail
-	name = "flail smash"
+	name = "flailing smash"
 	chargetime = 0.8 SECONDS
-	damfactor = 1.4 // Flail smash has higher damage due to a longer charge.
+	chargedrain = 1.5 // Slightly more stamina to drain, like before.
+	damfactor = 1.5 // Flail smash has higher damage due to a longer charge.
 	chargedloop = /datum/looping_sound/flailswing
 	keep_looping = TRUE
 	icon_state = "insmash"
@@ -81,9 +83,9 @@
 	hitsound = list('sound/items/beartrap2.ogg')
 
 /datum/intent/mace/smash/flailrange
-	name = "ranged smash"
+	name = "ranged flailing smash"
 	chargetime = 1.2 SECONDS
-	chargedrain = 1
+	chargedrain = 1 //Less than a regular flail, as you're swinging it around with both hands (at the end of a staff) instead of just one.
 	recovery = 30
 	damfactor = 1.5
 	reach = 2

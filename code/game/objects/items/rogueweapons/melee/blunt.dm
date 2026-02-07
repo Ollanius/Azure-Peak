@@ -394,11 +394,40 @@
 			if("onbelt")
 				return list("shrink" = 0.4,"sx" = -3,"sy" = -4,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 70,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 1,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
+/obj/item/rogueweapon/mace/cudgel/flanged/silver
+	name = "silver flanged mace"
+	desc = "A flanged mace of silver, fit for a holy paladin's grasp. The weight within your hand is not of silver, alone - but of the fate that you may yet avert; for yourself, and \
+    for the world you love. </br>'Please do not wait for me..' \ </br>'For though I depart, my magic will never die..' </br>'Listen to my laughter in the babbling brook..' \
+	</br>'Hear my song being sung by the bards..' </br>'Feel my warmth in the rays of the morning sun..' </br>'See my light in the twinkling stars at night..' \
+	</br>'..and know that my spirit will always be with you..' </br>'..woven into the very fabric of the world we cherished together.'"
+	force = 30
+	minstr = 9
+	wdefense = 5
+	wbalance = WBALANCE_SWIFT
+	resistance_flags = FIRE_PROOF
+	icon_state = "psyflangedmace"
+	is_silver = TRUE
+	smeltresult = /obj/item/ingot/silver
+
+/obj/item/rogueweapon/mace/cudgel/flanged/silver/ComponentInitialize()
+	AddComponent(\
+		/datum/component/silverbless,\
+		pre_blessed = BLESSING_NONE,\
+		silver_type = SILVER_TENNITE,\
+		added_force = 0,\
+		added_blade_int = 100,\
+		added_int = 50,\
+		added_def = 1,\
+	)
+
 /obj/item/rogueweapon/mace/cudgel/psy
 	name = "psydonic flanged mace"
-	desc = "A shorter variant of the flanged silver mace, rebalanced for one-handed usage. Break the inhumen, sunder the monstrous, and cripple the wicked. </br>It isn't uncommon for these sidearms to mysteriously 'vanish' from an Adjudicator's belt, only to be 'rediscovered' - and subsequently kept - by a Confessor."
+	desc = "A flanged mace of blessed silver, wielded by His children. The rosewood handle's curved nature beckons your fingers to curl along its grooves, and to never let go; \
+    no matter the weather nor odds. </br>'Please do not wait for me..' \ </br>'For though I depart, my magic will never die..' </br>'Listen to my laughter in the babbling brook..' \
+	</br>'Hear my song being sung by the bards..' </br>'Feel my warmth in the rays of the morning sun..' </br>'See my light in the twinkling stars at night..' \
+	</br>'..and know that my spirit will always be with you..' </br>'..woven into the very fabric of the world we cherished together.'"
 	force = 30
-	possible_item_intents = list(/datum/intent/mace/strike, /datum/intent/mace/strike/dislocate, /datum/intent/effect/daze)
+	possible_item_intents = list(/datum/intent/mace/strike, /datum/intent/mace/strike/dislocate, /datum/intent/effect/daze, /datum/intent/mace/warhammer/stab)
 	gripped_intents = null //One-handed. Pseudo-sidegrade between the Mace and Warhammer. Exchanges smashing for dislocation.
 	minstr = 9
 	wdefense = 5
@@ -441,11 +470,14 @@
 
 /obj/item/rogueweapon/mace/cudgel/psy/old
 	name = "enduring flanged mace"
-	desc = "A flanged mace, well-balanced for usage in one hand. It radiates with a strange energy: familiar, yet ever-so-distant."
-	force_wielded = 23 //In-between iron and steel.
+	desc = "A flanged mace, weathered by tyme's gaze. It radiates a strange energy; distant, fleeting, but ever-so-familiar. </br>'Please do not wait for me..' \
+	</br>'For though I depart, my magic will never die..' </br>'Listen to my laughter in the babbling brook..' </br>'Hear my song being sung by the bards..' \
+	</br>'Feel my warmth in the rays of the morning sun..' </br>'See my light in the twinkling stars at night..' </br>'..and know that my spirit will always be with you..' \
+	</br>'..woven into the very fabric of the world we cherished together.'"
+	force_wielded = 25
 	wbalance = WBALANCE_NORMAL
 	icon_state = "opsyflangedmace"
-	smeltresult = /obj/item/ingot/steel
+	smeltresult = /obj/item/ingot/iron
 
 /obj/item/rogueweapon/mace/cudgel/psy/old/ComponentInitialize()
 	return
