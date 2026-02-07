@@ -1286,12 +1286,13 @@
 	created_item = /obj/item/rogueweapon/sword/long/exe
 	i_type = "Weapons"
 
-/datum/anvil_recipe/valuables/iron/berserksword
-	name = "Berserker's Sword (+1 Executioner Sword, +1 Iron)"
+/datum/anvil_recipe/weapons/berserksword
+	name = "Berserker's Sword (+1 Executioner Sword, +3 Iron, + Blueprint)"
 	req_bar = /obj/item/ingot/iron
-	additional_items = list(/obj/item/rogueweapon/sword/long/exe, /obj/item/ingot/iron)
+	additional_items = list(/obj/item/rogueweapon/sword/long/exe, /obj/item/ingot/iron, /obj/item/ingot/iron, obj/item/ingot/iron, /obj/item/blueprint/sword_berserker)
 	created_item = /obj/item/rogueweapon/sword/long/exe/berserk
 	i_type = "Weapons"
+	craftdiff = SKILL_LEVEL_LEGENDARY
 
 /datum/anvil_recipe/weapons/lithmyc/mace
 	name = "Lithmyc Mace (+ Blueprint)"
