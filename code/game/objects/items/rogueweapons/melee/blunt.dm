@@ -23,7 +23,7 @@
 	chargedrain = 1 // Slight stamina drain on use.
 	chargetime = 5 // Half a second of charge for a bit of a warning.
 	swingdelay = 4 // Lesser swing delay to compliment the boosted smash.
-	chargedloop = sound/combat/shieldraise.ogg //Similar to the Flail, charging up a Mace should now be slightly telegraphed. Pseudo-placeholder, as it's hard to find good noises of someone 'readying' or 'swinging back' a bludgeon.
+	var/chargedloop = /datum/sound/combat/shieldraise.ogg //Similar to the Flail, charging up a Mace should now be slightly telegraphed. Pseudo-placeholder, as it's hard to find good noises of someone 'readying' or 'swinging back' a bludgeon.
 	keep_looping = FALSE
 	icon_state = "insmash"
 	item_d_type = "blunt"
@@ -59,7 +59,7 @@
 /datum/intent/mace/smash/lesser
 	name = "one-handed smash" //Exclusive to Warhammers, and other mace-styled bludgeons that can only be wielded in one hand.
 	desc = "A powerful blow that delivers Strength-scaling knockback and slowdown to the target. The amount of inflicted knockback scales off your Strength, ranging from X (1 tile) to XIII (3 tiles). </br>Cannot inflict any knockback or slowdown if your Strength is below X. </br>Cannot be used consecutively more than every 5 seconds on the same target. </br>Prone targets halve the knockback distance. </br>Not fully charging the attack limits knockback to 1 tile."
-	var/maxrange = 3
+	maxrange = 3
 
 /datum/intent/mace/rangedthrust
 	name = "thrust"
@@ -99,7 +99,7 @@
 	damfactor = 1.25
 	swingdelay = 6
 	desc = "A powerful blow that delivers Strength-scaling knockback and slowdown to the target. The amount of inflicted knockback scales off your Strength, ranging from X (1 tile) to XV (5 tiles). </br>Cannot inflict any knockback or slowdown if your Strength is below X. </br>Cannot be used consecutively more than every 5 seconds on the same target. </br>Prone targets halve the knockback distance. </br>Not fully charging the attack limits knockback to 1 tile."
-	var/maxrange = 5
+	maxrange = 5
 
 //blunt objs ฅ^•ﻌ•^ฅ
 
