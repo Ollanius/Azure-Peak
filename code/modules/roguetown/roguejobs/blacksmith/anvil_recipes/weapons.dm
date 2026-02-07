@@ -722,6 +722,14 @@
 	created_item = /obj/item/rogueweapon/mace/warhammer/steel
 	i_type = "Weapons"
 
+/datum/anvil_recipe/weapons/steel/sflangedmace
+	name = "Flanged Mace, Steel (+1 Steel)"
+	req_bar = /obj/item/ingot/steel
+	req_blade = /obj/item/blade/steel_mace
+	additional_items = list(/obj/item/ingot/steel)
+	created_item = /obj/item/rogueweapon/mace/cudgel/flanged
+	i_type = "Weapons"
+
 /datum/anvil_recipe/weapons/steel/greatsword
 	name = "Greatsword, Steel (+2 Steel)"
 	req_bar = /obj/item/ingot/steel
@@ -1020,6 +1028,12 @@
 	req_bar = /obj/item/ingot/silver
 	additional_items = list(/obj/item/ingot/silver, /obj/item/ingot/silver, /obj/item/grown/log/tree/small)
 	created_item = /obj/item/rogueweapon/mace/steel/silver
+
+/datum/anvil_recipe/weapons/silver/flangedmace
+	name = "Flanged Mace, Silver (+2 Silver, +1 Small Log)"
+	req_bar = /obj/item/ingot/silver
+	additional_items = list(/obj/item/ingot/silver, /obj/item/ingot/silver, /obj/item/grown/log/tree/small)
+	created_item = /obj/item/rogueweapon/mace/cudgel/flanged/silver
 
 /datum/anvil_recipe/weapons/silver/warhammer
 	name = "Warhammer, Silver (+2 Silver, +1 Small Log)"
