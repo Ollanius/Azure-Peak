@@ -23,8 +23,6 @@
 	chargedrain = 1 // Slight stamina drain on use.
 	chargetime = 5 // Half a second of charge for a bit of a warning.
 	swingdelay = 4 // Lesser swing delay to compliment the boosted smash.
-	chargedloop = /sound/combat/shieldraise.ogg //Similar to the Flail, charging up a Mace should now be slightly telegraphed. Pseudo-placeholder, as it's hard to find good noises of someone 'readying' or 'swinging back' a bludgeon.
-	keep_looping = FALSE
 	icon_state = "insmash"
 	item_d_type = "blunt"
 	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR - 0.10 //Ditto, albeit with a +10% change from before.
@@ -55,6 +53,10 @@
 		spin = FALSE, \
 		force = H.move_force)
 // Do not call handle_knockback like in knockback cuz that means it will hardstun
+
+/datum/intent/mace/smash/prewarning()
+	if(mastermob)
+		playsound(mastermob, pick('sound/combat/shieldraise.ogg'), 100, FALSE)
 
 /datum/intent/mace/smash/lesser
 	name = "one-handed smash" //Exclusive to Warhammers, and other mace-styled bludgeons that can only be wielded in one hand.
