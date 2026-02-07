@@ -1,6 +1,6 @@
 /obj/item/rogueweapon/flail
 	force = 25
-	possible_item_intents = list(/datum/intent/flail/strike, /datum/intent/mace/smash/flail)
+	possible_item_intents = list(/datum/intent/flail/strike, /datum/intent/flail/smash)
 	name = "flail"
 	desc = "A spiked macehead and wooden handle, linked together with a length of chain. It can be spun around to smash armored opponents with tremendous force, cracking plate and bone alike with unflinching impunity."
 	icon_state = "iflail"
@@ -59,7 +59,7 @@
 	item_d_type = "blunt"
 	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR
 
-/datum/intent/mace/smash/flail
+/datum/intent/flail/smash
 	name = "flailing smash"
 	chargetime = 0.8 SECONDS
 	chargedrain = 1.5 // Slightly more stamina to drain, like before.
@@ -71,18 +71,45 @@
 	attack_verb = list("smashes")
 	hitsound = list('sound/combat/hits/blunt/flailhit.ogg')
 	item_d_type = "blunt"
+	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR
+	desc = "A tremendous swipe that delivers Strength-scaling knockback and slowdown to the target. The amount of inflicted knockback scales off your Strength, ranging from X (1 tile) to XIV (4 tiles). </br>Actively drains stamina while being charged up. </br>Cannot inflict any knockback or slowdown if your Strength is below X. </br>Cannot be used consecutively more than every 5 seconds on the same target. </br>Prone targets halve the knockback distance. </br>Not fully charging the attack limits knockback to 1 tile."
+	var/maxrange = 4
 
-/datum/intent/mace/smash/flail/matthiosflail
+/datum/intent/flail/smash/spec_on_apply_effect(mob/living/H, mob/living/user, params)
+	var/chungus_khan_str = user.STASTR 
+	if(H.has_status_effect(/datum/status_effect/debuff/yeetcd))
+		return // Recently knocked back, cannot be knocked back again yet
+	if(chungus_khan_str < 10)
+		return // Too weak to have any effect
+	var/scaling = CLAMP((chungus_khan_str - 10), 1, maxrange)
+	H.apply_status_effect(/datum/status_effect/debuff/yeetcd)
+	H.Slowdown(scaling)
+	// Copypasta from knockback proc cuz I don't want the math there
+	var/knockback_tiles = scaling // 1 to 4 tiles based on strength
+	if(H.resting)
+		knockback_tiles = max(1, knockback_tiles / 2)
+	if(user?.client?.chargedprog < 100)
+		knockback_tiles = 1 // Minimal knockback on non-charged smash.
+	var/turf/edge_target_turf = get_edge_target_turf(H, get_dir(user, H))
+	if(istype(edge_target_turf))
+		H.safe_throw_at(edge_target_turf, \
+		knockback_tiles, \
+		scaling, \
+		user, \
+		spin = FALSE, \
+		force = H.move_force)
+
+/datum/intent/flail/smash/matthiosflail
 	reach = 2
 
-/datum/intent/mace/smash/flail/militia
+/datum/intent/flail/smash/militia
 	damfactor = 0.9
 
-/datum/intent/mace/smash/flail/golgotha
+/datum/intent/flail/golgotha
 	chargetime = 3 SECONDS
 	hitsound = list('sound/items/beartrap2.ogg')
 
-/datum/intent/mace/smash/flailrange
+/datum/intent/flail/smash/ranged
 	name = "ranged flailing smash"
 	chargetime = 1.2 SECONDS
 	chargedrain = 1 //Less than a regular flail, as you're swinging it around with both hands (at the end of a staff) instead of just one.
@@ -141,7 +168,7 @@
 	force = 35
 	icon_state = "silverflail"
 	name = "silver morningstar"
-	possible_item_intents = list(/datum/intent/flail/strike, /datum/intent/mace/smash/flailrange)
+	possible_item_intents = list(/datum/intent/flail/strike, /datum/intent/flail/smash/ranged)
 	desc = "A heavy, silver flail. It follows the Grenzelhoftian design of a 'morning star', utilizing a longer chain to extend its reach. While stronger than a steel flail, it requires far more strength to effectively swing."
 	smeltresult = /obj/item/ingot/silver
 	minstr = 12
@@ -201,7 +228,7 @@
 	name = "Consecratia"
 	desc = "The weight of His anguish, His pain, His hope and His love for humenkind - all hanging on the ornamental silver-steel head chained to this arm. <br><br>A declaration of love for all that Psydon lives for, and a crushing reminder to the arch-nemesis that they will not triumph as long as He endures."
 	icon_state = "psymorningstar"
-	possible_item_intents = list(/datum/intent/flail/strike, /datum/intent/mace/smash/flailrange)
+	possible_item_intents = list(/datum/intent/flail/strike, /datum/intent/flail/smash/ranged)
 
 /obj/item/rogueweapon/flail/sflail/psyflail/relic/ComponentInitialize()
 	AddComponent(\
@@ -218,7 +245,7 @@
 	force = 10
 	force_wielded = 35
 	possible_item_intents = list(/datum/intent/flail/strike)
-	gripped_intents = list(/datum/intent/flail/strikerange, /datum/intent/mace/smash/flailrange)
+	gripped_intents = list(/datum/intent/flail/strikerange, /datum/intent/flail/smash/ranged)
 	name = "militia thresher"
 	desc = "Just like how a sling's bullet can fell a giant, so too does this great flail follow the principle of converting 'momentum' into 'plate-rupturing force'."
 	icon_state = "peasantwarflail"
@@ -265,7 +292,7 @@
 	sellprice = 250
 	smeltresult = /obj/item/ingot/steel
 	possible_item_intents = list(/datum/intent/flail/strike/matthiosflail)
-	gripped_intents = list(/datum/intent/flail/strike/matthiosflail, /datum/intent/mace/smash/flail/matthiosflail)
+	gripped_intents = list(/datum/intent/flail/strike/matthiosflail, /datum/intent/flail/smash/matthiosflail)
 	associated_skill = /datum/skill/combat/whipsflails
 	slot_flags = ITEM_SLOT_BACK
 	anvilrepair = /datum/skill/craft/weaponsmithing
@@ -279,7 +306,7 @@
 	name = "militia flail"
 	desc = "In another lyfe, this humble thresher was used to pound stalks into grain. Under a militiaman's grasp, however, it has found a new purpose: to humble overconfident bandits with crippling blows."
 	icon_state = "milflail"
-	possible_item_intents = list(/datum/intent/flail/strike, /datum/intent/mace/smash/flail/militia)
+	possible_item_intents = list(/datum/intent/flail/strike, /datum/intent/flail/smash/militia)
 	force = 27
 	wdefense = 3
 	wbalance = WBALANCE_HEAVY
