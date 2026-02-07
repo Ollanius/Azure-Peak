@@ -565,7 +565,7 @@
 	name = "silver poleaxe"
 	desc = "A poleaxe, fitted with a reinforced shaft and a beaked axhead of pure silver. It may not stop the darkness; but it will halt its march, long enough, to shepherd away the defenseless. </br>'O'er the Horizon, the stars and spirals I see; and below it, the horrors that've been felled by me. Through the darkness, I see my home and its beautiful light; and it will continue to shimmer, as long as I fight. Forever I stand, forever I'll hold - 'til the Horizon grows still, and my spirit trails home..'"
 	icon_state = "silverpolearm"
-	minstr = 11
+	minstr = 12
 	max_blade_int = 350
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silver
@@ -590,7 +590,7 @@
 	name = "psydonic poleaxe"
 	desc = "A poleaxe, fitted with a reinforced shaft and a beaked axhead of alloyed silver. As the fragility of swords've become more apparent, the Psydonic Orders - following the disastrous Massacre of Blastenghyll - have shifted their focus towards arming their paladins with longer-lasting greatweapons."
 	icon_state = "silverpolearm"
-	minstr = 11
+	minstr = 12
 	max_blade_int = 350
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silverblessed
@@ -669,6 +669,7 @@
 	max_blade_int = 333
 	minstr = 13							//Heavy, but still good.
 	wdefense = 3						//Slightly better than norm, has 6 defense 2 handing it.
+	minstr_req = TRUE
 
 /datum/intent/axe/cut/battle/frost
 	intent_effect = /datum/status_effect/buff/frostbite
