@@ -102,6 +102,16 @@
 	desc = "A powerful blow that delivers Strength-scaling knockback and slowdown to the target. The amount of inflicted knockback scales off your Strength, ranging from X (1 tile) to XV (5 tiles). </br>Cannot inflict any knockback or slowdown if your Strength is below X. </br>Cannot be used consecutively more than every 5 seconds on the same target. </br>Prone targets halve the knockback distance. </br>Not fully charging the attack limits knockback to 1 tile."
 	maxrange = 5
 
+/datum/intent/mace/smash/crush
+	name = "crush"
+	attack_verb = list("crushes")
+	icon_state = "incrush"
+	damfactor = 1.75 //Deals 83 DMG when swung from the strongest Maul (at a base of 34 DMG) with XIV STR. For comparison, a Steel Flail (which can be one-handed and swung faster) deals 63 DMG under the same parameters.
+	chargedrain = 1.3 //Note that the Maul series is hardlocked to characters that have above-average STR, and is otherwise physically unwieldable.
+	chargetime = 10
+	desc = "A titanic blow that delivers Strength-scaling knockback and slowdown to the target. The amount of inflicted knockback scales off your Strength, ranging from X (1 tile) to XV (5 tiles). </br>Actively drains stamina while being charged up. </br>Cannot inflict any knockback or slowdown if your Strength is below X. </br>Cannot be used consecutively more than every 5 seconds on the same target. </br>Prone targets halve the knockback distance. </br>Not fully charging the attack limits knockback to 1 tile."
+	maxrange = 5
+
 //blunt objs ฅ^•ﻌ•^ฅ
 
 /obj/item/rogueweapon/mace
@@ -814,7 +824,7 @@
 	force = 12 //Don't one-hand this.
 	force_wielded = 32 //-3 compared to grand mace(steel goden). Better intents.
 	possible_item_intents = list(/datum/intent/mace/strike, /datum/intent/mace/bash/ranged) 
-	gripped_intents = list(/datum/intent/mace/strike/grand, /datum/intent/mace/smash/grand, /datum/intent/effect/daze, /datum/intent/effect/hobble)
+	gripped_intents = list(/datum/intent/mace/smash/crush, /datum/intent/mace/strike/grand, /datum/intent/effect/daze, /datum/intent/effect/hobble)
 	name = "maul"
 	desc = "Who would need something this large? It looks like it was made for tearing down walls, rather than men."
 	icon_state = "sledge"
