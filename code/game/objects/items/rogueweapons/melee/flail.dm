@@ -187,7 +187,7 @@
 
 /obj/item/rogueweapon/flail/sflail/necraflail
 	name = "swift journey"
-	desc = "The striking head is full of teeth, rattling viciously with ever strike, with every rotation. Each set coming from one the wielder has laid to rest. Carried alongside them as a great show of respect."
+	desc = "The striking head is full of teeth, rattling viciously with every strike, with every rotation. Each set coming from one the wielder has laid to rest. Carried alongside them as a great show of respect."
 	icon_state = "necraflail"
 	force = 35
 	is_silver = TRUE
