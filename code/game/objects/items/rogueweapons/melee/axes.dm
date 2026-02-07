@@ -130,7 +130,6 @@
 	max_blade_int = 300
 	smeltresult = /obj/item/ingot/steel
 	smelt_bar_num = 2
-	wbalance = WBALANCE_HEAVY
 	possible_item_intents = list(/datum/intent/axe/cut/battle, /datum/intent/axe/chop/battle, /datum/intent/axe/thrust, /datum/intent/axe/bash/battle)
 	gripped_intents = list(/datum/intent/axe/cut/battle, /datum/intent/axe/chop/battle, /datum/intent/axe/bash/battle, /datum/intent/sword/peel)
 	minstr = 9
@@ -424,12 +423,11 @@
 	desc = "A hefty battle axe, fashioned from pure silver. Even with a one-handed grasp, an efforted swing carries enough momentum to cleave through maille-and-flesh alike."
 	icon_state = "silveraxe"
 	force = 25 //Forgot this is forced to only be one-handed. My bad.
-	force_wielded = 25
 	possible_item_intents = list(/datum/intent/axe/cut/battle, /datum/intent/axe/chop/battle, /datum/intent/axe/bash/battle, /datum/intent/sword/peel)
+	gripped_intents = null
 	minstr = 11
 	max_blade_int = 400
 	smeltresult = /obj/item/ingot/silver
-	gripped_intents = null
 	wdefense = 5
 	is_silver = TRUE
 	blade_dulling = DULLING_SHAFT_METAL
@@ -457,6 +455,7 @@
 	blade_dulling = DULLING_SHAFT_METAL
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silverblessed
+	minstr_req = TRUE
 
 /obj/item/rogueweapon/stoneaxe/battle/psyaxe/ComponentInitialize()
 	AddComponent(\
@@ -502,7 +501,6 @@
 	gripsprite = TRUE
 	wlength = WLENGTH_GREAT
 	w_class = WEIGHT_CLASS_BULKY
-	wbalance = WBALANCE_HEAVY
 	minstr = 11
 	max_blade_int = 200
 	anvilrepair = /datum/skill/craft/weaponsmithing
@@ -567,10 +565,11 @@
 	name = "silver poleaxe"
 	desc = "A poleaxe, fitted with a reinforced shaft and a beaked axhead of pure silver. It may not stop the darkness; but it will halt its march, long enough, to shepherd away the defenseless. </br>'O'er the Horizon, the stars and spirals I see; and below it, the horrors that've been felled by me. Through the darkness, I see my home and its beautiful light; and it will continue to shimmer, as long as I fight. Forever I stand, forever I'll hold - 'til the Horizon grows still, and my spirit trails home..'"
 	icon_state = "silverpolearm"
-	minstr = 12
+	minstr = 11
 	max_blade_int = 350
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silver
+	minstr_req = TRUE
 
 /obj/item/rogueweapon/greataxe/silver/ComponentInitialize()
 	AddComponent(\
@@ -591,10 +590,11 @@
 	name = "psydonic poleaxe"
 	desc = "A poleaxe, fitted with a reinforced shaft and a beaked axhead of alloyed silver. As the fragility of swords've become more apparent, the Psydonic Orders - following the disastrous Massacre of Blastenghyll - have shifted their focus towards arming their paladins with longer-lasting greatweapons."
 	icon_state = "silverpolearm"
-	minstr = 12
+	minstr = 11
 	max_blade_int = 350
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silverblessed
+	minstr_req = TRUE
 
 /obj/item/rogueweapon/greataxe/psy/ComponentInitialize()
 	AddComponent(\
@@ -628,12 +628,14 @@
 	icon_state = "doublegreataxe"
 	max_blade_int = 175
 	minstr = 13
+	minstr_req = TRUE
 
 /obj/item/rogueweapon/greataxe/steel/doublehead/graggar
 	name = "vicious greataxe"
 	desc = "Crystalline violence, jagged and cruel - fit for only those of anointed strength. Though the edge thrums with unspeakable power, it is only your hands that can determine whether it will defy fate.. ..or fufill it."
 	icon_state = "graggargaxe"
-	minstr = 12 //Ensures that no matter what, the intended wielders (both NPC'd and PC'd) can still wield this.. assuming they aren't taking a statpack with -I+ STR, or are debuffed in some manner.
+	minstr = 12
+	minstr_req = FALSE //Retains same performance as before, as a precaution.
 	force = 20
 	force_wielded = 40
 	max_blade_int = 250
@@ -652,11 +654,13 @@
 	icon_state = "minotaurgreataxe"
 	max_blade_int = 333
 	minstr = 14 //Double-headed greataxe with extra durability. Rare dungeon loot in minotaur dungeons; no longer drops from every single minotaur.
+	wbalance = WBALANCE_HEAVY
 
 /obj/item/rogueweapon/stoneaxe/woodcut/troll
 	name = "crude heavy axe"
 	desc = "An axe clearly made for some large creecher. Though crude and imbalanced, the massive stone axhead is more-than-capable of splitting steel in twain. </br>'Ah, the great communicator! Allow me to communicate my desire to have your mammons!'"
 	icon_state = "trollaxe"
+	wbalance = WBALANCE_HEAVY
 	possible_item_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop/battle, /datum/intent/axe/bash)
 	gripped_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop/battle, /datum/intent/axe/bash/battle)
 	force = 25
