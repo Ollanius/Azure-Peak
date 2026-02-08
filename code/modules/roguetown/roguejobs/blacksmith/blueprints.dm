@@ -32,5 +32,5 @@
 
 /obj/item/blueprint/sword_berserker/examine(mob/user)
 	. = ..()
-	. += span_notice("The scroll lists the following requirements: <b>1x Executioner's Sword, 2x Iron Ingots, 1x Blueprint, and a Weaponsmithing Anvil.</b>")
+	. += span_notice("The scroll lists the following requirements: <b>1x Executioner's Sword, 4x Iron Ingots, 1x Blueprint, and a Weaponsmithing Anvil.</b>")
 	. += span_notice("Myths say that long ago, an Azurian nobleman commissioned the Town's finest smith to forge a weapon that could 'slay a drake'. The result honored the request, yet no man could wield it - for only the worthiest could wield its weight.")
