@@ -946,7 +946,7 @@
 	desc = "A raw heap of iron, hewn into an intimidatingly massive cleaver. Most could never aspire to effectively swing such a laborsome blade about; those few that have the strength, however, can force even the strongest opponents to stagger back."
 	icon = 'icons/roguetown/weapons/swords64.dmi'
 	icon_state = "dragonslayer"
-	possible_item_intents = list(/datum/intent/sword/chop/broadsword, /datum/intent/sword/cut, /datum/intent/sword/thrust/long/broadsword/lesser, /datum/intent/sword/strike)
+	possible_item_intents = list(/datum/intent/sword/chop/broadsword, /datum/intent/sword/cut, /datum/intent/sword/thrust/exe, /datum/intent/sword/strike)
 	gripped_intents = list(/datum/intent/sword/chop/cleave, /datum/intent/rend/broadsword, /datum/intent/sword/cut, /datum/intent/sword/thrust/exe)
 	wbalance = WBALANCE_HEAVY //Stronger but sturdier executioner's sword, exchanging its peelage for an armor-piercing - and integrity damaging - variant of Ansari's knockback variable.
 	alt_intents = null 
