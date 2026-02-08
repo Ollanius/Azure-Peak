@@ -181,9 +181,9 @@
 	range = 30
 	hitsound = 'sound/combat/hits/hi_bolt (2).ogg'
 	embedchance = 100
-	woundclass = BCLASS_PICK
-	flag = "blunt"
-	speed = 0.8 //Half the speed of a traditional bolt. Between crossbows and NPC-fired projectiles, in terms of speed - evadable by PCs at longer ranges.
+	woundclass = BCLASS_PIERCE
+	flag = "piercing"
+	speed = 1
 	npc_simple_damage_mult = 3 //..or 360 damage against mindless opponents. Run them through!
 
 /obj/item/ammo_casing/caseless/rogue/heavy_bolt/getonmobprop(tag)
@@ -200,11 +200,11 @@
 	var/mob/living/M = target
 	if(ismob(target))
 		M.visible_message(span_warning("[M] staggers back from the tremendous impact!"))
-		M.apply_status_effect(/datum/status_effect/debuff/staggered, 8 SECONDS)
-		M.apply_status_effect(/datum/status_effect/debuff/exposed, 4 SECONDS)
-		M.Slowdown(8 SECONDS)
-		M.OffBalance(2 SECONDS)
-		M.Immobilize(2 SECONDS)
+		M.apply_status_effect(/datum/status_effect/debuff/staggered, 6 SECONDS)
+		M.apply_status_effect(/datum/status_effect/debuff/exposed, 3 SECONDS)
+		M.Slowdown(6 SECONDS)
+		M.OffBalance(1 SECONDS)
+		M.Immobilize(1 SECONDS)
 		return
 
 	var/turf/T = target
@@ -222,9 +222,10 @@
 /obj/projectile/bullet/reusable/heavy_bolt/blunt
 	name = "blunt heavy bolt"
 	damage = 90
-	embedchance = 50 //'If you're reading this, duck!'
+	embedchance = 0 //'If you're reading this, duck!'
 	object_damage_multiplier = 12 //Ensures the bolt can still, at a minimum, destroy most wooden barricades and doors in one shot.
 	woundclass = BCLASS_BLUNT
+	flag = "blunt"
 	icon_state = "heavybolt_proj"
 
 /obj/item/ammo_casing/caseless/rogue/heavy_bolt/aalloy
@@ -238,14 +239,13 @@
 
 /obj/projectile/bullet/reusable/heavy_bolt/aalloy
 	name = "decrepit heavy bolt"
-	damage = 90 
-	embedchance = 50
-	object_damage_multiplier = 12 //Ensures the bolt can still, at a minimum, destroy most wooden barricades and doors in one shot.
+	damage = 60 
+	object_damage_multiplier = 20 //Ensures the bolt can still, at a minimum, destroy most wooden barricades and doors in one shot.
 	icon_state = "ancientbolt_proj"
 	poisontype = /datum/reagent/stampoison
 	poisonamount = 2 //You are, in essence, giving them tenantus.
-	slur = 7
-	eyeblur = 7
+	slur = 3
+	eyeblur = 3
 	drowsy = 3
 
 /obj/item/ammo_casing/caseless/rogue/heavy_bolt/paalloy
@@ -256,14 +256,14 @@
 
 /obj/projectile/bullet/reusable/heavy_bolt/paalloy
 	name = "ancient heavy bolt"
-	damage = 100
-	embedchance = 100
+	damage = 80 //Same as a crossbow bolt.
 	icon_state = "ancientbolt_proj"
+	object_damage_multiplier = 16
 	poisontype = /datum/reagent/stampoison
-	poisonamount = 4 //You are, in essence, giving them tenantus. Roughly 50% stronger than a poisoned iron arrow.
-	slur = 10
-	eyeblur = 10
-	drowsy = 6
+	poisonamount = 2 //You are, in essence, giving them tenantus. Roughly 50% stronger than a poisoned iron arrow.
+	slur = 6
+	eyeblur = 6
+	drowsy = 3
 
 /obj/item/ammo_casing/caseless/rogue/heavy_bolt/bronze
 	name = "bronze heavy bolt"
@@ -274,9 +274,8 @@
 /obj/projectile/bullet/reusable/heavy_bolt/bronze
 	name = "bronze heavy bolt"
 	damage = 100
-	embedchance = 100
 	icon_state = "bronzebolt_proj"
-	speed = 0.3 // Exchanges damage for being far quicker than its compatriots - roughly a little better than a regular crossbow bolt.
+	speed = 0.5
 
 //
 
