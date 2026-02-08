@@ -188,8 +188,8 @@
 /datum/intent/sword/chop/cleave
 	name = "cleave"
 	attack_verb = list("cleaves", "chops")
-	chargedrain = 1.5
-	chargetime = 8 
+	chargedrain = 1.8
+	chargetime = 10
 	damfactor = 1.2
 	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR - 30 //Deals +30% integrity damage.
 	desc = "A powerful blow that delivers Strength-scaling knockback and slowdown to the target. The amount of inflicted knockback scales off your Strength, ranging from X (1 tile) to XIII (3 tiles). </br>Cannot inflict any knockback or slowdown if your Strength is below X. </br>Cannot be used consecutively more than every 5 seconds on the same target. </br>Prone targets halve the knockback distance. </br>Not fully charging the attack limits knockback to 1 tile."
