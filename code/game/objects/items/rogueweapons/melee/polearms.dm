@@ -1193,7 +1193,7 @@
 	force = 12
 	minstr_req = TRUE
 	force_wielded = 30
-	minstr = 12
+	minstr = 13
 	icon_state = "psygsword"
 	possible_item_intents = list(/datum/intent/sword/chop/broadsword, /datum/intent/sword/cut, /datum/intent/sword/thrust/exe, /datum/intent/sword/strike)
 	gripped_intents = list(/datum/intent/rend/broadsword, /datum/intent/sword/chop/broadsword/heavy, /datum/intent/sword/cut, /datum/intent/sword/thrust/exe)
