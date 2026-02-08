@@ -54,7 +54,7 @@
 	animname = "stab"
 	blade_class = BCLASS_STAB
 	hitsound = list('sound/combat/hits/bladed/genstab (1).ogg', 'sound/combat/hits/bladed/genstab (2).ogg', 'sound/combat/hits/bladed/genstab (3).ogg')
-	penfactor = 20
+	penfactor = 0 
 	damfactor = 0.9 //Lesser variant of the Stab intent for battle axes that have spikes on them. Mordhau-maxxing, as it were.
 	chargetime = 0
 	swingdelay = 0
