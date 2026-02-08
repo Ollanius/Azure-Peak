@@ -63,7 +63,8 @@
 	H.adjust_blindness(-3)
 	backpack_contents = list(
 		/obj/item/rogueweapon/huntingknife/idagger/navaja = 1,
-		/obj/item/blueprint/mace_mushroom = 1
+		/obj/item/blueprint/mace_mushroom = 1,
+		/obj/item/blueprint/sword_berserker = 1
 		)
 	neck = /obj/item/clothing/neck/roguetown/horus
 	armor = /obj/item/clothing/suit/roguetown/shirt/robe/merchant
