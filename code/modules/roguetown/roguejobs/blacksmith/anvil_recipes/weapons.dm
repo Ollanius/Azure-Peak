@@ -1294,14 +1294,6 @@
 	i_type = "Weapons"
 	craftdiff = SKILL_LEVEL_LEGENDARY
 
-/datum/anvil_recipe/weapons/berserkswordtest
-	name = "Berserker's Sworde (+ Blueprint, +1 Executioner Sword, +1 Glut)"
-	req_bar = /obj/item/ingot/iron
-	additional_items = list(/obj/item/blueprint/sword_berserker, /obj/item/rogueweapon/sword/long/exe, /obj/item/roguegem/blood_diamond)
-	created_item = /obj/item/rogueweapon/sword/long/exe/berserk
-	i_type = "Weapons"
-	craftdiff = SKILL_LEVEL_NOVICE //FOR LATER. REMOVE LATER. DO NOT PANIC.
-
 /datum/anvil_recipe/weapons/lithmyc/mace
 	name = "Lithmyc Mace (+ Blueprint)"
 	req_bar = /obj/item/ingot/lithmyc
