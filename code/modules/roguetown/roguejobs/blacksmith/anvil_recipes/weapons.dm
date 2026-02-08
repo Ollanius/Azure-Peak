@@ -958,7 +958,7 @@
 	name = "Stake, Silver-Tipped (+1 Silver, +1 Sharpened Stake)"
 	req_bar = /obj/item/ingot/silver
 	additional_items = list(/obj/item/ingot/silver, /obj/item/rogueweapon/huntingknife/idagger/stake)
-	created_item = /obj/item/rogueweapon/huntingknife/idagger/silver/stake
+	created_item = /obj/item/rogueweapon/huntingknife/idagger/stake/silver
 	craftdiff = 5
 
 /datum/anvil_recipe/weapons/silver/sword
