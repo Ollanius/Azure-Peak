@@ -7,11 +7,10 @@
 	hitsound = list('sound/combat/hits/blunt/metalblunt (1).ogg', 'sound/combat/hits/blunt/metalblunt (2).ogg', 'sound/combat/hits/blunt/metalblunt (3).ogg')
 	chargetime = 0
 	penfactor = BLUNT_DEFAULT_PENFACTOR
-	damfactor = 1.15 //Translates to 28.75 (1H) / 36.8 (2H) DMG on a Steel Mace at X STR, or 40.25 (1H) / 51.25 (2H) DMG at XIV STR.
 	swingdelay = 0
 	icon_state = "instrike"
 	item_d_type = "blunt"
-	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR - 0.10 //With the new damage modifier, this effectively translates into +65% (or a +5% change from before.)
+	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR
 
 /datum/intent/mace/smash
 	name = "smash"
@@ -19,12 +18,10 @@
 	attack_verb = list("smashes")
 	hitsound = list('sound/combat/hits/blunt/metalblunt (1).ogg', 'sound/combat/hits/blunt/metalblunt (2).ogg', 'sound/combat/hits/blunt/metalblunt (3).ogg')
 	penfactor = BLUNT_DEFAULT_PENFACTOR
-	damfactor = 1.2 //Translates to 30 (1H) / 38.4 (2H) DMG on a Steel Mace at X STR, or 42 (1H) / 53.76 (2H) DMG at XIV STR.
 	chargedrain = 1 // Slight stamina drain on use.
 	chargetime = 5 // Half a second of charge for a bit of a warning.
 	icon_state = "insmash"
 	item_d_type = "blunt"
-	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR - 0.10 //Ditto, albeit with a +10% change from before.
 	desc = "A powerful blow that delivers Strength-scaling knockback and slowdown to the target. The amount of inflicted knockback scales off your Strength, ranging from X (1 tile) to XIV (4 tiles). </br>Cannot inflict any knockback or slowdown if your Strength is below X. </br>Cannot be used consecutively more than every 5 seconds on the same target. </br>Prone targets halve the knockback distance. </br>Not fully charging the attack limits knockback to 1 tile."
 	var/maxrange = 4
 
@@ -93,11 +90,11 @@
 
 /datum/intent/mace/strike/grand
 	name = "heavy strike"
-	damfactor = 1.2
+	damfactor = 1.1
 
 /datum/intent/mace/smash/grand
 	name = "heavy smash"
-	damfactor = 1.25
+	damfactor = 1.15
 	chargedrain = 1.5
 	desc = "A powerful blow that delivers Strength-scaling knockback and slowdown to the target. The amount of inflicted knockback scales off your Strength, ranging from X (1 tile) to XV (5 tiles). </br>Cannot inflict any knockback or slowdown if your Strength is below X. </br>Cannot be used consecutively more than every 5 seconds on the same target. </br>Prone targets halve the knockback distance. </br>Not fully charging the attack limits knockback to 1 tile."
 	maxrange = 5
@@ -387,8 +384,8 @@
 /datum/intent/mace/strike/dislocate
 	name = "dislocate"
 	blade_class = BCLASS_TWIST
-	attack_verb = list("thwacks", "threshes", "throngles")
-	hitsound = list('sound/combat/hits/blunt/shovel_hit2.ogg', 'sound/combat/hits/blunt/shovel_hit.ogg', 'sound/combat/hits/blunt/shovel_hit3.ogg')
+	attack_verb = list("thwacks", "threshes")
+	hitsound = list('sound/combat/hits/punch/punch_hard (1).ogg', 'sound/combat/hits/punch/punch_hard (2).ogg', 'sound/combat/hits/punch/punch_hard (3).ogg')
 	damfactor = 1.3
 	intent_intdamage_factor = 0.5
 	swingdelay = 6
