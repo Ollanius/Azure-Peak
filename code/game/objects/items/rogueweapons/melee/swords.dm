@@ -139,7 +139,7 @@
 	clickcd = 10
 
 /datum/intent/sword/cut/broadsword
-	name "cut with half-sworded technique"
+	name = "cut with half-sworded technique"
 	damfactor = 0.8 //Allows for utility-based carving with the broadswords. Technically combat viable, though you should probably take a Longsword if you're strictly using a Broadsword for cuts.
 	clickcd = 10 //On par with an Arming Sword.
 
