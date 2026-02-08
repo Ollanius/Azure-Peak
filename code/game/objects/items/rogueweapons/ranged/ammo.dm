@@ -233,6 +233,52 @@
 	icon_state = "bronzebolt_proj"
 	speed = 0.3 // Exchanges damage for being far quicker than its compatriots - roughly a little better than a regular crossbow bolt.
 
+/obj/item/ammo_casing/caseless/rogue/heavy_bolt/stake
+	name = "siegebow-chiseled stake"
+	desc = "A branch that has been broken off of an azurielve tree, sharpened to a fine point and anointed with blessed oils. It can lay unholy creechers to rest, but only by piercing their hearts."
+	icon_state = "heavystake"
+	wlength = WLENGTH_SHORT
+	w_class = WEIGHT_CLASS_SMALL
+	force = 12
+	max_integrity = 25					
+	wdefense = 0						
+	thrown_bclass = BCLASS_STAB									
+	sellprice = 5
+	possible_item_intents = list(/datum/intent/dagger/thrust/pick, /datum/intent/dagger/thrust/quick, /datum/intent/dagger/cut/light, /datum/intent/dagger/sucker_punch)
+	anvilrepair = /datum/skill/craft/weaponsmithing
+	smeltresult = /obj/item/rogueore/coal
+	slot_flags = ITEM_SLOT_HIP|ITEM_SLOT_MOUTH
+	associated_skill = /datum/skill/combat/knives
+	projectile_type = /obj/projectile/bullet/reusable/heavy_bolt/stake
+
+/obj/item/ammo_casing/caseless/rogue/heavy_bolt/stake/getonmobprop(tag)
+	. = ..()
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.5,"sx" = -10,"sy" = -6,"nx" = 11,"ny" = -6,"wx" = -4,"wy" = -6,"ex" = 5,"ey" = -6,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
+			if("onbelt")
+				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
+
+/obj/projectile/bullet/reusable/heavy_bolt
+	name = "heavy bolt"
+	damage = 120 //+50% the damage of a regular crossbow bolt.
+	damage_type = BRUTE
+	armor_penetration = 0 //No penetration.
+	object_damage_multiplier = 10 //Should destroy wooden barricades and doors in one shot, stone-and-iron doors in two, and The Gate in four.
+	wall_impact_break_probability = 100
+	damages_turf_walls = TRUE
+	icon = 'icons/roguetown/weapons/ammo.dmi'
+	icon_state = "heavybolt_proj"
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/heavy_bolt
+	range = 30
+	hitsound = 'sound/combat/hits/hi_bolt (2).ogg'
+	embedchance = 100
+	woundclass = BCLASS_PIERCE
+	flag = "piercing"
+	speed = 0.8 //Half the speed of a traditional bolt. Between crossbows and NPC-fired projectiles, in terms of speed - evadable by PCs at longer ranges.
+	npc_simple_damage_mult = 3 //..or 360 damage against mindless opponents. Run them through!
+
 //
 
 //arrows ฅ^•ﻌ•^ฅ
