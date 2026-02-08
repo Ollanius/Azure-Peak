@@ -175,8 +175,6 @@
 	peel_divisor = 5
 	reach = 2
 
-
-
 /datum/intent/spear/bash/ranged/quarterstaff
 	damfactor = 1
 
@@ -1147,7 +1145,7 @@
 	icon_state = "silverexealt"
 	force = 8
 	force_wielded = 25
-	minstr = 11
+	minstr = 12
 	minstr_req = TRUE
 	wdefense = 6
 	is_silver = TRUE
@@ -1170,7 +1168,7 @@
 	icon_state = "silverexealt"
 	force = 8
 	force_wielded = 25
-	minstr = 11
+	minstr = 12
 	wdefense = 6
 	is_silver = TRUE
 	minstr_req = TRUE
