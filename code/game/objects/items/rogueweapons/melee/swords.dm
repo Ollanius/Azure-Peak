@@ -969,7 +969,7 @@
 	max_integrity = 777
 	max_blade_int = 777
 	is_silver = TRUE
-	smeltresult = /obj/item/rogueweapon/greatsword/silver //How many forges does it take to get to the center of a superweapon?
+	smeltresult = /obj/item/rogueweapon/sword/long/exe/berserk //How many forges does it take to get to the center of a superweapon?
 
 /obj/item/rogueweapon/sword/long/exe/berserk/dragonslayer/ComponentInitialize()
 	AddComponent(\
