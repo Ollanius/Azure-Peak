@@ -969,7 +969,7 @@
 	. = ..()
 	if(slot == SLOT_NECK)
 		active_item = TRUE
-		to_chat(user, span_hypnophrase("..the warmth flows through my veins, yet I do not burn; in fact, my mind feels clearer than ever before.. </br>..glowing runes race past my eyes, gradually deciphering into the forge's greatest secrets..  </br>  </br>'BLACKSTEEL AND GOLD, SAFFIRA AND BLORTZ - BOUND WITH A PSICROSS O' SILVER, TO FOSTER THE DRAGON'S FURY.'  </br>  </br>'FOUR ENCHANTED RINGS, BOUND IN SILVER. A GEMERALD, ONYX, AMYTHORTZ, RONTZ - OMNIPOTENT, TOGETHER.'  </br>  </br>'AN INGOT-CATALYST, A GREATSWORD - EACH - OF GILBRANZE AND SILVER, THE REMAINS OF A DRACONIC RING AND WEEPING PSICROSS, AND WHAT LIES WITHIN THIS AMULET: TO SLAY VHESLYN'S DAEMONS.'"))
+		to_chat(user, span_hypnophrase("..the warmth flows through my veins, yet I do not burn; in fact, my mind feels clearer than ever before.. </br>..glowing runes race past my eyes, gradually deciphering into the forge's greatest secrets..  </br>  </br>'BLACKSTEEL AND GOLD, SAFFIRA AND BLORTZ - BOUND WITH A PSICROSS O' SILVER, TO FOSTER THE DRAGON'S FURY.'  </br>  </br>'FOUR ENCHANTED RINGS, BOUND IN SILVER. A GEMERALD, ONYX, AMYTHORTZ, RONTZ - OMNIPOTENT, TOGETHER.'  </br>  </br>'A SILVERED INGOT-CATALYST, A GREATSWORD - EACH - OF THE BERSERKER AND GILBRANZED, THE REMAINS OF A DRACONIC RING AND WEEPING PSICROSS, AND WHAT LIES WITHIN THIS AMULET: TO SLAY VHESLYN'S DAEMONS.'"))
 		user.change_stat(STATKEY_INT, 3)
 		user.change_stat(STATKEY_LCK, 3)
 		user.change_stat(STATKEY_STR, -3)
@@ -1011,7 +1011,7 @@
 	. = ..()
 	if(slot == SLOT_NECK)
 		active_item = TRUE
-		to_chat(user, span_red("As you don the psicross, the chains tighten like a vice around your neck! You're overcome with a sense of terrible anguish - all of humenity's suffering, thrust upon your very spirit! Your chest grows cold, yet your blood boils hotter than magma! Psydonia's villains may be brutal and merciless, but you will be WORSE! </br>You've gone BERSERK!"))
+		to_chat(user, span_red("As you don the psicross, the chains tighten like a vice around your neck! </br>You're overcome with a sense of terrible anguish - all of humenity's suffering, thrust upon your very spirit! Your chest grows cold, yet your blood boils hotter than magma! Psydonia's villains may be brutal and merciless, but you will be WORSE! </br>You've gone BERSERK!"))
 		user.change_stat(STATKEY_STR, 3)
 		user.change_stat(STATKEY_CON, -3)
 		user.change_stat(STATKEY_WIL, 3)
