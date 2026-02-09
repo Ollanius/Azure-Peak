@@ -275,7 +275,7 @@
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/adventurer/bronzeclad
 	cmode_music = 'sound/music/cmode/church/combat_eora.ogg' //What am I fighting for? Why am I here? To die in this terrible place?
-	traits_applied = list(TRAIT_STEELHEARTED)
+	traits_applied = list(TRAIT_STEELHEARTED, TRAIT_BLOOD_RESISTANCE)
 	subclass_stats = list(
 		STATKEY_STR = 1,
 		STATKEY_WIL = 2,
@@ -297,7 +297,7 @@
 	..()
 	to_chat(H, span_warning("The curtains part, the shieldline rallies, and the eyes of a thousand shadows fall upon you. Snarling gladiator, enthralled legionnaire, vestumed actor; ready yourself for another bout."))
 	if(H.mind)
-		var/bronzeweapon = list("Spatha & +1 Wrestling","Trident & +1 Wrestling","Greataxe & +1 Wrestling","Dolabra (Axepick) & +1 Wrestling","Gladius (Shortsword) + Shield","Kopis (Heavy Shortsword) + Shield","Khopesh + Shield","Axe + Shield","Warclub + Shield","Flail + Shield","Spear + Shield","Katar + Heavy Dagger","Dual Khopeshes","Dual Gladii (Shortswords)","Dual Axes")
+		var/bronzeweapon = list("Spatha & +1 Wrestling","Trident & +1 Wrestling","Greataxe & +1 Wrestling","Dolabra (Axepick) & +1 Wrestling","Gladius (Shortsword) + Shield","Kopis (Heavy Shortsword) + Shield","Khopesh + Shield","Axe + Shield","Warclub + Shield","Flail + Shield","Spear + Shield","Katar + Heavy Dagger","Dual Khopeshes","Dual Gladii (Shortswords)","Dual Kopii (Heavy Shortswords)","Dual Axes")
 		var/bronzeweapon_choice = input(H, "Choose your WEAPONS.", "PUT ON A SHOW FOR THE CROWD.") as anything in bronzeweapon
 		switch(bronzeweapon_choice)
 			if("Spatha & +1 Wrestling")
@@ -380,6 +380,13 @@
 				l_hand = /obj/item/rogueweapon/sword/short/gladius
 				beltr = /obj/item/rogueweapon/scabbard/sword/strap
 				backr = /obj/item/rogueweapon/scabbard/sword/strap
+			if("Dual Kopii (Heavy Shortswords)")
+				H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_JOURNEYMAN, TRUE)
+				ADD_TRAIT(H, TRAIT_DUALWIELDER, TRAIT_GENERIC) // Ditto.
+				r_hand = /obj/item/rogueweapon/sword/short/messer/bronze
+				l_hand = /obj/item/rogueweapon/sword/short/messer/bronze
+				beltr = /obj/item/rogueweapon/scabbard/sword/strap
+				backr = /obj/item/rogueweapon/scabbard/sword/strap
 			if("Dual Axes")
 				H.adjust_skillrank_up_to(/datum/skill/combat/axes, SKILL_LEVEL_JOURNEYMAN, TRUE)
 				ADD_TRAIT(H, TRAIT_DUALWIELDER, TRAIT_GENERIC)
@@ -395,7 +402,7 @@
 				beltl = /obj/item/quiver/sling/bronze
 			if("A Bottle Of Garum(?)")
 				beltl = /obj/item/reagent_containers/glass/bottle/rogue/healthpot/garum
-		var/bronzediscipline = list("Legionnaire - Bronze Armor & Maille Training","Gladiator - Skinarmored & Halved Bloodbloss")
+		var/bronzediscipline = list("Legionnaire - Bronze Armor & Maille Training","Gladiator - Skinarmored & Immunity To Pain")
 		var/bronzediscipline_choice = input(H, "Choose your DISCIPLINE.", "EMBRACE GLORY AND DEATH.") as anything in bronzediscipline
 		switch(bronzediscipline_choice)
 			if("Legionnaire - Bronze Armor & Maille Training")
@@ -405,11 +412,11 @@
 				armor = /obj/item/clothing/suit/roguetown/armor/plate/bronze
 				pants = /obj/item/clothing/under/roguetown/skirt/red
 				belt = /obj/item/storage/belt/rogue/leather
-			if("Gladiator - Skinarmored & Halved Bloodbloss")
-				ADD_TRAIT(H, TRAIT_BLOOD_RESISTANCE, TRAIT_GENERIC)
+			if("Gladiator - Skinarmored & Immunity To Pain")
+				ADD_TRAIT(H, TRAIT_NOPAINSTUN, TRAIT_GENERIC)
 				head = /obj/item/clothing/head/roguetown/helmet/heavy/bronze/gladiator
 				armor = /obj/item/clothing/suit/roguetown/armor/regenerating/skin/disciple/gladiator
-				pants = /obj/item/clothing/under/roguetown/heavy_leather_pants/bronzeskirt
+				pants = /obj/item/clothing/under/roguetown/loincloth/brown
 				belt = /obj/item/storage/belt/rogue/leather/battleskirt/red
 				gloves = /obj/item/clothing/gloves/roguetown/bandages
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/bronze
@@ -463,7 +470,7 @@
 	repair_time = 25 SECONDS
 
 /obj/item/clothing/head/roguetown/helmet/heavy/bronze/gladiator
-	name = "gladiator's bronze barbute"
+	name = "bronze barbute"
 	max_integrity = ARMOR_INT_HELMET_HEAVY_BRONZE - 100 //Quartered durability, in order to play nicer with the Gladiator Discipline's reduced blood loss and regenerating skin armor. Durability's between iron and steel, for reference.
 	armor_class = ARMOR_CLASS_LIGHT
 
