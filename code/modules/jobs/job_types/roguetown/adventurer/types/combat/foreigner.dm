@@ -299,7 +299,7 @@
 	if(H.mind)
 		var/bronzeweapon = list("Spatha & +1 Wrestling","Trident & +1 Wrestling","Greataxe & +1 Wrestling","Dolabra (Axepick) & +1 Wrestling","Gladius (Shortsword) + Shield","Kopis (Heavy Shortsword) + Shield","Khopesh + Shield","Axe + Shield","Warclub + Shield","Flail + Shield","Spear + Shield","Katar + Heavy Dagger","Dual Khopeshes","Dual Gladii (Shortswords)","Dual Axes")
 		var/bronzeweapon_choice = input(H, "Choose your WEAPONS.", "PUT ON A SHOW FOR THE CROWD.") as anything in bronzeweapon
-		switch(bronzeweapons_choice)
+		switch(bronzeweapon_choice)
 			if("Spatha & +1 Wrestling")
 				H.adjust_skillrank_up_to(/datum/skill/combat/polearms, SKILL_LEVEL_JOURNEYMAN, TRUE)
 				H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, SKILL_LEVEL_JOURNEYMAN, TRUE)
