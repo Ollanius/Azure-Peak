@@ -279,8 +279,8 @@
 	subclass_stats = list(
 		STATKEY_STR = 1,
 		STATKEY_WIL = 2,
-		STATKEY_CON = 3, //Bronze armor is sturdier than steel, but has exceptionally poor defensive values for metal armor. The goal is to not ward off blows, but to use the armor's durability to withstand them.
-		STATKEY_SPD = -2, //Five weighted points, in technicality. Stylistically inverted from the Barbarian's statblock - slow and sturdy, instead of stupid and strong.
+		STATKEY_CON = 2,
+		STATKEY_SPD = -1,
 	)
 	subclass_skills = list(
 		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
