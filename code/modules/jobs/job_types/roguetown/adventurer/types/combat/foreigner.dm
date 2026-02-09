@@ -278,9 +278,9 @@
 	traits_applied = list(TRAIT_STEELHEARTED, TRAIT_BLOOD_RESISTANCE)
 	subclass_stats = list(
 		STATKEY_STR = 1,
-		STATKEY_WIL = 2,
+		STATKEY_WIL = 3,
 		STATKEY_CON = 2,
-		STATKEY_SPD = -1,
+		STATKEY_SPD = -2,
 	)
 	subclass_skills = list(
 		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
