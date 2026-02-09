@@ -462,8 +462,6 @@
 	color = "#891305"
 	taste_description = "lip-puckeringly rich fishiness"
 	scent_description = "fermented pungence"
-	nutriment_factor = 8
-	hydration = 4
 
 /obj/item/clothing/suit/roguetown/armor/regenerating/skin/disciple/gladiator
 	name = "gladiator's skin"
