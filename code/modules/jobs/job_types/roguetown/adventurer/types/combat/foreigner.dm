@@ -278,9 +278,9 @@
 	traits_applied = list(TRAIT_STEELHEARTED, TRAIT_BLOOD_RESISTANCE)
 	subclass_stats = list(
 		STATKEY_STR = 1,
-		STATKEY_WIL = 2,
-		STATKEY_CON = 3, //Bronze armor is sturdier than steel, but has exceptionally poor defensive values for metal armor. The goal is to not ward off blows, but to use the armor's durability to withstand them.
-		STATKEY_SPD = -2, //Five weighted points, in technicality. Stylistically inverted from the Barbarian's statblock - slow and sturdy, instead of stupid and strong.
+		STATKEY_WIL = 3,
+		STATKEY_CON = 2,
+		STATKEY_SPD = -2,
 	)
 	subclass_skills = list(
 		/datum/skill/misc/climbing = SKILL_LEVEL_JOURNEYMAN,
@@ -297,28 +297,28 @@
 	..()
 	to_chat(H, span_warning("The curtains part, the shieldline rallies, and the eyes of a thousand shadows fall upon you. Snarling gladiator, enthralled legionnaire, vestumed actor; ready yourself for another bout."))
 	if(H.mind)
-		var/bronzeweapon = list("Spatha & +1 Wrestling","Trident & +1 Wrestling","Greataxe & +1 Wrestling","Dolabra (Axepick) & +1 Wrestling","Gladius (Shortsword) + Shield","Kopis (Heavy Shortsword) + Shield","Khopesh + Shield","Axe + Shield","Warclub + Shield","Flail + Shield","Spear + Shield","Katar + Heavy Dagger","Dual Khopeshes","Dual Gladii (Shortswords)","Dual Kopii (Heavy Shortswords)","Dual Axes")
+		var/bronzeweapon = list("Spatha & +1 Unarmed","Trident & +1 Unarmed","Greataxe & +1 Unarmed","Dolabra (Axepick) & +1 Unarmed","Gladius (Shortsword) + Shield","Kopis (Heavy Shortsword) + Shield","Khopesh + Shield","Axe + Shield","Warclub + Shield","Flail + Shield","Spear + Shield","Katar + Heavy Dagger","Dual Khopeshes","Dual Gladii (Shortswords)","Dual Kopii (Heavy Shortswords)","Dual Axes")
 		var/bronzeweapon_choice = input(H, "Choose your WEAPONS.", "PUT ON A SHOW FOR THE CROWD.") as anything in bronzeweapon
 		switch(bronzeweapon_choice)
-			if("Spatha & +1 Wrestling")
+			if("Spatha & +1 Unarmed")
 				H.adjust_skillrank_up_to(/datum/skill/combat/polearms, SKILL_LEVEL_JOURNEYMAN, TRUE)
-				H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, SKILL_LEVEL_JOURNEYMAN, TRUE)
+				H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_JOURNEYMAN, TRUE)
 				r_hand = /obj/item/rogueweapon/sword/long/broadsword/bronze
 				beltr = /obj/item/rogueweapon/scabbard/sword/strap
-			if("Trident & +1 Wrestling")
+			if("Trident & +1 Unarmed")
 				H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_JOURNEYMAN, TRUE)
-				H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, SKILL_LEVEL_JOURNEYMAN, TRUE)
+				H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_JOURNEYMAN, TRUE)
 				r_hand = /obj/item/rogueweapon/spear/trident
 				l_hand = /obj/item/net //Mimics the loadout of a Retiarius - a Gladiator type with a trident and weighted net.
 				backr = /obj/item/rogueweapon/scabbard/gwstrap
-			if("Greataxe & +1 Wrestling")
+			if("Greataxe & +1 Unarmed")
 				H.adjust_skillrank_up_to(/datum/skill/combat/axes, SKILL_LEVEL_JOURNEYMAN, TRUE)
-				H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, SKILL_LEVEL_JOURNEYMAN, TRUE)
+				H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_JOURNEYMAN, TRUE)
 				r_hand = /obj/item/rogueweapon/greataxe/bronze
 				backr = /obj/item/rogueweapon/scabbard/gwstrap
-			if("Dolabra (Axepick) & +1 Wrestling")
+			if("Dolabra (Axepick) & +1 Unarmed")
 				H.adjust_skillrank_up_to(/datum/skill/labor/mining, SKILL_LEVEL_JOURNEYMAN, TRUE)
-				H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, SKILL_LEVEL_JOURNEYMAN, TRUE)
+				H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_JOURNEYMAN, TRUE)
 				r_hand = /obj/item/rogueweapon/pick/bronze
 			if("Gladius (Shortsword) + Shield")
 				H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_JOURNEYMAN, TRUE)
@@ -392,7 +392,7 @@
 				ADD_TRAIT(H, TRAIT_DUALWIELDER, TRAIT_GENERIC)
 				r_hand = /obj/item/rogueweapon/stoneaxe/woodcut/bronze
 				l_hand = /obj/item/rogueweapon/stoneaxe/woodcut/bronze
-		var/bronzesidearm = list("A Javelin's Bag", "A Sling's Training And Bullets", "A Bottle Of Garum(?)")
+		var/bronzesidearm = list("A Javelin's Bag", "A Sling's Training And Bullets", "A Bottle Of Medicinal Fish Vinegar.. ?")
 		var/bronzesidearm_choice = input(H, "Choose your ACCOUTREMENT.", "PREPARE YOUR OPENING ACT.") as anything in bronzesidearm
 		switch(bronzesidearm_choice)
 			if("A Javelin's Bag")
@@ -400,8 +400,8 @@
 			if("A Sling's Training And Bullets")
 				H.adjust_skillrank_up_to(/datum/skill/combat/slings = SKILL_LEVEL_JOURNEYMAN, TRUE)
 				beltl = /obj/item/quiver/sling/bronze
-			if("A Bottle Of Garum(?)")
-				beltl = /obj/item/reagent_containers/glass/bottle/rogue/healthpot/garum
+			if("A Bottle Of Medicinal Fish Vinegar.. ?")
+				beltl = /obj/item/reagent_containers/glass/bottle/rogue/healthpot/zarum
 		var/bronzediscipline = list("Legionnaire - Bronze Armor & Maille Training","Gladiator - Skinarmored & Immunity To Pain")
 		var/bronzediscipline_choice = input(H, "Choose your DISCIPLINE.", "EMBRACE GLORY AND DEATH.") as anything in bronzediscipline
 		switch(bronzediscipline_choice)
@@ -451,13 +451,13 @@
 	max_integrity = 150
 	sheathe_icon = "kopis"
 
-/obj/item/reagent_containers/glass/bottle/rogue/healthpot/garum
+/obj/item/reagent_containers/glass/bottle/rogue/healthpot/zarum
 	name = "bottle of medicinal fish vinegar"
 	desc = "A bottle with a mudclay cork, tethered to the bottleneck via braided twine. Fermented innard-paste and herbs makes for a disgustingly cheap medicine; an ancient concoction, resurrected for usage within the gladitorial arenas of Lirvas and Raneshen. </br>A particular variant of this, made by fermenting zardines in the Terrorbog, happens to be a very popular condiment back in Rockhill."
-	list_reagents = list(/datum/reagent/medicine/healthpot/garum = 50)
+	list_reagents = list(/datum/reagent/medicine/healthpot/zarum = 50)
 
-/datum/reagent/medicine/healthpot/garum
-	name = "Garum"
+/datum/reagent/medicine/healthpot/zarum
+	name = "Zarum"
 	description = "Gradually regenerates all types of damage, imparts a savory taste to most topped meals."
 	color = "#891305"
 	taste_description = "lip-puckeringly rich fishiness"
