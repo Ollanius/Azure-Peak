@@ -297,8 +297,8 @@
 	..()
 	to_chat(H, span_warning("The curtains part, the shieldline rallies, and the eyes of a thousand shadows fall upon you. Snarling gladiator, enthralled legionnaire, vestumed actor; ready yourself for another bout."))
 	if(H.mind)
-		var/bronzeweapons = list("Spatha & +1 Wrestling","Trident & +1 Wrestling","Greataxe & +1 Wrestling","Dolabra (Axepick) & +1 Wrestling","Gladius (Shortsword) + Shield","Kopis (Heavy Shortsword) + Shield","Khopesh + Shield","Axe + Shield","Warclub + Shield","Flail + Shield","Spear + Shield","Katar + Heavy Dagger","Dual Khopeshes","Dual Gladii (Shortswords)","Dual Axes")
-		var/bronzeweapons_choice = input(H, "Choose your WEAPONS.", "PUT ON A SHOW FOR THE CROWD.") as anything in bronzeweapon
+		var/bronzeweapon = list("Spatha & +1 Wrestling","Trident & +1 Wrestling","Greataxe & +1 Wrestling","Dolabra (Axepick) & +1 Wrestling","Gladius (Shortsword) + Shield","Kopis (Heavy Shortsword) + Shield","Khopesh + Shield","Axe + Shield","Warclub + Shield","Flail + Shield","Spear + Shield","Katar + Heavy Dagger","Dual Khopeshes","Dual Gladii (Shortswords)","Dual Axes")
+		var/bronzeweapon_choice = input(H, "Choose your WEAPONS.", "PUT ON A SHOW FOR THE CROWD.") as anything in bronzeweapon
 		switch(bronzeweapons_choice)
 			if("Spatha & +1 Wrestling")
 				H.adjust_skillrank_up_to(/datum/skill/combat/polearms, SKILL_LEVEL_JOURNEYMAN, TRUE)
@@ -399,7 +399,7 @@
 		var/bronzediscipline_choice = input(H, "Choose your DISCIPLINE.", "EMBRACE GLORY AND DEATH.") as anything in bronzediscipline
 		switch(bronzediscipline_choice)
 			if("Legionnaire - Bronze Armor & Maille Training")
-				ADD_TRAIT(H, TRAIT_MEDIUM_ARMOR, TRAIT_GENERIC)
+				ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 				head = /obj/item/clothing/head/roguetown/helmet/heavy/bronze
 				neck = /obj/item/clothing/neck/roguetown/gorget/bronze
 				armor = /obj/item/clothing/suit/roguetown/armor/plate/bronze
