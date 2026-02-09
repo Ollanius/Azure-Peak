@@ -8,7 +8,7 @@
 	hitsound = list('sound/combat/hits/bladed/smallslash (1).ogg', 'sound/combat/hits/bladed/smallslash (2).ogg', 'sound/combat/hits/bladed/smallslash (3).ogg')
 	animname = "cut"
 	penfactor = 15
-	damfactor = 1.15
+	damfactor = 1.1
 	chargetime = 0
 	item_d_type = "slash"
 
@@ -20,7 +20,7 @@
 	animname = "chop"
 	hitsound = list('sound/combat/hits/bladed/genchop (1).ogg', 'sound/combat/hits/bladed/genchop (2).ogg', 'sound/combat/hits/bladed/genchop (3).ogg')
 	penfactor = 30
-	damfactor = 1.25
+	damfactor = 1.2
 	swingdelay = 8
 	clickcd = 14
 	item_d_type = "slash"
@@ -34,16 +34,16 @@
 /datum/intent/axe/cut/battle
 	name = "heavy swing"
 	penfactor = 15
-	damfactor = 1.2
+	damfactor = 1.15
 
 /datum/intent/axe/chop/battle
 	name = "heavy chop"
 	penfactor = 30
-	damfactor = 1.35 //32.5 on one-handed swipes, 39 on two-handed swipes.
+	damfactor = 1.3 //32.5 on one-handed swipes, 39 on two-handed swipes.
 	swingdelay = 10
 
 /datum/intent/axe/chop/battle/halberd
-	damfactor = 1.4
+	damfactor = 1.35
 	swingdelay = 12
 	penfactor = 20
 
