@@ -392,7 +392,7 @@
 				ADD_TRAIT(H, TRAIT_DUALWIELDER, TRAIT_GENERIC)
 				r_hand = /obj/item/rogueweapon/stoneaxe/woodcut/bronze
 				l_hand = /obj/item/rogueweapon/stoneaxe/woodcut/bronze
-		var/bronzesidearm = list("A Javelin's Bag", "A Sling's Training And Bullets", "A Bottle Of Garum(?)")
+		var/bronzesidearm = list("A Javelin's Bag", "A Sling's Training And Bullets", "A Bottle Of Medicinal Fish Vinegar.. ?")
 		var/bronzesidearm_choice = input(H, "Choose your ACCOUTREMENT.", "PREPARE YOUR OPENING ACT.") as anything in bronzesidearm
 		switch(bronzesidearm_choice)
 			if("A Javelin's Bag")
@@ -400,8 +400,8 @@
 			if("A Sling's Training And Bullets")
 				H.adjust_skillrank_up_to(/datum/skill/combat/slings = SKILL_LEVEL_JOURNEYMAN, TRUE)
 				beltl = /obj/item/quiver/sling/bronze
-			if("A Bottle Of Garum(?)")
-				beltl = /obj/item/reagent_containers/glass/bottle/rogue/healthpot/garum
+			if("A Bottle Of Medicinal Fish Vinegar.. ?")
+				beltl = /obj/item/reagent_containers/glass/bottle/rogue/healthpot/zarum
 		var/bronzediscipline = list("Legionnaire - Bronze Armor & Maille Training","Gladiator - Skinarmored & Immunity To Pain")
 		var/bronzediscipline_choice = input(H, "Choose your DISCIPLINE.", "EMBRACE GLORY AND DEATH.") as anything in bronzediscipline
 		switch(bronzediscipline_choice)
@@ -451,17 +451,19 @@
 	max_integrity = 150
 	sheathe_icon = "kopis"
 
-/obj/item/reagent_containers/glass/bottle/rogue/healthpot/garum
+/obj/item/reagent_containers/glass/bottle/rogue/healthpot/zarum
 	name = "bottle of medicinal fish vinegar"
 	desc = "A bottle with a mudclay cork, tethered to the bottleneck via braided twine. Fermented innard-paste and herbs makes for a disgustingly cheap medicine; an ancient concoction, resurrected for usage within the gladitorial arenas of Lirvas and Raneshen. </br>A particular variant of this, made by fermenting zardines in the Terrorbog, happens to be a very popular condiment back in Rockhill."
 	list_reagents = list(/datum/reagent/medicine/healthpot/garum = 50)
 
-/datum/reagent/medicine/healthpot/garum
-	name = "Garum"
+/datum/reagent/medicine/healthpot/zarum
+	name = "Zarum"
 	description = "Gradually regenerates all types of damage, imparts a savory taste to most topped meals."
 	color = "#891305"
 	taste_description = "lip-puckeringly rich fishiness"
 	scent_description = "fermented pungence"
+	nutriment_factor = 8
+	hydration = 4
 
 /obj/item/clothing/suit/roguetown/armor/regenerating/skin/disciple/gladiator
 	name = "gladiator's skin"
