@@ -470,7 +470,7 @@
 	repair_time = 25 SECONDS
 
 /obj/item/clothing/head/roguetown/helmet/heavy/bronze/gladiator
-	name = "bronze barbute"
+	name = "battle-worn bronze barbute"
 	max_integrity = ARMOR_INT_HELMET_HEAVY_BRONZE - 100 //Quartered durability, in order to play nicer with the Gladiator Discipline's reduced blood loss and regenerating skin armor. Durability's between iron and steel, for reference.
 	armor_class = ARMOR_CLASS_LIGHT
 
