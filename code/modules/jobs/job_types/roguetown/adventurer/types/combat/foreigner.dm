@@ -291,7 +291,7 @@
 		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
 	)
 
-	extra_context = "This subclass exclusively uses bronze-tiered equipment. Weapon choices with the 'dual-' prefix also provide the Dual Wielding trait as well. A total of four Disciplines are available, each offering a distinct"
+	extra_context = "This subclass exclusively uses bronze armor, which - while easily pierced - further reduces the rate of bleeding and dismemberment. Weapon choices with the 'dual-' prefix also provide the Dual Wielding trait as well. A total of four Disciplines are available, each catering to a different playstyle."
 
 /datum/outfit/job/roguetown/adventurer/bronzeclad/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
@@ -408,15 +408,14 @@
 				beltl = /obj/item/quiver/sling/bronze
 			if("A Bottle Of Medicinal Fish Vinegar.. ?")
 				beltl = /obj/item/reagent_containers/glass/bottle/rogue/healthpot/zarum
-		var/bronzediscipline = list("Thespian - Heart Protector & Dodge Expert","Gladiator - Skinarmored & Immunity To Pain","Legionnaire - Cuirass, Gorget & Maille Training","Bulwark - Fully-Armored & Plate Training")
+		var/bronzediscipline = list("Gladiator - Skinarmored & Immunity To Pain","Thespian - Dodge Expert & Alternate Statblock (+III WIL, +I STR/SPD/INT, -I CON)","Legionnaire - Cuirass, Gorget & Maille Training","Bulwark - Fully-Armored & Plate Training")
 		var/bronzediscipline_choice = input(H, "Choose your DISCIPLINE.", "EMBRACE GLORY AND DEATH.") as anything in bronzediscipline
 		switch(bronzediscipline_choice)
-			if("Thespian - Heart Protector & Dodge Expert")
+			if("Thespian - Dodge Expert & Alternate Statblock (+III WIL, +I STR/SPD/INT, -I CON)")
 				ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
-				REMOVE_TRAIT(H, TRAIT_BLOOD_RESISTANCE, TRAIT_GENERIC)
 				H.change_stat(STATKEY_SPD, 3)
 				H.change_stat(STATKEY_INT, 1)
-				H.change_stat(STATKEY_CON, -2) //Turns the new statblock from +3 WIL / +2 CON / +1 STR / -2 SPD to +3 WIL / +1 STR / +1 SPD / +1 INT. Has a -1 INT / +2 WIL difference over the Duelist, but with Journeyman-capped skills. If you get hit, it's going to hurt.
+				H.change_stat(STATKEY_CON, -3)
 				head = /obj/item/flowercrown/briar
 				mask = /obj/item/clothing/mask/rogue/facemask/bronze
 				armor = /obj/item/clothing/suit/roguetown/armor/plate/bronze/light
