@@ -611,11 +611,10 @@
 	item_state = "bronzegreatshield"
 	icon = 'icons\roguetown\clothing\special\thespian.dmi'
 	max_integrity = 360 //Highest integrity and passive projectile-blocking chance of most non-unique shields. Defense is consequently reduced to Buckler levels, however. Time your blocks and take one for the team!
-	possible_item_intents = list(/datum/intent/shield/block, /datum/intent/mace/smash/shield/metal/great, /datum/intent/effect/daze) // No SHIELD_BASH. Able to inflict Daze due to its weight. 
+	possible_item_intents = list(/datum/intent/shield/block, /datum/intent/mace/smash/shield/metal/great, /datum/intent/effect/daze) // No SHIELD_BASH. Able to inflict Daze due to its weight.
+	force = 28
 	coverage = 75 
 	wdefense = 9
-	force = 28
-    throwforce = 23
 	minstr = 12 //Requires a natural +STR modifier or statpack to double as a melee weapon, for its given class. Note that it has a heavier charge time and active stamina drain, too, as.. well, it's quite heavy.
 
 /obj/item/rogueweapon/shield/bronze/great/get_mechanics_examine(mob/user)
