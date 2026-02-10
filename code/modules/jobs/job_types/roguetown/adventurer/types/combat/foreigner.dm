@@ -424,6 +424,7 @@
 			if("Gladiator - Skinarmored & Immunity To Pain")
 				ADD_TRAIT(H, TRAIT_NOPAINSTUN, TRAIT_GENERIC)
 				head = /obj/item/clothing/head/roguetown/helmet/heavy/bronze/gladiator
+				shirt = /obj/item/clothing/suit/roguetown/shirt/tribalrag/gladiator
 				armor = /obj/item/clothing/suit/roguetown/armor/regenerating/skin/disciple/gladiator
 				pants = /obj/item/clothing/under/roguetown/loincloth/brown
 				belt = /obj/item/storage/belt/rogue/leather/battleskirt/red
@@ -452,9 +453,6 @@
 		/obj/item/gun/ballistic/revolver/grenadelauncher/sling = 1,
 		/obj/item/rogueweapon/huntingknife/bronze = 1,
 		)
-	if(should_wear_femme_clothes(H))
-		if(bronzediscipline_choice != "Gladiator - Skinarmored & Immunity To Pain" && bronzediscipline_choice != "Thespian - Heart Protector & Dodge Expert" && bronzediscipline_choice != "Legionnaire - Cuirass, Gorget & Maille Training" && bronzediscipline_choice != "Bulwark - Fully-Armored & Plate Training")
-			shirt = /obj/item/clothing/suit/roguetown/shirt/tribalrag/gladiator
 	H.set_blindness(0)
 	switch(H.patron?.type)
 		if(/datum/patron/old_god)
