@@ -355,7 +355,7 @@
 /datum/intent/arc/crossbow/heavy
 	basetime = 60
 	chargetime = 1.5
-	chargedrain = 1.5 //Ditto.
+	chargedrain = 1 //Ditto.
 	charging_slowdown = 2.5 //Little more than before, with the assumption that you're taking your time for a more precise shot.
 
 /datum/intent/shoot/crossbow/heavy/prewarning()
