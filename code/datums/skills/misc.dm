@@ -79,8 +79,8 @@
 		"...the forest behind you collapses into a raging inferno, just as your steed leaps forth. With choked lungs and burning eyes, you cling tightly to the reins and mutter a prayer; yet against all the odds, the saiga sticks the landing. Welting eyes unpucker, graced with the dawn's cool breeze and the sight of your steed's continued galloping..."
 	)
 	expert_name = "Rider"
-	max_untraited_level = SKILL_LEVEL_JOURNEYMAN
-	trait_uncap = list(TRAIT_NOBLE = SKILL_LEVEL_EXPERT, TRAIT_EQUESTRIAN = SKILL_LEVEL_MASTER)
+	max_untraited_level = SKILL_LEVEL_APPRENTICE
+	trait_uncap = list(TRAIT_NOBLE = SKILL_LEVEL_JOURNEYMAN, TRAIT_EQUESTRIAN = SKILL_LEVEL_MASTER)
 
 /datum/skill/misc/music
 	name = "Music"
