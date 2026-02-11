@@ -18,7 +18,7 @@
 	randomspread = 1
 	spread = 0
 	can_parry = TRUE
-	wdefense = 4
+	wdefense = 3
 	max_integrity = 100
 	var/chargingspeed = 40
 	var/reloadtime = 40
@@ -293,7 +293,7 @@
 	swingdelay = 0
 	icon_state = "instrike"
 	item_d_type = "blunt"
-	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR
+	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR - 50 //Reduces integrity damage modifier to +10%.
 
 //
 
@@ -314,7 +314,7 @@
 	onehanded = TRUE
 	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_HIP
 	penfactor = 0.5		//Bolts have 50 pen, this decreases to 25. Should only pen armor with less than 67 protection.
-	wdefense = 3
+	wdefense = 2
 	max_integrity = 80
 
 //
@@ -325,18 +325,17 @@
 	icon = 'icons/roguetown/weapons/misc32.dmi'
 	icon_state = "heavybow0"
 	item_state = "heavybow"
-	possible_item_intents = list(/datum/intent/shoot/crossbow, /datum/intent/arc/crossbow, /datum/intent/buttstroke, /datum/intent/effect/daze) //Remember, this is quite heavy.
+	possible_item_intents = list(/datum/intent/shoot/crossbow/heavy, /datum/intent/arc/crossbow/heavy, /datum/intent/buttstroke/heavy, /datum/intent/effect/daze) //Remember, this is quite heavy.
 	load_sound = 'sound/foley/doors/lockmetal.ogg'
 	fire_sound = 'sound/combat/Ranged/crossbow_big_shot.ogg'
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/heavy_xbow
 	minstr = 12 //Should only affect melee damage. Sells the impression that you're hauling some serious artillery around.
 	force = 20
-	wdefense = 5
+	wdefense = 4
 	max_integrity = 150
-	chargingspeed = 60 //+20
-	reloadtime = 20 SECONDS //Emulates the use of a windlass, similar to its real life counterparts.
+	chargingspeed = 60 //+20, or a little over +50% the standard charging speed.
+	reloadtime = 160 //Roughly sixteen seconds, or +200% the standard reloading speed.
 	accfactor = 0.5 //Hey, I'd like to see you try to aim a siege weapon while standing up!
-	penfactor = 0.1 //In essence: a ranged integrity cracker.
 	equip_delay_self = 3 SECONDS
 	unequip_delay_self = 3 SECONDS
 	inv_storage_delay = 2 SECONDS
@@ -346,6 +345,36 @@
 	caliber = "heabolt"
 	max_ammo = 1
 	start_empty = TRUE
+
+/datum/intent/shoot/crossbow/heavy
+	basetime = 60
+	chargetime = 1
+	chargedrain = 1 //Takes 50% longer to properly aim and fire. Imparts a stamina drain and audio cue, too.
+	charging_slowdown = 2 //Slows down movement, on par with a dedicated longbow. You can probably guess why.
+
+/datum/intent/arc/crossbow/heavy
+	basetime = 60
+	chargetime = 1.5
+	chargedrain = 1.5 //Ditto.
+	charging_slowdown = 2.5 //Little more than before, with the assumption that you're taking your time for a more precise shot.
+
+/datum/intent/shoot/crossbow/heavy/prewarning()
+	if(mastermob)
+		mastermob.visible_message(span_warning("[mastermob] readies [masteritem]!"))
+		playsound(mastermob, pick('sound/combat/Ranged/crossbow_medium_reload-02.ogg'), 100, FALSE)
+
+/datum/intent/arc/crossbow/heavy/prewarning()
+	if(mastermob)
+		mastermob.visible_message(span_warning("[mastermob] readies [masteritem] for a precise shot!"))
+		playsound(mastermob, pick('sound/combat/Ranged/crossbow_medium_reload-02.ogg'), 100, FALSE)
+
+/datum/intent/buttstroke/heavy
+	name = "heavy buttstroke"
+	damfactor = 1.15
+	swingdelay = 6
+	icon_state = "instrike"
+	item_d_type = "blunt"
+	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR - 45 //Reduces integrity damage modifier to +15%.
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy/paalloy
 	name = "ancient siegebow"
