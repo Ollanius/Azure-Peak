@@ -183,7 +183,7 @@
 	embedchance = 100
 	woundclass = BCLASS_PIERCE
 	flag = "piercing"
-	speed = 1.6
+	speed = 1.2
 	npc_simple_damage_mult = 3 //..or 360 damage against mindless opponents. Run them through!
 
 /obj/item/ammo_casing/caseless/rogue/heavy_bolt/getonmobprop(tag)
@@ -480,7 +480,7 @@
 	name = "silver arrow"
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/arrow/silver
 	damage = 60 //The rarest, but most powerful arrow subtype. Intended to be incredibly scarce, in practice - a 'silver bullet', to the most literal extent.
-	armor_penetration = 777
+	armor_penetration = 60
 	embedchance = 100
 	poisontype = /datum/reagent/water/blessed
 	poisonamount = 7
@@ -498,7 +498,7 @@
 /obj/projectile/bullet/reusable/bolt/silver
 	name = "silver bolt"
 	damage = 80 //One shot. Make it count. Pray your aim is true - and that whoever's on the other side isn't packing a shield or knows how to sidestep.
-	armor_penetration = 777
+	armor_penetration = 80
 	icon_state = "silvbolt_proj"
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/bolt/silver
 	embedchance = 100
@@ -509,6 +509,7 @@
 /obj/item/ammo_casing/caseless/rogue/heavy_bolt/silver
 	name = "heavy silver bolt"
 	desc = "A silvered lance, poised to impale the unimaginable. You feel the hands of another guiding your own, as you prepare to load; may it be guidence from a higher power, or your wit upon the verge of breaking? </br>'God, please..'"
+	armor_penetration = 120
 	projectile_type = /obj/projectile/bullet/reusable/heavy_bolt/silver
 	icon_state = "silvheavybolt"
 	max_integrity = 30
