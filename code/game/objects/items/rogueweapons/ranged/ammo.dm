@@ -163,15 +163,15 @@
 	grid_height = 96 //Effectively as large as a shortsword. Two in a belt, four in a satchel. Unideal for carrying without a purpose-made pouch.
 	grid_width = 32
 	slot_flags = ITEM_SLOT_HIP|ITEM_SLOT_MOUTH //Carry it on the hip or bite down like a carrot, if you're out of options.
-	equip_delay_self = 1 SECONDS //Girth. Pack a siege bolt pouch if you want to circumvent it.
-	unequip_delay_self = 1 SECONDS
+	equip_delay_self = 2 SECONDS //Girth. Pack a siege bolt pouch if you want to circumvent it.
+	unequip_delay_self = 2 SECONDS
 	inv_storage_delay = 1 SECONDS
 
 /obj/projectile/bullet/reusable/heavy_bolt
 	name = "heavy bolt"
 	damage = 120 //+50% the damage of a regular crossbow bolt.
 	damage_type = BRUTE
-	armor_penetration = 0 //Works in tandem with the 'Blunt' flag to prevent standard penetration.
+	armor_penetration = BOLT_PENETRATION + 25 // +50% the penetrative power.
 	object_damage_multiplier = 10 //Determines the multiplier that's applied to the bolt's damage value, when striking a structure. By default, it can destroy any wooden defense - a door, barricade, wall - in one shot.
 	wall_impact_break_probability = 100 //Determines the chance that a bolt will destroy itself, when striking a structure. By default, it will always destroy itself after successfully impacting a wall.
 	damages_turf_walls = TRUE //Determines whether the bolt can damage turfs or not. By default, yes.
@@ -183,7 +183,7 @@
 	embedchance = 100
 	woundclass = BCLASS_PIERCE
 	flag = "piercing"
-	speed = 1
+	speed = 1.6
 	npc_simple_damage_mult = 3 //..or 360 damage against mindless opponents. Run them through!
 
 /obj/item/ammo_casing/caseless/rogue/heavy_bolt/getonmobprop(tag)
@@ -201,7 +201,7 @@
 	if(ismob(target))
 		M.visible_message(span_warning("[M] staggers back from the tremendous impact!"))
 		M.apply_status_effect(/datum/status_effect/debuff/staggered, 6 SECONDS)
-		M.apply_status_effect(/datum/status_effect/debuff/exposed, 3 SECONDS)
+		M.apply_status_effect(/datum/status_effect/debuff/exposed, 6 SECONDS) //Done in conjunction with the new Feint testmerge - opens up for a single integrity-destroying attack.
 		M.Slowdown(6 SECONDS)
 		M.OffBalance(1 SECONDS)
 		M.Immobilize(1 SECONDS)
@@ -221,9 +221,10 @@
 
 /obj/projectile/bullet/reusable/heavy_bolt/blunt
 	name = "blunt heavy bolt"
-	damage = 90
+	damage = 80 //Same damage as a crossbow.
+	armor_penetration = 0
 	embedchance = 0 //'If you're reading this, duck!'
-	object_damage_multiplier = 12 //Ensures the bolt can still, at a minimum, destroy most wooden barricades and doors in one shot.
+	object_damage_multiplier = 15 //Ensures the bolt can still, at a minimum, destroy most wooden barricades and doors in one shot.
 	woundclass = BCLASS_BLUNT
 	flag = "blunt"
 	icon_state = "heavybolt_proj"
@@ -243,10 +244,10 @@
 	object_damage_multiplier = 20 //Ensures the bolt can still, at a minimum, destroy most wooden barricades and doors in one shot.
 	icon_state = "ancientbolt_proj"
 	poisontype = /datum/reagent/stampoison
-	poisonamount = 2 //You are, in essence, giving them tenantus.
-	slur = 3
-	eyeblur = 3
-	drowsy = 3
+	poisonamount = 1 //You are, in essence, giving them tenantus.
+	slur = 2
+	eyeblur = 2
+	drowsy = 2
 
 /obj/item/ammo_casing/caseless/rogue/heavy_bolt/paalloy
 	name = "ancient heavy bolt"
@@ -260,9 +261,9 @@
 	icon_state = "ancientbolt_proj"
 	object_damage_multiplier = 16
 	poisontype = /datum/reagent/stampoison
-	poisonamount = 2 //You are, in essence, giving them tenantus. Roughly 50% stronger than a poisoned iron arrow.
-	slur = 6
-	eyeblur = 6
+	poisonamount = 1 //You are, in essence, giving them tenantus. Roughly 50% stronger than a poisoned iron arrow.
+	slur = 3
+	eyeblur = 3
 	drowsy = 3
 
 /obj/item/ammo_casing/caseless/rogue/heavy_bolt/bronze
@@ -275,7 +276,7 @@
 	name = "bronze heavy bolt"
 	damage = 100
 	icon_state = "bronzebolt_proj"
-	speed = 0.5
+	speed = 0.8
 
 //
 
@@ -479,10 +480,10 @@
 	name = "silver arrow"
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/arrow/silver
 	damage = 60 //The rarest, but most powerful arrow subtype. Intended to be incredibly scarce, in practice - a 'silver bullet', to the most literal extent.
-	armor_penetration = 60
+	armor_penetration = 777
 	embedchance = 100
 	poisontype = /datum/reagent/water/blessed
-	poisonamount = 10
+	poisonamount = 7
 	npc_simple_damage_mult = 7 //..or 420 damage against a mindless mob. Strike true; reduce if these become craftable or more easily acquirable, through any means.
 
 /obj/item/ammo_casing/caseless/rogue/bolt/silver
@@ -497,13 +498,13 @@
 /obj/projectile/bullet/reusable/bolt/silver
 	name = "silver bolt"
 	damage = 80 //One shot. Make it count. Pray your aim is true - and that whoever's on the other side isn't packing a shield or knows how to sidestep.
-	armor_penetration = 80
+	armor_penetration = 777
 	icon_state = "silvbolt_proj"
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/bolt/silver
 	embedchance = 100
 	npc_simple_damage_mult = 6 //..or 480 damage against a mindless mob. Only if you're desperate.
 	poisontype = /datum/reagent/water/blessed
-	poisonamount = 10
+	poisonamount = 7
 
 /obj/item/ammo_casing/caseless/rogue/heavy_bolt/silver
 	name = "heavy silver bolt"
@@ -517,15 +518,14 @@
 /obj/projectile/bullet/reusable/heavy_bolt/silver
 	name = "heavy silver bolt"
 	damage = 120
-	armor_penetration = 100 //Same damage, but with absolute penetration. 
+	armor_penetration = 777 //Same damage, but with absolute penetration. 
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/heavy_bolt/silver
 	icon_state = "silvheavybolt_proj"
 	hitsound = 'sound/combat/hits/hi_bolt (3).ogg'
-	speed = 0.4 //Same speed as a crossbow bolt. 
+	speed = 0.8 //Same speed as a crossbow bolt. 
 	poisontype = /datum/reagent/water/blessed
-	poisonamount = 20
+	poisonamount = 7
 	npc_simple_damage_mult = 10 //..or 1200 damage against a mindless mob. If you're using this against one, you're either a fool or have no other choice left. Godspeed.
-	flag = "piercing"
 
 // PYRO AMMO
 /obj/item/ammo_casing/caseless/rogue/bolt/pyro
