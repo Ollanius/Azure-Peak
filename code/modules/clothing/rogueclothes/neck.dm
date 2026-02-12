@@ -37,6 +37,10 @@
 	toggle_icon_state = TRUE
 	sewrepair = TRUE
 
+/obj/item/clothing/neck/roguetown/coif/get_mechanics_examine(mob/user)
+    . = ..()
+    . += span_info("Right click to adjust the coif's coverage. Certain coifs with multiple adjustments - like the heavy padded coif - might need to be right-clicked multiple times, in order to cycle back to its default state.")
+
 /obj/item/clothing/neck/roguetown/coif/padded
 	name = "padded coif"
 	desc = "A gambeson's coif, hewn from cloth. It can either be worn beneath a helmet to cushion one's skull from punishment, or worn on its own to keep one's cheeks warm in more frigid climates."
@@ -146,6 +150,10 @@
 	AddComponent(/datum/component/adjustable_clothing, NECK, null, null, 'sound/foley/equip/chain_equip.ogg', null, (UPD_HEAD|UPD_MASK|UPD_NECK))	//Chain coif.
 	AddComponent(/datum/component/armour_filtering/negative, TRAIT_FENCERDEXTERITY)
 	AddComponent(/datum/component/armour_filtering/negative, TRAIT_HONORBOUND)
+
+/obj/item/clothing/neck/roguetown/coif/get_mechanics_examine(mob/user)
+    . = ..()
+    . += span_info("Right click to adjust the coif's coverage. Certain coifs with multiple adjustments - like the full chain coif - might need to be right-clicked multiple times, in order to cycle back to its default state.")
 
 /obj/item/clothing/neck/roguetown/chaincoif/paalloy
 	name = "ancient coif"
@@ -466,6 +474,13 @@
 		var/mob/living/L = loc
 		L.regenerate_clothes()
 	return ..()
+
+/obj/item/clothing/neck/roguetown/psicross/get_mechanics_examine(mob/user)
+    . = ..()
+    . += span_info("Right click to adjust how your character visibly wears the amulet. Most amulets can cycle between being visibly worn on the neck, and being worn around the wrist.")
+    . += span_info("Middle click to kneel in prayer. Praying generates Devotion, which can be used to cast most miracles.")
+    . += span_info("By typing '*pray' into your chatbar, you can write a dedicated prayer to your character's patron. Dedicated prayers have a rare chance of being answered by higher powers.")
+    . += span_info("Adjusting an amulet while wearing it in the ring slot allows you to visibly layer it over most sleeves and clothing.")
 
 /obj/item/clothing/neck/roguetown/psicross/aalloy
 	name = "decrepit psicross"
