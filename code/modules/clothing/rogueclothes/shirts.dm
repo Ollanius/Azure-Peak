@@ -30,6 +30,11 @@
 		flags_inv |= HIDEWINGS
 	H.update_inv_armor()
 
+/obj/item/clothing/suit/roguetown/shirt/get_mechanics_examine(mob/user)
+	. = ..()
+	. += span_info("Shift-right click while targeting either arm to tear a sleeve off, which can be used to bandage wounds in an emergency.")
+	. += span_info("The chance to successfully tear a sleeve off scales with your character's Strength.")
+
 /obj/item/clothing/suit/roguetown/shirt/undershirt
 	name = "shirt"
 	desc = "Modest and humble. It lets you walk around in public with your dignity intact."
