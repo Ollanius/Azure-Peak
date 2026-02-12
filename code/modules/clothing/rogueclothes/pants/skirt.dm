@@ -10,6 +10,11 @@
 	alternate_worn_layer = (SHIRT_LAYER)
 	salvage_amount = 1
 
+/obj/item/clothing/under/roguetown/skirt/get_mechanics_examine(mob/user)
+	. = ..()
+	. += span_info("Shift-right click while targeting either leg to tear a sleeve off, which can be used to bandage wounds in an emergency.")
+	. += span_info("The chance to successfully tear a sleeve off scales with your character's Strength.")
+
 /obj/item/clothing/under/roguetown/skirt/random
 	name = "skirt"
 
