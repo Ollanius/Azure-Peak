@@ -15,7 +15,6 @@
 	experimental_inhand = FALSE
 	drop_sound = 'sound/foley/coinphy (1).ogg'
 	salvage_result = null
-	dropshrink = 0.75
 
 /obj/item/clothing/ring/aalloy
 	name = "decrepit ring"
