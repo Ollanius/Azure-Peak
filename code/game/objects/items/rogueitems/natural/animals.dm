@@ -120,12 +120,6 @@
 		return
 	..()
 
-/obj/item/natural/saddle/get_mechanics_examine(mob/user)
-    . = ..()
-	. += span_info("Drag yourself onto a mount to ride them, and press the 'RESIST' hotkey to get off of them.")
-	. += span_info("Activate the 'RUN' button to begin galloping with your mount, after a small delay. Galloping functions similar to running, but with a greatly reduced stamina cost.")
-	. += span_info("Galloping on a mount rewards you with experience towards the Riding skill.")
-
 /mob/living/simple_animal
 	var/can_saddle = FALSE
 	var/obj/item/ssaddle
