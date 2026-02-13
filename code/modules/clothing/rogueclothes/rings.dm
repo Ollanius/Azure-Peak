@@ -218,8 +218,8 @@
 
 /obj/item/clothing/ring/signet/silver/get_mechanics_examine(mob/user)
     . = ..()
-	. += span_info("Stamping a folded ACCUSATION or CONFESSION will increase the amount of MARQUES it'll reward, once sent through the HERMES.")
-	. += span_info("Packing an INDEXER into an ACCUSATION or CONFESSION before folding-and-stamping it will further amplify this financial bonus.")
+    . += span_info("Stamping a folded ACCUSATION or CONFESSION will increase the amount of MARQUES it'll reward, once sent through the HERMES.")
+    . += span_info("Packing an INDEXER into an ACCUSATION or CONFESSION before folding-and-stamping it will further amplify this financial bonus.")
 
 /obj/item/clothing/ring/signet/attack_right(mob/user)
 	. = ..()
