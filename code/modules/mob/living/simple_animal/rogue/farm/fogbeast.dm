@@ -220,13 +220,6 @@
 	name = "fogbeast colt"
 	adult_growth = /mob/living/simple_animal/hostile/retaliate/rogue/fogbeast/male
 
-/mob/living/simple_animal/hostile/retaliate/rogue/fogbeast/get_mechanics_examine(mob/user)
-    . = ..()
-	. += span_info("Feeding oats or grains to a fogbeast allows them to be tamed, and tamed fogbeasts can be turned into mounts by giving them a saddle.")
-	. += span_info("Drag yourself onto a mount to ride them, and press the 'RESIST' hotkey to get off of them.")
-	. += span_info("Activate the 'RUN' button to begin galloping with your mount, after a small delay. Galloping functions similar to running, but with a greatly reduced stamina cost.")
-	. += span_info("Galloping on a mount rewards you with experience towards the Riding skill.")
-
 // INTENT
 /datum/intent/simple/fogbeast
 	name = "horse"
