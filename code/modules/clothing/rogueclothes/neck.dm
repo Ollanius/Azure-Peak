@@ -951,7 +951,7 @@
 
 /obj/item/clothing/neck/roguetown/skullamulet/gemerald/Initialize()
   ..()
-  I.add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = GLOW_COLOR_BUFF, "alpha" = 200, "size" = 1))
+  add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = GLOW_COLOR_BUFF, "alpha" = 200, "size" = 1))
 
 /obj/item/clothing/neck/roguetown/skullamulet/gemerald/equipped(mob/living/carbon/human/user, slot)
 	. = ..()
@@ -962,7 +962,7 @@
 
 /obj/item/clothing/neck/roguetown/skullamulet/gemerald/dropped(mob/living/carbon/human/user)
 	. = ..()
-	if(goodluckactivated == TRUE)
+	if(luckyskull == TRUE)
 		user.change_stat(STATKEY_LCK, -2)
 		luckyskull = FALSE
 	return
@@ -1019,7 +1019,7 @@
 
 /obj/item/clothing/neck/roguetown/psicross/malum/secret/Initialize()
   ..()
-  I.add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = GLOW_COLOR_ARCANE, "alpha" = 200, "size" = 1))
+  add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = GLOW_COLOR_ARCANE, "alpha" = 200, "size" = 1))
 
 /obj/item/clothing/neck/roguetown/psicross/malum/secret/equipped(mob/living/user, slot)
 	. = ..()
@@ -1066,7 +1066,7 @@
 
 /obj/item/clothing/neck/roguetown/psicross/weeping/Initialize()
   ..()
-  I.add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = GLOW_COLOR_VAMPIRIC, "alpha" = 200, "size" = 1))
+  add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = GLOW_COLOR_VAMPIRIC, "alpha" = 200, "size" = 1))
 
 /obj/item/clothing/neck/roguetown/psicross/weeping/equipped(mob/living/user, slot)
 	. = ..()
