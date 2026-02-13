@@ -200,7 +200,7 @@
 /obj/item/clothing/ring/signet
 	name = "signet ring"
 	icon_state = "signet"
-	desc = "A ring of opulent gold, bearing the Lord's symbol. By dipping it in melted redtallow, it can seal writs of religious importance - a matter better known to the Inquisition, rather than the Church or Crown."
+	desc = "A ring of opulent gold, bearing the Lord's symbol. By dipping it in melted redtallow, it can seal writs of ducal importance."
 	sellprice = 135
 	var/tallowed = FALSE
 
@@ -224,6 +224,22 @@
 		icon_state = "[icon_state]_stamp"
 	else
 		icon_state = initial(icon_state)
+
+/obj/item/clothing/ring/signet/get_mechanics_examine(mob/user)
+    . = ..()
+    . += span_info("Left click the ring on a warmed tallowpot - filled with redtallow, specifically - to prepare a stamp.")
+    . += span_info("Certain letters can be folded and stamped with a prepared ring, which proves minor financial benefits.")
+
+/obj/item/clothing/ring/signet/examine(mob/user)
+	. = ..()
+
+	if(!ishuman(user))
+		return
+
+	var/mob/living/carbon/human/human = user
+	if(human.patron == GLOB.patronlist[/datum/patron/old_god])
+		. += span_notice("Stamping a folded ACCUSATION or CONFESSION will increase the amount of MARQUES it'll reward, once sent through the HERMES.")
+		. += span_notice("Packing an INDEXER into an ACCUSATION or CONFESSION before folding-and-stamping it will further amplify this financial bonus.")
 
 //silver rings
 /obj/item/clothing/ring/emeralds
