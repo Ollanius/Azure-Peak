@@ -84,11 +84,16 @@
 /obj/item/clothing/ring/active/nomag
 	name = "ring of null magic"
 	icon_state = "ruby"
-	desc = "A golden ring that bares a runic enigma, capable of nullifying all incoming magicka. Unfortuantely, like with most magic rings, its powers can only be used sparingly - a half-minute's ward, followed by a half-dae's recharging. </br>‎  </br>By right-clicking the ring, I can temporarily render myself invulnerable to magicka."
+	desc = "A golden ring that bares a runic enigma, capable of nullifying all incoming magicka. Unfortuantely, like with most magic rings, its powers can only be used sparingly."
 	activate_sound = 'sound/magic/antimagic.ogg'
 	cdtime = 10 MINUTES
 	activetime = 30 SECONDS
 	sellprice = 100
+
+/obj/item/clothing/ring/active/nomag/get_mechanics_examine(mob/user)
+    . = ..()
+    . += span_info("Right click to activate the ring's ward, which provides temporary invulnerability against all direct magical attacks for thirty seconds.")
+    . += span_info("Once the ring's ward is exhausted, it'll require ten minutes to recharge enough power for another activation.")
 
 /obj/item/clothing/ring/active/nomag/update_icon()
 	..()
