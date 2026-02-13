@@ -938,7 +938,7 @@
 
 /obj/item/clothing/neck/roguetown/skullamulet/gemerald
 	name = "gemerald skull amulet"
-	desc = "A massive gemerald, meticulously chiseled into a skull and affixed to a chain. </br>It's mocking me, isn't it?"
+	desc = "A massive gemerald, meticulously chiseled into a skull and affixed to a chain. </br>'You're mocking me, aren't you?'"
 	slot_flags = ITEM_SLOT_NECK
 	icon_state = "skullamulet"
 	//dropshrink = 0.75
@@ -947,6 +947,25 @@
 	sellprice = 222
 	smeltresult = /obj/item/roguegem/green
 	anvilrepair = /datum/skill/craft/armorsmithing
+	var/luckyskull = FALSE
+
+/obj/item/clothing/neck/roguetown/skullamulet/gemerald/Initialize()
+  ..()
+  I.add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = GLOW_COLOR_BUFF, "alpha" = 200, "size" = 1))
+
+/obj/item/clothing/neck/roguetown/skullamulet/gemerald/equipped(mob/living/carbon/human/user, slot)
+	. = ..()
+	if(slot == SLOT_NECK)
+		user.change_stat(STATKEY_LCK, 2)
+		luckyskull = TRUE
+	return
+
+/obj/item/clothing/neck/roguetown/skullamulet/gemerald/dropped(mob/living/carbon/human/user)
+	. = ..()
+	if(goodluckactivated == TRUE)
+		user.change_stat(STATKEY_LCK, -2)
+		luckyskull = FALSE
+	return
 
 //
 
@@ -993,19 +1012,23 @@
 	edelay_type = 1
 	equip_delay_self = 33
 	smeltresult = /obj/item/riddleofsteel
+	equip_delay_self = 3 SECONDS
+	unequip_delay_self = 3 SECONDS
+	inv_storage_delay = 1 SECONDS
 	var/active_item
 
 /obj/item/clothing/neck/roguetown/psicross/malum/secret/Initialize()
   ..()
-  filter(type="drop_shadow", x=0, y=0, size=1, offset=2, color=rgb(rand(1,2),rand(127,128),rand(254,255)))
+  I.add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = GLOW_COLOR_ARCANE, "alpha" = 200, "size" = 1))
 
 /obj/item/clothing/neck/roguetown/psicross/malum/secret/equipped(mob/living/user, slot)
 	. = ..()
 	if(slot == SLOT_NECK)
 		active_item = TRUE
-		to_chat(user, span_hypnophrase("..the warmth flows through my veins, yet I do not burn; in fact, my mind feels clearer than ever before.. </br>..glowing runes race past my eyes, gradually deciphering into the forge's greatest secrets..  </br>  </br>'BLACKSTEEL AND GOLD, SAFFIRA AND BLORTZ - BOUND WITH A PSICROSS O' SILVER, TO FOSTER THE DRAGON'S FURY.'  </br>  </br>'FOUR ENCHANTED RINGS, BOUND IN SILVER. A GEMERALD, ONYX, AMYTHORTZ, RONTZ - OMNIPOTENT, TOGETHER.'  </br>  </br>'AN INGOT-CATALYST, A GREATSWORD - EACH - OF GILBRANZE AND SILVER, THE REMAINS OF A DRACONIC RING AND WEEPING PSICROSS, AND WHAT LIES WITHIN THIS AMULET: TO SLAY VHESLYN'S DAEMONS.'"))
+		to_chat(user, span_hypnophrase("..the warmth flows through my veins, yet I do not burn; in fact, my mind feels clearer than ever before.. </br>  </br>..glowing runes race past my eyes, gradually deciphering into the forge's greatest secrets..  </br>  </br>'BLACKSTEEL AND GOLD, SAFFIRA AND BLORTZ - BOUND WITH A PSICROSS O' SILVER, TO FOSTER THE DRAGON'S FURY.'  </br>  </br>'FOUR ENCHANTED RINGS, BOUND IN SILVER. A GEMERALD, ONYX, AMYTHORTZ, RONTZ - OMNIPOTENT, TOGETHER.'  </br>  </br>'A SILVER CATALYST, A BERSERKER'S GREATSWORD ANOINTED WITH GNOLL-BLOOD - MERGED WITH AN ANCIENT GREATSWORD OF GILBRANZE, THE REMAINS OF A DRACONIC RING AND WEEPING PSICROSS, AND WHAT LIES WITHIN THIS AMULET: TO SLAY THE ULTIMATE EVYLLE.'"))
 		user.change_stat(STATKEY_INT, 3)
 		user.change_stat(STATKEY_LCK, 3)
+		user.change_stat(STATKEY_WIL, 3)
 		user.change_stat(STATKEY_STR, -3)
 		ADD_TRAIT(user, TRAIT_SMITHING_EXPERT, TRAIT_GENERIC)
 		ADD_TRAIT(user, TRAIT_FORGEBLESSED, TRAIT_GENERIC)
@@ -1014,9 +1037,10 @@
 /obj/item/clothing/neck/roguetown/psicross/malum/secret/dropped(mob/living/user)
 	..()
 	if(active_item)
-		to_chat(user, span_monkeyhive("..the runes morph into indiscernable smudges, before fading into the world once more. For just a moment, you forget that the heat's blistering within your palm.. </br>..perhaps, this would better fit in the smoldering heat of a forge.."))
+		to_chat(user, span_monkeyhive("..the runes morph into indiscernable smudges, before fading into the world once more. For just a moment, you forget that the heat's blistering within your palm..  </br>  </br>..perhaps, this would better fit in the smoldering heat of a forge.."))
 		user.change_stat(STATKEY_INT, -3)
 		user.change_stat(STATKEY_LCK, -3)
+		user.change_stat(STATKEY_WIL, -3)
 		user.change_stat(STATKEY_STR, 3)
 		REMOVE_TRAIT(user, TRAIT_SMITHING_EXPERT, TRAIT_GENERIC)
 		REMOVE_TRAIT(user, TRAIT_FORGEBLESSED, TRAIT_GENERIC)
@@ -1035,20 +1059,24 @@
 	equip_delay_self = 66
 	smeltresult = /obj/item/ingot/weeping
 	sellprice = 666
+	equip_delay_self = 3 SECONDS
+	unequip_delay_self = 7 SECONDS 
+	inv_storage_delay = 3 SECONDS
 	var/active_item
 
 /obj/item/clothing/neck/roguetown/psicross/weeping/Initialize()
   ..()
-  filter(type="drop_shadow", x=0, y=0, size=1, offset=2, color=rgb(rand(254,255),rand(1,2),rand(1,2)))
+  I.add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = GLOW_COLOR_VAMPIRIC, "alpha" = 200, "size" = 1))
 
 /obj/item/clothing/neck/roguetown/psicross/weeping/equipped(mob/living/user, slot)
 	. = ..()
 	if(slot == SLOT_NECK)
 		active_item = TRUE
-		to_chat(user, span_red("As you don the psicross, the chains tighten like a vice around your neck! You're overcome with a sense of terrible anguish - all of humenity's suffering, thrust upon your very spirit! Your chest grows cold, yet your blood boils hotter than magma! Psydonia's villains may be brutal and merciless, but you will be WORSE! </br>You've gone BERSERK!"))
+		to_chat(user, span_red("As you don the psicross, the chains tighten like a vice around your neck!  </br>  </br>You're overcome with a sense of terrible anguish - all of humenity's suffering, thrust upon your very spirit!  </br>  </br>Your chest grows cold, yet your blood boils hotter than magma! Psydonia's villains may be brutal and merciless, but you will be WORSE!  </br>  </br>You've gone BERSERK!"))
 		user.change_stat(STATKEY_STR, 3)
-		user.change_stat(STATKEY_CON, -3)
+		user.change_stat(STATKEY_CON, 3)
 		user.change_stat(STATKEY_WIL, 3)
+		user.change_stat(STATKEY_INT, -3)
 		ADD_TRAIT(user, TRAIT_PSYCHOSIS, TRAIT_GENERIC) //Imitates the fact that you are, in fact, going bonkers.
 		ADD_TRAIT(user, TRAIT_NOCSHADES, TRAIT_GENERIC) //Roughly ~30% reduced vision with a sharp red overlay. Provides night vision in the visible tiles.
 		ADD_TRAIT(user, TRAIT_DNR, TRAIT_GENERIC) //If you die while the necklace's on, that's it. Technically saveable if someone knows to remove the necklace, before attempting resurrection.
@@ -1059,10 +1087,11 @@
 /obj/item/clothing/neck/roguetown/psicross/weeping/dropped(mob/living/user)
 	..()
 	if(active_item)
-		to_chat(user, span_monkeyhive("..and at once, the mania subsides. A familiar warmth creeps back into your chest. Though your mind is clear, the thought lingers; was it truly just a malaise, or something more? </br>..perhaps, this would better fit in the smoldering heat of a forge.."))
+		to_chat(user, span_monkeyhive("..and at once, the mania subsides. A familiar warmth creeps back into your chest. Though your mind is clear, the thought lingers; was it truly just a malaise, or something more? </br>  </br>..perhaps, this would better fit in the smoldering heat of a forge.."))
 		user.change_stat(STATKEY_STR, -3)
-		user.change_stat(STATKEY_CON, 3)
+		user.change_stat(STATKEY_CON, -3)
 		user.change_stat(STATKEY_WIL, -3)
+		user.change_stat(STATKEY_INT, 3)
 		REMOVE_TRAIT(user, TRAIT_PSYCHOSIS, TRAIT_GENERIC)
 		REMOVE_TRAIT(user, TRAIT_NOCSHADES, TRAIT_GENERIC)
 		REMOVE_TRAIT(user, TRAIT_DNR, TRAIT_GENERIC)
