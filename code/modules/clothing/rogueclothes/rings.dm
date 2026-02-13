@@ -125,7 +125,7 @@
 /obj/item/clothing/ring/active/nomag
 	name = "ring of null magic"
 	icon_state = "ruby"
-	desc = "A golden ring that bares a runic enigma, capable of nullifying all incoming magicka. Unfortuantely, like with most magic rings, its powers can only be used sparingly - a half-minute's ward, followed by a half-dae's recharging. </br>‎  </br>By right-clicking the ring, I can temporarily render myself invulnerable to magicka."
+	desc = "A golden ring that bares a runic enigma, capable of nullifying all incoming magicka. Unfortuantely, like with most magic rings, its powers can only be used sparingly."
 	activate_sound = 'sound/magic/antimagic.ogg'
 	cdtime = 10 MINUTES
 	activetime = 30 SECONDS
@@ -147,6 +147,12 @@
 	var/datum/component/magcom = GetComponent(/datum/component/anti_magic)
 	if(magcom)
 		magcom.ClearFromParent()
+
+/obj/item/clothing/ring/active/nomag/get_mechanics_examine(mob/user)
+    . = ..()
+    . += span_info("Right click to activate the ring's ward, which provides temporary invulnerability against all direct magical attacks for thirty seconds.")
+    . += span_info("Wearers with unholy ailments are also rendered invulnerable to being sundered by silver weaponry, for the ward's duration.")
+    . += span_info("Once the ring's ward is exhausted, it'll require ten minutes to recharge enough power for another activation.")
 
 //gold rings
 /obj/item/clothing/ring/emerald
