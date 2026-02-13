@@ -318,3 +318,8 @@
 // Custom headbutt intent for saiga with proper attack speed
 /datum/intent/simple/headbutt/saiga
 	clickcd = SAIGA_ATTACK_SPEED
+
+/mob/living/simple_animal/hostile/retaliate/rogue/saiga/get_mechanics_examine(mob/user)
+    . = ..()
+    . += span_info("Activate the 'RUN' button to begin galloping with your mount, after a small delay. Galloping functions similar to running, but with a greatly reduced stamina cost.")
+    . += span_info("Galloping on a mount rewards you with experience towards the Riding skill.")
