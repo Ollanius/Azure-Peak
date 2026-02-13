@@ -470,19 +470,10 @@ Inquisitorial armory down here
 /obj/item/inqarticles/indexer/get_mechanics_examine(mob/user)
     . = ..()
     . += span_info("Activate in your hand to toggle the retractable blade.")
-
-/obj/item/inqarticles/indexer/examine(mob/user)
-	. = ..()
-
-	if(!ishuman(user))
-		return
-
-	var/mob/living/carbon/human/human = user
-	if(human.patron == GLOB.patronlist[/datum/patron/old_god])
-		. += span_notice("Left click someone else on the 'USE' intent, while its blade is extended, to begin gathering blood.")
-		. += span_notice("It takes several cycles to fill the INDEXER with blood - at which point, it will automatically retract the blade and seal itself. This may prove dangerous if used on someone who's already suffering from blood loss.")
-		. += span_notice("Once filled, left-clicking the INDEXER on a signed ACCUSATION or CONFESSION will combine them into a foldable package. This package can be then folded, stamped, and mailed back to Otava through the HERMES.")
-		. += span_notice("Mailing an INDEXER reveals the worshipped pantheon of whoever's blood was gathered. More MARQUES are rewarded if the INDEXER was filled with the blood of an ASCENDANT, NITEBEASTE, or CURSEBORNED.")
+	. += span_info("Left click someone else on the 'USE' intent, while its blade is extended, to begin gathering blood.")
+	. += span_info("It takes several cycles to fill the INDEXER with blood - at which point, it will automatically retract the blade and seal itself. This may prove dangerous if used on someone who's already suffering from blood loss.")
+	. += span_info("Once filled, left-clicking the INDEXER on a signed ACCUSATION or CONFESSION will combine them into a foldable package. This package can be then folded, stamped, and mailed back to Otava through the HERMES.")
+	. += span_info("Mailing an INDEXER reveals the worshipped pantheon of whoever's blood was gathered. More MARQUES are rewarded if the INDEXER was filled with the blood of an ASCENDANT, NITEBEASTE, or CURSEBORNED.")
 
 /obj/item/inqarticles/indexer/equipped(mob/living/carbon/human/user, slot)
 	. = ..()
@@ -1204,17 +1195,11 @@ Inquisitorial armory down here
 	else
 		desc = "A hauntingly beautiful mirror, clasped within a blacksteeled clamshell. A lone spike awaits at the bottom; but, for what?"
 
-/obj/item/inqarticles/bmirror/examine(mob/user)
-	. = ..()
-
-	if(!ishuman(user))
-		return
-
-	var/mob/living/carbon/human/human = user
-	if(human.patron == GLOB.patronlist[/datum/patron/old_god])
-		. += span_notice("Right click to open or close the BLACK MIRROR.")
-		. += span_notice("Once opened, left-clicking yourself with the BLACK MIRROR will anoint its spike in your blood. This can be dangerous, if used while you're already suffering from blood loss.")
-		. += span_notice("Activate the BLACK MIRROR in your hand, once bloodied, to scry whoever's name you enter into the following prompt.")
+/obj/item/inqarticles/bmirror/get_mechanics_examine(mob/user)
+    . = ..()
+		. += span_info("Right click to open or close the BLACK MIRROR.")
+		. += span_info("Once opened, left-clicking yourself with the BLACK MIRROR will anoint its spike in your blood. This can be dangerous, if used while you're already suffering from blood loss.")
+		. += span_info("Activate the BLACK MIRROR in your hand, once bloodied, to scry whoever's name you enter into the following prompt.")
 
 /obj/item/inqarticles/bmirror/proc/donefixating()
 	bloody = TRUE
