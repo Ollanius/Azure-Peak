@@ -202,11 +202,23 @@
 //OTAVAN MARQUE - WORTHLESS TO ANYONE BUT INQ.
 /obj/item/roguecoin/inqcoin
 	name = "otavan marque"
-	desc = "A blessed silver coin finished with a unique wash of black dye, bearing the post-kingdom Psycross. Kingsfield has denied the existence of such a coin when queried, as such coinage is rumoured to be used internally by the Otavan Inquisition."
+	desc = "A blessed silver coin finished with a unique wash of black dye, bearing the post-kingdom Psycross. Kingsfield has denied the existence of such a coin when queried, as such coinage is rumoured to be used internally by Otava's inquisitorial sects."
 	icon_state = "i1"
 	sellprice = 0
 	base_type = CTYPE_ICOIN
 	plural_name = "otavan marques"	
+
+/obj/item/roguecoin/inqcoin/examine(mob/user)
+	. = ..()
+
+	if(!ishuman(user))
+		return
+
+	var/mob/living/carbon/human/human = user
+	if(human.patron == GLOB.patronlist[/datum/patron/old_god])
+		. += span_notice("By loading these coins into a HERMES, I can access the MARQUETTE - a discrete variant of the GOLDFACE, capable of supplying the Inquisition with whatever's needed.")
+		. += span_notice("The MARQUETTE exclusively accepts these coins as payment. Purchased supplies are dropped off inside the Inquisition's abode.")
+		. += span_notice("More coins can be obtained by filling INDEXERS, pairing them with signed ACCUSATIONS or CONFESSIONS, and sending them through the HERMES.")
 
 //GOLD
 /obj/item/roguecoin/gold
