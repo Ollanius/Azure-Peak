@@ -619,7 +619,7 @@
 
 /obj/item/clothing/neck/roguetown/psicross/ravox/bronze
 	name = "bronze amulet of Ravox"
-	desc = "'YOU FIGHT WELL, RAVOX OF UR. YOUR CLEMENCY HATH BEEN EARNED. SURRENDER NOW, AND GRAGGAR SHALL-'</br>‎  </br>'No.' </br>‎  </br>'-WHAT? YOU'RE GOING TO THROW AWAY YOUR LYFE FOR A GOD THAT HAS NO LOVE FOR YOU?' </br>‎  </br>'One of us will.'"
+	desc = "'YOU FIGHT WELL, RAVOX OF UR-SYON. YOUR CLEMENCY HATH BEEN EARNED. SURRENDER NOW, AND GRAGGAR SHALL-'</br>‎  </br>'No.' </br>‎  </br>'-WHAT? YOU'RE GOING TO THROW AWAY YOUR LYFE FOR A GOD THAT HAS NO LOVE FOR YOU?' </br>‎  </br>'One of us will.'"
 	icon_state = "ravox_b"
 
 /obj/item/clothing/neck/roguetown/psicross/malum
@@ -702,7 +702,7 @@
 
 /obj/item/clothing/neck/roguetown/psicross/silver/get_mechanics_examine(mob/user)
     . = ..()
-    . += span_info("AHHH. AHHH. SCARY PENIS!!!!")
+    . += span_info("Silver amulets protect against most unholy curses, hexes, and other mind-altering spells.")
 
 /obj/item/clothing/neck/roguetown/psicross/g
 	name = "golden psycross"
