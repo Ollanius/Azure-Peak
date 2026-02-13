@@ -103,7 +103,8 @@
 /obj/item/psydonmusicbox/Destroy()
 	if(soundloop)
 		QDEL_NULL(soundloop)
-	src.visible_message(span_cult("A great deluge of souls escapes the shattered box!"))
+	src.visible_message(span_cult("A great deluge of souls escapes the shattered box! Their wails of vengeance and peace coalesce into an ethereal swan song, as the spirits ascend into the sky.."))
+	src.visible_message(span_hypnophrase("..before, at last, their haunting symphony finally comes to a close."))
 	return ..()
 
 /obj/item/psydonmusicbox/update_icon()
