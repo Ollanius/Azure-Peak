@@ -205,12 +205,22 @@
 	sellprice = 135
 	var/tallowed = FALSE
 
+/obj/item/clothing/ring/signet/get_mechanics_examine(mob/user)
+    . = ..()
+    . += span_info("Left click the ring on a warmed tallowpot - filled with redtallow, specifically - to prepare a stamp.")
+    . += span_info("Certain letters can be folded and stamped with a prepared ring, which proves minor financial benefits.")
+
 /obj/item/clothing/ring/signet/silver
 	name = "silver signet ring"
 	icon_state = "signet_silver"
 	desc = "A ring of blessed silver, bearing the Archbishop's symbol. By dipping it in melted redtallow, it can seal writs of religious importance."
 	sellprice = 90
 	is_silver = FALSE //Temporary measure to prevent people from easily metachecking vampyres. Replace with a more sophisticated alternative if-or-when available.
+
+/obj/item/clothing/ring/signet/silver/get_mechanics_examine(mob/user)
+    . = ..()
+	. += span_notice("Stamping a folded ACCUSATION or CONFESSION will increase the amount of MARQUES it'll reward, once sent through the HERMES.")
+	. += span_notice("Packing an INDEXER into an ACCUSATION or CONFESSION before folding-and-stamping it will further amplify this financial bonus.")
 
 /obj/item/clothing/ring/signet/attack_right(mob/user)
 	. = ..()
@@ -225,22 +235,6 @@
 		icon_state = "[icon_state]_stamp"
 	else
 		icon_state = initial(icon_state)
-
-/obj/item/clothing/ring/signet/get_mechanics_examine(mob/user)
-    . = ..()
-    . += span_info("Left click the ring on a warmed tallowpot - filled with redtallow, specifically - to prepare a stamp.")
-    . += span_info("Certain letters can be folded and stamped with a prepared ring, which proves minor financial benefits.")
-
-/obj/item/clothing/ring/signet/examine(mob/user)
-	. = ..()
-
-	if(!ishuman(user))
-		return
-
-	var/mob/living/carbon/human/human = user
-	if(human.patron == GLOB.patronlist[/datum/patron/old_god])
-		. += span_notice("Stamping a folded ACCUSATION or CONFESSION will increase the amount of MARQUES it'll reward, once sent through the HERMES.")
-		. += span_notice("Packing an INDEXER into an ACCUSATION or CONFESSION before folding-and-stamping it will further amplify this financial bonus.")
 
 //silver rings
 /obj/item/clothing/ring/emeralds
