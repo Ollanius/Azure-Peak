@@ -486,15 +486,6 @@
     . += span_info("By typing '*pray' into your chatbar, you can write a dedicated prayer to your character's patron. Dedicated prayers have a rare chance of being answered by higher powers.")
     . += span_info("Adjusting an amulet while wearing it in the ring slot allows you to visibly layer it over most sleeves and clothing.")
 
-/obj/item/clothing/neck/roguetown/psicross/getonmobprop(tag)
-	. = ..()
-	if(tag)
-		switch(tag)
-			if("gen")
-				return list("shrink" = 0.5,"sx" = -4,"sy" = -6,"nx" = 9,"ny" = -6,"wx" = -6,"wy" = -4,"ex" = 4,"ey" = -6,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0)
-			if("onbelt")
-				return list("shrink" = 0.5,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
-
 /obj/item/clothing/neck/roguetown/psicross/reform
 	name = "reformist psycross"
 	desc = "'It occured to me that our God had left us, but not our ability to endure hardship. We shall make something out of this world, I said, before we pass onto the next.'"
