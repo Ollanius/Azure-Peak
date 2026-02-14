@@ -102,6 +102,10 @@
 	sellprice = 100
 	smeltresult = /obj/item/ingot/lithmyc
 
+/obj/item/rogueore/lithmyc/Initialize()
+  ..()
+  add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = GLOW_COLOR_BUFF, "alpha" = 100, "size" = 1))
+
 /obj/item/ingot
 	name = "ingot"
 	icon = 'icons/roguetown/items/ore.dmi'
