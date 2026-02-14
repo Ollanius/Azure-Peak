@@ -1339,7 +1339,7 @@
 	desc = "A hood with the lord's heraldic colors."
 	color = CLOTHING_AZURE
 	detail_tag = "_spl"
-	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_NECK|ITEM_SLOT_CLOAK
+	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_NECK|ITEM_SLOT_MASK|ITEM_SLOT_CLOAK
 	detail_color = CLOTHING_WHITE
 	icon_state = "guard_hood"
 	item_state = "guard_hood"
