@@ -330,12 +330,12 @@ Inquisitorial armory down here
 
 /obj/item/flashlight/flare/torch/lantern/psycenser/get_mechanics_examine(mob/user)
     . = ..()
-	if(fuel > 0)
+		if(fuel > 0)
 	    . += span_info("Activate in your hand to open it.")
 	    . += span_info("When opened, the 'BLESS' intent can be used to anoint Psydonic silver weaponry. Blessing a Psydonic silver weapon amplifies the power of its debuffs against sunderable opponents.")
 	    . += span_info("Blessing someone else, who happens to be a worshipper of Psydon, will temporarily buff them with increased Willpower and Constitution.")
 	    . += span_warning("If the 'SMASH' intent is used while it's opened, the residing shard will violently explode with unimaginable force.")
-	if(fuel <= 0)
+		if(fuel <= 0)
 		. += span_info("It is gone.")
 
 /obj/item/flashlight/flare/torch/lantern/psycenser/getonmobprop(tag)
