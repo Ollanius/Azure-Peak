@@ -43,6 +43,9 @@
 	icon_state = "oreiron[rand(1,3)]"
 	..()
 
+/obj/item/rogueore/iron/get_mechanics_examine(mob/user)
+	. = ..()
+	. += span_info("Iron can be alloyed into steel, by smelting a combination of three iron nuggets with a chunk of coal inside of a great furnace.")
 
 /obj/item/rogueore/copper
 	name = "raw copper"
@@ -55,6 +58,10 @@
 	icon_state = "orecop[rand(1,3)]"
 	..()
 
+/obj/item/rogueore/copper/get_mechanics_examine(mob/user)
+	. = ..()
+	. += span_info("Copper and tin can be alloyed into bronze, by smelting a combination of three copper nuggets with a single tin nugget inside of a bronze smelter.")
+
 /obj/item/rogueore/tin
 	name = "raw tin"
 	desc = "A mass of soft, almost malleable white ore."
@@ -65,6 +72,10 @@
 /obj/item/rogueore/tin/Initialize()
 	icon_state = "oretin[rand(1,3)]"
 	..()
+
+/obj/item/rogueore/tin/get_mechanics_examine(mob/user)
+	. = ..()
+	. += span_info("Copper and tin can be alloyed into bronze, by smelting a combination of three copper nuggets with a single tin nugget inside of a bronze smelter.")
 
 /obj/item/rogueore/coal
 	name = "coal"
@@ -101,6 +112,10 @@
 	icon_state = "orelithmyc"
 	sellprice = 100
 	smeltresult = /obj/item/ingot/lithmyc
+
+/obj/item/rogueore/lithmyc/Initialize()
+  ..()
+  add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = GLOW_COLOR_BUFF, "alpha" = 100, "size" = 1))
 
 /obj/item/ingot
 	name = "ingot"
@@ -200,6 +215,10 @@
 		slapcraft_recipes = slapcraft_recipe_list,\
 		)
 
+/obj/item/ingot/iron/get_mechanics_examine(mob/user)
+	. = ..()
+	. += span_info("Iron can be alloyed into steel, by smelting a combination of three iron ingots with a chunk of coal inside of a great furnace.")
+
 /obj/item/ingot/copper
 	name = "copper bar"
 	desc = "This bar causes a gentle tingling sensation when touched."
@@ -207,12 +226,20 @@
 	smeltresult = /obj/item/ingot/copper
 	sellprice = 10
 
+/obj/item/ingot/copper/get_mechanics_examine(mob/user)
+	. = ..()
+	. += span_info("Copper and tin can be alloyed into bronze, by smelting a combination of three copper ingots with a single tin ingot inside of a bronze smelter.")
+
 /obj/item/ingot/tin
 	name = "tin bar"
 	desc = "An ingot of strangely soft and malleable essence."
 	icon_state = "ingottin"
 	smeltresult = /obj/item/ingot/tin
 	sellprice = 15
+
+/obj/item/ingot/tin/get_mechanics_examine(mob/user)
+	. = ..()
+	. += span_info("Copper and tin can be alloyed into bronze, by smelting a combination of three copper ingots with a single tin ingot inside of a bronze smelter.")
 
 /obj/item/ingot/bronze
 	name = "bronze bar"
