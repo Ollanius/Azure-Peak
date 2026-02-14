@@ -290,7 +290,7 @@
     . = ..()
     . += span_info("SLIPS are used by the Holy Psydonic Inquisition to ascertain how many members of a SECT are present, and - in turn - how much funding the SECT should receive.")
     . += span_info("Left click yourself, while bleeding fron anywhere on the body, to sign the SLIP.")
-    . += span_info("Once signed, left-clicking the SLIP will fold it into al etter. This letter can then be maield to Otava through the HERMES.")
+    . += span_info("Once signed, left-clicking the SLIP will fold it into a letter. This letter can then be mailed to Otava through the HERMES.")
     . += span_info("Stamping a folded letter with redtallow will increase the amount of MARQUES that're rewarded upon mailage.")
     . += span_info("Successfully mailing a SLIP will reward the sender with MARQUES. The amount of rewarded MARQUES increases, depending on whether you're an Orthodoxist, Absolver, or Inquisitor.")
 
