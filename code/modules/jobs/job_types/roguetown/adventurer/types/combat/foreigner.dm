@@ -507,7 +507,7 @@
 				H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_JOURNEYMAN, TRUE)
 				beltr = /obj/item/rogueweapon/sword/short/gladius 
 				r_hand = /obj/item/rogueweapon/katar/bronze/gladiator
-				backr = /obj/item/rogueweapon/scabbard/sheath/strap
+				backr = /obj/item/rogueweapon/scabbard/sword/strap
 				gloves = /obj/item/clothing/gloves/roguetown/bandages
 			if("Nothing - Skilled Pugilist, +I STR / -I WIL")
 				H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_JOURNEYMAN, TRUE)
@@ -567,6 +567,7 @@
 				wrists = /obj/item/clothing/wrists/roguetown/bracers/cloth/gladiator
 				armor = /obj/item/clothing/suit/roguetown/armor/regenerating/skin/disciple/gladiator
 				pants = /obj/item/clothing/under/roguetown/loincloth/brown
+				shirt = /obj/item/clothing/suit/roguetown/shirt/tribalrag/gladiator
 				belt = /obj/item/storage/belt/rogue/leather/battleskirt/breechcloth/red
 			if("Legionnaire - Well-Armored & Maille Training")
 				ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
@@ -574,6 +575,7 @@
 				neck = /obj/item/clothing/neck/roguetown/gorget/bronze
 				wrists = /obj/item/clothing/wrists/roguetown/bracers/bronze
 				armor = /obj/item/clothing/suit/roguetown/armor/plate/bronze
+				cloak = /obj/item/clothing/cloak/cape/red
 				pants = /obj/item/clothing/under/roguetown/skirt/red
 				belt = /obj/item/storage/belt/rogue/leather
 			if("Bulwark - Fully-Armored & Plate Training")
@@ -583,15 +585,16 @@
 				wrists = /obj/item/clothing/wrists/roguetown/bracers/bronze
 				armor = /obj/item/clothing/suit/roguetown/armor/plate/full/bronze/alt
 				pants = /obj/item/clothing/under/roguetown/loincloth/brown
+				cloak = /obj/item/clothing/cloak/cape/red 
 				belt = /obj/item/storage/belt/rogue/leather/battleskirt/breechcloth/red
 	shoes = /obj/item/clothing/shoes/roguetown/boots/armor/bronze
-	cloak = /obj/item/clothing/cloak/cape/red 
 	backl = /obj/item/storage/backpack/rogue/satchel
 	backpack_contents = list(
 		/obj/item/flashlight/flare/torch = 1,
 		/obj/item/recipe_book/survival = 1,
 		/obj/item/storage/belt/rogue/pouch/coins/poor = 1,
 		/obj/item/rogueweapon/huntingknife/bronze = 1,
+		/obj/item/rogueweapon/scabbard/sheath = 1
 		)
 	H.set_blindness(0)
 	switch(H.patron?.type)
@@ -623,6 +626,11 @@
 	smeltresult = /obj/item/ingot/bronze
 	max_integrity = 150
 	sheathe_icon = "makhaira"
+
+/obj/item/clothing/suit/roguetown/shirt/tribalrag/gladiator
+	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
+	name = "gladiator's rags"
+	desc = "What we do in life, echoes in eternity."
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/bow/classic
 	name = "bow"
@@ -698,7 +706,7 @@
 	item_state = "bronzemurmillo"
 	smeltresult = /obj/item/ingot/bronze
 
-/obj/item/clothing/head/roguetown/helmet/bronzealt/attackby(obj/item/W, mob/living/user, params)
+/obj/item/clothing/head/roguetown/helmet/bronzegladiator/attackby(obj/item/W, mob/living/user, params)
 	..()
 	if(istype(W, /obj/item/natural/cloth) && !detail_tag)
 		var/choice = input(user, "Choose a color.", "Orle") as anything in COLOR_MAP + pridelist
@@ -713,7 +721,7 @@
 			var/mob/living/carbon/H = user
 			H.update_inv_head()
 
-/obj/item/clothing/head/roguetown/helmet/bronzealt/update_icon()
+/obj/item/clothing/head/roguetown/helmet/bronzegladiator/update_icon()
 	cut_overlays()
 	if(get_detail_tag())
 		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
@@ -797,6 +805,19 @@
 	item_state = "bronzegreatkhopesh"
 	smeltresult = /obj/item/ingot/bronze
 
+/obj/item/rogueweapon/sword/long/greatkhopesh/getonmobprop(tag)
+	. = ..()
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.5,"sx" = -14,"sy" = -8,"nx" = 15,"ny" = -7,"wx" = -10,"wy" = -5,"ex" = 7,"ey" = -6,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -13,"sturn" = 110,"wturn" = -60,"eturn" = -30,"nflip" = 1,"sflip" = 1,"wflip" = 8,"eflip" = 1)
+			if("onback")
+				return list("shrink" = 0.5,"sx" = -1,"sy" = 2,"nx" = 0,"ny" = 2,"wx" = 2,"wy" = 1,"ex" = 0,"ey" = 1,"nturn" = 0,"sturn" = 0,"wturn" = 70,"eturn" = 15,"nflip" = 1,"sflip" = 1,"wflip" = 1,"eflip" = 1,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0)
+			if("wielded")
+				return list("shrink" = 0.6,"sx" = 5,"sy" = -2,"nx" = -6,"ny" = -2,"wx" = -6,"wy" = -2,"ex" = 7,"ey" = -2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -28,"sturn" = 29,"wturn" = -35,"eturn" = 32,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
+			if("onbelt")
+				return list("shrink" = 0.4,"sx" = -4,"sy" = -6,"nx" = 5,"ny" = -6,"wx" = 0,"wy" = -6,"ex" = -1,"ey" = -6,"nturn" = 100,"sturn" = 156,"wturn" = 90,"eturn" = 180,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
+
 /datum/intent/sword/chop/sabre
 	damfactor = 1.15
 	penfactor = 20
@@ -831,7 +852,7 @@
 /obj/item/clothing/suit/roguetown/armor/plate/full/bronze/equipped(mob/living/carbon/human/user, slot)
 	. = ..()
 	if(slot == SLOT_ARMOR)
-		to_chat(user, span_hypnophrase("The panoply clatters into place, and I feel my shoulders slouch beneath its weight - yet even now, I feel sturdier than ever before.."))
+		to_chat(user, span_suicide("The panoply clatters into place, and I feel my shoulders slouch beneath its weight - yet even now, I feel sturdier than ever before.."))
 		user.change_stat(STATKEY_CON, 1)
 		user.change_stat(STATKEY_WIL, 1)
 		user.change_stat(STATKEY_SPD, -1)
@@ -841,7 +862,7 @@
 /obj/item/clothing/suit/roguetown/armor/plate/full/bronze/dropped(mob/living/carbon/human/user)
 	. = ..()
 	if(bronzeplatecumbersome == TRUE)
-		to_chat(user, span_suicide("..and with a sigh of relief, the panoply's weight no longer burdens my shoulders."))
+		to_chat(user, span_hypnophrase("..and with a sigh of relief, the panoply's weight no longer burdens my shoulders."))
 		user.change_stat(STATKEY_CON, -1)
 		user.change_stat(STATKEY_WIL, -1)
 		user.change_stat(STATKEY_SPD, 1)
