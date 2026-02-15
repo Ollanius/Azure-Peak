@@ -65,19 +65,37 @@
 	name = "Amulet of Psydonia, Bronze"
 	req_bar = /obj/item/ingot/bronze
 	created_item = /obj/item/clothing/neck/roguetown/psicross/bronze
-	craftdiff = SKILL_LEVEL_JOURNEYMAN
+	craftdiff = 2
 
 /datum/anvil_recipe/valuables/zcrossbronze
 	name = "Amulet of Inhumenity, Bronze"
 	req_bar = /obj/item/ingot/bronze
 	created_item = /obj/item/clothing/neck/roguetown/psicross/inhumen/bronze
-	craftdiff = SKILL_LEVEL_JOURNEYMAN
+	craftdiff = 2
+
+/datum/anvil_recipe/valuables/astcrossbronze
+	name = "Amulet of Order, Bronze"
+	req_bar = /obj/item/ingot/bronze
+	created_item = /obj/item/clothing/neck/roguetown/psicross/astrata/bronze
+	craftdiff = 2
 
 /datum/anvil_recipe/valuables/ravoxbronze
-	name = "Amulet of Ravox, Bronze"
+	name = "Amulet of Justice, Bronze"
 	req_bar = /obj/item/ingot/bronze
 	created_item = /obj/item/clothing/neck/roguetown/psicross/ravox/bronze
-	craftdiff = SKILL_LEVEL_JOURNEYMAN
+	craftdiff = 2
+
+/datum/anvil_recipe/valuables/graggarbronze
+	name = "Amulet of Violence, Bronze"
+	req_bar = /obj/item/ingot/bronze
+	created_item = /obj/item/clothing/neck/roguetown/psicross/inhumen/graggar/bronze
+	craftdiff = 2
+
+/datum/anvil_recipe/valuables/malumcrossbronze
+	name = "Amulet of Creation, Bronze"
+	req_bar = /obj/item/ingot/bronze
+	created_item = /obj/item/clothing/neck/roguetown/psicross/malum/bronze
+	craftdiff = 2
 
 /datum/anvil_recipe/valuables/statuebronze
 	name = "Statue, Bronze"
@@ -260,7 +278,7 @@
 	name = "Daemonslayer (Secret!)"
 	req_bar = /obj/item/ingot/silver
 	hides_from_books = TRUE //Note to self - adding more than five additional items to a crafting recipe might result in unintended consequences.
-	additional_items = list(/obj/item/rogueweapon/greatsword/silver, /obj/item/rogueweapon/greatsword/paalloy, /obj/item/ingot/draconic, /obj/item/ingot/weeping, /obj/item/riddleofsteel)
+	additional_items = list(/obj/item/rogueweapon/sword/long/exe/berserk, /obj/item/rogueweapon/greatsword/paalloy, /obj/item/ingot/draconic, /obj/item/ingot/weeping, /obj/item/riddleofsteel)
 	created_item = /obj/item/rogueweapon/sword/long/exe/berserk/dragonslayer
 	appro_skill = /datum/skill/craft/weaponsmithing
 	i_type = "Weapons"
