@@ -180,6 +180,10 @@
 		if(H.patron.type == /datum/patron/inhumen/graggar)
 			. += span_danger("You know this gem well. They are born out of great violence, but only if it involves the mightiest of warriors.")
 
+/obj/item/roguegem/blood_diamond/Initialize()
+  ..()
+  add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = GLOW_COLOR_VAMPIRIC, "alpha" = 188, "size" = 1))
+
 /obj/item/roguegem/amethyst
 	name = "amythortz"
 	icon_state = "amethyst"
