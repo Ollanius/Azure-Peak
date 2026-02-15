@@ -401,7 +401,7 @@
 	are a skilled combatant from beyond Azuria, who - for one reason or another - is intimately familiar with fighting in ancient equipment."
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/adventurer/bronzeclad
-	cmode_music = 'sound/music/cmode/church/combat_eora.ogg'
+	cmode_music = 'sound/music/combat_thespian.ogg'
 	traits_applied = list(TRAIT_STEELHEARTED, TRAIT_BLOOD_RESISTANCE)
 	subclass_stats = list(
 		STATKEY_STR = 1, //Abbreviated to +1/+3/+2/-2 for short. Seven statpoints weighed against a two- (or rather, four-) point penalty in Speed. This is intentional, as the Thespian has a lot of room to stretch their proverbial wings. 
@@ -418,7 +418,7 @@
 		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
 	)
 
-	extra_context = "This subclass can pick from a wide array of bronze weapons, armor, and disciplines to specialize in. Bronze armor - while easily pierced - is exceptionally durable and resistant against critical hits."
+	extra_context = "This subclass can pick from a wide array of bronze weapons, armor, and origins to specialize in. Bronze armor - while easily pierced - is exceptionally durable and resistant against critical hits. A total of four Disciplines are available, each providing a different trait and armoring-tier."
 
 /datum/outfit/job/roguetown/adventurer/bronzeclad/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
