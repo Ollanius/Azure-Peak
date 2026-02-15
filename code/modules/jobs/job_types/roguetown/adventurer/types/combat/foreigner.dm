@@ -587,7 +587,7 @@
 	shoes = /obj/item/clothing/shoes/roguetown/boots/armor/bronze
 	cloak = /obj/item/clothing/cloak/cape/red
 	if(should_wear_femme_clothes(H))
-		if(weapon_choice != "Discipline - Unarmed" && weapon_choice != "Discipline - Bodybuilder")
+		if(bronzediscipline_choice != "Gladiator - Skinarmored & Immunity To Pain")
 			shirt = /obj/item/clothing/suit/roguetown/shirt/desertbra
 	backl = /obj/item/storage/backpack/rogue/satchel
 	backpack_contents = list(
@@ -820,7 +820,7 @@
 	armor_class = ARMOR_CLASS_LIGHT
 	armor = list("blunt" = 75, "slash" = 75, "stab" = 75, "piercing" = 40, "fire" = 0, "acid" = 0) //Note; same as the Copper Heart Protector. Quite good, but strictly locked to the chest zone. Say goodbye to your entrails and crotch, if you aren't smart!
 
-/obj/item/clothing/suit/roguetown/armor/plate/full/bronze/alt
+/obj/item/clothing/suit/roguetown/armor/plate/full/bronze
 	name = "bronze panoplic armor"
 	desc = "What can only be described as an 'armored robe'; thick bronze plates, layered atop one-another and interlinked with strappings to form an assembly of segmented plate armor. While overwhelmingly heavy and cumbersome, it is certain to weather any storm poised its way. </br>Scholars oft-describe this suit as a 'panoply', purpose-made for the physiques of Psydonia's earliest Aasimari."
 	icon_state = "bronzeplate"
