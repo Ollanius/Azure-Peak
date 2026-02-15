@@ -1325,11 +1325,13 @@
 	i_type = "Weapons"
 
 /datum/anvil_recipe/valuables/iron/berserksword
-	name = "Berserker's Sword (+1 Executioner Sword, +4 Iron)"
+	name = "Berserker's Sword (+1 Executioner Sword, +2 Iron, +2 Cured Leather)"
 	req_bar = /obj/item/ingot/iron
-	additional_items = list(/obj/item/rogueweapon/sword/long/exe, /obj/item/ingot/iron, /obj/item/ingot/iron, /obj/item/ingot/iron, /obj/item/ingot/iron)
+	additional_items = list(/obj/item/rogueweapon/sword/long/exe, /obj/item/ingot/iron, /obj/item/ingot/iron, /obj/item/natural/hide/cured, /obj/item/natural/hide/cured)
 	created_item = /obj/item/rogueweapon/sword/long/exe/berserk
+	appro_skill = /datum/skill/craft/weaponsmithing
 	i_type = "Weapons"
+	craftdiff = SKILL_LEVEL_MASTER
 
 /datum/anvil_recipe/weapons/lithmyc/mace
 	name = "Lithmyc Mace (+ Blueprint)"
