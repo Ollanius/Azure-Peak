@@ -585,10 +585,7 @@
 				pants = /obj/item/clothing/under/roguetown/loincloth/brown
 				belt = /obj/item/storage/belt/rogue/leather/battleskirt/breechcloth/red
 	shoes = /obj/item/clothing/shoes/roguetown/boots/armor/bronze
-	cloak = /obj/item/clothing/cloak/cape/red
-	if(should_wear_femme_clothes(H))
-		if(bronzediscipline_choice != "Gladiator - Skinarmored & Immunity To Pain")
-			shirt = /obj/item/clothing/suit/roguetown/shirt/desertbra
+	cloak = /obj/item/clothing/cloak/cape/red 
 	backl = /obj/item/storage/backpack/rogue/satchel
 	backpack_contents = list(
 		/obj/item/flashlight/flare/torch = 1,
