@@ -424,7 +424,7 @@
 	..()
 	to_chat(H, span_warning("The curtains part, the shieldline rallies, and the eyes of a thousand shadows fall upon you. Snarling gladiator, enthralled legionnaire, vestumed actor; ready yourself for another bout."))
 	if(H.mind)
-		var/bronzeweapon = list("Spatha & +1 Unarmed","Trident & +1 Unarmed","Greataxe & +1 Unarmed","Axepick & +1 Unarmed","Winged Spear + Greatshield","Heavy Khopesh + Greatshield","Shortsword + Shield","Falchion + Shield","Messer + Shield","Khopesh + Shield","Axe + Shield","Warclub + Shield","Flail + Shield","Spear + Shield","Axegauntlet + Shortsword","Nothing - Skilled Pugilist & Statblock Adjustment (+I STR, -I WIL)")
+		var/bronzeweapon = list("Spatha & +1 Unarmed","Trident & +1 Unarmed","Greataxe & +1 Unarmed","Axepick & +1 Unarmed","Winged Spear + Greatshield","Heavy Khopesh + Greatshield","Shortsword + Shield","Falchion + Shield","Messer + Shield","Khopesh + Shield","Axe + Shield","Warclub + Shield","Flail + Shield","Spear + Shield","Axegauntlet + Shortsword","Nothing - Skilled Pugilist, +I STR / -I WIL")
 		var/bronzeweapon_choice = input(H, "Choose your WEAPONS.", "PUT ON A SHOW FOR THE CROWD.") as anything in bronzeweapon
 		switch(bronzeweapon_choice)
 			if("Spatha & +1 Unarmed")
@@ -455,7 +455,7 @@
 			if("Heavy Khopesh + Greatshield")
 				H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_JOURNEYMAN, TRUE)
 				H.adjust_skillrank_up_to(/datum/skill/combat/shields, SKILL_LEVEL_JOURNEYMAN, TRUE)
-				r_hand = /obj/item/rogueweapon/sword/sabre/bronzekhopesh/great
+				r_hand = /obj/item/rogueweapon/sword/long/greatkhopesh
 				beltr = /obj/item/rogueweapon/scabbard/sword/strap
 				backr = /obj/item/rogueweapon/shield/bronze/great
 			if("Shortsword + Shield")
@@ -509,7 +509,7 @@
 				r_hand = /obj/item/rogueweapon/katar/bronze/gladiator
 				backr = /obj/item/rogueweapon/scabbard/sheath/strap
 				gloves = /obj/item/clothing/gloves/roguetown/bandages
-			if("Nothing - Skilled Pugilist & Statblock Adjustment (+I STR, -I WIL)")
+			if("Nothing - Skilled Pugilist, +I STR / -I WIL")
 				H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_JOURNEYMAN, TRUE)
 				H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, SKILL_LEVEL_JOURNEYMAN, TRUE)
 				gloves = /obj/item/clothing/gloves/roguetown/bandages/weighted
@@ -523,14 +523,14 @@
 			if("A Javelin's Bag")
 				beltl = /obj/item/quiver/javelin/bronze
 			if("A Sling With Bronze Pellets")
-				H.adjust_skillrank_up_to(/datum/skill/combat/slings = SKILL_LEVEL_JOURNEYMAN, TRUE)
+				H.adjust_skillrank_up_to(/datum/skill/combat/slings, SKILL_LEVEL_JOURNEYMAN, TRUE)
 				l_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/sling
 				beltl = /obj/item/quiver/sling/bronze
 			if("A Bow With Bronze Arrows")
-				H.adjust_skillrank_up_to(/datum/skill/combat/bows = SKILL_LEVEL_JOURNEYMAN, TRUE)
+				H.adjust_skillrank_up_to(/datum/skill/combat/bows, SKILL_LEVEL_JOURNEYMAN, TRUE)
 				l_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/classic
 				beltl = /obj/item/quiver/bronzearrows
-			if("Another Shortsword & Skills In Dual-Wielding") //Su
+			if("Another Shortsword & Skills In Dual-Wielding")
 				ADD_TRAIT(H, TRAIT_DUALWIELDER, TRAIT_GENERIC)
 				l_hand = /obj/item/rogueweapon/sword/short/gladius
 				beltl = /obj/item/rogueweapon/scabbard/sword/strap
@@ -547,15 +547,15 @@
 				l_hand = /obj/item/rogueweapon/stoneaxe/woodcut/bronze
 			if("A Bottle Of Medicinal Fish Vinegar.. ?")
 				beltl = /obj/item/reagent_containers/glass/bottle/rogue/healthpot/zarum
-		var/bronzediscipline = list("Gladiator - Skinarmored & Immunity To Pain","Thespian - Dodge Expert & Alternate Statblock (+III WIL, +I STR/SPD/INT, -I CON)","Legionnaire - Well-Armored & Maille Training","Bulwark - Fully-Armored & Plate Training")
+		var/bronzediscipline = list("Gladiator - Skinarmored & Immunity To Pain","Thespian - Dodge Expert, +III SPD / -III CON","Legionnaire - Well-Armored & Maille Training","Bulwark - Fully-Armored & Plate Training")
 		var/bronzediscipline_choice = input(H, "Choose your DISCIPLINE.", "EMBRACE GLORY AND DEATH.") as anything in bronzediscipline
 		switch(bronzediscipline_choice)
-			if("Thespian - Dodge Expert & Alternate Statblock (+III WIL, +I STR/SPD/INT, -I CON)")
+			if("Thespian - Dodge Expert, +III SPD / -III CON")
 				ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 				H.change_stat(STATKEY_SPD, 3)
 				H.change_stat(STATKEY_INT, 1)
 				H.change_stat(STATKEY_CON, -3)
-				head = /obj/item/flowercrown/briar
+				head = /obj/item/clothing/head/roguetown/headband/red
 				mask = /obj/item/clothing/mask/rogue/facemask/bronze
 				armor = /obj/item/clothing/suit/roguetown/armor/plate/bronze/light
 				pants = /obj/item/clothing/under/roguetown/skirt/red
@@ -581,12 +581,14 @@
 				head = /obj/item/clothing/head/roguetown/helmet/bronze
 				neck = /obj/item/clothing/neck/roguetown/gorget/bronze
 				wrists = /obj/item/clothing/wrists/roguetown/bracers/bronze
-				armor = /obj/item/clothing/suit/roguetown/armor/plate/full/bronze
+				armor = /obj/item/clothing/suit/roguetown/armor/plate/full/bronze/alt
 				pants = /obj/item/clothing/under/roguetown/loincloth/brown
-				belt = /obj/item/storage/belt/rogue/leather/battleskirt/faulds/red
-	shirt = /obj/item/clothing/suit/roguetown/shirt/tribalrag/gladiator
-	shoes = /obj/item/clothing/shoes/roguetown/boots/armor/bronze 
+				belt = /obj/item/storage/belt/rogue/leather/battleskirt/breechcloth/red
+	shoes = /obj/item/clothing/shoes/roguetown/boots/armor/bronze
 	cloak = /obj/item/clothing/cloak/cape/red
+	if(should_wear_femme_clothes(H))
+		if(weapon_choice != "Discipline - Unarmed" && weapon_choice != "Discipline - Bodybuilder")
+			shirt = /obj/item/clothing/suit/roguetown/shirt/desertbra
 	backl = /obj/item/storage/backpack/rogue/satchel
 	backpack_contents = list(
 		/obj/item/flashlight/flare/torch = 1,
@@ -629,7 +631,7 @@
 	name = "bow"
 	desc = "The bow is your life; to hold it high and pull the string is to know the path of destiny."
 	var/hasloadedsprite = TRUE
-	accfactor = 1.1 //Fairly mild. Essentially a reskinned version of the 'crude selfbow', but with a minor addition to accuracy.
+	accfactor = 1.15 //A fairly mild alternative to the Crude Selfbow, themed to be more like a proper ranged weapon. Same general stats, but with an increased bonus to accuracy.
 	icon_state = "classicbow0"
 	item_state = "classicbow"
 
@@ -645,6 +647,16 @@
 		return
 	var/mob/M = loc
 	M.update_inv_hands()
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/bow/classic/getonmobprop(tag)
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.7,"sx" = -3,"sy" = -2,"nx" = 5,"ny" = -1,"wx" = -3,"wy" = 0,"ex" = 0,"ey" = -2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 9,"sturn" = -100,"wturn" = -102,"eturn" = 10,"nflip" = 1,"sflip" = 8,"wflip" = 8,"eflip" = 1)
+			if("onbelt")
+				return list("shrink" = 0.6,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
+			if("onback")
+				return list("shrink" = 0.6,"sx" = 1,"sy" = -1,"nx" = 1,"ny" = -1,"wx" = 3,"wy" = -1,"ex" = 0,"ey" = -1,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 8,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0)
 
 /obj/item/quiver/bronzearrows/Initialize()
 	..()
@@ -716,13 +728,6 @@
 			pic.color = get_detail_color()
 		add_overlay(pic)
 
-/obj/item/storage/belt/rogue/leather/battleskirt/breechcloth
-	name = "belt with breechcloth"
-	icon_state = "breechcloth"
-	body_parts_covered = GROIN //Essentially a chopped-down tabard that doubles as a belt-friendly loincloth. Dwarves are going to get very little mileage out of this, admittedly. Feel free to make a more coherent sprite, if desired.
-	sewrepair = FALSE
-	detail_tag = "_belt"
-
 /obj/item/storage/belt/rogue/leather/battleskirt/breechcloth/red
 	color = CLOTHING_RED
 
@@ -758,6 +763,8 @@
 
 /obj/item/rogueweapon/katar/bronze/gladiator
 	name = "arbelos"
+	icon_state = "bronzescissor"
+	item_state = "bronzescissor"
 	desc = "A sharpened axhead that's been mounted onto a bronze gauntlet. Popularized at the turn of the millennium within Psydonia's underground gladiatorial arenas, it triumphs over the katar when it comes to thawrting blows and cleaving skulls. The wooden handle used to connect its axhead to the gauntlet is fragile, however; all it takes is a precise strike to neuter such a weapon."
 	wdefense = 5 //Much higher than usual for most unarmed weapons..
 	max_integrity = 50 //..but far more fragile.
@@ -778,7 +785,7 @@
 	damfactor = 0.8
 	clickcd = 10 //Slower than a regular thrust, with slightly less penetration and damage. Inverse to the katar.
 
-/obj/item/rogueweapon/sword/sabre/bronzekhopesh/great
+/obj/item/rogueweapon/sword/long/greatkhopesh
 	name = "apophis" //Kriegmesser analogue.
 	desc = "The Khopesh's older brother. One would be mistaken for thinking it was designed to be wielded in both hands; for the strength of these ancient legionnaires, prodigious as it were, allowed them to effortlessly wield it alongside their towering greatshields."
 	wdefense = 3
@@ -813,13 +820,13 @@
 	armor_class = ARMOR_CLASS_LIGHT
 	armor = list("blunt" = 75, "slash" = 75, "stab" = 75, "piercing" = 40, "fire" = 0, "acid" = 0) //Note; same as the Copper Heart Protector. Quite good, but strictly locked to the chest zone. Say goodbye to your entrails and crotch, if you aren't smart!
 
-/obj/item/clothing/suit/roguetown/armor/plate/full/bronze
+/obj/item/clothing/suit/roguetown/armor/plate/full/bronze/alt
 	name = "bronze panoplic armor"
 	desc = "What can only be described as an 'armored robe'; thick bronze plates, layered atop one-another and interlinked with strappings to form an assembly of segmented plate armor. While overwhelmingly heavy and cumbersome, it is certain to weather any storm poised its way. </br>Scholars oft-describe this suit as a 'panoply', purpose-made for the physiques of Psydonia's earliest Aasimari."
 	icon_state = "bronzeplate"
 	item_state = "bronzeplate"
 	armor = ARMOR_PLATE_BRONZE
-	max_integrity = ARMOR_INT_CHEST_PLATE_BRONZE + 100 //Translates into 650 INT. Note that its defensive values, like with the rest of all bronze items, is hardset to '50' - this means any attack which deals a combined amount (Via AP and FORCE) to 50 will pierce it.
+	max_integrity = ARMOR_INT_CHEST_PLATE_BRONZE + 150 //Translates into 700 INT. Bronze armor is penetrated by any attack that deals a combined FORCE/AP value of +50, which translates into virtually any non-STR modified attack in the game; swords, daggers, axes.
 	armor_class = ARMOR_CLASS_HEAVY
 	smeltresult = /obj/item/ingot/bronze
 	prevent_crits = PREVENT_CRITS_ALL //Bronze-specific trait. While this sounds scary, all it mechanically does is add resistances to Pick-induced critical hits. Bleed and suffer, but do not go quietly into the darkness.
@@ -829,8 +836,9 @@
 /obj/item/clothing/suit/roguetown/armor/plate/full/bronze/equipped(mob/living/carbon/human/user, slot)
 	. = ..()
 	if(slot == SLOT_ARMOR)
-		to_chat(user, span_suicide("The panoply clatters into place, and I feel my shoulders slouch beneath its weight - yet even now, I feel sturdier than ever before.."))
+		to_chat(user, span_hypnophrase("The panoply clatters into place, and I feel my shoulders slouch beneath its weight - yet even now, I feel sturdier than ever before.."))
 		user.change_stat(STATKEY_CON, 1)
+		user.change_stat(STATKEY_WIL, 1)
 		user.change_stat(STATKEY_SPD, -1)
 		bronzeplatecumbersome = TRUE
 	return
@@ -840,17 +848,25 @@
 	if(bronzeplatecumbersome == TRUE)
 		to_chat(user, span_suicide("..and with a sigh of relief, the panoply's weight no longer burdens my shoulders."))
 		user.change_stat(STATKEY_CON, -1)
+		user.change_stat(STATKEY_WIL, -1)
 		user.change_stat(STATKEY_SPD, 1)
 		bronzeplatecumbersome = FALSE
 	return
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/bronze/get_mechanics_examine(mob/user)
 	. = ..()
-	. += span_info("Even with the necessary training, this suit of armor is difficult to maneuver in. Wearing the armor will slightly fortify your Constitution, while slightly reducing your Speed as well.")
+	. += span_info("Even with the necessary training, this suit of armor is difficult to maneuver in. Wearing the armor will slightly fortify your Constitution and Willpower, at the cost of further reducing your Speed.")
+
+/obj/item/clothing/suit/roguetown/armor/plate/full/bronze/alt
+	name = "bronze panoplic assembly"
+	icon_state = "bronzeplatealt"
+	item_state = "bronzeplatealt"
+	body_parts_covered = CHEST | VITALS | LEGS
+	max_integrity = ARMOR_INT_CHEST_PLATE_BRONZE + 75 //Iron Halfplate analogue. Still heavy as hell.
 
 /obj/item/clothing/mask/rogue/facemask/bronze
 	name = "bronze mask"
-	desc = "Glimmering bronze, meticuliusly shaped to mimic the guise of another. One of civilization's oldest superstitions is the belief that donning such masks would impart a sliver of the mimicked facebearer's power unto its wearer."
+	desc = "Glimmering bronze, curved to veil its wearer's face from both judgement and harm."
 	armor = ARMOR_PLATE_BRONZE
 	armor_class = ARMOR_CLASS_LIGHT
 	icon_state = "bronzemask"
@@ -858,6 +874,9 @@
 	max_integrity = 150
 	prevent_crits = PREVENT_CRITS_ALL
 	smeltresult = /obj/item/ingot/bronze
+
+/obj/item/clothing/mask/rogue/facemask/bronze/classic
+	desc = "Glimmering bronze, meticuliusly shaped to mimic the guise of another. One of civilization's oldest superstitions is the belief that donning such masks would impart a sliver of the mimicked facebearer's power unto its wearer."
 
 /obj/item/rogueweapon/shield/bronze/great
 	name = "hoplon greatshield"
