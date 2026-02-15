@@ -893,6 +893,8 @@
 
 /obj/item/clothing/mask/rogue/facemask/bronze/classic
 	name = "bronze death mask"
+	icon_state = "bronzemask_legacy"
+	item_state = "bronzemask_legacy"
 	desc = "Glimmering bronze, meticuliusly shaped to mimic the guise of another. One of civilization's oldest superstitions is the belief that donning such masks would impart a sliver of the mimicked facebearer's power unto its wearer."
 
 /obj/item/rogueweapon/shield/bronze/great
