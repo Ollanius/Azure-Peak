@@ -750,6 +750,7 @@
 	)
 	craftdiff = 1
 	sellprice = 5
+	bypass_dupe_test = TRUE // Uses the tablecloth, a much rarer and valuable article, in lieu of cloth.
 
 /datum/crafting_recipe/roguetown/sewing/archer
 	name = "archer cap"
