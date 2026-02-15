@@ -585,10 +585,7 @@
 				pants = /obj/item/clothing/under/roguetown/loincloth/brown
 				belt = /obj/item/storage/belt/rogue/leather/battleskirt/breechcloth/red
 	shoes = /obj/item/clothing/shoes/roguetown/boots/armor/bronze
-	cloak = /obj/item/clothing/cloak/cape/red
-	if(should_wear_femme_clothes(H))
-		if(bronzediscipline_choice != "Gladiator - Skinarmored & Immunity To Pain")
-			shirt = /obj/item/clothing/suit/roguetown/shirt/desertbra
+	cloak = /obj/item/clothing/cloak/cape/red 
 	backl = /obj/item/storage/backpack/rogue/satchel
 	backpack_contents = list(
 		/obj/item/flashlight/flare/torch = 1,
@@ -699,6 +696,7 @@
 	body_parts_covered = FULL_HEAD
 	icon_state = "bronzemurmillo"
 	item_state = "bronzemurmillo"
+	smeltresult = /obj/item/ingot/bronze
 
 /obj/item/clothing/head/roguetown/helmet/bronzealt/attackby(obj/item/W, mob/living/user, params)
 	..()
@@ -797,6 +795,7 @@
 	sheathe_icon = "decgladius"
 	icon_state = "bronzegreatkhopesh"
 	item_state = "bronzegreatkhopesh"
+	smeltresult = /obj/item/ingot/bronze
 
 /datum/intent/sword/chop/sabre
 	damfactor = 1.15
@@ -905,6 +904,7 @@
 	worn_y_dimension = 64
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
 	bloody_icon = 'icons/effects/blood64.dmi'
+	smeltresult = /obj/item/ingot/bronze
 
 /obj/item/clothing/head/roguetown/helmet/bronze/attackby(obj/item/W, mob/living/user, params)
 	..()
