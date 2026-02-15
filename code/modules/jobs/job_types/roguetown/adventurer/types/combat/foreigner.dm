@@ -683,10 +683,6 @@
 	max_integrity = 200
 	repair_time = 25 SECONDS
 
-/obj/item/clothing/suit/roguetown/shirt/tribalrag/gladiator
-	name = "rags"
-	desc = "Freedom is a luxury savored by few."
-
 /obj/item/clothing/wrists/roguetown/bracers/cloth/gladiator
 	name = "padded wrappings"
 	desc = "Sheared burlap and cloth, meticulously fashioned around the forearms. Taut fibers turn weeping gashes into mere tears along the cloth. </br>"
@@ -876,6 +872,7 @@
 	smeltresult = /obj/item/ingot/bronze
 
 /obj/item/clothing/mask/rogue/facemask/bronze/classic
+	name = "bronze death mask"
 	desc = "Glimmering bronze, meticuliusly shaped to mimic the guise of another. One of civilization's oldest superstitions is the belief that donning such masks would impart a sliver of the mimicked facebearer's power unto its wearer."
 
 /obj/item/rogueweapon/shield/bronze/great
