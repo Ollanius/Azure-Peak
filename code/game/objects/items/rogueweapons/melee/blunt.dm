@@ -437,6 +437,15 @@
 		added_def = 1,\
 	)
 
+/obj/item/rogueweapon/mace/cudgel/shellrungu
+	name = "shell rungu"
+	desc = "A ceremonial rungu carved out of clam shell. Not intended for combat. Its used in various Sea and Coastal Elven rituals and ceremonies."
+	icon = 'icons/roguetown/gems/gem_shell.dmi'
+	icon_state = "rungu_shell"
+
+	max_integrity = 75
+	sellprice = 35
+
 /obj/item/rogueweapon/mace/cudgel/psy
 	name = "psydonic flanged mace"
 	desc = "A flanged mace of blessed silver, wielded by His children. The rosewood handle's curved nature beckons your fingers to curl along its grooves, and to never let go; \
