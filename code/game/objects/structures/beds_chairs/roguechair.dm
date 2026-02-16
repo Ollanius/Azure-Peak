@@ -188,8 +188,8 @@
 		switch(tag)
 			if("gen") 
 				return list("shrink" = 0.7, "sx" = -14, "sy" = -8, "nx" = 15, "ny" = -7, "wx" = -10, "wy" = -5, "ex" = 7, "ey" = -6, "northabove" = 0, "southabove" = 1, "eastabove" = 1, "westabove" = 0, "nturn" = -13, "sturn" = 110, "wturn" = -60, "eturn" = -30, "nflip" = 1, "sflip" = 1, "wflip" = 8, "eflip" = 1)
-			if("wielded")
-				return list("shrink" = 0.7,"sx" = 2,"sy" = 1,"nx" = -17,"ny" = 0,"wx" = -11,"wy" = 0,"ex" = 2,"ey" = 0,"westabove" = 1,"eastbehind" = 0,"nturn" = 9,"sturn" = -42,"wturn" = 21,"eturn" = -27,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,)
+			if("wielded") 
+				return list("shrink" = 0.7,"sx" = 9,"sy" = -4,"nx" = -7,"ny" = 1,"wx" = -7,"wy" = 2,"ex" = 8,"ey" = 2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 5,"sturn" = -190,"wturn" = -170,"eturn" = -10,"nflip" = 1,"sflip" = 8,"wflip" = 1,"eflip" = 0)
 
 /obj/structure/chair/wood/rogue/CanPass(atom/movable/mover, turf/target)
 	if(isliving(mover))
