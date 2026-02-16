@@ -1029,6 +1029,38 @@
 	user.visible_message(span_warning("[user] wipes [src] down with its cloth."),span_notice("I wipe [src] down with its cloth."))
 	return
 
+//
+
+/obj/item/rogueweapon/sword/long/exe/silver
+	name = "silver executioners sword"
+	desc = "A thorned executioner's sword, who's massive silver blade lays mounted atop an intricately-carved \
+	handle. Though the barbs dig into your hands, it's said that such pricklings will only draw blood if the \
+	silvered edge falls upon the neck of the innocent."
+	icon_state = "psygsword"
+	force = 22
+	force_wielded = 25
+	minstr_req = TRUE
+	smeltresult = /obj/item/ingot/silver
+
+/obj/item/rogueweapon/sword/long/exe/silver/ComponentInitialize()
+	AddComponent(\
+		/datum/component/silverbless,\
+		pre_blessed = BLESSING_PSYDONIAN,\
+		silver_type = SILVER_PSYDONIAN,\
+		added_force = 0,\
+		added_blade_int = 100,\
+		added_int = 100,\
+		added_def = 2,\
+	)
+
+/datum/anvil_recipe/weapons/silver/exec
+	name = "Executioners Sword, Silver (+3 Silver, +1 Small Log)"
+	req_bar = /obj/item/ingot/silver
+	additional_items = list(/obj/item/ingot/silver, /obj/item/ingot/silver, /obj/item/ingot/silver, /obj/item/grown/log/tree/small)
+	created_item = /obj/item/rogueweapon/sword/long/exe/silver
+
+//
+
 /obj/item/rogueweapon/sword/long/exe/berserk
 	name = "berserkers sword"
 	desc = "A raw heap of iron, hewn into an intimidatingly massive cleaver. Most could never aspire to effectively swing such a laborsome blade about; those few that have the strength, however, can force even the strongest opponents to stagger back."
