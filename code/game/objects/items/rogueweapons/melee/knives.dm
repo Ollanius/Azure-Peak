@@ -357,7 +357,7 @@
 	force = 22 //Hunting knife's bigger, meaner older brother. No pick intent, so it deserves a slight damage bump.
 	name = "seax"
 	desc = "An intimidatingly large dagger, fit for both hand-to-hand combat and dae-to-dae laboring. The ancenstry of this centuries-old design runs red with Gronnic and Grenzelhoftian blood, alike."
-	possible_item_intents = list(/datum/intent/dagger/chop/cleaver, /datum/intent/dagger/cut/heavy, /datum/intent/dagger/sucker_punch, /datum/intent/dagger/thrust/combat)
+	possible_item_intents = list(/datum/intent/dagger/cut/heavy, datum/intent/dagger/chop/cleaver, /datum/intent/dagger/sucker_punch, /datum/intent/dagger/thrust/combat)
 	icon_state = "combatknife"
 	sheathe_icon = "combatknife"
 	icon = 'icons/roguetown/weapons/daggers32.dmi'
@@ -457,7 +457,7 @@
 	name = "kampfmesser"
 	desc = "An undersized steel messer that barely fits into a conventional dagger sheath, the saving grace of any hunter. It lacks a tip for stabbing - yet the edge alone is sharp enough to hack most issues right away. \
 	While it was brought over by Grenzelhoftian migrants, it is considered an Azurean staple these daes - the right tool for the right job."
-	possible_item_intents = list(/datum/intent/dagger/cut/rend, /datum/intent/dagger/chop/cleaver, /datum/intent/dagger/cut/heavy, /datum/intent/dagger/sucker_punch)
+	possible_item_intents = list(/datum/intent/dagger/cut/heavy, /datum/intent/dagger/chop/cleaver, datum/intent/dagger/cut/rend, /datum/intent/dagger/sucker_punch)
 	icon_state = "minimesser"
 	sheathe_icon = "minimesser"
 	max_blade_int = 200
@@ -673,7 +673,7 @@
 /obj/item/rogueweapon/huntingknife/idagger/stake
 	name = "sharpened stake"
 	desc = "A branch that has been broken off of an azurielve tree, sharpened to a fine point. It can lay some unholy creechers to rest, but only by piercing their hearts."
-	icon_state = "stake"
+	icon_state = "heavystake"
 	possible_item_intents = list(/datum/intent/dagger/thrust/pick, /datum/intent/dagger/thrust/quick, /datum/intent/dagger/cut/light, /datum/intent/dagger/sucker_punch)
 	force = 12
 	throwforce = 12
@@ -687,10 +687,19 @@
 	unequip_delay_self = 0 //No delay when drawing.
 	inv_storage_delay = 0 //No delay when retrieving from a storage slot.
 
+/obj/item/rogueweapon/huntingknife/idagger/stake/getonmobprop(tag)
+	. = ..()
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.5,"sx" = -10,"sy" = -4,"nx" = 11,"ny" = -4,"wx" = -4,"wy" = -4,"ex" = 5,"ey" = -4,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
+			if("onbelt")
+				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
+
 /obj/item/rogueweapon/huntingknife/idagger/silver/stake
 	name = "silver-tipped stake"
 	desc = "A branch that has been broken off of a boswellia tree, sharpened to a fine point and tipped with blessed silver. It can lay most unholy creechers to rest, but only by piercing their hearts."
-	icon_state = "stake_silver"
+	icon_state = "heavystake_silver"
 	possible_item_intents = list(/datum/intent/dagger/thrust/pick, /datum/intent/dagger/thrust/quick, /datum/intent/dagger/cut/light, /datum/intent/dagger/sucker_punch)
 	force = 20
 	throwforce = 20
@@ -721,6 +730,42 @@
 		/datum/component/silverbless,\
 		pre_blessed = BLESSING_TENNITE,\
 		silver_type = SILVER_TENNITE,\
+		added_force = 0,\
+		added_blade_int = 100,\
+		added_int = 0,\
+		added_def = 0,\
+	)
+
+
+/obj/item/rogueweapon/huntingknife/idagger/silver/stake/getonmobprop(tag)
+	. = ..()
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.5,"sx" = -10,"sy" = -4,"nx" = 11,"ny" = -4,"wx" = -4,"wy" = -4,"ex" = 5,"ey" = -4,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
+			if("onbelt")
+				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
+
+/obj/item/rogueweapon/huntingknife/idagger/silver/stake/psy
+	name = "silver-tipped otavan stake"
+	desc = "A branch that has been broken off of an Otavan boswellia tree, sharpened to a fine point and tipped with blessed silver. It can lay most unholy creechers to rest, but only by piercing their hearts."
+
+/obj/item/rogueweapon/huntingknife/idagger/silver/stakepsy/ComponentInitialize()
+	AddComponent(\
+		/datum/component/silverbless,\
+		pre_blessed = BLESSING_NONE,\
+		silver_type = SILVER_PSYDONIAN,\
+		added_force = 0,\
+		added_blade_int = 100,\
+		added_int = 0,\
+		added_def = 0,\
+	)
+
+/obj/item/rogueweapon/huntingknife/idagger/silver/stake/psy/preblessed/ComponentInitialize()
+	AddComponent(\
+		/datum/component/silverbless,\
+		pre_blessed = BLESSING_PSYDONIAN,\
+		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
 		added_blade_int = 100,\
 		added_int = 0,\
