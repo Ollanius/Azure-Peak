@@ -1405,10 +1405,11 @@
 	created_item = /obj/item/rogueweapon/knuckles/psydon
 	i_type = "Weapons"
 
-/datum/anvil_recipe/weapons/psy/cudgel
-	name = "Psydonic Handmace"
+/datum/anvil_recipe/weapons/psy/cudgelmace
+	name = "Psydonic Handmace (+1 Small Log)"
 	req_bar = /obj/item/ingot/silverblessed
-	created_item = /obj/item/rogueweapon/mace/cudgel/psy
+	created_item = /obj/item/rogueweapon/mace/cudgel/psyclassic
+	additional_items = list(/obj/item/grown/log/tree/small)
 	i_type = "Weapons"
 
 /datum/anvil_recipe/weapons/psy/halberd
@@ -1455,6 +1456,13 @@
 	additional_items = list(/obj/item/ingot/silverblessed/bullion, /obj/item/grown/log/tree/stick)
 	i_type = "Weapons"
 
+/datum/anvil_recipe/weapons/psy/cudgelmace/inq
+	name = "Psydonic Handmace (+1 Small Log)"
+	req_bar = /obj/item/ingot/silverblessed/bullion
+	created_item = /obj/item/rogueweapon/mace/cudgel/psyclassic
+	additional_items = list(/obj/item/grown/log/tree/small)
+	i_type = "Weapons"
+
 /datum/anvil_recipe/weapons/psy/spear/inq
 	name = "Psydonic Spear (+1 Blessed Silver, +1 Small Log)"
 	req_bar = /obj/item/ingot/silverblessed/bullion
@@ -1484,12 +1492,6 @@
 	name = "Psydonic Knuckles"
 	req_bar = /obj/item/ingot/silverblessed/bullion
 	created_item = /obj/item/rogueweapon/knuckles/psydon
-	i_type = "Weapons"
-
-/datum/anvil_recipe/weapons/psy/cudgel/inq
-	name = "Psydonic Handmace"
-	req_bar = /obj/item/ingot/silverblessed/bullion
-	created_item = /obj/item/rogueweapon/mace/cudgel/psy
 	i_type = "Weapons"
 
 /datum/anvil_recipe/weapons/psy/halberd/inq
