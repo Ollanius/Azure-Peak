@@ -112,8 +112,8 @@
 //blunt objs ฅ^•ﻌ•^ฅ
 
 /obj/item/rogueweapon/mace
-	force = 20
-	force_wielded = 25
+	force = 22
+	force_wielded = 27
 	possible_item_intents = list(/datum/intent/mace/strike, /datum/intent/mace/strike/dislocate)
 	gripped_intents = list(/datum/intent/mace/strike, /datum/intent/mace/smash, /datum/intent/effect/daze, /datum/intent/mace/strike/dislocate)
 	name = "mace"
@@ -213,7 +213,6 @@
 	wdefense = 5
 	smelt_bar_num = 2
 	is_silver = TRUE
-	minstr_req = TRUE
 
 /obj/item/rogueweapon/mace/steel/silver/ComponentInitialize()
 	AddComponent(\
@@ -376,7 +375,7 @@
 	blade_class = BCLASS_TWIST	//I know, it's weird, but this lets you dislocate limbs and works fine w/ -100 pen factor of blunt weapons.
 	attack_verb = list("twamps", "thwacks", "wallops")
 	damfactor = 1.3		// High damage mod to give high chance of dislocation against unarmored targets.
-	intent_intdamage_factor = 0.5	// Purposefully bad at damaging armor. Specifically deals -50% integrity damage, irregardless of the previous intent's modifiers.
+	intent_intdamage_factor = 0.4	// Purposefully bad at damaging armor. Specifically deals -60% integrity damage, irregardless of the previous intent's modifiers.
 	icon_state = "inbash"	// Wallop is too long for a button; placeholder.
 	desc = "A quick and sudden thwack that can cripple unarmored limbs with tremendous force. </br>Deals TWIST damage instead of BLUNT damage. Critical hits cause DISLOCATIONS, instead of FRACTURES. </br>DISLOCATED ARMS and HANDS cannot wield, grab, or use anything. </br>DISLOCATED LEGS and FEET prevent the target from standing."
 
@@ -386,16 +385,16 @@
 	blade_class = BCLASS_TWIST
 	attack_verb = list("thwacks", "threshes")
 	hitsound = list('sound/combat/hits/punch/punch_hard (1).ogg', 'sound/combat/hits/punch/punch_hard (2).ogg', 'sound/combat/hits/punch/punch_hard (3).ogg')
-	damfactor = 1.3
-	intent_intdamage_factor = 0.5
-	swingdelay = 6
+	damfactor = 1.25
+	intent_intdamage_factor = 0.4 //Reduces integrity damage modifier from +60% to -60%.
+	swingdelay = 6 //Slower than a strike, quicker than a chop or old-school smash.
 	icon_state = "inthresh"	
 	desc = "A slow-swinging strike that can cripple unarmored limbs with tremendous force. </br>Deals TWIST damage instead of BLUNT damage. Critical hits cause DISLOCATIONS, instead of FRACTURES. </br>DISLOCATED ARMS and HANDS cannot wield, grab, or use anything. </br>DISLOCATED LEGS and FEET prevent the target from standing."
 
 /obj/item/rogueweapon/mace/cudgel/flanged
 	name = "flanged mace"
 	desc = "Chivalry. </br>A one-handed derivative of the mace, purpose-made to dazzle armored opponents. Quartered into four symmetrical ridges, its flanged macehead can comfortably carve maille-and-bone behind the safety of an accompying shield."
-	force = 28 //+3 (1H) but -4 (2H), compared to the Steel Mace.
+	force = 27 //+2 (1H) but -5 (2H), compared to the Steel Mace.
 	possible_item_intents = list(/datum/intent/mace/strike, /datum/intent/mace/strike/dislocate, /datum/intent/effect/daze, /datum/intent/mace/warhammer/stab)
 	gripped_intents = null //One-handed. Pseudo-sidegrade between the Mace and Warhammer, offering more damage and dislocations at the cost of no Picking or Smashing.
 	minstr = 7
@@ -514,9 +513,9 @@
 	desc = "A shorter variant of the flanged silver mace, rebalanced for one-handed usage. It isn't uncommon for these sidearms to mysteriously 'vanish' from an Adjudicator's belt, only to be 'rediscovered' - and subsequently kept - by a Confessor."
 	possible_item_intents = list(/datum/intent/mace/strike, /datum/intent/mace/strike/wallop)
 	gripped_intents = list(/datum/intent/mace/strike, /datum/intent/mace/strike/wallop, /datum/intent/mace/smash, /datum/intent/effect/daze)
-	force = 23
-	force_wielded = 28
-	minstr = 7 //Lowered damage + minimum strength threshold. Otherwise, one-to-one with the original instance.
+	force = 25
+	force_wielded = 30
+	minstr = 7
 	wdefense = 5 
 	wbalance = WBALANCE_SWIFT
 	resistance_flags = FIRE_PROOF
@@ -724,7 +723,6 @@
 	smelt_bar_num = 2
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silverblessed
-	minstr_req = TRUE
 
 /obj/item/rogueweapon/mace/goden/psymace/ComponentInitialize()
 	AddComponent(\
