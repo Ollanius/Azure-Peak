@@ -212,6 +212,7 @@
 	minstr = 10
 	wdefense = 5
 	smelt_bar_num = 2
+	swingsound = BLUNTWOOSH_LARGE
 	is_silver = TRUE
 
 /obj/item/rogueweapon/mace/steel/silver/ComponentInitialize()
@@ -397,6 +398,7 @@
 	force = 27 //+2 (1H) but -5 (2H), compared to the Steel Mace.
 	possible_item_intents = list(/datum/intent/mace/strike, /datum/intent/mace/strike/dislocate, /datum/intent/effect/daze, /datum/intent/mace/warhammer/stab)
 	gripped_intents = null //One-handed. Pseudo-sidegrade between the Mace and Warhammer, offering more damage and dislocations at the cost of no Picking or Smashing.
+	swingsound = BLUNTWOOSH_LARGE
 	minstr = 7
 	wdefense = 3
 	smeltresult = /obj/item/ingot/steel
@@ -422,6 +424,7 @@
 	wdefense = 5
 	resistance_flags = FIRE_PROOF
 	icon_state = "psyflangedmace"
+	swingsound = BLUNTWOOSH_LARGE
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silver
 
@@ -457,6 +460,7 @@
 	minstr = 9
 	wdefense = 5
 	resistance_flags = FIRE_PROOF
+	swingsound = BLUNTWOOSH_LARGE
 	icon_state = "psyflangedmace"
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silverblessed
@@ -634,7 +638,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	associated_skill = /datum/skill/combat/maces
 	smeltresult = /obj/item/ash
-	swingsound = BLUNTWOOSH_MED
+	swingsound = BLUNTWOOSH_LARGE
 	minstr = 10
 	wdefense = 3
 	pixel_y = -16
