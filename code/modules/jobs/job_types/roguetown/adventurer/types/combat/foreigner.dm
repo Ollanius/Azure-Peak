@@ -397,8 +397,9 @@
 
 /datum/advclass/foreigner/bronzeclad
 	name = "Thespian-Errant"
-	tutorial = "Gladiators, legionnaire, reenactors; all are unified in their subconscious pursuit of entertaining something greater than themselves. You \
-	are a skilled combatant from beyond Azuria, who - for one reason or another - is intimately familiar with fighting in ancient equipment."
+	tutorial = "Gladiators from the arenas of Raneshen and Lirvas, reenactors from the curtain-dazzled courts of Otava and Grenzelhoft, and \
+	legionnaires from the outermost reaches of Psydonia itself; all are unified in their subconscious pursuit of entertaining something greater \ 
+	than themselves. You are a skilled combatant from beyond Azuria, who - for one reason or another - is intimately familiar with fighting in ancient equipment."
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/adventurer/bronzeclad
 	cmode_music = 'sound/music/combat_thespian.ogg'
@@ -767,9 +768,9 @@
 	name = "arbelos"
 	icon_state = "bronzescissor"
 	item_state = "bronzescissor"
-	desc = "A sharpened axhead that's been mounted onto a bronze gauntlet. Popularized at the turn of the millennium within Psydonia's underground gladiatorial arenas, it triumphs over the katar when it comes to thawrting blows and cleaving skulls. The wooden handle used to connect its axhead to the gauntlet is fragile, however; all it takes is a precise strike to neuter such a weapon."
+	desc = "A sharpened axhead that's been mounted onto a bronze gauntlet. Popularized at the turn of the millennium within the Underdark's gladiatorial arenas, it triumphs over the katar when it comes to thawrting blows and cleaving skulls. The wooden handle used to connect its axhead to the gauntlet is fragile, however; all it takes is a precise strike to neuter such a weapon."
 	wdefense = 5 //Much higher than usual for most unarmed weapons..
-	max_integrity = 50 //..but far more fragile.
+	max_integrity = 55 //..but far more fragile.
 	max_blade_int = 300
 	possible_item_intents = list(/datum/intent/axe/chop/arbelos, /datum/intent/axe/cut/arbelos, /datum/intent/katar/thrust/arbelos, /datum/intent/sword/peel)
 	thrown_bclass = BCLASS_CHOP
