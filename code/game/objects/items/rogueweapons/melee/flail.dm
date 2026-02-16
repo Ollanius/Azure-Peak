@@ -1,6 +1,6 @@
 /obj/item/rogueweapon/flail
 	force = 25
-	possible_item_intents = list(/datum/intent/flail/strike, /datum/intent/flail/smash)
+	possible_item_intents = list(/datum/intent/flail/strike, /datum/intent/flail/smash, /datum/intent/flail/sucker_punch)
 	name = "flail"
 	desc = "A spiked macehead and wooden handle, linked together with a length of chain. It can be spun around to smash armored opponents with tremendous force, cracking plate and bone alike with unflinching impunity."
 	icon_state = "iflail"
@@ -61,6 +61,23 @@
 	icon_state = "instrike"
 	item_d_type = "blunt"
 	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR
+
+/datum/intent/flail/sucker_punch
+	name = "unevadable punch"
+	desc = "Breech your target's guard with a swift-and-sudden jab. This strike deals low damage, but cannot be parried or dodged."
+	icon_state = "inpunch"
+	attack_verb = list("punches", "jabs", "clocks")
+	animname = "strike"
+	blade_class = BCLASS_BLUNT
+	hitsound = list('sound/combat/hits/punch/punch_hard (1).ogg', 'sound/combat/hits/punch/punch_hard (2).ogg', 'sound/combat/hits/punch/punch_hard (3).ogg')
+	damfactor = 0.5 // Deals around 12 (X STR, Iron Flail) to 21 (XIV STR, Steel Flail) damage. For reference, this is about ~20-40% more than what a Combat Knife's punch can deal.
+	penfactor = BLUNT_DEFAULT_PENFACTOR
+	clickcd = CLICK_CD_CHARGED
+	recovery = 10
+	item_d_type = "blunt"
+	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR - 30
+	canparry = FALSE
+	candodge = FALSE
 
 /datum/intent/flail/smash
 	name = "flailing smash"
@@ -171,7 +188,7 @@
 	force = 35
 	icon_state = "silverflail"
 	name = "silver morningstar"
-	possible_item_intents = list(/datum/intent/flail/strike, /datum/intent/flail/smash/ranged)
+	possible_item_intents = list(/datum/intent/flail/strike, /datum/intent/flail/smash/ranged, /datum/intent/flail/sucker_punch)
 	desc = "A heavy, silver flail. It follows the Grenzelhoftian design of a 'morning star', utilizing a longer chain to extend its reach. While stronger than a steel flail, it requires far more strength to effectively swing."
 	smeltresult = /obj/item/ingot/silver
 	max_integrity = 200 //Same value as before, for reference.
@@ -232,7 +249,7 @@
 	name = "Consecratia"
 	desc = "The weight of His anguish, His pain, His hope and His love for humenkind - all hanging on the ornamental silver-steel head chained to this arm. <br><br>A declaration of love for all that Psydon lives for, and a crushing reminder to the arch-nemesis that they will not triumph as long as He endures."
 	icon_state = "psymorningstar"
-	possible_item_intents = list(/datum/intent/flail/strike, /datum/intent/flail/smash/ranged)
+	possible_item_intents = list(/datum/intent/flail/strike, /datum/intent/flail/smash/ranged, /datum/intent/flail/sucker_punch)
 
 /obj/item/rogueweapon/flail/sflail/psyflail/relic/ComponentInitialize()
 	AddComponent(\
