@@ -514,9 +514,9 @@
 	desc = "A shorter variant of the flanged silver mace, rebalanced for one-handed usage. It isn't uncommon for these sidearms to mysteriously 'vanish' from an Adjudicator's belt, only to be 'rediscovered' - and subsequently kept - by a Confessor."
 	possible_item_intents = list(/datum/intent/mace/strike, /datum/intent/mace/strike/wallop)
 	gripped_intents = list(/datum/intent/mace/strike, /datum/intent/mace/strike/wallop, /datum/intent/mace/smash, /datum/intent/effect/daze)
-	force = 25
-	force_wielded = 30
-	minstr = 9
+	force = 23
+	force_wielded = 28
+	minstr = 7 //Lowered damage + minimum strength threshold. Otherwise, one-to-one with the original instance.
 	wdefense = 5 
 	wbalance = WBALANCE_SWIFT
 	resistance_flags = FIRE_PROOF
