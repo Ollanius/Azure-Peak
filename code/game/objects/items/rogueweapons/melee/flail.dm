@@ -18,7 +18,7 @@
 	anvilrepair = /datum/skill/craft/weaponsmithing
 	smeltresult = /obj/item/ingot/iron
 	parrysound = list('sound/combat/parry/parrygen.ogg')
-	swingsound = BLUNTWOOSH_MED
+	swingsound = BLUNTWOOSH_LARGE
 	throwforce = 5
 	wdefense = 0
 	minstr = 4
@@ -37,6 +37,7 @@
 	hitsound = list('sound/combat/hits/blunt/flailhit.ogg')
 	chargetime = 0
 	damfactor = 1.1
+	swingdelay = 4
 	penfactor = BLUNT_DEFAULT_PENFACTOR
 	icon_state = "instrike"
 	item_d_type = "blunt"
@@ -52,6 +53,7 @@
 	hitsound = list('sound/combat/hits/blunt/flailhit.ogg')
 	chargetime = 0
 	recovery = 15
+	swingdelay = 6
 	damfactor = 1.2 // Extra damage. Flail babe flail.
 	penfactor = BLUNT_DEFAULT_PENFACTOR
 	clickcd = CLICK_CD_CHARGED // Higher delay for a powerful ranged attack
@@ -151,7 +153,7 @@
 /obj/item/rogueweapon/flail/bronze
 	force = 27
 	throwforce = 20
-	max_integrity = 150
+	max_integrity = 125
 	icon_state = "bronzeflail"
 	name = "bronze flail"
 	desc = "A studded weight and a whittled handle, linked together with a length of bronze chain. It can be spun around to smash armored opponents with tremendous force, cracking plate and bone alike with unflinching impunity."
@@ -172,6 +174,7 @@
 	possible_item_intents = list(/datum/intent/flail/strike, /datum/intent/flail/smash/ranged)
 	desc = "A heavy, silver flail. It follows the Grenzelhoftian design of a 'morning star', utilizing a longer chain to extend its reach. While stronger than a steel flail, it requires far more strength to effectively swing."
 	smeltresult = /obj/item/ingot/silver
+	max_integrity = 200 //Same value as before, for reference.
 	minstr = 12
 	is_silver = TRUE
 
@@ -209,7 +212,7 @@
 	desc = "An ornate flail, plated in a ceremonial veneer of silver. Its flanged head can crumple even the toughest of darksteel-maille."
 	icon_state = "psyflail"
 	force = 35
-	minstr = 10
+	minstr = 11
 	wdefense = 0
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silverblessed
@@ -283,7 +286,7 @@
 	desc = "The lucerne's ungaitly cousin, favoring a 'ball-and-chain' design that - once spun - can devastate anything caught in its way; a trait that makes it dearly beloved by both peasantry and knights alike."
 	icon_state = "greatflail"
 	wdefense = 6
-	minstr = 10
+	minstr = 12
 	anvilrepair = /datum/skill/craft/weaponsmithing
 
 /obj/item/rogueweapon/flail/peasantwarflail/matthios
