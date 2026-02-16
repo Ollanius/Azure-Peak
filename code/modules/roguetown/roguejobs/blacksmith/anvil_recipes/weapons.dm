@@ -1331,7 +1331,7 @@
 	created_item = /obj/item/rogueweapon/sword/long/exe/berserk
 	appro_skill = /datum/skill/craft/weaponsmithing
 	i_type = "Weapons"
-	craftdiff = SKILL_LEVEL_MASTER
+	craftdiff = SKILL_LEVEL_LEGENDARY
 
 /datum/anvil_recipe/weapons/lithmyc/mace
 	name = "Lithmyc Mace (+ Blueprint)"
