@@ -476,6 +476,7 @@
 	cultural hallmarks, just behind the concepts of 'zenny-a-mug' happy hours and 'killing people over minor disagreements.'"
 	icon_state = "broadsword"
 	sheathe_icon = "broadsword"
+	swingsound = BLADEWOOSH_HUGE
 	max_blade_int = 230 //Less of an edge than the longsword..
 	max_integrity = 180 //..but tougher.
 	wdefense_wbonus = 3 // Same defense when one-handed, but slightly reduced wielded defense compared to the longsword.
@@ -977,6 +978,7 @@
 	icon_state = "exe"
 	minstr = 12
 	slot_flags = ITEM_SLOT_BACK
+	swingsound = BLADEWOOSH_HUGE
 	smeltresult = /obj/item/ingot/iron
 	max_blade_int = 330 
 	smelt_bar_num = 2 // 1 bar loss
@@ -1169,6 +1171,7 @@
 	desc = "A two-handed broadsword, fitted with a blade of pure silver. Each swing commands more effort than the last, but not without purpose. One blow to crack the deadite's leg in twain; and a heartbeat later, another to splatter the soil with bile and teeth."
 	icon_state = "silverbroadsword"
 	sheathe_icon = "psysword"
+	swingsound = BLADEWOOSH_HUGE
 	force = 20
 	force_wielded = 25
 	minstr = 11
@@ -1196,6 +1199,7 @@
 	desc = "Sunder, cleave, smite; a sea of coagulated blackness, speckled with crimson. Absolve, cherish, endure; the will of one, christened to save Psydonia when all else is lost. </br>'Even here it is not safe, and even this grave has been defaced. Yet, someone has written on this stone, in some angry hand - 'HOPE RIDES ALONE..'"
 	icon_state = "silverbroadsword"
 	sheathe_icon = "psysword"
+	swingsound = BLADEWOOSH_HUGE
 	force = 20
 	force_wielded = 25
 	minstr = 11
