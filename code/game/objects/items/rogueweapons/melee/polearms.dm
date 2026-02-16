@@ -1013,6 +1013,7 @@
 	inhand_y_dimension = 64
 	bigboy = TRUE
 	gripsprite = TRUE
+	swingsound = BLADEWOOSH_HUGE
 	wlength = WLENGTH_GREAT
 	w_class = WEIGHT_CLASS_BULKY
 	minstr = 9
