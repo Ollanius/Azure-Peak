@@ -278,7 +278,7 @@
 
 /datum/anvil_recipe/valuables/anointedberserksword
 	name = "Anointed Berserkers Sword (Secret!)"
-	req_bar = /obj/item/ingot/iron
+	req_bar = /obj/item/ingot/aaslag
 	hides_from_books = TRUE
 	additional_items = list(/obj/item/rogueweapon/sword/long/exe/berserk, /obj/item/roguegem/blood_diamond)
 	created_item = /obj/item/rogueweapon/sword/long/exe/berserk/gnoll
@@ -300,7 +300,7 @@
 
 /datum/anvil_recipe/valuables/daemonslayer
 	name = "Daemonslayer (Secret!)"
-	req_bar = /obj/item/ingot/silverblessed
+	req_bar = /obj/item/ingot/silver
 	hides_from_books = TRUE //Note to self - adding more than five additional items to a crafting recipe might result in unintended consequences.
 	additional_items = list(/obj/item/rogueweapon/sword/long/exe/berserk/gnoll, /obj/item/rogueweapon/greatsword/paalloy, /obj/item/ingot/draconic, /obj/item/ingot/weeping, /obj/item/riddleofsteel)
 	created_item = /obj/item/rogueweapon/sword/long/exe/berserk/dragonslayer
