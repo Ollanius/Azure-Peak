@@ -1355,9 +1355,18 @@
 	bypass_dupe_test = TRUE
 
 /datum/anvil_recipe/valuables/iron/berserksword
-	name = "Berserker's Sword (+1 B. Sword's Grip, +1 B. Sword's Blade)"
+	name = "Berserker's Sword (+1 B. Sword's Blade)"
 	req_bar = /obj/item/ingot/component/berserkswordgrip
 	additional_items = list(/obj/item/ingot/component/berserkswordblade)
+	created_item = /obj/item/rogueweapon/sword/long/exe/berserk
+	appro_skill = /datum/skill/craft/weaponsmithing
+	i_type = "Weapons"
+	craftdiff = SKILL_LEVEL_MASTER
+
+/datum/anvil_recipe/valuables/iron/berserkswordalt
+	name = "Berserker's Sword (+1 B. Sword's Grip)"
+	req_bar = /obj/item/ingot/component/berserkswordblade
+	additional_items = list(/obj/item/ingot/component/berserkswordgrip)
 	created_item = /obj/item/rogueweapon/sword/long/exe/berserk
 	appro_skill = /datum/skill/craft/weaponsmithing
 	i_type = "Weapons"
