@@ -226,13 +226,13 @@
 
 /datum/intent/sword/chop/broadsword
 	name = "heavy swing" //Standard penetration, but with a higher damage modifier.
-	penfactor = 30
-	damfactor = 1.1
+	penfactor = 20
+	damfactor = 1.15
 
 /datum/intent/sword/thrust/long/broadsword
 	name = "heavy thrust" //Ditto.
-	penfactor = 30
-	damfactor = 1.1
+	penfactor = 20
+	damfactor = 1.15
 	swingdelay = 4 //Halved swingdelay compared to chopping.
 
 /datum/intent/sword/chop/broadsword/heavy
@@ -246,7 +246,7 @@
 	name = "impale" //Stabbing variant of the Chop intent. Higher damage, but slower and evadable. Exclusive to two-handed broadswords.
 	icon_state = "inimpale"
 	attack_verb = list("impales", "thrusts into")
-	penfactor = 30
+	penfactor = 25
 	damfactor = 1.2
 	swingdelay = 8
 
