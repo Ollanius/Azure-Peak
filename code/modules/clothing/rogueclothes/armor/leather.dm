@@ -109,9 +109,21 @@
 
 /obj/item/clothing/suit/roguetown/armor/leather/studded/psyaltrist
 	name = "cuir-bouilli armor"
-	desc = "Treated, water-boiled and composite-layered leather armor of fine Otavan make."
+	desc = "A padded vest that's been reinforced with 'cuir-bouilli' - leather that's been treated, water-boiled, and composite-layered together. The \
+	thickness makes it an excellent alternative to lighter cuirasses, at the cost of being unfittable beneath most dedicated suits of armor. If the \
+	blacksteel-studded reinforcements and psystitchings're anything to go by, this particular vest was likely fashioned to vestume Otava's finest. "
 	icon_state = "cuirbouilli"
 	item_state = "cuirbouilli"
+	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER + 50
+
+/obj/item/clothing/suit/roguetown/armor/leather/studded/cuirbouilli
+	name = "cuir-bouilli vest"
+	desc = "A padded vest that's been reinforced with 'cuir-bouilli' - leather that's been treated, water-boiled, and composite-layered together. It \
+	is traditionally worn beneath a heavier cuirass to protect against bludgeons-and-thrusts, but can be confidently worn on its own without qualm."
+	icon_state = "cuirbouilli"
+	item_state = "cuirbouilli"
+	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
+	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER - 50
 
 /obj/item/clothing/suit/roguetown/armor/leather/heavy
 	name = "hardened leather armor"
