@@ -228,14 +228,12 @@
 	name = "heavy swing" //Standard penetration, but with a higher damage modifier.
 	penfactor = 30
 	damfactor = 1.15
-	max_intent_damage = 9999
 
 /datum/intent/sword/thrust/long/broadsword
 	name = "heavy thrust" //Ditto.
 	penfactor = 30
 	damfactor = 1.15
 	swingdelay = 4 //Halved swingdelay compared to chopping.
-	max_intent_damage = 9999
 	max_intent_damage = 75 //Will still penetrate most light armor, but hard-prevents it from breaking through any metal armor.
 
 /datum/intent/sword/chop/broadsword/heavy
