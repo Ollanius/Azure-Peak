@@ -217,7 +217,7 @@
 		"Hauberk"	= /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk,
 		"Cuirass"	= /obj/item/clothing/suit/roguetown/armor/plate/cuirass,
 		"Cuirass, 'Valorian' Steel"	= /obj/item/clothing/suit/roguetown/armor/plate/cuirass/legacy,
-		"Cuirass, 'Cuir-Buoilli' Leather'	= /obj/item/clothing/suit/roguetown/armor/leather/studded/cuirbouilli,
+		"Cuirass, 'Cuir-Buoilli' Leather"	= /obj/item/clothing/suit/roguetown/armor/leather/studded/cuirbouilli,
 		"None"
 	)
 	to_chat(H, span_warning("You are a holy knight, clad in maille and armed with steel. Where others of the clergy may have spent their free time studying scriptures, you devoted yourself towards fighting Psydonia's evils - a longsword in one hand, and a clenched psycross in the other."))
