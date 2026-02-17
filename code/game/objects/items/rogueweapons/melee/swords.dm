@@ -228,17 +228,20 @@
 	name = "heavy swing" //Standard penetration, but with a higher damage modifier.
 	penfactor = 30
 	damfactor = 1.15
+	max_intent_damage = 9999
 
 /datum/intent/sword/thrust/long/broadsword
 	name = "heavy thrust" //Ditto.
 	penfactor = 30
 	damfactor = 1.15
 	swingdelay = 4 //Halved swingdelay compared to chopping.
+	max_intent_damage = 9999
+	max_intent_damage = 75 //Will still penetrate most light armor, but hard-prevents it from breaking through any metal armor.
 
 /datum/intent/sword/chop/broadsword/heavy
 	name = "efforted swing" //Standard penetration, but with a higher damage modifier. Exclusive to the Executioner Sword series, when two-handed - or the Berserker's Sword, when one-handed.
 	penfactor = 30
-	damfactor = 1.25
+	damfactor = 1.2
 	swingdelay = 10
 	clickcd = CLICK_CD_CHARGED
 
@@ -249,6 +252,7 @@
 	penfactor = 30
 	damfactor = 1.3
 	swingdelay = 8
+	max_intent_damage = 75 //Ditto.
 
 /datum/intent/rend/krieg
 	intent_intdamage_factor = 0.2
