@@ -278,9 +278,9 @@
 
 /datum/anvil_recipe/valuables/anointedberserksword
 	name = "Anointed Berserkers Sword (Secret!)"
-	req_bar = /obj/item/ingot/aaslag
+	req_bar = /obj/item/ingot/component/glutcrystal
 	hides_from_books = TRUE
-	additional_items = list(/obj/item/rogueweapon/sword/long/exe/berserk, /obj/item/roguegem/blood_diamond)
+	additional_items = list(/obj/item/rogueweapon/sword/long/exe/berserk)
 	created_item = /obj/item/rogueweapon/sword/long/exe/berserk/gnoll
 	appro_skill = /datum/skill/craft/weaponsmithing
 	i_type = "Weapons"
