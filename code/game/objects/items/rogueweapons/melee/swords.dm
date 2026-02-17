@@ -909,7 +909,7 @@
 	smeltresult = /obj/item/ingot/steel
 	sellprice = 999
 	static_price = TRUE
-	max_integrity = 9999
+	max_integrity = 999
 	max_blade_int = 9999
 
 /obj/item/rogueweapon/sword/long/judgement/vlord
@@ -922,7 +922,7 @@
 	icon_state = "vlord"
 	item_state = "vlord"
 	wbalance = WBALANCE_NORMAL
-	max_blade_int = 6666
+	max_blade_int = 666
 	max_integrity = 9999
 	sellprice = 777
 	static_price = TRUE
