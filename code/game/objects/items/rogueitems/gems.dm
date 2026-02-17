@@ -172,13 +172,14 @@
 	icon_state = "blood"
 	sellprice = 188
 	desc = "Something about this gem just doesn't sit right with you. Holding it makes the blood leave your fingertips."
+	smeltresult = /obj/item/ingot/glutcrystal
 
 /obj/item/roguegem/blood_diamond/examine(mob/user)
 	. = ..()
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(H.patron.type == /datum/patron/inhumen/graggar)
-			. += span_danger("You know this gem well. They are born out of great violence, but only if it involves the mightiest of warriors.")
+			. += span_danger("You know this gem well. They are born out of great violence, but only if it involves the mightiest of warriors. Do not let a forge's flames sunder the surface, should you wish to repurpose it for left-handed rituals.")
 
 /obj/item/roguegem/amethyst
 	name = "amythortz"
