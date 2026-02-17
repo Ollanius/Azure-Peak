@@ -212,26 +212,6 @@
 		"Klappvisier Bascinet" = /obj/item/clothing/head/roguetown/helmet/bascinet/etruscan,
 		"Slitted Kettle" = /obj/item/clothing/head/roguetown/helmet/heavy/knight/skettle,
 	)
-		// ARMOR CHOICE.
-		var/armors = list(
-			"Hauberk",
-			"Cuirass",
-			"Valorian Cuirass",
-			"Leather Cuirass, 'Cuir-Buoilli'-Style",
-			)
-		var/armorchoice = input(H, "Choose your ARMOR.", "DON THE MANTLE OF YOUR GOD'S WILL.") as anything in armors
-		switch(armorchoice)
-			if("Hauberk")
-				armor = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk
-			if("Cuirass")
-				armor = /obj/item/clothing/suit/roguetown/armor/plate/cuirass
-			if("Valorian Cuirass")
-				armor = /obj/item/clothing/suit/roguetown/armor/plate/cuirass/legacy
-			if("Psydonic Cuirass")
-				armor = /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/ornate
-			if("Leather Cuirass, 'Cuir-Buoilli'-Style")
-				armor = /obj/item/clothing/suit/roguetown/armor/leather/studded/cuirbouilli
-
 	to_chat(H, span_warning("You are a holy knight, clad in maille and armed with steel. Where others of the clergy may have spent their free time studying scriptures, you devoted yourself towards fighting Psydonia's evils - a longsword in one hand, and a clenched psycross in the other."))
 	belt = /obj/item/storage/belt/rogue/leather
 	backl = /obj/item/storage/backpack/rogue/satchel
@@ -251,7 +231,7 @@
 		if(/datum/patron/old_god)
 			cloak = /obj/item/clothing/cloak/tabard/psydontabard
 			helmets += list("Psydonic Armet" = /obj/item/clothing/head/roguetown/helmet/heavy/psydonhelm, "Psydonic Bucket Helm" = /obj/item/clothing/head/roguetown/helmet/heavy/psybucket)
-			armors += list("Psydonic Cuirass" = /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/ornate)
+			var/armors += list("Psydonic Cuirass" = /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/ornate)
 		if(/datum/patron/divine/astrata)
 			cloak = /obj/item/clothing/cloak/tabard/devotee/astrata
 			helmets += list("Old Astratan Helm" = /obj/item/clothing/head/roguetown/helmet/heavy/astratahelm)
@@ -285,6 +265,25 @@
 		// HELM CHOICE.
 		var/helmchoice = input(H, "Choose your HELMET.", "DON THE VEIL OF YOUR GOD'S JUDGEMENT.") as anything in helmets
 		head = helmets[helmchoice]
+		// ARMOR CHOICE.
+		armors = list(
+			"Hauberk",
+			"Cuirass",
+			"Valorian Cuirass",
+			"Leather Cuirass, 'Cuir-Buoilli'-Style",
+			)
+		var/armorchoice = input(H, "Choose your ARMOR.", "DON THE MANTLE OF YOUR GOD'S WILL.") as anything in armors
+		switch(armorchoice)
+			if("Hauberk")
+				armor = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk
+			if("Cuirass")
+				armor = /obj/item/clothing/suit/roguetown/armor/plate/cuirass
+			if("Valorian Cuirass")
+				armor = /obj/item/clothing/suit/roguetown/armor/plate/cuirass/legacy
+			if("Psydonic Cuirass")
+				armor = /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/ornate
+			if("Leather Cuirass, 'Cuir-Buoilli'-Style")
+				armor = /obj/item/clothing/suit/roguetown/armor/leather/studded/cuirbouilli
 		// WEAPON CHOICE.
 		var/weapons = list("Longsword","Broadsword","Mace","Flail","Flail, Studded","Whip","Spear","Axe")
 		var/weapon_choice = input(H, "Choose your WEAPON.", "TAKE UP YOUR GOD'S ARMS.") as anything in weapons
