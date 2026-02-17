@@ -179,7 +179,7 @@
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(H.patron.type == /datum/patron/inhumen/graggar)
-			. += span_danger("You know this gem well. They are born out of great violence, but only if it involves the mightiest of warriors. Do not let a forge's flames sunder the surface, should you wish to repurpose it for left-handed rituals.")
+			. += span_danger("You know this gem well. They are born out of great violence, but only if it involves the mightiest of warriors.")
 
 /obj/item/roguegem/amethyst
 	name = "amythortz"
