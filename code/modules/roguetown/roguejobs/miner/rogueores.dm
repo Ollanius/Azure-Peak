@@ -331,3 +331,35 @@
 	smeltresult = /obj/item/ingot/iron //Smelting the ingot again 'burns away' the fungal temperance, allowing it to be reused for said recipes.
 	color = "#bc9ab7"
 	sellprice = 30 //Rarer to obtain than iron, and feasible to sell off as salvage.
+
+//Components!
+
+/obj/item/ingot/component //Root. Don't use under most circumstances.
+	name = "substanceless presence"
+	desc = "Something that you were likely never meant to see. Pray to a higher presence for assistance, before rendering it asunder in the forge's flames once more."
+	icon_state = "oreada"
+	smeltresult = /obj/item/ingot/iron
+	sellprice = 1
+
+/obj/item/ingot/component/heapofrawiron
+	name = "heap of raw iron"
+	desc = "A massive hunk, born from the incoherent fusion of molten iron. Chunks of ore-and-ingotry peak out from its jagged surface, yearning to be refined - be it into ingots, or something more purposeful."
+	icon_state = "component_berserkheap"
+	smeltresult = /obj/item/rogueore/iron
+	sellprice = 44
+	smelt_bar_num = 4
+
+/obj/item/ingot/component/berserkswordblade
+	name = "blade of the berserkers sword"
+	desc = "A massive blade, forged from a raw heap of iron. The unique spike-styled tang seems to be longer than what'd be seen on most greatswords, stowable only by the innards of a fittingly large handle."
+	icon_state = "component_berserkblade"
+	smeltresult = /obj/item/ingot/iron
+	sellprice = 33
+	smelt_bar_num = 3
+
+/obj/item/ingot/component/berserkswordgrip
+	name = "handle of the berserkers sword"
+	desc = "A massive handle, assembled from the double-handed grip of an Executioner's Sword. The unique crescent-styled crossguard seems to have a slot, fittable only by the tang of a fittingly large blade."
+	icon_state = "component_berserkhandle"
+	smeltresult = /obj/item/ingot/iron
+	sellprice = 33
