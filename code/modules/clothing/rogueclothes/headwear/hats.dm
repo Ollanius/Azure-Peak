@@ -282,6 +282,12 @@
 	desc = "A winding length of cloth, meticulously lined with heavy leather strips. Errant impacts are thwarted, yet not a degree of vision is impaired; valuable traits, for those who have taken the mantle of confronting monsters with overwhelming strength. </br>'..All it takes for evil to triumph is for good men to do nothing.'"
 	max_integrity = ARMOR_INT_HELMET_LEATHER //Far less durable than the Monk's variant. Remember that the Barbarian retrieves solid weapon skills and armor, even as a pugilist.
 
+/obj/item/clothing/head/roguetown/headband/monk/cleric
+	name = "cleric's headband"
+	desc = "A winding length of cloth, interwoven with thick cotton strips. Errant impacts are thwarted, yet not a degree of vision is impaired; valuable traits, for the Cleric who's aim must remain true - and more importantly, unfettered. </br>'..Let there be light.'"
+	max_integrity = ARMOR_INT_HELMET_CLOTH + 35
+	armor = ARMOR_INT_HELMET_LEATHER
+
 /obj/item/clothing/head/roguetown/inqhat
 	name = "inquisitorial hat"
 	desc = "A fine leather slouch, beplumed with a crimson feather and fitted with a hidden steel skull cap. It serves as a reminder that the Holy Otavan Inquisition triumphs in one avenue above all else - fashion. </br>'To keep ones vision away from the heavens, and focused on the sin beneath the soil.'"
