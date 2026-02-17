@@ -75,7 +75,7 @@
 	clickcd = CLICK_CD_CHARGED //Slower(?) than the Dagger's variant.
 	recovery = 12 //A little longer, too.
 	item_d_type = "blunt"
-	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR - 30
+	intent_intdamage_factor = 1.3
 	canparry = FALSE
 	candodge = FALSE
 
