@@ -215,9 +215,8 @@
 	var/armors = list(
 		"Steel Hauberk"	= /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk,
 		"Steel Cuirass"	= /obj/item/clothing/suit/roguetown/armor/plate/cuirass,
-		"Steel Cuirass, Valorian"	= /obj/item/clothing/suit/roguetown/armor/plate/cuirass/legacy,
-		"Leather Cuirass, Cuir-Buoilli"	= /obj/item/clothing/suit/roguetown/armor/leather/studded/cuirbouilli,
 	)
+
 	to_chat(H, span_warning("You are a holy knight, clad in maille and armed with steel. Where others of the clergy may have spent their free time studying scriptures, you devoted yourself towards fighting Psydonia's evils - a longsword in one hand, and a clenched psycross in the other."))
 	belt = /obj/item/storage/belt/rogue/leather
 	backl = /obj/item/storage/backpack/rogue/satchel
@@ -237,7 +236,6 @@
 		if(/datum/patron/old_god)
 			cloak = /obj/item/clothing/cloak/tabard/psydontabard
 			helmets += list("Psydonic Armet" = /obj/item/clothing/head/roguetown/helmet/heavy/psydonhelm, "Psydonic Bucket Helm" = /obj/item/clothing/head/roguetown/helmet/heavy/psybucket)
-			armors += list("Psydonic Cuirass" = /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/ornate)
 		if(/datum/patron/divine/astrata)
 			cloak = /obj/item/clothing/cloak/tabard/devotee/astrata
 			helmets += list("Old Astratan Helm" = /obj/item/clothing/head/roguetown/helmet/heavy/astratahelm)
