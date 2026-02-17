@@ -70,10 +70,10 @@
 	animname = "strike"
 	blade_class = BCLASS_BLUNT
 	hitsound = list('sound/combat/hits/punch/punch_hard (1).ogg', 'sound/combat/hits/punch/punch_hard (2).ogg', 'sound/combat/hits/punch/punch_hard (3).ogg')
-	damfactor = 0.5 // Deals around 12 (X STR, Iron Flail) to 21 (XIV STR, Steel Flail) damage. For reference, this is about ~20-40% more than what a Combat Knife's punch can deal.
+	damfactor = 0.6 // Deals around 12 (X STR, Iron Flail) to 25 (XIV STR, Steel Flail) damage. For reference, this is about ~20-40% more than what a Combat Knife's punch can deal.
 	penfactor = BLUNT_DEFAULT_PENFACTOR
-	clickcd = CLICK_CD_CHARGED
-	recovery = 10
+	clickcd = CLICK_CD_CHARGED //Slower(?) than the Dagger's variant.
+	recovery = 12 //A little longer, too.
 	item_d_type = "blunt"
 	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR - 30
 	canparry = FALSE
