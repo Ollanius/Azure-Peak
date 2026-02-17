@@ -341,6 +341,24 @@
 	smeltresult = /obj/item/ingot/iron
 	sellprice = 1
 
+/obj/item/ingot/component/glutcrystal
+	name = "crystalline glut"
+	desc = "Fractal violence, gleaming with a crimson haze that beckons for its final purpose to be accomplished."
+	icon_state = "component_blood"
+	smeltresult = /obj/item/roguegem/blood_diamond //Ensures that it can be reused for any Glut-specific ritual, should one find this in its crystalline form.
+	sellprice = 33
+
+/obj/item/ingot/component/glutcrystal/examine(mob/user)
+	. = ..()
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		if(H.patron.type == /datum/patron/inhumen/graggar)
+			. += span_danger("You know this gem well. They are born out of great violence, but only if it involves the mightiest of warriors. The crystalline surface, borne of immense heat, is equally resplendant yet fragile; sundering it beneath a forge's flame will completely restore its power.")
+
+/obj/item/ingot/component/glutcrystal/Initialize()
+  ..()
+  add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = GLOW_COLOR_VAMPIRIC, "alpha" = 100, "size" = 1))
+
 /obj/item/ingot/component/heapofrawiron
 	name = "heap of raw iron"
 	desc = "A massive hunk, born from the incoherent fusion of molten iron. Chunks of ore-and-ingotry peak out from its jagged surface, yearning to be refined - be it into ingots, or something more purposeful."
