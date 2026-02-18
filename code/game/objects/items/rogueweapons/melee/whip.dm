@@ -80,13 +80,13 @@
 	name = "dismembering lash"
 	desc = "Lash a target with a whip's alloyed tip, precisely cutting them apart from afar."
 	blade_class = BCLASS_CUT
-	attack_verb = list("lashes", "cracks")
+	attack_verb = list("deftly lashes", "deftly cracks")
 	hitsound = list('sound/combat/hits/blunt/flailhit.ogg')
 	chargetime = 0
-	recovery = 12
+	recovery = 10
 	penfactor = 30 // Total AP potential of 53-55, discounting strength bonuses. Will likely penetrate non-slash resistant light armor, but fail to chunk through maille and plate.
 	reach = 3
-	icon_state = "inlashmaster"
+	icon_state = "inmasterlash"
 	item_d_type = "slash"
 
 //Ranged mace-like mode - merc unique for Nagaika (steppesman)
