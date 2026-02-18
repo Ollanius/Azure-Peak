@@ -121,11 +121,6 @@
 	path = /obj/item/storage/belt/rogue/leather/battleskirt/faulds
 	sort_category = "Accessories"
 
-/datum/loadout_item/breechclothbelt
-	name = "Belt with Breechcloth"
-	path = /obj/item/storage/belt/rogue/leather/battleskirt/breechcloth
-	sort_category = "Accessories"
-
 /datum/loadout_item/psicross
 	name = "Psydonian Cross"
 	path = /obj/item/clothing/neck/roguetown/psicross
