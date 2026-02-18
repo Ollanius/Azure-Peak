@@ -6,7 +6,7 @@
 	force = 5
 	lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
 	righthand_file = 'modular/Neu_Food/icons/food_righthand.dmi'
-	experimental_inhand = TRUE
+	experimental_inhand = FALSE
 	throwforce = 10
 	reagent_flags = OPENCONTAINER
 	amount_per_transfer_from_this = 6
@@ -308,6 +308,7 @@
 	dropshrink = 1
 	icon_state = "agoblet"
 	sellprice = 0
+	experimental_inhand = TRUE
 
 /obj/item/reagent_containers/glass/cup/carved/jade
 	name = "jade cup"
