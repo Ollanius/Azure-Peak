@@ -117,7 +117,7 @@
 	sort_category = "Accessories"
 
 /datum/loadout_item/fauldedbelt
-	name = "Belt with Faulds"
+	name = "Belt with faulds"
 	path = /obj/item/storage/belt/rogue/leather/battleskirt/faulds
 	sort_category = "Accessories"
 
