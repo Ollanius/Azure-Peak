@@ -959,6 +959,13 @@
 	additional_items = list(/obj/item/ingot/steel)
 	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/sheriff
 
+/datum/anvil_recipe/armor/steel/beakhelm
+	name = "Beak helmet, Steel (+1 Steel)"
+	req_bar = /obj/item/ingot/steel
+	req_blade = /obj/item/blade/steel_plate
+	additional_items = list(/obj/item/ingot/steel)
+	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/beakhelm
+
 /datum/anvil_recipe/armor/steel/plateboot
 	name = "Plated Boots, Steel"
 	req_bar = /obj/item/ingot/steel
@@ -1011,6 +1018,20 @@
 	req_bar = /obj/item/ingot/steel
 	req_blade = /obj/item/blade/steel_plate
 	created_item = /obj/item/clothing/shoes/roguetown/horseshoes/steel
+
+/datum/anvil_recipe/armor/steel/barding
+	name = "Saiga Barding, Chainmail (+1 Steel)"
+	req_bar = /obj/item/ingot/steel
+	req_blade = /obj/item/blade/steel_plate
+	additional_items = list(/obj/item/ingot/steel)
+	created_item = /obj/item/clothing/barding/chain
+
+/datum/anvil_recipe/armor/steel/barding/fogbeast
+	name = "Fogbeast Barding, Chainmail (+1 Steel)"
+	req_bar = /obj/item/ingot/steel
+	req_blade = /obj/item/blade/steel_plate
+	additional_items = list(/obj/item/ingot/steel)
+	created_item = /obj/item/clothing/barding/fogbeast/chain
 
 // HOLY STEEL
 
