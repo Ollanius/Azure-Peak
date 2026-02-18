@@ -400,11 +400,11 @@
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(H.patron.type == /datum/patron/inhumen/graggar)
-			. += span_danger("You know this gem well. They are born out of great violence, but only if it involves the mightiest of warriors. The crystalline surface, borne of immense heat, is equally resplendant yet fragile; sundering it beneath a forge's flame will completely restore its power.")
+			. += span_danger("You know this gem well. They are born out of great violence, but only if it involves the mightiest of warriors. Fleshcrafting it with the flesh of whatever warrior birthed this gem will allow me to summon another of their kind into this world. Melting away its crystalline shell is ideal, if you wish to ensure no chance for error while conducting such a ritual.")
 
 /obj/item/ingot/component/glutcrystal/Initialize()
   ..()
-  add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = GLOW_COLOR_VAMPIRIC, "alpha" = 100, "size" = 1))
+  add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = GLOW_COLOR_VAMPIRIC, "alpha" = 120, "size" = 1))
 
 /obj/item/ingot/component/heapofrawiron
 	name = "heap of raw iron"
