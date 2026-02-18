@@ -179,6 +179,8 @@
 	obj_flags = CAN_BE_HIT
 	destroy_sound = 'sound/combat/hits/onwood/destroyfurniture.ogg'
 	attacked_sound = "woodimpact"
+	associated_skill = /datum/skill/combat/unarmed
+	swingsound = BLUNTWOOSH_LARGE
 
 /obj/item/chair/rogue/getonmobprop(tag)
 	. = ..()
@@ -279,6 +281,8 @@
 	blade_dulling = DULLING_BASHCHOP
 	destroy_sound = 'sound/combat/hits/onwood/destroyfurniture.ogg'
 	attacked_sound = "woodimpact"
+	associated_skill = /datum/skill/combat/unarmed
+	swingsound = BLUNTWOOSH_LARGE
 
 /obj/item/chair/stool/bar/rogue
 	name = "stool"
@@ -298,6 +302,8 @@
 	obj_flags = CAN_BE_HIT
 	destroy_sound = 'sound/combat/hits/onwood/destroyfurniture.ogg'
 	attacked_sound = "woodimpact"
+	associated_skill = /datum/skill/combat/unarmed
+	swingsound = BLUNTWOOSH_LARGE
 
 /obj/item/chair/stool/bar/rogue/getonmobprop(tag)
 	. = ..()
