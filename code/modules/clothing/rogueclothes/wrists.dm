@@ -326,6 +326,8 @@
 	name = "gem bracelet base"
 	desc = "You shouldn't be seeing this."
 	slot_flags = ITEM_SLOT_WRISTS
+	armor = ARMOR_PLATE
+	max_integrity = ARMOR_INT_SIDE_IRON - 112 //Iron-tier protection with halved durability.
 	icon = 'icons/roguetown/clothing/wrists.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/gembracelet.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_gembracelet.dmi'
