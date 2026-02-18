@@ -690,7 +690,6 @@
 	icon_state = "psycross_b"
 	item_state = "psycross_b"
 	sellprice = 25
-	is_silver = TRUE
 
 /obj/item/clothing/neck/roguetown/psicross/silver
 	name = "silver psycross"
