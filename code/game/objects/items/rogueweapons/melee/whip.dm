@@ -76,18 +76,15 @@
 	item_d_type = "slash"
 
 //Dismembering Lash = 1:1 to the Lash, but permits dismemberment. Partially functions like the original whip. Keep this restricted to whips with high strength requirements and alloyed tips.
-/datum/intent/whip/lash/dismember
-	name = "dismembering lash"
-	desc = "Lash a target with a whip's alloyed tip, precisely cutting them apart from afar."
-	blade_class = BCLASS_CUT
-	attack_verb = list("deftly lashes", "deftly cracks")
-	hitsound = list('sound/combat/hits/blunt/flailhit.ogg')
-	chargetime = 0
-	recovery = 10
-	penfactor = 30 // Total AP potential of 53-55, discounting strength bonuses. Will likely penetrate non-slash resistant light armor, but fail to chunk through maille and plate.
-	reach = 3
+/datum/intent/whip/lash/master
+	name = "sundercate"
 	icon_state = "inmasterlash"
-	item_d_type = "slash"
+	desc = "Lash a target with a whip's alloyed tip, precisely cutting them apart from afar. </br>Precise lashes can uniquely dismember up to three tiles away."
+	blade_class = BCLASS_CUT
+	attack_verb = list("deftly lashes", "masterfully cracks")
+	hitsound = list('sound/combat/hits/blunt/flailhit.ogg')
+	recovery = 10
+	icon_state = "inmasterlash"
 
 //Ranged mace-like mode - merc unique for Nagaika (steppesman)
 /datum/intent/whip/crack/blunt
@@ -127,7 +124,7 @@
 	icon_state = "psywhip"
 	is_silver = TRUE
 	force = 25
-	possible_item_intents = list(/datum/intent/whip/lash, /datum/intent/whip/crack, /datum/intent/whip/punish, /datum/intent/whip/lash/dismember)
+	possible_item_intents = list(/datum/intent/whip/lash, /datum/intent/whip/crack, /datum/intent/whip/punish, /datum/intent/whip/lash/master)
 	minstr = 11
 	wdefense = 0
 	anvilrepair = /datum/skill/craft/weaponsmithing
@@ -149,7 +146,7 @@
 	desc = "A hefty, silver whip. The uncoiled leather is tipped with a silver barb, which can sunder the blighted from a remarkable distance. </br>'Die, monster! You don't belong in this world!'"
 	icon_state = "silverwhip"
 	force = 23 //Experimental change - adds a +2 to force, as a bridge between handweapons and blunt weapons. Higher strength minimum. Do not raise above 25, unless you want to resurrect maille-shatterers.
-	possible_item_intents = list(/datum/intent/whip/lash, /datum/intent/whip/crack, /datum/intent/whip/punish, /datum/intent/whip/lash/dismember)
+	possible_item_intents = list(/datum/intent/whip/lash, /datum/intent/whip/crack, /datum/intent/whip/punish, /datum/intent/whip/lash/master)
 	minstr = 12 //Locks 100% effectiveness - and partially disables ranged dismemberment - unless you either have a +2 STR statpack or are a dedicated melee combatant.
 	wdefense = 0
 	is_silver = TRUE
@@ -170,7 +167,7 @@
 	name = "psydonic whip"
 	desc = "An ornate whip, plated in a ceremonial veneer of silver. Crack the leather and watch as the apostates clammer aside."
 	icon_state = "psywhip_lesser"
-	possible_item_intents = list(/datum/intent/whip/lash, /datum/intent/whip/crack, /datum/intent/whip/punish, /datum/intent/whip/lash/dismember)
+	possible_item_intents = list(/datum/intent/whip/lash, /datum/intent/whip/crack, /datum/intent/whip/punish, /datum/intent/whip/lash/master)
 	force = 23
 	minstr = 11
 	wdefense = 0
@@ -204,5 +201,5 @@
 	force = 21 //Same damage as the leathers.
 	minstr = 11 //Nearly double the strength requirement of a regular whip, as it is able to potentially disemember from beyond one tile away. Should be unideal to use, unless you're a dedicated melee role.
 	wdefense = 0
-	possible_item_intents = list(/datum/intent/whip/lash, /datum/intent/whip/crack, /datum/intent/whip/punish, /datum/intent/whip/lash/dismember) //Able to dismember at range. 'Holy' is a catchall term, in this case.
+	possible_item_intents = list(/datum/intent/whip/lash, /datum/intent/whip/crack, /datum/intent/whip/punish, /datum/intent/whip/lash/master) //Able to dismember at range. 'Holy' is a catchall term, in this case.
 	smeltresult = /obj/item/ingot/bronze
