@@ -173,14 +173,14 @@
 	sellprice = 188
 	desc = "Something about this gem just doesn't sit right with you. Holding it makes the blood leave your fingertips."
 	smeltresult = /obj/item/ingot/component/glutcrystal
-	dropshrink = 0.8
+	dropshrink = 1
 
 /obj/item/roguegem/blood_diamond/examine(mob/user)
 	. = ..()
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(H.patron.type == /datum/patron/inhumen/graggar)
-			. += span_danger("You know this gem well. They are born out of great violence, but only if it involves the mightiest of warriors. Fleshcrafting it with the flesh of whatever warrior birthed this gem will allow me to summon another of their kind into this world.")
+			. += span_danger("You know this gem well. They are born out of great violence, but only if it involves the mightiest of warriors. </br>Fleshcrafting it with the meat of whatever warrior birthed this gem will allow me to summon another of their kind into this world.")
 
 /obj/item/roguegem/blood_diamond/Initialize()
   ..()
