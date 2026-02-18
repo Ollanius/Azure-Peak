@@ -92,16 +92,19 @@
 
 /obj/item/storage/belt/rogue/leather/battleskirt/breechcloth
 	name = "belt with breechcloth"
-	desc = "A fine leather strap notched with holes for a buckle to secure itself, notched above a halved tabard's coverings."
+	desc = "A fine leather strap notched with holes for a buckle to secure itself, and nestled above a halved tabard's coverings."
 	icon_state = "breechcloth"
 	body_parts_covered = GROIN //A loincloth, in all but name!
+	flags_inv = HIDECROTCH
 	sewrepair = FALSE
 	detail_tag = "_belt"
 
 /obj/item/storage/belt/rogue/leather/battleskirt/breechcloth/blackbelt
 	name = "black belt with breechcloth"
+	desc = "A fine black-leather strap notched with holes for a buckle to secure itself, and nestled above a halved tabard's coverings."
 	icon_state = "breechclothalt"
 	body_parts_covered = GROIN //A loincloth, in all but name!
+	flags_inv = HIDECROTCH
 	sewrepair = FALSE
 	detail_tag = "_belt"
 
