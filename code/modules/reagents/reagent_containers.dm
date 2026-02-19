@@ -81,7 +81,11 @@
 	if(covered)
 		if(!silent)
 			var/who = (isnull(user) || eater == user) ? "my" : "[eater.p_their()]"
-			to_chat(user, span_warning("I have to remove [who] [covered] first!"))
+			to_chat(user, span_warning("I have to remove [who] [covered], first!"))
+		return FALSE
+	if(splillable)
+		if(spillable = FALSE)
+			to_chat(user, span_warning("I have to remove the cork, first."))
 		return FALSE
 	return TRUE
 
