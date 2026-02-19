@@ -82,7 +82,7 @@ GLOBAL_LIST_INIT(wisdoms, world.file2list("strings/rt/wisdoms.txt"))
 		if(!fancy)
 			desc = "A bottle with a cork."
 	else
-		reagent_flags = OPENCONTAINER | TRANSFERABLE
+		reagent_flags = OPENCONTAINER|REFILLABLE|DRAINABLE
 		reagents.flags = reagent_flags
 		playsound(user.loc,'sound/items/uncork.ogg', 100, TRUE)
 		to_chat(user, span_notice("You thumb off the cork from [src]."))
