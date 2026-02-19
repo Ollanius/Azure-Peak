@@ -4,7 +4,7 @@
 	icon = 'icons/roguetown/clothing/neck.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/neck.dmi'
 	bloody_icon_state = "bodyblood"
-	experimental_inhand = FALSE
+	experimental_inhand = TRUE
 	alternate_worn_layer = NECK_LAYER
 	var/overarmor
 
