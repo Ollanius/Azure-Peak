@@ -4,7 +4,7 @@
 	icon_state = "ore"
 	w_class = WEIGHT_CLASS_NORMAL
 	resistance_flags = FIRE_PROOF
-	experimental_inhand = FALSE
+	experimental_inhand = TRUE
 	grid_width = 64
 	grid_height = 32
 
