@@ -10,7 +10,7 @@
 	fill_icon_thresholds = list(0, 33, 66, 100)
 	w_class = WEIGHT_CLASS_TINY
 	experimental_onhip = FALSE
-	experimental_inhand = FALSE
+	experimental_inhand = TRUE
 	grid_height = 32 // Takes 1x1 area
 	sellprice = 1
 
