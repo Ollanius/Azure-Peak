@@ -41,7 +41,7 @@
 	var/unlocksound = 'sound/foley/doors/woodlock.ogg'
 	var/rattlesound = 'sound/foley/doors/lockrattle.ogg'
 	var/masterkey = TRUE //if masterkey can open this regardless
-	var/kickthresh = 15
+	var/kickthresh = 12
 	var/swing_closed = TRUE
 	var/lock_strength = 100
 	var/repairable = FALSE
@@ -86,7 +86,7 @@
 				var/mob/living/L = user
 				if(L.STASTR >= initial(kickthresh))
 					kickthresh--
-				if((prob(L.STASTR * 0.5) || kickthresh == 0) && (L.STASTR >= initial(kickthresh)))
+				if((prob(L.STASTR * 0.8) || kickthresh == 0) && (L.STASTR >= initial(kickthresh)))
 					playsound(src, 'sound/combat/hits/onwood/woodimpact (1).ogg', 100)
 					user.visible_message(span_warning("[user] kicks open [src]!"), \
 						span_notice("I kick open [src]!"))
@@ -810,7 +810,7 @@
 	keylock = FALSE
 	max_integrity = 1000
 	over_state = "woodopen"
-	kickthresh = 10
+	kickthresh = 12
 	openSound = 'sound/foley/doors/shittyopen.ogg'
 	closeSound = 'sound/foley/doors/shittyclose.ogg'
 	smashable = TRUE
@@ -851,7 +851,7 @@
 	max_integrity = 2000
 	over_state = "dunjonopen"
 	var/viewportdir
-	kickthresh = 15
+	kickthresh = 14
 	locksound = 'sound/foley/doors/lockmetal.ogg'
 	unlocksound = 'sound/foley/doors/lockmetal.ogg'
 	rattlesound = 'sound/foley/doors/lockrattlemetal.ogg'
