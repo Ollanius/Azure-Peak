@@ -13,7 +13,7 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/masks.dmi'
 	body_parts_covered = FACE
 	slot_flags = ITEM_SLOT_MASK
-	experimental_inhand = FALSE
+	experimental_inhand = TRUE
 	experimental_onhip = FALSE
 	var/overarmor = TRUE
 
