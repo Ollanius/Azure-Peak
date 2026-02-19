@@ -37,19 +37,19 @@
 	created_item = /obj/item/roguestatue/blacksteel
 
 /datum/anvil_recipe/valuables/zcross_iron
-	name = "Inverted Psycross (1 iron)"
+	name = "Inverted Psycross"
 	req_bar = /obj/item/ingot/iron
 	created_item = /obj/item/clothing/neck/roguetown/psicross/inhumen/iron
 	craftdiff = 1
 
 /datum/anvil_recipe/valuables/matthios
-	name = "Amulet of Matthios (1 gold)"
+	name = "Amulet of Matthios"
 	req_bar = /obj/item/ingot/gold
 	created_item = /obj/item/clothing/neck/roguetown/psicross/inhumen/matthios
 	craftdiff = 1
 
 /datum/anvil_recipe/valuables/graggar
-	name = "Amulet of Graggar (1 iron)"
+	name = "Amulet of Graggar"
 	req_bar = /obj/item/ingot/iron
 	created_item = /obj/item/clothing/neck/roguetown/psicross/inhumen/graggar
 	craftdiff = 1
