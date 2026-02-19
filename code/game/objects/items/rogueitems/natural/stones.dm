@@ -136,7 +136,7 @@ GLOBAL_LIST_INIT(stone_personality_descs, list(
 	slot_flags = ITEM_SLOT_MOUTH
 	obj_flags = null
 	w_class = WEIGHT_CLASS_TINY
-	experimental_inhand = FALSE
+	experimental_inhand = TRUE
 	associated_skill = /datum/skill/combat/unarmed
 	mill_result = /obj/item/reagent_containers/powder/mineral
 	/// If our stone is magical, this lets us know -how- magical. Maximum is 15.
