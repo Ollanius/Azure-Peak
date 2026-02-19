@@ -12,7 +12,7 @@
 	slot_flags = ITEM_SLOT_RING
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	anvilrepair = /datum/skill/craft/armorsmithing
-	experimental_inhand = FALSE
+	experimental_inhand = TRUE
 	drop_sound = 'sound/foley/coinphy (1).ogg'
 	salvage_result = null
 
