@@ -61,7 +61,7 @@
 	color = "#000042"
 	taste_description = "sweet mana"
 	scent_description = "berries"
-	overdose_threshold = 76
+	overdose_threshold = 51
 	metabolization_rate = REAGENTS_METABOLISM
 	alpha = 173
 
@@ -90,7 +90,7 @@
 	color = "#129c00"
 	taste_description = "sweet tea"
 	scent_description = "grass"
-	overdose_threshold = 76
+	overdose_threshold = 51
 	metabolization_rate = REAGENTS_METABOLISM
 	alpha = 173
 
