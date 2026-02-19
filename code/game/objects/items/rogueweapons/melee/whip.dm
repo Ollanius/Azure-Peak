@@ -78,13 +78,12 @@
 //Dismembering Lash = 1:1 to the Lash, but permits dismemberment. Partially functions like the original whip. Keep this restricted to whips with high strength requirements and alloyed tips.
 /datum/intent/whip/lash/master
 	name = "sundercate"
-	icon_state = "inmasterlash"
+	icon_state = "inlashmaster"
 	desc = "Lash a target with a whip's alloyed tip, precisely cutting them apart from afar. </br>Precise lashes can uniquely dismember up to three tiles away."
 	blade_class = BCLASS_CUT
 	attack_verb = list("deftly lashes", "masterfully cracks")
 	hitsound = list('sound/combat/hits/blunt/flailhit.ogg')
 	recovery = 10
-	icon_state = "inmasterlash"
 
 //Ranged mace-like mode - merc unique for Nagaika (steppesman)
 /datum/intent/whip/crack/blunt
