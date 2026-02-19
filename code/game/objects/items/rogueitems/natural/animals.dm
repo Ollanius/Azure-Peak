@@ -36,64 +36,54 @@
 	drop_sound = 'sound/foley/dropsound/cloth_drop.ogg'
 	color = "#5c5243"
 	sellprice = 18
-	experimental_inhand = FALSE
+	experimental_inhand = TRUE
 
 /obj/item/natural/fur/goat
 	desc = "from a gote."
 	icon_state = "pelt_gote"
 	color = null
-	experimental_inhand = TRUE
-
 
 /obj/item/natural/fur/wolf
 	desc = "from a volf."
 	icon_state = "pelt_volf"
 	color = null
-	experimental_inhand = TRUE
 
 /obj/item/natural/fur/fox
 	desc = "from a venard."
 	icon_state = "pelt_fox"
 	color = null
-	experimental_inhand = TRUE
 
 /obj/item/natural/fur/bobcat
 	desc = "from a lynx."
 	icon_state = "pelt_bobcat"
 	color = null
-	experimental_inhand = TRUE
 
 /obj/item/natural/fur/mole
 	desc = "from a mole."
 	icon_state = "pelt_mole"
 	color = null
-	experimental_inhand = TRUE
 
 /obj/item/natural/fur/rat
 	desc = "from a rous."
 	icon_state = "pelt_rous"
 	color = null
-	experimental_inhand = TRUE
 
 /obj/item/natural/fur/direbear
 	desc = "fur from one of Dendor's mightiest creachers."
 	icon_state = "pelt_direbear"
 	color = "#33302b"
 	sellprice = 28
-	experimental_inhand = TRUE
 
 /obj/item/natural/fur/rabbit
 	desc = "from a cabbit."
 	icon_state = "wool2"
 	color = "#cecac4"
-	experimental_inhand = TRUE
 
 /obj/item/natural/fur/raccoon	
 	desc = "from a raccoon."
 	icon_state = "pelt_raccoon"
 	color = null
 	sellprice = 12
-	experimental_inhand = TRUE
 
 //RTD make this a storage item and make clickign on animals with things put it in storage
 /obj/item/natural/saddle
