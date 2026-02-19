@@ -15,7 +15,7 @@
 	muteinmouth = TRUE
 	w_class = WEIGHT_CLASS_TINY
 	spitoutmouth = FALSE
-	experimental_inhand = FALSE
+	experimental_inhand = TRUE
 	sellprice = 2
 	bundletype = /obj/item/natural/bundle/fibers
 
@@ -106,7 +106,7 @@
 	muteinmouth = TRUE
 	w_class = WEIGHT_CLASS_TINY
 	spitoutmouth = FALSE
-	experimental_inhand = FALSE
+	experimental_inhand = TRUE
 	bundletype = /obj/item/natural/bundle/silk
 
 /obj/item/natural/silk/attack_right(mob/user)
@@ -162,7 +162,7 @@
 	muteinmouth = TRUE
 	w_class = WEIGHT_CLASS_TINY
 	spitoutmouth = FALSE
-	experimental_inhand = FALSE
+	experimental_inhand = TRUE
 	bundletype = /obj/item/natural/bundle/cloth
 	sellprice = 4
 	detail_tag = "_soaked"
@@ -444,7 +444,7 @@
 	muteinmouth = TRUE
 	w_class = WEIGHT_CLASS_TINY
 	spitoutmouth = FALSE
-	experimental_inhand = FALSE
+	experimental_inhand = TRUE
 	stacktype = /obj/item/natural/fibers
 	icon1step = 3
 	icon2step = 6
@@ -473,7 +473,7 @@
 	max_integrity = 20
 	muteinmouth = TRUE
 	w_class = WEIGHT_CLASS_TINY
-	spitoutmouth = FALSE
+	spitoutmouth = TRUE
 	stacktype = /obj/item/natural/silk
 	icon1step = 3
 	icon2step = 6
@@ -491,7 +491,7 @@
 	resistance_flags = FLAMMABLE
 	w_class = WEIGHT_CLASS_TINY
 	spitoutmouth = FALSE
-	experimental_inhand = FALSE
+	experimental_inhand = TRUE
 	stacktype = /obj/item/natural/cloth
 	stackname = "cloth"
 	icon1 = "clothroll1"
@@ -514,7 +514,7 @@
 	resistance_flags = FLAMMABLE
 	w_class = WEIGHT_CLASS_TINY
 	spitoutmouth = FALSE
-	experimental_inhand = FALSE
+	experimental_inhand = TRUE
 	stacktype = /obj/item/grown/log/tree/stick
 	stackname = "sticks"
 	icon1 = "stickbundle1"
@@ -574,7 +574,7 @@
 	muteinmouth = TRUE
 	w_class = WEIGHT_CLASS_TINY
 	spitoutmouth = FALSE
-	experimental_inhand = FALSE
+	experimental_inhand = TRUE
 	stacktype = /obj/item/natural/bone
 	stackname = "bones"
 	icon1 = "bonestack1"
