@@ -76,6 +76,7 @@
 	color = "#0000ff"
 	taste_description = "raw power"
 	scent_description = "berries"
+	overdose_threshold = 51
 	metabolization_rate = REAGENTS_METABOLISM * 3
 
 /datum/reagent/medicine/strongmana/on_mob_life(mob/living/carbon/M)
