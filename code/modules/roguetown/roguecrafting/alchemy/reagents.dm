@@ -6,7 +6,7 @@
 	color = "#ff0000"
 	taste_description = "lifeblood"
 	scent_description = "metal"
-	overdose_threshold = 50
+	overdose_threshold = 45
 	metabolization_rate = REAGENTS_METABOLISM
 	alpha = 173
 
@@ -33,7 +33,7 @@
 	color = "#820000be"
 	taste_description = "rich lifeblood"
 	scent_description = "metal"
-	overdose_threshold = 40
+	overdose_threshold = 35
 	metabolization_rate = REAGENTS_METABOLISM * 3
 
 /datum/reagent/medicine/stronghealth/on_mob_life(mob/living/carbon/M)
@@ -61,7 +61,7 @@
 	color = "#000042"
 	taste_description = "sweet mana"
 	scent_description = "berries"
-	overdose_threshold = 50
+	overdose_threshold = 45
 	metabolization_rate = REAGENTS_METABOLISM
 	alpha = 173
 
@@ -76,7 +76,7 @@
 	color = "#0000ff"
 	taste_description = "raw power"
 	scent_description = "berries"
-	overdose_threshold = 40
+	overdose_threshold = 35
 	metabolization_rate = REAGENTS_METABOLISM * 3
 
 /datum/reagent/medicine/strongmana/on_mob_life(mob/living/carbon/M)
@@ -91,7 +91,7 @@
 	color = "#129c00"
 	taste_description = "sweet tea"
 	scent_description = "grass"
-	overdose_threshold = 50
+	overdose_threshold = 45
 	metabolization_rate = REAGENTS_METABOLISM
 	alpha = 173
 
@@ -107,7 +107,7 @@
 	color = "#13df00"
 	taste_description = "sparkly static"
 	scent_description = "grass"
-	overdose_threshold = 50
+	overdose_threshold = 45
 	metabolization_rate = REAGENTS_METABOLISM
 
 /datum/reagent/medicine/strongstam/on_mob_life(mob/living/carbon/M)
