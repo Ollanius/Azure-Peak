@@ -6,7 +6,7 @@
 	color = "#ff0000"
 	taste_description = "lifeblood"
 	scent_description = "metal"
-	overdose_threshold = 0
+	overdose_threshold = 46
 	metabolization_rate = REAGENTS_METABOLISM
 	alpha = 173
 
@@ -33,6 +33,7 @@
 	color = "#820000be"
 	taste_description = "rich lifeblood"
 	scent_description = "metal"
+	overdose_threshold = 40
 	metabolization_rate = REAGENTS_METABOLISM * 3
 
 /datum/reagent/medicine/stronghealth/on_mob_life(mob/living/carbon/M)
@@ -60,7 +61,7 @@
 	color = "#000042"
 	taste_description = "sweet mana"
 	scent_description = "berries"
-	overdose_threshold = 0
+	overdose_threshold = 46
 	metabolization_rate = REAGENTS_METABOLISM
 	alpha = 173
 
@@ -75,6 +76,7 @@
 	color = "#0000ff"
 	taste_description = "raw power"
 	scent_description = "berries"
+	overdose_threshold = 40
 	metabolization_rate = REAGENTS_METABOLISM * 3
 
 /datum/reagent/medicine/strongmana/on_mob_life(mob/living/carbon/M)
@@ -89,7 +91,7 @@
 	color = "#129c00"
 	taste_description = "sweet tea"
 	scent_description = "grass"
-	overdose_threshold = 0
+	overdose_threshold = 46
 	metabolization_rate = REAGENTS_METABOLISM
 	alpha = 173
 
@@ -105,6 +107,7 @@
 	color = "#13df00"
 	taste_description = "sparkly static"
 	scent_description = "grass"
+	overdose_threshold = 46
 	metabolization_rate = REAGENTS_METABOLISM
 
 /datum/reagent/medicine/strongstam/on_mob_life(mob/living/carbon/M)
@@ -112,6 +115,12 @@
 		M.stamina_add(-50)
 	..()
 	. = 1
+
+/datum/reagent/medicine/overdose_process(mob/living/carbon/M)
+	. = ..()
+	M.Jitter(2)
+	if(!HAS_TRAIT(M, TRAIT_CRACKHEAD)) // Baothan get to stack more of one potion in their body, but not multiple.
+		M.adjustToxLoss(3)
 
 /** Design Note: Antidotes are meant to last as long as the poison, and purge them much quicker
  Having a 1 to 1 antidote to poison where you have to tailor defense to an increasing amount of attack
@@ -176,7 +185,7 @@
 /datum/reagent/buff/overdose_process(mob/living/carbon/M)
 	. = ..()
 	M.Jitter(2)
-	if(!HAS_TRAIT(M, TRAIT_CRACKHEAD)) // Baothan get to stack more of one potion in their body, but not multiple
+	if(!HAS_TRAIT(M, TRAIT_CRACKHEAD)) // Baothan get to stack more of one potion in their body, but not multiple.
 		M.adjustToxLoss(3)
 
 /datum/reagent/buff/on_mob_life(mob/living/carbon/M)
