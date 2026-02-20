@@ -56,6 +56,10 @@
 		return FALSE
 	var/mob/living/carbon/C = eater
 
+	if(!spillable)
+		to_chat(user, span_warning("I have to remove the cork, first."))
+		return FALSE
+
 	var/obj/item/bodypart/head/dullahan/eaterrelay
 	if(ishuman(src))
 		var/mob/living/carbon/human = src
@@ -82,10 +86,6 @@
 		if(!silent)
 			var/who = (isnull(user) || eater == user) ? "my" : "[eater.p_their()]"
 			to_chat(user, span_warning("I have to remove [who] [covered], first!"))
-		return FALSE
-	if(closed)
-		if(!spillable)
-			to_chat(user, span_warning("I have to remove the cork, first."))
 		return FALSE
 	return TRUE
 
