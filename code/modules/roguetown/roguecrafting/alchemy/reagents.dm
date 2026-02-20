@@ -116,6 +116,12 @@
 	..()
 	. = 1
 
+/datum/reagent/medicine/overdose_process(mob/living/carbon/M)
+	. = ..()
+	M.Jitter(2)
+	if(!HAS_TRAIT(M, TRAIT_CRACKHEAD)) // Baothan get to stack more of one potion in their body, but not multiple.
+		M.adjustToxLoss(3)
+
 /** Design Note: Antidotes are meant to last as long as the poison, and purge them much quicker
  Having a 1 to 1 antidote to poison where you have to tailor defense to an increasing amount of attack
  is a bad idea, since that just means no one will use antidotes and the weapon win the race vs defense.
@@ -179,7 +185,7 @@
 /datum/reagent/buff/overdose_process(mob/living/carbon/M)
 	. = ..()
 	M.Jitter(2)
-	if(!HAS_TRAIT(M, TRAIT_CRACKHEAD)) // Baothan get to stack more of one potion in their body, but not multiple
+	if(!HAS_TRAIT(M, TRAIT_CRACKHEAD)) // Baothan get to stack more of one potion in their body, but not multiple.
 		M.adjustToxLoss(3)
 
 /datum/reagent/buff/on_mob_life(mob/living/carbon/M)
