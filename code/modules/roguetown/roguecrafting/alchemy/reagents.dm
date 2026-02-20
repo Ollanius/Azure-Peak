@@ -6,7 +6,7 @@
 	color = "#ff0000"
 	taste_description = "lifeblood"
 	scent_description = "metal"
-	overdose_threshold = 51
+	overdose_threshold = 50
 	metabolization_rate = REAGENTS_METABOLISM
 	alpha = 173
 
