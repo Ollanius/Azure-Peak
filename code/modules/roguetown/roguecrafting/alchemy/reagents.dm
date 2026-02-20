@@ -33,7 +33,7 @@
 	color = "#820000be"
 	taste_description = "rich lifeblood"
 	scent_description = "metal"
-	overdose_threshold = 35
+	overdose_threshold = 40
 	metabolization_rate = REAGENTS_METABOLISM * 3
 
 /datum/reagent/medicine/stronghealth/on_mob_life(mob/living/carbon/M)
@@ -76,7 +76,7 @@
 	color = "#0000ff"
 	taste_description = "raw power"
 	scent_description = "berries"
-	overdose_threshold = 35
+	overdose_threshold = 40
 	metabolization_rate = REAGENTS_METABOLISM * 3
 
 /datum/reagent/medicine/strongmana/on_mob_life(mob/living/carbon/M)
