@@ -57,7 +57,7 @@
 	var/mob/living/carbon/C = eater
 
 	if(!spillable)
-		to_chat(user, span_warning("I have to remove the cork, first."))
+		to_chat(user, span_warning("How am I to drink from this while it's still corked?"))
 		return FALSE
 
 	var/obj/item/bodypart/head/dullahan/eaterrelay
