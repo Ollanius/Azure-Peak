@@ -398,10 +398,12 @@
 /datum/advclass/foreigner/bronzeclad
 	name = "Thespian-Errant"
 	tutorial = "Gladiators from the arenas of Raneshen and Lirvas, reenactors from the curtain-dazzled courts of Otava and Grenzelhoft, and \
-	legionnaires from the outermost reaches of Psydonia itself; all are unified in their subconscious pursuit of entertaining something greater than themselves. You are a skilled combatant from beyond Azuria, who - for one reason or another - is intimately familiar with fighting in ancient equipment."
+	shieldbearers from the outermost reaches of Psydonia itself; all are unified in their subconscious pursuit of entertaining something greater \
+	than themselves. You are a skilled combatant from beyond Azuria, who - for one reason or another - is intimately familiar with fighting in ancient equipment."
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/adventurer/bronzeclad
 	cmode_music = 'sound/music/combat_thespian.ogg'
+	maximum_possible_slots = 3 //Should be categorically rarer to see than Iron- and Steel-clad adventurers. Tickles the powerscale ala the Exorcist, albeit to a wider extent with its potential combinations.
 	traits_applied = list(TRAIT_STEELHEARTED, TRAIT_BLOOD_RESISTANCE)
 	subclass_stats = list(
 		STATKEY_STR = 1, //Abbreviated to +1/+3/+2/-2 for short. Seven statpoints weighed against a two- (or rather, four-) point penalty in Speed. This is intentional, as the Thespian has a lot of room to stretch their proverbial wings. 
@@ -422,7 +424,7 @@
 
 /datum/outfit/job/roguetown/adventurer/bronzeclad/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
-	to_chat(H, span_warning("The curtains part, the shieldline rallies, and the eyes of a thousand shadows fall upon you. Snarling gladiator, enthralled legionnaire, vestumed actor; ready yourself for another bout."))
+	to_chat(H, span_warning("The curtains part, the shieldline rallies, and the eyes of a thousand shadows fall upon you. Snarling gladiator, enthralled shieldbearer, vestumed actor; ready yourself for another bout."))
 	if(H.mind)
 		var/bronzeweapon = list("Spatha & +1 Unarmed","Trident & +1 Unarmed","Greataxe & +1 Unarmed","Axepick & +1 Unarmed","Winged Spear + Greatshield","Heavy Khopesh + Greatshield","Shortsword + Shield","Falchion + Shield","Messer + Shield","Khopesh + Shield","Axe + Shield","Warclub + Shield","Flail + Shield","Spear + Shield","Axegauntlet + Shortsword","Nothing - Skilled Pugilist, +I STR / -I WIL")
 		var/bronzeweapon_choice = input(H, "Choose your WEAPONS.", "PUT ON A SHOW FOR THE CROWD.") as anything in bronzeweapon
@@ -547,7 +549,7 @@
 				l_hand = /obj/item/rogueweapon/stoneaxe/woodcut/bronze
 			if("A Bottle Of Medicinal Fish Vinegar.. ?")
 				beltl = /obj/item/reagent_containers/glass/bottle/rogue/healthpot/zarum
-		var/bronzediscipline = list("Gladiator - Skinarmored & Immunity To Pain","Thespian - Dodge Expert, +III SPD / -III CON","Legionnaire - Well-Armored & Maille Training","Bulwark - Fully-Armored & Plate Training")
+		var/bronzediscipline = list("Gladiator - Skinarmored & Immunity To Pain","Thespian - Dodge Expert, +III SPD / -III CON","Shieldbearer - Well-Armored & Maille Training","Bulwark - Fully-Armored & Plate Training")
 		var/bronzediscipline_choice = input(H, "Choose your DISCIPLINE.", "EMBRACE GLORY AND DEATH.") as anything in bronzediscipline
 		switch(bronzediscipline_choice)
 			if("Thespian - Dodge Expert, +III SPD / -III CON")
@@ -569,7 +571,7 @@
 				pants = /obj/item/clothing/under/roguetown/loincloth/brown
 				shirt = /obj/item/clothing/suit/roguetown/shirt/tribalrag/gladiator
 				belt = /obj/item/storage/belt/rogue/leather/battleskirt/breechcloth/red
-			if("Legionnaire - Well-Armored & Maille Training")
+			if("Shieldbearer - Well-Armored & Maille Training")
 				ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 				head = /obj/item/clothing/head/roguetown/helmet/heavy/bronze
 				neck = /obj/item/clothing/neck/roguetown/gorget/bronze
@@ -617,7 +619,9 @@
 
 /obj/item/rogueweapon/sword/short/messer/bronze
 	name = "makhaira"
-	desc = "A heavy shortsword of similar design to the Kopis, fit for cleaving through both foliage and flesh. </br>Infamous for its presence amongst the gladitorial arenas of Lirvas and Raneshen, where gashes provide the kind of crimson spectacle that liqour-addled crowds adore the most."
+	desc = "A heavy shortsword of similar design to the Kopis, fit for cleaving through both foliage and flesh. </br>Infamous for its \
+	presence amongst the gladitorial arenas of Lirvas and Raneshen, where gashes provide the kind of crimson spectacle that liqour-addled \
+	crowds adore the most."
 	icon_state = "makhaira"
 	minstr = 6
 	wdefense = 3
@@ -672,7 +676,9 @@
 
 /obj/item/reagent_containers/glass/bottle/rogue/healthpot/zarum
 	name = "bottle of medicinal fish vinegar"
-	desc = "A bottle with a mudclay cork, tethered to the bottleneck via braided twine. Fermented innard-paste and herbs makes for a disgustingly cheap medicine; an ancient concoction, resurrected for usage within the gladitorial arenas of Lirvas and Raneshen. </br>A particular variant of this, made by fermenting zardines in the Terrorbog, happens to be a very popular condiment back in Rockhill."
+	desc = "A bottle with a mudclay cork, tethered to the bottleneck via braided twine. Fermented innard-paste and herbs makes for a \
+	disgustingly cheap medicine; an ancient concoction, resurrected for usage within the gladitorial arenas of Lirvas and Raneshen. </br>A \
+	particular variant of this, made by fermenting zardines in the Terrorbog, happens to be a very popular condiment back in Rockhill."
 	list_reagents = list(/datum/reagent/medicine/healthpot/zarum = 50)
 
 /datum/reagent/medicine/healthpot/zarum
@@ -695,7 +701,10 @@
 
 /obj/item/clothing/head/roguetown/helmet/bronzegladiator
 	name = "bronze murmillo"
-	desc = "A bronze helmet that veils the wearer's face behind a perforated visor; a distant ancestor to both the sallet and sayovard, providing excellent coverage while ensuring one doesn't suffocate on their own adrenal huffs. </br>Out of all actorial labors, none surpass the reenactment of Ravox's duel against Graggar atop Ur-Syon's ruins - mythologized not as a tentacled star, but as a towering doppelganger-champion; sculpted by the Archdevil to be the inverse to all who stood for justice and chivalry."
+	desc = "A bronze helmet that veils the wearer's face behind a perforated visor; a distant ancestor to both the sallet and sayovard, \
+	providing excellent coverage while ensuring one doesn't suffocate on their own adrenal huffs. </br>Out of all actorial labors, none surpass \
+	the reenactment of Ravox's duel against Graggar atop Ur-Syon's ruins - mythologized not as a tentacled star, but as a towering doppelganger-champion; \
+	sculpted by the Archdevil to be the inverse to all who stood for justice and chivalry."
 	armor = ARMOR_PLATE_BRONZE
 	max_integrity = ARMOR_INT_HELMET_HEAVY_BRONZE - 100
 	armor_class = ARMOR_CLASS_LIGHT
@@ -744,20 +753,25 @@
 
 /obj/item/rogueweapon/spear/bronze/winged
 	name = "bronze winged spear"
-	desc = "An antiquital staff, adorned with a winged bronze spearhead. The flared edges catch errant strikes and keep snarling foes from further impaling themselves in order to maul its wielder. </br>Scholars believe this particular type of polearm was made to counter Vheslynic seadaemons, during the now-mythologized Syonic era's collapse."
+	desc = "An antiquital staff, adorned with a winged bronze spearhead. The flared edges catch errant strikes and keep snarling foes from \
+	further impaling themselves in order to maul its wielder. </br>Scholars believe this particular type of polearm was made to counter Vheslynic \
+	seadaemons, during the now-mythologized Syonic era's collapse."
 	icon_state = "bronzewingedspear"
 	item_state = "bronzewingedspear"
 	wdefense = 6 //Functionally the same, but with +1 DEF.
 
 /obj/item/rogueweapon/spear/bronze/strapless
-	desc = "An antiquital staff, adorned with a bronze spearhead. Ancient in both design and purpose, its lighter weight once complimented the towering shields of precivilizational legionnaires. While rarely seen beyond the Deadlands, nowadaes, its lightweight balance makes it perfect for one-handed thrusts and throws. </br>This particular spear has a thin strap running along its grain, allowing it to be stowed without the need for a greatweapon strap."
+	desc = "An antiquital staff, adorned with a bronze spearhead. Ancient in both design and purpose, its lighter weight once complimented \
+	the towering shields of precivilizational legionnaires. While rarely seen beyond the Deadlands, nowadaes, its lightweight balance makes \
+	it perfect for one-handed thrusts and throws. </br>This particular spear has a thin strap running along its grain, allowing it to be stowed without the need for a greatweapon strap."
 	slot_flags = ITEM_SLOT_BACK //Option-unique, uncraftable. Ensures the loadout doesn't implode on itself.
 	equip_delay_self = 2 SECONDS
 	unequip_delay_self = 2 SECONDS
 	inv_storage_delay = 1 SECONDS
 
 /obj/item/rogueweapon/spear/bronze/winged/strapless
-	desc = "An antiquital staff, adorned with a winged bronze spearhead. The flared edges catch errant strikes and keep snarling foes from further impaling themselves in order to maul its wielder. </br>Scholars believe this particular type of polearm was made to counter Vheslynic seadaemons, during the now-mythologized Syonic era's collapse. </br>This particular spear has a thin strap running along its grain, allowing it to be stowed without the need for a greatweapon strap."
+	desc = "An antiquital staff, adorned with a winged bronze spearhead. The flared edges catch errant strikes and keep snarling foes from further \
+	impaling themselves in order to maul its wielder. </br>Scholars believe this particular type of polearm was made to counter Vheslynic seadaemons, during the now-mythologized Syonic era's collapse. </br>This particular spear has a thin strap running along its grain, allowing it to be stowed without the need for a greatweapon strap."
 	slot_flags = ITEM_SLOT_BACK //Ditto.
 	equip_delay_self = 2 SECONDS
 	unequip_delay_self = 2 SECONDS
@@ -767,7 +781,9 @@
 	name = "arbelos"
 	icon_state = "bronzescissor"
 	item_state = "bronzescissor"
-	desc = "A sharpened axhead that's been mounted onto a bronze gauntlet. Popularized at the turn of the millennium within the Underdark's gladiatorial arenas, it triumphs over the katar when it comes to thawrting blows and cleaving skulls. The wooden handle used to connect its axhead to the gauntlet is fragile, however; all it takes is a precise strike to neuter such a weapon."
+	desc = "A sharpened axhead that's been mounted onto a bronze gauntlet. Popularized at the turn of the millennium within the Underdark's gladiatorial arenas, \
+	it triumphs over the katar when it comes to thawrting blows and cleaving skulls. The wooden handle used to connect its axhead to the gauntlet is fragile, however; \
+	all it takes is a precise strike to neuter such a weapon."
 	wdefense = 5 //Much higher than usual for most unarmed weapons..
 	max_integrity = 55 //..but far more fragile.
 	max_blade_int = 300
@@ -789,7 +805,8 @@
 
 /obj/item/rogueweapon/sword/long/greatkhopesh
 	name = "apophis" //Kriegmesser analogue.
-	desc = "The Khopesh's older brother. One would be mistaken for thinking it was designed to be wielded in both hands; for the strength of these ancient legionnaires, prodigious as it were, allowed them to effortlessly wield it alongside their towering greatshields."
+	desc = "The Khopesh's older brother. One would be mistaken for thinking it was designed to be wielded in both hands; for the strength of these \
+	ancient legionnaires, prodigious as it were, allowed them to effortlessly wield it alongside their towering greatshields."
 	wdefense = 3
 	wdefense_wbonus = 2
 	force = 22
@@ -838,7 +855,9 @@
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/bronze
 	name = "bronze panoplic armor"
-	desc = "What can only be described as an 'armored robe'; thick bronze plates, layered atop one-another and interlinked with strappings to form an assembly of segmented plate armor. While overwhelmingly heavy and cumbersome, it is certain to weather any storm poised its way. </br>Scholars oft-describe this suit as a 'panoply', purpose-made for the physiques of Psydonia's earliest Aasimari."
+	desc = "What can only be described as an 'armored robe'; thick bronze plates, layered atop one-another and interlinked with strappings \
+	to form an assembly of segmented plate armor. While overwhelmingly heavy and cumbersome, it is certain to weather any storm poised its way. \
+	</br>Scholars oft-describe this suit as a 'panoply', purpose-made for the physiques of Psydonia's earliest Aasimari."
 	icon_state = "bronzeplate"
 	item_state = "bronzeplate"
 	armor = ARMOR_PLATE_BRONZE
@@ -854,7 +873,6 @@
 	if(slot == SLOT_ARMOR)
 		to_chat(user, span_suicide("The panoply clatters into place, and I feel my shoulders slouch beneath its weight - yet even now, I feel sturdier than ever before.."))
 		user.change_stat(STATKEY_CON, 1)
-		user.change_stat(STATKEY_WIL, 1)
 		user.change_stat(STATKEY_SPD, -1)
 		bronzeplatecumbersome = TRUE
 	return
@@ -864,14 +882,13 @@
 	if(bronzeplatecumbersome == TRUE)
 		to_chat(user, span_hypnophrase("..and with a sigh of relief, the panoply's weight no longer burdens my shoulders."))
 		user.change_stat(STATKEY_CON, -1)
-		user.change_stat(STATKEY_WIL, -1)
 		user.change_stat(STATKEY_SPD, 1)
 		bronzeplatecumbersome = FALSE
 	return
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/bronze/get_mechanics_examine(mob/user)
 	. = ..()
-	. += span_info("Even with the necessary training, this suit of armor is difficult to maneuver in. Wearing the armor will slightly fortify your Constitution and Willpower, at the cost of further reducing your Speed.")
+	. += span_info("Even with the necessary training, this suit of armor is difficult to maneuver in. Wearing the armor will slightly fortify your Constitution, at the cost of further reducing your Speed.")
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/bronze/alt
 	name = "bronze panoplic assembly"
@@ -915,7 +932,9 @@
 
 /obj/item/clothing/head/roguetown/helmet/bronze
 	name = "bronze illyriahelm"
-	desc = "A helmet of bronze, older-in-design than you could possibly imagine. Mounted to its crest is a decorative sigil that has sparked scholarly debates for the better part of a millennium; is it a star, a vortex, or the Sun? </br>A notch behind the sigil allows for the joint mounting of a plume. Nock a feather into it to show off your alliegence's colors."
+	desc = "A helmet of bronze, older-in-design than you could possibly imagine. Mounted to its crest is a decorative sigil that has \
+	sparked scholarly debates for the better part of a millennium; is it a star, a vortex, or the Sun? </br>A notch behind the sigil \
+	allows for the joint mounting of a plume. Nock a feather into it to show off your alliegence's colors."
 	armor = ARMOR_PLATE_BRONZE
 	max_integrity = ARMOR_INT_HELMET_HEAVY_BRONZE - 25 //Close, but no cigar.
 	material_category = ARMOR_MAT_PLATE
