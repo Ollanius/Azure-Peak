@@ -1,3 +1,4 @@
+
 /obj/item/storage/belt/rogue
 	name = ""
 	desc = ""
