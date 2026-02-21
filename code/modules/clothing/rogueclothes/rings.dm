@@ -15,6 +15,24 @@
 	experimental_inhand = TRUE
 	drop_sound = 'sound/foley/coinphy (1).ogg'
 	salvage_result = null
+	alternate_worn_layer = NECK_LAYER
+	var/overarmor
+
+/obj/item/clothing/ring/MiddleClick(mob/user, params)
+	. = ..()
+	overarmor = !overarmor
+	to_chat(user, span_info("I [overarmor ? "wear \the [src] over my coverings" : "wear \the [src] under my coverings"]."))
+	if(overarmor)
+		alternate_worn_layer = NECK_LAYER
+	else
+		alternate_worn_layer = UNDER_ARMOR_LAYER
+	user.update_inv_id()
+	user.update_inv_wrists()
+	user.update_inv_gloves()
+	user.update_inv_mask()
+	user.update_inv_mouth()
+	user.update_inv_beltr()
+	user.update_inv_beltl()
 
 /obj/item/clothing/ring/aalloy
 	name = "decrepit ring"
