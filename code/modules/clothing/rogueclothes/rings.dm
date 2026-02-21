@@ -21,7 +21,7 @@
 /obj/item/clothing/ring/MiddleClick(mob/user, params)
 	. = ..()
 	overarmor = !overarmor
-	to_chat(user, span_info("I [overarmor ? "wear \the [src] over my coverings" : "wear \the [src] under my coverings"]."))
+	to_chat(user, span_info("I [overarmor ? "wear \the [src] over my gloves" : "wear \the [src] under my gloves"]."))
 	if(overarmor)
 		alternate_worn_layer = NECK_LAYER
 	else
@@ -32,6 +32,10 @@
 	user.update_inv_wear_mask()
 	user.update_inv_mouth()
 	user.update_inv_belt()
+
+/obj/item/clothing/ring/get_mechanics_examine(mob/user)
+    . = ..()
+    . += span_info("Middle click to adjust whether the ring is layered above or below your character's gloves. This is an experimental feature, and might require some fidgeting to get working."))
 
 /obj/item/clothing/ring/aalloy
 	name = "decrepit ring"
