@@ -35,7 +35,7 @@
 
 /obj/item/clothing/ring/get_mechanics_examine(mob/user)
     . = ..()
-    . += span_info("Middle click to adjust whether the ring is layered above or below your character's sleeves. This is an experimental feature, and might require some fidgeting to get working."))
+    . += span_info("Middle click to adjust whether the ring is layered above or below your character's sleeves. This is an experimental feature, and might require some fidgeting to get working.")
 
 /obj/item/clothing/ring/aalloy
 	name = "decrepit ring"
