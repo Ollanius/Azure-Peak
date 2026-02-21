@@ -191,6 +191,14 @@
 	req_bar = /obj/item/ingot/silverblessed/bullion
 	created_item = /obj/item/clothing/ring/signet/silver	
 
+/datum/anvil_recipe/valuables/duelring
+	name = "Duelist's Rings (x2) (+1 Rosestone Ring)"
+	req_bar = /obj/item/ingot/bronze
+	additional_items = list(/obj/item/clothing/ring/rose)
+	craftdiff = SKILL_LEVEL_MASTER
+	created_item = /obj/item/clothing/ring/duelist
+	createditem_num = 2
+
 // Silver ingots are now in play, and as such, the steel rings have been converted to silver with their value adjusted accordingly. -Kyogon
 
 /datum/anvil_recipe/valuables/emerings
