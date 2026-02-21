@@ -2,17 +2,17 @@
 
 /obj/item/clothing/ring
 	name = "ring"
-	desc = ""
+	desc = "The first of many."
+	icon_state = "ring"
 	w_class = WEIGHT_CLASS_TINY
 	icon = 'icons/roguetown/clothing/rings.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/rings.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/rings.dmi'
 	sleevetype = "shirt"
-	icon_state = ""
 	slot_flags = ITEM_SLOT_RING
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	anvilrepair = /datum/skill/craft/armorsmithing
-	experimental_inhand = FALSE
+	experimental_inhand = TRUE
 	drop_sound = 'sound/foley/coinphy (1).ogg'
 	salvage_result = null
 
