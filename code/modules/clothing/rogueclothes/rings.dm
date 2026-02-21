@@ -9,7 +9,7 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/rings.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/rings.dmi'
 	sleevetype = "shirt"
-	slot_flags = ITEM_SLOT_RING|ITEM_SLOT_NECK|ITEM_SLOT_HIP|ITEM_SLOT_WRISTS
+	slot_flags = ITEM_SLOT_RING|ITEM_SLOT_GLOVES|ITEM_SLOT_HIP|ITEM_SLOT_WRISTS|ITEM_SLOT_MASK|ITEM_SLOT_MOUTH
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	anvilrepair = /datum/skill/craft/armorsmithing
 	experimental_inhand = TRUE
