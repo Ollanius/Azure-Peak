@@ -26,13 +26,12 @@
 		alternate_worn_layer = NECK_LAYER
 	else
 		alternate_worn_layer = UNDER_ARMOR_LAYER
-	user.update_inv_id()
+	user.update_inv_wear_id()
 	user.update_inv_wrists()
 	user.update_inv_gloves()
-	user.update_inv_mask()
+	user.update_inv_wear_mask()
 	user.update_inv_mouth()
-	user.update_inv_beltr()
-	user.update_inv_beltl()
+	user.update_inv_belt()
 
 /obj/item/clothing/ring/aalloy
 	name = "decrepit ring"
