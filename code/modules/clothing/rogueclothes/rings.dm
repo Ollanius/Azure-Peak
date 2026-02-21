@@ -9,7 +9,7 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/rings.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/rings.dmi'
 	sleevetype = "shirt"
-	slot_flags = ITEM_SLOT_RING
+	slot_flags = ITEM_SLOT_RING|ITEM_SLOT_NECK|ITEM_SLOT_HIP|ITEM_SLOT_WRISTS
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	anvilrepair = /datum/skill/craft/armorsmithing
 	experimental_inhand = TRUE
@@ -314,6 +314,7 @@
 	body_parts_covered = COVERAGE_ALL_BUT_HANDFEET | COVERAGE_HEAD_NOSE | NECK | HANDS | FEET //field covers the whole body
 	armor = ARMOR_FATEWEAVER //even protection against most damage types
 	blade_dulling = DULLING_BASHCHOP
+	slot_flags = ITEM_SLOT_RING
 	blocksound = PLATEHIT
 	break_sound = 'sound/foley/breaksound.ogg'
 	drop_sound = 'sound/foley/dropsound/armor_drop.ogg'
@@ -643,6 +644,7 @@
 		user.change_stat(STATKEY_STR, 2)
 		user.change_stat(STATKEY_CON, 2)
 		user.change_stat(STATKEY_WIL, 2)
+		update_icon()
 	return
 
 /obj/item/clothing/ring/dragon_ring/dropped(mob/living/user)
@@ -653,4 +655,12 @@
 		user.change_stat(STATKEY_CON, -2)
 		user.change_stat(STATKEY_WIL, -2)
 		active_item = FALSE
+		update_icon()
 	return
+
+/obj/item/clothing/ring/dragon_ring/update_icon()
+	..()
+	if(active_item)
+		icon_state = "factive"
+	else
+		icon_state = "dragonring"
