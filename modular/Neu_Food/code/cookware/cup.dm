@@ -4,16 +4,15 @@
 	icon = 'modular/Neu_Food/icons/cookware/cup.dmi'
 	icon_state = "iron"
 	force = 5
-	lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
-	righthand_file = 'modular/Neu_Food/icons/food_righthand.dmi'
-	experimental_inhand = FALSE
+	//lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
+	//righthand_file = 'modular/Neu_Food/icons/food_righthand.dmi'
 	throwforce = 10
 	reagent_flags = OPENCONTAINER
 	amount_per_transfer_from_this = 6
 	possible_transfer_amounts = list(6)
 	dropshrink = 0.8
 	w_class = WEIGHT_CLASS_NORMAL
-	experimental_inhand = FALSE
+	experimental_inhand = TRUE
 	volume = 25
 	obj_flags = CAN_BE_HIT
 	sellprice = 1
@@ -31,7 +30,7 @@
 	cut_overlays()
 
 	if(reagents.total_volume)
-		var/mutable_appearance/filling = mutable_appearance(icon, "[icon_state]filling")
+		var/mutable_appearance/filling = mutable_appearance(icon, "[icon_state]_filling")
 
 		filling.color = mix_color_from_reagents(reagents.reagent_list)
 		filling.alpha = mix_alpha_from_reagents(reagents.reagent_list)
@@ -42,7 +41,7 @@
 			dice_count++
 		if(dice_count)
 			dice_count = min(3, dice_count)
-		add_overlay(mutable_appearance(icon, "[icon_state]dice[dice_count]"))
+		add_overlay(mutable_appearance(icon, "[icon_state]_dice[dice_count]"))
 
 /obj/item/reagent_containers/glass/cup/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/dice) && max_dice)
