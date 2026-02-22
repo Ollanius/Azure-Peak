@@ -37,7 +37,6 @@
 		if(reagents.total_volume > 0)
 			var/mutable_appearance/filling = mutable_appearance(icon, "[icon_state]filling")
 			filling.color = mix_color_from_reagents(reagents.reagent_list)
-			filling.alpha = mix_alpha_from_reagents(reagents.reagent_list)
 			add_overlay(filling)
 	if(max_dice)
 		var/dice_count = 0
