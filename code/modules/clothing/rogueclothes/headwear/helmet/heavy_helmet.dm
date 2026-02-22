@@ -394,7 +394,8 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/bucket
 	name = "bucket helmet"
-	desc = "A helmet which covers the whole of the head. Offers excellent protection."
+	desc = A greathelmet that covers the entirety of the head, and - as the name implies - resembles an overturned bucket. It /
+	remains a popular choice amongst clerical orders and hedge-knights, due to its simplistic-yet-venerable design."
 	icon_state = "topfhelm"
 	item_state = "topfhelm"
 	emote_environment = 3
@@ -419,6 +420,37 @@
 			H.update_inv_head()
 
 /obj/item/clothing/head/roguetown/helmet/heavy/bucket/update_icon()
+	cut_overlays()
+	if(get_detail_tag())
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)
+
+/obj/item/clothing/head/roguetown/helmet/heavy/bucket/alt
+	name = "sugarloaf helmet"
+	desc = A greathelmet that covers the entirety of the head, and - as the name implies - resembles a baked breadloaf. / The
+	distinct curvature of its skullcap is designed to slope away crushing blows and other vertically-threatening strikes."
+	icon_state = "topfhelmalt"
+	item_state = "topfhelmalt"
+
+/obj/item/clothing/head/roguetown/helmet/heavy/bucket/alt/attackby(obj/item/W, mob/living/user, params)
+	..()
+	if(istype(W, /obj/item/natural/cloth) && !detail_tag)
+		var/choice = input(user, "Choose a color.", "Orle") as anything in COLOR_MAP + pridelist
+		user.visible_message(span_warning("[user] adds [W] to [src]."))
+		user.transferItemToLoc(W, src, FALSE, FALSE)
+		detail_color = COLOR_MAP[choice]
+		detail_tag = "_detail"
+		if(choice in pridelist)
+			detail_tag = "_detailp"
+		update_icon()
+		if(loc == user && ishuman(user))
+			var/mob/living/carbon/H = user
+			H.update_inv_head()
+
+/obj/item/clothing/head/roguetown/helmet/heavy/bucket/alt/update_icon()
 	cut_overlays()
 	if(get_detail_tag())
 		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
