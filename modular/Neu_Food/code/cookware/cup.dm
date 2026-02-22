@@ -3,39 +3,42 @@
 	desc = "A sturdy cup of metal. Often seen in the hands of warriors, wardens, and other sturdy folk."
 	icon = 'modular/Neu_Food/icons/cookware/cup.dmi'
 	icon_state = "iron"
-	force = 5
-	lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
-	righthand_file = 'modular/Neu_Food/icons/food_righthand.dmi'
-	experimental_inhand = FALSE
-	throwforce = 10
+	//lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
+	//righthand_file = 'modular/Neu_Food/icons/food_righthand.dmi'
 	reagent_flags = OPENCONTAINER
 	amount_per_transfer_from_this = 6
 	possible_transfer_amounts = list(6)
 	dropshrink = 0.8
 	w_class = WEIGHT_CLASS_NORMAL
-	experimental_inhand = FALSE
+	experimental_inhand = TRUE
 	volume = 25
 	obj_flags = CAN_BE_HIT
 	sellprice = 1
 	drinksounds = list('sound/items/drink_cup (1).ogg','sound/items/drink_cup (2).ogg','sound/items/drink_cup (3).ogg','sound/items/drink_cup (4).ogg','sound/items/drink_cup (5).ogg')
 	fillsounds = list('sound/items/fillcup.ogg')
+	possible_item_intents = list(INTENT_POUR, /datum/intent/fill, INTENT_SPLASH, /datum/intent/mace/strike/wood) 
 	anvilrepair = /datum/skill/craft/blacksmithing
 	var/rolling = FALSE
 	var/max_dice = 6
 	force = 5
 	throwforce = 10
 
-/obj/item/reagent_containers/glass/cup/update_icon(dont_fill=FALSE)
+/obj/item/proc/getonmobprop(tag)
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.4,"sx" = -7,"sy" = -4,"nx" = 7,"ny" = -4,"wx" = -4,"wy" = -4,"ex" = 2,"ey" = -4,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
+			if("wielded")
+				return null
 
-
+/obj/item/reagent_containers/glass/cup/update_icon()
 	cut_overlays()
-
-	if(reagents.total_volume)
-		var/mutable_appearance/filling = mutable_appearance(icon, "[icon_state]filling")
-
-		filling.color = mix_color_from_reagents(reagents.reagent_list)
-		filling.alpha = mix_alpha_from_reagents(reagents.reagent_list)
-		add_overlay(filling)
+	if(reagents)
+		if(reagents.total_volume > 0)
+			var/mutable_appearance/filling = mutable_appearance(icon, "[icon_state]filling")
+			filling.color = mix_color_from_reagents(reagents.reagent_list)
+			filling.alpha = mix_alpha_from_reagents(reagents.reagent_list)
+			add_overlay(filling)
 	if(max_dice)
 		var/dice_count = 0
 		for(var/obj/item/dice/D in contents)
