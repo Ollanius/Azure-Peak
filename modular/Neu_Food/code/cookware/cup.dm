@@ -3,10 +3,8 @@
 	desc = "A sturdy cup of metal. Often seen in the hands of warriors, wardens, and other sturdy folk."
 	icon = 'modular/Neu_Food/icons/cookware/cup.dmi'
 	icon_state = "iron"
-	force = 5
 	//lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
 	//righthand_file = 'modular/Neu_Food/icons/food_righthand.dmi'
-	throwforce = 10
 	reagent_flags = OPENCONTAINER
 	amount_per_transfer_from_this = 6
 	possible_transfer_amounts = list(6)
@@ -18,6 +16,7 @@
 	sellprice = 1
 	drinksounds = list('sound/items/drink_cup (1).ogg','sound/items/drink_cup (2).ogg','sound/items/drink_cup (3).ogg','sound/items/drink_cup (4).ogg','sound/items/drink_cup (5).ogg')
 	fillsounds = list('sound/items/fillcup.ogg')
+	possible_item_intents = list(INTENT_POUR, /datum/intent/fill, INTENT_SPLASH, /datum/intent/mace/strike/wood) 
 	anvilrepair = /datum/skill/craft/blacksmithing
 	var/rolling = FALSE
 	var/max_dice = 6
@@ -290,6 +289,8 @@
 	dropshrink = 1
 	icon_state = "agoblet"
 	sellprice = 0
+	force = 7
+	throwforce = 12
 
 /obj/item/reagent_containers/glass/cup/carved/jade
 	name = "jade cup"
