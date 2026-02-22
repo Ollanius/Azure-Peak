@@ -16,6 +16,7 @@
 	anvilrepair = /datum/skill/craft/blacksmithing
 	resistance_flags = FIRE_PROOF
 	experimental_inhand = TRUE
+	experimental_onhip = TRUE
 	component_type = /datum/component/storage/concrete/roguetown/keyring
 
 /obj/item/storage/keyring/Initialize()
