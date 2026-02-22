@@ -511,6 +511,37 @@
 	clickcd = 14
 	item_d_type = "slash"
 
+//Triumph(?)-exclusive, double-edged variants. Purely cosmetic; could turn into actual recipes, later?
+/obj/item/rogueweapon/stoneaxe/woodcut/triumphalt
+	name = "double-headed axe"
+	desc = "'For Karl!'"
+	icon_state = "axedouble"
+
+/obj/item/rogueweapon/stoneaxe/woodcut/bronze/triumph
+	name = "double-headed bronze axe"
+	desc = "'Give them nothing.. but take from them, EVERYTHING!'"
+	icon_state = "bronzeaxedouble"
+
+/obj/item/rogueweapon/stoneaxe/woodcut/steel/triumph
+	name = "double-headed steel axe"
+	desc = "'Last man alive, lock the doors!'"
+	icon_state = "saxedouble"
+
+/obj/item/rogueweapon/stoneaxe/battle/triumph
+	name = "double-headed battle axe"
+	desc = "'Never thought I'd die side-by-side wi' an elve.' </br>'How about with a friend?' </br>'Aye, I coul' do that.'"
+	icon_state = "battleaxedouble"
+
+/obj/item/rogueweapon/stoneaxe/woodcut/silver/triumph
+	name = "double-headed silver axe"
+	desc = "'I'll swallow your soul, I'll swallow your soul!' </br>'Swallow this.'"
+	icon_state = "silveraxedouble"
+
+/obj/item/rogueweapon/stoneaxe/battle/psyaxe/triumph
+	name = "double-headed psydonic axe"
+	desc = "'Hail to the king, baby.'"
+	icon_state = "psyaxedouble"
+
 /datum/intent/axe/cut/battle/greataxe
 	reach = 2
 
