@@ -14,7 +14,7 @@
 	body_parts_covered = FACE
 	slot_flags = ITEM_SLOT_MASK
 	experimental_inhand = TRUE
-	experimental_onhip = FALSE
+	experimental_onhip = TRUE
 	var/overarmor = TRUE
 
 /obj/item/clothing/mask/rogue/attack_right(mob/user)
