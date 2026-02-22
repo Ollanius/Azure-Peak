@@ -394,8 +394,7 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/bucket
 	name = "bucket helmet"
-	desc = "A greathelmet that covers the entirety of the head, and - as the name implies - resembles an overturned bucket. It /
-	remains a popular choice amongst clerical orders and hedge-knights, due to its simplistic-yet-venerable design."
+	desc = "A greathelmet that covers the entirety of the head, and - as the name implies - resembles an overturned bucket. It remains a popular choice amongst clerical orders and hedge-knights, due to its simplistic-yet-venerable design."
 	icon_state = "topfhelm"
 	item_state = "topfhelm"
 	emote_environment = 3
@@ -430,8 +429,7 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/bucket/alt
 	name = "sugarloaf helmet"
-	desc = "A greathelmet that covers the entirety of the head, and - as the name implies - resembles a baked breadloaf. / The
-	distinct curvature of its skullcap is designed to slope away crushing blows and other vertically-threatening strikes."
+	desc = "A greathelmet that covers the entirety of the head, and - as the name implies - resembles a baked breadloaf. The distinct curvature of its skullcap is designed to slope away crushing blows and other vertically-threatening strikes."
 	icon_state = "topfhelmalt"
 	item_state = "topfhelmalt"
 
