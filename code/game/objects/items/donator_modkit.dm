@@ -245,9 +245,10 @@
 
 /obj/item/enchantingkit/triumph_weaponkit_sword
 	name = "'Valorian' sword morphing elixir"
-	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of.. </br>..an Iron Dueling Sword.. </br>..or a Maciejowski."
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of.. </br>..an Iron Arming Sword.. </br>..an Iron Dueling Sword.. </br>..or a Maciejowski."
 	target_items = list(
-		/obj/item/rogueweapon/sword/short/messer/iron/virtue							= /obj/item/rogueweapon/sword/short/messer/iron/virtue/triumph,
+		/obj/item/rogueweapon/sword/iron										= /obj/item/rogueweapon/sword/iron/triumph,
+		/obj/item/rogueweapon/sword/short/messer/iron/virtue					= /obj/item/rogueweapon/sword/short/messer/iron/virtue/triumph,
 		/obj/item/rogueweapon/sword/falchion/militia	  						= /obj/item/rogueweapon/sword/falchion/militia/triumph
 		)
 	result_item = null
