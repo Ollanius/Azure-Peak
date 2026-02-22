@@ -59,7 +59,7 @@ LICH SKELETONS
 	pants = /obj/item/clothing/under/roguetown/chainlegs/kilt/paalloy
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/studded
 	neck = /obj/item/clothing/neck/roguetown/chaincoif/paalloy
-	shoes = /obj/item/clothing/shoes/roguetown/sandals/aalloy
+	shoes = /obj/item/clothing/shoes/roguetown/sandals/paalloy
 	gloves = /obj/item/clothing/gloves/roguetown/chain/paalloy
 
 	backr = /obj/item/rogueweapon/shield/wood
@@ -137,7 +137,7 @@ LICH SKELETONS
 	pants = /obj/item/clothing/under/roguetown/chainlegs/kilt/paalloy
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/studded
 	neck = /obj/item/clothing/neck/roguetown/chaincoif/paalloy
-	shoes = /obj/item/clothing/shoes/roguetown/sandals/aalloy
+	shoes = /obj/item/clothing/shoes/roguetown/sandals/paalloy
 	beltr = /obj/item/rogueweapon/huntingknife/idagger/steel/padagger
 	gloves = /obj/item/clothing/gloves/roguetown/angle
 	backl = /obj/item/storage/backpack/rogue/satchel
@@ -219,7 +219,7 @@ LICH SKELETONS
 	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/paalloy
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/cuirass/paalloy
 	neck = /obj/item/clothing/neck/roguetown/gorget/paalloy
-	shoes = /obj/item/clothing/shoes/roguetown/boots/aalloy
+	shoes = /obj/item/clothing/shoes/roguetown/boots/paalloy
 	gloves = /obj/item/clothing/gloves/roguetown/chain/paalloy
 
 	H.adjust_blindness(-3)
@@ -315,7 +315,7 @@ LICH SKELETONS
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/studded
 	gloves = /obj/item/clothing/gloves/roguetown/angle
 	neck = /obj/item/clothing/neck/roguetown/coif
-	shoes = /obj/item/clothing/shoes/roguetown/sandals/aalloy
+	shoes = /obj/item/clothing/shoes/roguetown/sandals/paalloy
 	backl = /obj/item/storage/backpack/rogue/satchel
 
 	beltr = /obj/item/rogueweapon/stoneaxe/woodcut/steel/paaxe
@@ -380,7 +380,7 @@ LICH SKELETONS
 	pants = /obj/item/clothing/under/roguetown/chainlegs/kilt/paalloy
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/studded
 	neck = /obj/item/clothing/neck/roguetown/chaincoif/paalloy
-	shoes = /obj/item/clothing/shoes/roguetown/sandals/aalloy
+	shoes = /obj/item/clothing/shoes/roguetown/sandals/paalloy
 	gloves = /obj/item/clothing/gloves/roguetown/chain/paalloy
 
 	l_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy
@@ -444,13 +444,12 @@ LICH SKELETONS
 	H.adjust_skillrank(/datum/skill/craft/sewing, 2, TRUE)
 
 	head = /obj/item/clothing/head/roguetown/helmet/heavy/knight/paalloy
-	mask = /obj/item/clothing/head/roguetown/circlet/lich
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/paalloy
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/light
 	pants = /obj/item/clothing/under/roguetown/platelegs/paalloy
 	gloves = /obj/item/clothing/gloves/roguetown/plate/paalloy
 	neck = /obj/item/clothing/neck/roguetown/chaincoif/paalloy
-	shoes = /obj/item/clothing/shoes/roguetown/boots/aalloy
+	shoes = /obj/item/clothing/shoes/roguetown/boots/paalloy
 
 	H.adjust_blindness(-3)
 	var/weapons = list("Flamberge", "Flail + Greatshield")
@@ -499,11 +498,6 @@ LICH SKELETONS
 	name = "decrepit greathood"
 	desc = "Roughspun fabrics from beyond your lyfetime, donned by those who have reaped what they've sown."
 	color = CLOTHING_BLACK
-
-/obj/item/clothing/head/roguetown/circlet/lich
-	name = "ancient gilded circlet"
-	desc = "Antiquity, veiled in gold and mounted atop a skeletal brow. Amongst the undying, such circlets denote those of importance - be they champions or commanders."
-	sellprice = 66
 
 /obj/item/rogueweapon/greatsword/grenz/flamberge/paalloy
 	name = "ancient flamberge"
