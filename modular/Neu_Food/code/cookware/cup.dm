@@ -23,7 +23,7 @@
 	force = 5
 	throwforce = 10
 
-/obj/item/proc/getonmobprop(tag)
+/obj/item/reagent_containers/glass/cup/getonmobprop(tag)
 	if(tag)
 		switch(tag)
 			if("gen")
