@@ -57,7 +57,7 @@ LICH SKELETONS
 	head = /obj/item/clothing/head/roguetown/helmet/heavy/paalloy
 	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail/paalloy
 	pants = /obj/item/clothing/under/roguetown/chainlegs/kilt/paalloy
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/studded/cuirbouilli
+	armor = /obj/item/clothing/suit/roguetown/armor/leather/studded
 	neck = /obj/item/clothing/neck/roguetown/chaincoif/paalloy
 	shoes = /obj/item/clothing/shoes/roguetown/sandals/aalloy
 	gloves = /obj/item/clothing/gloves/roguetown/chain/paalloy
@@ -135,7 +135,7 @@ LICH SKELETONS
 	head = /obj/item/clothing/head/roguetown/helmet/kettle/paalloy
 	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail/paalloy
 	pants = /obj/item/clothing/under/roguetown/chainlegs/kilt/paalloy
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/studded/cuirbouilli
+	armor = /obj/item/clothing/suit/roguetown/armor/leather/studded
 	neck = /obj/item/clothing/neck/roguetown/chaincoif/paalloy
 	shoes = /obj/item/clothing/shoes/roguetown/sandals/aalloy
 	beltr = /obj/item/rogueweapon/huntingknife/idagger/steel/padagger
@@ -312,7 +312,7 @@ LICH SKELETONS
 
 	head = /obj/item/clothing/head/roguetown/helmet/kettle/minershelm
 	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail/paalloy
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/studded/cuirbouilli
+	armor = /obj/item/clothing/suit/roguetown/armor/leather/studded
 	gloves = /obj/item/clothing/gloves/roguetown/angle
 	neck = /obj/item/clothing/neck/roguetown/coif
 	shoes = /obj/item/clothing/shoes/roguetown/sandals/aalloy
@@ -378,7 +378,7 @@ LICH SKELETONS
 	head = /obj/item/clothing/head/roguetown/helmet/kettle/paalloy
 	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail/paalloy
 	pants = /obj/item/clothing/under/roguetown/chainlegs/kilt/paalloy
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/studded/cuirbouilli
+	armor = /obj/item/clothing/suit/roguetown/armor/leather/studded
 	neck = /obj/item/clothing/neck/roguetown/chaincoif/paalloy
 	shoes = /obj/item/clothing/shoes/roguetown/sandals/aalloy
 	gloves = /obj/item/clothing/gloves/roguetown/chain/paalloy
