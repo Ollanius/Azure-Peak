@@ -442,7 +442,7 @@
 	slot_flags = ITEM_SLOT_NECK|ITEM_SLOT_HIP|ITEM_SLOT_WRISTS
 	possible_item_intents = list(/datum/intent/use, /datum/intent/special/magicarc)
 	sellprice = 10
-	experimental_onhip = FALSE
+	experimental_onhip = TRUE
 	anvilrepair = /datum/skill/craft/armorsmithing
 	grid_width = 32
 	grid_height = 32
