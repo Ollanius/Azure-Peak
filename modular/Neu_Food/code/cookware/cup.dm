@@ -36,7 +36,7 @@
 	cut_overlays()
 
 	if(reagents.total_volume)
-		var/mutable_appearance/filling = mutable_appearance(icon, "[icon_state]filling")
+		var/mutable_appearance/filling = mutable_appearance(icon, "[icon_state]_filling")
 
 		filling.color = mix_color_from_reagents(reagents.reagent_list)
 		filling.alpha = mix_alpha_from_reagents(reagents.reagent_list)
@@ -47,7 +47,7 @@
 			dice_count++
 		if(dice_count)
 			dice_count = min(3, dice_count)
-		add_overlay(mutable_appearance(icon, "[icon_state]dice[dice_count]"))
+		add_overlay(mutable_appearance(icon, "[icon_state]_dice[dice_count]"))
 
 /obj/item/reagent_containers/glass/cup/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/dice) && max_dice)
