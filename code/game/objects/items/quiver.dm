@@ -18,8 +18,8 @@
 	var/max_storage = 20
 	var/list/arrows = list()
 	sewrepair = TRUE
-	experimental_onhip = TRUE
 	experimental_inhand = TRUE
+	experimental_onhip = TRUE
 	experimental_onback = TRUE
 
 /obj/item/quiver/getonmobprop(tag)
@@ -73,6 +73,30 @@
 					"southabove" = 1,
 					"eastabove" = 1,
 					"westabove" = 1
+				)
+			if("gen")
+				return list(
+					"shrink" = 0.4,
+					"sx" = -7,
+					"sy" = -4,
+					"nx" = 7,
+					"ny" = -4,
+					"wx" = -4,
+					"wy" = -4,
+					"ex" = 2,
+					"ey" = -4,
+					"nturn" = 0,
+					"sturn" = 0,
+					"wturn" = 0,
+					"eturn" = 0,
+					"nflip" = 8,
+					"sflip" = 0,
+					"wflip" = 0,
+					"eflip" = 0,
+					"northabove" = 0,
+					"southabove" = 1,
+					"eastabove" = 1,
+					"westabove" = 0
 				)
 
 /obj/item/quiver/attack_turf(turf/T, mob/living/user)
