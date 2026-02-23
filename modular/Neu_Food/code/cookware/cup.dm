@@ -16,7 +16,6 @@
 	sellprice = 1
 	drinksounds = list('sound/items/drink_cup (1).ogg','sound/items/drink_cup (2).ogg','sound/items/drink_cup (3).ogg','sound/items/drink_cup (4).ogg','sound/items/drink_cup (5).ogg')
 	fillsounds = list('sound/items/fillcup.ogg')
-	possible_item_intents = list(INTENT_POUR, /datum/intent/fill, INTENT_SPLASH, /datum/intent/mace/strike/wood) 
 	anvilrepair = /datum/skill/craft/blacksmithing
 	var/rolling = FALSE
 	var/max_dice = 6
