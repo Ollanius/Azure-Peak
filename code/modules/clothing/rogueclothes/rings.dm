@@ -9,7 +9,7 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/rings.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/rings.dmi'
 	sleevetype = "shirt"
-	slot_flags = ITEM_SLOT_RING|ITEM_SLOT_GLOVES|ITEM_SLOT_HIP|ITEM_SLOT_WRISTS|ITEM_SLOT_MASK|ITEM_SLOT_MOUTH
+	slot_flags = ITEM_SLOT_RING|ITEM_SLOT_GLOVES
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	anvilrepair = /datum/skill/craft/armorsmithing
 	experimental_inhand = TRUE
@@ -27,11 +27,7 @@
 	else
 		alternate_worn_layer = UNDER_ARMOR_LAYER
 	user.update_inv_wear_id()
-	user.update_inv_wrists()
 	user.update_inv_gloves()
-	user.update_inv_wear_mask()
-	user.update_inv_mouth()
-	user.update_inv_belt()
 
 /obj/item/clothing/ring/get_mechanics_examine(mob/user)
     . = ..()
