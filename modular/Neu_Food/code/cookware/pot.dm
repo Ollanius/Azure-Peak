@@ -209,13 +209,24 @@
 
 /obj/item/reagent_containers/glass/bucket/pot/kettle/tankard/silver
 	name = "silver tankard"
-	desc = "A holy grail amongst innhouses and banquet halls, fit for pitchering liqour-a-plenty into awaiting mugs. The sides are decorated with a snippet of Psydonia's history, meticulously engraved into its gilded base. It can be set upon a hearth to brew traditional drinks."
+	desc = "A regal, silver-bottomed mug with gilded marginalia. Perfect for refilling mugs-a-plenty during the chaos of an innhouse's feast, or for drowning away the sorrows of a sorrid week. It can be set upon a hearth to brew traditional drinks."
 	icon = 'modular/Neu_Food/icons/cookware/unused.dmi'
 	icon_state = "silverstein"
 	volume = 75
 	sellprice = 40
 	force = 15
 	throwforce = 20
+
+/obj/item/reagent_containers/glass/bucket/pot/kettle/tankard/blacksteel
+	name = "blacksteel tankard"
+	desc = "A mythical, blacksteel-bottomed mug with a mastercrafted handle. Fit for the bloodied knuckles of a dungeon-delving hero, or the nitestand of a drunkhearted king. It can be set upon a hearth to brew traditional drinks, or smelted within a furnace to birth an ingot of blacksteel."
+	icon = 'modular/Neu_Food/icons/cookware/unused.dmi'
+	icon_state = "blacksteelstein"
+	volume = 100
+	sellprice = 100
+	force = 20
+	throwforce = 25
+	smeltresult = /obj/item/ingot/blacksteel
 
 /obj/item/reagent_containers/glass/bucket/pot/kettle/tankard/getonmobprop(tag)
 	if(tag)
