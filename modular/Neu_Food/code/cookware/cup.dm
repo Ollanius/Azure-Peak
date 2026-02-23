@@ -23,14 +23,10 @@
 	force = 5
 	throwforce = 10
 
-/obj/item/reagent_containers/glass/cup/update_icon(dont_fill=FALSE)
-
-
+/obj/item/reagent_containers/glass/cup/update_icon()
 	cut_overlays()
-
-	if(reagents.total_volume)
+	if(reagents.total_volume > 0)
 		var/mutable_appearance/filling = mutable_appearance(icon, "[icon_state]_filling")
-
 		filling.color = mix_color_from_reagents(reagents.reagent_list)
 		filling.alpha = mix_alpha_from_reagents(reagents.reagent_list)
 		add_overlay(filling)
