@@ -2,9 +2,9 @@
 	name = "frypan"
 	desc = "Two in one: Cook and smash heads."
 	icon = 'modular/Neu_Food/icons/cookware/pan.dmi'
-	lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
-	righthand_file = 'modular/Neu_Food/icons/food_righthand.dmi'
-	experimental_inhand = FALSE
+	//lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
+	//righthand_file = 'modular/Neu_Food/icons/food_righthand.dmi'
+	experimental_inhand = TRUE
 	icon_state = "pan"
 	wlength = WLENGTH_SHORT
 	sharpness = IS_BLUNT
