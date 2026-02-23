@@ -160,11 +160,6 @@
 	..()
 	if(quantity > 1)
 		drop_sound = 'sound/foley/coins1.ogg'
-		/obj/item/roguecoin/getonmobprop(tag)
-				if(tag)
-					switch(tag)
-						if("gen")
-							return list("shrink" = 0.4,"sx" = -7,"sy" = -4,"nx" = 7,"ny" = -4,"wx" = -4,"wy" = -4,"ex" = 2,"ey" = -4,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 	else
 		drop_sound = 'sound/foley/coinphy (1).ogg'
 
