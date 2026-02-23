@@ -62,7 +62,7 @@
 		/obj/item/reagent_containers/glass/bucket/pot/kettle/tankard,
 		/obj/item/reagent_containers/glass/bucket/pot/kettle/tankard,
 		)
-	reqs = list(/obj/item/grown/log/tree/small = 2, //obj/item/ingot/iron = 1)
+	reqs = list(/obj/item/grown/log/tree/small = 2, /obj/item/ingot/iron = 1)
 	skillcraft = /datum/skill/craft/carpentry
 	craftdiff = 2
 
@@ -73,7 +73,7 @@
 		/obj/item/reagent_containers/glass/bucket/pot/kettle/tankard/silver,
 		/obj/item/reagent_containers/glass/bucket/pot/kettle/tankard/silver,
 		)
-	reqs = list(/obj/item/grown/log/tree/small = 2, //obj/item/ingot/silver = 1)
+	reqs = list(/obj/item/grown/log/tree/small = 2, /obj/item/ingot/silver = 1)
 	skillcraft = /datum/skill/craft/carpentry
 	craftdiff = 4
 
