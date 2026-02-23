@@ -3,9 +3,9 @@
 	name = "pot"
 	desc = "A pot made out of iron. It can hold a lot of liquid."
 	icon = 'modular/Neu_Food/icons/cookware/pot.dmi'
-	lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
-	righthand_file = 'modular/Neu_Food/icons/food_righthand.dmi'
-	experimental_inhand = FALSE
+	//lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
+	//righthand_file = 'modular/Neu_Food/icons/food_righthand.dmi'
+	experimental_inhand = TRUE
 	icon_state = "pote"
 	sharpness = IS_BLUNT
 	slot_flags = null
