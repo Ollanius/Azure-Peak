@@ -212,7 +212,7 @@
 /obj/item/reagent_containers/glass/cup/bronzegob
 	name = "bronze goblet"
 	desc = "Drink deeply, my champion."
-	icon_state = "bronzegoblet"
+	icon_state = "bronzegobletcup"
 	sellprice = 10
 	force = 13
 	throwforce = 17
