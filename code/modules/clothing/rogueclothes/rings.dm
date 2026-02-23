@@ -2,7 +2,7 @@
 
 /obj/item/clothing/ring
 	name = "ring"
-	desc = "The first of many."
+	desc = "The only one to rule them all."
 	icon_state = "ring"
 	w_class = WEIGHT_CLASS_TINY
 	icon = 'icons/roguetown/clothing/rings.dmi'
