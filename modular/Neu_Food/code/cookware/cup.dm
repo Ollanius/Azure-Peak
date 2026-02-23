@@ -24,12 +24,7 @@
 	throwforce = 10
 
 /obj/item/reagent_containers/glass/cup/update_icon()
-	if(dont_fill)
-
-		return ..()
-
 	cut_overlays()
-
 	if(reagents.total_volume > 0)
 		if(reagents.total_volume <= 25)
 			var/mutable_appearance/filling = mutable_appearance(icon, "cup_half")
