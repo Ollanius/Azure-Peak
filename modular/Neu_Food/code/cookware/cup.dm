@@ -33,18 +33,25 @@
 
 /obj/item/reagent_containers/glass/cup/update_icon()
 	cut_overlays()
-	if(reagents)
-		if(reagents.total_volume > 0)
-			var/mutable_appearance/filling = mutable_appearance(icon, "[icon_state]filling")
+	if(reagents.total_volume > 0)
+		if(reagents.total_volume <= 25)
+			var/mutable_appearance/filling = mutable_appearance(icon, "_filling")
 			filling.color = mix_color_from_reagents(reagents.reagent_list)
+			filling.alpha = mix_alpha_from_reagents(reagents.reagent_list)
 			add_overlay(filling)
+		if(reagents.total_volume > 25)
+			var/mutable_appearance/filling = mutable_appearance(icon, "_filling")
+			filling.color = mix_color_from_reagents(reagents.reagent_list)
+			filling.alpha = mix_alpha_from_reagents(reagents.reagent_list)
+			add_overlay(filling)
+
 	if(max_dice)
 		var/dice_count = 0
 		for(var/obj/item/dice/D in contents)
 			dice_count++
 		if(dice_count)
 			dice_count = min(3, dice_count)
-		add_overlay(mutable_appearance(icon, "[icon_state]dice[dice_count]"))
+		add_overlay(mutable_appearance(icon, "_dice[dice_count]"))
 
 /obj/item/reagent_containers/glass/cup/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/dice) && max_dice)
