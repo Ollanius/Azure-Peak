@@ -33,11 +33,15 @@
 	if(coin_amount >= 1)
 		set_quantity(floor(coin_amount))
 
+/obj/item/roguecoin/get_mechanics_examine(mob/user)
+    . = ..()
+    . += span_info("Coinage can be exchanged for goods and services.")
+
 /obj/item/roguecoin/getonmobprop(tag)
 	if(tag)
 		switch(tag)
 			if("gen")
-				return list("shrink" = 0.2,"sx" = -7,"sy" = -4,"nx" = 7,"ny" = -4,"wx" = -4,"wy" = -4,"ex" = 2,"ey" = -4,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
+				return list("shrink" = 0.3,"sx" = -7,"sy" = -4,"nx" = 7,"ny" = -4,"wx" = -4,"wy" = -4,"ex" = 2,"ey" = -4,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/roguecoin/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	playsound(loc, 'sound/foley/coins1.ogg', 100, TRUE, -2)
@@ -156,6 +160,11 @@
 	..()
 	if(quantity > 1)
 		drop_sound = 'sound/foley/coins1.ogg'
+		/obj/item/roguecoin/getonmobprop(tag)
+				if(tag)
+					switch(tag)
+						if("gen")
+							return list("shrink" = 0.4,"sx" = -7,"sy" = -4,"nx" = 7,"ny" = -4,"wx" = -4,"wy" = -4,"ex" = 2,"ey" = -4,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 	else
 		drop_sound = 'sound/foley/coinphy (1).ogg'
 
@@ -174,8 +183,6 @@
 	switch(quantity)
 		if(2)
 			dropshrink = 0.3 // this is just like the single coin, gotta shrink it
-			("gen")
-				return list("shrink" = 0.3,"sx" = -7,"sy" = -4,"nx" = 7,"ny" = -4,"wx" = -4,"wy" = -4,"ex" = 2,"ey" = -4,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 			icon_state = "[base_type]m"
 			if(heads_tails == last_merged_heads_tails)
 				icon_state = "[base_type][heads_tails]1"
@@ -189,7 +196,6 @@
 			icon_state = "[base_type]10"
 		if(16 to INFINITY)
 			icon_state = "[base_type]15"
-
 
 /obj/item/roguecoin/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/roguecoin))
