@@ -77,6 +77,16 @@
 	skillcraft = /datum/skill/craft/carpentry
 	craftdiff = 4
 
+/datum/crafting_recipe/roguetown/survival/blcktankard
+	name = "tankards, blacksteel (x1)"
+	category = "Houseware"
+	result = list(
+		/obj/item/reagent_containers/glass/bucket/pot/kettle/tankard/blacksteel
+		)
+	reqs = list(/obj/item/grown/log/tree/small = 2, /obj/item/ingot/blacksteel = 1)
+	skillcraft = /datum/skill/craft/carpentry
+	craftdiff = 6
+
 /datum/crafting_recipe/roguetown/survival/woodtray
 	name = "wooden trays (x2)"
 	category = "Houseware"
