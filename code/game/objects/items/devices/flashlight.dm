@@ -164,7 +164,7 @@
 /obj/item/flashlight/flare/torch/get_mechanics_examine(mob/user)
     . = ..()
     . += span_info("Ovens, hearths, braziers, scones, candles, bushes, grasspatches, and other certain structures can be set alight by left-clicking them while on the 'USE' intent.")
-    . += span_info("Standing in front of an unignited light source while sharpening a blade - or striking two stones together - can eventually reignite it, through birthed sparks.")
+    . += span_info("Standing in front of an unignited light source while sharpening a blade - or striking two stones together - can eventually reignite it.")
 
 /obj/item/flashlight/flare/torch/Initialize()
 	GLOB.weather_act_upon_list += src
