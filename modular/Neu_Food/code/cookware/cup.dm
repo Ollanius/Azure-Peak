@@ -2,23 +2,21 @@
 	name = "metal cup"
 	desc = "A sturdy cup of metal. Often seen in the hands of warriors, wardens, and other sturdy folk."
 	icon = 'modular/Neu_Food/icons/cookware/cup.dmi'
-	icon_state = "iron"
-	force = 5
-	lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
-	righthand_file = 'modular/Neu_Food/icons/food_righthand.dmi'
-	experimental_inhand = FALSE
-	throwforce = 10
+	icon_state = "ironcup"
+	//lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
+	//righthand_file = 'modular/Neu_Food/icons/food_righthand.dmi'
 	reagent_flags = OPENCONTAINER
 	amount_per_transfer_from_this = 6
 	possible_transfer_amounts = list(6)
 	dropshrink = 0.8
 	w_class = WEIGHT_CLASS_NORMAL
-	experimental_inhand = FALSE
+	experimental_inhand = TRUE
 	volume = 25
 	obj_flags = CAN_BE_HIT
 	sellprice = 1
 	drinksounds = list('sound/items/drink_cup (1).ogg','sound/items/drink_cup (2).ogg','sound/items/drink_cup (3).ogg','sound/items/drink_cup (4).ogg','sound/items/drink_cup (5).ogg')
 	fillsounds = list('sound/items/fillcup.ogg')
+	possible_item_intents = list(INTENT_POUR, /datum/intent/fill, INTENT_SPLASH, /datum/intent/mace/strike/wood) 
 	anvilrepair = /datum/skill/craft/blacksmithing
 	var/rolling = FALSE
 	var/max_dice = 6
@@ -26,23 +24,32 @@
 	throwforce = 10
 
 /obj/item/reagent_containers/glass/cup/update_icon(dont_fill=FALSE)
+	if(dont_fill)
 
+		return ..()
 
 	cut_overlays()
 
-	if(reagents.total_volume)
-		var/mutable_appearance/filling = mutable_appearance(icon, "[icon_state]filling")
+	if(reagents.total_volume > 0)
+		if(reagents.total_volume <= 25)
+			var/mutable_appearance/filling = mutable_appearance(icon, "cup_half")
+			filling.color = mix_color_from_reagents(reagents.reagent_list)
+			filling.alpha = mix_alpha_from_reagents(reagents.reagent_list)
+			add_overlay(filling)
 
-		filling.color = mix_color_from_reagents(reagents.reagent_list)
-		filling.alpha = mix_alpha_from_reagents(reagents.reagent_list)
-		add_overlay(filling)
+		if(reagents.total_volume > 25)
+			var/mutable_appearance/filling = mutable_appearance(icon, "cup_full")
+			filling.color = mix_color_from_reagents(reagents.reagent_list)
+			filling.alpha = mix_alpha_from_reagents(reagents.reagent_list)
+			add_overlay(filling)
+
 	if(max_dice)
 		var/dice_count = 0
 		for(var/obj/item/dice/D in contents)
 			dice_count++
 		if(dice_count)
 			dice_count = min(3, dice_count)
-		add_overlay(mutable_appearance(icon, "[icon_state]dice[dice_count]"))
+		add_overlay(mutable_appearance(icon, "[icon_state]_dice[dice_count]"))
 
 /obj/item/reagent_containers/glass/cup/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/dice) && max_dice)
@@ -291,6 +298,8 @@
 	dropshrink = 1
 	icon_state = "agoblet"
 	sellprice = 0
+	force = 7
+	throwforce = 12
 
 /obj/item/reagent_containers/glass/cup/carved/jade
 	name = "jade cup"
@@ -403,3 +412,13 @@
 	dropshrink = 1
 	icon_state = "fancycup_onyxa"
 	sellprice = 45
+
+/obj/item/reagent_containers/glass/cup/tankard
+	name = "tankard"
+	desc = "A hefty mug"
+	icon = 'modular/Neu_Food/icons/cookware/unused.dmi'
+	icon_state = "stein"
+	volume = 50
+	sellprice = 10
+	force = 10
+	throwforce = 15
