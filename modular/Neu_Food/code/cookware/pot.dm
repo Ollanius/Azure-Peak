@@ -17,7 +17,7 @@
 	dropshrink = 1 // Override for bucket
 	volume = 240
 
-/obj/item/reagent_containers/glass/bucket/pot/examine(mob/user)
+/obj/item/reagent_containers/glass/bucket/pot/get_mechanics_examine(mob/user)
 	. = ..()
 	. += span_info("Pots can be placed atop a hearth by left-clicking it. If the hearth is lit, the placed pot will eventually come to a boil - so long as it's filled with water.")
 	. += span_info("Right-clicking a hearthbound pot allows you to fan its flames, further reducing the time it'll take to start boiling.")
@@ -89,6 +89,12 @@
 	volume = 120
 	sellprice = 20
 
+/obj/item/reagent_containers/glass/bucket/pot/teapot/getonmobprop(tag)
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.4,"sx" = -7,"sy" = -4,"nx" = 7,"ny" = -4,"wx" = -4,"wy" = -4,"ex" = 2,"ey" = -4,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
+
 /obj/item/reagent_containers/glass/bucket/pot/carved
 	name = "carved teapot"
 	desc = "You shouldn't be seeing this."
@@ -97,6 +103,12 @@
 	dropshrink = 1.0
 	volume = 99
 	sellprice = 0
+
+/obj/item/reagent_containers/glass/bucket/pot/carved/getonmobprop(tag)
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.4,"sx" = -7,"sy" = -4,"nx" = 7,"ny" = -4,"wx" = -4,"wy" = -4,"ex" = 2,"ey" = -4,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/reagent_containers/glass/bucket/pot/carved/teapotjade
 	name = "jade teapot"
@@ -204,6 +216,12 @@
 	sellprice = 40
 	force = 15
 	throwforce = 20
+
+/obj/item/reagent_containers/glass/bucket/pot/kettle/tankard/getonmobprop(tag)
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.4,"sx" = -7,"sy" = -4,"nx" = 7,"ny" = -4,"wx" = -4,"wy" = -4,"ex" = 2,"ey" = -4,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/reagent_containers/glass/bucket/pot/kettle/tankard/update_icon(dont_fill=FALSE)
 	return FALSE // Ditto.
