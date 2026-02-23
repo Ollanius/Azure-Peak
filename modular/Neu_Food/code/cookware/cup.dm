@@ -35,12 +35,12 @@
 	cut_overlays()
 	if(reagents.total_volume > 0)
 		if(reagents.total_volume <= 25)
-			var/mutable_appearance/filling = mutable_appearance(icon, "_filling")
+			var/mutable_appearance/filling = mutable_appearance(icon, "cup_filling")
 			filling.color = mix_color_from_reagents(reagents.reagent_list)
 			filling.alpha = mix_alpha_from_reagents(reagents.reagent_list)
 			add_overlay(filling)
 		if(reagents.total_volume > 25)
-			var/mutable_appearance/filling = mutable_appearance(icon, "_filling")
+			var/mutable_appearance/filling = mutable_appearance(icon, "cup_filling")
 			filling.color = mix_color_from_reagents(reagents.reagent_list)
 			filling.alpha = mix_alpha_from_reagents(reagents.reagent_list)
 			add_overlay(filling)
@@ -51,7 +51,7 @@
 			dice_count++
 		if(dice_count)
 			dice_count = min(3, dice_count)
-		add_overlay(mutable_appearance(icon, "_dice[dice_count]"))
+		add_overlay(mutable_appearance(icon, "cup_dice[dice_count]"))
 
 /obj/item/reagent_containers/glass/cup/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/dice) && max_dice)
@@ -157,7 +157,7 @@
 	name = "wooden cup"
 	desc = "This cup whispers tales of drunken battles and feasts."
 	resistance_flags = FLAMMABLE
-	icon_state = "wooden"
+	icon_state = "woodencup"
 	drop_sound = 'sound/foley/dropsound/wooden_drop.ogg'
 	anvilrepair = null
 	sellprice = 0
@@ -167,7 +167,7 @@
 /obj/item/reagent_containers/glass/cup/steel
 	name = "goblet"
 	desc = "A steel goblet, its surface adorned with intricate carvings."
-	icon_state = "steel"
+	icon_state = "steelcup"
 	sellprice = 10
 	force = 10
 	throwforce = 15
@@ -209,7 +209,7 @@
 /obj/item/reagent_containers/glass/cup/silver
 	name = "silver goblet"
 	desc = "A silver goblet, its surface adorned with intricate carvings and runes."
-	icon_state = "silver"
+	icon_state = "silvercup"
 	sellprice = 30
 	last_used = 0
 	is_silver = FALSE //temporary measure to prevent people from easily metachecking vampyres. Replace with a more sophisticated alternative if-or-when available.
@@ -232,7 +232,7 @@
 /obj/item/reagent_containers/glass/cup/golden
 	name = "golden goblet"
 	desc = "Adorned with gemstones, this goblet radiates opulence and grandeur."
-	icon_state = "golden"
+	icon_state = "goldencup"
 	sellprice = 50
 	force = 10
 	throwforce = 15
@@ -248,7 +248,7 @@
 /obj/item/reagent_containers/glass/cup/golden/poison
 	name = "golden goblet"
 	desc = "Adorned with gemstones, this goblet radiates opulence and grandeur."
-	icon_state = "golden"
+	icon_state = "goldencup"
 	sellprice = 50
 	list_reagents = list(/datum/reagent/toxin/killersice = 1, /datum/reagent/consumable/ethanol/elfred = 20)
 	force = 10
