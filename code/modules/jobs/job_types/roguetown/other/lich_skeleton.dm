@@ -499,8 +499,21 @@ LICH SKELETONS
 	desc = "Roughspun fabrics from beyond your lyfetime, donned by those who have reaped what they've sown."
 	color = CLOTHING_BLACK
 
+/obj/item/rogueweapon/greatsword/grenz/flamberge/aalloy
+	name = "decrepit flamberge"
+	desc = "Tarnished bronze and decaying bogleather, meticulously woven together to fashion a flame-bladed swan song for Psydonia's final descendants. </br>'Oh, how valiant His sacrifice was! But now He lies, sleeping and witless to the world-anew.' </br>'And now, He sleeps. And now, He weeps.'"
+	icon_state = "ancientflamb"
+	smeltresult = /obj/item/ingot/aaslag
+	max_integrity = 150
+	force = 25
+	blade_dulling = DULLING_SHAFT_CONJURED
+	color = "#bb9696"
+	smeltresult = /obj/item/ingot/aaslag
+	anvilrepair = null
+	randomize_blade_int_on_init = TRUE
+
 /obj/item/rogueweapon/greatsword/grenz/flamberge/paalloy
 	name = "ancient flamberge"
-	desc = "Polished gilbranze and decaying bogleather, meticulously woven together to fashion a flame-bladed swan song for the lyving. </br>Good eve, sire."
+	desc = "Polished gilbranze and velvety saigaleather, masterfully bound together to hewn a greatsword of archaic opulance. One must remember that even the undying aren't consigned to the Archdevil's grasp; for those of true faith and nobleheartedness can persist in penitence."
 	icon_state = "ancientflamb"
 	smeltresult = /obj/item/ingot/aaslag
