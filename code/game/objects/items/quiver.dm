@@ -24,7 +24,6 @@
 
 /obj/item/quiver/getonmobprop(tag)
 	..()
-
 	if(tag)
 		switch(tag)
 			if("onback")
@@ -53,15 +52,15 @@
 				)
 			if("onbelt")
 				return list(
-					"shrink" = 0.5,
-					"sx" = -2,
-					"sy" = -5,
-					"nx" = 4,
-					"ny" = -5,
+					"shrink" = 0.4,
+					"sx" = -4,
+					"sy" = -6,
+					"nx" = 5,
+					"ny" = -6,
 					"wx" = 0,
-					"wy" = -5,
-					"ex" = 2,
-					"ey" = -5,
+					"wy" = -6,
+					"ex" = -1,
+					"ey" = -6,
 					"nturn" = 0,
 					"sturn" = 0,
 					"wturn" = -90,
