@@ -23,7 +23,7 @@
 	force = 5
 	throwforce = 10
 
-/obj/item/reagent_containers/glass/cup/update_icon()
+/obj/item/reagent_containers/glass/cup/update_icon(dont_fill=FALSE)
 	cut_overlays()
 	if(reagents.total_volume > 0)
 		var/mutable_appearance/filling = mutable_appearance(icon, "[icon_state]_filling")
