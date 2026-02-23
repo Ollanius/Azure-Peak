@@ -2,7 +2,7 @@
 	name = "metal cup"
 	desc = "A sturdy cup of metal. Often seen in the hands of warriors, wardens, and other sturdy folk."
 	icon = 'modular/Neu_Food/icons/cookware/cup.dmi'
-	icon_state = "ironcup"
+	icon_state = "cup"
 	//lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
 	//righthand_file = 'modular/Neu_Food/icons/food_righthand.dmi'
 	reagent_flags = OPENCONTAINER
@@ -23,7 +23,7 @@
 	force = 5
 	throwforce = 10
 
-/obj/item/reagent_containers/glass/cup/update_icon(dont_fill=FALSE)
+/obj/item/reagent_containers/glass/cup/update_icon()
 	if(dont_fill)
 
 		return ..()
