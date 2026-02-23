@@ -3,9 +3,9 @@
 	name = "pot"
 	desc = "A pot made out of iron. It can hold a lot of liquid."
 	icon = 'modular/Neu_Food/icons/cookware/pot.dmi'
-	lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
-	righthand_file = 'modular/Neu_Food/icons/food_righthand.dmi'
-	experimental_inhand = FALSE
+	//lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
+	//righthand_file = 'modular/Neu_Food/icons/food_righthand.dmi'
+	experimental_inhand = TRUE
 	icon_state = "pote"
 	sharpness = IS_BLUNT
 	slot_flags = null
@@ -16,6 +16,14 @@
 	throwforce = 10
 	dropshrink = 1 // Override for bucket
 	volume = 240
+
+/obj/item/cooking/pan/examine(mob/user)
+	. = ..()
+	. += span_info("Pots can be placed atop a hearth by left-clicking it. If the hearth is lit, the placed pot will eventually come to a boil - so long as it's filled with water.")
+	. += span_info("Right-clicking a hearthbound pot allows you to fan its flames, further reducing the time it'll take to start boiling.")
+	. += span_info("Once boiling, left-clicking the hearthbound pot with an ingredient will drop it inside. The larger a pot is, the more ingredients can be dropped in at any given time.")
+	. += span_info("After the first ingredient is placed in, the pot will begin turning it - and any other subsequent ingredients - into a brew, over the course of a minute.")
+	. += span_info("Specific ingredients can create specific brews; dried rosa petals for a refreshing tea, coffee beans for a revitalizing drink, and more..")
 
 /obj/item/reagent_containers/glass/bucket/pot/update_icon()
 	cut_overlays()
