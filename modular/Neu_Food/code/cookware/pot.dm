@@ -184,3 +184,26 @@
 
 /obj/item/reagent_containers/glass/bucket/pot/teapot/update_icon(dont_fill=FALSE)
 	return FALSE // There's no filling for teapot
+
+/obj/item/reagent_containers/glass/bucket/pot/kettle/tankard
+	name = "tankard"
+	desc = "A heftsome, iron-bottomed mug. It can be set upon a hearth to brew traditional drinks, or - for the more alcoholically-inclined - used as a pitcher of liqour."
+	icon = 'modular/Neu_Food/icons/cookware/unused.dmi'
+	icon_state = "stein"
+	volume = 50
+	sellprice = 10
+	force = 10
+	throwforce = 15
+
+/obj/item/reagent_containers/glass/bucket/pot/kettle/tankard/silver
+	name = "silver tankard"
+	desc = "A holy grail amongst innhouses and banquet halls, fit for pitchering liqour-a-plenty into awaiting mugs. The sides are decorated with a snippet of Psydonia's history, meticulously engraved into its gilded base. It can be set upon a hearth to brew traditional drinks."
+	icon = 'modular/Neu_Food/icons/cookware/unused.dmi'
+	icon_state = "silverstein"
+	volume = 75
+	sellprice = 40
+	force = 15
+	throwforce = 20
+
+/obj/item/reagent_containers/glass/bucket/pot/kettle/tankard/update_icon(dont_fill=FALSE)
+	return FALSE // Ditto.
