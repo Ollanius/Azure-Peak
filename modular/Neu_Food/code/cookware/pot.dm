@@ -17,7 +17,7 @@
 	dropshrink = 1 // Override for bucket
 	volume = 240
 
-/obj/item/cooking/pan/examine(mob/user)
+/obj/item/reagent_containers/glass/bucket/pot/examine(mob/user)
 	. = ..()
 	. += span_info("Pots can be placed atop a hearth by left-clicking it. If the hearth is lit, the placed pot will eventually come to a boil - so long as it's filled with water.")
 	. += span_info("Right-clicking a hearthbound pot allows you to fan its flames, further reducing the time it'll take to start boiling.")
