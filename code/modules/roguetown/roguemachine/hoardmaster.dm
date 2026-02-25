@@ -178,6 +178,16 @@
 	icon_state = "goldknight"
 	max_integrity = ARMOR_INT_SIDE_STEEL + 50
 
+/obj/item/rogueweapon/sword/gilded
+	name = "gilded arming sword"
+	desc = "A resplendant arming sword, who's alloyed blade and besilked handle lays separated by a duocruciformic crossguard. This particular weapon seems to have innovatively combined the lethal cutting prowess of Psydonia's oldest weapon with the psychological damage of knowing that its wielder could likely bribe the Carriageman himself, and still chose to personally kill you."
+	icon_state = "goldsword"
+	force = 27
+	force_wielded = 32
+	sheathe_icon = "goldsword"
+	max_blade_int = 300
+	wdefense_wbonus = 3
+
 /obj/item/reagent_containers/food/snacks/grown/apple/gold
 	seed = null //Ungrowable(?). Can be changed if someone wishes.
 	name = "ambrosia"
