@@ -185,11 +185,12 @@
 	icon_state = "gapple"
 	faretype = FARE_FINE
 	tastes = list("divinely crisp sweetness" = 1)
-	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
 	trash = /obj/item/trash/gapplecore
 	slice_path = /obj/item/reagent_containers/food/snacks/rogue/fruit/apple_sliced/gold
-	slices_num = 2
-	eat_effect = list(/datum/status_effect/buff/snackbuff, /datum/status_effect/buff/healing)
+	slices_num = 3
+	rotprocess = null
+	eat_effect = /datum/status_effect/buff/snackbuff
+	list_reagents = list(/datum/reagent/consumable/nutriment = MEAL_GOOD, /datum/reagent/medicine/stronghealth = 12)
 
 /obj/item/reagent_containers/food/snacks/grown/apple/gold/Initialize()
   ..()
@@ -207,9 +208,10 @@
 	icon_state = "gapple_sliced"
 	desc = "A golden apple, parted into perfectly symmetrical thirds. Opulance has never tasted so sweet!"
 	faretype = FARE_LAVISH
+	rotprocess = null
 	tastes = list("a sliver of divine sweetness" = 1)
-	list_reagents = list(/datum/reagent/consumable/nutriment = 1)
-	eat_effect = list(/datum/status_effect/buff/snackbuff, /datum/status_effect/buff/healing)
+	eat_effect = /datum/status_effect/buff/snackbuff
+	list_reagents = list(/datum/reagent/consumable/nutriment = MEAL_GOOD, /datum/reagent/medicine/stronghealth = 6)
 
 /obj/item/reagent_containers/food/snacks/rogue/fruit/apple_sliced/gold/Initialize()
   ..()
