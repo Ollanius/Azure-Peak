@@ -32,6 +32,11 @@
 	cost = 20
 	contains = list(/obj/item/clothing/neck/roguetown/gorget)
 
+/datum/supply_pack/rogue/Alchemist/gildgorget
+	name = "Gilded Gorget"
+	cost = 60
+	contains = list(/obj/item/clothing/neck/roguetown/gorget/gilded)
+
 ///////////
 // CHEST //
 ///////////
@@ -253,6 +258,11 @@
 	name = "Luck Potion"
 	cost = 30
 	contains = list(/obj/item/reagent_containers/glass/bottle/alchemical/lucpot)
+
+/datum/supply_pack/rogue/Alchemist/goldenapplecheap
+	name = "Apple Of Ambrosia - Alchemist's Discount"
+	cost = 40
+	contains = list(/obj/item/reagent_containers/food/snacks/grown/apple/gold)
 
 /datum/supply_pack/rogue/Alchemist/antidote
 	name = "Poison Antidote"
