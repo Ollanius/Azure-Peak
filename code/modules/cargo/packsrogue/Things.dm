@@ -57,6 +57,11 @@
 	cost = 40 //Probably fine?
 	contains = list(/obj/item/reagent_containers/glass/bottle/rogue/healthpotnew)
 
+/datum/supply_pack/rogue/Things/goldenapple
+	name = "Apple Of Ambrosia"
+	cost = 60
+	contains = list(/obj/item/reagent_containers/food/snacks/grown/apple/gold)
+
 /datum/supply_pack/rogue/Things/manapot
 	name = "Mana Potion - Weak"
 	cost = 30
