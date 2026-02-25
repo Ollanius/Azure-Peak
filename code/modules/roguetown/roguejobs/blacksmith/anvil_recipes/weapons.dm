@@ -1345,10 +1345,10 @@
 // UNIQUE
 
 /datum/anvil_recipe/valuables/deprivedsword
-	name = "Broadsword, Decrepit (+1 Small Log, +2 Glimmering Slag)"
+	name = "Sword, Imperfect (+1 Small Log, +2 Glimmering Slag)"
 	req_bar = /obj/item/ingot/iron
 	additional_items = list(/obj/item/ingot/aaslag, /obj/item/ingot/aaslag, /obj/item/grown/log/tree/small)
-	created_item = /obj/item/rogueweapon/sword/long/broadsword/broken
+	created_item = /obj/item/rogueweapon/sword/broken
 	appro_skill = /datum/skill/craft/weaponsmithing
 	i_type = "Weapons"
 	craftdiff = SKILL_LEVEL_NOVICE
