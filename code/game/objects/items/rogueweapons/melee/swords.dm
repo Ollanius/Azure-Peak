@@ -1136,7 +1136,7 @@
 
 /obj/item/rogueweapon/sword/short/broken
 	name = "aged shortsword"
-	desc = "The arming sword's shorter and much older brother. Despite being centuries older than the swords of todae, it remains in use as a cheap sidearm for shieldbearers and archers. This aged variant predates them all; and though the edge is heftsome and jagged, it remains lethal in the hands of a well-honed swordsman."
+	desc = "The arming sword's shorter and much older brother. Despite being centuries older than the swords of todae, it remains in use as a cheap sidearm for shieldbearers and archers. This ancient variant was there since the beginning, and - through one way or another - has found itself a wielder, once more. Imperfections hardly command censure, especially when the edge remains sharp enough to gouge; a fitting throwback for the final daes of Psydonia's latest era."
 	icon_state = "iswordshort_d"
 	sheathe_icon = "iswordshort_d"
 	wdefense = 3
