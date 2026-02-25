@@ -508,6 +508,20 @@
 	wdefense_wbonus = 3
 	smeltresult = /obj/item/ingot/steel
 
+/obj/item/rogueweapon/sword/long/broadsword/broken
+	name = "broken broadsword"
+	desc = "A lethal and well-balanced weapon, long ago; now, a shadow of its former self. Half \
+	of the blade of this straight sword is broken off. Only the completely Deprived would even \
+	consider using this as a weapon.'"
+	icon = 'icons/roguetown/weapons/swords32.dmi'
+	icon_state = "isword_d"
+	sheathe_icon = "isword_d"
+	force = 23
+	force_wielded = 27
+	wdefense = 3
+	max_blade_int = 180
+	max_integrity = 90
+
 /obj/item/rogueweapon/sword/long/training
 	name = "training sword"
 	desc = "Swords like these, with blunted tips and dull edges, are often used for practice without much risk of injury."
