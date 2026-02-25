@@ -179,14 +179,22 @@
 	max_integrity = ARMOR_INT_SIDE_STEEL + 50
 
 /obj/item/rogueweapon/sword/gilded
-	name = "gilded arming sword"
+	name = "gilded longsword"
 	desc = "A resplendant arming sword, who's alloyed blade and besilked handle lays separated by a duocruciformic crossguard. This particular weapon seems to have innovatively combined the lethal cutting prowess of Psydonia's oldest weapon with the psychological damage of knowing that its wielder could likely bribe the Carriageman himself, and still chose to personally kill you."
 	icon_state = "goldsword"
 	force = 27
 	force_wielded = 32
 	sheathe_icon = "goldsword"
-	max_blade_int = 300
+	max_blade_int = 333
 	wdefense_wbonus = 3
+
+/obj/item/rogueweapon/shield/tower/metal/gilded
+	name = "gilded kite shield"
+	desc = "A resplendant kite shield, assembled from six alloyed plates that've been hooked together by a glimmering duocruciform. The sheer opulance on display would invoke seizures in the bods of financial ministers, were they ever to lay eyes upon such a blatantly indulgant use of gold."
+	force = 25
+	throwforce = 15
+	max_integrity = 333
+	coverage = 65
 
 /obj/item/reagent_containers/food/snacks/grown/apple/gold
 	seed = null //Ungrowable(?). Can be changed if someone wishes.
