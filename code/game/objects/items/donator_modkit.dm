@@ -76,7 +76,7 @@
 /obj/item/enchantingkit/bigfoot
 	name = "'Gilded Knight Helm' morphing elixir"
 	target_items = list(/obj/item/clothing/head/roguetown/helmet/heavy/knight)
-	result_item = /obj/item/clothing/head/roguetown/helmet/heavy/knight/gilded
+	result_item = /obj/item/clothing/head/roguetown/helmet/heavy/knight/gildeddonator
 
 //Bigfoot - Custom great axe type
 /obj/item/enchantingkit/bigfoot_axe
