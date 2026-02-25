@@ -73,7 +73,7 @@
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 
 //Bigfoot's donator item - knight helmet with gilded pattern
-/obj/item/clothing/head/roguetown/helmet/heavy/knight/gilded
+/obj/item/clothing/head/roguetown/helmet/heavy/knight/gildedbigfoot
 	name = "gilded knight's helmet"
 	desc = "A noble knight's helm made of steel and completed with a gilded trim."
 	icon_state = "gildedknight"
