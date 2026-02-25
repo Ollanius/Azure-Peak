@@ -37,6 +37,11 @@
 	cost = 20
 	contains = list(/obj/item/clothing/neck/roguetown/gorget)
 
+/datum/supply_pack/rogue/Mage/gildgorget
+	name = "Gilded Gorget"
+	cost = 40
+	contains = list(/obj/item/clothing/neck/roguetown/gorget/gilded)
+
 ///////////
 // CHEST //
 ///////////
