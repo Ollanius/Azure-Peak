@@ -33,6 +33,11 @@
 	cost = 60
 	contains = list(/obj/item/clothing/head/roguetown/helmet/heavy/knight/armet)
 
+/datum/supply_pack/rogue/Iconoclast/goldarmet
+	name = "Gilded Armet"
+	cost = 120
+	contains = list(/obj/item/clothing/head/roguetown/helmet/heavy/knight/gilded)
+
 //////////
 // NECK //
 //////////
@@ -62,6 +67,11 @@
 	cost = 40
 	contains = list(/obj/item/clothing/neck/roguetown/gorget/steel)
 
+/datum/supply_pack/rogue/Iconoclast/gildgorget
+	name = "Gilded Gorget"
+	cost = 60
+	contains = list(/obj/item/clothing/neck/roguetown/gorget/gilded)
+
 ///////////
 // CHEST //
 ///////////
@@ -86,6 +96,11 @@
 	cost = 80
 	contains = list(/obj/item/clothing/suit/roguetown/armor/plate)
 
+/datum/supply_pack/rogue/Iconoclast/gildedplate
+	name = "Gilded Cuirass"
+	cost = 120
+	contains = list(/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/gilded)
+
 /datum/supply_pack/rogue/Iconoclast/Fullplate
 	name = "Steel Full plate"
 	cost = 160
@@ -105,6 +120,11 @@
 	cost = 50
 	contains = list(/obj/item/clothing/gloves/roguetown/plate)
 
+/datum/supply_pack/rogue/Iconoclast/gildedbracers
+	name = "Gilded Bracers"
+	cost = 60
+	contains = list(/obj/item/clothing/shoes/roguetown/boots/armor/gilded)
+
 ///////////////
 // LEGS/FEET //
 ///////////////
@@ -118,6 +138,11 @@
 	name = "Steel Boots"
 	cost = 30
 	contains = list(/obj/item/clothing/shoes/roguetown/boots/armor)
+
+/datum/supply_pack/rogue/Iconoclast/gildedplateboots
+	name = "Gilded Plateboots"
+	cost = 60
+	contains = list(/obj/item/clothing/shoes/roguetown/boots/armor/gilded)
 
 /////////////
 // WEAPONS //
@@ -161,3 +186,8 @@
 	name = "Kite Shield"
 	cost = 40
 	contains = list(/obj/item/rogueweapon/shield/tower/metal)
+
+/datum/supply_pack/rogue/Iconoclast/gildedkiteshield
+	name = "Gilded Kite Shield"
+	cost = 60
+	contains = list(/obj/item/rogueweapon/shield/tower/metal/gilded)
