@@ -184,9 +184,10 @@
 	desc = "A golden apple, by any other name. You can see your own reflection in the golden apple's surface, as the fingers cradling it adopt a pleasant numbness."
 	icon_state = "gapple"
 	faretype = FARE_FINE
-	tastes = list("refreshingly crisp sweetness" = 1)
+	tastes = list("divinely crisp sweetness" = 1)
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
 	trash = /obj/item/trash/gapplecore
-	slice_path = /obj/item/reagent_containers/food/snacks/rogue/fruit/gapple_sliced
+	slice_path = /obj/item/reagent_containers/food/snacks/rogue/fruit/apple_sliced/gold
 	slices_num = 2
 	eat_effect = list(/datum/status_effect/buff/snackbuff, /datum/status_effect/buff/healing)
 
@@ -201,20 +202,20 @@
 		if(H.patron.type == /datum/patron/inhumen/matthios)
 			. += span_rose("A fruit from the heavens, courageously plucked by Matthios while escaping with Astrata's divine fire.. or so, they say. Eating it will not only be quite tasty, but help mend my lesser wounds as well.")
 
-/obj/item/reagent_containers/food/snacks/rogue/fruit/gapple_sliced
+/obj/item/reagent_containers/food/snacks/rogue/fruit/apple_sliced/gold
 	name = "sliceed ambrosia"
 	icon_state = "gapple_sliced"
 	desc = "A golden apple, parted into perfectly symmetrical thirds. Opulance has never tasted so sweet!"
 	faretype = FARE_LAVISH
-	tastes = list("airy apple" = 1)
+	tastes = list("a sliver of divine sweetness" = 1)
 	list_reagents = list(/datum/reagent/consumable/nutriment = 1)
 	eat_effect = list(/datum/status_effect/buff/snackbuff, /datum/status_effect/buff/healing)
 
-/obj/item/reagent_containers/food/snacks/rogue/fruit/gapple_sliced/Initialize()
+/obj/item/reagent_containers/food/snacks/rogue/fruit/apple_sliced/gold/Initialize()
   ..()
   add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = GLOW_COLOR_LIGHTNING, "alpha" = 155, "size" = 1))
 
-/obj/item/reagent_containers/food/snacks/rogue/fruit/gapple_sliced/examine(mob/user)
+/obj/item/reagent_containers/food/snacks/rogue/fruit/apple_sliced/gold/examine(mob/user)
 	. = ..()
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
