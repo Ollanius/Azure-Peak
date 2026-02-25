@@ -192,6 +192,7 @@
 	name = "gilded kite shield"
 	desc = "A resplendant kite shield, assembled from six alloyed plates that've been hooked together by a glimmering duocruciform. The sheer opulance on display would invoke seizures in the bods of financial ministers, were they ever to lay eyes upon such a blatantly indulgant use of gold."
 	force = 25
+	icon_state = "goldshield"
 	throwforce = 15
 	max_integrity = 333
 	coverage = 65
