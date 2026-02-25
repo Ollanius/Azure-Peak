@@ -47,6 +47,11 @@
 	cost = 40
 	contains = list(/obj/item/clothing/neck/roguetown/gorget/steel)
 
+/datum/supply_pack/rogue/Sellsword/gildgorget
+	name = "Gilded Gorget"
+	cost = 60
+	contains = list(/obj/item/clothing/neck/roguetown/gorget/gilded)
+
 ///////////
 // CHEST //
 ///////////
@@ -66,6 +71,11 @@
 	cost = 50
 	contains =  list(/obj/item/clothing/suit/roguetown/armor/plate/cuirass)
 
+/datum/supply_pack/rogue/Sellsword/gildedplate
+	name = "Gilded Cuirass"
+	cost = 120
+	contains = list(/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/gilded)
+
 ///////////////////
 // WRISTS/GLOVES //
 ///////////////////
@@ -79,6 +89,11 @@
 	name = "Steel Chain Gauntlets"
 	cost = 20
 	contains = list(/obj/item/clothing/gloves/roguetown/chain)
+
+/datum/supply_pack/rogue/Sellsword/gildedbracers
+	name = "Gilded Bracers"
+	cost = 60
+	contains = list(/obj/item/clothing/shoes/roguetown/boots/armor/gilded)
 
 ///////////////
 // LEGS/FEET //
@@ -107,6 +122,11 @@
 	name = "Kriegmesser"
 	cost = 30
 	contains = list(/obj/item/rogueweapon/sword/long/kriegmesser)
+
+/datum/supply_pack/rogue/Sellsword/gildedsword
+	name = "Gilded Longsword"
+	cost = 80
+	contains = list(/obj/item/rogueweapon/sword/gilded)
 
 /datum/supply_pack/rogue/Sellsword/SZweihandersword
 	name = "Steel Zweihander"
