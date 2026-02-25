@@ -139,3 +139,139 @@
 	icon_state = "spiritpart"
 	density = TRUE
 	anchored = TRUE
+
+//////////////////////////////////
+// HOARDMASTER-EXCLUSIVE ITEMS! //
+//////////////////////////////////
+
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/gilded
+	name = "gilded cuirass"
+	icon_state = "goldcuirass"
+	desc = "A resplendant cuirass of gilded steel, padded with a besilked arming jacket. Stand in the daelight for too long, and its angled breastplate can turn even an errant glare into a blinding hazard; a quirk oft-exploited by less noble-hearted aristocrats."
+	max_integrity = ARMOR_INT_CHEST_MEDIUM_STEEL + 50
+
+/obj/item/clothing/wrists/roguetown/bracers/gilded
+	name = "gilded bracers"
+	desc = "A resplendant pair of gilded vambraces, padded with besilked sleeves and equipped with maille-tethered knuckleguards. Engraved marginalia decorates the surface; one that tells the story of a grieving father who strode to the heavens-and-back to save his son."
+	icon_state = "goldbracers"
+	item_state = "goldbracers"
+	max_integrity = ARMOR_INT_SIDE_STEEL + 50
+	body_parts_covered = ARMS | HANDS
+
+/obj/item/clothing/shoes/roguetown/boots/armor/gilded
+	name = "gilded greaves"
+	desc = "Resplendant sabatons of gilded steel, adorned with angled greaves that further guard the thighs from debalancing strikes. The flakage that rubs off onto the cobblestone with each step is worth more than the sum of a peasant's monthly harvest."
+	icon_state = "goldgreaves"
+	item_state = "goldgreaves"
+	max_integrity = ARMOR_INT_SIDE_STEEL + 50
+	body_parts_covered = FEET | LEGS
+
+/obj/item/clothing/neck/roguetown/gorget/gilded
+	name = "gilded gorget"
+	desc = "A series of resplendant gilded-steel plates designed to protect the neck, traditionally worn atop a jacket or cuirass. The lack of a 'bolt-proofing' mark - as worrisome as it might be - ensures its well-polished symmetricality isn't tarnished."
+	icon_state = "goldgorget"
+	max_integrity = ARMOR_INT_SIDE_STEEL + 50
+
+/obj/item/clothing/head/roguetown/helmet/heavy/knight/gilded
+	name = "gilded knight's armet"
+	desc = "A resplendant armet, masterfully assembled from gilded steel. Articulation commands "
+	icon_state = "goldknight"
+	max_integrity = ARMOR_INT_SIDE_STEEL + 50
+
+/obj/item/reagent_containers/food/snacks/grown/apple/gold
+	seed = null //Ungrowable(?). Can be changed if someone wishes.
+	name = "ambrosia"
+	desc = "A golden apple, by any other name. You can see your own reflection in the golden apple's surface, as the fingers cradling it adopt a pleasant numbness."
+	icon_state = "gapple"
+	faretype = FARE_FINE
+	tastes = list("refreshingly crisp sweetness" = 1)
+	trash = /obj/item/trash/gapplecore
+	slice_path = /obj/item/reagent_containers/food/snacks/rogue/fruit/gapple_sliced
+	slices_num = 2
+	eat_effect = list(/datum/status_effect/buff/snackbuff, /datum/status_effect/buff/healing)
+
+/obj/item/reagent_containers/food/snacks/grown/apple/gold/Initialize()
+  ..()
+  add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = GLOW_COLOR_LIGHTNING, "alpha" = 155, "size" = 1))
+
+/obj/item/reagent_containers/food/snacks/grown/apple/gold/examine(mob/user)
+	. = ..()
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		if(H.patron.type == /datum/patron/inhumen/matthios)
+			. += span_rose("A fruit from the heavens, courageously plucked by Matthios while escaping with Astrata's divine fire.. or so, they say. Eating it will not only be quite tasty, but help mend my lesser wounds as well.")
+
+/obj/item/reagent_containers/food/snacks/rogue/fruit/gapple_sliced
+	name = "sliceed ambrosia"
+	icon_state = "gapple_sliced"
+	desc = "A golden apple, parted into perfectly symmetrical thirds. Opulance has never tasted so sweet!"
+	faretype = FARE_LAVISH
+	tastes = list("airy apple" = 1)
+	list_reagents = list(/datum/reagent/consumable/nutriment = 1)
+	eat_effect = list(/datum/status_effect/buff/snackbuff, /datum/status_effect/buff/healing)
+
+/obj/item/reagent_containers/food/snacks/rogue/fruit/gapple_sliced/Initialize()
+  ..()
+  add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = GLOW_COLOR_LIGHTNING, "alpha" = 155, "size" = 1))
+
+/obj/item/reagent_containers/food/snacks/rogue/fruit/gapple_sliced/examine(mob/user)
+	. = ..()
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		if(H.patron.type == /datum/patron/inhumen/matthios)
+			. += span_rose("Sliced fruit from the heavens, courageously plucked by Matthios while escaping with Astrata's divine fire.. or so, they say. Eating it will not only be quite tasty, but help mend my lesser wounds as well.")
+
+/obj/item/trash/gapplecore
+	name = "cored ambrosia"
+	desc = "Hey, who turned out the lights? I thought the feast was just getting started!"
+	icon_state = "gapplecore"
+	icon = 'icons/roguetown/items/produce.dmi'
+
+/obj/item/trash/gapplecore/Initialize()
+  ..()
+  add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = GLOW_COLOR_LIGHTNING, "alpha" = 77, "size" = 1))
+
+/obj/item/trash/gapplecore/examine(mob/user)
+	. = ..()
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		if(H.patron.type == /datum/patron/inhumen/matthios)
+			. += span_rose("The remains of a heavenly fruit, courageously plucked by Matthios while escaping with Astrata's divine fire.. or so, they say. Such fruits're said to refresh and heal mortals more than any other morsel. </br>I can fetch more by bargaining with the Hoardmaster and those most-devout to greed.")
+
+//
+
+/obj/item/reagent_containers/food/snacks/grown/apple/gold/On_Consume(mob/living/eater)
+	..()
+	if(ishuman(eater))
+		var/mob/living/carbon/human/H = eater
+		if(!(H.real_name in bitten_names))
+			bitten_names += H.real_name
+
+/obj/item/reagent_containers/food/snacks/grown/apple/gold/blockproj(mob/living/carbon/human/H)
+
+	if(prob(98))
+		H.visible_message(span_notice("[H] is saved by the golden apple!"))
+		H.dropItemToGround(H.head)
+		return 1
+	else
+		H.dropItemToGround(H.head)
+		return 0
+
+/obj/item/reagent_containers/food/snacks/grown/apple/gold/equipped(mob/M)
+	..()
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		if(H.head == src)
+
+			equippedloc = H.loc
+			START_PROCESSING(SSobj, src)
+
+/obj/item/reagent_containers/food/snacks/grown/apple/gold/process()
+	. = ..()
+	if(ishuman(loc))
+		var/mob/living/carbon/human/H = loc
+		if(H.head == src)
+			if(equippedloc != H.loc)
+				H.dropItemToGround(H.head)
+
+//
