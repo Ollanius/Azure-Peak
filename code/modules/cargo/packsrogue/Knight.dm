@@ -28,6 +28,11 @@
 	cost = 100
 	contains = list(/obj/item/clothing/head/roguetown/helmet/heavy/frogmouth)
 
+/datum/supply_pack/rogue/Knight/goldarmet
+	name = "Gilded Armet"
+	cost = 120
+	contains = list(/obj/item/clothing/head/roguetown/helmet/heavy/knight/gilded)
+
 /datum/supply_pack/rogue/Knight/mblkstelarmet
 	name = "Blacksteel Armet"
 	cost = 200
@@ -62,6 +67,11 @@
 	cost = 40
 	contains = list(/obj/item/clothing/neck/roguetown/gorget/steel)
 
+/datum/supply_pack/rogue/Knight/gildgorget
+	name = "Gilded Gorget"
+	cost = 60
+	contains = list(/obj/item/clothing/neck/roguetown/gorget/gilded)
+
 ///////////
 // CHEST //
 ///////////
@@ -85,6 +95,11 @@
 	name = "Steel Half-plate"
 	cost = 70
 	contains = list(/obj/item/clothing/suit/roguetown/armor/plate)
+
+/datum/supply_pack/rogue/Knight/gildedplate
+	name = "Gilded Cuirass"
+	cost = 120
+	contains = list(/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/gilded)
 
 /datum/supply_pack/rogue/Knight/Fullplate
 	name = "Steel Full plate"
@@ -115,6 +130,11 @@
 	cost = 40
 	contains = list(/obj/item/clothing/gloves/roguetown/plate)
 
+/datum/supply_pack/rogue/Knight/gildedbracers
+	name = "Gilded Bracers"
+	cost = 60
+	contains = list(/obj/item/clothing/shoes/roguetown/boots/armor/gilded)
+
 /datum/supply_pack/rogue/Knight/mblkplategaunt
 	name = "Blacksteel Plate Gauntlets"
 	cost = 100
@@ -144,6 +164,11 @@
 	cost = 30
 	contains = list(/obj/item/clothing/shoes/roguetown/boots/armor)
 
+/datum/supply_pack/rogue/Knight/gildedplateboots
+	name = "Gilded Plateboots"
+	cost = 60
+	contains = list(/obj/item/clothing/shoes/roguetown/boots/armor/gilded)
+
 /datum/supply_pack/rogue/Knight/mblkplateboots
 	name = "Blacksteel Plated boots"
 	cost = 80
@@ -167,6 +192,11 @@
 	name = "Estoc"
 	cost = 80
 	contains = list(/obj/item/rogueweapon/estoc)
+
+/datum/supply_pack/rogue/Knight/gildedsword
+	name = "Gilded Longsword"
+	cost = 80
+	contains = list(/obj/item/rogueweapon/sword/gilded)
 
 /datum/supply_pack/rogue/Knight/SFlamberge
 	name = "Steel Flamberge"
@@ -201,6 +231,11 @@
 	name = "Kite Shield"
 	cost = 40
 	contains = list(/obj/item/rogueweapon/shield/tower/metal)
+
+/datum/supply_pack/rogue/Knight/gildedkiteshield
+	name = "Gilded Kite Shield"
+	cost = 60
+	contains = list(/obj/item/rogueweapon/shield/tower/metal/gilded)
 
 /////////////
 // UTILITY //
