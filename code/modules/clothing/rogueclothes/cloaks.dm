@@ -17,7 +17,7 @@
 
 /obj/item/clothing/cloak/get_mechanics_examine(mob/user)
 	. = ..()
-	. += span_info("Certain cloaks - namely jupons, tabards, and surcoats - can be given a unique pattern and coloration by right-clicking them.")
+	. += span_info("Certain cloaks - like jupons, tabards, and surcoats - can be given a unique pattern and coloration by right-clicking them.")
 
 /obj/item/clothing/cloak/ComponentInitialize()
 	. = ..()
