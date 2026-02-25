@@ -514,7 +514,7 @@
 	of the blade of this straight sword is broken off. Only the completely Deprived would even \
 	consider using this as a weapon.'"
 	icon_state = "isword_d"
-	sheathe_icon = "iswordshort_d"
+	sheathe_icon = "isword_d"
 	force = 23
 	force_wielded = 26
 	wdefense = 3
@@ -1134,6 +1134,19 @@
 	sheathe_icon = "ashortsword"
 	smeltresult = /obj/item/ingot/aaslag
 
+/obj/item/rogueweapon/sword/short/broken
+	name = "aged shortsword"
+	desc = "The arming sword's shorter and much older brother. Despite being centuries older than the swords of todae, it remains in use as a cheap sidearm for shieldbearers and archers. This aged variant predates them all; and though the edge is heftsome and jagged, it remains lethal in the hands of a well-honed swordsman."
+	icon_state = "iswordshort_d"
+	sheathe_icon = "iswordshort_d"
+	wdefense = 3
+	smeltresult = /obj/item/ingot/iron
+	max_integrity = 90
+	max_blade_int = 150
+	force = 21
+	swingsound = BLADEWOOSH_HUGE
+	smeltresult = /obj/item/ingot/iron
+
 /obj/item/rogueweapon/sword/short/falchion
 	name = "falchion"
 	desc = "A single-edged sword that is similar to a messer in appearance, its origins trace back to Otava. An implement of commoners and knights alike. It's good for cutting and thrusting."
@@ -1193,7 +1206,7 @@
 
 /obj/item/rogueweapon/sword/short/iron/chipped
 	name = "chipped iron shortsword"
-	desc = "A damaged and ancient iron shortsword. It looks duller, and seems less effective."
+	desc = "A damaged and ancient iron shortsword, borne from beyond your time. It looks duller, and seems less effective."
 	force = 17
 	icon_state = "iswordshort_d"
 	sheathe_icon = "iswordshort_d"
