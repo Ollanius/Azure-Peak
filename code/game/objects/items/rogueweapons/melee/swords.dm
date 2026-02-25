@@ -508,19 +508,24 @@
 	wdefense_wbonus = 3
 	smeltresult = /obj/item/ingot/steel
 
-/obj/item/rogueweapon/sword/long/broadsword/broken
-	name = "broken broadsword"
+/obj/item/rogueweapon/sword/broken
+	name = "broken sword"
 	desc = "A lethal and well-balanced weapon, long ago; now, a shadow of its former self. Half \
 	of the blade of this straight sword is broken off. Only the completely Deprived would even \
 	consider using this as a weapon.'"
-	icon = 'icons/roguetown/weapons/swords32.dmi'
 	icon_state = "isword_d"
-	sheathe_icon = "isword_d"
+	sheathe_icon = "iswordshort_d"
 	force = 23
-	force_wielded = 27
+	force_wielded = 26
 	wdefense = 3
+	wdefense_wbonus = 1
 	max_blade_int = 180
 	max_integrity = 90
+	swingsound = BLADEWOOSH_HUGE
+	possible_item_intents = list(/datum/intent/sword/chop/broadsword, /datum/intent/sword/thrust/long/broadsword, /datum/intent/sword/strike, /datum/intent/sword/peel/light)
+	gripped_intents = list(/datum/intent/sword/chop/broadsword, /datum/intent/sword/thrust/long/broadsword/heavy, /datum/intent/sword/strike, /datum/intent/sword/peel/light)
+	alt_intents = null
+	smeltresult = /obj/item/ingot/iron
 
 /obj/item/rogueweapon/sword/long/training
 	name = "training sword"
