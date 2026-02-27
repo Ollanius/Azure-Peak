@@ -92,6 +92,9 @@
 
 /obj/item/clothing/cloak/tabard/stabard/crusader
 	name = "surcoat of the golden order"
+	desc = "A regal surcoat, inlined with golden threading. The stitchwork tethers it to the Golden Orders; a catch-all term for the various faith-militances that \
+	ward Psydonia from heathens, cultists, and the ever-looming threat of another calamity. Such are most commonly seen adorning the crusaders of Astrata, Ravox, \
+	and Eora. </br>'Into the darkness, unto the light; steel to the heathen, so that their sins may be set right.'"
 	icon_state = "crusader_surcoat"
 	icon = 'icons/roguetown/clothing/special/crusader.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/crusader.dmi'
@@ -99,16 +102,20 @@
 
 /obj/item/clothing/cloak/tabard/stabard/crusader/t
 	name = "surcoat of the silver order"
+	desc = "A noble surcoat, inlined with silver threading. The stitchwork tethers it to the Silver Orders; a catch-all term for the various faith-militances that \
+	ward Psydonia from monsters, deadites, and the ever-looming threat of another calamity. Such are most commonly seen adorning the crusaders of Psydon, Noc, and \
+	Pestra. </br>'Lest we forget, before we forgive; silver to the monster, for the Hell they'll relive.'"
 	icon_state = "crusader_surcoatt2"
 
 /obj/item/clothing/cloak/cape/crusader
 	name = "desert cape"
+	desc = "Were we to've met in another lyfetime, do you suppose we would've been fonder friends?"
 	icon_state = "crusader_cloak"
 	icon = 'icons/roguetown/clothing/special/crusader.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/crusader.dmi'
 	sleeved = 'icons/roguetown/clothing/special/onmob/crusader.dmi'
 
-/obj/item/clothing/head/roguetown/helmet/heavy/crusader
+/obj/item/clothing/head/roguetown/helmet/heavy/crusader //Legacy, but kept in to avoid potential errors. Refer to the 'sugarloaf' helmet variants for a more modern take.
 	name = "bucket helm"
 	icon_state = "crusader_helm"
 	icon = 'icons/roguetown/clothing/special/crusader.dmi'
