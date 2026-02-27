@@ -645,7 +645,7 @@
 	craftdiff = 3
 
 /datum/crafting_recipe/roguetown/sewing/surcoatblacksteel
-	name = "surcoat of the blessed order"
+	name = "surcoat of the blacksteel order"
 	category = "Tabards"
 	result = list(/obj/item/clothing/cloak/tabard/stabard/crusader/bsteel)
 	reqs = list(/obj/item/natural/cloth = 3,
