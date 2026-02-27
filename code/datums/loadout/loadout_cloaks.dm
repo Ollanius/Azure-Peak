@@ -134,3 +134,23 @@
 	path = /obj/item/clothing/cloak/tabard/stabard/crusader/t
 	sort_category = "Cloaks"
 
+/datum/loadout_item/surcoatgoldenorderast
+	name = "Surcoat, Golden Order, Astratan"
+	path = /obj/item/clothing/cloak/tabard/stabard/crusader/astrata
+	sort_category = "Cloaks"
+
+/datum/loadout_item/surcoatsilverorderast
+	name = "Surcoat, Silver Order, Astratan"
+	path = /obj/item/clothing/cloak/tabard/stabard/crusader/t/astrata
+	sort_category = "Cloaks"
+
+/datum/loadout_item/surcoatgoldenorderuni
+	name = "Surcoat, Golden Order, Undivided"
+	path = /obj/item/clothing/cloak/tabard/stabard/crusader/undivided
+	sort_category = "Cloaks"
+
+/datum/loadout_item/surcoatsilverorderuni
+	name = "Surcoat, Silver Order, Undivided"
+	path = /obj/item/clothing/cloak/tabard/stabard/crusader/t/undivided
+	sort_category = "Cloaks"
+
