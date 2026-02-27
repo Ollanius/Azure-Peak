@@ -136,10 +136,10 @@
 	icon_state = "acrusader_surcoatt2"
 
 /obj/item/clothing/cloak/tabard/stabard/crusader/bsteel
-	name = "surcoat of the blessed order"
+	name = "surcoat of the blacksteel order"
 	desc = "A venerated surcoat, inlined with blacksteel threading. The stitchwork tethers it to the Blessed Order; an ancient faith-militance whose roots trace \
-	all the way back to Psydonia's first crusaders. Uniquely welcoming to both Psydonic and Undivided patroneers, they wield blacksteel swords with feverance against \
-	the dreaded Avantyne Legion. </br>'Happiness must be fought for, lest all hope perish from the face of this world.'"
+	all the way back to Psydonia's first crusaders. Uniquely welcoming to both Psydonic and Undivided patroneers, and irreversably valorant against the dreaded \
+	Avantyne Legion. </br>'Happiness must be fought for, lest all hope perish from the face of this world.'"
 	icon_state = "crusader_surcoatb3"
 	armor = ARMOR_PADDED_GOOD
 	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER - 77
