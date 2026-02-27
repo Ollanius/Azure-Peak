@@ -94,7 +94,7 @@
 	name = "surcoat of the golden order"
 	desc = "A regal surcoat, inlined with golden threading. The stitchwork tethers it to the Golden Orders; a catch-all term for the various faith-militances that \
 	ward Psydonia from heathens, cultists, and the ever-looming threat of another calamity. This variant bares the psicruciformic sigil of the Psydonic and Necran \
-	orders. </br>'Into the darkness, unto the light; steel to the heathen, so that their sins may be set right.'"
+	orders."
 	icon_state = "crusader_surcoat"
 	icon = 'icons/roguetown/clothing/special/crusader.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/crusader.dmi'
@@ -104,35 +104,35 @@
 	name = "surcoat of the silver order"
 	desc = "A noble surcoat, inlined with silver threading. The stitchwork tethers it to the Silver Orders; a catch-all term for the various faith-militances that \
 	ward Psydonia from monsters, deadites, and the ever-looming threat of another calamity. This variant bares the psicruciformic sigil of the Psydonic and Necran \
-	orders. </br>'Lest we forget, before we forgive; silver to the monster, for the Hell they'll relive.'"
+	orders."
 	icon_state = "crusader_surcoatt2"
 
 /obj/item/clothing/cloak/tabard/stabard/crusader/astrata
 	name = "surcoat of the golden order"
 	desc = "A regal surcoat, inlined with golden threading. The stitchwork tethers it to the Golden Orders; a catch-all term for the various faith-militances that \
 	ward Psydonia from heathens, cultists, and the ever-looming threat of another calamity. This variant bares the duocruciformic sigil of the Astratan and Ravoxian \
-	orders. </br>'Into the darkness, unto the light; steel to the heathen, so that their sins may be set right.'"
+	orders."
 	icon_state = "acrusader_surcoat"
 
 /obj/item/clothing/cloak/tabard/stabard/crusader/t/astrata
 	name = "surcoat of the silver order"
 	desc = "A noble surcoat, inlined with silver threading. The stitchwork tethers it to the Silver Orders; a catch-all term for the various faith-militances that \
 	ward Psydonia from monsters, deadites, and the ever-looming threat of another calamity. This variant bares the duocruciformic sigil of the Astratan and Ravoxian \
-	orders. </br>'Lest we forget, before we forgive; silver to the monster, for the Hell they'll relive.'"
+	orders."
 	icon_state = "acrusader_surcoatt2"
 
 /obj/item/clothing/cloak/tabard/stabard/crusader/undivided
 	name = "surcoat of the golden order"
 	desc = "A regal surcoat, inlined with golden threading. The stitchwork tethers it to the Golden Orders; a catch-all term for the various faith-militances that \
 	ward Psydonia from heathens, cultists, and the ever-looming threat of another calamity. This variant bares the unicruciform sigil of the Undivided and Erranteer \
-	orders. </br>'Into the darkness, unto the light; steel to the heathen, so that their sins may be set right.'"
+	orders."
 	icon_state = "acrusader_surcoat"
 
 /obj/item/clothing/cloak/tabard/stabard/crusader/t/undivided
 	name = "surcoat of the silver order"
 	desc = "A noble surcoat, inlined with silver threading. The stitchwork tethers it to the Silver Orders; a catch-all term for the various faith-militances that \
 	ward Psydonia from monsters, deadites, and the ever-looming threat of another calamity. This variant bares the unicruciform sigil of the Undivided and Erranteer \
-	orders. </br>'Lest we forget, before we forgive; silver to the monster, for the Hell they'll relive.'"
+	orders."
 	icon_state = "acrusader_surcoatt2"
 
 /obj/item/clothing/cloak/tabard/stabard/crusader/bsteel
@@ -142,7 +142,7 @@
 	the dreaded Avantyne Legion. </br>'Happiness must be fought for, lest all hope perish from the face of this world.'"
 	icon_state = "crusader_surcoatb3"
 	armor = ARMOR_PADDED_GOOD
-	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER - 50
+	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER - 77
 	prevent_crits = PREVENT_CRITS_MOST
 	body_parts_covered = CHEST | VITALS | LEGS
 
