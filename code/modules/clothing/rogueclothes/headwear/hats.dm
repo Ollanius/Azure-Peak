@@ -616,8 +616,9 @@
 	worn_x_dimension = 64
 	worn_y_dimension = 64
 	max_integrity = 50
+	sewrepair = TRUE
 	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_MASK
-	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head_items.dmi'
 	bloody_icon = 'icons/effects/blood64.dmi'
 	resistance_flags = FLAMMABLE
 	w_class = WEIGHT_CLASS_TINY
