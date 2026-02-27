@@ -139,7 +139,7 @@
 /datum/supply_pack/rogue/armor_iron/knightarmetgreatplume
 	name = "Helmet, Armet, Greatplumed"
 	cost = 40
-	contains = list(/obj/item/clothing/head/roguetown/helmet/heavy/knight/greatplume/iron)
+	contains = list(/obj/item/clothing/head/roguetown/helmet/heavy/knight/iron/greatplume)
 
 /datum/supply_pack/rogue/armor_iron/knight
 	name = "Helmet, Knight"
