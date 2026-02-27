@@ -107,6 +107,27 @@
 	Pestra. </br>'Lest we forget, before we forgive; silver to the monster, for the Hell they'll relive.'"
 	icon_state = "crusader_surcoatt2"
 
+//
+
+/obj/item/clothing/cloak/tabard/stabard/crusader/legacy
+	name = "valorian surcoat of the golden order"
+	desc = "A regal surcoat, inlined with golden threading. The stitchwork tethers it to the Golden Orders; a catch-all term for the various faith-militances that \
+	ward Psydonia from heathens, cultists, and the ever-looming threat of another calamity. Such are most commonly seen adorning the crusaders of Astrata, Ravox, \
+	and the Undivided. This stitchwork seems to be of Valorian make. </br>'Into the darkness, unto the light; steel to the heathen, so that their sins may be set right.'"
+	icon_state = "legacy_crusader_surcoat"
+	icon = 'icons/roguetown/clothing/special/crusader.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/crusader.dmi'
+	sleeved = 'icons/roguetown/clothing/special/onmob/crusader.dmi'
+
+/obj/item/clothing/cloak/tabard/stabard/crusader/t/legacy
+	name = "valorian surcoat of the silver order"
+	desc = "A noble surcoat, inlined with silver threading. The stitchwork tethers it to the Silver Orders; a catch-all term for the various faith-militances that \
+	ward Psydonia from monsters, deadites, and the ever-looming threat of another calamity. Such are most commonly seen adorning the crusaders of Psydon, Noc, and \
+	Pestra. This stitchwork seems to be of Valorian make. </br>'Lest we forget, before we forgive; silver to the monster, for the Hell they'll relive.'"
+	icon_state = "legacy_crusader_surcoatt2"
+
+//
+
 /obj/item/clothing/cloak/cape/crusader
 	name = "desert cape"
 	desc = "Were we to've met in another lyfetime, do you suppose we would've been fonder friends?"
