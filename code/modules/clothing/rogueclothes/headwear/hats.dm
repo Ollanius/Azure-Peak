@@ -605,3 +605,19 @@
 		if(get_detail_color())
 			pic.color = get_detail_color()
 		add_overlay(pic)
+
+
+/obj/item/clothing/head/roguetown/greatplume
+	name = "greatplume"
+	desc = "The plume's huskier cousin, equally regal and obnoxious in stature. Unlike traditional plumes, this feathered ornament can't be easily slotted into the couplets of most helmets; this does mean it can be donned on a wider away of headpieces, however."
+	icon_state = "greatplume"
+	item_state = "greatplume"
+	color = CLOTHING_WHITE
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+	max_integrity = 50
+	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_MASK
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	bloody_icon = 'icons/effects/blood64.dmi'
+	resistance_flags = FLAMMABLE
+	w_class = WEIGHT_CLASS_TINY
