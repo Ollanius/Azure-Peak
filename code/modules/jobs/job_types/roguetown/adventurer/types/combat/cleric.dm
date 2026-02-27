@@ -277,7 +277,7 @@
 			cloak = /obj/item/clothing/cloak/templar/pestra
 			armor = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk
 		else
-			cloak = /obj/item/clothing/cloak/cape/crusader
+			cloak = /obj/item/clothing/cloak/tabard/stabard/crusader
 			armor = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk
 	H.dna.species.soundpack_m = new /datum/voicepack/male/knight()
 	var/datum/devotion/C = new /datum/devotion(H, H.patron)
