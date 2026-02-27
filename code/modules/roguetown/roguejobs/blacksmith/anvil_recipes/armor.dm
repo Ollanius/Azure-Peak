@@ -1237,6 +1237,12 @@
 	additional_items = list(/obj/item/ingot/blacksteel)
 	created_item = /obj/item/clothing/head/roguetown/helmet/blacksteel/modern
 
+/datum/anvil_recipe/armor/blacksteel/modern/sugarloaf
+	name = "Sugarloaf Helmet, Blacksteel (+1 Blacksteel)"
+	req_bar = /obj/item/ingot/blacksteel
+	additional_items = list(/obj/item/ingot/blacksteel)
+	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/bucket/crusader/blacksteel
+
 /datum/anvil_recipe/armor/blacksteel/modern/plateboots
 	name = "Plate Boots, Blacksteel"
 	req_bar = /obj/item/ingot/blacksteel
