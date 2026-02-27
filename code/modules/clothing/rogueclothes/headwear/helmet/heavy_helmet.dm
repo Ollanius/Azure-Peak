@@ -1006,7 +1006,7 @@
 		if(loc == user && ishuman(user))
 			var/mob/living/carbon/H = user
 			H.update_inv_head()
-	if(istype(W, /obj/item/natural/feather) && alt!detail_tag)
+	if(istype(W, /obj/item/natural/feather) && !altdetail_tag)
 		var/choicealt = input(user, "Choose a color.", "Greatplume") as anything in COLOR_MAP
 		altdetail_color = COLOR_MAP[choicealt]
 		altdetail_tag = "_detailalt"
