@@ -278,6 +278,7 @@
 			armor = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk
 		else
 			cloak = /obj/item/clothing/cloak/tabard/stabard/crusader
+			helmets += list("Decorated Sugarloaf Helmet" = /obj/item/clothing/head/roguetown/helmet/heavy/bucket/gold/cleric)
 			armor = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk
 	H.dna.species.soundpack_m = new /datum/voicepack/male/knight()
 	var/datum/devotion/C = new /datum/devotion(H, H.patron)
