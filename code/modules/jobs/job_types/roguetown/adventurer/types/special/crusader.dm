@@ -103,8 +103,8 @@
 /obj/item/clothing/cloak/tabard/stabard/crusader/t
 	name = "surcoat of the silver order"
 	desc = "A noble surcoat, inlined with silver threading. The stitchwork tethers it to the Silver Orders; a catch-all term for the various faith-militances that \
-	ward Psydonia from monsters, deadites, and the ever-looming threat of another calamity. Such are most commonly seen adorning the crusaders of Psydon, Noc, and \
-	Pestra. </br>'Lest we forget, before we forgive; silver to the monster, for the Hell they'll relive.'"
+	ward Psydonia from monsters, deadites, and the ever-looming threat of another calamity. Such are most commonly seen adorning the crusaders of Noc, Psydon, and \
+	Necra. </br>'Lest we forget, before we forgive; silver to the monster, for the Hell they'll relive.'"
 	icon_state = "crusader_surcoatt2"
 
 //
@@ -122,8 +122,8 @@
 /obj/item/clothing/cloak/tabard/stabard/crusader/t/legacy
 	name = "valorian surcoat of the silver order"
 	desc = "A noble surcoat, inlined with silver threading. The stitchwork tethers it to the Silver Orders; a catch-all term for the various faith-militances that \
-	ward Psydonia from monsters, deadites, and the ever-looming threat of another calamity. Such are most commonly seen adorning the crusaders of Psydon, Noc, and \
-	Pestra. This stitchwork seems to be of Valorian make. </br>'Lest we forget, before we forgive; silver to the monster, for the Hell they'll relive.'"
+	ward Psydonia from monsters, deadites, and the ever-looming threat of another calamity. Such are most commonly seen adorning the crusaders of Noc, Psydon, and \
+	Necra. This stitchwork seems to be of Valorian make. </br>'Lest we forget, before we forgive; silver to the monster, for the Hell they'll relive.'"
 	icon_state = "legacy_crusader_surcoatt2"
 
 //

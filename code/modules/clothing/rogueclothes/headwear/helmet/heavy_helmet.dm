@@ -458,6 +458,11 @@
 	smeltresult = /obj/item/ingot/gold
 	smelt_bar_num = 1
 
+/obj/item/clothing/head/roguetown/helmet/heavy/bucket/gold/cleric
+	name = "decorated bucket helmet"
+	smeltresult = /obj/item/ingot/steel
+	smelt_bar_num = 2
+
 /obj/item/clothing/head/roguetown/helmet/heavy/bucket
 	name = "bucket helmet"
 	desc = "A greathelmet that offers excellent protection to the head, while also ensuring total coverage to its most vulnerable spots. It \

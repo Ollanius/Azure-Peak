@@ -594,6 +594,38 @@
 				/obj/item/natural/fibers = 1)
 	craftdiff = 3
 
+/datum/crafting_recipe/roguetown/sewing/surcoatgold
+	name = "surcoat, golden order"
+	category = "Tabards"
+	result = list(/obj/item/clothing/cloak/tabard/stabard/crusader)
+	reqs = list(/obj/item/natural/cloth = 3,
+				/obj/item/natural/fibers = 1)
+	craftdiff = 3
+
+/datum/crafting_recipe/roguetown/sewing/surcoatsilver
+	name = "surcoat, silver order"
+	category = "Tabards"
+	result = list(/obj/item/clothing/cloak/tabard/stabard/crusader/t)
+	reqs = list(/obj/item/natural/cloth = 3,
+				/obj/item/natural/fibers = 1)
+	craftdiff = 3
+
+/datum/crafting_recipe/roguetown/sewing/surcoatgoldlegacy
+	name = "old-styled surcoat, golden order"
+	category = "Tabards"
+	result = list(/obj/item/clothing/cloak/tabard/stabard/crusader/legacy)
+	reqs = list(/obj/item/natural/cloth = 3,
+				/obj/item/natural/fibers = 1)
+	craftdiff = 3
+
+/datum/crafting_recipe/roguetown/sewing/surcoatsilverlegacy
+	name = "old-styled surcoat, silver order"
+	category = "Tabards"
+	result = list(/obj/item/clothing/cloak/tabard/stabard/crusader/t/legacy)
+	reqs = list(/obj/item/natural/cloth = 3,
+				/obj/item/natural/fibers = 1)
+	craftdiff = 3
+
 /datum/crafting_recipe/roguetown/sewing/ravoxgorget
 	name = "ravox gorget"
 	category = "Misc"
