@@ -141,10 +141,6 @@
 	all the way back to Psydonia's first crusaders. Uniquely welcoming to both Psydonic and Undivided patroneers, and irreversably valorant against the dreaded \
 	Avantyne Legion. </br>'Happiness must be fought for, lest all hope perish from the face of this world.'"
 	icon_state = "crusader_surcoatb3"
-	armor = ARMOR_PADDED
-	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER - 100
-	prevent_crits = PREVENT_CRITS_MOST
-	body_parts_covered = CHEST | VITALS | LEGS
 
 //
 
