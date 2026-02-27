@@ -94,7 +94,7 @@
 	name = "surcoat of the golden order"
 	desc = "A regal surcoat, inlined with golden threading. The stitchwork tethers it to the Golden Orders; a catch-all term for the various faith-militances that \
 	ward Psydonia from heathens, cultists, and the ever-looming threat of another calamity. Such are most commonly seen adorning the crusaders of Astrata, Ravox, \
-	and Eora. </br>'Into the darkness, unto the light; steel to the heathen, so that their sins may be set right.'"
+	and the Undivided. </br>'Into the darkness, unto the light; steel to the heathen, so that their sins may be set right.'"
 	icon_state = "crusader_surcoat"
 	icon = 'icons/roguetown/clothing/special/crusader.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/crusader.dmi'
