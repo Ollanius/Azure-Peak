@@ -447,22 +447,6 @@
 			pic2.color = get_altdetail_color()
 		add_overlay(pic2)
 
-/obj/item/clothing/head/roguetown/helmet/heavy/bucket/gold
-	name = "decorated bucket helmet"
-	icon_state = "topfhelm_gold"
-	item_state = "topfhelm_gold"
-	desc = "A greathelmet that offers excellent protection to the head, while also ensuring total coverage to its most vulnerable spots. It \
-	resembles an overturned bucket when worn - ergo, 'bucket helmet'. Owing to its simple-yet-robust design, the bucket helmet's venerability \
-	can still be observed todae, atop the shoulders of hedge-knights and paladins alike. This particular variant is decorated with golden \
-	iconography of Ravoxian design. </br>'Bravery, justice, ever-unyielding.'"
-	smeltresult = /obj/item/ingot/gold
-	smelt_bar_num = 1
-
-/obj/item/clothing/head/roguetown/helmet/heavy/bucket/gold/cleric
-	name = "decorated bucket helmet"
-	smeltresult = /obj/item/ingot/steel
-	smelt_bar_num = 2
-
 /obj/item/clothing/head/roguetown/helmet/heavy/bucket
 	name = "bucket helmet"
 	desc = "A greathelmet that offers excellent protection to the head, while also ensuring total coverage to its most vulnerable spots. It \
@@ -490,6 +474,16 @@
 		if(loc == user && ishuman(user))
 			var/mob/living/carbon/H = user
 			H.update_inv_head()
+	if(istype(W, /obj/item/clothing/head/roguetown/veiled) && !altdetail_tag)
+		var/choicealt = input(user, "Choose a color.", "Veil") as anything in COLOR_MAP
+		user.visible_message(span_warning("[user] adds [W] to [src]."))
+		user.transferItemToLoc(W, src, FALSE, FALSE)
+		altdetail_color = COLOR_MAP[choicealt]
+		altdetail_tag = "_detailalt"
+		update_icon()
+		if(loc == user && ishuman(user))
+			var/mob/living/carbon/H = user
+			H.update_inv_head()
 
 /obj/item/clothing/head/roguetown/helmet/heavy/bucket/update_icon()
 	cut_overlays()
@@ -499,6 +493,42 @@
 		if(get_detail_color())
 			pic.color = get_detail_color()
 		add_overlay(pic)
+	if(get_altdetail_tag())
+		var/mutable_appearance/pic2 = mutable_appearance(icon(icon, "[icon_state][altdetail_tag]"))
+		pic2.appearance_flags = RESET_COLOR
+		if(get_altdetail_color())
+			pic2.color = get_altdetail_color()
+		add_overlay(pic2)
+
+/obj/item/clothing/head/roguetown/helmet/heavy/bucket/gold
+	name = "decorated bucket helmet"
+	icon_state = "topfhelm_gold"
+	item_state = "topfhelm_gold"
+	desc = "A greathelmet that offers excellent protection to the head, while also ensuring total coverage to its most vulnerable spots. It \
+	resembles an overturned bucket when worn - ergo, 'bucket helmet'. Owing to its simple-yet-robust design, the bucket helmet's venerability \
+	can still be observed todae, atop the shoulders of hedge-knights and paladins alike. This particular variant is decorated with golden \
+	iconography of Ravoxian design. </br>'Bravery, justice, ever-unyielding.'"
+	smeltresult = /obj/item/ingot/gold
+	smelt_bar_num = 1
+
+/obj/item/clothing/head/roguetown/helmet/heavy/bucket/gold/cleric
+	name = "decorated bucket helmet"
+	smeltresult = /obj/item/ingot/steel
+	smelt_bar_num = 2
+
+/obj/item/clothing/head/roguetown/helmet/heavy/bucket/crusader
+	name = "sugarloaf helmet"
+	desc = "A greathelmet that offers excellent protection to the head, while also ensuring total coverage to its most vulnerable spots. It \
+	resembles a freshly baked loave when worn - ergo, 'sugarloaf helmet'. Popularly seen amongst crusaders of the faith-militances, its curved \
+	top helps to disperse the crushing force of blows from above."
+	icon_state = "crusader_helmt2"
+	icon = 'icons/roguetown/clothing/special/crusader.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/crusader.dmi'
+	emote_environment = 3
+	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDESNOUT
+	block2add = FOV_BEHIND
+	smeltresult = /obj/item/ingot/steel
+	smelt_bar_num = 2
 
 /obj/item/clothing/head/roguetown/helmet/heavy/bucket/crusader/gold
 	name = "decorated sugarloaf helmet"
@@ -515,43 +545,10 @@
 	smeltresult = /obj/item/ingot/gold
 	smelt_bar_num = 1
 
-/obj/item/clothing/head/roguetown/helmet/heavy/bucket/crusader
-	name = "sugarloaf helmet"
-	desc = "A greathelmet that offers excellent protection to the head, while also ensuring total coverage to its most vulnerable spots. It \
-	resembles a freshly baked loave when worn - ergo, 'sugarloaf helmet'. Popularly seen amongst crusaders of the faith-militances, its curved \
-	top helps to disperse the crushing force of blows from above."
-	icon_state = "crusader_helmt2"
-	icon = 'icons/roguetown/clothing/special/crusader.dmi'
-	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/crusader.dmi'
-	emote_environment = 3
-	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDESNOUT
-	block2add = FOV_BEHIND
+/obj/item/clothing/head/roguetown/helmet/heavy/bucket/crusader/gold/cleric
+	name = "decorated sugarloaf helmet"
 	smeltresult = /obj/item/ingot/steel
 	smelt_bar_num = 2
-
-/obj/item/clothing/head/roguetown/helmet/heavy/bucket/crusader/attackby(obj/item/W, mob/living/user, params)
-	..()
-	if(istype(W, /obj/item/natural/cloth) && !detail_tag)
-		var/choice = input(user, "Choose a color.", "Orle") as anything in COLOR_MAP + pridelist
-		user.visible_message(span_warning("[user] adds [W] to [src]."))
-		user.transferItemToLoc(W, src, FALSE, FALSE)
-		detail_color = COLOR_MAP[choice]
-		detail_tag = "_detail"
-		if(choice in pridelist)
-			detail_tag = "_detailp"
-		update_icon()
-		if(loc == user && ishuman(user))
-			var/mob/living/carbon/H = user
-			H.update_inv_head()
-
-/obj/item/clothing/head/roguetown/helmet/heavy/bucket/crusader/update_icon()
-	cut_overlays()
-	if(get_detail_tag())
-		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
-		pic.appearance_flags = RESET_COLOR
-		if(get_detail_color())
-			pic.color = get_detail_color()
-		add_overlay(pic)
 
 /obj/item/clothing/head/roguetown/helmet/heavy/xylixhelm
 	name = "xylixian helmet"
