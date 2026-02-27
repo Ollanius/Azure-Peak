@@ -259,9 +259,13 @@
 	name = "fluted armet"
 	desc = "An ornate steel greathelm with a visor, which protects the entire head. While bulky, the fluted design excels at prolonging chivalrous bouts with fellow knights. Add a feather to show the colors of your family or allegiance."
 
+/obj/item/clothing/head/roguetown/helmet/heavy/knight/greatplume/fluted
+	name = "fluted armet with greatplume"
+	desc = "An ornate steel greathelm with a visor, which protects the entire head. While bulky, the fluted design excels at prolonging chivalrous bouts with fellow knights. The wider couplet atop its neckguard's rear can accept a uniquely large greatplume."
+
 /obj/item/clothing/head/roguetown/helmet/heavy/knight/greatplume
 	name = "greatplumed armet"
-	desc = "An ornate steel greathelm with a visor, which protects the entire head. While bulky, the fluted design excels at prolonging chivalrous bouts with fellow knights. The wider couplet atop its neckguard's rear can accept a uniquely large greatplume."
+	desc = "A noble steel greathelm with a visor, which protects the entire head. When one must outpeacock all the other knightly contestants at a tournament, accept no substitute. The wider couplet atop its neckguard's rear can accept a uniquely large greatplume."
 	worn_x_dimension = 64
 	worn_y_dimension = 64
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
@@ -444,7 +448,7 @@
 		add_overlay(pic2)
 
 /obj/item/clothing/head/roguetown/helmet/heavy/bucket/gold
-	name = "golden bucket helmet"
+	name = "decorated bucket helmet"
 	icon_state = "topfhelm_gold"
 	item_state = "topfhelm_gold"
 	desc = "A greathelmet that offers excellent protection to the head, while also ensuring total coverage to its most vulnerable spots. It \
@@ -492,7 +496,7 @@
 		add_overlay(pic)
 
 /obj/item/clothing/head/roguetown/helmet/heavy/bucket/crusader/gold
-	name = "golden sugarloaf helmet"
+	name = "decorated sugarloaf helmet"
 	desc = "A greathelmet that offers excellent protection to the head, while also ensuring total coverage to its most vulnerable spots. It \
 	resembles a freshly baked loave when worn - ergo, 'sugarloaf helmet'. Popularly seen amongst crusaders of the faith-militances, its curved \
 	top helps to disperse the crushing force of blows from above. This particular variant is decorated with golden iconography of Pantheonistic \
