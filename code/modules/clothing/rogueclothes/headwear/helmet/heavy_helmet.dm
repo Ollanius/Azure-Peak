@@ -500,7 +500,7 @@
 	desc = "A greathelmet that offers excellent protection to the head, while also ensuring total coverage to its most vulnerable spots. It \
 	resembles a freshly baked loave when worn - ergo, 'sugarloaf helmet'. Popularly seen amongst crusaders of the faith-militances, its curved \
 	top helps to disperse the crushing force of blows from above. This particular variant is decorated with golden iconography of Pantheonistic \
-	design. </br>'Ad maiorem dei gloriam! Deus vult!'"
+	design. </br>'Ad maiorem dei gloriam.'"
 	icon_state = "crusader_helm"
 	icon = 'icons/roguetown/clothing/special/crusader.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/crusader.dmi'
