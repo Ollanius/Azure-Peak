@@ -88,6 +88,10 @@
 	max_integrity = ARMOR_INT_HELMET_BLACKSTEEL
 	smelt_bar_num = 2
 
+/obj/item/clothing/head/roguetown/helmet/heavy/bucket/crusader/blacksteel/get_mechanics_examine(mob/user)
+	. = ..()
+	. += span_info("If handed to a Tailor, this Blacksteel Sugarloaf Helmet can be used to stitch a uniquely-armored surcoat.")
+
 /obj/item/clothing/head/roguetown/helmet/blacksteel/psythorns
 	name = "crown of psydonian thorns"
 	desc = "Thorns fashioned from pliable yet durable blacksteel - woven and interlinked, fashioned to be worn upon the head."
