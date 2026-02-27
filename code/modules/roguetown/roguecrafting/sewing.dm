@@ -649,9 +649,8 @@
 	category = "Tabards"
 	result = list(/obj/item/clothing/cloak/tabard/stabard/crusader/bsteel)
 	reqs = list(/obj/item/natural/cloth = 3,
-				/obj/item/natural/fur = 2,
-				/obj/item/natural/fibers = 3)
-	craftdiff = 4
+				/obj/item/natural/fibers = 1)
+	craftdiff = 3
 	tools = list(/obj/item/needle, /obj/item/clothing/head/roguetown/helmet/heavy/bucket/crusader/blacksteel)
 
 /datum/crafting_recipe/roguetown/sewing/surcoatgoldlegacy

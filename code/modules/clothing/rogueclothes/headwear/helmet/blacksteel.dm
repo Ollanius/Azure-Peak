@@ -90,7 +90,7 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/bucket/crusader/blacksteel/get_mechanics_examine(mob/user)
 	. = ..()
-	. += span_info("If handed to a Tailor, this Blacksteel Sugarloaf Helmet can be used to stitch a uniquely-armored surcoat.")
+	. += span_info("If handed to a Tailor, this Blacksteel Sugarloaf Helmet can be used to stitch a uniquely matching surcoat.")
 
 /obj/item/clothing/head/roguetown/helmet/blacksteel/psythorns
 	name = "crown of psydonian thorns"
