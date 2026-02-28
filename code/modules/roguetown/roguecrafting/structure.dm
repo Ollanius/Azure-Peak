@@ -1319,7 +1319,7 @@
 	name = "potter's wheel"
 	category = "Misc"
 	result = /obj/structure/fluff/ceramicswheel
-	reqs = list(/obj/item/natural/stone = 2, /obj/item/grown/log/tree/small = 2, /obj/item/roguegear = 1)
+	reqs = list(/obj/item/natural/whetstone = 2, /obj/item/grown/log/tree/small = 2)
 	verbage_simple = "construct"
 	craftdiff = 2
 	verbage = "constructs"
