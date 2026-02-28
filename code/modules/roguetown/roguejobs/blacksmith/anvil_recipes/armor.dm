@@ -837,6 +837,29 @@
 	req_bar = /obj/item/ingot/steel
 	created_item = /obj/item/clothing/head/roguetown/helmet/bascinet
 
+/datum/anvil_recipe/armor/steel/helmetbarbute
+	name = "Barbute, Steel"
+	req_bar = /obj/item/ingot/steel
+	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/barbute
+
+/datum/anvil_recipe/armor/steel/helmetbarbutevisor
+	name = "Barbute, Visored, Steel (+1 Steel)"
+	req_bar = /obj/item/ingot/steel
+	additional_items = list(/obj/item/ingot/steel)
+	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/barbute/visor
+
+/datum/anvil_recipe/armor/steel/helmetbarbutedunk
+	name = "Barbute, Great, Steel (+1 Steel, +1 Cured Leather)"
+	req_bar = /obj/item/ingot/steel
+	additional_items = list(/obj/item/ingot/steel, /obj/item/natural/hide/cured)
+	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/barbute/great
+
+/datum/anvil_recipe/armor/steel/helmetbuc
+	name = "Bucket Helmet, Steel (+1 Steel)"
+	req_bar = /obj/item/ingot/steel
+	additional_items = list(/obj/item/ingot/steel)
+	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/bucket
+
 /datum/anvil_recipe/armor/steel/helmetpig
 	name = "Bascinet, Pigface, Steel (+1 Steel)"
 	req_bar = /obj/item/ingot/steel
@@ -950,7 +973,7 @@
 	created_item = /obj/item/clothing/wrists/roguetown/bracers/brigandine
 
 /datum/anvil_recipe/armor/steel/splintlegs
-	name = "Brigandine Chausses (+1 leather pants)"
+	name = "Brigandine Chausses (+1 Leather Pants)"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/clothing/under/roguetown/trou/leather)//basically you just add a lot of iron bits to the pants
 	created_item = /obj/item/clothing/under/roguetown/brigandinelegs
