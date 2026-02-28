@@ -171,6 +171,11 @@
 	cost = 90 // 2 Steel
 	contains = list(/obj/item/clothing/head/roguetown/helmet/heavy/barbute/visor)
 
+/datum/supply_pack/rogue/armor_steel/helmet_barbute_great
+	name = "Helmet, Barbute, Great"
+	cost = 90 // 2 Steel
+	contains = list(/obj/item/clothing/head/roguetown/helmet/heavy/barbute/great)
+
 /datum/supply_pack/rogue/armor_steel/helmet_pigface
 	name = "Helmet, Pigface"
 	cost = 90 // 2 Steel
