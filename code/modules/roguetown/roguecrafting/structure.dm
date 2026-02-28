@@ -1324,6 +1324,15 @@
 	craftdiff = 2
 	verbage = "constructs"
 
+/datum/crafting_recipe/roguetown/structure/ceramicswheelalt
+	name = "potter's wheel, alternate"
+	category = "Misc"
+	result = /obj/structure/fluff/ceramicswheel
+	reqs = list(/obj/item/natural/stone = 2, /obj/item/grown/log/tree/small = 2, /obj/item/roguegear = 1)
+	verbage_simple = "construct"
+	craftdiff = 1
+	verbage = "constructs"
+
 /datum/crafting_recipe/roguetown/structure/bearrug
 	name = "bearpelt rug"
 	category = "Floors"
