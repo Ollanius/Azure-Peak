@@ -125,7 +125,7 @@
 	sort_category = "Cloaks"
 
 /datum/loadout_item/surcoatheavy
-	name = "Surcoat, Heavy"
+	name = "Surcoat, Overvestments"
 	path = /obj/item/clothing/cloak/tabard/stabard/crusader/heavy
 	sort_category = "Cloaks"
 
