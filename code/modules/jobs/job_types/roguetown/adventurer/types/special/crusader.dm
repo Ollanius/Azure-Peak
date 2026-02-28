@@ -143,7 +143,7 @@
 	icon_state = "crusader_surcoatb3"
 
 /obj/item/clothing/cloak/tabard/stabard/crusader/heavy
-	name = "heavy surcoat"
+	name = "overvestments"
 	desc = "A heavy surcoat that offers complete modesty and protection against the weather, but leaves the thinner-framed with sorer shoulders. Commonly seen upon \
 	the bods of paladin-errants, priests, and pilgrims across Psydonia's more intemperate climates."
 	icon_state = "priest_surcoat"
