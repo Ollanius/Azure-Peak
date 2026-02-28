@@ -124,6 +124,11 @@
 	path = /obj/item/clothing/cloak/poncho/fancycoat
 	sort_category = "Cloaks"
 
+/datum/loadout_item/surcoatheavy
+	name = "Surcoat, Heavy"
+	path = /obj/item/clothing/cloak/tabard/stabard/crusader/heavy
+	sort_category = "Cloaks"
+
 /datum/loadout_item/surcoatgoldenorder
 	name = "Surcoat, Golden Order"
 	path = /obj/item/clothing/cloak/tabard/stabard/crusader
