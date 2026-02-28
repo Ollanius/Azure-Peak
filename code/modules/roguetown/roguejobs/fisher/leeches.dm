@@ -48,7 +48,7 @@
 
 /obj/item/natural/worms/leech/get_mechanics_examine(mob/user)
 	. = ..()
-	. += span_info("Leeches can either be found by roaming through murkwater and sewage, or - more rarely - by digging holes in wet dirt.")
+	. += span_info("Leeches can be found by roaming through murkwater and sewage. Examine yourself - or click the heart on your HUD - to check your limbs, and click any highlighted mentions of the leech to remove them.")
 	. += span_info("When attached to someone, leeches will passively drain blood and toxins from the body. This can be used to counteract poisons, overdoses, and imbalanced humors.")
 
 /obj/item/natural/worms/leech/Initialize()
