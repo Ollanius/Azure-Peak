@@ -450,7 +450,7 @@
 	craftdiff = 3
 
 /datum/crafting_recipe/roguetown/sewing/stabardheavy
-	name = "surcoat, heavy"
+	name = "surcoat, overvestments"
 	category = "Tabards"
 	result = list(/obj/item/clothing/cloak/tabard/stabard/crusader/heavy)
 	reqs = list(/obj/item/natural/cloth = 3,
