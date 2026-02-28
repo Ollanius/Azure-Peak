@@ -142,6 +142,12 @@
 	Avantyne Legion. </br>'Happiness must be fought for, lest all hope perish from the face of this world.'"
 	icon_state = "crusader_surcoatb3"
 
+/obj/item/clothing/cloak/tabard/stabard/crusader/heavy
+	name = "heavy surcoat"
+	desc = "A heavy surcoat that offers complete modesty and protection against the weather, but leaves the thinner-framed with sorer shoulders. Commonly seen upon \
+	the bods of paladin-errants, priests, and pilgrims across Psydonia's more intemperate climates."
+	icon_state = "priest_surcoat"
+
 //
 
 /obj/item/clothing/cloak/tabard/stabard/crusader/legacy
