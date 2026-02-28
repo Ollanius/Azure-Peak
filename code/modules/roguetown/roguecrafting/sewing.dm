@@ -449,6 +449,14 @@
 				/obj/item/natural/fibers = 1)
 	craftdiff = 3
 
+/datum/crafting_recipe/roguetown/sewing/stabardheavy
+	name = "surcoat, heavy"
+	category = "Tabards"
+	result = list(/obj/item/clothing/cloak/tabard/stabard/crusader/heavy)
+	reqs = list(/obj/item/natural/cloth = 3,
+				/obj/item/natural/fibers = 2)
+	craftdiff = 3
+
 /datum/crafting_recipe/roguetown/sewing/abyssortemplartabard
 	name = "tabard, abyssorite templar"
 	category = "Tabards"
