@@ -12,7 +12,7 @@
 
 /obj/structure/roguemachine/headeater/examine()
 	. = ..()
-	. += span_info("Right click to deposit all heads in front of the machine.")
+	. += span_info("Right-click to deposit all heads in front of the machine.")
 
 /obj/structure/roguemachine/headeater/attackby(obj/item/H, mob/user, params)
 	. = ..()
