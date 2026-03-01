@@ -327,7 +327,7 @@
 /obj/item/rogueweapon/pitchfork
 	force = 10
 	force_wielded = 15
-	possible_item_intents = list(/datum/intent/pforkdump/lesser, SPEAR_BASH
+	possible_item_intents = list(/datum/intent/pforkdump/lesser, SPEAR_BASH)
 	gripped_intents = list(DUMP_INTENT, SPEAR_BASH, SPEAR_THRUST)
 	name = "pitchfork"
 	desc = "A thrice-pronged staff that scoops crops, nitesoil, and refuse without further dirtying one's hands. It pairs quite nicely with a lit torch, whenever the need to hunt vile creechers and lords arises."
