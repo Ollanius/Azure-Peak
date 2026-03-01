@@ -23,7 +23,7 @@
 /obj/structure/composter/examine()
 	. = ..()
 	. += span_info("Left-click the composter with waste to fill it. Nightsoil, ash, apple cores and other less-than-edible giblings are ideal choices.")
-	. += span_info("Compost needs to be intermittently flipped. This can either be done by right-clicking it with an unoccupied hand, or by left-clicking it with a pitchfork.")
+	. += span_info("Compost needs to be intermittently flipped. This can either be done by right-clicking it with an unoccupied hand, or by right-clicking it with a pitchfork.")
 
 /obj/structure/composter/examine(mob/user)
 	. = ..()
