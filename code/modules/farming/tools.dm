@@ -35,7 +35,7 @@
 	swingdelay = 8
 	clickcd = CLICK_CD_CHARGED
 
-/obj/item/rogueweapon/thresher/examine(mob/user)
+/obj/item/rogueweapon/thresher/get_mechanics_examine(mob/user)
 	. = ..()
 	. += span_notice("Left-click a piece of produce with the 'STRIKE' intent to mash it into seeds, which can be used to plant more crops.")
 	. += span_notice("Left-click harvested stalks with the 'THRESH' intent to shuck them, turning them into piles of useable fibers, grains, oats, and rice.")
@@ -188,7 +188,7 @@
 	hoe_damage = 25
 	work_time = 15 SECONDS
 
-/obj/item/rogueweapon/hoe/examine(mob/user)
+/obj/item/rogueweapon/hoe/get_mechanics_examine(mob/user)
 	. = ..()
 	. += span_notice("Left-clicking a patch of dirt on the 'TILL' intent allows you to make a new plot, fit for planting-and-farming crops.")
 	. += span_notice("Left-clicking a plot with crops already planted on it will attempt to remove any weeds present. A deweeded crop is a healthy crop!")
@@ -345,11 +345,11 @@
 	drop_sound = 'sound/foley/dropsound/wooden_drop.ogg'
 	smeltresult = /obj/item/ingot/iron
 
-/obj/item/rogueweapon/pitchfork/examine(mob/user)
+/obj/item/rogueweapon/pitchfork/get_mechanics_examine(mob/user)
 	. = ..()
-	. += span_notice("Right-click a composter to flip the nitematter inside. This helps to accelerate the transformation of nitematter into fertilizer, which can be used to improve the health of many crops.")
-	. += span_notice("Left-click with the 'SCOOP' intent selected to gather stalks and compost. A single pitchfork can hold up to nineteen pieces of such material at any given time.")
-	. += span_notice("fghgf")
+	. += span_notice("Right-click a composter to flip it around. This helps to accelerate the transformation of compost into fertilizer, which can be used to improve the health of many crops.")
+	. += span_notice("Left-click with the 'SCOOP' intent selected to gather stalks. A single pitchfork can hold up to nineteen pieces of such at any given time.")
+	. += span_notice("Once gathered, left-clicking an adjacent tile will dump all gathered stalks out onto it.")
 
 /obj/item/rogueweapon/pitchfork/getonmobprop(tag)
 	. = ..()
@@ -409,15 +409,6 @@
 			to_chat(user, span_warning("I dump the stalks."))
 		update_icon()
 		return
-	..()
-
-/obj/item/rogueweapon/pitchfork/ungrip(mob/living/carbon/user, show_message = TRUE)
-	if(forked.len)
-		var/turf/T = get_turf(user)
-		for(var/obj/item/I in forked)
-			I.forceMove(T)
-			forked -= I
-		update_icon()
 	..()
 
 /obj/item/rogueweapon/pitchfork/update_icon()
