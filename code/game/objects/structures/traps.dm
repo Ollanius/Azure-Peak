@@ -24,6 +24,10 @@
 	var/datum/effect_system/spark_spread/spark_system
 	var/scraptype = /obj/item/scrap
 
+/obj/structure/trap/get_mechanics_examine(mob/user)
+	. = ..()
+	. += span_info("Most traps are almost completely invisible. Examining an adjacent trap by shift-clicking it will momentarily dispell the invisiblity, and temporarily disables it.")
+
 /obj/structure/trap/Initialize(mapload)
 	. = ..()
 	flare_message = span_warning("[src] flares brightly!")
