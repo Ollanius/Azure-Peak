@@ -31,6 +31,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/get_mechanics_examine(mob/user)
     . = ..()
+    . += span_info("Many foodstuffs can be sliced into smaller portions by left-clicking them with a knife on the 'CUT' or 'CHOP' intents. This includes most meats, vegetables, fruits, bread, pies, cakes, saloumi, butter, salo, and more.")
     . += span_info("Most food will eventually rot, if left out for long enough. Storing food in a closed chest or atop a platter will effectively prevent it from rotting.")
     . += span_info("Rarer foods and drinks, or those made from more expensive recipes, can provide increased bonuses to the indulger's mood and health.")
     . += span_info("Everyone has a favorite meal and drink to indulge in - and, conversely, a hated meal and drink that they absolutely despise. Serve them right, and their mood will greatly improve.")
