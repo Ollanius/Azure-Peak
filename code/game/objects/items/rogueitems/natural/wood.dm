@@ -398,7 +398,7 @@
 	slot_flags = ITEM_SLOT_MOUTH|ITEM_SLOT_HIP
 	lumber_amount = 0
 
-/obj/item/grown/log/tree/stake(mob/user)
+/obj/item/grown/log/tree/stake/get_mechanics_examine(mob/user)
 	. = ..()
 	. += span_info("Stakes can be crafted with a stone to make whetstones, which are better at sharpening blades.")
 	. += span_info("Stakes are weak, but can double as improvised weapons with total armor penetration. Crafting a stake with a whetstone can make it into a more refined weapon.")
