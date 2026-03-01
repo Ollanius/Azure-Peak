@@ -103,15 +103,27 @@
 
 // This book should be widely given to everyone
 /obj/item/recipe_book/survival
-	name = "The Survival Handbook"
-	desc = "A book full of recipes and tips for surviving in the wild. Can be used as fuel in a pinch."
-	icon_state = "book6_0"
-	base_icon_state = "book6"
+	name = "Tips, Tricks, & Triumphs: The Novice's Handbook To Azuria"
+	desc = "A heftsome tome, filled to the brim with all the information you'd need to survive within Azuria. The golden bookmark seems to always lead you \
+	to the page you needed the most, no matter how you flip it. </br>Activate the tome in your hand to open a searchable glossary, filled with most crafting \
+	recipes. </br>Click the 'Mechanics' tab to reveal a wide variety of tips and tricks, for getting started."
+	icon_state = "starterguide_0"
+	base_icon_state = "starterguide"
 
 	types = list(
 		/datum/crafting_recipe/roguetown/survival,
 		/datum/crafting_recipe/roguetown/tallow,
 		)
+
+/obj/item/recipe_book/survival/get_mechanics_examine(mob/user)
+	. = ..()
+	. += span_info("Examining things will display a small blurb in the chatbox. IF present, clicking the blurb's 'Mechanics' tab or '(?)' button will reveal more detailed information about the thing-in-question.")
+	. += span_info("If you're ever trumped, try asking a question through the 'Mentorhelp' verb in the 'Admin' tab, located in your screen's top-right corner. Alternatively, try asking in the Discord's #mentor-talk channel.")
+	. += span_info("Adventurers, Pilgrims, and other newcomers usually spawn to the south of Town. Following the cobblestone road - and any signs of civilization - will eventually lead you there.")
+	. += span_info("Most spawn locations have 'far travel' points, which allows your character to leave the round for whatever reason. Click-drag yourself, or a comatose friend, onto the yellow tile to leave.")
+	. += span_info("Virtues and statpacks can be selected in the character creation menu, in order to further flesh out your character's mechanical capabilities. Try taking the 'Resident' virtue, if you ever feel overwhelmed.")
+	. += span_info("Pressing 'C', by default, toggles COMBAT MODE. This allows your character to PARRY and DODGE incoming attacks, while greatly improving their capacity to fight back.")
+	. += span_info("Pressing 'X', by default, allows you to RESIST. This is used for many circumstances; putting out fires, wriggling out of man-eating foliage, removing shackles, and so on.")
 
 // TBD - Cauldron Recipes
 /obj/item/recipe_book/alchemy
