@@ -105,8 +105,9 @@
 /obj/item/recipe_book/survival
 	name = "Tips, Tricks, & Triumphs: The Novice's Handbook To Azuria"
 	desc = "A heftsome tome, filled to the brim with all the information you'd need to survive within Azuria. The golden bookmark seems to always lead you \
-	to the page you needed the most, no matter how you flip it. </br>Activate the tome in your hand to open a searchable glossary, filled with most crafting \
-	recipes. </br>Click the 'Mechanics' tab to reveal a wide variety of tips and tricks, for getting started."
+	to the page you needed the most, no matter how you flip it. </br>Activate the tome in your hand to open a searchable glossary, filled with most basic \
+	crafting recipes. </br>Click the 'Mechanics' tab to reveal a wide variety of tips and tricks, for getting started. Be warned, it's quite a lot; be prepared \
+	to scroll around, or hold shift while scrolling down to compact more information into your chatbox's frame."
 	icon_state = "starterguide_0"
 	base_icon_state = "starterguide"
 
@@ -118,12 +119,21 @@
 /obj/item/recipe_book/survival/get_mechanics_examine(mob/user)
 	. = ..()
 	. += span_info("Examining things will display a small blurb in the chatbox. IF present, clicking the blurb's 'Mechanics' tab or '(?)' button will reveal more detailed information about the thing-in-question.")
-	. += span_info("If you're ever trumped, try asking a question through the 'Mentorhelp' verb in the 'Admin' tab, located in your screen's top-right corner. Alternatively, try asking in the Discord's #mentor-talk channel.")
+	. += span_info("If you're ever stumped, try asking a question through the 'Mentorhelp' verb in the 'Admin' tab, located in your screen's top-right corner. Alternatively, try asking in the Discord's #mentor-talk channel.")
 	. += span_info("Adventurers, Pilgrims, and other newcomers usually spawn to the south of Town. Following the cobblestone road - and any signs of civilization - will eventually lead you there.")
 	. += span_info("Most spawn locations have 'far travel' points, which allows your character to leave the round for whatever reason. Click-drag yourself, or a comatose friend, onto the yellow tile to leave.")
-	. += span_info("Virtues and statpacks can be selected in the character creation menu, in order to further flesh out your character's mechanical capabilities. Try taking the 'Resident' virtue, if you ever feel overwhelmed.")
+	. += span_info("Your character's skills are generally inherited by their chosen role, and greatly affects their ability to do many tasks. Click on the 'SKILLS' button in your HUD to see-and-learn-more about what you have.")
+	. += span_info("The same principle applies to your character's core stats; Strength, Constitution, Perception, Willpower, Intelligence, Speed, and Fortune. A value of 'X' is considered the baseline.")
+	. += span_info("Drinking and eating is important to your character's conditioning. In the wilds, you can middle-click a water tile while the 'BITE' subintent is selected to start drinking from it.")
+	. += span_info("Rummaging through bushes can provide jackberries. Be careful, however, as bushes can host both regular-and-poisoned variants. Take a bite, and spit it out if it tastes bitter.")
+	. += span_info("Your character's energy and stamina are represented as blue-and-green bars on the HUD. The lower your energy, the less stamina you can use for most actions. Resting and sleeping can abate fatigue.")
+	. += span_info("Likewise, your character's health is respected by the heart on the HUD. Flashing outlines catalogue your pain, drained colors catalogue blood loss, and hueshifts catalogue the most prevalant type of damage.")
 	. += span_info("Pressing 'C', by default, toggles COMBAT MODE. This allows your character to PARRY and DODGE incoming attacks, while greatly improving their capacity to fight back.")
-	. += span_info("Pressing 'X', by default, allows you to RESIST. This is used for many circumstances; putting out fires, wriggling out of man-eating foliage, removing shackles, and so on.")
+	. += span_info("Pressing 'X', by default, allows you to RESIST. This is used for many circumstances; putting out fires on yourself, getting out of beds and chairs, escaping MANEATERS, and so on.")
+	. += span_info("Pressing 'V', by default, lets you GET UP and LAY DOWN. Buckle yourself onto a bed and close your eyes by clicking the arrows on your HUD's eye to sleep, after some delay. Click the arrows again to begin waking up.")
+	. += span_info("If you have the 'Tired' debuff, then sleeping will reward you a TRIUMPH. TRIUMPHs are special points that persist between rounds, and can also be awarded through completing certain objectives.")
+	. += span_info("TRIUMPHs are chiefly used to purchase special items and reskins from the loadout system, located inside the character creation menu. They can be otherwise spent to unlock temporary bonuses and privileges.")
+	. += span_info("The character creation menu can be accessed at any time by clicking the 'Game Preferences' verb in the 'Options' tab. You can use this to manually check and remap all your hotkeys, as well.")
 
 // TBD - Cauldron Recipes
 /obj/item/recipe_book/alchemy
