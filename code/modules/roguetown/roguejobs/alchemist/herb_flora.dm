@@ -13,10 +13,6 @@
 	var/timerid
 	var/harvested = FALSE
 
-/obj/structure/flora/roguegrass/herb/get_mechanics_examine(mob/user)
-	. = ..()
-	. += span_info("Left-click to forage for herbs.")
-
 /obj/structure/flora/roguegrass/herb/Initialize()
 	. = ..()
 	GLOB.herb_locations |= src
