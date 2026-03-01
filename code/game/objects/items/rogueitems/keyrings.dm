@@ -119,6 +119,10 @@
 	experimental_inhand = TRUE
 	dropshrink = 0.7
 
+/obj/item/lockpickring/get_mechanics_examine(mob/user)
+	. = ..()
+	. += span_info("Individual lockpicks can be plucked off the keyring by either right-clicking it, or by shift-clicking its inventory open and taking a specific lockpick out of it.")
+
 /obj/item/lockpickring/Initialize()
 	. = ..()
 	if(picks.len)
