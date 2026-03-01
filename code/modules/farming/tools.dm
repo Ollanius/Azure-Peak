@@ -327,7 +327,7 @@
 /obj/item/rogueweapon/pitchfork
 	force = 10
 	force_wielded = 15
-	possible_item_intents = list(/datum/intent/pforkdump/lesser, SPEAR_BASH)
+	possible_item_intents = list(SPEAR_BASH)
 	gripped_intents = list(DUMP_INTENT, SPEAR_BASH, SPEAR_THRUST)
 	name = "pitchfork"
 	desc = "A thrice-pronged staff that scoops crops, nitesoil, and refuse without further dirtying one's hands. It pairs quite nicely with a lit torch, whenever the need to hunt vile creechers and lords arises."
@@ -349,7 +349,7 @@
 	. = ..()
 	. += span_notice("Right-click a composter to flip it around. This helps to accelerate the transformation of compost into fertilizer, which can be used to improve the health of many crops.")
 	. += span_notice("Left-click with the 'SCOOP' intent selected to gather stalks. A single pitchfork can hold up to nineteen pieces of such at any given time.")
-	. += span_notice("Once gathered, left-clicking an adjacent tile will dump all gathered stalks out onto it.")
+	. += span_notice("Once gathered, left-clicking an adjacent tile or unwielding the pitchfork will dump all gathered stalks out onto it.")
 
 /obj/item/rogueweapon/pitchfork/getonmobprop(tag)
 	. = ..()
@@ -391,12 +391,6 @@
 	misscost = 0
 	no_attack = TRUE
 
-/datum/intent/pforkdump/lesser
-	name = "scoop with one hand"
-	desc = "Gather stalks, compost, and other refuse without needing to get your hands dirty. Wielding the tool with both hands should allow for much quicker and efficent scooping."
-	swingdelay = 8
-	clickcd = CLICK_CD_CHARGED
-
 /obj/item/rogueweapon/pitchfork/afterattack(obj/target, mob/user, proximity)
 	if((!proximity) || (!wielded))
 		return ..()
@@ -409,6 +403,15 @@
 			to_chat(user, span_warning("I dump the stalks."))
 		update_icon()
 		return
+	..()
+
+/obj/item/rogueweapon/pitchfork/ungrip(mob/living/carbon/user, show_message = TRUE)
+	if(forked.len)
+		var/turf/T = get_turf(user)
+		for(var/obj/item/I in forked)
+			I.forceMove(T)
+			forked -= I
+		update_icon()
 	..()
 
 /obj/item/rogueweapon/pitchfork/update_icon()
