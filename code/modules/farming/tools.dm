@@ -1,7 +1,7 @@
 /obj/item/rogueweapon/thresher
 	force = 10
 	force_wielded = 15
-	possible_item_intents = list(/datum/intent/flail/thresh/lesser, MACE_STRIKE)
+	possible_item_intents = list(MACE_STRIKE)
 	gripped_intents = list(/datum/intent/flail/thresh, /datum/intent/flail/smash, MACE_STRIKE) 
 	name = "thresher"
 	desc = "A soilson's lyfeline, chiseled into a studded halflog that's tethered to a staff. It crushes produce into seeds, turns stalks into food, and melds the skulls of thieves into powdery debris."
@@ -28,12 +28,6 @@
 	candodge = FALSE
 	misscost = 0
 	no_attack = TRUE
-
-/datum/intent/flail/thresh/lesser
-	name = "thresh with one hand"
-	desc = "Throttle stalks into fiber-and-food with a sluggish blow. Wielding the tool with both hands should allow for much quicker and efficent threshing."
-	swingdelay = 8
-	clickcd = CLICK_CD_CHARGED
 
 /obj/item/rogueweapon/thresher/get_mechanics_examine(mob/user)
 	. = ..()
@@ -135,7 +129,7 @@
 /obj/item/rogueweapon/hoe
 	force = 10
 	force_wielded = 15
-	possible_item_intents = list(/datum/intent/pick, /datum/intent/till/lesser)
+	possible_item_intents = list(/datum/intent/pick)
 	gripped_intents = list(/datum/intent/pick, SPEAR_BASH, TILL_INTENT)
 	name = "hoe"
 	desc = "A humble tool for humble tillage. Would you be more concerned if it wasn't dirty and worn?"
@@ -297,12 +291,6 @@
 	noaa = TRUE
 	candodge = FALSE
 	misscost = 0
-
-/datum/intent/till/lesser
-	name = "hoe with one hand"
-	desc = "Till dirt into soil, and tear weeds from crops with a sluggish motion. Wielding the tool with both hands should allow for much quicker and efficent hoeing."
-	swingdelay = 8
-	clickcd = CLICK_CD_CHARGED
 
 /*
 //make this attack_turf instead
