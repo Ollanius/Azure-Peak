@@ -21,8 +21,8 @@
 
 /obj/structure/roguemachine/vendor/get_mechanics_examine(mob/user)
 	. = ..()
-	. += span_info("Left-click the PEDDLER with coinage to feed it. ")
-	. += span_info("Insert coins to purchase supplies or send a letters.")
+	. += span_info("Owners of the storefront's PEDDLER can unlock it, allowing them both restock wares and vend whatever coinage might've been earned from completed sales.")
+	. += span_info("Left-clicking a PEDDLER with an open land allows you to browse and purchase its wares. Click on the 'Stored Mammons' option to retrieve any coinage or change left behind.")
 
 /obj/structure/roguemachine/vendor/proc/get_group_items(var/param)
 	// Accepts either:
