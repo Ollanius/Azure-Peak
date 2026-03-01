@@ -49,7 +49,7 @@
 			if("onbelt") return list("shrink" = 0.7,"sx" = 5,"sy" = 2,"nx" = -1,"ny" = 2,"wx" = 0,"wy" = 4,"ex" = 1,"ey" = 3,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0)
 
 /obj/item/rogueweapon/thresher/afterattack(obj/target, mob/user, proximity)
-	if(user.used_intent.type == /datum/intent/flailthresh)
+	if(user.used_intent.type == /datum/intent/flail/thresh)
 		if(isturf(target.loc))
 			var/turf/T = target.loc
 			var/found = FALSE
