@@ -144,7 +144,7 @@ GLOBAL_LIST_INIT(stone_personality_descs, list(
 	sharpening_factor = 12
 	spark_chance = 35
 
-/obj/item/natural/stone(mob/user)
+/obj/item/natural/stone/get_mechanics_examine(mob/user)
 	. = ..()
 	. += span_info("Left-click a bladed weapon to begin sharpening it. Sharpening automatically stops once you move, or once the bladed weapon has been completely resharpened.")
 	. += span_info("Left-clicking a bladed weapon, another stone, or a rock has a chance to spawn sparks. Sparks can be used to reignite extinguished torches, lampterns, hearths, and other igniteable structures.")
@@ -191,7 +191,7 @@ GLOBAL_LIST_INIT(stone_personality_descs, list(
 	sharpening_factor = 21
 	spark_chance = 80
 
-/obj/item/natural/whetstone(mob/user)
+/obj/item/natural/whetstone/get_mechanics_examine(mob/user)
 	. = ..()
 	. += span_info("Left-click a bladed weapon to begin sharpening it. Sharpening automatically stops once you move, or once the bladed weapon has been completely resharpened.")
 	. += span_info("Left-clicking a bladed weapon, another stone, or a rock has a chance to spawn sparks. Sparks can be used to reignite extinguished torches, lampterns, hearths, and other igniteable structures.")
@@ -394,7 +394,7 @@ GLOBAL_LIST_INIT(stone_personality_descs, list(
 	attacked_sound = 'sound/foley/hit_rock.ogg'
 
 
-/obj/item/natural/rock(mob/user)
+/obj/item/natural/rock/get_mechanics_examine(mob/user)
 	. = ..()
 	. += span_info("Rocks can be destroyed by left-clicking them with an item that has the 'PICK' intent selected. Hidden inside can be anything from stones and salt to ores and gems.")
 	. += span_info("Left-clicking a rock with a stone has a chance to spawn sparks. Sparks can be used to reignite extinguished torches, lampterns, hearths, and other igniteable structures.")
