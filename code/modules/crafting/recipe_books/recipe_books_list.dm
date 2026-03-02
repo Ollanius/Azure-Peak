@@ -132,6 +132,8 @@
 	. += span_info("Pressing 'V', by default, lets you GET UP and LAY DOWN. This can be used to recover energy and stamina, represented by the blue and green bars on your HUD. Pace yourself, lest you be caught off-guard.")
 	. += span_info("This tome can be turned into the Stockpile, traditionally located in a small alcove between the Innhouse and Smithy, for some coinage.")
 	. += span_info("If you're ever stumped, try asking a question through the 'Mentorhelp' verb in the 'Admin' tab, located in your screen's top-right corner. Alternatively, try asking in the Discord's #mentor-talk channel.")
+	. += span_info("Likewise, try checking out Azure Peak's official wikipedia - https://azurepeak.miraheze.org/wiki/Main_Page - for anything else you might wish to learn about.")
+	. += span_info("And most importantly.. have fun!")
 
 // TBD - Cauldron Recipes
 /obj/item/recipe_book/alchemy
