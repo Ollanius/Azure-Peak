@@ -133,7 +133,7 @@
 /obj/structure/fluff/walldeco/barbersign/get_mechanics_examine(mob/user)
 	. = ..()
 	. += span_info("Your character can be wounded, and mended, in a wide variety of ways. Their reaction to such injuries depends on their Willpower and Constitution.")
-. += span_info("Willpower determines how much energy and stamina your character has, represented by the blue and green bars on your HUD. Likewise, it also determines how much pain you can withstand before incapacitation.")
+	. += span_info("Willpower determines how much energy and stamina your character has, represented by the blue and green bars on your HUD. Likewise, it also determines how much pain you can withstand before incapacitation.")
 	. += span_info("Constitution determines how much health your character has. The higher your Constitution, the more injuries you can withstand before suffering critical hits and-or dying.")
 	. += span_info("Critical hits can be inflicted on limbs that're no longer protected by armor, and have already been severely damaged. These injuries are all debilitating, and can be fatal not treated.")
 	. += span_info("Lifeblood, otherwise known as 'red' or 'health', heals most injuries. Needles, cloth, and bandages can stop bleeding. Water can restore lost blood. Bedrest and sleeping can fix most things with time.")
