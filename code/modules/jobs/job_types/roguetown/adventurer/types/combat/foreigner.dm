@@ -684,9 +684,9 @@
 	desc = "A bottle with a mudclay cork, tethered to the bottleneck via braided twine. Fermented innard-paste and herbs makes for a \
 	disgustingly cheap medicine; an ancient concoction, resurrected for usage within the gladitorial arenas of Lirvas and Raneshen. </br>A \
 	particular variant of this, made by fermenting zardines in the Terrorbog, happens to be a very popular condiment back in Rockhill."
-	list_reagents = list(/datum/reagent/consumable/soup/zarum = 50)
+	list_reagents = list(/datum/reagent/medicine/healthpot/zarum = 50)
 
-/datum/reagent/consumable/soup/zarum
+/datum/reagent/medicine/healthpot/zarum
 	name = "Zarum"
 	description = "A fermented sauce of fish innards and vinegear, which gradually regenerates all types of damage."
 	reagent_state = LIQUID
@@ -696,9 +696,15 @@
 	taste_description = "lip-puckeringly rich fishiness"
 	scent_description = "fermented pungence"
 	taste_mult = 8
-	hydration = 2
+	var/hydration = 4
 
-/datum/reagent/consumable/soup/zarum/on_mob_life(mob/living/carbon/M)
+/datum/reagent/medicine/healthpot/zarum/on_mob_life(mob/living/carbon/M)
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		if(!HAS_TRAIT(H, TRAIT_NOHUNGER))
+			H.adjust_hydration(hydration)
+		if(M.blood_volume < BLOOD_VOLUME_NORMAL)
+			M.blood_volume = min(M.blood_volume+10, BLOOD_VOLUME_NORMAL)
 	var/list/wCount = M.get_wounds()
 	if(wCount.len > 0)
 		M.heal_wounds(4) //Better than traditional lifeblood at sealing open wounds. Slightly weaker healing potency, in turn.
