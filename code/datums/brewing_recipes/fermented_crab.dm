@@ -20,7 +20,7 @@
 	category = "Other"
 	bottle_name = "medicinal fish vinegear"
 	bottle_desc = "Overpoweringly fishy, yet imbued with alchemical mirth. An ancient predecessor to refined lifeblood, more commonly diluted in the modern dae for use as a savory sauce. (Un)fortuantely, this batch isn't destinted for dilution."
-	reagent_to_brew = /datum/reagent/consumable/soup/zarum
+	reagent_to_brew = /datum/reagent/medicine/healthpot/zarum
 	needed_reagents = list(/datum/reagent/water = 198)
 	needed_items = list(
 		/obj/item/reagent_containers/food/snacks/rogue/meat/fish = 3, 
@@ -29,5 +29,5 @@
 		/obj/item/alch/calendula = 1,
 	)
 	brewed_amount = 2
-	brew_time = 30 MINUTES
+	brew_time = 15 MINUTES
 	sell_value = 100 //Ditto. 
