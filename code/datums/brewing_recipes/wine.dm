@@ -98,7 +98,7 @@
 	needed_items = list(/obj/item/alch/atropa = 1, /obj/item/reagent_containers/food/snacks/sugar = 1, /obj/item/alch/matricaria = 1,
 						 /obj/item/alch/paris = 1, /obj/item/rogueweapon/whip = 1) // poisonous herbs, sugar, and an actual whip. the power of Mistranslations...
 	brewed_amount = 4
-	brew_time = 5 MINUTES
+	brew_time = 10 MINUTES
 	sell_value = 160
 
 /datum/brewing_recipe/luxintenebre
