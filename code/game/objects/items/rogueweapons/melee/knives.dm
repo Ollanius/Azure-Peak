@@ -30,6 +30,10 @@
 	penfactor = 25
 	clickcd = 11
 
+/datum/intent/dagger/cut/light
+	name = "light cut"
+	damfactor = 0.8
+
 /datum/intent/dagger/thrust
 	name = "thrust"
 	icon_state = "instab"
@@ -49,6 +53,15 @@
 	penfactor = 45 // Slightly more pen, to compensate in penetration for the lower damage.
 	// You're still doing less damage than with a stabbier dagger, but your AP isn't penalised.
 	clickcd = CLICK_CD_QUICK
+
+/datum/intent/dagger/thrust/quick
+	name = "quick thrust"
+	icon_state = "inthresh"
+	attack_verb = list("thrusts", "shanks")
+	intent_intdamage_factor = 0.5 //Deals 50% less integrity damage, encouraging its use as a finishing strike against unarmored joints.
+	damfactor = 0.75 //Reduces dagger damage by 25%. This translates into Rondel Daggers and Silver Sharpened Stakes dealing 15 > 20 base damage, and Sharpened Stakes dealing 9 > 12 base damage.
+	penfactor = 20 //Counts as up to 35AP, when factoring in strength-modified damage. At XIV STR, can pierce up to base LEATHER and PADDED. Keep restricted to counter-wrestling weapons.
+	clickcd = CLICK_CD_INTENTCAP //Hardcoded threshold that can't be exceded, even with SWIFT intent. This intent emulates rapid yet debilitating strikes.
 
 /datum/intent/dagger/thrust/pick
 	name = "icepick stab"
@@ -596,9 +609,9 @@
 	desc = "This is the traditional sidearm of a knight: a lightweight dagger of solid steel, well-balanced for delivering rapid thrusts that can shuck grapplers like oysters."
 	icon_state = "rondel"
 	sheathe_icon = "dagger_trainer"
-	possible_item_intents = list(/datum/intent/dagger/thrust, /datum/intent/dagger/thrust/pick, /datum/intent/dagger/cut, /datum/intent/dagger/sucker_punch)
+	possible_item_intents = list(/datum/intent/dagger/thrust/quick, /datum/intent/dagger/thrust/pick, /datum/intent/dagger/cut/light, /datum/intent/dagger/sucker_punch)
 	wdefense = 4
-	force = 22 // I will give you 10% force instead of 4 clickCD stab holy shit
+	force = 20
 	smeltresult = /obj/item/ingot/steel
 
 /obj/item/rogueweapon/huntingknife/idagger/steel/parrying
@@ -621,7 +634,6 @@
 	sheathe_icon = "spdaggerhand"
 	max_integrity = 200
 	wdefense = 9
-
 
 /obj/item/rogueweapon/huntingknife/idagger/steel/parrying/vaquero
 	name = "sail dagger"
@@ -687,7 +699,7 @@
 	name = "sharpened stake"
 	desc = "A branch that has been broken off of an azurielve tree, sharpened to a fine point. It can lay some unholy creechers to rest, but only by piercing their hearts."
 	icon_state = "heavystake"
-	possible_item_intents = list(/datum/intent/dagger/thrust/pick, /datum/intent/dagger/thrust, /datum/intent/dagger/cut, /datum/intent/dagger/sucker_punch)
+	possible_item_intents = list(/datum/intent/dagger/thrust/pick, /datum/intent/dagger/thrust/quick, /datum/intent/dagger/cut/light, /datum/intent/dagger/sucker_punch)
 	force = 12
 	throwforce = 12
 	wdefense = 0
@@ -713,7 +725,7 @@
 	name = "silver-tipped stake"
 	desc = "A branch that has been broken off of a boswellia tree, sharpened to a fine point and tipped with blessed silver. It can lay most unholy creechers to rest, but only by piercing their hearts."
 	icon_state = "heavystake_silver"
-	possible_item_intents = list(/datum/intent/dagger/thrust/pick, /datum/intent/dagger/thrust, /datum/intent/dagger/cut, /datum/intent/dagger/sucker_punch)
+	possible_item_intents = list(/datum/intent/dagger/thrust/pick, /datum/intent/dagger/thrust/quick, /datum/intent/dagger/cut/light, /datum/intent/dagger/sucker_punch)
 	force = 20
 	throwforce = 20
 	wdefense = 0
@@ -1144,7 +1156,7 @@
 	force = 10
 	throwforce = 10
 	embedding = list("embedded_pain_multiplier" = 4, "embed_chance" = 50, "embedded_fall_chance" = 15)
-	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/chop/cleaver, /datum/intent/snip, /datum/intent/dagger/thrust)
+	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/chop/cleaver, /datum/intent/snip, /datum/intent/dagger/thrust/quick)
 
 /obj/item/rogueweapon/huntingknife/scissors
 	possible_item_intents = list(/datum/intent/snip, /datum/intent/dagger/thrust, /datum/intent/dagger/cut)
