@@ -78,7 +78,7 @@
 				)
 			if("gen")
 				return list(
-					"shrink" = 0.35,
+					"shrink" = 0.4,
 					"sx" = -7,
 					"sy" = -4,
 					"nx" = 7,
