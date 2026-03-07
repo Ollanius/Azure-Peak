@@ -8,7 +8,7 @@
 	reagent_flags = OPENCONTAINER
 	amount_per_transfer_from_this = 6
 	possible_transfer_amounts = list(6)
-	dropshrink = 0.8
+	dropshrink = 0.7
 	w_class = WEIGHT_CLASS_NORMAL
 	experimental_inhand = TRUE
 	volume = 25
