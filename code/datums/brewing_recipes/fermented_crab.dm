@@ -12,7 +12,7 @@
 		/obj/item/alch/valeriana = 1,
 	)
 	brewed_amount = 2
-	brew_time = 10 MINUTES
+	brew_time = 7 MINUTES
 	sell_value = 100 //The sell value determines the price of the whole batch, and is divided by the amount of brewed bottles. Ergo, a value of 100c would be split into two bottles of 50c each.
 
 /datum/brewing_recipe/zarum
