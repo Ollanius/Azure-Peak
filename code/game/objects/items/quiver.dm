@@ -54,7 +54,7 @@
 				)
 			if("onbelt")
 				return list(
-					"shrink" = 0.45,
+					"shrink" = 0.35,
 					"sx" = -4,
 					"sy" = -6,
 					"nx" = 5,
@@ -78,7 +78,7 @@
 				)
 			if("gen")
 				return list(
-					"shrink" = 0.4,
+					"shrink" = 0.35,
 					"sx" = -7,
 					"sy" = -4,
 					"nx" = 7,
