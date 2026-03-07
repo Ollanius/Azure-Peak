@@ -194,4 +194,4 @@
 
 /obj/structure/fermentation_keg/zarum/Initialize()
 	. = ..()
-	reagents.add_reagent(/datum/reagent/consumable/soup/zarum, 513)
+	reagents.add_reagent(/datum/reagent/medicine/healthpot/zarum, 513)
