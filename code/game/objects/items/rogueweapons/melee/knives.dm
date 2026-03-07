@@ -58,8 +58,8 @@
 	name = "quick thrust"
 	icon_state = "inthresh"
 	attack_verb = list("thrusts", "shanks")
-	intent_intdamage_factor = 0.5 //Deals 50% less integrity damage, encouraging its use as a finishing strike against unarmored joints.
-	damfactor = 0.75 //Reduces dagger damage by 25%. This translates into Rondel Daggers and Silver Sharpened Stakes dealing 15 > 20 base damage, and Sharpened Stakes dealing 9 > 12 base damage.
+	intent_intdamage_factor = 0.4 //Deals 50% less integrity damage, encouraging its use as a finishing strike against unarmored joints.
+	damfactor = 0.8 //Reduces dagger damage by 25%. This translates into Rondel Daggers and Silver Sharpened Stakes dealing 16 > 20 base damage, and Sharpened Stakes dealing 10 > 12 base damage.
 	penfactor = 20 //Counts as up to 35AP, when factoring in strength-modified damage. At XIV STR, can pierce up to base LEATHER and PADDED. Keep restricted to counter-wrestling weapons.
 	clickcd = CLICK_CD_INTENTCAP //Hardcoded threshold that can't be exceded, even with SWIFT intent. This intent emulates rapid yet debilitating strikes.
 
