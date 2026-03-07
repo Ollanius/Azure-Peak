@@ -21,5 +21,5 @@
 	needed_items = list(/obj/item/alch/valeriana = 1, /obj/item/alch/hypericum = 1, /obj/item/reagent_containers/food/snacks/rogue/honey/spider = 1)
 	brewed_amount = 6
 	brew_time = 4 MINUTES
-	sell_value = 129
+	sell_value = 120
 	heat_required = 310
