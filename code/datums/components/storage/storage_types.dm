@@ -87,6 +87,11 @@
 /datum/component/storage/concrete/roguetown/belt/assassin
 	max_w_class = WEIGHT_CLASS_NORMAL
 
+/datum/component/storage/concrete/roguetown/bandolier
+	screen_max_rows = 5
+	screen_max_columns = 2
+	max_w_class = WEIGHT_CLASS_SMALL
+
 /datum/component/storage/concrete/roguetown/cloak
 	max_w_class = WEIGHT_CLASS_NORMAL
 	screen_max_rows = 2
