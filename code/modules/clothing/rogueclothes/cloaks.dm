@@ -53,6 +53,7 @@
 	icon_state = "bandolier"
 	item_state = "bandolier"
 	slot_flags = ITEM_SLOT_BACK_L|ITEM_SLOT_CLOAK
+	salvage_result = /obj/item/natural/hide/cured
 
 /obj/item/clothing/cloak/bandolier/ComponentInitialize()
 	. = ..()
