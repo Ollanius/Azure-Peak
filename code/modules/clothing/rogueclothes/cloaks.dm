@@ -47,7 +47,7 @@
 
 /obj/item/clothing/cloak/bandolier
 	name = "bandolier"
-	desc = "A sash that's pelted with pouches, perfect for carrying plenty of pint-sized pieces."
+	desc = "A sash that's pelted with pouches, perfect for carrying plenty of pint-sized pieces. </br>'Hail to the King, baby.'"
 	color = null
 	equip_delay_self = 30
 	icon_state = "bandolier"
