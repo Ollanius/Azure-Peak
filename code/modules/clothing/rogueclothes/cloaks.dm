@@ -53,7 +53,11 @@
 	icon_state = "bandolier"
 	item_state = "bandolier"
 	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
-	var/component_type = /datum/component/storage/concrete/roguetown/bandolier
+
+/obj/item/clothing/cloak/bandolier/ComponentInitialize()
+	. = ..()
+	if(storage)
+		AddComponent(/datum/component/storage/concrete/roguetown/bandolier)
 
 //////////////////////////
 /// TABARD
