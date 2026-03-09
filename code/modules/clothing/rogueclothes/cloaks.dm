@@ -52,7 +52,7 @@
 	equip_delay_self = 30
 	icon_state = "bandolier"
 	item_state = "bandolier"
-	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
+	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK
 
 /obj/item/clothing/cloak/bandolier/ComponentInitialize()
 	. = ..()
