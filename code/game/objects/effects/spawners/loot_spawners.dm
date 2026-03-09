@@ -368,6 +368,9 @@
 		/obj/item/rogueweapon/sword/sabre/elf = 1,
 		/obj/item/rogueweapon/sword/cutlass = 2,
 		/obj/item/rogueweapon/katar = 1,
+		/obj/item/rogueweapon/katar/silver = 1,
+		/obj/item/rogueweapon/knuckles/silver = 1,
+		/obj/item/rogueweapon/handclaw/gronn/silver = 1,
 		/obj/item/rogueweapon/spear/billhook = 2,
 		/obj/item/rogueweapon/halberd = 2,
 		/obj/item/rogueweapon/eaglebeak = 1,
@@ -388,6 +391,8 @@
 		/obj/item/rogueweapon/sword/long/kriegmesser/silver = 1,
 		/obj/item/rogueweapon/sword/short/silver = 1,
 		/obj/item/rogueweapon/sword/rapier/silver = 1,
+		/obj/item/rogueweapon/sword/long/exe/silver = 1,
+		/obj/item/rogueweapon/greatsword/silver = 1,
 		/obj/item/rogueweapon/whip/silver = 1,
 		/obj/item/rogueweapon/woodstaff/quarterstaff/silver = 1,
 		//tools
