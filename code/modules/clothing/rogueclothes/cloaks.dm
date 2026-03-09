@@ -42,6 +42,21 @@
 	user.update_inv_armor()
 
 //////////////////////////
+/// BANDOLEER 
+////////////////////////
+
+/obj/item/clothing/cloak/bandolier
+	name = "bandolier"
+	desc = "A sash that's pelted with pouches, perfect for carrying plenty of pieces."
+	color = null
+	equip_delay_self = 30
+	icon_state = "bandolier"
+	item_state = "bandolier"
+	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
+	grid_width = 64
+	grid_height = 128 //Translates into a 2x4 space, equivalent to two pouches stacked side-to-side.
+
+//////////////////////////
 /// TABARD
 ////////////////////////
 
