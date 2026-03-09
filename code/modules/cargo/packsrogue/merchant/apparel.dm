@@ -164,6 +164,11 @@
 	cost = 18
 	contains = list(/obj/item/storage/backpack/rogue/backpack)
 
+/datum/supply_pack/rogue/apparel/bandolier
+	name = "Bandolier"
+	cost = 18
+	contains = list(/obj/item/clothing/cloak/bandolier)
+
 /datum/supply_pack/rogue/apparel/pouches
 	name = "Pouches"
 	cost = 15
