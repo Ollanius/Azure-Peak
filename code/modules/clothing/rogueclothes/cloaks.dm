@@ -53,8 +53,12 @@
 	equip_delay_self = 30
 	icon_state = "bandolier"
 	item_state = "bandolier"
-	slot_flags = ITEM_SLOT_BACK_L|ITEM_SLOT_CLOAK
+	resistance_flags = FIRE_PROOF
+	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
 	salvage_result = /obj/item/natural/hide/cured
+	grid_width = 64
+	grid_height = 96
 
 /obj/item/clothing/cloak/bandolier/ComponentInitialize()
 	. = ..()
