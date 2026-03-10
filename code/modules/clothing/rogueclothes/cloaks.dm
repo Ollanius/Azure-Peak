@@ -41,6 +41,19 @@
 	user.update_inv_cloak()
 	user.update_inv_armor()
 
+/obj/item/clothing/cloak/bandolier
+	name = "bandolier"
+	desc = "A sash that's pelted with pouches, perfect for carrying plenty of pint-sized pieces. </br>'Hail to the King, baby.'"
+	color = null
+	icon_state = "bandolier"
+	item_state = "bandolier"
+	resistance_flags = FIRE_PROOF
+	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK //Same slots as the regular tabard, with the added bonus of being slingable on the rightmost backslot.
+	salvage_result = /obj/item/natural/hide/cured
+	grid_width = 64
+	grid_height = 96
+
 //////////////////////////
 /// TABARD
 ////////////////////////
