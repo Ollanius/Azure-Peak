@@ -47,18 +47,29 @@
 
 /obj/item/clothing/cloak/bandolier
 	name = "bandolier"
-	desc = "A sash that's pelted with pouches, perfect for carrying plenty of pint-sized pieces. </br>'Hail to the King, baby.'"
+	desc = "A sash that's pelted with pouches, perfect for carrying plenty of pint-sized pieces. Unlike a satchel or backpack, this \
+	lightweight procession-o'-pouches can be rifled through while on the move. </br>'Hail to the King, baby.'"
 	color = null
 	equip_delay_self = 30
 	icon_state = "bandolier"
 	item_state = "bandolier"
 	slot_flags = ITEM_SLOT_BACK_L|ITEM_SLOT_CLOAK
 	salvage_result = /obj/item/natural/hide/cured
+	var/activestorage = FALSE
+
+	if(!active_storage)
+		active_storage.close(src)
 
 /obj/item/clothing/cloak/bandolier/ComponentInitialize()
 	. = ..()
 	if(storage)
 		AddComponent(/datum/component/storage/concrete/roguetown/bandolier)
+
+/obj/item/clothing/cloak/bandolier/get_mechanics_examine(mob/user)
+	. = ..()
+	. += span_info("Left-click with an empty hand to open its inventory. Alternatively, left-clicking with an item will attempt to store it inside; pouches, belts, and packs have different limits to what they can carry.")
+	. += span_info("Click-drag onto an empty hand's slot to take it off. You can take pouches, belts, and packs off other people by click-dragging them onto yourself and selecting the item-in-question on the resulting interface.")
+	. += span_info("While hovering over an open inventory slot with an item in your active hand, right-clicking will rotate the item's 'space'. As most inventories use a grid system, doing this can let you further optimize your storage.")
 
 //////////////////////////
 /// TABARD
