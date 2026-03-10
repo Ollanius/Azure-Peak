@@ -18,6 +18,7 @@
 /obj/item/clothing/cloak/get_mechanics_examine(mob/user)
 	. = ..()
 	. += span_info("Certain cloaks - like jupons, tabards, and surcoats - can be given a unique pattern and coloration by right-clicking them.")
+	. += span_info("Middle-clicking a cloak adjusts its layer, allowing it to be either shown above-or-below any worn armorpieces.")
 
 /obj/item/clothing/cloak/ComponentInitialize()
 	. = ..()
