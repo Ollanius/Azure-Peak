@@ -66,6 +66,8 @@
 	var/intercept_parent_attack = TRUE
 	var/intercept_parent_mousedrop = TRUE
 
+	var/close_on_move = TRUE
+
 /datum/component/storage/Initialize(datum/component/storage/concrete/master)
 	if(!isatom(parent))
 		return COMPONENT_INCOMPATIBLE
