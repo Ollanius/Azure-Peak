@@ -47,15 +47,14 @@
 
 /obj/item/clothing/cloak/bandolier
 	name = "bandolier"
-	desc = "A sash that's pelted with pouches, perfect for carrying plenty of pint-sized pieces. Unlike a satchel or backpack, this \
-	lightweight procession-o'-pouches can be rifled through while on the move. </br>'Hail to the King, baby.'"
+	desc = "A sash that's pelted with pouches, perfect for carrying plenty of pint-sized pieces. </br>'Hail to the King, baby.'"
 	color = null
 	equip_delay_self = 30
 	icon_state = "bandolier"
 	item_state = "bandolier"
 	resistance_flags = FIRE_PROOF
 	w_class = WEIGHT_CLASS_BULKY
-	slot_flags = ITEM_SLOT_BACK|ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
+	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_SHIRT
 	salvage_result = /obj/item/natural/hide/cured
 	grid_width = 64
 	grid_height = 96
