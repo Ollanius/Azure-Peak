@@ -172,9 +172,10 @@
 	alternate_worn_layer = UNDER_CLOAK_LAYER
 	sewrepair = TRUE
 	component_type = /datum/component/storage/concrete/roguetown/satchel
+	var/overarmor = TRUE
 
 /obj/item/storage/backpack/rogue/satchel/MiddleClick(mob/user)
-	var/overarmor = !overarmor
+	overarmor = !overarmor
 	to_chat(user, span_info("I [overarmor ? "wear [src] over my armor" : "wear [src] under my armor"]."))
 
 	alternate_worn_layer = overarmor ? TABARD_LAYER : UNDER_ARMOR_LAYER
