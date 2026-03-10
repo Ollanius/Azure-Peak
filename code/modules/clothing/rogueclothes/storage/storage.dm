@@ -173,6 +173,30 @@
 	sewrepair = TRUE
 	component_type = /datum/component/storage/concrete/roguetown/satchel
 
+/obj/item/storage/backpack/rogue/satchel/MiddleClick(mob/user)
+	overarmor = !overarmor
+	to_chat(user, span_info("I [overarmor ? "wear [src] over my armor" : "wear [src] under my armor"]."))
+
+	alternate_worn_layer = overarmor ? TABARD_LAYER : UNDER_ARMOR_LAYER
+
+	user.update_inv_cloak()
+	user.update_inv_armor()
+	user.update_inv_back()
+
+/obj/item/storage/backpack/rogue/satchel/bandolier
+	name = "bandolier"
+	desc = "A sash that's pelted with pouches, perfect for carrying plenty of pint-sized pieces. </br>'Hail to the King, baby.'"
+	color = null
+	equip_delay_self = 30
+	icon_state = "bandolier"
+	item_state = "bandolier"
+	icon = 'icons/roguetown/clothing/storage.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/back_r.dmi'
+	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_SHIRT
+	salvage_result = /obj/item/natural/hide/cured
+	grid_width = 64
+	grid_height = 96
+	component_type = /datum/component/storage/concrete/roguetown/satchel/bandolier
 
 /obj/item/storage/backpack/rogue/satchel/cloth
 	name = "cloth knapsack"
