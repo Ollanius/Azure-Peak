@@ -169,7 +169,7 @@
 	sellprice = 10
 	equip_sound = 'sound/blank.ogg'
 	bloody_icon_state = "bodyblood"
-	alternate_worn_layer = UNDER_CLOAK_LAYER
+	alternate_worn_layer = TABARD_LAYER
 	sewrepair = TRUE
 	component_type = /datum/component/storage/concrete/roguetown/satchel
 	var/overarmor = TRUE
