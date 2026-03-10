@@ -55,7 +55,7 @@
 	item_state = "bandolier"
 	slot_flags = ITEM_SLOT_BACK_L|ITEM_SLOT_CLOAK
 	salvage_result = /obj/item/natural/hide/cured
-	close_on_move = FALSE
+	var/close_on_move = FALSE
 
 /obj/item/clothing/cloak/bandolier/ComponentInitialize()
 	. = ..()
