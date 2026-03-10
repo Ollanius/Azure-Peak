@@ -88,10 +88,13 @@
 	max_w_class = WEIGHT_CLASS_NORMAL
 
 /datum/component/storage/concrete/roguetown/bandolier
-	screen_max_rows = 6
+	screen_max_rows = 5
 	screen_max_columns = 2
 	max_w_class = WEIGHT_CLASS_SMALL
-	close_on_move = FALSE
+	//close_on_move = FALSE 
+		//New variable. When 'FALSE', you can keep the inventory screen open while moving.
+		//This applies glitchy grid overlays to any withdrawn items that have a timed removal, however.
+		//Keeping it off for now, until someone more skilled than me can fix it. Credit to Sigmapredator for the original code. - Dongwaiver
 
 /datum/component/storage/concrete/roguetown/cloak
 	max_w_class = WEIGHT_CLASS_NORMAL
