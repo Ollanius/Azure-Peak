@@ -252,7 +252,7 @@ A LITTLE MORE CONSISTENT IN HERE. PLEASE DO YOUR BEST. THANKS.
 
 /datum/supply_pack/rogue/wardrobe/cloaks/bandolier
 	name = "Bandolier"
-	cost = 30
+	cost = 35
 	contains = list(/obj/item/clothing/cloak/bandolier)
 
 /datum/supply_pack/rogue/wardrobe/cloaks/bcloaks
