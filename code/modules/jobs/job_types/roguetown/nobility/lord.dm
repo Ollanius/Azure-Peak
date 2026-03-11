@@ -111,10 +111,11 @@ GLOBAL_LIST_EMPTY(lord_titles)
 	. = ..()
 	var/client/player = H?.client
 	if(player.prefs)
-		if(!istype(player.prefs.virtue_origin, /datum/virtue/origin/azuria) && !istype(player.prefs.virtue_origin, /datum/virtue/origin/grenzelhoft) && !istype(player.prefs.virtue_origin, /datum/virtue/origin/otava) && !istype(player.prefs.virtue_origin, /datum/virtue/origin/etrusca))
+		if(!istype(player.prefs.virtue_origin, /datum/virtue/origin/azuria) && !istype(player.prefs.virtue_origin, /datum/virtue/origin/grenzelhoft) && !istype(player.prefs.virtue_origin, /datum/virtue/origin/otava) && !istype(player.prefs.virtue_origin, /datum/virtue/origin/etrusca) && !istype(player.prefs.virtue_origin, /datum/virtue/origin/raneshen))
 			var/list/new_origins = list("Azuria" = /datum/virtue/origin/azuria, 
 			"Grenzelhoft" = /datum/virtue/origin/grenzelhoft,
 			"Otava" = /datum/virtue/origin/otava,
+			"Raneshen" = /datum/virtue/origin/raneshen,
 			"Etrusca" = /datum/virtue/origin/etrusca)
 			var/new_origin
 			var/choice = input(player, "Your origins are not compatible with the [SSticker.realm_type_short]. Where do you hail from?", "ANCESTRY") as anything in new_origins
@@ -122,7 +123,7 @@ GLOBAL_LIST_EMPTY(lord_titles)
 				new_origin = new_origins[choice]
 			else
 				to_chat(player, span_notice("No choice detected. Picking a random compatible origin."))
-				new_origin = pick(/datum/virtue/origin/grenzelhoft, /datum/virtue/origin/otava, /datum/virtue/origin/etrusca)
+				new_origin = pick(/datum/virtue/origin/grenzelhoft, /datum/virtue/origin/otava, /datum/virtue/origin/etrusca, /datum/virtue/origin/raneshen)
 			change_origin(H, new_origin, "Royal line")
 
 //	SSticker.rulermob = H
