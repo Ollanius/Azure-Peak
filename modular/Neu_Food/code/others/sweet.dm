@@ -12,7 +12,7 @@
 	slice_path = /obj/item/reagent_containers/food/snacks/chocolate/slice
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_DECENT)
 	w_class = WEIGHT_CLASS_TINY
-	tastes = list("rich sweetness" = 1)
+	tastes = list("sugary richness" = 1)
 	faretype = FARE_LAVISH
 	rotprocess = null
 	eat_effect = /datum/status_effect/buff/snackbuff
@@ -38,7 +38,7 @@
 
 /obj/item/reagent_containers/food/snacks/jamtallow
 	name = "stick of jamtallow"
-	desc = "An azuric ingot of slatherable fruitiness, fit only for the finest slices of bread. It beckons to be sliced with proper cutlery."
+	desc = "An ingot of jammified blackberries, fit only for the finest slices of bread. It beckons to be sliced with proper cutlery."
 	icon_state = "jamtallow6"
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_DECENT)
 	faretype = FARE_POOR //Slightly better than eating a whole log of butter on your lonesome. Slightly.
@@ -47,6 +47,7 @@
 	slice_batch = FALSE
 	bitesize = 6
 	slice_sound = TRUE
+	tastes = list("stickied deliciousness" = 1, "subtle sour-tartiness" = 1)
 
 /obj/item/reagent_containers/food/snacks/jamtallow/update_icon()
 	if(slices_num)
@@ -71,6 +72,48 @@
 /obj/item/reagent_containers/food/snacks/jamtallowslice
 	icon_state = "jamtallow_slice"
 	name = "slice of jamtallow"
-	desc = "A portion of sweet paradise, sharing the same haze as Azuria's skies. It yearns to be savored not by its lonesome, but upon a slice of bread - be it plain, toasted, or raisined."
+	desc = "A portion of jammy paradise, bearing the same hues as Azuria's morning skies. It yearns to be savored not by its lonesome, but upon a slice of bread - be it plain or toasted."
 	faretype = FARE_POOR
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_DECENT)
+	tastes = list("stickied deliciousness" = 1, "subtle sour-tartiness" = 1)
+
+/obj/item/reagent_containers/food/snacks/marmalade
+	name = "stick of marmalade"
+	desc = "An ingot of jammified tangerines, fit only for the finest slices of bread. It beckons to be sliced with proper cutlery."
+	icon_state = "marmalade6"
+	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_DECENT)
+	faretype = FARE_POOR //Slightly better than eating a whole log of butter on your lonesome. Slightly.
+	slice_path = /obj/item/reagent_containers/food/snacks/marmaladelice
+	slices_num = 6
+	slice_batch = FALSE
+	bitesize = 6
+	slice_sound = TRUE
+	tastes = list("stickied deliciousness" = 1, "subtle sweet-tartiness" = 1)
+
+/obj/item/reagent_containers/food/snacks/marmalade/update_icon()
+	if(slices_num)
+		icon_state = "marmalade[slices_num]"
+	else
+		icon_state = "marmalade_slice"
+
+/obj/item/reagent_containers/food/snacks/marmalade/On_Consume(mob/living/eater)
+	..()
+	if(slices_num)
+		if(bitecount == 1)
+			slices_num = 5
+		if(bitecount == 2)
+			slices_num = 4
+		if(bitecount == 3)
+			slices_num = 3
+		if(bitecount == 4)
+			slices_num = 2
+		if(bitecount == 5)
+			changefood(slice_path, eater)
+
+/obj/item/reagent_containers/food/snacks/marmaladeslice
+	icon_state = "marmalade_slice"
+	name = "slice of marmalade"
+	desc = "A portion of jammy paradise, bearing the same hues as Azuria's evening seas. It yearns to be savored not by its lonesome, but upon a slice of bread - be it plain or toasted."
+	faretype = FARE_POOR
+	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_DECENT)
+	tastes = list("stickied deliciousness" = 1, "subtle sweet-tartiness" = 1)
