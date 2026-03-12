@@ -2,7 +2,7 @@
 /obj/item/reagent_containers/food/snacks/rogue/raisins
 	name = "raisins"
 	desc = "Jackberries that've been pruned of their juiciness, and turned into flavorful nuggets. Like the humble hardtack, so \
-	too will these raisins outlast its creators.  When combined with honey and doused in a pot of boiling tallow, it can birth \
+	too will these raisins outlast its creators.  When combined with honey and doused in a pot of boiling fat or tallow, it can birth \
 	'sweetglass'; a shatteringly sweet candy, popular amongst the elders and children-of-nobility."
 	icon = 'icons/roguetown/items/produce.dmi'
 	icon_state = "raisins5"
@@ -44,7 +44,7 @@
 		to_chat(user, span_notice("Coating the fruitied giblets with honey."))
 		if(do_after(user, short_cooktime, target = src))
 			name = "slathered jackberry giblets"
-			desc = "Jackberried giblets, slathered in sweetness and awaiting to be baptized in a pot of boiling tallow."
+			desc = "Jackberried giblets, slathered in sweetness and awaiting to be baptized in a pot of boiling fat or tallow."
 			icon_state = "honeyraisins"
 			color = null
 			bitesize = 1
@@ -59,7 +59,7 @@
 /obj/item/reagent_containers/food/snacks/rogue/raisins/raspberry
 	name = "raspberried giblets"
 	desc = "Raspberried giblets that've been pruned of their juiciness, and turned into flavorful nuggets that'll last forever. When combined with honey and \
-	doused in a pot of boiling tallow, it can birth 'sweetglass'; a shatteringly sweet candy, popular amongst the elders and children-of-nobility."
+	doused in a pot of boiling fat or tallow, it can birth 'sweetglass'; a shatteringly sweet candy, popular amongst the elders and children-of-nobility."
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_POOR)
 	w_class = WEIGHT_CLASS_TINY
 	tastes = list("dried raspberries" = 1, "shriveled bursts of tartness" = 1)
@@ -72,7 +72,7 @@
 		to_chat(user, span_notice("Coating the fruitied giblets with honey."))
 		if(do_after(user, short_cooktime, target = src))
 			name = "slathered raspberry giblets"
-			desc = "Raspberried giblets, slathered in sweetness and awaiting to be baptized in a pot of boiling tallow."
+			desc = "Raspberried giblets, slathered in sweetness and awaiting to be baptized in a pot of boiling fat or tallow."
 			icon_state = "honeyraisins"
 			color = null
 			bitesize = 1
@@ -85,7 +85,7 @@
 /obj/item/reagent_containers/food/snacks/rogue/raisins/strawberry
 	name = "strawberried giblets"
 	desc = "Strawberried giblets that've been pruned of their juiciness, and turned into flavorful nuggets that'll last forever. When combined with honey and \
-	doused in a pot of boiling tallow, it can birth 'sweetglass'; a shatteringly sweet candy, popular amongst the elders and children-of-nobility."
+	doused in a pot of boiling fat or tallow, it can birth 'sweetglass'; a shatteringly sweet candy, popular amongst the elders and children-of-nobility."
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_POOR)
 	w_class = WEIGHT_CLASS_TINY
 	tastes = list("dried strawberries" = 1, "shriveled bursts of sweetness" = 1)
@@ -98,7 +98,7 @@
 		to_chat(user, span_notice("Coating the fruitied giblets with honey."))
 		if(do_after(user, short_cooktime, target = src))
 			name = "slathered strawberry giblets"
-			desc = "Strawberried giblets, slathered in sweetness and awaiting to be baptized in a pot of boiling tallow."
+			desc = "Strawberried giblets, slathered in sweetness and awaiting to be baptized in a pot of boiling fat or tallow."
 			icon_state = "honeyraisins"
 			color = null
 			bitesize = 1
@@ -111,7 +111,7 @@
 /obj/item/reagent_containers/food/snacks/rogue/raisins/blackberry
 	name = "blackberried giblets"
 	desc = "Blackberried giblets that've been pruned of their juiciness, and turned into flavorful nuggets that'll last forever. When combined with honey and \
-	doused in a pot of boiling tallow, it can birth 'sweetglass'; a shatteringly sweet candy, popular amongst the elders and children-of-nobility."
+	doused in a pot of boiling fat or tallow, it can birth 'sweetglass'; a shatteringly sweet candy, popular amongst the elders and children-of-nobility."
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_POOR)
 	w_class = WEIGHT_CLASS_TINY
 	tastes = list("dried blackberries" = 1, "shriveled bursts of sour-sweetness" = 1)
@@ -124,7 +124,7 @@
 		to_chat(user, span_notice("Coating the fruitied giblets with honey."))
 		if(do_after(user, short_cooktime, target = src))
 			name = "slathered blackberry giblets"
-			desc = "Blackberried giblets, slathered in sweetness and awaiting to be baptized in a pot of boiling tallow."
+			desc = "Blackberried giblets, slathered in sweetness and awaiting to be baptized in a pot of boiling fat or tallow."
 			icon_state = "honeyraisins"
 			color = null
 			bitesize = 1
@@ -137,7 +137,7 @@
 /obj/item/reagent_containers/food/snacks/rogue/raisins/plum
 	name = "plummic giblets"
 	desc = "Plummic giblets that've been pruned of their juiciness, and turned into flavorful nuggets that'll last forever. When combined with honey and \
-	doused in a pot of boiling tallow, it can birth 'sweetglass'; a shatteringly sweet candy, popular amongst the elders and children-of-nobility."
+	doused in a pot of boiling fat or tallow, it can birth 'sweetglass'; a shatteringly sweet candy, popular amongst the elders and children-of-nobility."
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_POOR)
 	w_class = WEIGHT_CLASS_TINY
 	tastes = list("dried plums" = 1, "shriveled bursts of honey-sweetness" = 1)
@@ -150,7 +150,7 @@
 		to_chat(user, span_notice("Coating the fruitied giblets with honey."))
 		if(do_after(user, short_cooktime, target = src))
 			name = "slathered plummic giblets"
-			desc = "Plummic giblets, slathered in sweetness and awaiting to be baptized in a pot of boiling tallow."
+			desc = "Plummic giblets, slathered in sweetness and awaiting to be baptized in a pot of boiling fat or tallow."
 			icon_state = "honeyraisins"
 			color = null
 			bitesize = 1
@@ -163,7 +163,7 @@
 /obj/item/reagent_containers/food/snacks/rogue/raisins/pear
 	name = "peared giblets"
 	desc = "Peared giblets that've been pruned of their juiciness, and turned into flavorful nuggets that'll last forever. When combined with honey and \
-	doused in a pot of boiling tallow, it can birth 'sweetglass'; a shatteringly sweet candy, popular amongst the elders and children-of-nobility."
+	doused in a pot of boiling fat or tallow, it can birth 'sweetglass'; a shatteringly sweet candy, popular amongst the elders and children-of-nobility."
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_POOR)
 	w_class = WEIGHT_CLASS_TINY
 	tastes = list("dried pears" = 1, "shriveled bursts of tarty-honeyiness" = 1)
@@ -176,7 +176,7 @@
 		to_chat(user, span_notice("Coating the fruitied giblets with honey."))
 		if(do_after(user, short_cooktime, target = src))
 			name = "slathered peared giblets"
-			desc = "Peared giblets, slathered in sweetness and awaiting to be baptized in a pot of boiling tallow."
+			desc = "Peared giblets, slathered in sweetness and awaiting to be baptized in a pot of boiling fat or tallow."
 			icon_state = "honeyraisins"
 			color = null
 			bitesize = 1
@@ -189,7 +189,7 @@
 /obj/item/reagent_containers/food/snacks/rogue/raisins/tangerine
 	name = "tangerined giblets"
 	desc = "Tangerined giblets that've been pruned of their juiciness, and turned into flavorful nuggets that'll last forever. When combined with honey and \
-	doused in a pot of boiling tallow, it can birth 'sweetglass'; a shatteringly sweet candy, popular amongst the elders and children-of-nobility."
+	doused in a pot of boiling fat or tallow, it can birth 'sweetglass'; a shatteringly sweet candy, popular amongst the elders and children-of-nobility."
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_POOR)
 	w_class = WEIGHT_CLASS_TINY
 	tastes = list("dried tangerines" = 1, "shriveled bursts of tarty-sweetness" = 1)
@@ -202,7 +202,7 @@
 		to_chat(user, span_notice("Coating the fruitied giblets with honey."))
 		if(do_after(user, short_cooktime, target = src))
 			name = "slathered tangerined giblets"
-			desc = "Tangerined giblets, slathered in sweetness and awaiting to be baptized in a pot of boiling tallow."
+			desc = "Tangerined giblets, slathered in sweetness and awaiting to be baptized in a pot of boiling fat or tallow."
 			icon_state = "honeyraisins"
 			color = null
 			bitesize = 1
@@ -215,7 +215,7 @@
 /obj/item/reagent_containers/food/snacks/rogue/raisins/lemon
 	name = "lemony giblets"
 	desc = "Lemony giblets that've been pruned of their juiciness, and turned into flavorful nuggets that'll last forever. When combined with honey and \
-	doused in a pot of boiling tallow, it can birth 'sweetglass'; a shatteringly sweet candy, popular amongst the elders and children-of-nobility."
+	doused in a pot of boiling fat or tallow, it can birth 'sweetglass'; a shatteringly sweet candy, popular amongst the elders and children-of-nobility."
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_POOR)
 	w_class = WEIGHT_CLASS_TINY
 	tastes = list("dried lemons" = 1, "shriveled bursts of tarty-sourness" = 1)
@@ -228,7 +228,7 @@
 		to_chat(user, span_notice("Coating the fruitied giblets with honey."))
 		if(do_after(user, short_cooktime, target = src))
 			name = "slathered lemony giblets"
-			desc = "Lemony giblets, slathered in sweetness and awaiting to be baptized in a pot of boiling tallow."
+			desc = "Lemony giblets, slathered in sweetness and awaiting to be baptized in a pot of boiling fat or tallow."
 			icon_state = "honeyraisins"
 			color = null
 			bitesize = 1
@@ -241,7 +241,7 @@
 /obj/item/reagent_containers/food/snacks/rogue/raisins/lime
 	name = "limey giblets"
 	desc = "Limey giblets that've been pruned of their juiciness, and turned into flavorful nuggets that'll last forever. When combined with honey and \
-	doused in a pot of boiling tallow, it can birth 'sweetglass'; a shatteringly sweet candy, popular amongst the elders and children-of-nobility."
+	doused in a pot of boiling fat or tallow, it can birth 'sweetglass'; a shatteringly sweet candy, popular amongst the elders and children-of-nobility."
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_POOR)
 	w_class = WEIGHT_CLASS_TINY
 	tastes = list("dried limes" = 1, "shriveled bursts of sour-tartiness" = 1)
@@ -254,7 +254,7 @@
 		to_chat(user, span_notice("Coating the fruitied giblets with honey."))
 		if(do_after(user, short_cooktime, target = src))
 			name = "slathered limey giblets"
-			desc = "Limey giblets, slathered in sweetness and awaiting to be baptized in a pot of boiling tallow."
+			desc = "Limey giblets, slathered in sweetness and awaiting to be baptized in a pot of boiling fat or tallow."
 			icon_state = "honeyraisins"
 			color = null
 			bitesize = 1
@@ -276,7 +276,6 @@
 	w_class = WEIGHT_CLASS_TINY
 	tastes = list("glassy jackberries" = 1, "sugary shards of sweetness" = 1)
 	faretype = FARE_LAVISH
-	var/color_index = "good"
 	color = "#6900FF" //Stand-in, as I have no idea how to translate a raisin's color onto here.
 
 /obj/item/reagent_containers/food/snacks/rogue/raisins/sweetglass/On_Consume(mob/living/eater)
