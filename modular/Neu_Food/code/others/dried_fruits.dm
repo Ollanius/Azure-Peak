@@ -1,13 +1,15 @@
 // -------------- RAISINS -----------------
 /obj/item/reagent_containers/food/snacks/rogue/raisins
 	name = "raisins"
-	desc = "Jackberries that've been pruned of their juiciness, and turned into flavorful nuggets. Like the humble hardtack, so too will these raisins outlast its creators."
+	desc = "Jackberries that've been pruned of their juiciness, and turned into flavorful nuggets. Like the humble hardtack, so \
+	too will these raisins outlast its creators.  When combined with sugar and doused in a pot of boiling tallow, it can birth \
+	'sweetglass'; a shatteringly sweet candy, popular amongst the elders and children-of-nobility."
 	icon = 'icons/roguetown/items/produce.dmi'
 	icon_state = "raisins5"
 	bitesize = 5
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_POOR)
 	w_class = WEIGHT_CLASS_TINY
-	tastes = list("dried fruit" = 1)
+	tastes = list("dried jackberries" = 1, "shriveled bursts of sweetness" = 1)
 	faretype = FARE_POOR
 	foodtype = GRAIN
 	eat_effect = null
@@ -32,6 +34,78 @@
 			M.reagents.remove_reagent(/datum/reagent/consumable/nutriment, M.reagents.total_volume)
 			M.reagents.trans_to(src, M.reagents.total_volume)
 		qdel(M)
+
+/obj/item/reagent_containers/food/snacks/rogue/raisins/raspberry
+	name = "raspberried giblets"
+	desc = "Raspberried giblets that've been pruned of their juiciness, and turned into flavorful nuggets that'll last forever. When combined with sugar and \
+	doused in a pot of boiling tallow, it can birth 'sweetglass'; a shatteringly sweet candy, popular amongst the elders and children-of-nobility."
+	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_POOR)
+	w_class = WEIGHT_CLASS_TINY
+	tastes = list("dried raspberries" = 1, "shriveled bursts of tartness" = 1)
+	color = "#FF2A00"
+
+/obj/item/reagent_containers/food/snacks/rogue/raisins/strawberry
+	name = "strawberried giblets"
+	desc = "Strawberried giblets that've been pruned of their juiciness, and turned into flavorful nuggets that'll last forever. When combined with sugar and \
+	doused in a pot of boiling tallow, it can birth 'sweetglass'; a shatteringly sweet candy, popular amongst the elders and children-of-nobility."
+	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_POOR)
+	w_class = WEIGHT_CLASS_TINY
+	tastes = list("dried strawberries" = 1, "shriveled bursts of sweetness" = 1)
+	color = "FF2A00"
+
+/obj/item/reagent_containers/food/snacks/rogue/raisins/blackberry
+	name = "blackberried giblets"
+	desc = "Blackberried giblets that've been pruned of their juiciness, and turned into flavorful nuggets that'll last forever. When combined with sugar and \
+	doused in a pot of boiling tallow, it can birth 'sweetglass'; a shatteringly sweet candy, popular amongst the elders and children-of-nobility."
+	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_POOR)
+	w_class = WEIGHT_CLASS_TINY
+	tastes = list("dried blackberries" = 1, "shriveled bursts of sour-sweetness" = 1)
+	color = "339AB7"
+
+/obj/item/reagent_containers/food/snacks/rogue/raisins/plum
+	name = "plummic giblets"
+	desc = "Plummic giblets that've been pruned of their juiciness, and turned into flavorful nuggets that'll last forever. When combined with sugar and \
+	doused in a pot of boiling tallow, it can birth 'sweetglass'; a shatteringly sweet candy, popular amongst the elders and children-of-nobility."
+	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_POOR)
+	w_class = WEIGHT_CLASS_TINY
+	tastes = list("dried plums" = 1, "shriveled bursts of sugary-sweetness" = 1)
+	color = "#FF4F86"
+
+/obj/item/reagent_containers/food/snacks/rogue/raisins/pear
+	name = "peared giblets"
+	desc = "Peared giblets that've been pruned of their juiciness, and turned into flavorful nuggets that'll last forever. When combined with sugar and \
+	doused in a pot of boiling tallow, it can birth 'sweetglass'; a shatteringly sweet candy, popular amongst the elders and children-of-nobility."
+	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_POOR)
+	w_class = WEIGHT_CLASS_TINY
+	tastes = list("dried pears" = 1, "shriveled bursts of tarty-sugariness" = 1)
+	color = "#EAB14F"
+
+/obj/item/reagent_containers/food/snacks/rogue/raisins/tangerine
+	name = "tangerined giblets"
+	desc = "Tangerined giblets that've been pruned of their juiciness, and turned into flavorful nuggets that'll last forever. When combined with sugar and \
+	doused in a pot of boiling tallow, it can birth 'sweetglass'; a shatteringly sweet candy, popular amongst the elders and children-of-nobility."
+	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_POOR)
+	w_class = WEIGHT_CLASS_TINY
+	tastes = list("dried tangerines" = 1, "shriveled bursts of tarty-sweetness" = 1)
+	color = "#FF9321"
+
+/obj/item/reagent_containers/food/snacks/rogue/raisins/lemon
+	name = "lemony giblets"
+	desc = "Lemony giblets that've been pruned of their juiciness, and turned into flavorful nuggets that'll last forever. When combined with sugar and \
+	doused in a pot of boiling tallow, it can birth 'sweetglass'; a shatteringly sweet candy, popular amongst the elders and children-of-nobility."
+	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_POOR)
+	w_class = WEIGHT_CLASS_TINY
+	tastes = list("dried lemons" = 1, "shriveled bursts of tarty-sourness" = 1)
+	color = "#FFBD30"
+
+/obj/item/reagent_containers/food/snacks/rogue/raisins/lime
+	name = "limey giblets"
+	desc = "Limey giblets that've been pruned of their juiciness, and turned into flavorful nuggets that'll last forever. When combined with sugar and \
+	doused in a pot of boiling tallow, it can birth 'sweetglass'; a shatteringly sweet candy, popular amongst the elders and children-of-nobility."
+	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_POOR)
+	w_class = WEIGHT_CLASS_TINY
+	tastes = list("dried limes" = 1, "shriveled bursts of sour-tartiness" = 1)
+	color = "#FFBD30"
 
 // -------------- Trail-mix -----------------
 /obj/item/reagent_containers/food/snacks/rogue/trailmix
