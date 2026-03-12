@@ -38,7 +38,7 @@
 
 /obj/item/reagent_containers/food/snacks/jamtallow
 	name = "stick of jamtallow"
-	desc = "An ingot of slatherable fruitiness, fit only for the finest slices of bread. It beckons to be sliced with proper cutlery."
+	desc = "An azuric ingot of slatherable fruitiness, fit only for the finest slices of bread. It beckons to be sliced with proper cutlery."
 	icon_state = "jamtallow6"
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_DECENT)
 	faretype = FARE_POOR //Slightly better than eating a whole log of butter on your lonesome. Slightly.
@@ -71,17 +71,6 @@
 /obj/item/reagent_containers/food/snacks/jamtallowslice
 	icon_state = "jamtallow_slice"
 	name = "slice of jamtallow"
-	desc = "A portion of sweet paradise. It yearns to be savored not by its lonesome, but upon a slice of bread - be it plain, toasted, or raisined."
+	desc = "A portion of sweet paradise, sharing the same haze as Azuria's skies. It yearns to be savored not by its lonesome, but upon a slice of bread - be it plain, toasted, or raisined."
 	faretype = FARE_POOR
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_DECENT)
-
-// ALL THE JAMS. ALLAH, FORGIVE ME.
-
-/obj/item/reagent_containers/food/snacks/jamtallow/raspberry
-	name = "stick of raspberried jamtallow"
-	slice_path = /obj/item/reagent_containers/food/snacks/jamtallowslice
-	color = "#FF2A00"
-
-/obj/item/reagent_containers/food/snacks/jamtallowslice/raspberry
-	name = "slice of raspberried jamtallow"
-	color = "#FF2A00"
