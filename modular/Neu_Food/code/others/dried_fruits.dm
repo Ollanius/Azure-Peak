@@ -47,6 +47,7 @@
 			desc = "Jackberried giblets, slathered in sweetness and awaiting to be baptized in a pot of boiling tallow."
 			icon_state = "honeyraisins"
 			color = null
+			bitesize = 1
 			process_step = 2
 			deep_fried_type = /obj/item/reagent_containers/food/snacks/rogue/raisins/sweetglass
 			update_icon()
@@ -54,6 +55,32 @@
 			return
 
 //
+
+/obj/item/reagent_containers/food/snacks/rogue/raisins/poison
+	name = "raisins" //Dedicated alternative to poisoned raisins, made for the purpose of sweetglass.
+	desc = "Jackberries that've been pruned of their juiciness, and turned into flavorful nuggets. Like the humble hardtack, so \
+	too will these raisins outlast its creators.  When combined with honey and doused in a pot of boiling tallow, it can birth \
+	'sweetglass'; a shatteringly sweet candy, popular amongst the elders and children-of-nobility."
+	list_reagents = list(/datum/reagent/berrypoison = 5, /datum/reagent/consumable/nutriment = SNACK_POOR)
+	w_class = WEIGHT_CLASS_TINY
+	tastes = list("dried jackberries" = 1, "shriveled bursts of bitterness" = 1)
+
+/obj/item/reagent_containers/food/snacks/rogue/raisins/poison/attackby(obj/item/I, mob/living/user, params)
+	if(istype(I, /obj/item/reagent_containers/food/snacks/rogue/honey))
+		if(process_step != 1)
+			return
+		to_chat(user, span_notice("Coating the fruitied giblets with honey."))
+		if(do_after(user, short_cooktime, target = src))
+			name = "slathered jackberry giblets"
+			desc = "Jackberried giblets, slathered in sweetness and awaiting to be baptized in a pot of boiling tallow."
+			icon_state = "honeyraisins"
+			color = null
+			bitesize = 1
+			process_step = 2
+			deep_fried_type = /obj/item/reagent_containers/food/snacks/rogue/raisins/sweetglass/poison
+			update_icon()
+			qdel(I)
+			return
 
 /obj/item/reagent_containers/food/snacks/rogue/raisins/raspberry
 	name = "raspberried giblets"
@@ -74,6 +101,7 @@
 			desc = "Raspberried giblets, slathered in sweetness and awaiting to be baptized in a pot of boiling tallow."
 			icon_state = "honeyraisins"
 			color = null
+			bitesize = 1
 			process_step = 2
 			deep_fried_type = /obj/item/reagent_containers/food/snacks/rogue/raisins/sweetglass/raspberry
 			update_icon()
@@ -99,6 +127,7 @@
 			desc = "Strawberried giblets, slathered in sweetness and awaiting to be baptized in a pot of boiling tallow."
 			icon_state = "honeyraisins"
 			color = null
+			bitesize = 1
 			process_step = 2
 			deep_fried_type = /obj/item/reagent_containers/food/snacks/rogue/raisins/sweetglass/strawberry
 			update_icon()
@@ -124,6 +153,7 @@
 			desc = "Blackberried giblets, slathered in sweetness and awaiting to be baptized in a pot of boiling tallow."
 			icon_state = "honeyraisins"
 			color = null
+			bitesize = 1
 			process_step = 2
 			deep_fried_type = /obj/item/reagent_containers/food/snacks/rogue/raisins/sweetglass/blackberry
 			update_icon()
@@ -149,6 +179,7 @@
 			desc = "Plummic giblets, slathered in sweetness and awaiting to be baptized in a pot of boiling tallow."
 			icon_state = "honeyraisins"
 			color = null
+			bitesize = 1
 			process_step = 2
 			deep_fried_type = /obj/item/reagent_containers/food/snacks/rogue/raisins/sweetglass/plum
 			update_icon()
@@ -174,6 +205,7 @@
 			desc = "Peared giblets, slathered in sweetness and awaiting to be baptized in a pot of boiling tallow."
 			icon_state = "honeyraisins"
 			color = null
+			bitesize = 1
 			process_step = 2
 			deep_fried_type = /obj/item/reagent_containers/food/snacks/rogue/raisins/sweetglass/pear
 			update_icon()
@@ -199,6 +231,7 @@
 			desc = "Tangerined giblets, slathered in sweetness and awaiting to be baptized in a pot of boiling tallow."
 			icon_state = "honeyraisins"
 			color = null
+			bitesize = 1
 			process_step = 2
 			deep_fried_type = /obj/item/reagent_containers/food/snacks/rogue/raisins/sweetglass/tangerine
 			update_icon()
@@ -224,6 +257,7 @@
 			desc = "Lemony giblets, slathered in sweetness and awaiting to be baptized in a pot of boiling tallow."
 			icon_state = "honeyraisins"
 			color = null
+			bitesize = 1
 			process_step = 2
 			deep_fried_type = /obj/item/reagent_containers/food/snacks/rogue/raisins/sweetglass/lemon
 			update_icon()
@@ -249,6 +283,7 @@
 			desc = "Limey giblets, slathered in sweetness and awaiting to be baptized in a pot of boiling tallow."
 			icon_state = "honeyraisins"
 			color = null
+			bitesize = 1
 			process_step = 2
 			deep_fried_type = /obj/item/reagent_containers/food/snacks/rogue/raisins/sweetglass/lime
 			update_icon()
@@ -267,6 +302,7 @@
 	w_class = WEIGHT_CLASS_TINY
 	tastes = list("glassy jackberries" = 1, "sugary shards of sweetness" = 1)
 	faretype = FARE_LAVISH
+	var/color_index = "good"
 
 /obj/item/reagent_containers/food/snacks/rogue/raisins/sweetglass/On_Consume(mob/living/eater)
 	..()
@@ -279,7 +315,27 @@
 	if(bitecount == 4)
 		icon_state = "sweetglass1"
 
+/obj/item/reagent_containers/food/snacks/rogue/raisins/sweetglass/Initialize()
+	if(GLOB.berrycolors[color_index])
+		filling_color = GLOB.berrycolors[color_index]
+	else
+		var/newcolor = pick(BERRYCOLORS)
+		if(newcolor in GLOB.berrycolors)
+			GLOB.berrycolors[color_index] = pick(BERRYCOLORS)
+		else
+			GLOB.berrycolors[color_index] = newcolor
+		filling_color = GLOB.berrycolors[color_index]
+	update_icon()
+	..()
+
 //
+
+/obj/item/reagent_containers/food/snacks/rogue/raisins/sweetglass/poison
+	name = "sweetglass"
+	desc = "A palmful of crystallized jackberry-giblets, popular amongst the elders and children-of-nobility. Their tendancy to only \
+	spoil under very specific circumstances makes it a favored treat for those traveling afar; so long as they can afford it, of course."
+	color_index = "bad"
+	tastes = list("glassy jackberries" = 1, "sugary shards of bitterness" = 1)
 
 /obj/item/reagent_containers/food/snacks/rogue/raisins/sweetglass/raspberry
 	name = "raspberried sweetglass"
