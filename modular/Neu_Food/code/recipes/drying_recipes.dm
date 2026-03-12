@@ -42,6 +42,7 @@
 	result = /obj/item/reagent_containers/food/snacks/rogue/raisins/raspberry
 	structurecraft = /obj/machinery/tanningrack
 	craftdiff = 1
+	subtype_reqs = TRUE
 
 /datum/crafting_recipe/roguetown/cooking/raisinsblackberry
 	name = "raisins, blackberries"
@@ -50,6 +51,7 @@
 	result = /obj/item/reagent_containers/food/snacks/rogue/raisins/blackberry
 	structurecraft = /obj/machinery/tanningrack
 	craftdiff = 1
+	subtype_reqs = TRUE
 
 /datum/crafting_recipe/roguetown/cooking/raisins
 	name = "raisins, strawberry"
@@ -58,6 +60,7 @@
 	result = /obj/item/reagent_containers/food/snacks/rogue/raisins/strawberry
 	structurecraft = /obj/machinery/tanningrack
 	craftdiff = 1
+	subtype_reqs = TRUE
 
 /datum/crafting_recipe/roguetown/cooking/raisins
 	name = "raisins, plum"
@@ -66,6 +69,7 @@
 	result = /obj/item/reagent_containers/food/snacks/rogue/raisins/plum
 	structurecraft = /obj/machinery/tanningrack
 	craftdiff = 1
+	subtype_reqs = TRUE
 
 /datum/crafting_recipe/roguetown/cooking/raisinspear
 	name = "raisins, pear"
@@ -74,6 +78,7 @@
 	result = /obj/item/reagent_containers/food/snacks/rogue/raisins/pear
 	structurecraft = /obj/machinery/tanningrack
 	craftdiff = 1
+	subtype_reqs = TRUE
 
 /datum/crafting_recipe/roguetown/cooking/raisins
 	name = "raisins, tangerine"
@@ -82,6 +87,7 @@
 	result = /obj/item/reagent_containers/food/snacks/rogue/raisins/tangerine
 	structurecraft = /obj/machinery/tanningrack
 	craftdiff = 1
+	subtype_reqs = TRUE
 
 /datum/crafting_recipe/roguetown/cooking/raisinslemon
 	name = "raisins, lemon"
@@ -90,6 +96,7 @@
 	result = /obj/item/reagent_containers/food/snacks/rogue/raisins/lemon
 	structurecraft = /obj/machinery/tanningrack
 	craftdiff = 1
+	subtype_reqs = TRUE
 
 /datum/crafting_recipe/roguetown/cooking/raisinslime
 	name = "raisins, lime"
@@ -98,6 +105,7 @@
 	result = /obj/item/reagent_containers/food/snacks/rogue/raisins/lime
 	structurecraft = /obj/machinery/tanningrack
 	craftdiff = 1
+	subtype_reqs = TRUE
 
 /datum/crafting_recipe/roguetown/cooking/trailmix
 	name = "trail-mix"
