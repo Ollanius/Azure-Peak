@@ -299,7 +299,7 @@
 	spoil under very specific circumstances makes it a favored treat for those traveling afar; so long as they can afford it, of course."
 	icon_state = "sweetglass5"
 	bitesize = 5
-	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_NUTRITIOUS)
+	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_DECENT)
 	w_class = WEIGHT_CLASS_TINY
 	tastes = list("glassy jackberries" = 1, "sugary shards of sweetness" = 1)
 	faretype = FARE_LAVISH
