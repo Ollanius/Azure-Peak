@@ -303,7 +303,7 @@
 	w_class = WEIGHT_CLASS_TINY
 	tastes = list("glassy jackberries" = 1, "sugary shards of sweetness" = 1)
 	faretype = FARE_LAVISH
-	color = M.filling_color
+	color = "#A060FF" //Placeholder until someone wants to twiddle it for themselves. Should be fine, otherwise.
 
 /obj/item/reagent_containers/food/snacks/rogue/raisins/sweetglass/On_Consume(mob/living/eater)
 	..()
