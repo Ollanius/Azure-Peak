@@ -47,6 +47,7 @@
 			desc = "Jackberried giblets, slathered in sweetness and awaiting to be baptized in a pot of boiling fat."
 			icon_state = "honeyraisins"
 			faretype = FARE_FINE
+			color = null
 			tastes = list("overpoweringly honeyed" = 1, "a burst of sweetness" = 1)
 			list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_NUTRITIOUS)
 			bitesize = 1
@@ -302,6 +303,7 @@
 	w_class = WEIGHT_CLASS_TINY
 	tastes = list("glassy jackberries" = 1, "sugary shards of sweetness" = 1)
 	faretype = FARE_LAVISH
+	color = M.filling_color
 
 /obj/item/reagent_containers/food/snacks/rogue/raisins/sweetglass/On_Consume(mob/living/eater)
 	..()
