@@ -53,7 +53,7 @@
 	craftdiff = 1
 	subtype_reqs = TRUE
 
-/datum/crafting_recipe/roguetown/cooking/raisins
+/datum/crafting_recipe/roguetown/cooking/raisinsstrawberry
 	name = "raisins, strawberry"
 	reqs = list(/obj/item/reagent_containers/food/snacks/grown/fruit/strawberry = 1)
 	parts = list(/obj/item/reagent_containers/food/snacks/grown/berries/rogue = 1)
@@ -62,7 +62,7 @@
 	craftdiff = 1
 	subtype_reqs = TRUE
 
-/datum/crafting_recipe/roguetown/cooking/raisins
+/datum/crafting_recipe/roguetown/cooking/raisinsplum
 	name = "raisins, plum"
 	reqs = list(/obj/item/reagent_containers/food/snacks/grown/fruit/plum = 1)
 	parts = list(/obj/item/reagent_containers/food/snacks/grown/berries/rogue = 1)
@@ -80,7 +80,7 @@
 	craftdiff = 1
 	subtype_reqs = TRUE
 
-/datum/crafting_recipe/roguetown/cooking/raisins
+/datum/crafting_recipe/roguetown/cooking/raisinstangerine
 	name = "raisins, tangerine"
 	reqs = list(/obj/item/reagent_containers/food/snacks/grown/fruit/tangerine = 1)
 	parts = list(/obj/item/reagent_containers/food/snacks/grown/berries/rogue = 1)
