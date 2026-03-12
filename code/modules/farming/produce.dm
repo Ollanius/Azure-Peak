@@ -219,10 +219,31 @@
 /obj/item/reagent_containers/food/snacks/grown/fruit/tangerine
 	name = "tangerine"
 	seed = /obj/item/seeds/tangerine
-	desc = "A small, easy-to-peel citrus fruit with a vibrant orange color and sweet, juicy segments."
+	desc = "A small, easy-to-peel citrus fruit with a vibrant orange color and sweet, juicy segments. It is most popularly known for \
+	being the predecessor to 'marmalade'; a deliciously spreadable jam, born through smothering tangerines in sugar and dousing them in boiling fat."
 	icon_state = "tangerine"
 	tastes = list("tangerine" = 1)
 	splat_color = "#FFA500"
+	process_step = 1
+
+/obj/item/reagent_containers/food/snacks/grown/fruit/tangerine/attackby(obj/item/I, mob/living/user, params)
+	if(istype(I, /obj/item/reagent_containers/food/snacks/sugar))
+		if(process_step != 1)
+			return
+		to_chat(user, span_notice("Smothering the fruity delight with sugar."))
+		if(do_after(user, short_cooktime, target = src))
+			name = "smothered tangerine"
+			desc = "Sugared tangerines, smothered in sweetness and awaiting to be baptized in a pot of boiling fat."
+			icon_state = "tangerinesugar"
+			bitesize = 1
+			process_step = 2
+			faretype = FARE_FINE
+			tastes = list("overpoweringly sweet" = 1)
+			list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_NUTRITIOUS)
+			deep_fried_type = /obj/item/reagent_containers/food/snacks/marmalade
+			update_icon()
+			qdel(I)
+			return
 
 /obj/item/reagent_containers/food/snacks/grown/fruit/plum
 	name = "plum"
@@ -243,10 +264,30 @@
 /obj/item/reagent_containers/food/snacks/grown/fruit/blackberry
 	name = "blackberry"
 	seed = /obj/item/seeds/blackberry
-	desc = "A small, dark fruit with a sweet and slightly tart taste. It is often used in desserts."
+	desc = "A small, dark fruit with a sweet and slightly tart taste. It is often used in desserts, or - when smothered in sugar and doused in boiling fat - jams."
 	icon_state = "blackberry"
 	tastes = list("blackberry" = 1)
 	splat_color = "#272C3F"
+	process_step = 1
+
+/obj/item/reagent_containers/food/snacks/grown/fruit/blackberry/attackby(obj/item/I, mob/living/user, params)
+	if(istype(I, /obj/item/reagent_containers/food/snacks/sugar))
+		if(process_step != 1)
+			return
+		to_chat(user, span_notice("Smothering the fruity delight with sugar."))
+		if(do_after(user, short_cooktime, target = src))
+			name = "smothered blackberry"
+			desc = "Sugared blackberries, smothered in sweetness and awaiting to be baptized in a pot of boiling fat."
+			icon_state = "blackberrysugar"
+			bitesize = 1
+			process_step = 2
+			faretype = FARE_FINE
+			tastes = list("overpoweringly sweet" = 1)
+			list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_NUTRITIOUS)
+			deep_fried_type = /obj/item/reagent_containers/food/snacks/jamtallow
+			update_icon()
+			qdel(I)
+			return
 
 /obj/item/reagent_containers/food/snacks/grown/fruit/raspberry
 	name = "raspberry"
@@ -255,27 +296,6 @@
 	icon_state = "raspberry"
 	tastes = list("raspberry" = 1)
 	splat_color = "#A01600"
-	process_step = 1
-
-/obj/item/reagent_containers/food/snacks/grown/fruit/raspberry/attackby(obj/item/I, mob/living/user, params)
-	if(istype(I, /obj/item/reagent_containers/food/snacks/sugar))
-		if(process_step != 1)
-			return
-		to_chat(user, span_notice("Smothering the fruity delight with sugar."))
-		if(do_after(user, short_cooktime, target = src))
-			name = "smothered raspberry"
-			desc = "Sugared raspberries, smothered in sweetness and awaiting to be baptized in a pot of boiling fat."
-			icon_state = "raspberrysugar"
-			color = null
-			bitesize = 1
-			process_step = 2
-			faretype = FARE_FINE
-			tastes = list("overpoweringly honeyed" = 1, "a burst of sweetness" = 1)
-			list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_NUTRITIOUS)
-			deep_fried_type = /obj/item/reagent_containers/food/snacks/jamtallow/raspberry
-			update_icon()
-			qdel(I)
-			return
 
 /obj/item/reagent_containers/food/snacks/grown/fruit/tomato
 	name = "tomato"
