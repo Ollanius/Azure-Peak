@@ -35,13 +35,6 @@
 	craftdiff = 1
 	subtype_reqs = TRUE
 
-/datum/crafting_recipe/roguetown/cooking/evilraisins //Unique poisoned variant. This can be further refined into sweetglass.
-	name = "raisins, jackberries"
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/berries/rogue/poison = 1)
-	result = /obj/item/reagent_containers/food/snacks/rogue/raisins/poison
-	structurecraft = /obj/machinery/tanningrack
-	craftdiff = 1
-
 /datum/crafting_recipe/roguetown/cooking/raisinsraspberry
 	name = "raisins, raspberries"
 	reqs = list(/obj/item/reagent_containers/food/snacks/grown/fruit/raspberry = 1)
