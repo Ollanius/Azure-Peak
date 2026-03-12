@@ -8,6 +8,18 @@
 
 	descriptor = "smell"
 
+/datum/pollutant/food/sweetglass
+	name = "caramelizing goodness"
+	scent = "caramelizing goodness"
+
+/datum/pollutant/food/jamtallow
+	name = "jellifying sweetness"
+	scent = "jellifying sweetness"
+
+/datum/pollutant/food/waffle
+	name = "crisping squaredough"
+	scent = "crisping squaredough"
+
 /datum/pollutant/food/apple_pie
 	name = "apple pie"
 	scent = "apple pie"
