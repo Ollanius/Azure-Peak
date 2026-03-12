@@ -135,7 +135,7 @@
 	doused in a pot of boiling tallow, it can birth 'sweetglass'; a shatteringly sweet candy, popular amongst the elders and children-of-nobility."
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_POOR)
 	w_class = WEIGHT_CLASS_TINY
-	tastes = list("dried plums" = 1, "shriveled bursts of honeyy-sweetness" = 1)
+	tastes = list("dried plums" = 1, "shriveled bursts of honey-sweetness" = 1)
 	color = "#FF4F86"
 
 /obj/item/reagent_containers/food/snacks/rogue/raisins/plum/attackby(obj/item/I, mob/living/user, params)
@@ -258,9 +258,8 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/raisins/sweetglass
 	name = "sweetglass"
-	desc = "Jackberries that've been pruned of their juiciness, and turned into flavorful nuggets. Like the humble hardtack, so \
-	too will these raisins outlast its creators.  When combined with honey and doused in a pot of boiling tallow, it can birth \
-	'sweetglass'; a shatteringly sweet candy, popular amongst the elders and children-of-nobility."
+	desc = "A palmful of crystallized jackberry-giblets, popular amongst the elders and children-of-nobility. Their tendancy to only \
+	spoil under very specific circumstances makes it a favored treat for those traveling afar; so long as they can afford it, of course."
 	icon_state = "sweetglass5"
 	bitesize = 5
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_NUTRITIOUS)
@@ -286,48 +285,56 @@
 	desc = "A palmful of crystallized raspberry-giblets, popular amongst the elders and children-of-nobility. Their tendancy to only \
 	spoil under very specific circumstances makes it a favored treat for those traveling afar; so long as they can afford it, of course."
 	color = "#FF2A00"
+	tastes = list("glassy raspberries" = 1, "sugary shards of tartness" = 1)
 
 /obj/item/reagent_containers/food/snacks/rogue/raisins/sweetglass/strawberry
 	name = "strawberried sweetglass"
 	desc = "A palmful of crystallized strawberry-giblets, popular amongst the elders and children-of-nobility. Their tendancy to only \
 	spoil under very specific circumstances makes it a favored treat for those traveling afar; so long as they can afford it, of course."
 	color = "#FF2A00"
+	tastes = list("glassy strawberries" = 1, "sugary shards of sweetness" = 1)
 
 /obj/item/reagent_containers/food/snacks/rogue/raisins/sweetglass/blackberry
 	name = "blackberried sweetglass"
 	desc = "A palmful of crystallized blackberry-giblets, popular amongst the elders and children-of-nobility. Their tendancy to only \
 	spoil under very specific circumstances makes it a favored treat for those traveling afar; so long as they can afford it, of course."
 	color = "#339AB7"
+	tastes = list("glassy blackberries" = 1, "sugary shards of sour-sweetness" = 1)
 
 /obj/item/reagent_containers/food/snacks/rogue/raisins/sweetglass/plum
 	name = "plummic sweetglass"
 	desc = "A palmful of crystallized plum-giblets, popular amongst the elders and children-of-nobility. Their tendancy to only \
 	spoil under very specific circumstances makes it a favored treat for those traveling afar; so long as they can afford it, of course."
 	color = "#FF4F86"
+	tastes = list("glassy plums" = 1, "sugary shards of honey-sweetness" = 1)
 
 /obj/item/reagent_containers/food/snacks/rogue/raisins/sweetglass/pear
 	name = "peared sweetglass"
 	desc = "A palmful of crystallized pear-giblets, popular amongst the elders and children-of-nobility. Their tendancy to only \
 	spoil under very specific circumstances makes it a favored treat for those traveling afar; so long as they can afford it, of course."
 	color = "#EAB14F"
+	tastes = list("glassy pears" = 1, "sugary shards of tarty-honeyiness" = 1)
 
 /obj/item/reagent_containers/food/snacks/rogue/raisins/sweetglass/tangerine
 	name = "tangerine sweetglass"
 	desc = "A palmful of crystallized tangerine-giblets, popular amongst the elders and children-of-nobility. Their tendancy to only \
 	spoil under very specific circumstances makes it a favored treat for those traveling afar; so long as they can afford it, of course."
 	color = "#FF9321"
+	tastes = list("glassy tangerines" = 1, "sugary shards of tarty-sweetness" = 1)
 
 /obj/item/reagent_containers/food/snacks/rogue/raisins/sweetglass/lemon
 	name = "lemony sweetglass"
 	desc = "A palmful of crystallized lemon-giblets, popular amongst the elders and children-of-nobility. Their tendancy to only \
 	spoil under very specific circumstances makes it a favored treat for those traveling afar; so long as they can afford it, of course."
 	color = "#FFBD30"
+	tastes = list("glassy lemons" = 1, "sugary shards of tarty-sourness" = 1)
 
 /obj/item/reagent_containers/food/snacks/rogue/raisins/sweetglass/lime
 	name = "limey sweetglass"
 	desc = "A palmful of crystallized lemon-giblets, popular amongst the elders and children-of-nobility. Their tendancy to only \
 	spoil under very specific circumstances makes it a favored treat for those traveling afar; so long as they can afford it, of course."
 	color = "#C3DB91"
+	tastes = list("glassy lemons" = 1, "sugary shards of sour-tartiness" = 1)
 
 // -------------- Trail-mix -----------------
 /obj/item/reagent_containers/food/snacks/rogue/trailmix
