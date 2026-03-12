@@ -35,77 +35,68 @@
 	craftdiff = 1
 	subtype_reqs = TRUE
 
+/datum/crafting_recipe/roguetown/cooking/evilraisins //Unique poisoned variant. This can be further refined into sweetglass.
+	name = "raisins, jackberries"
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/berries/rogue/poison = 1)
+	result = /obj/item/reagent_containers/food/snacks/rogue/raisins/poison
+	structurecraft = /obj/machinery/tanningrack
+	craftdiff = 1
+
 /datum/crafting_recipe/roguetown/cooking/raisinsraspberry
 	name = "raisins, raspberries"
 	reqs = list(/obj/item/reagent_containers/food/snacks/grown/fruit/raspberry = 1)
-	parts = list(/obj/item/reagent_containers/food/snacks/grown/berries/rogue = 1)
 	result = /obj/item/reagent_containers/food/snacks/rogue/raisins/raspberry
 	structurecraft = /obj/machinery/tanningrack
 	craftdiff = 1
-	subtype_reqs = TRUE
 
 /datum/crafting_recipe/roguetown/cooking/raisinsblackberry
 	name = "raisins, blackberries"
 	reqs = list(/obj/item/reagent_containers/food/snacks/grown/fruit/blackberry = 1)
-	parts = list(/obj/item/reagent_containers/food/snacks/grown/berries/rogue = 1)
 	result = /obj/item/reagent_containers/food/snacks/rogue/raisins/blackberry
 	structurecraft = /obj/machinery/tanningrack
 	craftdiff = 1
-	subtype_reqs = TRUE
 
 /datum/crafting_recipe/roguetown/cooking/raisinsstrawberry
 	name = "raisins, strawberry"
 	reqs = list(/obj/item/reagent_containers/food/snacks/grown/fruit/strawberry = 1)
-	parts = list(/obj/item/reagent_containers/food/snacks/grown/berries/rogue = 1)
 	result = /obj/item/reagent_containers/food/snacks/rogue/raisins/strawberry
 	structurecraft = /obj/machinery/tanningrack
 	craftdiff = 1
-	subtype_reqs = TRUE
 
 /datum/crafting_recipe/roguetown/cooking/raisinsplum
 	name = "raisins, plum"
 	reqs = list(/obj/item/reagent_containers/food/snacks/grown/fruit/plum = 1)
-	parts = list(/obj/item/reagent_containers/food/snacks/grown/berries/rogue = 1)
 	result = /obj/item/reagent_containers/food/snacks/rogue/raisins/plum
 	structurecraft = /obj/machinery/tanningrack
 	craftdiff = 1
-	subtype_reqs = TRUE
 
 /datum/crafting_recipe/roguetown/cooking/raisinspear
 	name = "raisins, pear"
 	reqs = list(/obj/item/reagent_containers/food/snacks/grown/fruit/pear = 1)
-	parts = list(/obj/item/reagent_containers/food/snacks/grown/berries/rogue = 1)
 	result = /obj/item/reagent_containers/food/snacks/rogue/raisins/pear
 	structurecraft = /obj/machinery/tanningrack
 	craftdiff = 1
-	subtype_reqs = TRUE
 
 /datum/crafting_recipe/roguetown/cooking/raisinstangerine
 	name = "raisins, tangerine"
 	reqs = list(/obj/item/reagent_containers/food/snacks/grown/fruit/tangerine = 1)
-	parts = list(/obj/item/reagent_containers/food/snacks/grown/berries/rogue = 1)
 	result = /obj/item/reagent_containers/food/snacks/rogue/raisins/tangerine
 	structurecraft = /obj/machinery/tanningrack
 	craftdiff = 1
-	subtype_reqs = TRUE
 
 /datum/crafting_recipe/roguetown/cooking/raisinslemon
 	name = "raisins, lemon"
 	reqs = list(/obj/item/reagent_containers/food/snacks/grown/fruit/lemon = 1)
-	parts = list(/obj/item/reagent_containers/food/snacks/grown/berries/rogue = 1)
 	result = /obj/item/reagent_containers/food/snacks/rogue/raisins/lemon
 	structurecraft = /obj/machinery/tanningrack
 	craftdiff = 1
-	subtype_reqs = TRUE
 
 /datum/crafting_recipe/roguetown/cooking/raisinslime
 	name = "raisins, lime"
 	reqs = list(/obj/item/reagent_containers/food/snacks/grown/fruit/lime = 1)
-	parts = list(/obj/item/reagent_containers/food/snacks/grown/berries/rogue = 1)
 	result = /obj/item/reagent_containers/food/snacks/rogue/raisins/lime
 	structurecraft = /obj/machinery/tanningrack
 	craftdiff = 1
-	subtype_reqs = TRUE
 
 /datum/crafting_recipe/roguetown/cooking/trailmix
 	name = "trail-mix"
