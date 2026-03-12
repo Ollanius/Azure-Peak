@@ -255,6 +255,27 @@
 	icon_state = "raspberry"
 	tastes = list("raspberry" = 1)
 	splat_color = "#A01600"
+	process_step = 1
+
+/obj/item/reagent_containers/food/snacks/grown/fruit/raspberry/attackby(obj/item/I, mob/living/user, params)
+	if(istype(I, /obj/item/reagent_containers/food/snacks/sugar))
+		if(process_step != 1)
+			return
+		to_chat(user, span_notice("Smothering the fruity delight with sugar."))
+		if(do_after(user, short_cooktime, target = src))
+			name = "smothered raspberry"
+			desc = "Sugared raspberries, smothered in sweetness and awaiting to be baptized in a pot of boiling fat."
+			icon_state = "raspberrysugar"
+			color = null
+			bitesize = 1
+			process_step = 2
+			faretype = FARE_FINE
+			tastes = list("overpoweringly honeyed" = 1, "a burst of sweetness" = 1)
+			list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_NUTRITIOUS)
+			deep_fried_type = /obj/item/reagent_containers/food/snacks/jamtallow/raspberry
+			update_icon()
+			qdel(I)
+			return
 
 /obj/item/reagent_containers/food/snacks/grown/fruit/tomato
 	name = "tomato"
