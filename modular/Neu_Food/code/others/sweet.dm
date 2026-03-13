@@ -83,7 +83,7 @@
 	icon_state = "marmalade6"
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_DECENT)
 	faretype = FARE_POOR //Slightly better than eating a whole log of butter on your lonesome. Slightly.
-	slice_path = /obj/item/reagent_containers/food/snacks/marmaladelice
+	slice_path = /obj/item/reagent_containers/food/snacks/marmaladeslice
 	slices_num = 6
 	slice_batch = FALSE
 	bitesize = 6
