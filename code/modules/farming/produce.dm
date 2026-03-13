@@ -323,9 +323,9 @@
 	name = "brick of peppered skysugar"
 	desc = "An alchemically pure concoction, sullied - or perhaps 'transmuted' - through the sprinkling of black \
 	pepper, and awaiting to be further refined at a millstone. As the myth goes, a Baothan hedge-alchemist had \
-	accidentally dirtied a batch with the remains of their spiced dinner. Though imperfect, its still more \ 
-	valuable in its weight than gold; and in the hands of a yeoman willing to 'break bad', it can be sold \
-	'under-the-counter' to an amoral Merchant or Bathmatron for a hefty sum."
+	accidentally dirtied a batch with the remains of their spiced dinner. Though imperfect, its still more valuable in \
+	its weight than gold; and in the hands of a yeoman willing to 'break bad', it can be sold 'under-the-counter' to an amoral \
+	Merchant or Bathmatron for a hefty sum."
 	icon = 'icons/roguetown/items/produce.dmi'
 	icon_state = "azuresky_brick"
 	gender = PLURAL
