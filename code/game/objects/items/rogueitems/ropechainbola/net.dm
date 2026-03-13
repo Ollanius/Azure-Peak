@@ -66,5 +66,5 @@
 // Failsafe in case the item somehow ends up being destroyed
 /obj/item/net/Destroy()
 	remove_effect()
-*/
 	return ..()
+*/
