@@ -1,4 +1,4 @@
-/datum/crafting_recipe/roguetown/survival/net
+/* /datum/crafting_recipe/roguetown/survival/net
 	name = "net"
 	category = "Ranged"
 	result = /obj/item/net
@@ -9,6 +9,8 @@
 		)
 	verbage_simple = "braid"
 	verbage = "braids"
+
+*/
 
 /datum/crafting_recipe/roguetown/survival/bowstring
 	name = "fiber bowstring"
