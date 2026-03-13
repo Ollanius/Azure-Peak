@@ -37,10 +37,10 @@
 	icon_state = "chocolatehalf"
 
 /obj/item/reagent_containers/food/snacks/jamtallow
-	icon = 'modular/Neu_Food/icons/others/sweet.dmi'
 	name = "stick of jamtallow"
 	desc = "An ingot of jammified blackberries, fit only for the finest slices of bread. It beckons to be sliced with proper cutlery."
-	icon_state = "jamtallow5"
+	icon = 'modular/Neu_Food/icons/others/sweet.dmi'
+	icon_state = "jamtallow6"
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_DECENT)
 	faretype = FARE_POOR //Slightly better than eating a whole log of butter on your lonesome. Slightly.
 	slice_path = /obj/item/reagent_containers/food/snacks/jamtallowslice
@@ -71,19 +71,19 @@
 			changefood(slice_path, eater)
 
 /obj/item/reagent_containers/food/snacks/jamtallowslice
-	icon = 'modular/Neu_Food/icons/others/sweet.dmi'
-	icon_state = "jamtallow_slice"
 	name = "slice of jamtallow"
 	desc = "A portion of jammy paradise, bearing the same hues as Azuria's morning skies. It yearns to be savored not by its lonesome, but upon a slice of bread - be it plain or toasted."
+	icon = 'modular/Neu_Food/icons/others/sweet.dmi'
+	icon_state = "jamtallow_slice"
 	faretype = FARE_POOR
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_DECENT)
 	tastes = list("stickied deliciousness" = 1, "subtle sour-tartiness" = 1)
 
 /obj/item/reagent_containers/food/snacks/marmalade
-	icon = 'modular/Neu_Food/icons/others/sweet.dmi'
 	name = "stick of marmalade"
 	desc = "An ingot of jammified tangerines, fit only for the finest slices of bread. It beckons to be sliced with proper cutlery."
-	icon_state = "marmalade5"
+	icon = 'modular/Neu_Food/icons/others/sweet.dmi'
+	icon_state = "marmalade6"
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_DECENT)
 	faretype = FARE_POOR //Slightly better than eating a whole log of butter on your lonesome. Slightly.
 	slice_path = /obj/item/reagent_containers/food/snacks/marmaladeslice
@@ -114,10 +114,10 @@
 			changefood(slice_path, eater)
 
 /obj/item/reagent_containers/food/snacks/marmaladeslice
-	icon = 'modular/Neu_Food/icons/others/sweet.dmi'
-	icon_state = "marmalade_slice"
 	name = "slice of marmalade"
 	desc = "A portion of jammy paradise, bearing the same hues as Azuria's evening seas. It yearns to be savored not by its lonesome, but upon a slice of bread - be it plain or toasted."
+	icon = 'modular/Neu_Food/icons/others/sweet.dmi'
+	icon_state = "marmalade_slice"
 	faretype = FARE_POOR
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_DECENT)
 	tastes = list("stickied deliciousness" = 1, "subtle sweet-tartiness" = 1)
