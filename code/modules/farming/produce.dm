@@ -299,7 +299,7 @@
 	drop_sound = 'sound/foley/dropsound/glass_drop.ogg'
 	slice_path = /obj/item/reagent_containers/powder/starsugar/azuresky
 	slices_num = 3
-	cracking_sound = TRUE
+	var/cracking_sound = TRUE
 
 /obj/item/reagent_containers/food/snacks/grown/precursorbrick/attackby(obj/item/I, mob/living/user, params)
 	var/obj/item/reagent_containers/peppermill/mill = I
@@ -341,7 +341,12 @@
 	drop_sound = 'sound/foley/dropsound/glass_drop.ogg'
 	slice_path = /obj/item/reagent_containers/powder/starsugar/pepperazuresky
 	slices_num = 5
-	cracking_sound = TRUE
+	var/cracking_sound = TRUE
+
+/obj/item/reagent_containers/food/snacks/grown/pepperprecursorbrick/Initialize()
+	. = ..()
+	if(cracking_sound)
+		playsound(get_turf(user), 'sound/foley/glassbreak.ogg', 60, TRUE, -1)
 
 /obj/item/reagent_containers/food/snacks/grown/fruit/raspberry
 	name = "raspberry"
