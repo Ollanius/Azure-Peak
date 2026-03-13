@@ -190,15 +190,13 @@
 	if(istype(I, /obj/item/reagent_containers/food/snacks/jamtallowslice))
 		playsound(get_turf(user), 'sound/foley/dropsound/food_drop.ogg', 50, TRUE, -1)
 		if(do_after(user,short_cooktime, target = src))
-			var/obj/item/reagent_containers/food/snacks/rogue/breadslice/toast/jamtallow/sammich= new(get_turf(user))
-			user.put_in_hands(sammich)
+			new obj/item/reagent_containers/food/snacks/rogue/breadslice/toast/jamtallow(loc)
 			qdel(I)
 			qdel(src)
 	if(istype(I, /obj/item/reagent_containers/food/snacks/marmaladeslice))
 		playsound(get_turf(user), 'sound/foley/dropsound/food_drop.ogg', 50, TRUE, -1)
 		if(do_after(user,short_cooktime, target = src))
-			var/obj/item/reagent_containers/food/snacks/rogue/breadslice/toast/marmalade/sammich= new(get_turf(user))
-			user.put_in_hands(sammich)
+			new /obj/item/reagent_containers/food/snacks/rogue/breadslice/toast/marmalade(loc)
 			qdel(I)
 			qdel(src)
 	else
@@ -394,7 +392,7 @@
 	list_reagents = list(/datum/reagent/consumable/nutriment = SMALLDOUGH_NUTRITION * 2)
 	faretype = FARE_LAVISH
 	w_class = WEIGHT_CLASS_NORMAL
-	bitesize = 5
+	bitesize = 4
 	rotprocess = SHELFLIFE_EXTREME
 
 /obj/item/reagent_containers/food/snacks/rogue/bun_marmalade
@@ -406,7 +404,7 @@
 	list_reagents = list(/datum/reagent/consumable/nutriment = SMALLDOUGH_NUTRITION * 2)
 	faretype = FARE_LAVISH
 	w_class = WEIGHT_CLASS_NORMAL
-	bitesize = 5
+	bitesize = 4
 	rotprocess = SHELFLIFE_EXTREME
 
 /* 	.................   Crossbuns   ................... */
