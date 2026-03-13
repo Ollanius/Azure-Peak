@@ -107,7 +107,7 @@
 	if(istype(I, /obj/item/reagent_containers/food/snacks/rogue/cheddarslice/aged))
 		playsound(get_turf(user), 'sound/foley/dropsound/food_drop.ogg', 50, TRUE, -1)
 		if(do_after(user,short_cooktime, target = src))
-			var/obj/item/reagent_containers/food/snacks/rogue/sandwich/cheeseaged/sammich= new(get_turf(user))
+			var/obj/item/reagent_containers/food/snacks/rogue/sandwich/agedcheese/sammich= new(get_turf(user))
 			user.put_in_hands(sammich)
 			qdel(I)
 			qdel(src)
@@ -264,7 +264,7 @@
 	icon_state = "bread_cheese"
 	foodtype = GRAIN | DAIRY
 
-/obj/item/reagent_containers/food/snacks/rogue/sandwich/cheeseaged
+/obj/item/reagent_containers/food/snacks/rogue/sandwich/agedcheese
 	tastes = list("aged cheese" = 1,"bread" = 1)
 	name = "aged cheese bread"
 	faretype = FARE_LAVISH
