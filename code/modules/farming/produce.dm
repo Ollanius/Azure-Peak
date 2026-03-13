@@ -272,6 +272,7 @@
 	desc = "A combination of perplexingly diverse ingredients, that - when specifically boiled in fat - merges together to create an \
 	alchemically pure substance. South of Azuria's border, it's known as 'skysugar'; a Pestran heresy, rumored to've originally been \
 	brewed to cure that which even a quicksilver poultice couldn't mend."
+	icon = 'icons/roguetown/items/produce.dmi'
 	icon_state = "azuresky_precursor"
 	faretype = FARE_IMPOVERISHED
 	eat_effect = /datum/status_effect/debuff/uncookedfood
