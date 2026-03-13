@@ -267,6 +267,75 @@
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_NUTRITIOUS)
 	deep_fried_type = /obj/item/reagent_containers/food/snacks/jamtallow
 
+/obj/item/reagent_containers/food/snacks/grown/fruit/blackberry/precursor
+	name = "precursor of skysugar"
+	desc = "A combination of perplexingly diverse ingredients, that - when specifically boiled in fat - merges together to create an \
+	alchemically pure substance. South of Azuria's border, it's known as 'skysugar'; a Pestran heresy, rumored to've originally been \
+	brewed to cure that which even a quicksilver poultice couldn't mend."
+	icon_state = "azuresky_precursor"
+	faretype = FARE_IMPOVERISHED
+	eat_effect = /datum/status_effect/debuff/uncookedfood
+	tastes = list("a horrifically bad idea" = 1, "slightly fruity aftertaste" = 1)
+	bitesize = 1
+	list_reagents = list(/datum/reagent/toxin/killersice = 1, /datum/reagent/starsugar = 8, /datum/reagent/water = 7, /datum/reagent/consumable/nutriment = 3) //Feeling a little.. under the weather?
+	deep_fried_type = /obj/item/reagent_containers/food/snacks/grown/precursorbrick
+	sellprice = 23
+
+/obj/item/reagent_containers/food/snacks/grown/precursorbrick
+	name = "brick of skysugar"
+	desc = "A crystalline brick that radiate with an almost-ethereal hue, yearning to be properly ground down at a millstone. They call \
+	it 'luchtblauw' in Old Azurian; alchemically purified starsugar, to a ninth-of-a-hundreth dram. Rumored to've been born through Pestran \
+	heresies, this powdered panacea is far too potent for most to imbue - a matter, further complicated by the fact that it is vehemently \
+	condemned by the Church. Even so, its more valuable in its weight than gold; and in the hands of a yeoman willing to 'break bad', it \
+	can be sold 'under-the-counter' to an amoral Merchant or Bathmatron for a hefty sum."
+	icon = 'icons/roguetown/items/produce.dmi'
+	icon_state = "azuresky_brick"
+	gender = PLURAL
+	bitesize = 7
+	tastes = list("a slightly less bad idea" = 1, "shards of fruit-tinged glass" = 1)
+	list_reagents = list(/datum/reagent/starsugar = 8, /datum/reagent/water = 7, /datum/reagent/consumable/nutriment = 3) //
+	mill_result = list(/obj/item/reagent_containers/powder/starsugar/azuresky = 3)
+	sellprice = 23
+
+/obj/item/reagent_containers/food/snacks/grown/precursorbrick/attackby(obj/item/I, mob/living/user, params)
+	var/obj/item/reagent_containers/peppermill/mill = I
+	if(!locate(/obj/structure/table) in src.loc)
+		to_chat(user, span_warning("I need to use a table."))
+		return FALSE
+	update_cooktime(user)
+	if(istype(mill))
+		if(!mill.reagents.has_reagent(/datum/reagent/consumable/blackpepper, 1))
+			to_chat(user, "There's not enough black pepper to make anything with.")
+			return TRUE
+		mill.icon_state = "peppermill_grind"
+		to_chat(user, "You start rubbing the brick of skysugar with black pepper.")
+		playsound(get_turf(user), 'modular/Neu_Food/sound/peppermill.ogg', 100, TRUE, -1)
+		if(do_after(user,long_cooktime, target = src))
+			if(!mill.reagents.has_reagent(/datum/reagent/consumable/blackpepper, 1))
+				to_chat(user, "There's not enough black pepper to make anything with.")
+				return TRUE
+			mill.reagents.remove_reagent(/datum/reagent/consumable/blackpepper, 1)
+			new /obj/item/reagent_containers/food/snacks/grown/pepper precursorbrick(loc)
+			add_sleep_experience(user, /datum/skill/craft/cooking, user.STAINT)
+			qdel(src)
+
+/obj/item/reagent_containers/food/snacks/grown/pepperprecursorbrick
+	name = "brick of peppered skysugar"
+	desc = "An alchemically pure concoction, sullied - or perhaps 'transmuted' - through the sprinkling of black \
+	pepper, and awaiting to be further refined at a millstone. As the myth goes, a Baothan hedge-alchemist had \
+	accidentally dirtied a batch with the remains of their spiced dinner. Though imperfect, its still more \ 
+	valuable in its weight than gold; and in the hands of a yeoman willing to 'break bad', it can be sold \
+	'under-the-counter' to an amoral Merchant or Bathmatron for a hefty sum."
+	icon = 'icons/roguetown/items/produce.dmi'
+	icon_state = "azuresky_brick"
+	gender = PLURAL
+	color = "#FF3200"
+	bitesize = 7
+	tastes = list("a perplexingly strange idea" = 1, "shards of spice-tinged glass" = 1)
+	list_reagents = list(/datum/reagent/herozium = 8, /datum/reagent/water = 7, /datum/reagent/consumable/nutriment = 3) //I call it 'Zhilli P', yo!
+	mill_result = list(/obj/item/reagent_containers/powder/starsugar/pepperazuresky = 3)
+	sellprice = 23
+
 /obj/item/reagent_containers/food/snacks/grown/fruit/raspberry
 	name = "raspberry"
 	seed = /obj/item/seeds/raspberry
