@@ -71,10 +71,12 @@
 	cost = 5
 	contains = list(/obj/item/quiver)
 
-/datum/supply_pack/rogue/bath_rogue/net
+/* /datum/supply_pack/rogue/bath_rogue/net
 	name = "Net"
 	cost = 20
 	contains = list(/obj/item/net)
+*/
+// See net.dm for details.
 
 /datum/supply_pack/rogue/bath_rogue/grappler
 	name = "Grappler"
