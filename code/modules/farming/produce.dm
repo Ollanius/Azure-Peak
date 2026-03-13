@@ -224,26 +224,15 @@
 	icon_state = "tangerine"
 	tastes = list("tangerine" = 1)
 	splat_color = "#FFA500"
-	var/process_step = 1
 
-/obj/item/reagent_containers/food/snacks/grown/fruit/tangerine/attackby(obj/item/I, mob/living/user, params)
-	if(istype(I, /obj/item/reagent_containers/food/snacks/sugar))
-		if(process_step != 1)
-			return
-		to_chat(user, span_notice("Smothering the fruity delight with sugar."))
-		if(do_after(user, short_cooktime, target = src))
-			name = "smothered tangerine"
-			desc = "Sugared tangerines, smothered in sweetness and awaiting to be baptized in a pot of boiling fat."
-			icon_state = "tangerinesugar"
-			bitesize = 1
-			process_step = 2
-			faretype = FARE_FINE
-			tastes = list("overpoweringly sweet" = 1)
-			list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_NUTRITIOUS)
-			deep_fried_type = /obj/item/reagent_containers/food/snacks/marmalade
-			update_icon()
-			qdel(I)
-			return
+/obj/item/reagent_containers/food/snacks/grown/fruit/tangerine/sugared
+	name = "smothered tangerine"
+	desc = "Sugared tangerines, smothered in sweetness and awaiting to be baptized in a pot of boiling fat."
+	icon_state = "tangerinesugar
+	faretype = FARE_FINE
+	tastes = list("overpoweringly sweet" = 1)
+	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_NUTRITIOUS)
+	deep_fried_type = /obj/item/reagent_containers/food/snacks/marmalade
 
 /obj/item/reagent_containers/food/snacks/grown/fruit/plum
 	name = "plum"
@@ -268,26 +257,15 @@
 	icon_state = "blackberry"
 	tastes = list("blackberry" = 1)
 	splat_color = "#272C3F"
-	process_step = 1
 
-/obj/item/reagent_containers/food/snacks/grown/fruit/blackberry/attackby(obj/item/I, mob/living/user, params)
-	if(istype(I, /obj/item/reagent_containers/food/snacks/sugar))
-		if(process_step != 1)
-			return
-		to_chat(user, span_notice("Smothering the fruity delight with sugar."))
-		if(do_after(user, short_cooktime, target = src))
-			name = "smothered blackberry"
-			desc = "Sugared blackberries, smothered in sweetness and awaiting to be baptized in a pot of boiling fat."
-			icon_state = "blackberrysugar"
-			bitesize = 1
-			process_step = 2
-			faretype = FARE_FINE
-			tastes = list("overpoweringly sweet" = 1)
-			list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_NUTRITIOUS)
-			deep_fried_type = /obj/item/reagent_containers/food/snacks/jamtallow
-			update_icon()
-			qdel(I)
-			return
+/obj/item/reagent_containers/food/snacks/grown/fruit/blackberry/sugared
+	name = "smothered blackberry"
+	desc = "Sugared blackberries, smothered in sweetness and awaiting to be baptized in a pot of boiling fat."
+	icon_state = "blackberrysugar
+	faretype = FARE_FINE
+	tastes = list("overpoweringly sweet" = 1)
+	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_NUTRITIOUS)
+	deep_fried_type = /obj/item/reagent_containers/food/snacks/jamtallow
 
 /obj/item/reagent_containers/food/snacks/grown/fruit/raspberry
 	name = "raspberry"
