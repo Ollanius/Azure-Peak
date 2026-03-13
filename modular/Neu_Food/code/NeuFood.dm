@@ -93,9 +93,12 @@
 		playsound(get_turf(user), 'modular/Neu_Food/sound/slicing.ogg', 60, TRUE, -1) // added some choppy sound
 	if(chopping_sound)
 		playsound(get_turf(user), 'modular/Neu_Food/sound/chopping_block.ogg', 60, TRUE, -1) // added some choppy sound
+*/
+
+/obj/item/reagent_containers/food/snacks/proc/slice(obj/item/W, mob/user)
 	if(cracking_sound)
 		playsound(get_turf(user), 'sound/foley/glassbreak.ogg', 60, TRUE, -1) // Pure crystal, yo!
-*/
+
 /*	........   Kitchen tools / items   ................ */
 
 
