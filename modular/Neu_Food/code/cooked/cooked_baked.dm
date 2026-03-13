@@ -190,14 +190,14 @@
 	if(istype(I, /obj/item/reagent_containers/food/snacks/jamtallowslice))
 		playsound(get_turf(user), 'sound/foley/dropsound/food_drop.ogg', 50, TRUE, -1)
 		if(do_after(user,short_cooktime, target = src))
-			var/obj/item/reagent_containers/food/snacks/rogue/toast/jamtallow/sammich= new(get_turf(user))
+			var/obj/item/reagent_containers/food/snacks/rogue/breadslice/toast/jamtallow/sammich= new(get_turf(user))
 			user.put_in_hands(sammich)
 			qdel(I)
 			qdel(src)
 	if(istype(I, /obj/item/reagent_containers/food/snacks/marmaladeslice))
 		playsound(get_turf(user), 'sound/foley/dropsound/food_drop.ogg', 50, TRUE, -1)
 		if(do_after(user,short_cooktime, target = src))
-			var/obj/item/reagent_containers/food/snacks/rogue/toast/marmalade/sammich= new(get_turf(user))
+			var/obj/item/reagent_containers/food/snacks/rogue/breadslice/toast/marmalade/sammich= new(get_turf(user))
 			user.put_in_hands(sammich)
 			qdel(I)
 			qdel(src)
@@ -211,6 +211,22 @@
 	faretype = FARE_FINE
 	tastes = list("butter" = 1)
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_DECENT)
+
+/obj/item/reagent_containers/food/snacks/rogue/breadslice/toast/jamtallow
+	tastes = list("crunchy, sweetly-sour jamminess" = 1, "a wonderful start to the dae" = 1)
+	name = "jamtallowed toast"
+	desc = "A blackberried jam, smeared across a slice of toast. It is favored as a delicacy by Psydonia's peasantry and yeomen, and is usually reserved to crown the start of a particularly special dae."
+	faretype = FARE_LAVISH
+	icon_state = "toast_jamtallow"
+	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_NUTRITIOUS * 3)
+
+/obj/item/reagent_containers/food/snacks/rogue/breadslice/toast/marmalade
+	tastes = list("crunchy, sweet-tarty jamminess" = 1, "a wonderful end to the dae" = 1)
+	name = "marmaladed toast"
+	desc = "A tangerine marmalade served on a bed of warm crustless bread topped with another piece of warm crustless bread. One bite, and it can satiate even a starving bear's stomach!"
+	faretype = FARE_LAVISH
+	icon_state = "toast_marmalade"
+	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_NUTRITIOUS * 3)
 
 /obj/item/reagent_containers/food/snacks/rogue/toastcrumbs
 	name = "toast crumbs"
@@ -295,22 +311,6 @@
 	faretype = FARE_LAVISH
 	icon_state = "bread_marmalade"
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_NUTRITIOUS * 2)
-
-/obj/item/reagent_containers/food/snacks/rogue/toast/jamtallow
-	tastes = list("crunchy, sweetly-sour jamminess" = 1, "a wonderful start to the dae" = 1)
-	name = "jamtallowed toast"
-	desc = "A blackberried jam, smeared across a slice of toast. It is favored as a delicacy by Psydonia's peasantry and yeomen, and is usually reserved to crown the start of a particularly special dae."
-	faretype = FARE_LAVISH
-	icon_state = "toast_jamtallow"
-	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_NUTRITIOUS * 3)
-
-/obj/item/reagent_containers/food/snacks/rogue/toast/marmalade
-	tastes = list("crunchy, sweet-tarty jamminess" = 1, "a wonderful end to the dae" = 1)
-	name = "marmaladed toast"
-	desc = "A tangerine marmalade served on a bed of warm crustless bread topped with another piece of warm crustless bread. One bite, and it can satiate even a starving bear's stomach!"
-	faretype = FARE_LAVISH
-	icon_state = "toast_marmalade"
-	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_NUTRITIOUS * 3)
 
 /obj/item/reagent_containers/food/snacks/rogue/sandwich/egg
 	tastes = list("cheese" = 1,"egg" = 1)
@@ -583,7 +583,7 @@
 /obj/item/reagent_containers/food/snacks/rogue/abread_half
 	name = "half-done apple dough"
 	desc = "It needs more apple slices!"
-	icon = 'modular/Neu_Food/icons/raw/raw_dough.dmi'
+	icon = 'modular/Neu_Food/icons/cooked/cooked_baked.dmi'
 	icon_state = "dough_apple"
 	list_reagents = list(/datum/reagent/consumable/nutriment = 1)
 	w_class = WEIGHT_CLASS_NORMAL
