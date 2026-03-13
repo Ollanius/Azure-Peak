@@ -644,6 +644,8 @@ All foods are distributed among various categories. Use common sense.
 		playsound(get_turf(user), 'modular/Neu_Food/sound/slicing.ogg', 60, TRUE, -1) // added some choppy sound
 	if(chopping_sound)
 		playsound(get_turf(user), 'modular/Neu_Food/sound/chopping_block.ogg', 60, TRUE, -1) // added some choppy sound
+	if(cracking_sound)
+		playsound(get_turf(user), 'sound/foley/glassbreak.ogg', 60, TRUE, -1) // Pure crystal, yo!
 	if(slice_batch)
 		var/cd = get_cooktime_divisor(user.get_skill_level(/datum/skill/craft/cooking))
 		if(!do_after(user, 1 SECONDS / cd, target = src))
