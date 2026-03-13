@@ -39,7 +39,7 @@
 /obj/item/reagent_containers/food/snacks/jamtallow
 	name = "stick of jamtallow"
 	desc = "An ingot of jammified blackberries, fit only for the finest slices of bread. It beckons to be sliced with proper cutlery."
-	icon_state = "jamtallow"
+	icon_state = "jamtallow5"
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_DECENT)
 	faretype = FARE_POOR //Slightly better than eating a whole log of butter on your lonesome. Slightly.
 	slice_path = /obj/item/reagent_containers/food/snacks/jamtallowslice
@@ -80,7 +80,7 @@
 /obj/item/reagent_containers/food/snacks/marmalade
 	name = "stick of marmalade"
 	desc = "An ingot of jammified tangerines, fit only for the finest slices of bread. It beckons to be sliced with proper cutlery."
-	icon_state = "marmalade"
+	icon_state = "marmalade5"
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_DECENT)
 	faretype = FARE_POOR //Slightly better than eating a whole log of butter on your lonesome. Slightly.
 	slice_path = /obj/item/reagent_containers/food/snacks/marmaladeslice
