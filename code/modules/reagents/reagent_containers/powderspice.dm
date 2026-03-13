@@ -428,7 +428,7 @@
 	volume = 38
 	list_reagents = list(/datum/reagent/starsugar = 38, /datum/reagent/consumable/nutriment = 38) //Yeah, psyence!
 	grind_results = list(/datum/reagent/starsugar = 38)
-	sellprice = 83
+	sellprice = 100
 
 /obj/item/reagent_containers/powder/starsugar/pepperazuresky
 	name = "peppered skysugar"
@@ -445,7 +445,7 @@
 	volume = 38
 	list_reagents = list(/datum/reagent/herozium = 38, /datum/reagent/consumable/nutriment = 38) //Yeah, psyence!
 	grind_results = list(/datum/reagent/herozium = 38)
-	sellprice = 83
+	sellprice = 60
 
 /datum/reagent/herozium
 	name = "herozium"
