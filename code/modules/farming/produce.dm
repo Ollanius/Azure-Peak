@@ -315,7 +315,7 @@
 				to_chat(user, "There's not enough black pepper to make anything with.")
 				return TRUE
 			mill.reagents.remove_reagent(/datum/reagent/consumable/blackpepper, 1)
-			new /obj/item/reagent_containers/food/snacks/grown/pepper precursorbrick(loc)
+			new /obj/item/reagent_containers/food/snacks/grown/pepperprecursorbrick(loc)
 			add_sleep_experience(user, /datum/skill/craft/cooking, user.STAINT)
 			qdel(src)
 
