@@ -59,6 +59,7 @@
 /obj/item/reagent_containers/food/snacks
 	var/chopping_sound = FALSE // does it play a choppy sound when batch sliced?
 	var/slice_sound = FALSE // does it play the slice sound when sliced?
+	var/cracking_sound = FALSE // does it play the cracking sound when sliced?
 
 /obj/item/reagent_containers/food/snacks/proc/changefood(path, mob/living/eater)
 	if(!path || !eater)
@@ -92,6 +93,8 @@
 		playsound(get_turf(user), 'modular/Neu_Food/sound/slicing.ogg', 60, TRUE, -1) // added some choppy sound
 	if(chopping_sound)
 		playsound(get_turf(user), 'modular/Neu_Food/sound/chopping_block.ogg', 60, TRUE, -1) // added some choppy sound
+	if(cracking_sound)
+		playsound(get_turf(user), 'sound/foley/glassbreak.ogg', 60, TRUE, -1) // Pure crystal, yo!
 */
 /*	........   Kitchen tools / items   ................ */
 
