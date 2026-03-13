@@ -168,7 +168,7 @@ GLOBAL_LIST_INIT(stone_personality_descs, list(
 		/datum/crafting_recipe/roguetown/survival/stonespear,
 		/datum/crafting_recipe/roguetown/survival/stonesword,
 		/datum/crafting_recipe/roguetown/survival/pot,
-		/datum/crafting_recipe/roguetown/survival/net,
+		// /datum/crafting_recipe/roguetown/survival/net, //See net.dm for details.
 		)
 
 	AddElement(
