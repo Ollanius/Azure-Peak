@@ -498,7 +498,7 @@
 	if(istype(I, /obj/item/net))
 		if(has_status_effect(/datum/status_effect/debuff/netted))
 			remove_status_effect(/datum/status_effect/debuff/netted)
-		// see net.dm
+		// See net.dm for more details.
 		*/
 
 	if(cuff_break)
