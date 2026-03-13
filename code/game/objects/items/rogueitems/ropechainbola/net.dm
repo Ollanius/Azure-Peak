@@ -1,3 +1,10 @@
+// Doing this as a quick staple-fix for now, until a more dedicated coder can come around and fix it up.
+// Essentially a slimmed-down version of PR #6001. This comments out the net and all known methods of acquiring it, in game, with the hopes that it can be rebalanced and reintroduced at a later date.
+// Nets are, in essence, TG-era bolacuffs that also - to my knowledge - prevent dodging at all and cannot be resisted out of. You specifically have to click the debuff icon in the HUD's corner to get out of it.
+// Being able to instantly pseudo-immobilize someone and hack them to pieces with little-to-no effort (and a very unclear way of letting them get out of said-immobilization) is not good, especially for Roguecombat.
+// To avoid the headache of trying to balance around this, until they can be properly touched up.
+
+/*
 /obj/item/net
 	name = "net"
 	desc = "A weighed net used to entrap foes. Can be thrown to ensnare a target's legs and slow them down. Victims can struggle out of it and it will fall off after a short time."
@@ -59,4 +66,5 @@
 // Failsafe in case the item somehow ends up being destroyed
 /obj/item/net/Destroy()
 	remove_effect()
+*/
 	return ..()
