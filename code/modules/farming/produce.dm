@@ -228,7 +228,7 @@
 /obj/item/reagent_containers/food/snacks/grown/fruit/tangerine/sugared
 	name = "smothered tangerine"
 	desc = "Sugared tangerines, smothered in sweetness and awaiting to be baptized in a pot of boiling fat."
-	icon_state = "tangerinesugar
+	icon_state = "tangerinesugar"
 	faretype = FARE_FINE
 	tastes = list("overpoweringly sweet" = 1)
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_NUTRITIOUS)
@@ -261,7 +261,7 @@
 /obj/item/reagent_containers/food/snacks/grown/fruit/blackberry/sugared
 	name = "smothered blackberry"
 	desc = "Sugared blackberries, smothered in sweetness and awaiting to be baptized in a pot of boiling fat."
-	icon_state = "blackberrysugar
+	icon_state = "blackberrysugar"
 	faretype = FARE_FINE
 	tastes = list("overpoweringly sweet" = 1)
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_NUTRITIOUS)
