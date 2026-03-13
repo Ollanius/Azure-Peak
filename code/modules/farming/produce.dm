@@ -284,7 +284,7 @@
 
 /obj/item/reagent_containers/food/snacks/grown/precursorbrick
 	name = "brick of skysugar"
-	desc = "A crystalline brick that radiate with an almost-ethereal hue, yearning to be properly ground down at a millstone. They call \
+	desc = "A crystalline brick that radiate with an almost-ethereal hue, yearning to be properly divvied up with a knife. They call \
 	it 'luchtblauw' in Old Azurian; alchemically purified starsugar, to a ninth-of-a-hundreth dram. Rumored to've been born through Pestran \
 	heresies, this powdered panacea is far too potent for most to imbue - a matter, further complicated by the fact that it is vehemently \
 	condemned by the Church. Even so, its more valuable in its weight than gold; and in the hands of a yeoman willing to 'break bad', it \
@@ -295,9 +295,10 @@
 	bitesize = 7
 	tastes = list("a slightly less bad idea" = 1, "shards of fruit-tinged glass" = 1)
 	list_reagents = list(/datum/reagent/starsugar = 8, /datum/reagent/water = 7, /datum/reagent/consumable/nutriment = 3) //
-	mill_result = list(/obj/item/reagent_containers/powder/starsugar/azuresky, /obj/item/reagent_containers/powder/starsugar/azuresky, /obj/item/reagent_containers/powder/starsugar/azuresky)
 	sellprice = 23
 	drop_sound = 'sound/foley/dropsound/glass_drop.ogg'
+	slice_path = /obj/item/reagent_containers/powder/starsugar/azuresky
+	slices_num = 3
 
 /obj/item/reagent_containers/food/snacks/grown/precursorbrick/attackby(obj/item/I, mob/living/user, params)
 	var/obj/item/reagent_containers/peppermill/mill = I
@@ -324,7 +325,7 @@
 /obj/item/reagent_containers/food/snacks/grown/pepperprecursorbrick
 	name = "brick of peppered skysugar"
 	desc = "An alchemically pure concoction, sullied - or perhaps 'transmuted' - through the sprinkling of black \
-	pepper, and awaiting to be further refined at a millstone. As the myth goes, a Baothan hedge-alchemist had \
+	pepper, and awaiting to be further divvied up with a knife. As the myth goes, a Baothan hedge-alchemist had \
 	accidentally dirtied a batch with the remains of their spiced dinner. Though imperfect, its still more valuable in \
 	its weight than gold; and in the hands of a yeoman willing to 'break bad', it can be sold 'under-the-counter' to an amoral \
 	Merchant or Bathmatron for a hefty sum."
@@ -335,9 +336,10 @@
 	bitesize = 7
 	tastes = list("a perplexingly strange idea" = 1, "shards of spice-tinged glass" = 1)
 	list_reagents = list(/datum/reagent/herozium = 8, /datum/reagent/water = 7, /datum/reagent/consumable/nutriment = 3) //I call it 'Zhilli P', yo!
-	mill_result = /obj/item/reagent_containers/powder/starsugar/pepperazuresky, /obj/item/reagent_containers/powder/starsugar/pepperazuresky, /obj/item/reagent_containers/powder/starsugar/pepperazuresky
 	sellprice = 23
 	drop_sound = 'sound/foley/dropsound/glass_drop.ogg'
+	slice_path = /obj/item/reagent_containers/powder/starsugar/pepperazuresky
+	slices_num = 5
 
 /obj/item/reagent_containers/food/snacks/grown/fruit/raspberry
 	name = "raspberry"
