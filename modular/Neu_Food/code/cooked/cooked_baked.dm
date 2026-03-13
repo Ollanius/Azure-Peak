@@ -189,7 +189,7 @@
 	if(istype(I, /obj/item/reagent_containers/food/snacks/jamtallowslice))
 		playsound(get_turf(user), 'sound/foley/dropsound/food_drop.ogg', 50, TRUE, -1)
 		if(do_after(user,short_cooktime, target = src))
-			new obj/item/reagent_containers/food/snacks/rogue/breadslice/toast/jamtallow(loc)
+			new /obj/item/reagent_containers/food/snacks/rogue/breadslice/toast/jamtallow(loc)
 			qdel(I)
 			qdel(src)
 	if(istype(I, /obj/item/reagent_containers/food/snacks/marmaladeslice))
