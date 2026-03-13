@@ -610,7 +610,7 @@
 	name = "raw apple loaf"
 	desc = "Into the oven you go!"
 	icon = 'modular/Neu_Food/icons/cooked/cooked_baked.dmi'
-	icon_state = "applebreaduncooked"
+	icon_state = "applebread_uncooked"
 	slices_num = 0
 	cooked_type = /obj/item/reagent_containers/food/snacks/rogue/applebread
 	list_reagents = list(/datum/reagent/consumable/nutriment = 1)
