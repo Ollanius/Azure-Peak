@@ -61,8 +61,6 @@
 		return FALSE // If you have to sell your decorated scabbards for ozium-money, you'll have to barter.
 	if(istype(I, /obj/item/reagent_containers/powder/starsugar/azuresky))
 		return FALSE //Pestran heresy-alchemicks. Very illegal.
-	if(istype(I, /obj/item/reagent_containers/powder/starsugar/pepperazuresky))
-		return FALSE //Baothan heresy-alchemicks. Very, very, VERY illegal.
 	if(I.get_real_price() > 0)
 		if(istype(I, /obj/item/reagent_containers/glass/cup)) //As Randall explained, these statements allow any item in the codepath to be sold, regardless of their value.
 			return TRUE
