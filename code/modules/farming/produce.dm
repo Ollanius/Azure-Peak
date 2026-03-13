@@ -295,8 +295,9 @@
 	bitesize = 7
 	tastes = list("a slightly less bad idea" = 1, "shards of fruit-tinged glass" = 1)
 	list_reagents = list(/datum/reagent/starsugar = 8, /datum/reagent/water = 7, /datum/reagent/consumable/nutriment = 3) //
-	mill_result = list(/obj/item/reagent_containers/powder/starsugar/azuresky = 3)
+	mill_result = list(/obj/item/reagent_containers/powder/starsugar/azuresky, /obj/item/reagent_containers/powder/starsugar/azuresky, /obj/item/reagent_containers/powder/starsugar/azuresky)
 	sellprice = 23
+	drop_sound = 'sound/foley/dropsound/glass_drop.ogg'
 
 /obj/item/reagent_containers/food/snacks/grown/precursorbrick/attackby(obj/item/I, mob/living/user, params)
 	var/obj/item/reagent_containers/peppermill/mill = I
@@ -334,8 +335,9 @@
 	bitesize = 7
 	tastes = list("a perplexingly strange idea" = 1, "shards of spice-tinged glass" = 1)
 	list_reagents = list(/datum/reagent/herozium = 8, /datum/reagent/water = 7, /datum/reagent/consumable/nutriment = 3) //I call it 'Zhilli P', yo!
-	mill_result = list(/obj/item/reagent_containers/powder/starsugar/pepperazuresky = 3)
+	mill_result = list(/obj/item/reagent_containers/powder/starsugar/pepperazuresky, /obj/item/reagent_containers/powder/starsugar/pepperazuresky, /obj/item/reagent_containers/powder/starsugar/pepperazuresky)
 	sellprice = 23
+	drop_sound = 'sound/foley/dropsound/glass_drop.ogg'
 
 /obj/item/reagent_containers/food/snacks/grown/fruit/raspberry
 	name = "raspberry"
