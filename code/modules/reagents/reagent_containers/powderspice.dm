@@ -414,6 +414,39 @@
 	M.adjustToxLoss(4, 0)
 	. = 1
 
+/obj/item/reagent_containers/powder/starsugar/azuresky
+	name = "skysugar"
+	desc = "Sprinklings of Azuria's heavenly skies, ground down into crystalline nibblings that radiate with an almost-ethereal hue. They call \
+	it 'luchtblauw' in Old Azurian; alchemically purified starsugar, to a ninth-of-a-hundreth dram. Rumored to've been born through Pestran \
+	heresies, this powdered panacea is far too potent for most to imbue - a matter, further complicated by the fact that it is vehemently \
+	condemned by the Holy See. Even so, its more valuable in its weight than gold; and in the hands of a yeoman willing to 'break bad', it \
+	can be sold 'under-the-counter' to an amoral Merchant or Bathmatron for a hefty sum."
+	icon = 'icons/roguetown/items/produce.dmi'
+	icon_state = "azuresky"
+	item_state = "azuresky"
+	possible_transfer_amounts = list()
+	volume = 38
+	list_reagents = list(/datum/reagent/starsugar = 38, /datum/reagent/consumable/nutriment = 38) //Yeah, psyence!
+	grind_results = list(/datum/reagent/starsugar = 38)
+	sellprice = 83
+
+/obj/item/reagent_containers/powder/starsugar/pepperazuresky
+	name = "peppered skysugar"
+	desc = "Sprinklings of Azuria's heavenly skies, ground down into crystalline nibblings that radiate with an almost-ethereal hue. Said \
+	to've been the creation of a Baothan hedge-alchemist's accident, this impure variant of skysugar remains extraordinarily popular \
+	amongst wayward bandits and skeezy whorehouses for its terrifyingly potent haze. So potent, in fact, that most nostrils would \
+	gush red upon even catching a whiff of it; a fact that has led to the Holy See listing public bounties for the heads of its \
+	pedallers. Even so, its more valuable in its weight than gold; and in the hands of a yeoman willing to 'break bad', it can be sold 'under-the-counter' to an amoral Merchant or Bathmatron for a hefty sum."
+	icon = 'icons/roguetown/items/produce.dmi'
+	icon_state = "azuresky"
+	item_state = "azuresky"
+	color = "#FF3200"
+	possible_transfer_amounts = list()
+	volume = 38
+	list_reagents = list(/datum/reagent/herozium = 38, /datum/reagent/consumable/nutriment = 38) //Yeah, psyence!
+	grind_results = list(/datum/reagent/herozium = 38)
+	sellprice = 83
+
 /datum/reagent/herozium
 	name = "herozium"
 	description = ""
