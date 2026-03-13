@@ -224,7 +224,7 @@
 	icon_state = "tangerine"
 	tastes = list("tangerine" = 1)
 	splat_color = "#FFA500"
-	process_step = 1
+	var/process_step = 1
 
 /obj/item/reagent_containers/food/snacks/grown/fruit/tangerine/attackby(obj/item/I, mob/living/user, params)
 	if(istype(I, /obj/item/reagent_containers/food/snacks/sugar))
