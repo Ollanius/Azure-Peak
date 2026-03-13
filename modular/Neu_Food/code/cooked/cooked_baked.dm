@@ -78,7 +78,7 @@
 /*	.................   Breadslice & Toast   ................... */
 /obj/item/reagent_containers/food/snacks/rogue/breadslice
 	name = "sliced bread"
-	desc = "A bit of comfort to start your dae. The finest choice-of-vessel for a slice of saloumi, salo, cheese, or fried bacon."
+	desc = "A bit of comfort to start your dae. The finest choice-of-vessel for a slice of saloumi, salo, cheese, fried bacon, or jams."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_baked.dmi'
 	icon_state = "loaf_slice"
 	faretype = FARE_POOR
@@ -104,6 +104,13 @@
 			user.put_in_hands(sammich)
 			qdel(I)
 			qdel(src)
+	if(istype(I, /obj/item/reagent_containers/food/snacks/rogue/cheddarslice/aged))
+		playsound(get_turf(user), 'sound/foley/dropsound/food_drop.ogg', 50, TRUE, -1)
+		if(do_after(user,short_cooktime, target = src))
+			var/obj/item/reagent_containers/food/snacks/rogue/sandwich/cheeseaged/sammich= new(get_turf(user))
+			user.put_in_hands(sammich)
+			qdel(I)
+			qdel(src)
 	if(istype(I, /obj/item/reagent_containers/food/snacks/fat/salo/slice))
 		playsound(get_turf(user), 'sound/foley/dropsound/food_drop.ogg', 50, TRUE, -1)
 		if(do_after(user,short_cooktime, target = src))
@@ -119,13 +126,27 @@
 			user.put_in_hands(sammich)
 			qdel(I)
 			qdel(src)
+	if(istype(I, /obj/item/reagent_containers/food/snacks/jamtallowslice))
+		playsound(get_turf(user), 'sound/foley/dropsound/food_drop.ogg', 50, TRUE, -1)
+		if(do_after(user,short_cooktime, target = src))
+			var/obj/item/reagent_containers/food/snacks/rogue/sandwich/jamtallow/sammich= new(get_turf(user))
+			user.put_in_hands(sammich)
+			qdel(I)
+			qdel(src)
+	if(istype(I, /obj/item/reagent_containers/food/snacks/marmaladeslice))
+		playsound(get_turf(user), 'sound/foley/dropsound/food_drop.ogg', 50, TRUE, -1)
+		if(do_after(user,short_cooktime, target = src))
+			var/obj/item/reagent_containers/food/snacks/rogue/sandwich/marmalade/sammich= new(get_turf(user))
+			user.put_in_hands(sammich)
+			qdel(I)
+			qdel(src)
 	else
 		return ..()
 
 //this is a child so we can be used in sammies
 /obj/item/reagent_containers/food/snacks/rogue/breadslice/toast
 	name = "toast"
-	desc = "Crisp and crunchy, yet not burnt - truly, an alchemical wonder. Best enjoyed with a fried egg or knob of sliced butter."
+	desc = "Crisp and crunchy, yet not burnt - truly, an alchemical wonder. Best enjoyed with a fried egg, a knob of sliced butter, or some freshly-prepared jams."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_baked.dmi'
 	icon_state = "toast"
 	faretype = FARE_NEUTRAL
@@ -166,6 +187,20 @@
 				new /obj/item/reagent_containers/food/snacks/rogue/friedegg/hammerhold(loc)
 				qdel(I)
 				qdel(src)
+	if(istype(I, /obj/item/reagent_containers/food/snacks/jamtallowslice))
+		playsound(get_turf(user), 'sound/foley/dropsound/food_drop.ogg', 50, TRUE, -1)
+		if(do_after(user,short_cooktime, target = src))
+			var/obj/item/reagent_containers/food/snacks/rogue/toast/jamtallow/sammich= new(get_turf(user))
+			user.put_in_hands(sammich)
+			qdel(I)
+			qdel(src)
+	if(istype(I, /obj/item/reagent_containers/food/snacks/marmaladeslice))
+		playsound(get_turf(user), 'sound/foley/dropsound/food_drop.ogg', 50, TRUE, -1)
+		if(do_after(user,short_cooktime, target = src))
+			var/obj/item/reagent_containers/food/snacks/rogue/toast/marmalade/sammich= new(get_turf(user))
+			user.put_in_hands(sammich)
+			qdel(I)
+			qdel(src)
 	else
 		return ..()
 
@@ -215,6 +250,14 @@
 	icon_state = "bread_cheese"
 	foodtype = GRAIN | DAIRY
 
+/obj/item/reagent_containers/food/snacks/rogue/sandwich/cheeseaged
+	tastes = list("aged cheese" = 1,"bread" = 1)
+	name = "aged cheese bread"
+	faretype = FARE_LAVISH
+	desc = "A slice of toast with a rather thick wedge of aged cheese melted into the crust."
+	icon_state = "bread_cheeseaged"
+	foodtype = GRAIN | DAIRY
+
 /obj/item/reagent_containers/food/snacks/rogue/sandwich/egg
 	tastes = list("cheese" = 1,"egg" = 1)
 	name = "egg toast"
@@ -236,6 +279,53 @@
 	desc = "A slice of bread with crispy bacon on top for the perfect breakfast."
 	icon_state = "toast_bacon"
 	foodtype = GRAIN | MEAT
+
+/obj/item/reagent_containers/food/snacks/rogue/sandwich/jamtallow
+	tastes = list("rich, sweetly-sour jamminess" = 1, "a lovely start to the dae" = 1)
+	name = "jamtallowed bread"
+	desc = "'I liked it. I was good at it. And I was really.. I was alive.'"
+	faretype = FARE_LAVISH
+	icon_state = "bread_jamtallow"
+	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_NUTRITIOUS * 2)
+
+/obj/item/reagent_containers/food/snacks/rogue/sandwich/marmalade
+	tastes = list("rich, sweet-tarty jamminess" = 1, "a lovely end to the dae" = 1)
+	name = "marmaladed bread"
+	desc = "'I always keep a marmalade sandwich under my sallet, just in case!'"
+	faretype = FARE_LAVISH
+	icon_state = "bread_marmalade"
+	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_NUTRITIOUS * 2)
+
+/obj/item/reagent_containers/food/snacks/rogue/toast/jamtallow
+	tastes = list("crunchy, sweetly-sour jamminess" = 1, "a wonderful start to the dae" = 1)
+	name = "jamtallowed toast"
+	desc = "A blackberried jam, smeared across a slice of toast. It is favored as a delicacy by Psydonia's peasantry and yeomen, and is usually reserved to crown the start of a particularly special dae."
+	faretype = FARE_LAVISH
+	icon_state = "toast_jamtallow"
+	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_NUTRITIOUS * 3)
+
+/obj/item/reagent_containers/food/snacks/rogue/toast/marmalade
+	tastes = list("crunchy, sweet-tarty jamminess" = 1, "a wonderful end to the dae" = 1)
+	name = "marmaladed toast"
+	desc = "A tangerine marmalade served on a bed of warm crustless bread topped with another piece of warm crustless bread. One bite, and it can satiate even a starving bear's stomach!"
+	faretype = FARE_LAVISH
+	icon_state = "toast_marmalade"
+	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_NUTRITIOUS * 3)
+
+/obj/item/reagent_containers/food/snacks/rogue/sandwich/egg
+	tastes = list("cheese" = 1,"egg" = 1)
+	name = "egg toast"
+	desc = "A piece of toast with a fried egg on top that jiggles gently when prodded."
+	icon_state = "bread_egg"
+	foodtype = GRAIN | MEAT
+
+/obj/item/reagent_containers/food/snacks/rogue/sandwich/salo
+	tastes = list("salty fat" = 1)
+	name = "salo bread"
+	desc = "The salo's smooth consistency helps soften the rough grainy bread."
+	faretype = FARE_POOR
+	icon_state = "bread_salo"
+	foodtype = GRAIN | MEAT
 /*
 /obj/item/reagent_containers/food/snacks/rogue/sandwich/tartar
 	tastes = list("dissapointment" = 1)
@@ -248,7 +338,7 @@
 /*	.................   Bread bun   ................... */
 /obj/item/reagent_containers/food/snacks/rogue/bun
 	name = "bun"
-	desc = "Portable, quaint, and entirely consumable."
+	desc = "Portable, quaint, and entirely consumable - for the discerning traveler. It yearns to be further dolled with a sausage, wedge of cheese, or some delicious jams."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_baked.dmi'
 	icon_state = "bun"
 	list_reagents = list(/datum/reagent/consumable/nutriment = SMALLDOUGH_NUTRITION)
@@ -276,9 +366,48 @@
 			new /obj/item/reagent_containers/food/snacks/rogue/bun_raston(loc)
 			qdel(I)
 			qdel(src)
+	if(istype(I, /obj/item/reagent_containers/food/snacks/jamtallowslice))
+		playsound(get_turf(user), 'sound/foley/dropsound/food_drop.ogg', 50, TRUE, -1)
+		to_chat(user, span_notice("Stuffing the bun with jamtallow..."))
+		if(do_after(user,short_cooktime, target = src))
+			user.adjust_experience(/datum/skill/craft/cooking, user.STAINT * 0.8)
+			new /obj/item/reagent_containers/food/snacks/rogue/bun_jamtallow(loc)
+			qdel(I)
+			qdel(src)
+	if(istype(I, /obj/item/reagent_containers/food/snacks/marmaladeslice))
+		playsound(get_turf(user), 'sound/foley/dropsound/food_drop.ogg', 50, TRUE, -1)
+		to_chat(user, span_notice("Stuffing the bun with marmalade..."))
+		if(do_after(user,short_cooktime, target = src))
+			user.adjust_experience(/datum/skill/craft/cooking, user.STAINT * 0.8)
+			new /obj/item/reagent_containers/food/snacks/rogue/bun_marmalade(loc)
+			qdel(I)
+			qdel(src)
 	else
 		return ..()
 
+/obj/item/reagent_containers/food/snacks/rogue/bun_jamtallow
+	name = "jamtallowed bun"
+	desc = "A delicious treat to bring along for those long-and-lonesome hikes through the Naledian deserts; doubly-so, if you happen to be smuggling enough starsugar to buy out Astrata's throne."
+	icon = 'modular/Neu_Food/icons/cooked/cooked_baked.dmi'
+	tastes = list("doughy, sweetly-sour jamminess" = 1, "a lavish break from the dae's woes" = 1)
+	icon_state = "bun_jamtallow"
+	list_reagents = list(/datum/reagent/consumable/nutriment = SMALLDOUGH_NUTRITION * 2)
+	faretype = FARE_LAVISH
+	w_class = WEIGHT_CLASS_NORMAL
+	bitesize = 5
+	rotprocess = SHELFLIFE_EXTREME
+
+/obj/item/reagent_containers/food/snacks/rogue/bun_marmalade
+	name = "marmaladed bun"
+	desc = "A delicious treat to bring along for those long-and-lonesome hikes through the Azurian forests; doubly-so, if you happen to be a tallow-coated wildkin of the urisine variety."
+	icon = 'modular/Neu_Food/icons/cooked/cooked_baked.dmi'
+	tastes = list("doughy, sweet-tarty jamminess" = 1, "a lavish break from the dae's woes" = 1)
+	icon_state = "bun_marmalade"
+	list_reagents = list(/datum/reagent/consumable/nutriment = SMALLDOUGH_NUTRITION * 2)
+	faretype = FARE_LAVISH
+	w_class = WEIGHT_CLASS_NORMAL
+	bitesize = 5
+	rotprocess = SHELFLIFE_EXTREME
 
 /* 	.................   Crossbuns   ................... */
 /obj/item/reagent_containers/food/snacks/rogue/foodbase/crossbun_raw
@@ -302,7 +431,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/crossbun
 	name = "crossbun"
-	desc = "Traditionally eaten for breakfast."
+	desc = "Traditionally eaten for breakfast amongst Psydonia's abbeys."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_baked.dmi'
 	icon_state = "crossbun"
 	faretype = FARE_NEUTRAL // Having nobles vomit from eating holy buns is not a good idea
@@ -445,6 +574,95 @@
 	faretype = FARE_NEUTRAL
 	cooked_type = null
 	tastes = list("spelt" = 1,"dried fruit" = 1)
+	bitesize = 3
+	rotprocess = SHELFLIFE_LONG
+	dropshrink = 0.8
+
+//
+
+/obj/item/reagent_containers/food/snacks/rogue/abread_half
+	name = "half-done apple dough"
+	desc = "It needs more apple slices!"
+	icon = 'modular/Neu_Food/icons/raw/raw_dough.dmi'
+	icon_state = "dough_apple"
+	list_reagents = list(/datum/reagent/consumable/nutriment = 1)
+	w_class = WEIGHT_CLASS_NORMAL
+	rotprocess = SHELFLIFE_DECENT
+
+/obj/item/reagent_containers/food/snacks/rogue/abread_half/attackby(obj/item/I, mob/living/user, params)
+	var/found_table = locate(/obj/structure/table) in (loc)
+	update_cooktime(user)
+	if(istype(I, /obj/item/reagent_containers/food/snacks/rogue/fruit/apple_sliced))
+		if(isturf(loc)&& (found_table))
+			playsound(get_turf(user), 'sound/foley/dropsound/food_drop.ogg', 40, TRUE, -1)
+			to_chat(user, span_notice("Adding the last of the apple slices, puffing up the dough for baking."))
+			if(do_after(user,short_cooktime, target = src))
+				add_sleep_experience(user, /datum/skill/craft/cooking, user.STAINT)
+				new /obj/item/reagent_containers/food/snacks/rogue/abreaduncooked(loc)
+				qdel(I)
+				qdel(src)
+		else
+			to_chat(user, span_warning("You need to put [src] on a table to work it."))
+	else
+		return ..()
+
+/obj/item/reagent_containers/food/snacks/rogue/abreaduncooked
+	name = "raw apple loaf"
+	desc = "Into the oven you go!"
+	icon = 'modular/Neu_Food/icons/cooked/cooked_baked.dmi'
+	icon_state = "applebreaduncooked"
+	slices_num = 0
+	cooked_type = /obj/item/reagent_containers/food/snacks/rogue/applebread
+	list_reagents = list(/datum/reagent/consumable/nutriment = 1)
+	w_class = WEIGHT_CLASS_NORMAL
+	rotprocess = SHELFLIFE_DECENT
+
+/obj/item/reagent_containers/food/snacks/rogue/applebread
+	name = "apple loaf"
+	desc = "A fresher cousin of the oft-adored 'raisin loaf', bespeckled with baked apples that dare to melt upon an indulger's tongue. It holds a special place in the hearts of Valoria's people, for both the peasantry and nobility."
+	icon = 'modular/Neu_Food/icons/cooked/cooked_baked.dmi'
+	icon_state = "applebread6"
+	bitesize = 8
+	slices_num = 6
+	slice_path = /obj/item/reagent_containers/food/snacks/rogue/applebreadslice
+	list_reagents = list(/datum/reagent/consumable/nutriment = MEAL_AVERAGE)
+	faretype = FARE_FINE
+	w_class = WEIGHT_CLASS_NORMAL
+	tastes = list("crisp-laden doughiness" = 1,"deliciously soft apples" = 1)
+	slice_batch = FALSE
+	slice_sound = TRUE
+	rotprocess = SHELFLIFE_EXTREME
+
+/obj/item/reagent_containers/food/snacks/rogue/applebread/update_icon()
+	if(slices_num)
+		icon_state = "applebread[slices_num]"
+	else
+		icon_state = "applebread_slice"
+
+/obj/item/reagent_containers/food/snacks/rogue/applebread/On_Consume(mob/living/eater)
+	..()
+	if(slices_num)
+		if(bitecount == 3)
+			slices_num = 5
+		if(bitecount == 4)
+			slices_num = 4
+		if(bitecount == 5)
+			slices_num = 3
+		if(bitecount == 6)
+			slices_num = 2
+		if(bitecount == 7)
+			changefood(slice_path, eater)
+
+/obj/item/reagent_containers/food/snacks/rogue/applebreadslice
+	name = "apple loaf slice"
+	desc = "Soft and chewy. Nourishing and filling. Simple yet decadant. Certainly a step up from raisins, that's for sure."
+	icon = 'modular/Neu_Food/icons/cooked/cooked_baked.dmi'
+	icon_state = "applebread_slice"
+	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_DECENT)
+	w_class = WEIGHT_CLASS_NORMAL
+	faretype = FARE_FINE
+	cooked_type = null
+	tastes = list("crisp-laden doughiness" = 1,"deliciously soft apples" = 1)
 	bitesize = 3
 	rotprocess = SHELFLIFE_LONG
 	dropshrink = 0.8
