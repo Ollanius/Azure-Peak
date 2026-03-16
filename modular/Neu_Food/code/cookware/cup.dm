@@ -279,7 +279,7 @@
 	name = "fancy teacup"
 	desc = "A fancy tea cup made out of ceramic. Used to serve tea."
 	icon_state = "cup_fancy"
-	sellprice = 12
+	sellprice = 20
 	force = 5
 	throwforce = 10
 
