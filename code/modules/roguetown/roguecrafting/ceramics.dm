@@ -129,7 +129,7 @@
 /datum/crafting_recipe/roguetown/ceramics/clay/claystatue
 	name = "clay statue"
 	result = list(/obj/item/natural/clay/claystatue)
-	reqs = list(/obj/item/natural/clay = 2)
+	reqs = list(/obj/item/natural/clay = 3)
 	craftdiff = 4
 
 /* 5 diff */ // High-end glass containers. Should be a direct upgrade to clay in every possible way.
