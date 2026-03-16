@@ -21,6 +21,13 @@
 	volume = 75 // Larger than glass bottle
 	sellprice = 6
 	reagent_flags = OPENCONTAINER	//So it doesn't appear through
+	cooked_type = /obj/item/reagent_containers/glass/bottle/claybottle/baked
+
+/obj/item/reagent_containers/glass/bottle/claybottle/baked
+	name = "clay vessel"
+	desc = "A ceramic bottle. Tyme caresses its curves and cracks with a faint, ethereal glimmer."
+	icon = 'icons/roguetown/items/cooking.dmi'
+	icon_state = "claybottlebaked"
 
 //Vase - bigger bottle
 /obj/item/natural/clay/clayvase
@@ -38,6 +45,13 @@
 	volume = 65 // Larger than glass bottle
 	sellprice = 9
 	reagent_flags = OPENCONTAINER	//So it doesn't appear through
+	cooked_type = /obj/item/reagent_containers/glass/bottle/clayvase/baked
+
+/obj/item/reagent_containers/glass/bottle/clayvase/baked
+	name = "ceramic vase"
+	desc = "A large sized ceramic vase. Tyme caresses its curves and cracks with a faint, ethereal glimmer."
+	icon = 'icons/roguetown/items/cooking.dmi'
+	icon_state = "clayvasebaked"
 
 //Fancy vase - bigger bottle + fancy
 /obj/item/natural/clay/clayfancyvase
@@ -55,6 +69,13 @@
 	volume = 65 // Larger than glass bottle
 	sellprice = 14
 	reagent_flags = OPENCONTAINER	//So it doesn't appear through
+	cooked_type = /obj/item/reagent_containers/glass/bottle/clayfancyvase/baked
+
+/obj/item/reagent_containers/glass/bottle/clayfancyvase/baked
+	name = "fancy ceramic vase"
+	desc = "A large sized fancy ceramic vase. Tyme caresses its curves and cracks with a faint, ethereal glimmer."
+	icon = 'icons/roguetown/items/cooking.dmi'
+	icon_state = "clayfancyvasebaked"
 
 //Flask (was a cup) - subtype of regular cup but can shatter.
 /obj/item/natural/clay/claycup
@@ -71,6 +92,13 @@
 	icon_state = "claycupcook"
 	sellprice = 3
 	reagent_flags = OPENCONTAINER	//So it doesn't appear through
+	cooked_type = /obj/item/reagent_containers/glass/cup/claycup/baked
+
+/obj/item/reagent_containers/glass/cup/claycup/baked
+	name = "clay flask"
+	desc = "A small ceramic flask. Tyme caresses its curves and cracks with a faint, ethereal glimmer."
+	icon = 'icons/roguetown/items/cooking.dmi'
+	icon_state = "claycupbaked"
 
 // Raw teapot
 /obj/item/natural/clay/rawteapot
