@@ -40,7 +40,7 @@
 
 /obj/item/reagent_containers/glass/bottle/claybottle/get_mechanics_examine(mob/user)
 	. = ..()
-	. += span_info("Clay pottery, unlike its alloyed counterparts, can be colored in a dyebin.")
+	. += span_info("Clay pottery, unlike its alloyed counterparts, can be stained in a dyebin.")
 
 //Vase - bigger bottle
 /obj/item/natural/clay/clayvase
@@ -77,7 +77,7 @@
 
 /obj/item/reagent_containers/glass/bottle/clayvase/get_mechanics_examine(mob/user)
 	. = ..()
-	. += span_info("Clay pottery, unlike its alloyed counterparts, can be colored in a dyebin.")
+	. += span_info("Clay pottery, unlike its alloyed counterparts, can be stained in a dyebin.")
 
 //Fancy vase - bigger bottle + fancy
 /obj/item/natural/clay/clayfancyvase
@@ -114,7 +114,7 @@
 
 /obj/item/reagent_containers/glass/bottle/clayfancyvase/get_mechanics_examine(mob/user)
 	. = ..()
-	. += span_info("Clay pottery, unlike its alloyed counterparts, can be colored in a dyebin.")
+	. += span_info("Clay pottery, unlike its alloyed counterparts, can be stained in a dyebin.")
 
 //Flask (was a cup) - subtype of regular cup but can shatter.
 /obj/item/natural/clay/claycup
@@ -149,7 +149,7 @@
 
 /obj/item/reagent_containers/glass/cup/claycup/get_mechanics_examine(mob/user)
 	. = ..()
-	. += span_info("Clay pottery, unlike its alloyed counterparts, can be colored in a dyebin.")
+	. += span_info("Clay pottery, unlike its alloyed counterparts, can be stained in a dyebin.")
 
 // Raw teapot
 /obj/item/natural/clay/rawteapot
@@ -189,15 +189,15 @@
 	icon = 'icons/roguetown/items/cooking.dmi'
 	icon_state = "claystatuecooked1"
 	smeltresult = null	//No resource return
-	sellprice = 15		//Iron is worth 20, so these gotta be a little cheaper
+	sellprice = 35 //Expert-tier Clay recipe. Skillgated to Towners, or those that take the 'Homesteader Expert' virtue. Let 'em cook.
 
 /obj/item/roguestatue/clay/Initialize()
 	. = ..()
-	icon_state = "claystatuecooked[pick(1,2)]"
+	icon_state = "claystatuecooked[pick(1,2,3,4,5)]"
 
 /obj/item/roguestatue/clay/get_mechanics_examine(mob/user)
 	. = ..()
-	. += span_info("Clay pottery, unlike its alloyed counterparts, can be colored in a dyebin.")
+	. += span_info("Clay pottery, unlike its alloyed counterparts, can be stained in a dyebin.")
 
 /obj/item/roguestatue/glass
 	name = "glass statue"
@@ -209,4 +209,8 @@
 
 /obj/item/roguestatue/glass/Initialize()
 	. = ..()
-	icon_state = "statueglass[pick(1,2)]"
+	icon_state = "statueglass[pick(1,2,3,4,5)]"
+
+/obj/item/roguestatue/clay/get_mechanics_examine(mob/user)
+	. = ..()
+	. += span_info("Glassed pottery, unlike its alloyed counterparts, can be stained in a dyebin.")
