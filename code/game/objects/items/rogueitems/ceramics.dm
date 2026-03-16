@@ -100,7 +100,7 @@
 	icon = 'icons/roguetown/items/cooking.dmi'
 	icon_state = "clayfancyvasecook"
 	volume = 65 // Larger than glass bottle
-	sellprice = 14
+	sellprice = 20
 	reagent_flags = OPENCONTAINER	//So it doesn't appear through
 
 /obj/item/reagent_containers/glass/bottle/clayfancyvaseclassic
@@ -109,7 +109,7 @@
 	icon = 'icons/roguetown/items/cooking.dmi'
 	icon_state = "clayfancyvasebaked"
 	volume = 65 // Larger than glass bottle
-	sellprice = 14
+	sellprice = 20
 	reagent_flags = OPENCONTAINER	//So it doesn't appear through
 
 /obj/item/reagent_containers/glass/bottle/clayfancyvase/get_mechanics_examine(mob/user)
