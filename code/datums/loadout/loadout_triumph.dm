@@ -9,7 +9,6 @@
 // Alive characters automatically gain +1 TRI at the start of each day, and can comfortably maintain a passive increase of +6 TRI. That is to say, players have a 'soft' safety-spending net of 6 TRI at any given time.
 // If an item's value exceeds thirty mammons, make sure to add it to the STOCKPILE's blastlist in 'bounties.dm'. This helps to curtail people solely taking these trinkets to wordlessly pawn off for extra coinage.
 
-// Beyond the extreme ends, the cost of most items should follow the cadence of three. +3 TRI is half a round, +6 TRI evens out at a full round, and +9 TRI ensures a light deficit no matter what.
 // Remember that these costs are done on a 'per-round' basis, that all items can still be permenantly lost when withdrawn, and that they should - above all else - encourage people to roll with TRI-rewarding mechanics.
 // Above all else? Have fun! If you have any questions, let me know.
 
@@ -50,41 +49,41 @@
 	triumph_cost = 3
 	sort_category = "Triumphs"
 
-// -6 TRI
+// -5 TRI
 /datum/loadout_item/triumph_shortsatchel
 	name = "Short Satchel"
 	path = /obj/item/storage/backpack/rogue/satchel/short
-	triumph_cost = 6
+	triumph_cost = 5
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_waterskin
 	name = "Waterskin"
 	path = /obj/item/reagent_containers/glass/bottle/waterskin
-	triumph_cost = 6
+	triumph_cost = 5
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_messkit
 	name = "Mess Kit"
 	path = /obj/item/storage/gadget/messkit
-	triumph_cost = 6
+	triumph_cost = 5
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_foldtable
 	name = "Folding Table"
 	path = /obj/item/folding_table_stored
-	triumph_cost = 6
+	triumph_cost = 5
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_bedroll
 	name = "Bedroll"
 	path = /obj/item/bedroll
-	triumph_cost = 6
+	triumph_cost = 5
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_scabbardnoble
 	name = "Decorated Scabbard, Silver"
 	path = /obj/item/rogueweapon/scabbard/sword/noble
-	triumph_cost = 6
+	triumph_cost = 5
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_sheathnoble
@@ -96,110 +95,110 @@
 /datum/loadout_item/triumph_psycross
 	name = "Golden Psycross, Ornate"
 	path = /obj/item/clothing/neck/roguetown/psicross/g/triumph
-	triumph_cost = 6
+	triumph_cost = 5
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_zcross
 	name = "Golden Zizote Amulet, Ornate"
 	path = /obj/item/clothing/neck/roguetown/psicross/inhumen/g/triumph
-	triumph_cost = 6
+	triumph_cost = 5
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_astcross
 	name = "Golden Astratan Amulet, Ornate"
 	path = /obj/item/clothing/neck/roguetown/psicross/astrata/g/triumph
-	triumph_cost = 6
+	triumph_cost = 5
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_signet
 	name = "Golden Signet Ring, Ornate"
 	path = /obj/item/clothing/ring/signet/triumph
-	triumph_cost = 6
+	triumph_cost = 5
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_gildedshirt
 	name = "Gilded Dress Shirt"
 	path = /obj/item/clothing/suit/roguetown/shirt/dress/royal/prince
-	triumph_cost = 6
+	triumph_cost = 5
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_pristinedress
 	name = "Pristine Dress"
 	path = /obj/item/clothing/suit/roguetown/shirt/dress/royal/princess
-	triumph_cost = 6
+	triumph_cost = 5
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_royalsleeves
 	name = "Royal Sleeves"
 	path = /obj/item/clothing/wrists/roguetown/royalsleeves
-	triumph_cost = 6
+	triumph_cost = 5
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_goldhalfmask
 	name = "Golden Halfmask, Ornate"
 	path = /obj/item/clothing/mask/rogue/lordmask/triumph
-	triumph_cost = 6
+	triumph_cost = 5
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_goldfullmask
 	name = "Golden Mask, Ornate"
 	path = /obj/item/clothing/mask/rogue/facemask/goldmask/triumph
-	triumph_cost = 6
+	triumph_cost = 5
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_goldfullmaskc
 	name = "Crestless Golden Mask, Ornate"
 	path = /obj/item/clothing/mask/rogue/facemask/goldmaskc/triumph
-	triumph_cost = 6
+	triumph_cost = 5
 	sort_category = "Triumphs"
 
 // -9 TRI
 /datum/loadout_item/triumph_buttpack
 	name = "Belted Satchel"
 	path = /obj/item/storage/backpack/rogue/satchel/beltpack
-	triumph_cost = 9
+	triumph_cost = 7
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_lunchpouch
 	name = "Pouch of Luncheons"
 	path = /obj/item/storage/belt/rogue/pouch/triumphlunch
-	triumph_cost = 9
+	triumph_cost = 7
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_grenzhat
 	name = "Grenzelhoftian Beret"
 	path = /obj/item/clothing/head/roguetown/grenzelhofthat/triumph
-	triumph_cost = 9
+	triumph_cost = 7
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_lordcloak
 	name = "Lordly Cloak"
 	path = /obj/item/clothing/cloak/lordcloak
-	triumph_cost = 9
+	triumph_cost = 7
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_ladycloak
 	name = "Ladylike Cloak"
 	path = /obj/item/clothing/cloak/lordcloak/ladycloak
-	triumph_cost = 9
+	triumph_cost = 7
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_scabbardroyal
 	name = "Decorated Scabbard, Golden"
 	path = /obj/item/rogueweapon/scabbard/sword/royal
-	triumph_cost = 9
+	triumph_cost = 7
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_sheathroyal
 	name = "Decorated Sheath, Golden"
 	path = /obj/item/rogueweapon/scabbard/sheath/royal
-	triumph_cost = 9
+	triumph_cost = 7
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_gdorpelring
 	name = "Golden Dorpel Ring, Ornate"
 	path = /obj/item/clothing/ring/diamond/triumph
-	triumph_cost = 9
+	triumph_cost = 7
 	sort_category = "Triumphs"
 
 //////////////////
