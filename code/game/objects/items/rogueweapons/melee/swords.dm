@@ -2399,7 +2399,7 @@
 	icon_state = "dadao"
 	sheathe_icon = "dadao"
 
-/obj/item/rogueweapon/sword/long/kriegmesser/dadao
+/obj/item/rogueweapon/sword/long/kriegmesser/gdadao
 	name = "great dadao"
 	desc = "Larger than the 'Wodao' sabre, sharper than the 'Dadao' cleaver, and nastier than the sum of its parts. A single stroke dares to \
 	part even the thickest-of-foes into gorey halves."
