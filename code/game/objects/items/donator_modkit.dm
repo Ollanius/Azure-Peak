@@ -354,14 +354,14 @@
 	name = "'Wodao-Dadao' sabre morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of.. </br>..an Iron Sabre.. </br>..an Iron Hunting Sword.. </br>..an Iron Dueling Messer.. </br>..a Steel Sabre.. </br>..a Steel Messer.. </br>..or a Steel Hunting Sword. </br>..a Falx.. </br>..a Rhomphaia.. </br>..or a Kriegmesser."
 	target_items = list(
-		/obj/item/rogueweapon/sword/sabre										= /obj/item/rogueweapon/sword/sabre/wodao,
-		/obj/item/rogueweapon/sword/saber/iron									= /obj/item/rogueweapon/sword/saber/iron/wodao,
-		/obj/item/rogueweapon/sword/short/messer/iron							= /obj/item/rogueweapon/sword/short/messer/iron/dadao,
 		/obj/item/rogueweapon/sword/short/messer/iron/virtue					= /obj/item/rogueweapon/sword/short/messer/iron/virtue/dadao,
-		/obj/item/rogueweapon/sword/short/messer								= /obj/item/rogueweapon/sword/short/messer/dadao,
+		/obj/item/rogueweapon/sword/short/messer/iron							= /obj/item/rogueweapon/sword/short/messer/iron/dadao,
 		/obj/item/rogueweapon/sword/short/messer/alt							= /obj/item/rogueweapon/sword/short/messer/alt/dadao,
-		/obj/item/rogueweapon/sword/falx										= /obj/item/rogueweapon/sword/falx/dadao,
+		/obj/item/rogueweapon/sword/short/messer								= /obj/item/rogueweapon/sword/short/messer/dadao,
+		/obj/item/rogueweapon/sword/saber/iron									= /obj/item/rogueweapon/sword/saber/iron/wodao,
 		/obj/item/rogueweapon/sword/long/rhomphaia							    = /obj/item/rogueweapon/sword/long/rhomphaia/gdadao,
 		/obj/item/rogueweapon/sword/long/kriegmesser	  						= /obj/item/rogueweapon/sword/long/kriegmesser/gdadao
+		/obj/item/rogueweapon/sword/falx										= /obj/item/rogueweapon/sword/falx/dadao,
+		/obj/item/rogueweapon/sword/sabre										= /obj/item/rogueweapon/sword/sabre/wodao,
 		)
 	result_item = null
