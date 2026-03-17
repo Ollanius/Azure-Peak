@@ -349,3 +349,17 @@
 		/obj/item/rogueweapon/sword/long						= /obj/item/rogueweapon/sword/long/triumph/psycrucifix
 		)
 	result_item = null
+
+/obj/item/enchantingkit/triumph_weaponkit_terracottaswords
+	name = "'Wodao-Dadao' sabre morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of.. </br>..an Iron Sabre.. </br>..an Iron Hunting Sword.. </br>..an Iron Dueling Messer.. </br>..a Steel Sabre..  </br>..a Steel Messer.. </br>..or a Steel Hunting Sword."
+	target_items = list(
+		/obj/item/rogueweapon/sword/sabre										= /obj/item/rogueweapon/sword/sabre/wodao,
+		/obj/item/rogueweapon/sword/saber/iron									= /obj/item/rogueweapon/sword/saber/iron/wodao,
+		/obj/item/rogueweapon/sword/short/messer/iron							= /obj/item/rogueweapon/sword/short/messer/iron/dadao,
+		/obj/item/rogueweapon/sword/short/messer/iron/virtue					= /obj/item/rogueweapon/sword/short/messer/iron/virtue/dadao,
+		/obj/item/rogueweapon/sword/short/messer								= /obj/item/rogueweapon/sword/short/messer/dadao,
+		/obj/item/rogueweapon/sword/short/messer/alt							= /obj/item/rogueweapon/sword/short/messer/alt/dadao,
+		/obj/item/rogueweapon/sword/long/kriegmesser	  						= /obj/item/rogueweapon/sword/long/kriegmesser/gdadao
+		)
+	result_item = null
