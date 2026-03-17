@@ -2359,7 +2359,7 @@
 	Kazengunite diplomat-militants. While less durable compared to other arming swords, it's swift balance and unique design \
 	makes it great for unleashing precise strikes."
 	icon_state = "iwodao"
-	sheathe_icon = "iwodao"
+	sheathe_icon = "wodao"
 
 /obj/item/rogueweapon/sword/saber/iron/wodao
 	name = "steel wodao"
@@ -2374,14 +2374,14 @@
 	desc = "A heavier alternative to the 'Wodao' sabre, this well-balanced cleaver is informally known amongst Ranensheni pikemen as \
 	the 'Saigachopper'; termed such for its purported ability to decapitate a calvaryman's steed in but a single blow."
 	icon_state = "idadao"
-	sheathe_icon = "idadao"
+	sheathe_icon = "dadao"
 
 /obj/item/rogueweapon/sword/short/messer/iron/virtue/dadao
 	name = "dadao"
 	desc = "A heavier alternative to the 'Wodao' sabre, this well-balanced cleaver is informally known amongst Ranensheni pikemen as \
 	the 'Saigachopper'; termed such for its purported ability to decapitate a calvaryman's steed in but a single blow."
 	icon_state = "idadao"
-	sheathe_icon = "idadao"
+	sheathe_icon = "dadao"
 
 /obj/item/rogueweapon/sword/short/messer/dadao
 	name = "steel dadao"
@@ -2404,6 +2404,6 @@
 	desc = "Larger than the 'Wodao' sabre, sharper than the 'Dadao' cleaver, and nastier than the sum of its parts. A single stroke dares to \
 	part even the thickest-of-foes into gorey halves."
 	icon_state = "gdadao"
-	sheathe_icon = "gdadao"
+	sheathe_icon = "dadao"
 
 ////////////////////////
