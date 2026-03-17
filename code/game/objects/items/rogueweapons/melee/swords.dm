@@ -2413,7 +2413,6 @@
 	part even the thickest-of-foes into gorey halves."
 	icon_state = "gdadao"
 	sheathe_icon = "dadao"
-	gripsprite = FALSE
 
 /obj/item/rogueweapon/sword/long/rhomphaia/gdadao
 	name = "great dadao"
@@ -2421,6 +2420,5 @@
 	part even the thickest-of-foes into gorey halves."
 	icon_state = "gdadao"
 	sheathe_icon = "dadao"
-	gripsprite = FALSE
 
 ////////////////////////
