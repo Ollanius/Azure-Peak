@@ -1592,6 +1592,7 @@
 	icon = 'icons/roguetown/weapons/special/hand64.dmi'
 	sellprice = 250
 	icon_state = "handsword"
+	sheathe_icon = "handsword"
 
 /obj/item/rogueweapon/sword/long/holysee
 	name = "eclipsum sword"
@@ -1933,7 +1934,8 @@
 /obj/item/rogueweapon/sword/long/shotel
 	name = "steel shotel"
 	icon_state = "shotel_steel"
-	desc = "A long curved blade of Ranesheni Design."
+	desc = "A unique arming sword of Raneshenian design, whose uniquely curved blade allows it to \
+	carve assailants apart from afar."
 	possible_item_intents = list(/datum/intent/sword/cut/zwei, /datum/intent/sword/chop/long) //Shotels get 2 tile reach.
 	gripped_intents = list(/datum/intent/sword/cut/zwei, /datum/intent/sword/chop/long)
 	swingsound = BLADEWOOSH_LARGE
@@ -2350,5 +2352,58 @@
 	edge of these blades, as the crude serrations left behind could rend goblin-flesh with far more potency."
 	icon_state = "iswordalt"
 	sheathe_icon = "iswordalt"
+
+/obj/item/rogueweapon/sword/sabre/wodao
+	name = "wodao"
+	desc = "A slightly curved blade that has been proliferated everywhere from Naledian allspice caravans to \
+	Kazengunite diplomat-militants. While less durable compared to other arming swords, it's swift balance and unique design \
+	makes it great for unleashing precise strikes."
+	icon_state = "iwodao"
+	sheathe_icon = "iwodao"
+
+/obj/item/rogueweapon/sword/saber/iron/wodao
+	name = "steel wodao"
+	desc = "A slightly curved steel blade that has been proliferated everywhere from Naledian allspice caravans to \
+	Kazengunite diplomat-militants. While less durable compared to other arming swords, it's swift balance and unique design \
+	makes it great for unleashing precise strikes."
+	icon_state = "wodao"
+	sheathe_icon = "wodao"
+
+/obj/item/rogueweapon/sword/short/messer/iron/dadao
+	name = "dadao"
+	desc = "A heavier alternative to the 'Wodao' sabre, this well-balanced cleaver is informally known amongst Ranensheni pikemen as \
+	the 'Saigachopper'; termed such for its purported ability to decapitate a calvaryman's steed in but a single blow."
+	icon_state = "idadao"
+	sheathe_icon = "idadao"
+
+/obj/item/rogueweapon/sword/short/messer/iron/virtue/dadao
+	name = "dadao"
+	desc = "A heavier alternative to the 'Wodao' sabre, this well-balanced cleaver is informally known amongst Ranensheni pikemen as \
+	the 'Saigachopper'; termed such for its purported ability to decapitate a calvaryman's steed in but a single blow."
+	icon_state = "idadao"
+	sheathe_icon = "idadao"
+
+/obj/item/rogueweapon/sword/short/messer/dadao
+	name = "steel dadao"
+	desc = "A heavier alternative to the 'Wodao' sabre, this well-balanced cleaver is informally known amongst Ranensheni pikemen as \
+	the 'Saigachopper'; termed such for its purported ability to decapitate a calvaryman's steed in but a single blow. The steel edge glimmers \
+	in wait for use."
+	icon_state = "dadao"
+	sheathe_icon = "dadao"
+
+/obj/item/rogueweapon/sword/short/messer/alt/dadao
+	name = "steel dadao"
+	desc = "A heavier alternative to the 'Wodao' sabre, this well-balanced cleaver is informally known amongst Ranensheni pikemen as \
+	the 'Saigachopper'; termed such for its purported ability to decapitate a calvaryman's steed in but a single blow. The steel edge glimmers \
+	in wait for use."
+	icon_state = "dadao"
+	sheathe_icon = "dadao"
+
+/obj/item/rogueweapon/sword/long/kriegmesser/dadao
+	name = "great dadao"
+	desc = "Larger than the 'Wodao' sabre, sharper than the 'Dadao' cleaver, and nastier than the sum of its parts. A single stroke dares to \
+	part even the thickest-of-foes into gorey halves."
+	icon_state = "gdadao"
+	sheathe_icon = "gdadao"
 
 ////////////////////////
