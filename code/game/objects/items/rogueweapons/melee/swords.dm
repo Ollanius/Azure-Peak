@@ -2399,11 +2399,28 @@
 	icon_state = "dadao"
 	sheathe_icon = "dadao"
 
+/obj/item/rogueweapon/sword/falx/dadao
+	name = "steel dadao"
+	desc = "A heavier alternative to the 'Wodao' sabre, this well-balanced cleaver is informally known amongst Ranensheni pikemen as \
+	the 'Saigachopper'; termed such for its purported ability to decapitate a calvaryman's steed in but a single blow. The steel edge glimmers \
+	in wait for use."
+	icon_state = "dadao"
+	sheathe_icon = "dadao"
+
 /obj/item/rogueweapon/sword/long/kriegmesser/gdadao
 	name = "great dadao"
 	desc = "Larger than the 'Wodao' sabre, sharper than the 'Dadao' cleaver, and nastier than the sum of its parts. A single stroke dares to \
 	part even the thickest-of-foes into gorey halves."
 	icon_state = "gdadao"
 	sheathe_icon = "dadao"
+	gripsprite = FALSE
+
+/obj/item/rogueweapon/sword/long/rhomphaia/gdadao
+	name = "great dadao"
+	desc = "Larger than the 'Wodao' sabre, sharper than the 'Dadao' cleaver, and nastier than the sum of its parts. A single stroke dares to \
+	part even the thickest-of-foes into gorey halves."
+	icon_state = "gdadao"
+	sheathe_icon = "dadao"
+	gripsprite = FALSE
 
 ////////////////////////
