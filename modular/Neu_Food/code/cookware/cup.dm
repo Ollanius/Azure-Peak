@@ -258,6 +258,7 @@
 	sellprice = 10
 	force = 5
 	throwforce = 10
+	obj_flags = CAN_BE_HIT|UNIQUE_RENAME
 
 /obj/item/reagent_containers/glass/cup/ceramic/examine()
 	. = ..()
