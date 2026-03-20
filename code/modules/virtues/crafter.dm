@@ -88,7 +88,7 @@
 				recipient.mind?.special_items["Hammer"] = /obj/item/rogueweapon/hammer/wood
 				recipient.mind?.special_items["Chisel"] = /obj/item/rogueweapon/chisel
 				recipient.mind?.special_items["Hand Saw"] = /obj/item/rogueweapon/handsaw
-
+				recipient.mind?.special_items["Glassblowing Rod"] = /obj/item/rogueweapon/blowrod
 
 #undef SKILLED_BSMITH
 #undef SKILLED_TAILOR
