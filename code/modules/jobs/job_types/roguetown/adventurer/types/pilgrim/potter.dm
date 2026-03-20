@@ -24,7 +24,7 @@
 		/datum/skill/craft/carpentry = SKILL_LEVEL_APPRENTICE, // They probably have some insight in carpentry and masonry.
 		/datum/skill/craft/masonry = SKILL_LEVEL_APPRENTICE, // They probably have some insight in carpentry and masonry.
 		/datum/skill/misc/reading = SKILL_LEVEL_APPRENTICE,
-		/datum/skill/craft/ceramics = SKILL_LEVEL_MASTER,
+		/datum/skill/craft/ceramics = SKILL_LEVEL_EXPERT, // Very good, but still a little short of the maximum threshold. Feel free to increase this back up to Master-level, if it feels a bit too punishing.
 	)
 	maximum_possible_slots = 20 // Should not fill, just a hack to make it shows what types of towners are in round
 
