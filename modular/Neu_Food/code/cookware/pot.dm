@@ -92,6 +92,7 @@
 	icon_state = "teapot"
 	volume = 120
 	sellprice = 20
+	obj_flags = CAN_BE_HIT|UNIQUE_RENAME
 
 /obj/item/reagent_containers/glass/bucket/pot/teapot/getonmobprop(tag)
 	if(tag)
