@@ -8,7 +8,7 @@ var/list/used_colors
 
 /obj/machinery/gear_painter
 	name = "Dye Station"
-	desc = "A station to give your apparel a fresh new color! Recommended to use with white items for best results."
+	desc = "A station to give your apparel and pottery a fresh new color! Recommended to use with white items for best results."
 	icon = 'icons/roguetown/misc/structure.dmi'
 	icon_state = "dyestation"
 	density = TRUE
@@ -31,7 +31,9 @@ var/list/used_colors
 			/obj/item/reagent_containers/glass/cup/claycup,
 			/obj/item/reagent_containers/glass/bottle/claybottle,
 			/obj/item/roguestatue/clay,
-			/obj/item/roguestatue/glass
+			/obj/item/roguestatue/glass,
+			/obj/item/reagent_containers/glass/bottle/blown,
+			/obj/item/reagent_containers/glass/bottle/alchemical/blown
 			)
 
 /obj/machinery/gear_painter/Initialize()
