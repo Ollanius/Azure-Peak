@@ -46,6 +46,7 @@
 	icon_state = "weird1"
 	name = "wooden floorboards"
 	desc = "Interlocking wooden floorboards."
+
 /turf/open/floor/rogue/ruinedwood/chevron
 	icon_state = "weird2"
 	name = "floorboards"
@@ -220,6 +221,7 @@
 	smooth = SMOOTH_TRUE
 	canSmoothWith = list(/turf/open/floor/rogue/AzureSand,)
 	neighborlay = "grimshartedge"
+	var/sand_amt = 3
 
 /turf/open/floor/rogue/AzureSand/Initialize()
 	dir = pick(GLOB.cardinals)
@@ -227,6 +229,18 @@
 
 /turf/open/floor/rogue/AzureSand/cardinal_smooth(adjacencies)
 	roguesmooth(adjacencies)
+
+/turf/open/floor/rogue/AzureSand/attack_right(mob/user)
+	if(isliving(user))
+		var/mob/living/L = user
+		if(L.stat != CONSCIOUS)
+			return
+		var/obj/item/I = new /obj/item/natural/dirtclod/sand(src)
+		if(L.put_in_active_hand(I))
+			L.visible_message(span_warning("[L] picks up some sand."))
+		else
+			qdel(I)
+	.=..()
 
 /turf/open/floor/rogue/snow
 	name = "snow"
@@ -647,11 +661,24 @@
 	landsound = 'sound/foley/jumpland/dirtland.wav'
 	baseturfs = /turf/open/floor/rogue/sand
 	slowdown = 0
+	var/sand_amt = 3
 
 /turf/open/floor/rogue/sand/Initialize(mapload)
 	. = ..()
 	if(prob(15))
 		icon_state = "sand[rand(1,4)]"
+
+/turf/open/floor/rogue/sand/attack_right(mob/user)
+	if(isliving(user))
+		var/mob/living/L = user
+		if(L.stat != CONSCIOUS)
+			return
+		var/obj/item/I = new /obj/item/natural/dirtclod/sand(src)
+		if(L.put_in_active_hand(I))
+			L.visible_message(span_warning("[L] picks up some sand."))
+		else
+			qdel(I)
+	.=..()
 
 /turf/open/floor/rogue/hay
 	name = "hay"
