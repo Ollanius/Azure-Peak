@@ -158,7 +158,7 @@
 		return ..()
 	if(istype(I, /obj/item/rogueweapon/tongs))
 		var/obj/item/rogueweapon/tongs/T = I
-		if(T.hingot && istype(T.hingot))
+		if(T.hingot && istype(T.hingot, /obj/item/ingot))
 			var/removereg = /datum/reagent/water
 			if(!reagents.has_reagent(/datum/reagent/water, 5))
 				removereg = /datum/reagent/water/gross
