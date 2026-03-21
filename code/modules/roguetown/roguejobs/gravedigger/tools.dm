@@ -85,7 +85,7 @@
 					playsound(T,'sound/items/empty_shovel.ogg', 100, TRUE)
 					update_icon()
 					return
-			if(istype(T, /turf/open/floor/rogue/sand) || istype(T, /turf/open/floor/rogue/AzureSand))) //Juryrigged alternative until someone can integrate the new sprites. Beats digging with your hands!
+			if(istype(T, /turf/open/floor/rogue/sand) || istype(T, /turf/open/floor/rogue/AzureSand)) //Juryrigged alternative until someone can integrate the new sprites. Beats digging with your hands!
 				new /obj/item/natural/dirtclod/sand(loc)
 				playsound(T,'sound/items/dig_shovel.ogg', 100, TRUE)
 				to_chat(user, span_warning("You dig up some sand!"))
