@@ -61,4 +61,34 @@
 	icon = 'icons/roguetown/weapons/64.dmi'
 	desc = "A lethal and well-balanced weapon. The broadsword - better known as a 'hand-and-a-halfer' - has dutifully served the \
 	swordsmen of Psydonia in their clashes against man-and-monster alike since time immemmorial. The edge glimmers with purpose."
-	icon_state = "alloybsword"
+	icon_state = "longsword_rockhillalt"
+
+/obj/item/rogueweapon/example/valorian_greatsword
+	name = "valorian claymore"
+	icon = 'icons/roguetown/weapons/64.dmi'
+	desc = "A massive two-handed sword, wieldable by only the strongest of Psydonia's children. One swing could surely cleave \
+	even the mightiest foes in twain - not even a horde's might could hope to stop you, now!"
+	icon_state = "longsword_rockhillg"
+
+/obj/item/rogueweapon/example/wodao
+	name = "wodao"
+	desc = "A slightly curved blade that has been proliferated everywhere from Naledian allspice caravans to \
+	Kazengunite diplomat-militants. While less durable compared to other arming swords, it's swift balance and unique design \
+	makes it great for unleashing precise strikes."
+	icon_state = "wodao"
+	sheathe_icon = "wodao"
+
+/obj/item/rogueweapon/example/dadao
+	name = "dadao"
+	desc = "A heavier alternative to the 'Wodao' sabre, this well-balanced cleaver is informally known amongst Ranensheni pikemen as \
+	the 'Saigachopper'; termed such for its purported ability to decapitate a calvaryman's steed in but a single blow."
+	icon_state = "dadao"
+	sheathe_icon = "dadao"
+
+/obj/item/rogueweapon/example/greatdadao
+	name = "great dadao"
+	icon = 'icons/roguetown/weapons/64.dmi'
+	desc = "Larger than the 'Wodao' sabre, sharper than the 'Dadao' cleaver, and nastier than the sum of its parts. A single stroke dares to \
+	part even the thickest-of-foes into gorey halves."
+	icon_state = "gdadao"
+	sheathe_icon = "gdadao"
