@@ -1,11 +1,12 @@
 /////////////////////////////////
 // ! TRIUMPH EXCLUSIVE KITS!   //
 /////////////////////////////////
-// Special enchanting kits that can be acquired via Triumphs. Based off the same code, otherwise.
+// Special enchanting kits that can be acquired via Triumphs. Refer to 'donator_modkits.dm' for more details and up-to-date examples.
+// Try to keep anything specifically acquired via Triumphs - instead of Donations - here.
 
 /obj/item/enchantingkit/triumph_armorkit
 	name = "'Valorian' armor morphing elixir"
-	desc = "A small container of special morphing dust, perfect to make a specific item. It can restore the original appearance of.. </br>..a Steel Cuirass.. </br>..a Steel Halfplate.. </br>..a set of Steel Plate Armor.. </br>..or a set of Fluted Plate Armor."
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can restore the original appearance of a Steel Cuirass, a Steel Halfplate, a set of Steel Plate Armor, or a set of Fluted Plate Armor."
 	target_items = list(
 		/obj/item/clothing/suit/roguetown/armor/plate/cuirass 		= /obj/item/clothing/suit/roguetown/armor/plate/cuirass/legacy,
 		/obj/item/clothing/suit/roguetown/armor/plate/full/fluted 	= /obj/item/clothing/suit/roguetown/armor/plate/full/fluted/legacy,
@@ -16,7 +17,7 @@
 
 /obj/item/enchantingkit/triumph_armorkit_drow
 	name = "'Drowcraft' armor morphing elixir"
-	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of.. </br>..a set of Hardened Leather Armor.. </br>.. or a set of Studded Leather Armor."
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a set of Hardened Leather Armor, or a set of Studded Leather Armor."
 	target_items = list(
 		/obj/item/clothing/suit/roguetown/armor/leather/heavy 		= /obj/item/clothing/suit/roguetown/armor/leather/heavy/shadowvest,
 		/obj/item/clothing/suit/roguetown/armor/leather/studded		= /obj/item/clothing/suit/roguetown/armor/leather/heavy/shadowvest
@@ -25,7 +26,7 @@
 
 /obj/item/enchantingkit/triumph_weaponkit_axe
 	name = "'Valorian' axe morphing elixir"
-	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of.. </br>..an Iron Axe.. </br>..or an Iron Hatchet."
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of an Iron Axe, or an Iron Hatchet."
 	target_items = list(
 		/obj/item/rogueweapon/stoneaxe/handaxe							= /obj/item/rogueweapon/stoneaxe/handaxe/triumph,
 		/obj/item/rogueweapon/stoneaxe/woodcut	  						= /obj/item/rogueweapon/stoneaxe/woodcut/triumph
@@ -34,7 +35,7 @@
 
 /obj/item/enchantingkit/triumph_weaponkit_axedouble
 	name = "'Doublehead' axe morphing elixir"
-	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of.. </br>..an Iron Axe.. </br>..a Bronze Axe.. </br>..a Steel Axe.. </br>..a Battle Axe..  </br>..a Silver War Axe.. </br>..or a Psydonic War Axe."
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of an Iron Axe, a Bronze Axe, a Steel Axe, a Battle Axe, a Silver War Axe, or a Psydonic War Axe."
 	target_items = list(
 		/obj/item/rogueweapon/stoneaxe/woodcut/steel					= /obj/item/rogueweapon/stoneaxe/woodcut/steel/triumph,
 		/obj/item/rogueweapon/stoneaxe/woodcut/bronze					= /obj/item/rogueweapon/stoneaxe/woodcut/bronze/triumph,
@@ -47,7 +48,7 @@
 
 /obj/item/enchantingkit/weapon/triumph_weaponkit_sword
 	name = "'Valorian' sword morphing elixir"
-	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of.. </br>..an Iron Arming Sword.. </br>..an Iron Dueling Sword.. </br>..or a Maciejowski."
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of an Iron Arming Sword, an Iron Dueling Sword, or a Maciejowski."
 	target_items = list(
 		/obj/item/rogueweapon/sword/iron,
 		/obj/item/rogueweapon/sword/short/messer/iron/virtue,
@@ -57,13 +58,13 @@
 
 /obj/item/enchantingkit/triumph_weaponkit_tri
 	name = "'Valorian' longsword morphing elixir"
-	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of.. </br>..a Steel Longsword."
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Steel Longsword."
 	target_items = list(/obj/item/rogueweapon/sword/long)
 	result_item = /obj/item/rogueweapon/sword/long/triumph
 
 /obj/item/enchantingkit/triumph_weaponkit_wide
 	name = "'Wideguard' longsword morphing elixir"
-	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of.. </br>..a Steel Longsword.. </br>..or a Rapier."
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Steel Longsword, or a Rapier."
 	target_items = list(
 		/obj/item/rogueweapon/sword/long					= /obj/item/rogueweapon/sword/long/triumph/wideguard,
 		/obj/item/rogueweapon/sword/rapier	  				= /obj/item/rogueweapon/sword/rapier/wideguard
@@ -72,7 +73,7 @@
 
 /obj/item/enchantingkit/weapon/triumph_weaponkit_rock
 	name = "'Rockhillian' longsword morphing elixir"
-	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of.. </br>..a Broadsword.. </br>..or an Executioner Sword."
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Broadsword, or an Executioner Sword."
 	target_items = list(
 		/obj/item/rogueweapon/sword/long/broadsword/steel,
 		/obj/item/rogueweapon/sword/long/broadsword,
@@ -82,7 +83,7 @@
 
 /obj/item/enchantingkit/weapon/triumph_weaponkit_greatrock
 	name = "'Rockhillian' greatsword morphing elixir"
-	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of.. </br>..a Greatsword.. </br>..a Claymore.. </br> or a Flamberge."
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Greatsword, a Claymore, or a Flamberge."
 	target_items = list(
 		/obj/item/rogueweapon/greatsword,
 		/obj/item/rogueweapon/greatsword/iron,
@@ -93,7 +94,7 @@
 
 /obj/item/enchantingkit/triumph_weaponkit_sabre
 	name = "'Sabreguard' longsword morphing elixir"
-	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of.. </br>..a Steel Longsword.. </br>..or a Kriegmesser."
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Steel Longsword, or a Kriegmesser."
 	target_items = list(
 		/obj/item/rogueweapon/sword/long/kriegmesser	  			= /obj/item/rogueweapon/sword/long/kriegmesser/sabreguard,
 		/obj/item/rogueweapon/sword/long							= /obj/item/rogueweapon/sword/long/triumph/sabreguard
@@ -102,17 +103,48 @@
 
 /obj/item/enchantingkit/triumph_weaponkit_psy
 	name = "'Psycrucifix' longsword morphing elixir"
-	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of.. </br>..a Steel Longsword.. </br>..or a Psydonic Longsword."
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Steel Longsword, or a Psydonic Longsword."
 	target_items = list(
 		/obj/item/rogueweapon/sword/long/psysword	  			= /obj/item/rogueweapon/sword/long/psysword/psycrucifix,
 		/obj/item/rogueweapon/sword/long						= /obj/item/rogueweapon/sword/long/triumph/psycrucifix
 		)
 	result_item = null
 
+/obj/item/enchantingkit/weapon/triumph_weaponkit_wodao
+	name = "'Wodao' sword morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of an Iron Sabre or a Steel Sabre."
+	target_items = list(
+		/obj/item/rogueweapon/sword/sabre,
+		/obj/item/rogueweapon/sword/saber/iron
+		)
+	result_item = /obj/item/rogueweapon/example/wodao
+
+/obj/item/enchantingkit/weapon/triumph_weaponkit_dadao
+	name = "'Dadao' sword morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of an Iron Hunting Sword, an Iron Dueling Messer, a Steel Messer, a Steel Hunting Sword, or a Falx."
+	target_items = list(
+		/obj/item/rogueweapon/sword/short/messer/iron/virtue,
+		/obj/item/rogueweapon/sword/short/messer/iron,
+		/obj/item/rogueweapon/sword/short/messer/alt,
+		/obj/item/rogueweapon/sword/short/messer,
+		/obj/item/rogueweapon/sword/falx
+		)
+	result_item = /obj/item/rogueweapon/example/dadao
+
+/obj/item/enchantingkit/weapon/triumph_weaponkit_greatdadao
+	name = "'Greatdadao' longsword morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Kriegmesser, or a Rhomphaia."
+	target_items = list(
+		/obj/item/rogueweapon/sword/long/rhomphaia,
+		/obj/item/rogueweapon/sword/long/kriegmesser
+		)
+	result_item = /obj/item/rogueweapon/example/greatdadao
+
 //////////////////////////////
 // TRIUMPH-RESKIN EXAMPLES! //
 //////////////////////////////
-// Handles Triumph-specific variants of the items in enchanting_examples.dm.
+// Handles Triumph-specific variants of the items in enchanting_examples.dm. Refer to that file for more detailed instructions and up-to-date examples.
+// In essence, works like a 'reskin' that specifically changes the icon, name, and description (without having to further alter any mechanical details.)
 
 /obj/item/rogueweapon/example/valorian_sword
 	name = "valorian sword"
@@ -162,7 +194,8 @@
 ////////////////////////////////////////////////////
 // ! TO BE ARCHIVED / REPLACED WITH BETTER CODE!  //
 ////////////////////////////////////////////////////
-// Weapon-specific Triumphs. Ideally phased out somewhere down the line. For two-handed sprites, replace the '_1' variant in their 64.dmi sprite with the '_2' variant - ir-or-when the time to fully replace them comes.
+// Weapon-specific Triumphs. The original iteration, based off the old donator-transmorgification code.
+// For two-handed sprites, replace the '_1' variant in their 64.dmi sprite with the '_2' variant - ir-or-when the time to fully replace them comes.
 
 /obj/item/rogueweapon/sword/long/triumph
 	name = "valorian longsword"
