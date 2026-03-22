@@ -42,10 +42,10 @@
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
 
 // Witty
-/obj/item/rogueweapon/example/witty_sword
+/obj/item/rogueweapon/example/dakken_sword
 	name = "avantyne threaded sword"
 	desc = "'Threads of dark metal wind through what was formerly a simple steel blade. Cracks and chips are filled in as the weapon of war is reshaped into a symbol of faith.'"
-	icon_state = "stinketh_shashka"
+	icon_state = "alloybsword"
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
 
 // Triumphs
