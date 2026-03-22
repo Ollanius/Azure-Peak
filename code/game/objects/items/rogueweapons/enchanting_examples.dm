@@ -41,6 +41,13 @@
 	icon_state = "stinketh_shashka"
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
 
+// Witty
+/obj/item/rogueweapon/example/witty_sword
+	name = "avantyne threaded sword"
+	desc = "'Threads of dark metal wind through what was formerly a simple steel blade. Cracks and chips are filled in as the weapon of war is reshaped into a symbol of faith.'"
+	icon_state = "stinketh_shashka"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+
 // Triumphs
 /obj/item/rogueweapon/example/valorian_sword
 	name = "valorian sword"
@@ -53,7 +60,5 @@
 	name = "valorian broadsword"
 	icon = 'icons/roguetown/weapons/64.dmi'
 	desc = "A lethal and well-balanced weapon. The broadsword - better known as a 'hand-and-a-halfer' - has dutifully served the \
-	swordsmen of Psydonia in their clashes against man-and-monster alike since time immemmorial. The edge glimmers with the hopes \
-	and dreams of the Weeping God's children, imbuing your very soul with determination. </br>'There's a light inside your \
-	soul, that’s still shining in the cold: the truth, the promise in our hearts.. ..don't forget, I'm with you in the dark.'"
-	icon_state = "longsword_rockhill"
+	swordsmen of Psydonia in their clashes against man-and-monster alike since time immemmorial. The edge glimmers with purpose."
+	icon_state = "alloybsword"
