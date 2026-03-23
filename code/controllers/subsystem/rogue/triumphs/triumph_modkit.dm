@@ -169,6 +169,7 @@
 
 /obj/item/rogueweapon/example/wodao
 	name = "wodao"
+	icon = 'icons/roguetown/weapons/swords32.dmi'
 	desc = "A slightly curved blade that has been proliferated everywhere from Naledian allspice caravans to \
 	Kazengunite diplomat-militants. While less durable compared to other arming swords, it's swift balance and unique design \
 	makes it great for unleashing precise strikes."
@@ -177,6 +178,7 @@
 
 /obj/item/rogueweapon/example/dadao
 	name = "dadao"
+	icon = 'icons/roguetown/weapons/swords32.dmi'
 	desc = "A heavier alternative to the 'Wodao' sabre, this well-balanced cleaver is informally known amongst Ranensheni pikemen as \
 	the 'Saigachopper'; termed such for its purported ability to decapitate a calvaryman's steed in but a single blow."
 	icon_state = "dadao"
@@ -184,7 +186,7 @@
 
 /obj/item/rogueweapon/example/greatdadao
 	name = "greatdadao"
-	icon = 'icons/roguetown/weapons/64.dmi'
+	icon = 'icons/roguetown/weapons/swords64.dmi'
 	desc = "Larger than the 'Wodao' sabre, sharper than the 'Dadao' cleaver, and nastier than the sum of its parts. A single stroke dares to \
 	part even the thickest-of-foes into gorey halves."
 	icon_state = "gdadao"
