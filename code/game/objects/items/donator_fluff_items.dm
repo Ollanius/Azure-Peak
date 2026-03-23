@@ -414,12 +414,14 @@
 	desc = "'Threads of dark metal wind through what was formerly a simple steel blade. Cracks and chips are filled in as the weapon of war is reshaped into a symbol of faith.'"
 	icon = 'icons/obj/items/donor_weapons.dmi'
 	icon_state = "alloybsword_32"
+	sheathe_icon = "alloybsword"
 
 /obj/item/rogueweapon/sword/long/dakken_longsword
 	name = "avantyne threaded longsword"
 	desc = "'Threads of dark metal wind through what was formerly a simple steel blade. Cracks and chips are filled in as the weapon of war is reshaped into a symbol of faith.'"
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
 	icon_state = "alloybsword_64"
+	sheathe_icon = "alloybsword"
 
 //STINKETHSTONKETH
 /obj/item/rogueweapon/sword/sabre/steppesman/stinketh
