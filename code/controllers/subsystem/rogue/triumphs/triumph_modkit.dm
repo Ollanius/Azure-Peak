@@ -73,9 +73,8 @@
 
 /obj/item/enchantingkit/weapon/triumph_weaponkit_rock
 	name = "'Rockhillian' broadsword morphing elixir"
-	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Broadsword, or an Executioner Sword."
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Broadsword, a Steel Broadsword, or an Executioner Sword."
 	target_items = list(
-		/obj/item/rogueweapon/sword/long/broadsword/bronze,
 		/obj/item/rogueweapon/sword/long/broadsword/steel,
 		/obj/item/rogueweapon/sword/long/broadsword,
 		/obj/item/rogueweapon/sword/long/exe
