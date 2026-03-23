@@ -266,7 +266,7 @@
 /obj/item/enchantingkit/dakken_alloybsword
 	name = "'avantyne-threaded sword' morphing elixir"
 	target_items = list(/obj/item/rogueweapon/sword)
-	result_item = /obj/item/rogueweapon/example/dakken_sword
+	result_item = /obj/item/rogueweapon/sword/dakken_sword
 
 //StinkethStonketh - Shashka & pike
 /obj/item/enchantingkit/stinketh_shashka
