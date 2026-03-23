@@ -296,8 +296,8 @@
 	triumph_cost = 3
 	sort_category = "Triumphs"
 
-/datum/loadout_item/triumph_weaponkitgreatdadao
+/datum/loadout_item/triumph_weaponkitgdadao
 	name = "Morphing Elixir, 'Greatdadao'"
-	path = /obj/item/enchantingkit/weapon/triumph_weaponkit_greatdadao
+	path = /obj/item/enchantingkit/weapon/triumph_weaponkit_gdadao
 	triumph_cost = 3
 	sort_category = "Triumphs"
