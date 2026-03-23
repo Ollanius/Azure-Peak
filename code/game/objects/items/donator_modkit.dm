@@ -253,7 +253,7 @@
 	target_items = list(/obj/item/clothing/head/roguetown/helmet/heavy/psydonhelm)
 	result_item = /obj/item/clothing/head/roguetown/helmet/heavy/psydonhelm/ryan
 
-//Dakken12 - Armet/Hounskull
+//Dakken12 - Armet/Hounskull + Swords
 /obj/item/enchantingkit/dakken_zizhelm
 	name = "'armoured avantyne barbute' morphing elixir"
 	target_items = list(
@@ -265,8 +265,11 @@
 
 /obj/item/enchantingkit/dakken_alloybsword
 	name = "'avantyne-threaded sword' morphing elixir"
-	target_items = list(/obj/item/rogueweapon/sword)
-	result_item = /obj/item/rogueweapon/sword/dakken_sword
+	target_items = list(
+		/obj/item/rogueweapon/sword			= /obj/item/rogueweapon/sword/dakken_sword,
+		/obj/item/rogueweapon/sword/long	= /obj/item/rogueweapon/sword/long/dakken_sword,
+	)
+	result_item = null
 
 //StinkethStonketh - Shashka & pike
 /obj/item/enchantingkit/stinketh_shashka
