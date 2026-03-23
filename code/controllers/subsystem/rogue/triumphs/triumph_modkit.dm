@@ -133,14 +133,14 @@
 		)
 	result_item = /obj/item/rogueweapon/example/dadao
 
-/obj/item/enchantingkit/weapon/triumph_weaponkit_greatdadao
+/obj/item/enchantingkit/weapon/triumph_weaponkit_gdadao
 	name = "'Greatdadao' longsword morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Kriegmesser, or a Rhomphaia."
 	target_items = list(
 		/obj/item/rogueweapon/sword/long/rhomphaia,
 		/obj/item/rogueweapon/sword/long/kriegmesser
 		)
-	result_item = /obj/item/rogueweapon/example/greatdadao
+	result_item = /obj/item/rogueweapon/example/gdadao
 
 //////////////////////////////
 // TRIUMPH-RESKIN EXAMPLES! //
@@ -186,9 +186,9 @@
 	icon_state = "dadao"
 	sheathe_icon = "dadao"
 
-/obj/item/rogueweapon/example/greatdadao
+/obj/item/rogueweapon/example/gdadao
 	name = "greatdadao"
-	icon = 'icons/roguetown/weapons/swords64.dmi'
+	icon = 'icons/roguetown/weapons/64.dmi'
 	desc = "Larger than the 'Wodao' sabre, sharper than the 'Dadao' cleaver, and nastier than the sum of its parts. A single stroke dares to \
 	part even the thickest-of-foes into gorey halves."
 	icon_state = "gdadao"
