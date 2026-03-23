@@ -261,7 +261,7 @@
 	sort_category = "Triumphs"
 
 /datum/loadout_item/triumph_weaponkitrock
-	name = "Morphing Elixir, 'Rockhillian Longsword'"
+	name = "Morphing Elixir, 'Rockhillian Broadsword'"
 	path = /obj/item/enchantingkit/weapon/triumph_weaponkit_rock
 	triumph_cost = 3
 	sort_category = "Triumphs"
@@ -275,6 +275,12 @@
 /datum/loadout_item/triumph_weaponkitpsy
 	name = "Morphing Elixir, 'Psycrucifix Longsword'"
 	path = /obj/item/enchantingkit/triumph_weaponkit_psy
+	triumph_cost = 3
+	sort_category = "Triumphs"
+
+/datum/loadout_item/triumph_weaponkitgreatval
+	name = "Morphing Elixir, 'Valorian Greatsword'"
+	path = /obj/item/enchantingkit/weapon/triumph_weaponkit_greatval
 	triumph_cost = 3
 	sort_category = "Triumphs"
 
