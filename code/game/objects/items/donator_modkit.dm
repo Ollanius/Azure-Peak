@@ -266,8 +266,8 @@
 /obj/item/enchantingkit/dakken_alloybsword
 	name = "'avantyne-threaded sword' morphing elixir"
 	target_items = list(
-		/obj/item/rogueweapon/sword			= /obj/item/rogueweapon/sword/dakken_sword,
-		/obj/item/rogueweapon/sword/long	= /obj/item/rogueweapon/sword/long/dakken_longsword
+		/obj/item/rogueweapon/sword/long	= /obj/item/rogueweapon/sword/long/dakken_longsword,
+		/obj/item/rogueweapon/sword			= /obj/item/rogueweapon/sword/dakken_sword
 	)
 	result_item = null
 
