@@ -192,7 +192,7 @@
 	desc = "Larger than the 'Wodao' sabre, sharper than the 'Dadao' cleaver, and nastier than the sum of its parts. A single stroke dares to \
 	part even the thickest-of-foes into gorey halves."
 	icon_state = "gdadao"
-	sheathe_icon = "gdadao"
+	sheathe_icon = "dadao"
 
 
 ////////////////////////////////////////////////////
