@@ -204,7 +204,7 @@
 /datum/loadout_item/triumph_buffpot
 	name = "Vial of Distilled Triumphance"
 	path = /obj/item/reagent_containers/glass/bottle/alchemical/tripot
-	triumph_cost = 70
+	triumph_cost = 99
 	sort_category = "Triumphs"
 
 // Reskinners.
@@ -266,5 +266,23 @@
 /datum/loadout_item/triumph_weaponkitpsy
 	name = "Morphing Elixir, 'Psycrucifix Longsword'"
 	path = /obj/item/enchantingkit/triumph_weaponkit_psy
+	triumph_cost = 3
+	sort_category = "Triumphs"
+
+/datum/loadout_item/triumph_weaponkitwodao
+	name = "Morphing Elixir, 'Wodao'"
+	path = /obj/item/enchantingkit/weapon/triumph_weaponkit_wodao
+	triumph_cost = 3
+	sort_category = "Triumphs"
+
+/datum/loadout_item/triumph_weaponkitdadao
+	name = "Morphing Elixir, 'Dadao'"
+	path = /obj/item/enchantingkit/weapon/triumph_weaponkit_dadao
+	triumph_cost = 3
+	sort_category = "Triumphs"
+
+/datum/loadout_item/triumph_weaponkitgreatdadao
+	name = "Morphing Elixir, 'Greatdadao'"
+	path = /obj/item/enchantingkit/weapon/triumph_weaponkit_greatdadao
 	triumph_cost = 3
 	sort_category = "Triumphs"
