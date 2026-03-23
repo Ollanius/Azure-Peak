@@ -72,17 +72,18 @@
 	result_item = null
 
 /obj/item/enchantingkit/weapon/triumph_weaponkit_rock
-	name = "'Rockhillian' longsword morphing elixir"
+	name = "'Rockhillian' broadsword morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Broadsword, or an Executioner Sword."
 	target_items = list(
+		/obj/item/rogueweapon/sword/long/broadsword/bronze,
 		/obj/item/rogueweapon/sword/long/broadsword/steel,
 		/obj/item/rogueweapon/sword/long/broadsword,
 		/obj/item/rogueweapon/sword/long/exe
 		)
 	result_item = /obj/item/rogueweapon/example/valorian_broadsword
 
-/obj/item/enchantingkit/weapon/triumph_weaponkit_greatrock
-	name = "'Rockhillian' greatsword morphing elixir"
+/obj/item/enchantingkit/weapon/triumph_weaponkit_greatval
+	name = "'Valorian' greatsword morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Greatsword, a Claymore, or a Flamberge."
 	target_items = list(
 		/obj/item/rogueweapon/greatsword,
