@@ -267,7 +267,7 @@
 	name = "'avantyne-threaded sword' morphing elixir"
 	target_items = list(
 		/obj/item/rogueweapon/sword			= /obj/item/rogueweapon/sword/dakken_sword,
-		/obj/item/rogueweapon/sword/long	= /obj/item/rogueweapon/sword/long/dakken_sword,
+		/obj/item/rogueweapon/sword/long	= /obj/item/rogueweapon/sword/long/dakken_longsword
 	)
 	result_item = null
 
