@@ -119,7 +119,7 @@
 
 /datum/loadout_item/donator_inverserun
 	name = "Donator Kit - Votive Thorns"
-	path = /obj/item/enchantingkit/inverserun
+	path = /obj/item/enchantingkit/weapon/inverserun
 	ckeywhitelist = list("inverserun")
 	sort_category = "Donator"
 
