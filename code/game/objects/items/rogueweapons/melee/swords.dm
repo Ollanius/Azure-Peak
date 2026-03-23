@@ -1592,6 +1592,7 @@
 	icon = 'icons/roguetown/weapons/special/hand64.dmi'
 	sellprice = 250
 	icon_state = "handsword"
+	sheathe_icon = "handsword"
 
 /obj/item/rogueweapon/sword/long/holysee
 	name = "eclipsum sword"
