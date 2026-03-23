@@ -183,7 +183,7 @@
 	sheathe_icon = "dadao"
 
 /obj/item/rogueweapon/example/greatdadao
-	name = "great dadao"
+	name = "greatdadao"
 	icon = 'icons/roguetown/weapons/64.dmi'
 	desc = "Larger than the 'Wodao' sabre, sharper than the 'Dadao' cleaver, and nastier than the sum of its parts. A single stroke dares to \
 	part even the thickest-of-foes into gorey halves."
