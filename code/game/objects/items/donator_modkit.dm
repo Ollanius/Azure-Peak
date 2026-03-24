@@ -251,7 +251,7 @@
 	target_items = list(/obj/item/clothing/head/roguetown/helmet/heavy/psydonhelm)
 	result_item = /obj/item/clothing/head/roguetown/helmet/heavy/psydonhelm/ryan
 
-//Dakken12 - Armet/Hounskull
+//Dakken12 - Armet/Hounskull/Swords
 /obj/item/enchantingkit/dakken_zizhelm
 	name = "'armoured avantyne barbute' morphing elixir"
 	target_items = list(
@@ -260,6 +260,20 @@
 		/obj/item/clothing/head/roguetown/helmet/heavy/barbute/visor            = /obj/item/clothing/head/roguetown/helmet/heavy/barbute/visor/dakken
 	)
 	result_item = null
+
+/obj/item/rogueweapon/sword/dakken_sword
+	name = "avantyne threaded sword"
+	desc = "'Threads of dark metal wind through what was formerly a simple steel blade. Cracks and chips are filled in as the weapon of war is reshaped into a symbol of faith.'"
+	icon = 'icons/obj/items/donor_weapons.dmi'
+	icon_state = "alloybsword_32"
+	sheathe_icon = "alloybsword"
+
+/obj/item/rogueweapon/sword/long/dakken_longsword
+	name = "avantyne threaded longsword"
+	desc = "'Threads of dark metal wind through what was formerly a simple steel blade. Cracks and chips are filled in as the weapon of war is reshaped into a symbol of faith.'"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+	icon_state = "alloybsword_64"
+	sheathe_icon = "alloybsword"
 
 //StinkethStonketh - Shashka & pike
 /obj/item/enchantingkit/stinketh_shashka
