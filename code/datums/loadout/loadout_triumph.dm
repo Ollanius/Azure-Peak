@@ -253,12 +253,6 @@
 	triumph_cost = 3
 	sort_category = "Triumphs"
 
-/datum/loadout_item/triumph_weaponkitvalsil
-	name = "Morphing Elixir, 'Valorian Silvers'"
-	path = /obj/item/enchantingkit/triumph_weaponkit_valsil
-	triumph_cost = 3
-	sort_category = "Triumphs"
-
 /datum/loadout_item/triumph_weaponkitrock
 	name = "Morphing Elixir, 'Rockhillian Broadsword'"
 	path = /obj/item/enchantingkit/weapon/triumph_weaponkit_rock
