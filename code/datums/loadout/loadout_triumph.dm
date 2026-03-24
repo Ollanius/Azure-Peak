@@ -134,7 +134,13 @@
 	triumph_cost = 5
 	sort_category = "Triumphs"
 
-// -7 TRI Minisection.
+/datum/loadout_item/triumph_grenzhat
+	name = "Grenzelhoftian Beret"
+	path = /obj/item/clothing/head/roguetown/grenzelhofthat/triumph
+	triumph_cost = 5
+	sort_category = "Triumphs"
+
+// -9 TRI Minisection.
 /datum/loadout_item/triumph_buttpack
 	name = "Belted Satchel"
 	path = /obj/item/storage/backpack/rogue/satchel/beltpack
@@ -144,12 +150,6 @@
 /datum/loadout_item/triumph_lunchpouch
 	name = "Pouch of Luncheons"
 	path = /obj/item/storage/belt/rogue/pouch/triumphlunch
-	triumph_cost = 9
-	sort_category = "Triumphs"
-
-/datum/loadout_item/triumph_grenzhat
-	name = "Grenzelhoftian Beret"
-	path = /obj/item/clothing/head/roguetown/grenzelhofthat/triumph
 	triumph_cost = 9
 	sort_category = "Triumphs"
 
