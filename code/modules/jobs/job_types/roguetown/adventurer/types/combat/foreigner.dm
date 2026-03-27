@@ -626,7 +626,7 @@
 		/datum/species/elf/wood,
 		/datum/species/elf/dark,
 	)
-	traits_applied = list(TRAIT_OUTDOORSMAN, TRAIT_BLACKOAK, TRAIT_DODGEEXPERT, TRAIT_WOODWALKER)
+	traits_applied = list(TRAIT_OUTDOORSMAN, TRAIT_BLACKOAK, TRAIT_DODGEEXPERT, TRAIT_WOODWALKER, TRAIT_AZURENATIVE)
 	outfit = /datum/outfit/job/roguetown/adventurer/lesserblackoak
 	subclass_languages = list(/datum/language/oldazurian)
 	cmode_music = 'sound/music/combat_blackoak.ogg'
