@@ -632,11 +632,9 @@
 	cmode_music = 'sound/music/combat_blackoak.ogg'
 	maximum_possible_slots = 3 //A little stronger than a traditional Nomad or Adventurer. The slot limit is more-so intended to keep them a limited presence within Azuria, and to account for their potentially antagonistic nature.
 	subclass_stats = list(
-		STATKEY_INT = 1,
-		STATKEY_PER = 1,
+		STATKEY_PER = 2,
 		STATKEY_SPD = 2,
-		STATKEY_CON = 1,
-		STATKEY_WIL = 1, //Same as the Pariah. Seven-pointed statblock that's relatively well-rounded, with an emphasis on Speed.
+		STATKEY_WIL = 1, //Seven-pointed statblock. Glass cannon-coded, with an emphasis on naturally-high ranged damage and melee accuracy.
 	)
 	subclass_skills = list(
 		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
