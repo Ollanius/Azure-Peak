@@ -10,13 +10,13 @@
 		/datum/species/elf/dark,
 		/datum/species/human/halfelf, // Because half-drows are half-elves, guh.
 	)
+	traits_applied = list(TRAIT_MEDIUMARMOR, TRAIT_DARKVISION, TRAIT_ANTHRAXI)
 	outfit = /datum/outfit/job/roguetown/mercenary/anthrax
 	class_select_category = CLASS_CAT_RACIAL
 	category_tags = list(CTAG_MERCENARY)
 
 	cmode_music = 'sound/music/combat_delf.ogg'
 
-	traits_applied = list(TRAIT_DARKVISION, TRAIT_MEDIUMARMOR, TRAIT_ANTHRAXI)
 	subclass_stats = list(
 		STATKEY_STR = 2,
 		STATKEY_CON = 2,
@@ -91,8 +91,8 @@
 	of those assassins, use your trusty bow and arrow to bring your targets' demise \
 	from afar or take a second sabre and weave a beautiful dance of death. All that matters is \
 	that your contract is fulfilled and your pockets heavy with mammon."
-	outfit = /datum/outfit/job/roguetown/mercenary/anthrax_assasin
 	traits_applied = list(TRAIT_DARKVISION, TRAIT_DODGEEXPERT, TRAIT_ANTHRAXI)
+	outfit = /datum/outfit/job/roguetown/mercenary/anthrax_assasin
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = list(
 		/datum/species/elf/dark,
@@ -184,6 +184,7 @@
 	hunt man-and-merbeaste, you've cultivated a physique rivaled only by the \
 	surface-dwelling hunters of old. Strike fast and strike true, for the blade \
 	is thy God."
+	traits_applied = list(TRAIT_MEDIUMARMOR, TRAIT_DARKVISION, TRAIT_ANTHRAXI)
 	outfit = /datum/outfit/job/roguetown/mercenary/anthrax_bladesinger
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = list(
@@ -193,7 +194,6 @@
 	class_select_category = CLASS_CAT_RACIAL
 	category_tags = list(CTAG_MERCENARY)
 
-	traits_applied = list(TRAIT_DARKVISION, TRAIT_MEDIUMARMOR, TRAIT_ANTHRAXI)
 	subclass_stats = list(
 		STATKEY_STR = 1,
 		STATKEY_SPD = 2,
