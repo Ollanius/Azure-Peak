@@ -621,6 +621,7 @@
 	and you shall answer. Whether through blade or bow, you shall ensure that those who dare to disrespect \
 	Azuria's supple forests will learn to regret it."
 	extra_context = "This class is restricted to the Half-Elf, Wood Elf, and Dark Elf species."
+	class_select_category = CLASS_CAT_RACIAL
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = list(
 		/datum/species/human/halfelf,
