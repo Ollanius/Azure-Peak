@@ -220,7 +220,7 @@
 	..()
 	shoes = /obj/item/clothing/shoes/roguetown/boots/armor/plate/bladesinger
 	belt = /obj/item/storage/belt/rogue/leather/black
-	cloak = /obj/item/clothing/cloak/puritan
+	cloak = /obj/item/clothing/cloak/cape/puritan
 	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants/shadowpants
 	backl = /obj/item/storage/backpack/rogue/satchel/black
 	head = /obj/item/clothing/head/roguetown/helmet/heavy/bladesinger
