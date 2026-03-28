@@ -56,6 +56,8 @@
 	minstr = 10
 	wdefense = 7
 	sellprice = 120
+	force = 20
+	possible_item_intents = list(/datum/intent/sword/cut, /datum/intent/axe/chop, /datum/intent/sword/strike) //Improved handling over a traditional greatsword, when one-handed. On par with a Steel Messer, in this state.
 
 /obj/item/rogueweapon/greatsword/elfgsword/getonmobprop(tag)
 	. = ..()
