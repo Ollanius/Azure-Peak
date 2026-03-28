@@ -84,7 +84,7 @@
 
 	H.merctype = 15
 
-/datum/advclass/mercenary/anthraxassasin
+/datum/advclass/mercenary/anthrax_assasin
 	name = "Anthrax Assassin"
 	tutorial = "Black Venom's infamous killers for hire, it is said a single cut \
 	from their poison tipped blades is enough to send their victim to an early grave. You are one \
@@ -258,7 +258,7 @@
 	icon = 'icons/roguetown/clothing/special/race_armor.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/race_armor.dmi'
 
-/obj/item/clothing/head/roguetown/helmet/barbute/bladesinger
+/obj/item/clothing/head/roguetown/helmet/bladesinger
 	name = "shadowplate barbute"
 	desc = "The horned visage of a Bladesinger, and the last thing that many-a-fool hath seen. Though little is understood of this enigmatic station, some \
 	believe them to be the Underdark's equivalent of anointed knights - then again, perhaps they mistranslated the Dark Elven term for 'knight' with \
