@@ -286,3 +286,4 @@
 	bloody_icon = 'icons/effects/blood64.dmi'
 	smeltresult = /obj/item/ingot/drow
 	smelt_bar_num = 2
+	flags_inv = HIDEEARS|HIDEFACE|HIDESNOUT|HIDEHAIR
