@@ -173,7 +173,7 @@
 	hunt man-and-merbeaste, you've cultivated a physique rivaled only by the \
 	surface-dwelling hunters of old. Strike fast and strike true, for the blade \
 	is thy God."
-	outfit = /datum/outfit/job/roguetown/mercenary/anthrax/blade_singer
+	outfit = /datum/outfit/job/roguetown/mercenary/anthrax_bladesinger
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = list(
 		/datum/species/elf/dark,
