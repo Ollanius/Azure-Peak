@@ -637,7 +637,7 @@
 		STATKEY_SPD = 2,
 		STATKEY_WIL = 1, //Seven-pointed statblock. Glass cannon-coded, with an emphasis on naturally-high ranged damage and melee accuracy.
 	)
-	subclass_skills = list(oo
+	subclass_skills = list(
 		/datum/skill/misc/athletics = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/combat/wrestling = SKILL_LEVEL_APPRENTICE,
