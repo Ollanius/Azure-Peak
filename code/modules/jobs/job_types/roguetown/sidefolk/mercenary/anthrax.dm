@@ -87,8 +87,8 @@
 /datum/advclass/mercenary/anthrax/assasin
 	name = "Anthrax Assassin"
 	tutorial = "Black Venom's infamous killers for hire, it is said a single cut \
-	from their poison tipped blades is enough to send their victim to an early grave. You \ 
-	are one of those assassins, use your trusty bow and arrow to bring your targets' demise \
+	from their poison tipped blades is enough to send their victim to an early grave. You are one \
+	of those assassins, use your trusty bow and arrow to bring your targets' demise \
 	from afar or take a second sabre and weave a beautiful dance of death. All that matters is \
 	that your contract is fulfilled and your pockets heavy with mammon."
 	outfit = /datum/outfit/job/roguetown/mercenary/anthrax/assasin
@@ -225,7 +225,7 @@
 	icon = 'icons/roguetown/clothing/special/race_armor.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/race_armor.dmi'
 
-/obj/item/clothing/shoes/roguetown/boots/armor/bladesinger
+/obj/item/clothing/shoes/roguetown/boots/armor/plate/bladesinger
 	name = "shadowplate boots"
 	desc = "Plumphelmic sabatons, cuffed with bronze-gilded decorations and shingled with plates of sunless alloys. Each foot is cradled by a dozen seperate \
 	plates, allowing for an intimidating amount of agility to be practiced. Most tend to tremble in fear, when their presumptions of a plated hunter's \
