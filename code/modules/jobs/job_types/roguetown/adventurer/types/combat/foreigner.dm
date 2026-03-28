@@ -615,18 +615,20 @@
 			id = /obj/item/clothing/ring/bronze
 
 /datum/advclass/foreigner/lesserblackoak
-	name = "Black Oak's Aspirant"
-	tutorial = "Whether through merit or heritage, you've earned the right of tutelage under the Black Oaks; an \
-	irregular militia that fights for the ancestral elven homelands of Azuria. Jaunt through the underbrush and \
-	oppress the oppressors with both blade-and-bow."
+	name = "Azurian Grovewalker"
+	tutorial = "Autumn's grace trails you as a guardian-errant of the Black Oaks; an irregular militia that \
+	fights for the ancestral elven homelands of Azuria. Nature's call manifests along your blossoming bark, \
+	and you shall answer. Whether through blade or bow, you shall ensure that those who dare to disrespect \
+	Azuria's supple forests will learn to regret it."
 	extra_context = "This class is restricted to the Half-Elf, Wood Elf, and Dark Elf species."
+	class_select_category = CLASS_CAT_RACIAL
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = list(
 		/datum/species/human/halfelf,
 		/datum/species/elf/wood,
 		/datum/species/elf/dark,
 	)
-	traits_applied = list(TRAIT_OUTDOORSMAN, TRAIT_BLACKOAK, TRAIT_DODGEEXPERT, TRAIT_WOODWALKER, TRAIT_AZURENATIVE)
+	traits_applied = list(TRAIT_OUTDOORSMAN, TRAIT_BLACKOAK, TRAIT_DODGEEXPERT, TRAIT_WOODWALKER)
 	outfit = /datum/outfit/job/roguetown/adventurer/lesserblackoak
 	subclass_languages = list(/datum/language/oldazurian)
 	cmode_music = 'sound/music/combat_blackoak.ogg'
@@ -716,8 +718,9 @@
 
 /obj/item/rogueweapon/huntingknife/idagger/elvish/autumn
 	name = "autumned elvish dagger"
-	desc = "A wave-bladed dagger of faeiron, ceremoniously carried by those who wish to learn \
-	the secrets of the Black Oaks."
+	desc = "A wave-bladed dagger of faeiron, fitted from the branch of an Azurian elk \
+	tree. Just like its elegant creators, so too does it glide through the gaps in maille \
+	like an elf effortlessly bounding across the Groves."
 	icon_state = "aelfdagger"
 	sheathe_icon = "aelfdagger"
 	force = 15 //Equivalent to an Iron Dagger, with +33% integrity.
@@ -731,18 +734,19 @@
 	name = "autumned elvish bardiche"
 	desc = "A cleaving polearm, hewn from the branch of an Azurian elk tree and tipped with a wide blade of faeiron. The \
 	tapered edge can thrust through an oppressor's armor at the right range, while its wide sweeps can dispell even the \
-	rowdiest of lumbermobs."
+	rowdiest of lumberfoots."
 	icon_state = "aebardiche"
-	max_blade_int = 230 //Hybrid of the Bardiche and Glaive. Halfway point for defense and blade integrity.
-	wdefense = 7
+	max_blade_int = 200
+	wdefense = 5
 	smeltresult = /obj/item/ingot/iron
 
 /obj/item/clothing/head/roguetown/helmet/heavy/elven_helm/autumn
 	name = "autumnwoad elven helm"
 	desc = "A helmet of woven trunk, kept alive by ancient song and bristled with leaves \
-	of perpetual autumnage. It has yet to fully blossom, making it light enough to freely \
-	maneuver in; a boon, given how even a woodcutter's axe can shatter its bark asunder.  </br>'..the \
+	of perpetual autumnage. Unblossomed woadmaille can be splintered far easier than their \
+	springlyfed counterparts, but - consequently - becomes far lighter to maneuver with. </br>'..the \
 	winter winds will be much colder, now you're not here..'"
+	allowed_race = RACES_ALL_KINDS
 	icon = 'icons/roguetown/clothing/special/race_armor.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/race_armor.dmi'
 	icon_state = "awelfhead"
@@ -755,6 +759,7 @@
 	name = "autumneer cloak"
 	desc = "'A gentle rain falls softly on my weary eyes, as if to hide a lonely tear.. my life will be forever autumn..'"
 	icon_state = "aforestcloak"
+	allowed_race = RACES_ALL_KINDS
 	alternate_worn_layer = CLOAK_BEHIND_LAYER
 	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK
 	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
@@ -769,7 +774,7 @@
 	emotions of its wearer - for even the eldest of the Black Oaks can see their bark shifting \
 	back to that familiar crimson hue, whenever they're stricken with the yearning of \
 	tymes past. </br>'Like the sun through the trees you came to love me.. and like a leaf on a breeze, you blew away..'"
-	allowed_race = list(/datum/species/elf/wood, /datum/species/human/halfelf, /datum/species/elf/dark, /datum/species/elf) //Not meant for dwarves or smallfolk to wear.
+	allowed_race = RACES_ALL_KINDS //Uniquely wearable among all races, as it's 'unblossomed' and appropriately malleable enough to fit on smaller bodies.
 	icon = 'icons/roguetown/clothing/special/race_armor.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/race_armor.dmi'
 	icon_state = "awelfchest"
@@ -783,6 +788,7 @@
 	mystically preserved in a state of perpetual autumnage. Crimson vines and leaves poke out from \
 	its living joints, wicking away sweat like a sponge to water. </br>'Through autumn's golden gown \
 	we used to kick our way, you always loved this time of year..'"
+	allowed_race = RACES_ALL_KINDS
 	icon = 'icons/roguetown/clothing/special/race_armor.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/race_armor.dmi'
 	icon_state = "awelfhand"
@@ -795,6 +801,7 @@
 	of perpetual autumnage. It is said that a Black Oak's armor will only fully blossom once they've \
 	earned the mantle of guardianship; to forsake one's oath to nature is to dispell the ancient songs, \
 	and to let the bark wither away. </br>'..those fallen leaves lie undisturbed now, 'cause you're not here!'"
+	allowed_race = RACES_ALL_KINDS
 	icon = 'icons/roguetown/clothing/special/race_armor.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/race_armor.dmi'
 	icon_state = "awelfshoes"
