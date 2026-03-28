@@ -84,15 +84,23 @@
 
 	H.merctype = 15
 
-/datum/advclass/mercenary/anthrax/assasin
+/datum/advclass/mercenary/anthraxassasin
 	name = "Anthrax Assassin"
 	tutorial = "Black Venom's infamous killers for hire, it is said a single cut \
 	from their poison tipped blades is enough to send their victim to an early grave. You are one \
 	of those assassins, use your trusty bow and arrow to bring your targets' demise \
 	from afar or take a second sabre and weave a beautiful dance of death. All that matters is \
 	that your contract is fulfilled and your pockets heavy with mammon."
-	outfit = /datum/outfit/job/roguetown/mercenary/anthrax/assasin
+	outfit = /datum/outfit/job/roguetown/mercenary/anthrax_assasin
 	traits_applied = list(TRAIT_DARKVISION, TRAIT_DODGEEXPERT, TRAIT_ANTHRAXI)
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = list(
+		/datum/species/elf/dark,
+		/datum/species/human/halfelf, // Because half-drows are half-elves, guh.
+	)
+	class_select_category = CLASS_CAT_RACIAL
+	category_tags = list(CTAG_MERCENARY)
+
 	subclass_stats = list(
 		STATKEY_WIL = 2,
 		STATKEY_PER = 2,
@@ -121,7 +129,7 @@
 		/datum/skill/craft/traps = SKILL_LEVEL_EXPERT,
 	)
 
-/datum/outfit/job/roguetown/mercenary/anthrax/assasin/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/mercenary/anthrax_assasain/pre_equip(mob/living/carbon/human/H)
 	..()
 	shirt = /obj/item/clothing/suit/roguetown/shirt/shadowshirt/elflock
 	armor = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/shadowrobe
@@ -148,17 +156,32 @@
 				beltr = /obj/item/rogueweapon/scabbard/sword
 				backr = null
 				ADD_TRAIT(H, TRAIT_DUALWIELDER, TRAIT_GENERIC)
-				
+		var/riding = list("Spidertamer (Tameable Spider Mount)", "Shroomwalker (+I to Athletics)")
+		var/ridingchoice = input(H, "Choose your TRAVELBOON.", "ROAM ABROAD AND ROAM FAR.") as anything in riding
+		switch(ridingchoice)
+			if("Spidertamer (Tameable Spider Mount)")
+				apply_virtue(H, new /datum/virtue/utility/riding)
+			if("Shroomwalker (+I to Athletics)")
+				H.adjust_skillrank_up_to(/datum/skill/misc/athletics, SKILL_LEVEL_MASTER, TRUE)		
+
 	H.merctype = 15	
 
-/datum/advclass/mercenary/anthrax/bladesinger
+/datum/advclass/mercenary/anthrax_bladesinger
 	name = "Plumphelmic Bladesinger"
 	tutorial = "Within the fungal depths of the Underdark, maneuverability is \
 	worth its weight in gold. From the yils spent rushing past shroomtrees to \
 	hunt man-and-merbeaste, you've cultivated a physique rivaled only by the \
 	surface-dwelling hunters of old. Strike fast and strike true, for the blade \
 	is thy God."
-	outfit = /datum/outfit/job/roguetown/mercenary/anthrax/bladesinger
+	outfit = /datum/outfit/job/roguetown/mercenary/anthrax/blade_singer
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = list(
+		/datum/species/elf/dark,
+		/datum/species/human/halfelf, // Because half-drows are half-elves, guh.
+	)
+	class_select_category = CLASS_CAT_RACIAL
+	category_tags = list(CTAG_MERCENARY)
+
 	traits_applied = list(TRAIT_DARKVISION, TRAIT_MEDIUMARMOR, TRAIT_ANTHRAXI)
 	subclass_stats = list(
 		STATKEY_STR = 1,
@@ -182,13 +205,13 @@
 		/datum/skill/craft/traps = SKILL_LEVEL_JOURNEYMAN,
 	)
 
-/datum/outfit/job/roguetown/mercenary/anthrax/bladesinger/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/mercenary/anthrax_bladesinger/pre_equip(mob/living/carbon/human/H)
 	..()
 	shoes = /obj/item/clothing/shoes/roguetown/boots/armor/plate/bladesinger
 	belt = /obj/item/storage/belt/rogue/leather/black
 	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants/shadowpants
 	backl = /obj/item/storage/backpack/rogue/satchel/black
-	head = /obj/item/clothing/head/roguetown/helmet/heavy/barbute/bladesinger
+	head = /obj/item/clothing/head/roguetown/helmet/heavy/bladesinger
 	backpack_contents = list(
 		/obj/item/roguekey/mercenary = 1, 
 		/obj/item/storage/belt/rogue/pouch/coins/poor = 1)
@@ -235,7 +258,7 @@
 	icon = 'icons/roguetown/clothing/special/race_armor.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/race_armor.dmi'
 
-/obj/item/clothing/head/roguetown/helmet/heavy/barbute/bladesinger
+/obj/item/clothing/head/roguetown/helmet/barbute/bladesinger
 	name = "shadowplate barbute"
 	desc = "The horned visage of a Bladesinger, and the last thing that many-a-fool hath seen. Though little is understood of this enigmatic station, some \
 	believe them to be the Underdark's equivalent of anointed knights - then again, perhaps they mistranslated the Dark Elven term for 'knight' with \
