@@ -128,6 +128,7 @@
 		/datum/skill/craft/cooking = SKILL_LEVEL_NOVICE,
 		/datum/skill/craft/traps = SKILL_LEVEL_EXPERT,
 	)
+	extra_context = "This subclass is race-restricted to the Dark Elves, and can pick between two bonuses; an extra level to Athletics, or a rideable mount."
 
 /datum/outfit/job/roguetown/mercenary/anthrax_assasin/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -215,6 +216,7 @@
 		/datum/skill/craft/cooking = SKILL_LEVEL_NOVICE,
 		/datum/skill/craft/traps = SKILL_LEVEL_JOURNEYMAN,
 	)
+	extra_context = "This subclass is race-restricted to the Dark Elves, and can pick between two bonuses; an extra level to Athletics, or a rideable mount."
 
 /datum/outfit/job/roguetown/mercenary/anthrax_bladesinger/pre_equip(mob/living/carbon/human/H)
 	..()
