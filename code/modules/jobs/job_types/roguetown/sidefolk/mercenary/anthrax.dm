@@ -129,7 +129,7 @@
 		/datum/skill/craft/traps = SKILL_LEVEL_EXPERT,
 	)
 
-/datum/outfit/job/roguetown/mercenary/anthrax_assasain/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/mercenary/anthrax_assasin/pre_equip(mob/living/carbon/human/H)
 	..()
 	shirt = /obj/item/clothing/suit/roguetown/shirt/shadowshirt/elflock
 	armor = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/shadowrobe
