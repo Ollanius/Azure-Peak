@@ -46,7 +46,7 @@
 
 	)
 	subclass_languages = list(/datum/language/undercommon)
-	extra_context = "This subclass is race-limited to: Dark Elves Only. Chooses either free Saddleborn virtue with access to Drider Spider mount, or +1 to Athlethics level."
+	extra_context = "This subclass is race-restricted to the Dark Elves."
 
 /datum/outfit/job/roguetown/mercenary/anthrax/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -74,12 +74,12 @@
 	H.faction += "spider_lowers"
 
 	if(H.mind)
-		var/riding = list("Spider", "Shroomwalker (+I to Athletics)")
-		var/ridingchoice = input(H, "Choose your faith", "FAITH") as anything in riding
+		var/riding = list("Spidertamer (Tameable Spider Mount)", "Shroomwalker (+I to Athletics)")
+		var/ridingchoice = input(H, "Choose your TRAVELBOON.", "ROAM ABROAD AND ROAM FAR.") as anything in riding
 		switch(ridingchoice)
-			if("I'm a spider rider (your pet with you)")
+			if("Spidertamer (Tameable Spider Mount)")
 				apply_virtue(H, new /datum/virtue/utility/riding)
-			if("I walk on my legs (+1 for athletics)")
+			if("Shroomwalker (+I to Athletics)")
 				H.adjust_skillrank_up_to(/datum/skill/misc/athletics, SKILL_LEVEL_MASTER, TRUE)		
 
 	H.merctype = 15
@@ -188,20 +188,62 @@
 	belt = /obj/item/storage/belt/rogue/leather/black
 	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants/shadowpants
 	backl = /obj/item/storage/backpack/rogue/satchel/black
-	head = /obj/item/clothing/head/roguetown/helmet/heavy/bladesinger
+	head = /obj/item/clothing/head/roguetown/helmet/heavy/barbute/bladesinger
 	backpack_contents = list(
 		/obj/item/roguekey/mercenary = 1, 
 		/obj/item/storage/belt/rogue/pouch/coins/poor = 1)
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/fluted/shadowplate/bladesinger
-	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/shadowrobe
+	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/shadowrobe
 	gloves = /obj/item/clothing/gloves/roguetown/plate/shadowgauntlets/bladesinger
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather/heavy
 	mask = /obj/item/clothing/mask/rogue/facemask/shadowfacemask
-	neck = /obj/item/clothing/neck/roguetown/chaincoif/chainmantle
+	neck = /obj/item/clothing/neck/roguetown/leather
 	backr = /obj/item/rogueweapon/scabbard/gwstrap
-	beltr = 
 	beltl = /obj/item/rope/chain
+	r_hand = /obj/item/rogueweapon/greatsword/elfgsword
 
 	H.faction += "spider_lowers"
 
 	H.merctype = 15	
+
+/obj/item/clothing/suit/roguetown/armor/plate/fluted/shadowplate/bladesinger
+	name = "shadowplate breastplate"
+	desc = "Sunless alloys, meticulously shaped without the Riddle's grace into an interlocking shroud that barely inhibits one's \
+	agility. The fur-mantle of a great spiderbeaste lays draped across its shoulders, and its bronze-gilded breastplates bares the \
+	rontz stud with pride."
+	icon_state = "elfchest"
+	item_state = "elfchest"
+	icon = 'icons/roguetown/clothing/special/race_armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/race_armor.dmi'
+
+/obj/item/clothing/gloves/roguetown/plate/shadowgauntlets/bladesinger
+	name = "shadowplate gauntlets"
+	desc = "Taloned gauntlets, forged from sunless alloys. Decorating the cufflinks and talon-segments are intricate lacings of bronze, coveted amongst \
+	the Underdark's inhabitants as much as a surface-dweller covets gold."
+	icon_state = "elfhand"
+	item_state = "elfhand"
+	icon = 'icons/roguetown/clothing/special/race_armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/race_armor.dmi'
+
+/obj/item/clothing/shoes/roguetown/boots/armor/bladesinger
+	name = "shadowplate boots"
+	desc = "Plumphelmic sabatons, cuffed with bronze-gilded decorations and shingled with plates of sunless alloys. Each foot is cradled by a dozen seperate \
+	plates, allowing for an intimidating amount of agility to be practiced. Most tend to tremble in fear, when their presumptions of a plated hunter's \
+	speed are shattered mid-pursuit."
+	icon_state = "elfshoes"
+	item_state = "elfshoes"
+	icon = 'icons/roguetown/clothing/special/race_armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/race_armor.dmi'
+
+/obj/item/clothing/head/roguetown/helmet/heavy/barbute/bladesinger
+	name = "shadowplate barbute"
+	desc = "The horned visage of a Bladesinger, and the last thing that many-a-fool hath seen. Though little is understood of this enigmatic station, some \
+	believe them to be the Underdark's equivalent of anointed knights - then again, perhaps they mistranslated the Dark Elven term for 'knight' with \
+	'hunter' or 'marauder'."
+	icon_state = "elfhead"
+	item_state = "elfhead"
+	icon = 'icons/roguetown/clothing/special/race_armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/race_armor.dmi'
+	bloody_icon = 'icons/effects/blood64.dmi'
+	smeltresult = /obj/item/ingot/drow
+	smelt_bar_num = 2
