@@ -138,8 +138,19 @@
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather/heavy
 	mask = /obj/item/clothing/mask/rogue/shepherd/shadowmask/delf
 	neck = /obj/item/clothing/neck/roguetown/chaincoif/chainmantle
+	head = /obj/item/clothing/neck/roguetown/chaincoif/full/black
+	backl = /obj/item/storage/backpack/rogue/satchel/black
+	backpack_contents = list(
+		/obj/item/roguekey/mercenary = 1, 
+		/obj/item/storage/belt/rogue/pouch/coins/poor = 1, 
+		/obj/item/rogueweapon/huntingknife/idagger/steel/corroded/dirk = 1,
+		/obj/item/reagent_containers/glass/bottle/rogue/strongpoison = 1,
+		/obj/item/rogueweapon/scabbard/sheath)
 	beltl = /obj/item/rogueweapon/scabbard/sword
 	r_hand = /obj/item/rogueweapon/sword/sabre/stalker
+	shoes = /obj/item/clothing/shoes/roguetown/boots/leather/reinforced
+	belt = /obj/item/storage/belt/rogue/leather/black
+	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants/shadowpants
 
 	H.faction += "spider_lowers"
 
@@ -209,6 +220,7 @@
 	..()
 	shoes = /obj/item/clothing/shoes/roguetown/boots/armor/plate/bladesinger
 	belt = /obj/item/storage/belt/rogue/leather/black
+	cloak = /obj/item/clothing/cloak/puritan
 	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants/shadowpants
 	backl = /obj/item/storage/backpack/rogue/satchel/black
 	head = /obj/item/clothing/head/roguetown/helmet/heavy/bladesinger
@@ -219,7 +231,7 @@
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/shadowrobe
 	gloves = /obj/item/clothing/gloves/roguetown/plate/shadowgauntlets/bladesinger
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather/heavy
-	mask = /obj/item/clothing/mask/rogue/facemask/shadowfacemask
+	mask = /obj/item/clothing/mask/rogue/shepherd/shadowmask/delf
 	neck = /obj/item/clothing/neck/roguetown/leather
 	backr = /obj/item/rogueweapon/scabbard/gwstrap
 	beltl = /obj/item/rope/chain
