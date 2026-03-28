@@ -258,7 +258,7 @@
 	icon = 'icons/roguetown/clothing/special/race_armor.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/race_armor.dmi'
 
-/obj/item/clothing/head/roguetown/helmet/bladesinger
+/obj/item/clothing/head/roguetown/helmet/heavy/bladesinger
 	name = "shadowplate barbute"
 	desc = "The horned visage of a Bladesinger, and the last thing that many-a-fool hath seen. Though little is understood of this enigmatic station, some \
 	believe them to be the Underdark's equivalent of anointed knights - then again, perhaps they mistranslated the Dark Elven term for 'knight' with \
