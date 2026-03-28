@@ -237,6 +237,8 @@
 	beltl = /obj/item/rope/chain
 	r_hand = /obj/item/rogueweapon/greatsword/elfgsword
 
+	H.dna.species.soundpack_m = new /datum/voicepack/male/evil()
+
 	H.faction += "spider_lowers"
 
 	H.merctype = 15	
