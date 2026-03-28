@@ -151,7 +151,7 @@
 			H.put_in_hands(new /obj/item/rogueweapon/sword/short/elvish)
 			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/sword, SLOT_BELT_R, TRUE)
 	var/armors = list("Trophy Fur Robes", "Elven Cuirass")
-	var/armor_choice = input(H, "Choose your armor.", "THE FOREST CLOAKS YOU") as anything in armors
+	var/armor_choice = input(H, "Choose your ARMOR.", "THE FOREST CLOAKS YOU.") as anything in armors
 	switch(armor_choice)
 		if("Trophy Fur Robes")
 			H.equip_to_slot_or_del(new /obj/item/clothing/suit/roguetown/armor/leather/trophyfur, SLOT_ARMOR, TRUE)
@@ -159,7 +159,7 @@
 			REMOVE_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 			H.equip_to_slot_or_del(new /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fencer/elven, SLOT_ARMOR, TRUE)
 	var/helmets = list("Elven Barbute", "Winged Elven Barbute")
-	var/helmet_choice = input(H, "Choose your helmet.", "LEAVES OVER STEEL") as anything in helmets
+	var/helmet_choice = input(H, "Choose your HELMET.", "LEAVES OVER STEEL.") as anything in helmets
 	switch(helmet_choice)
 		if("Elven Barbute")
 			H.equip_to_slot_or_del(new /obj/item/clothing/head/roguetown/helmet/elvenbarbute/blackoak, SLOT_HEAD, TRUE)
