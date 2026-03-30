@@ -307,7 +307,7 @@
 	category = "Clothes"
 	result = /obj/item/clothing/head/roguetown/helmet/heavy/elven_helm
 	reqs = list(
-		/obj/item/natural/fibers = 3
+		/obj/item/natural/fibers = 3,
 		/obj/item/grown/log/tree/stick = 3,
 		/obj/item/clothing/head/roguetown/helmet/heavy/elven_helm/autumn/light = 1,
 		/obj/item/grown/log/tree/small = 1,
