@@ -22,7 +22,7 @@
 	var/list/delivered_items = list()
 	var/rite_started = FALSE
 	var/rite_completed = FALSE
-	var/tutorial_started = FALSE
+	var/tutorial_started = Fs
 	var/static/list/hag_tutorial_lines = list(
 		"Awaken, daughter of the mud... the roots have pulled you back from the long sleep.",
 		"The mortals have forgotten the taste of swamp water. You must remind them. Find them, bind them... give them 'boons' to fuel our return.",
