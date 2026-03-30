@@ -768,6 +768,7 @@
 	bloody_icon = 'icons/effects/blood64.dmi'
 	armor_class = ARMOR_CLASS_LIGHT //Very good protection against stabbing and crushing, but completely unprotected to cutting and chopping. Unique to this specific class, and appropriately weakened to compensate.
 	max_integrity = ARMOR_INT_HELMET_LEATHER //-33% durability hit, with 200HP instead of 300HP.
+	body_parts_covered = HEAD|HAIR|NOSE|EARS
 
 /obj/item/clothing/cloak/forrestercloak/autumn
 	name = "autumneer cloak"
@@ -808,6 +809,7 @@
 	icon_state = "awelfchestalt"
 	item_state = "awelfchestalt"
 	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER //-33% durability hit, with 300 instead of 500HP.
+	body_parts_covered = CHEST | VITALS | LEGS 
 
 /obj/item/clothing/gloves/roguetown/elven_gloves/autumn
 	name = "autumnwoad elven gloves"
