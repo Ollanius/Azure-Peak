@@ -753,7 +753,7 @@
 	item_state = "awelfhead"
 	bloody_icon = 'icons/effects/blood64.dmi'
 	armor_class = ARMOR_CLASS_LIGHT //Very good protection against stabbing and crushing, but completely unprotected to cutting and chopping. Unique to this specific class, and appropriately weakened to compensate.
-	max_integrity = ARMOR_INT_HELMET_BRIGADINE //-15% durability hit, with 250HP instead of 300HP.
+	max_integrity = ARMOR_INT_HELMET_HARDLEATHER //-15% durability hit, with 250HP instead of 300HP.
 
 /obj/item/clothing/head/roguetown/helmet/heavy/elven_helm/autumn/light
 	name = "autumnwoad elven barbute"
@@ -794,7 +794,7 @@
 	icon_state = "awelfchest"
 	item_state = "awelfchest"
 	armor_class = ARMOR_CLASS_LIGHT //Ditto.
-	max_integrity = ARMOR_INT_CHEST_BRIGADINE + 25 //-25ish% durability hit, with 375 instead of 500HP.
+	max_integrity = ARMOR_INT_CHEST_PLATE_BRIGANDINE + 25 //-25ish% durability hit, with 375 instead of 500HP.
 
 /obj/item/clothing/suit/roguetown/armor/plate/elven_plate/autumn/light
 	name = "autumwoad elven maille"
