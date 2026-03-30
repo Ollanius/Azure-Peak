@@ -707,7 +707,7 @@
 	name = "autumned elvish longsword"
 	desc = "A curved longsword, hewn from a melody of faeiron and the living bark of an Azurian \
 	elk tree. Unlike traditional alloys, faeiron is refined purely through the mystical arcyne \
-	techniques of the Black Oaks; nature's stones, hewn to cleave and catch like steel."
+	techniques of the Black Oaks; nature's stones, hewn to catch and cleave like steel."
 	icon = 'icons/roguetown/weapons/swords64.dmi'
 	icon_state = "aelflongsword"
 	sellprice = 20
