@@ -620,7 +620,7 @@
 	fights for the ancestral elven homelands of Azuria. Nature's call manifests along your blossoming bark, \
 	and you shall answer. Whether through blade or bow, you shall ensure that those who dare to disrespect \
 	Azuria's supple forests will learn to regret it."
-	extra_context = "This class is restricted to the Half-Elf, Wood Elf, and Dark Elf species."
+	extra_context = "This class is restricted to the Elf, Half-Elf, and Dark Elf species."
 	class_select_category = CLASS_CAT_RACIAL
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = list(
