@@ -675,8 +675,8 @@
 				H.adjust_skillrank_up_to(/datum/skill/combat/bows, SKILL_LEVEL_JOURNEYMAN, TRUE)
 				l_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve/autumn
 				beltr = /obj/item/quiver/arrows
-	head = /obj/item/clothing/head/roguetown/helmet/heavy/elven_helm/autumn
-	armor = /obj/item/clothing/suit/roguetown/armor/plate/elven_plate/autumn
+	head = /obj/item/clothing/head/roguetown/helmet/heavy/elven_helm/autumn/light
+	armor = /obj/item/clothing/suit/roguetown/armor/plate/elven_plate/autumn/light
 	neck = /obj/item/clothing/neck/roguetown/coif
 	shoes = /obj/item/clothing/shoes/roguetown/boots/elven_boots/autumn
 	cloak = /obj/item/clothing/cloak/forrestercloak/autumn
@@ -742,7 +742,7 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/elven_helm/autumn
 	name = "autumnwoad elven helm"
-	desc = "A helmet of woven trunk, kept alive by ancient song and bristled with leaves \
+	desc = "A helmet of thickly woven trunk, kept alive by ancient song and bristled with leaves \
 	of perpetual autumnage. Unblossomed woadmaille can be splintered far easier than their \
 	springlyfed counterparts, but - consequently - becomes far lighter to maneuver with. </br>'..the \
 	winter winds will be much colder, now you're not here..'"
@@ -751,6 +751,20 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/race_armor.dmi'
 	icon_state = "awelfhead"
 	item_state = "awelfhead"
+	bloody_icon = 'icons/effects/blood64.dmi'
+	armor_class = ARMOR_CLASS_LIGHT //Very good protection against stabbing and crushing, but completely unprotected to cutting and chopping. Unique to this specific class, and appropriately weakened to compensate.
+	max_integrity = ARMOR_INT_HELMET_BRIGANDINE //-15% durability hit, with 250HP instead of 300HP.
+
+/obj/item/clothing/head/roguetown/helmet/heavy/elven_helm/autumn/light
+	name = "autumnwoad elven barbute"
+	desc = "A helmet of woven trunk, kept alive by ancient song and bristled with leaves \
+	of perpetual autumnage. Unblossomed woadmaille can be splintered far easier than their \
+	springlyfed counterparts, but - consequently - becomes far lighter to maneuver with. </br>'..the \
+	winter winds will be much colder, now you're not here..'"
+	icon = 'icons/roguetown/clothing/special/race_armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/race_armor.dmi'
+	icon_state = "awelfheadalt"
+	item_state = "awelfheadalt"
 	bloody_icon = 'icons/effects/blood64.dmi'
 	armor_class = ARMOR_CLASS_LIGHT //Very good protection against stabbing and crushing, but completely unprotected to cutting and chopping. Unique to this specific class, and appropriately weakened to compensate.
 	max_integrity = ARMOR_INT_HELMET_LEATHER //-33% durability hit, with 200HP instead of 300HP.
@@ -768,8 +782,8 @@
 	inhand_mod = TRUE
 
 /obj/item/clothing/suit/roguetown/armor/plate/elven_plate/autumn
-	name = "autumwoad elven maille"
-	desc = "An assembly of woven trunk, kept alive by ancient song and bristled with leaves \
+	name = "autumwoad elven plate"
+	desc = "An assembly of thickly woven trunk, kept alive by ancient song and bristled with leaves \
 	of perpetual autumnage. As the mythos goes, the tone of woaden armor can sway with the \
 	emotions of its wearer - for even the eldest of the Black Oaks can see their bark shifting \
 	back to that familiar crimson hue, whenever they're stricken with the yearning of \
@@ -780,6 +794,19 @@
 	icon_state = "awelfchest"
 	item_state = "awelfchest"
 	armor_class = ARMOR_CLASS_LIGHT //Ditto.
+	max_integrity = ARMOR_INT_CHEST_BRIGANDINE + 25 //-25ish% durability hit, with 375 instead of 500HP.
+
+/obj/item/clothing/suit/roguetown/armor/plate/elven_plate/autumn/light
+	name = "autumwoad elven maille"
+	desc = "An assembly of woven trunk, kept alive by ancient song and bristled with leaves \
+	of perpetual autumnage. As the mythos goes, the tone of woaden armor can sway with the \
+	emotions of its wearer - for even the eldest of the Black Oaks can see their bark shifting \
+	back to that familiar crimson hue, whenever they're stricken with the yearning of \
+	tymes past. </br>'Like the sun through the trees you came to love me.. and like a leaf on a breeze, you blew away..'"
+	icon = 'icons/roguetown/clothing/special/race_armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/race_armor.dmi'
+	icon_state = "awelfchestalt"
+	item_state = "awelfchestalt"
 	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER //-33% durability hit, with 300 instead of 500HP.
 
 /obj/item/clothing/gloves/roguetown/elven_gloves/autumn
