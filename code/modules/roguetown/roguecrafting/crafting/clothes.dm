@@ -300,7 +300,7 @@
 		/obj/item/natural/cured/essence = 1,
 		)
 	skillcraft = /datum/skill/craft/carpentry
-	craftdiff = 2
+	craftdiff = 1
 
 /datum/crafting_recipe/roguetown/survival/autumnwoadhelmet
 	name = "autumnwoad elven helmet, imbuement"
@@ -314,4 +314,4 @@
 		/obj/item/natural/cured/essence = 1,
 		)
 	skillcraft = /datum/skill/craft/carpentry
-	craftdiff = 2
+	craftdiff = 1
