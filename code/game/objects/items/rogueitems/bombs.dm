@@ -1,7 +1,7 @@
 
 /obj/item/bomb
-	name = "bottle bomb"
-	desc = "A fiery explosion waiting to be coaxed from its glass prison."
+	name = "incendiary grenade"
+	desc = "A fiery explosion waiting to be coaxed from its ribbed prison."
 	icon_state = "bbomb"
 	icon = 'icons/roguetown/items/misc.dmi'
 	w_class = WEIGHT_CLASS_SMALL
@@ -648,7 +648,7 @@
 		qdel(src)
 
 /obj/item/smokeshell
-	name = "gas belcher shell"
+	name = "gas belching grenade"
 	desc = "A vented canister, bereft of its noxious payload. How long can you hold your breath?"
 	dropshrink = 0.6
 	icon_state = "smokeshell_blank"
@@ -678,32 +678,32 @@
 	..() // stop processing and delete self
 
 /obj/item/impact_grenade/smoke/poison_gas
-	name = "poison gas belcher"
+	name = "poison gas belching grenade"
 	desc = "A vented canister, filled with a noxious payload. Even a mere whiff of its verdant surprise threatens to choke you apart."
 	icon_state = "smokeshell_green"
 	smoke_type = /datum/effect_system/smoke_spread/poison_gas
 
 /obj/item/impact_grenade/smoke/healing_gas
-	name = "healing gas belcher"
+	name = "healing gas belching grenade"
 	desc = "A vented canister, filled with a medicinal payload. The crimson smoke tickles your lips; a taste not unlike sweetened lifeblood."
 	icon_state = "smokeshell_red"
 	smoke_type = /datum/effect_system/smoke_spread/healing_gas
 
 
 /obj/item/impact_grenade/smoke/fire_gas
-	name = "burning gas belcher"
+	name = "burning gas belching grenade"
 	desc = "A vented canister, filled with a fiery payload. It feels uncomfortably hot in your palm, and carries a curious scent - not unlike roasted frybirds."
 	icon_state = "smokeshell_orange"
 	smoke_type = /datum/effect_system/smoke_spread/fire_gas
 
 /obj/item/impact_grenade/smoke/blind_gas
-	name = "blinding gas belcher"
+	name = "blinding gas belching grenade"
 	desc = "A vented canister, filled with an irritating payload. Your eyes are already watering from its ebbed fumes, and the numbness threatens to shutter your lids without resistance."
 	icon_state = "smokeshell_blue"
 	smoke_type = /datum/effect_system/smoke_spread/blind_gas
 
 /obj/item/impact_grenade/smoke/mute_gas
-	name = "silent gas belcher"
+	name = "silent gas belching grenade"
 	desc = "A vented canister, filled with a numbing payload. A strange prickling sensation graces your mind and throat, not unlike the 'pins and needles' of a sleeping limb."
 	icon_state = "smokeshell_purple"
 	smoke_type = /datum/effect_system/smoke_spread/mute_gas	
