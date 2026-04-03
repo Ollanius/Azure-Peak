@@ -299,6 +299,14 @@
 	desc = span_red("Eating such a meal without a table? How churlish!")
 	timer = 2 MINUTES
 
+/datum/stressevent/bowedasnoble
+	stressadd = 6
+	desc = list(span_boldred("I bowed my head to someone of ignobility! Oh, how humiliating!"))
+	timer = 10 MINUTES
+
+/datum/stressevent/bowedasnoble/can_apply(mob/living/user)
+	return HAS_TRAIT(user, TRAIT_NOBLE)
+
 /datum/stressevent/graggar_culling_unfinished
 	stressadd = 1
 	desc = span_red("I must eat my opponent's heart before they eat MINE!")
