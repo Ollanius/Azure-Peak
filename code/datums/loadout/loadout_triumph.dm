@@ -366,9 +366,3 @@
 	path = /obj/item/enchantingkit/weapon/triumph_weaponkit_sengese
 	triumph_cost = 3
 	sort_category = "Triumphs"
-
-/datum/loadout_item/triumph_weaponkit_aruval
-	name = "Morphing Elixir, 'Aruval'"
-	path = /obj/item/enchantingkit/triumph_weaponkit_aruval
-	triumph_cost = 3
-	sort_category = "Triumphs"
