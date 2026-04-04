@@ -2041,69 +2041,6 @@
 	wbalance = WBALANCE_HEAVY
 	unenchantable = TRUE
 
-/obj/item/rogueweapon/sword/gold/lordscepter
-	name = "\"Godshand\""
-	desc = "A royal arming sword, who's golden blade and besilked handle lays separated by a duocruciformic crossguard. Nestled within its glistening bosom is a shard of Astrata's divinity authority; when reason fails to rank amongst rage, let Her speak for you. ‎</br>‎‎ </br>'..And I will strike down upon thee with great vengeance and furious anger - those who would attempt to poison and destroy my brothers. And you will know that I am the Lord when I lay my vengeance upon thee!'"
-	icon_state = "goldswordking"
-	sheathe_icon = "goldswordking"
-	anvilrepair = /datum/skill/craft/weaponsmithing
-	minstr = 7
-	max_integrity = 250
-	max_blade_int = 250
-	sellprice = 363
-	possible_item_intents = list(/datum/intent/sword/cut/arming, /datum/intent/sword/thrust/arming, /datum/intent/lord_electrocute, /datum/intent/lord_silence)
-	gripped_intents = list(/datum/intent/sword/cut/arming, /datum/intent/sword/thrust/arming, /datum/intent/sword/strike)
-	unenchantable = TRUE
-	COOLDOWN_DECLARE(sceptersword)
-
-/obj/item/rogueweapon/sword/gold/lordscepter/afterattack(atom/target, mob/user, flag)
-	. = ..()
-	if(get_dist(user, target) > 7)
-		return
-	
-	user.changeNext_move(CLICK_CD_MELEE)
-
-	if(ishuman(user))
-		var/mob/living/carbon/human/HU = user
-
-		if(HU.job != "Grand Duke")
-			to_chat(user, span_danger("The sword's divine authority doesn't recognize me."))
-			return
-
-		if(ishuman(target))
-			var/mob/living/carbon/human/H = target
-			var/area/target_area = get_area(H)
-
-			if(!istype(target_area, /area/rogue/indoors/town/manor))
-				to_chat(user, span_danger("The sword's divine authority cannot be invoked on targets outside of the manor!"))
-				return
-
-			if(H == HU)
-				return
-
-			if(!COOLDOWN_FINISHED(src, sceptersword))
-				to_chat(user, span_danger("The [src] is not ready yet! [round(COOLDOWN_TIMELEFT(src, sceptersword) / 10, 1)] seconds left!"))
-				return
-
-			if(H.anti_magic_check())
-				to_chat(user, span_danger("Something is disrupting the sword's divine authority!"))
-				return
-
-			if(istype(user.used_intent, /datum/intent/lord_electrocute))
-				HU.visible_message(span_warning("[HU] electrocutes [H] with the [src]."))
-				user.Beam(target,icon_state="lightning[rand(1,12)]",time=5)
-				H.electrocute_act(5, src)
-				COOLDOWN_START(src, sceptersword, 20 SECONDS)
-				to_chat(H, span_danger("I'm electrocuted by the sword's divine authority!"))
-				return
-
-			if(istype(user.used_intent, /datum/intent/lord_silence))
-				HU.visible_message("<span class='warning'>[HU] silences [H] with \the [src].</span>")
-				H.set_silence(20 SECONDS)
-				COOLDOWN_START(src, sceptersword, 10 SECONDS)
-				to_chat(H, "<span class='danger'>I'm silenced by the sword's divine authority!</span>")
-				return
-
 /obj/item/rogueweapon/sword/blacksteel
 	name = "blacksteel arming sword"
 	desc = "A broad blade of blacksteel, mounted to a rosawooden handle that perfectly compliments its wielder's grasp. It is the culmination of Psydonia's storied history with arming swords; a mastersmith's triumph, only fit for the hands of a true hero.. or a truer villain."
