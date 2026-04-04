@@ -99,12 +99,6 @@
 	target_items = list(/obj/item/rogueweapon/sword/long)
 	result_item = /obj/item/rogueweapon/sword/long/triumph
 
-/obj/item/enchantingkit/triumph_weaponkit_aruval
-	name = "'Aruval' rhomphaia morphing elixir"
-	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Rhomphaia."
-	target_items = list(/obj/item/rogueweapon/sword/long/rhomphaia)
-	result_item = /obj/item/rogueweapon/sword/long/rhomphaia/aruval
-
 /obj/item/enchantingkit/triumph_weaponkit_wide
 	name = "'Wideguard' longsword morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Steel Longsword, or a Rapier."
@@ -653,6 +647,21 @@
 	desc = "'A man chooses; a slave obeys! Now, would you kindly.. ?'"
 	icon_state = "whip_bronze"
 
+/obj/item/rogueweapon/whip/silver/triumph
+	name = "silver-tipped whip"
+	desc = "'What is a man, but a miserable pile of secrets? But enough talk - have at you!'"
+	icon_state = "whip_steel"
+
+/obj/item/rogueweapon/stoneaxe/woodcut/triumph
+	name = "valorian axe"
+	icon_state = "axelegacy"
+	desc = "'Through thick-and-thin, I have never failed you. May we trounce through the Terrorbog, one last time, before Astrata's glare vanishes 'neath the horizon?'"
+
+/obj/item/rogueweapon/stoneaxe/handaxe/triumph
+	name = "valorian hatchet"
+	icon_state = "hatchetlegacy"
+	desc = "'What is that rag for, anyways?'"
+
 /obj/item/rogueweapon/stoneaxe/woodcut/triumphalt
 	name = "double-headed axe"
 	desc = "'For Karl!'"
@@ -688,24 +697,3 @@
 	desc = "'Hail to the king, baby.'"
 	icon_state = "psyaxedouble"
 	swingsound = BLADEWOOSH_HUGE
-
-/obj/item/rogueweapon/whip/silver/triumph
-	name = "silver-tipped whip"
-	desc = "'What is a man, but a miserable pile of secrets? But enough talk - have at you!'"
-	icon_state = "whip_steel"
-
-/obj/item/rogueweapon/stoneaxe/woodcut/triumph
-	name = "valorian axe"
-	icon_state = "axelegacy"
-	desc = "'Through thick-and-thin, I have never failed you. May we trounce through the Terrorbog, one last time, before Astrata's glare vanishes 'neath the horizon?'"
-
-/obj/item/rogueweapon/stoneaxe/handaxe/triumph
-	name = "valorian hatchet"
-	icon_state = "hatchetlegacy"
-	desc = "'What is that rag for, anyways?'"
-
- /obj/item/rogueweapon/sword/long/rhomphaia/aruval
-	name = "aruval"
-	desc = "A Naledian hand-and-a-halfer, resembling the bastard child of a billhook and a messer. While originally fashioned to \
-	trim the leaves of higher branches, necessity - as it often does - saw it transformed into a devastating weapon."
-	icon_state = "aruval"
