@@ -1395,7 +1395,9 @@
 
 /obj/item/rogueweapon/sword/rapier/psy/relic
 	name = "Eucharist"
-	desc = "Etruscan shape falling prey to Otavan craftsmanship. Saint Malum's smiths created an uniquely thin blade, capable of swiftly skewering the unholy and the miscreants through gaps that most claim to have never existed in the first place. <b> Silver-dipped steel crowned upon a basket hilt that keeps righteous hands safe from harm."
+	desc = "Etruscan shape falling prey to Otavan craftsmanship. Saint Malum's smiths created an uniquely thin blade, capable of swiftly \
+	skewering the unholy and the miscreants through gaps that most claim to have never existed in the first place. <b> Silver-dipped steel \
+	crowned upon a basket hilt that keeps righteous hands safe from harm."
 	icon_state = "psyrapier"
 	sheathe_icon = "psyrapier"
 	max_integrity = 300
@@ -1516,6 +1518,7 @@
 	max_blade_int = 300
 	smeltresult = /obj/item/ingot/silver
 	wdefense = 5
+	sellprice = 150
 	is_silver = TRUE
 
 /obj/item/rogueweapon/sword/silver/decorated/ComponentInitialize()
