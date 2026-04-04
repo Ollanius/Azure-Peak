@@ -1519,7 +1519,7 @@
 	wdefense = 5
 	is_silver = TRUE
 
-/obj/item/rogueweapon/stoneaxe/woodcut/silver/ComponentInitialize()
+/obj/item/rogueweapon/sword/silver/decorated/ComponentInitialize()
 	AddComponent(\
 		/datum/component/silverbless,\
 		pre_blessed = BLESSING_NONE,\
