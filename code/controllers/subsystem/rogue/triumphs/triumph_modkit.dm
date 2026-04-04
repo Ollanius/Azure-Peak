@@ -594,12 +594,14 @@
 	desc = "'I'll swallow your soul, I'll swallow your soul!' </br>'Swallow this.'"
 	icon_state = "silveraxedouble"
 	swingsound = BLADEWOOSH_HUGE
+	is_silver = TRUE
 
 /obj/item/rogueweapon/stoneaxe/battle/psyaxe/triumph
 	name = "double-headed psydonic axe"
 	desc = "'Hail to the king, baby.'"
 	icon_state = "psyaxedouble"
 	swingsound = BLADEWOOSH_HUGE
+	is_silver = TRUE
 
 /obj/item/rogueweapon/mace/warhammer/steel/shishpar
 	name = "steel shishpar"
@@ -712,6 +714,7 @@
 	name = "silver-tipped whip"
 	desc = "'What is a man, but a miserable pile of secrets? But enough talk - have at you!'"
 	icon_state = "whip_steel"
+	is_silver = TRUE
 
 /obj/item/rogueweapon/whip/silver/triumph/ComponentInitialize()
 	AddComponent(\
