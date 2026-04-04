@@ -558,12 +558,6 @@
 	gaps in an opponent's armor. These are often produced without a cutting edge, especially in munitions grade \
 	examples as weary armorers try and prevent their levies from dulling swords on chopping firewood."
 
- /obj/item/rogueweapon/sword/long/rhomphaia/aruval
-	name = "aruval"
-	desc = "A Naledian hand-and-a-halfer, resembling the bastard child of a billhook and a messer. While originally fashioned to \
-	trim the leaves of higher branches, necessity - as it often does - saw it transformed into a devastating weapon."
-	icon_state = "aruval"
-
 /obj/item/rogueweapon/mace/warhammer/steel/shishpar
 	name = "steel shishpar"
 	desc = "A heavy steel mace with a sword-like handle, fashioned for the hands of Lakkarian shieldbearers. The weight makes it \
@@ -592,18 +586,6 @@
 	desc = "A silver craning mace from the southern reaches of Psydonia, following an ancient design that has survived \
 	for centuries-hence. It is cherished by the clerics of Lakkari, Naledi, and Ranenshen."
 	icon_state = "silverrungu"
-	is_silver = TRUE
-
-/obj/item/rogueweapon/mace/steel/silver/rungu/ComponentInitialize()
-	AddComponent(\
-		/datum/component/silverbless,\
-		pre_blessed = BLESSING_NONE,\
-		silver_type = SILVER_TENNITE,\
-		added_force = 0,\
-		added_blade_int = 100,\
-		added_int = 50,\
-		added_def = 2,\
-	)
 
 /obj/item/rogueweapon/huntingknife/combat/iron/kris
 	name = "kris"
@@ -700,32 +682,17 @@
 	desc = "'I'll swallow your soul, I'll swallow your soul!' </br>'Swallow this.'"
 	icon_state = "silveraxedouble"
 	swingsound = BLADEWOOSH_HUGE
-	is_silver = TRUE
 
 /obj/item/rogueweapon/stoneaxe/battle/psyaxe/triumph
 	name = "double-headed psydonic axe"
 	desc = "'Hail to the king, baby.'"
 	icon_state = "psyaxedouble"
 	swingsound = BLADEWOOSH_HUGE
-	is_silver = TRUE
 
 /obj/item/rogueweapon/whip/silver/triumph
 	name = "silver-tipped whip"
 	desc = "'What is a man, but a miserable pile of secrets? But enough talk - have at you!'"
 	icon_state = "whip_steel"
-	is_silver = TRUE
-
-/obj/item/rogueweapon/whip/silver/triumph/ComponentInitialize()
-	AddComponent(\
-		/datum/component/silverbless,\
-		pre_blessed = BLESSING_NONE,\
-		silver_type = SILVER_TENNITE,\
-		added_force = 0,\
-		added_blade_int = 100,\
-		added_int = 50,\
-		added_def = 2,\
-	)
-
 
 /obj/item/rogueweapon/stoneaxe/woodcut/triumph
 	name = "valorian axe"
@@ -736,3 +703,9 @@
 	name = "valorian hatchet"
 	icon_state = "hatchetlegacy"
 	desc = "'What is that rag for, anyways?'"
+
+ /obj/item/rogueweapon/sword/long/rhomphaia/aruval
+	name = "aruval"
+	desc = "A Naledian hand-and-a-halfer, resembling the bastard child of a billhook and a messer. While originally fashioned to \
+	trim the leaves of higher branches, necessity - as it often does - saw it transformed into a devastating weapon."
+	icon_state = "aruval"
