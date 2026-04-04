@@ -558,16 +558,6 @@
 	gaps in an opponent's armor. These are often produced without a cutting edge, especially in munitions grade \
 	examples as weary armorers try and prevent their levies from dulling swords on chopping firewood."
 
-/obj/item/rogueweapon/stoneaxe/woodcut/triumph
-	name = "valorian axe"
-	icon_state = "axelegacy"
-	desc = "'Through thick-and-thin, I have never failed you. May we trounce through the Terrorbog, one last time, before Astrata's glare vanishes 'neath the horizon?'"
-
-/obj/item/rogueweapon/stoneaxe/handaxe/triumph
-	name = "valorian hatchet"
-	icon_state = "hatchetlegacy"
-	desc = "'What is that rag for, anyways?'"
-
  /obj/item/rogueweapon/sword/long/rhomphaia/aruval
 	name = "aruval"
 	desc = "A Naledian hand-and-a-halfer, resembling the bastard child of a billhook and a messer. While originally fashioned to \
@@ -735,3 +725,14 @@
 		added_int = 50,\
 		added_def = 2,\
 	)
+
+
+/obj/item/rogueweapon/stoneaxe/woodcut/triumph
+	name = "valorian axe"
+	icon_state = "axelegacy"
+	desc = "'Through thick-and-thin, I have never failed you. May we trounce through the Terrorbog, one last time, before Astrata's glare vanishes 'neath the horizon?'"
+
+/obj/item/rogueweapon/stoneaxe/handaxe/triumph
+	name = "valorian hatchet"
+	icon_state = "hatchetlegacy"
+	desc = "'What is that rag for, anyways?'"
