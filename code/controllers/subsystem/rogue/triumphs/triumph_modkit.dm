@@ -99,6 +99,12 @@
 	target_items = list(/obj/item/rogueweapon/sword/long)
 	result_item = /obj/item/rogueweapon/sword/long/triumph
 
+/obj/item/enchantingkit/triumph_weaponkit_aruval
+	name = "'Aruval' rhomphaia morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Rhomphaia."
+	target_items = list(/obj/item/rogueweapon/sword/long/rhomphaia)
+	result_item = /obj/item/rogueweapon/sword/long/rhomphaia/aruval
+
 /obj/item/enchantingkit/triumph_weaponkit_wide
 	name = "'Wideguard' longsword morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Steel Longsword, or a Rapier."
@@ -237,16 +243,13 @@
 
 /obj/item/enchantingkit/weapon/triumph_weaponkit_ngombe
 	name = "'Ngombe' axesword morphing elixir"
-	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of an Iron Axe, a Steel Axe, a Battle Axe, a Iron Hunting Sword, an Iron Dueling Messer, a Steel Messer, a Steel Hunting Sword, or a Falchion."
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Iron Hunting Sword, an Iron Dueling Messer, a Steel Messer, a Steel Hunting Sword, or a Falchion."
 	target_items = list(
 		/obj/item/rogueweapon/sword/short/falchion,
 		/obj/item/rogueweapon/sword/short/messer/iron/virtue,
 		/obj/item/rogueweapon/sword/short/messer/iron,
 		/obj/item/rogueweapon/sword/short/messer/alt,
-		/obj/item/rogueweapon/sword/short/messer,
-		/obj/item/rogueweapon/stoneaxe/woodcut/steel,
-		/obj/item/rogueweapon/stoneaxe/woodcut,
-		/obj/item/rogueweapon/stoneaxe/battle
+		/obj/item/rogueweapon/sword/short/messer
 		)
 	result_item = /obj/item/rogueweapon/example/ngombe
 
@@ -602,6 +605,12 @@
 	icon_state = "psyaxedouble"
 	swingsound = BLADEWOOSH_HUGE
 	is_silver = TRUE
+
+ /obj/item/rogueweapon/sword/long/rhomphaia/aruval
+	name = "aruval"
+	desc = "A Naledian hand-and-a-halfer, resembling the bastard child of a billhook and a messer. While originally fashioned to \
+	trim the leaves of higher branches, necessity - as it often does - saw it transformed into a devastating weapon."
+	icon_state = "aruval"
 
 /obj/item/rogueweapon/mace/warhammer/steel/shishpar
 	name = "steel shishpar"
