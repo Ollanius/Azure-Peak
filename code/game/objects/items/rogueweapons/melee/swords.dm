@@ -1516,7 +1516,8 @@
 	gripped_intents = null
 	minstr = 11
 	max_blade_int = 300
-	smeltresult = /obj/item/ingot/silver
+	smeltresult = /obj/item/ingot/gold
+	smelt_bar_num = 1
 	wdefense = 5
 	sellprice = 150
 	is_silver = TRUE
