@@ -289,6 +289,10 @@
 	if(mastermob)
 		playsound(mastermob, pick('sound/combat/rend_start.ogg'), 100, FALSE)
 
+/datum/intent/sword/chop/cleave/super
+	name = "unstoppable cleave"
+	penfactor = PEN_BSTEEL
+
 /datum/intent/sword/bash
 	name = "pommel bash"
 	blade_class = BCLASS_BLUNT
