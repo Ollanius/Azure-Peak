@@ -676,8 +676,8 @@
 	force_wielded = 25
 	minstr = 11
 	wdefense = 6
-	possible_item_intents = list(/datum/intent/rend/broadsword, /datum/intent/sword/chop/heavy, /datum/intent/sword/thrust/heavy, /datum/intent/sword/strike)
-	gripped_intents = list(/datum/intent/rend/broadsword, /datum/intent/sword/chop/heavy, /datum/intent/sword/thrust/heavy, /datum/intent/sword/strike)
+	possible_item_intents = list(/datum/intent/sword/cut/rend, /datum/intent/sword/chop/heavy, /datum/intent/sword/thrust/heavy, /datum/intent/sword/strike)
+	gripped_intents = list(/datum/intent/sword/cut/rend, /datum/intent/sword/chop/heavy, /datum/intent/sword/thrust/heavy, /datum/intent/sword/strike)
 	smeltresult = /obj/item/ingot/silver
 	is_silver = TRUE
 
@@ -702,8 +702,8 @@
 	force_wielded = 25
 	minstr = 11
 	wdefense = 6
-	possible_item_intents = list(/datum/intent/rend/broadsword, /datum/intent/sword/chop/heavy, /datum/intent/sword/thrust/heavy, /datum/intent/sword/strike)
-	gripped_intents = list(/datum/intent/rend/broadsword, /datum/intent/sword/chop/heavy, /datum/intent/sword/thrust/heavy, /datum/intent/sword/strike)
+	possible_item_intents = list(/datum/intent/sword/cut/rend, /datum/intent/sword/chop/heavy, /datum/intent/sword/thrust/heavy, /datum/intent/sword/strike)
+	gripped_intents = list(/datum/intent/sword/cut/rend, /datum/intent/sword/chop/heavy, /datum/intent/sword/thrust/heavy, /datum/intent/sword/strike)
 	smeltresult = /obj/item/ingot/silverblessed
 	is_silver = TRUE
 
