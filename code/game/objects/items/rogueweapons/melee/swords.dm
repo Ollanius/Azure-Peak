@@ -468,7 +468,7 @@
 	name = "executioners sword"
 	desc = "A heavy broadsword with a terrifyingly sharp edge, purpose-made to part heads from shoulders. Owing to its nature as a weapon of justice, it lacks the piercing tips that befit most battle-ready broadswords. If you're strong enough to wield such a weapon, however, then that probably won't stop you from finding a way."
 	possible_item_intents = list(/datum/intent/sword/cut, /datum/intent/sword/chop/heavy, /datum/intent/sword/thrust/exe, /datum/intent/sword/strike)
-	gripped_intents = list(/datum/intent/sword/chop/heavy, /datum/intent/sword/cut/exe/cleave, /datum/intent/sword/cut/exe/sweep,  /datum/intent/rend/broadsword)
+	gripped_intents = list(/datum/intent/sword/chop/heavy, /datum/intent/sword/cut/exe/cleave, /datum/intent/sword/cut/exe/sweep,  /datum/intent/sword/cut/rend)
 	alt_grips = null
 	icon_state = "exe"
 	minstr = 12
@@ -569,7 +569,7 @@
 	icon = 'icons/roguetown/weapons/swords64.dmi'
 	icon_state = "dragonslayer"
 	possible_item_intents = list(/datum/intent/sword/chop/heavy, /datum/intent/sword/cut, /datum/intent/sword/thrust/exe, /datum/intent/sword/strike)
-	gripped_intents = list(/datum/intent/sword/chop/cleave, /datum/intent/rend, /datum/intent/sword/cut, /datum/intent/sword/thrust/heavy)
+	gripped_intents = list(/datum/intent/sword/chop/cleave, /datum/intent/sword/cut/rend, /datum/intent/sword/cut, /datum/intent/sword/thrust/heavy)
 	wbalance = WBALANCE_HEAVY //Stronger but sturdier executioner's sword, exchanging its peelage for an armor-piercing variant of Ansari's knockback variable.
 	minstr = 13 //Should be uncraftable, but obtainable through other variants. Challenge classes, dungeon rewards?
 	wdefense = 9
