@@ -256,9 +256,8 @@
 	chargedrain = 1.8
 	chargetime = 12
 	swingdelay = 0
-	damfactor = 1.3
+	damfactor = 1.5
 	intent_intdamage_factor = 1.3
-	penfactor = PEN_HEAVY
 	desc = "A powerful blow that delivers Strength-scaling knockback and slowdown to the target. The amount of inflicted knockback scales off your Strength, ranging from X (1 tile) to XIII (3 tiles). </br>Cannot inflict any knockback or slowdown if your Strength is below X. </br>Cannot be used consecutively more than every 5 seconds on the same target. </br>Prone targets halve the knockback distance. </br>Not fully charging the attack limits knockback to 1 tile."
 	var/maxrange = 3
 
@@ -289,10 +288,6 @@
 /datum/intent/sword/chop/cleave/prewarning()
 	if(mastermob)
 		playsound(mastermob, pick('sound/combat/rend_start.ogg'), 100, FALSE)
-
-/datum/intent/sword/chop/cleave/ultra
-	name = "unstoppable cleave"
-	penfactor = PEN_BSTEEL
 
 /datum/intent/sword/bash
 	name = "pommel bash"
