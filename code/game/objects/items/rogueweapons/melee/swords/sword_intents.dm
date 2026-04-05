@@ -231,6 +231,24 @@
 /datum/intent/rend/krieg
 	intent_intdamage_factor = 0.2
 
+/datum/intent/sword/cut/rend
+	name = "rend"
+	icon_state = "inrend"
+	attack_verb = list("rends", "cleaves")
+	animname = "chop"
+	blade_class = BCLASS_CHOP
+	hitsound = list('sound/combat/hits/bladed/genchop (1).ogg', 'sound/combat/hits/bladed/genchop (2).ogg', 'sound/combat/hits/bladed/genchop (3).ogg')
+	reach = 1
+	swingdelay = 15
+	penfactor = PEN_NONE
+	damfactor = 2.5
+	clickcd = CLICK_CD_CHARGED
+	no_early_release = TRUE
+	item_d_type = "slash"
+	misscost = 10
+	intent_intdamage_factor = 0.05
+	demolition_mod = 0.05
+
 /datum/intent/sword/chop/cleave
 	name = "cleave"
 	icon_state = "intear"
