@@ -85,24 +85,37 @@
 /obj/item/clothing/under/roguetown/platelegs/zizo
 	max_integrity = ARMOR_INT_LEG_ANTAG
 	name = "avantyne garments"
-	desc = "An unstemmable cognitovirus, laminated into thrice-parted leggings worn by only the truest - those, anointed by the Dame of Progress. In Her name."
+	desc = "An unstemmable cognitovirus, laminated into thrice-parted leggings worn by only the truest - those, anointed by the Dame of Progress, in Her name."
 	icon_state = "zizocloth"
 	armor = ARMOR_PLATE_BSTEEL
+
+/obj/item/clothing/under/roguetown/platelegs/zizo/alt
+	name = "avantyne fauldcoat"
+	desc = "The fossilization of a memory, damned to be forgotten by all but the divine - Her lux, crystallized into a veil impenetratable by all but the sharpest \
+	blades. If the legends are to be believed, She had worn these very garments long ago during Psydonia's darkest hour; when the Ascendants were but-two, when the \
+	Dark Star blotted out Astrata's glare, and when the ashes of Her empire were still smoldering. </br>..and to think, it was all a war without reason."
+	icon_state = "zizoplatelegs_med"
+	max_integrity = ARMOR_INT_LEG_STEEL_PLATE
+	armor_class = ARMOR_CLASS_MEDIUM
+
+/obj/item/clothing/under/roguetown/platelegs/zizo/alt/Initialize(mapload)
+	. = ..()
+	REMOVE_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
+
+/obj/item/clothing/under/roguetown/platelegs/zizo/alt/dropped(mob/living/carbon/human/user)
+	return ..()
 
 /obj/item/clothing/under/roguetown/platelegs/zizo/Initialize()
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
 	AddComponent(/datum/component/cursed_item, TRAIT_CABAL, "ARMOR")
+	AddComponent(/datum/component/item_equipped_movement_rustle, SFX_PLATE_STEP, 8)
 
 /obj/item/clothing/under/roguetown/platelegs/zizo/dropped(mob/living/carbon/human/user)
 	. = ..()
 	if(QDELETED(src))
 		return
 	qdel(src)
-
-/obj/item/clothing/under/roguetown/platelegs/zizo/Initialize(mapload)
-	. = ..()
-	AddComponent(/datum/component/item_equipped_movement_rustle, SFX_PLATE_STEP, 8)
 
 /obj/item/clothing/under/roguetown/platelegs/skirt
 	name = "steel plate tassets"
