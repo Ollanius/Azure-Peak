@@ -24,6 +24,11 @@
 	path = /obj/item/clothing/cloak/cape
 	sort_category = "Cloaks"
 
+/datum/loadout_item/cape_alt
+	name = "Cape, Alternate"
+	path = /obj/item/clothing/suit/roguetown/armor/longcape
+	sort_category = "Cloaks"
+
 /datum/loadout_item/halfcloak
 	name = "Halfcloak"
 	path = /obj/item/clothing/cloak/half
