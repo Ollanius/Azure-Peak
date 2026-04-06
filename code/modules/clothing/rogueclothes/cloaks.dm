@@ -158,7 +158,7 @@
 		add_overlay(pic)
 
 /obj/item/clothing/cloak/tabard/sleevedtabard
-	name = "Sleeved Tabard"
+	name = "sleeved tabard"
 	desc = " A tabard with a light sleeve and pauldron sewn on, it lacks the explicit detailing of other tabards in exchange."
 	color = null 
 	boobed = TRUE
@@ -1447,6 +1447,18 @@
 	. = ..()
 	AddComponent(/datum/component/cursed_item, TRAIT_HORDE, "CLOAK", "RENDERED ASUNDER")
 
+
+/obj/item/clothing/cloak/graggar/heavy
+	name = "vicious fullcloak"
+	icon_state = "graggarcloak_heavy"
+	desc = "Once Ravox’s sworn lieutenant, Graggar was driven to petty vengeance against a man he once considered His beloved brother. It \ 
+	was by Graggar’s hand that the sun was blotted from the sky - the Sinistar, a symbol of not just His own misery, but of the Ascendancy's \
+	self-destructive usurpance."
+
+/obj/item/clothing/cloak/graggar/heavy/Initialize()
+	. = ..()
+	ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
+
 /obj/item/clothing/cloak/forrestercloak
 	name = "forrester cloak"
 	desc = "A cloak worn by the Black Oaks of Azuria."
@@ -1671,7 +1683,7 @@
 	grid_height = 64
 
 /obj/item/clothing/cloak/scaledcloak
-	name = "Scaled Cloak"
+	name = "scaled cloak"
 	desc = "A light cloak covered in shimmering metal scales. Beautiful even if too light to protect it's wearer from more than other travel cloaks."
 	icon_state = "scalecloak"
 	item_state = "scalecloak"
