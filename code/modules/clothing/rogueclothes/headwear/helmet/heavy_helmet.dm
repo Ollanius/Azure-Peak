@@ -1209,7 +1209,8 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/zizo
 	name = "avantyne barbute"
-	desc = "Crystallized inzanity, brought to a lower plane of existence and flared into an ethereal greathelm. It has been called forth from the edge of reality, in Her name."
+	desc = "Crystallized inzanity, brought to a lower plane of existence and flared into an ethereal greathelm. It has been called forth from the edge of \
+	reality, in Her name."
 	adjustable = CAN_CADJUST
 	icon_state = "zizobarbute"
 	max_integrity = ARMOR_INT_HELMET_ANTAG
@@ -1220,14 +1221,28 @@
 /obj/item/clothing/head/roguetown/helmet/heavy/zizo/frogge
 	icon_state = "zizofrogmouth"
 	name = "avantyne froggemund"
-	desc = "Crystallized inzanity, brought to a lower plane of existence and flared into a wide-collared froggemund. It has been called forth from the edge of reality, in Her name."
+	desc = "Crystallized inzanity, brought to a lower plane of existence and flared into a wide-collared froggemund. It has been called forth from the edge of \
+	reality, in Her name."
+	flags_inv = HIDEFACE|HIDESNOUT|HIDEEARS
+	body_parts_covered = HEAD|EARS|HAIR
+	adjustable = CANT_CADJUST
+
+/obj/item/clothing/head/roguetown/helmet/heavy/zizo/bascinet
+	name = "avantyne full-face bascinet"
+	desc = "She had bathed in the entrails of reality's gutted filament to become divine, yet it came at a cost that even She couldn't have forseen. To see Her works \
+	come to ruin, to see Her people die in unblinking agony, and to see the ultimate truth of Her world; it was too much for Her to handle. Godliness begat inzanity - \
+	for in Her throes of despair, She sought to end this dying world with the Final Wonder; the Dark Star."
+	icon_state = "zizoplatehelm_med"
+	item_state = "zizoplatehelm_med"
 	flags_inv = HIDEFACE|HIDESNOUT|HIDEEARS
 	body_parts_covered = HEAD|EARS|HAIR
 	adjustable = CANT_CADJUST
 
 /obj/item/clothing/head/roguetown/helmet/heavy/zizo/volfhelm
 	name = "avantyne volf-face bascinet"
-	desc = "An unholy combination of a bastardised volf-face bascinet, along with avantyne reinforcements. Progress is an agonising process."
+	desc = "When She had ascended, so too was She overwhelmed with the cosmic truths of creation. She had seen the sorrow brought from Her empire's collapse, and \
+	had realized the world was already dead; a wretched and pathetic sum, aimlessly shambling forward while its entrails dragged 'cross the soil. Deluded by divine \
+	mania, She was quick to collude with Graggar in the cultivation of the Dark Star; a misericorde to finally end Psydonia's suffering."
 	icon_state = "volfplate_avantyne"
 	item_state = "volfplate_avantyne"
 
@@ -1238,6 +1253,13 @@
 /obj/item/clothing/head/roguetown/helmet/heavy/zizo/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/adjustable_clothing, (HEAD|EARS|HAIR), (HIDEEARS|HIDEHAIR), null, 'sound/items/visor.ogg', null, UPD_HEAD)	//Standard helmet
+
+/obj/item/clothing/head/roguetown/helmet/heavy/graggar/alt
+	name = "vicious skullhelm"
+	desc = "Nigh lyke a crushed skull worn with pride; as sturdy as one that has seen fractures.. and survived them, too. </br>Godliness was never meant to be tainted \
+	with minds so fragile and passionate. Yet, in the wake of His ascension, Graggar's sorrow led Him to find companionship in the only other force in this dying world \
+	that could truly relate to Him; Zizo. Their throes, intimate yet fleeting, birthed the resolve to end Psydonia's darkest hour - not through salvation, but damnation."
+	icon_state = "graggarplatehelm_heavy"
 
 /obj/item/clothing/head/roguetown/helmet/heavy/bucket/iron
 	name = "iron bucket helm"
