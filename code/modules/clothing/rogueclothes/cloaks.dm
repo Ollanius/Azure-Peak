@@ -158,7 +158,7 @@
 		add_overlay(pic)
 
 /obj/item/clothing/cloak/tabard/sleevedtabard
-	name = "Sleeved Tabard"
+	name = "sleeved tabard"
 	desc = " A tabard with a light sleeve and pauldron sewn on, it lacks the explicit detailing of other tabards in exchange."
 	color = null 
 	boobed = TRUE
@@ -1671,7 +1671,7 @@
 	grid_height = 64
 
 /obj/item/clothing/cloak/scaledcloak
-	name = "Scaled Cloak"
+	name = "scaled cloak"
 	desc = "A light cloak covered in shimmering metal scales. Beautiful even if too light to protect it's wearer from more than other travel cloaks."
 	icon_state = "scalecloak"
 	item_state = "scalecloak"
