@@ -52,6 +52,23 @@
 	max_integrity = ARMOR_INT_SIDE_ANTAG
 	icon_state = "graggarplategloves"
 
+/obj/item/clothing/gloves/roguetown/plate/graggar/alt
+	name = "vicious bone-gauntlets"
+	desc = "Steel plated gauntlets overlaid by an ornamental imagery of fractured bone and entrails. The violet smears; a tether to the lyfe that once was. </br>The Dark Star blotted out Astrata's glare, and \
+	threatened to finally end Psydonia; cold, alone, and whimpering. Amidst the chaos of Apotheosis, Ravox and Eora - though wholly mortal - hurried to the summit of Mount Golgatha to confront the ascended \ 
+	Graggar. Were it not for Her intervention, their pleas may've been enough to end His divine mania."
+	icon_state = "graggarplategloves_heavy"
+
+/obj/item/clothing/gloves/roguetown/plate/graggar/alt/Initialize()
+	. = ..()
+	ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
+
+/obj/item/clothing/gloves/roguetown/plate/graggar/alt/dropped(mob/living/carbon/human/user)
+	. = ..()
+	if(QDELETED(src))
+		return
+	qdel(src)
+
 /obj/item/clothing/gloves/roguetown/plate/graggar/Initialize()
 	. = ..()
 	AddComponent(/datum/component/cursed_item, TRAIT_HORDE, "ARMOR", "RENDERED ASUNDER")
@@ -81,9 +98,21 @@
 	chunkcolor = "#363030"
 	material_category = ARMOR_MAT_PLATE
 
+/obj/item/clothing/gloves/roguetown/plate/zizo/alt
+	name = "avantyne gloves"
+	desc = "Incongruent silks from a tymeline-most-doomed, woven to cradle the palms of God's successor. Razortips beckoned the greatest betrayal of all; for in Her divine mania, She /
+	refused to allow Graggar to rescind the Final Wonder's gaze. For just a moment, She had forced Him to be a slave once more; and worse yet, to cleave the pleading Eora in twain /
+	with His blade. It was only after their screams - that of the mourning lover and horrified brother - that Her inzanity finally abated."
+	icon_state = "zizogauntlets_med"
+
+/obj/item/clothing/gloves/roguetown/plate/zizo/alt/Initialize()
+	. = ..()
+	REMOVE_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
+
 /obj/item/clothing/gloves/roguetown/plate/zizo/Initialize()
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
+	AddComponent(/datum/component/cursed_item, TRAIT_CABAL, "ARMOR")
 
 /obj/item/clothing/gloves/roguetown/plate/zizo/dropped(mob/living/carbon/human/user)
 	. = ..()
