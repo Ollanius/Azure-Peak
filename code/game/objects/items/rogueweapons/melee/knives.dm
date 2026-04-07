@@ -646,6 +646,10 @@
 	max_blade_int = 300
 	embedding = list("embedded_pain_multiplier" = 1.2, "embed_chance" = 50, "embedded_fall_chance" = 0) 
 
+/obj/item/rogueweapon/huntingknife/idagger/steel/zizo/Initialize()
+	. = ..()
+	AddComponent(/datum/component/cursed_item, TRAIT_CABAL, "DAGGER")
+
 /obj/item/rogueweapon/huntingknife/idagger/steel/parrying/vaquero
 	name = "sail dagger"
 	force = 15
