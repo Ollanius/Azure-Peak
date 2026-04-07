@@ -1231,7 +1231,7 @@
 	name = "avantyne full-face bascinet"
 	desc = "She had bathed in the entrails of reality's gutted filament to become divine, yet it came at a cost that even She couldn't have forseen. To see Her works \
 	come to ruin, to see Her people die in unblinking agony, and to see the ultimate truth of Her world; it was too much for Her to handle. Godliness begat inzanity - \
-	for in Her throes of despair, She sought to end this dying world with the Final Wonder; the Dark Star."
+	for in Her throes of despair, She sought to end this dying world with the Final Wonder; the Sinistar."
 	icon_state = "zizoplatehelm_med"
 	item_state = "zizoplatehelm_med"
 	flags_inv = HIDEFACE|HIDESNOUT|HIDEEARS
@@ -1242,7 +1242,7 @@
 	name = "avantyne volf-face bascinet"
 	desc = "When She had ascended, so too was She overwhelmed with the cosmic truths of creation. She had seen the sorrow brought from Her empire's collapse, and \
 	had realized the world was already dead; a wretched and pathetic sum, aimlessly shambling forward while its entrails dragged 'cross the soil. Deluded by divine \
-	mania, She was quick to collude with Graggar in the cultivation of the Dark Star; a misericorde to finally end Psydonia's suffering."
+	mania, She was quick to collude with Graggar in the cultivation of the Sinistar; a misericorde to finally end Psydonia's suffering."
 	icon_state = "volfplate_avantyne"
 	item_state = "volfplate_avantyne"
 
