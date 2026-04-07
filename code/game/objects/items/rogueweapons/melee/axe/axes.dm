@@ -620,6 +620,20 @@
 	. = ..()
 	AddComponent(/datum/component/cursed_item, TRAIT_HORDE, "AXE", "RENDERED ASUNDER")
 
+/obj/item/rogueweapon/stoneaxe/woodcut/steel/graggar
+	name = "vicious tomahawk"
+	icon_state = "gheretic_axe"
+	desc = "A handaxe of greater stature, intricately decorated with the Sinistar's heraldry. Everything Graggar did, He did for Ravox. To see \
+	them relinquish divinity in favor of Eora's love, to willingly embrace the very chains he strove to shatter; it broke Him. Yils of resentment, \
+	of jealousy and frustration; finally released. If He would not be loved, then He would instead settle for hatred."
+	possible_item_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, /datum/intent/axe/bash, /datum/intent/axe/thrust)
+	force = 30
+	wdefense = 5
+
+/obj/item/rogueweapon/stoneaxe/woodcut/steel/graggar/Initialize()
+	. = ..()
+	AddComponent(/datum/component/cursed_item, TRAIT_HORDE, "AXE", "RENDERED ASUNDER")
+
 ////////////////////////////////////////
 // Unique loot axes; mostly from mobs //
 ////////////////////////////////////////
