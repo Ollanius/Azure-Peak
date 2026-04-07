@@ -54,7 +54,7 @@
 
 /obj/item/clothing/gloves/roguetown/plate/graggar/alt
 	name = "vicious bone-gauntlets"
-	desc = "Steel plated gauntlets overlaid by an ornamental imagery of fractured bone and entrails. The violet smears; a tether to the lyfe that once was. </br>The Dark Star blotted out Astrata's glare, and \
+	desc = "Steel plated gauntlets overlaid by an ornamental imagery of fractured bone and entrails. The violet smears; a tether to the lyfe that once was. </br>The Sinistar blotted out Astrata's glare, and \
 	threatened to finally end Psydonia; cold, alone, and whimpering. Amidst the chaos of Apotheosis, Ravox and Eora - though wholly mortal - hurried to the summit of Mount Golgatha to confront the \
 	ascended Graggar. Were it not for Her intervention, their pleas may've been enough to end His divine mania."
 	icon_state = "graggarplategloves_heavy"
