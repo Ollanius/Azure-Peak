@@ -1451,8 +1451,8 @@
 /obj/item/clothing/cloak/graggar/heavy
 	name = "vicious skullcloak"
 	icon_state = "graggarcloak_heavy"
-	desc = "Once Ravox’s sworn lieutenant, Graggar was driven to petty vengeance against a man he once \ 
-	considered His beloved brother. It was by Graggar’s hand that the sun was blotted from the sky - the \
+	desc = "Once Ravox's sworn lieutenant, Graggar was driven to petty vengeance against a man he once \ 
+	considered His beloved brother. It was by Graggar's hand that the sun was blotted from the sky - the \
 	Sinistar, a symbol of not just His own misery, but of the Ascendancy's self-destructive usurpance."
 
 /obj/item/clothing/cloak/graggar/heavy/Initialize()
