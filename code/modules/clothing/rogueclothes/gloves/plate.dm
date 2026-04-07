@@ -104,7 +104,7 @@
 	of all; for in Her divine mania, She refused to allow Graggar to rescind the Final Wonder's gaze. For just a moment, She had forced Him to be a \
 	slave once more; and worse yet, to cleave the pleading Eora in twain with His blade. It was only after their screams - that of the mourning lover \
 	and horrified brother - that Her inzanity finally abated."
-	icon_state = "zizogauntlets_med"
+	icon_state = "zizoplategauntlets_med"
 
 /obj/item/clothing/gloves/roguetown/plate/zizo/alt/Initialize()
 	. = ..()
