@@ -237,6 +237,7 @@
 	matter the scorching heat – no matter the wrath of their enemies, Graggar never faltered in His duty. When Ravox broke \
 	their oath and sought to recede from Godhood with Eora, grief could not describe what He had felt."
 	icon_state = "graggarplatemask_heavy"
+	smeltresult = /obj/item/scrap/graggar
 
 /obj/item/clothing/mask/rogue/facemask/steel/graggar/Initialize()
 	. = ..()
