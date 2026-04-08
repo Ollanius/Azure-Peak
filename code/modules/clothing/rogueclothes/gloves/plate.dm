@@ -51,6 +51,7 @@
 	desc = "Fluted gauntlets, razor-tipped and fluidic in motion. Most are led to believe that 'might makes right', yet Graggar's truth is far more succinct - 'might makes'. Murder is the ultimate force; the only difference between you and them is that they're too afraid to admit it."
 	max_integrity = ARMOR_INT_SIDE_ANTAG
 	icon_state = "graggarplategloves"
+	smeltresult = /obj/item/scrap/graggar
 
 /obj/item/clothing/gloves/roguetown/plate/graggar/alt
 	name = "vicious bone-gauntlets"
@@ -58,6 +59,7 @@
 	threatened to finally end Psydonia; cold, alone, and whimpering. Amidst the chaos of Apotheosis, Ravox and Eora - though wholly mortal - hurried to the summit of Mount Golgatha to confront the \
 	ascended Graggar. Were it not for Her intervention, their pleas may've been enough to end His divine mania."
 	icon_state = "graggarplategloves_heavy"
+	smeltresult = /obj/item/scrap/graggar
 
 /obj/item/clothing/gloves/roguetown/plate/graggar/alt/Initialize()
 	. = ..()
@@ -78,6 +80,7 @@
 	desc = "Many a man his life hath sold,"
 	icon_state = "matthiosgloves"
 	max_integrity = ARMOR_INT_SIDE_ANTAG
+	smeltresult = /obj/item/scrap/matthios
 
 /obj/item/clothing/gloves/roguetown/plate/matthios/Initialize()
 	. = ..()
@@ -97,6 +100,7 @@
 	max_integrity = ARMOR_INT_SIDE_ANTAG
 	chunkcolor = "#363030"
 	material_category = ARMOR_MAT_PLATE
+	smeltresult = /obj/item/scrap/zizo
 
 /obj/item/clothing/gloves/roguetown/plate/zizo/alt
 	name = "avantyne gloves"
@@ -105,10 +109,11 @@
 	slave once more; and worse yet, to cleave the pleading Eora in twain with His blade. It was only after their screams - that of the mourning lover \
 	and horrified brother - that Her inzanity finally abated."
 	icon_state = "zizoplategauntlets_med"
+	smeltresult = /obj/item/ingot/avantyne
 
-/obj/item/clothing/gloves/roguetown/plate/zizo/alt/Initialize()
+/*/obj/item/clothing/gloves/roguetown/plate/zizo/alt/Initialize()
 	. = ..()
-	REMOVE_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
+	REMOVE_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)*/
 
 /obj/item/clothing/gloves/roguetown/plate/zizo/Initialize()
 	. = ..()
