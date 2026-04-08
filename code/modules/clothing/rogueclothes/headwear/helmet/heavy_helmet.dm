@@ -1255,7 +1255,7 @@
 	body_parts_covered = HEAD|EARS|HAIR
 	adjustable = CANT_CADJUST
 	smeltresult = /obj/item/ingot/avantyne
-	armor = ARMOR_BSTEEL
+	armor = ARMOR_PLATE_BSTEEL
 
 /obj/item/clothing/head/roguetown/helmet/heavy/zizo/volfhelm
 	name = "avantyne volfskull bascinet"
