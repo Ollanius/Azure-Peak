@@ -58,6 +58,7 @@
 	armor = ARMOR_PLATE_BSTEEL
 	max_integrity = ARMOR_INT_LEG_STEEL_PLATE // Good good resistances, but less crit resist than the other ascendant armors. In trade, we can take off our pants to repair, and they are medium rather than heavy.
 	armor_class = ARMOR_CLASS_MEDIUM
+	smeltresult = /obj/item/scrap/graggar
 
 /obj/item/clothing/under/roguetown/platelegs/graggar/Initialize(mapload)
 	. = ..()
@@ -69,6 +70,7 @@
 	desc = "But my outside to behold:"
 	icon_state = "matthioslegs"
 	armor = ARMOR_PLATE_BSTEEL
+	smeltresult = /obj/item/scrap/mattios
 
 /obj/item/clothing/under/roguetown/platelegs/matthios/Initialize()
 	. = ..()
@@ -88,6 +90,7 @@
 	desc = "An unstemmable cognitovirus, laminated into thrice-parted leggings worn by only the truest - those, anointed by the Dame of Progress, in Her name."
 	icon_state = "zizocloth"
 	armor = ARMOR_PLATE_BSTEEL
+	smeltresult = /obj/item/scrap/zizo
 
 /obj/item/clothing/under/roguetown/platelegs/zizo/alt
 	name = "avantyne fauldcoat"
@@ -97,13 +100,14 @@
 	icon_state = "zizoplatelegs_med"
 	max_integrity = ARMOR_INT_LEG_STEEL_PLATE
 	armor_class = ARMOR_CLASS_MEDIUM
+	smeltresult = /obj/item/ingot/avantyne
 
-/obj/item/clothing/under/roguetown/platelegs/zizo/alt/Initialize(mapload)
+/*/obj/item/clothing/under/roguetown/platelegs/zizo/alt/Initialize(mapload)
 	. = ..()
 	REMOVE_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
 
 /obj/item/clothing/under/roguetown/platelegs/zizo/alt/dropped(mob/living/carbon/human/user)
-	return ..()
+	return ..()*/ //Check armor.dm for the details. In short - idea's that this particular armor set can be used by any Ascendant.
 
 /obj/item/clothing/under/roguetown/platelegs/zizo/Initialize()
 	. = ..()
