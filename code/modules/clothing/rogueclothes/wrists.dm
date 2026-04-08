@@ -413,6 +413,7 @@
 /obj/item/clothing/wrists/roguetown/bracers/zizo/Initialize()
 	. = ..()
 	AddComponent(/datum/component/cursed_item, TRAIT_CABAL, "ARMOR")
+
 //
 
 /obj/item/clothing/wrists/roguetown/bracers/graggar
@@ -434,6 +435,7 @@
 	icon_state = "graggarplatebracer_heavy"
 	max_integrity = ARMOR_INT_SIDE_ANTAG
 	color = null
+	smeltresult = /obj/item/scrap/graggar
 
 /obj/item/clothing/wrists/roguetown/bracers/graggar/alt/Initialize()
 	. = ..()
