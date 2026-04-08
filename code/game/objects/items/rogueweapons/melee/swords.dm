@@ -356,12 +356,13 @@
 	max_integrity = 500
 	equip_delay_self = 0
 	unequip_delay_self = 0
+	smeltresult = /obj/item/scrap/zizo
 
 /obj/item/rogueweapon/sword/long/zizo/Initialize()
 	. = ..()
 	AddComponent(/datum/component/cursed_item, TRAIT_CABAL, "SWORD")
 
-/obj/item/rogueweapon/sword/zizo
+/obj/item/rogueweapon/sword/avantyne
 	name = "avantyne shortsword"
 	desc = "Anger and spite, channeled into a blade that defies both wisdom and purity. Seldom does such power come without a price, however; are you ready to pay it?"
 	icon_state = "zizoshortsword"
@@ -374,10 +375,7 @@
 	max_integrity = 300
 	equip_delay_self = 0
 	unequip_delay_self = 0
-
-/obj/item/rogueweapon/sword/zizo/Initialize()
-	. = ..()
-	AddComponent(/datum/component/cursed_item, TRAIT_CABAL, "SWORD")
+	smeltresult = /obj/item/ingot/avantyne
 
 /obj/item/rogueweapon/sword/long/heirloom
 	name = "old longsword"
