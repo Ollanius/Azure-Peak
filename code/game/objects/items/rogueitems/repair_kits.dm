@@ -162,3 +162,27 @@
 	grid_height = 32
 	dropshrink = 0.7
 	anvilrepair = /datum/skill/craft/blacksmithing //for empty kit code
+
+/obj/item/scrap/zizo
+	name = "avantyne fragment"
+	desc = "Whispering fragments of an otherworldly alloy. </br>Power always comes at a price."
+	icon_state = "scrap_zizo"
+	icon = 'icons/roguetown/items/misc.dmi'
+
+/obj/item/scrap/graggar
+	name = "vicious fragment"
+	desc = "Bleeding fragments of an otherworldly alloy. </br>Murder and justice are only seperated by intent."
+	icon_state = "scrap_graggar"
+	icon = 'icons/roguetown/items/misc.dmi'
+
+/obj/item/scrap/matthios
+	name = "gilded fragment"
+	desc = "Glimmering fragments of an otherworldly alloy. </br>The road to perdition lies paved with finer intentions."
+	icon_state = "scrap_matthios"
+	icon = 'icons/roguetown/items/misc.dmi'
+
+/obj/item/scrap/baotha
+	name = "saccharine fragment"
+	desc = "Aromatic fragments of an otherworldly alloy. </br>Despair is the gravest, most agonizing poison of them all."
+	icon_state = "scrap_baotha"
+	icon = 'icons/roguetown/items/misc.dmi'
