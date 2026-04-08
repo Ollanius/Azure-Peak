@@ -70,7 +70,7 @@
 	desc = "But my outside to behold:"
 	icon_state = "matthioslegs"
 	armor = ARMOR_PLATE_BSTEEL
-	smeltresult = /obj/item/scrap/mattios
+	smeltresult = /obj/item/scrap/matthios
 
 /obj/item/clothing/under/roguetown/platelegs/matthios/Initialize()
 	. = ..()
