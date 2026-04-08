@@ -452,7 +452,7 @@
 		return
 	qdel(src)
 
-/obj/item/clothing/suit/roguetown/armor/plate/fluted/zizo
+/obj/item/clothing/suit/roguetown/armor/plate/fluted/avantyne
 	name = "avantyne maille"
 	desc = "Pauldrons lyke that of fire, crested atop a veil of otherworldly maille - impossibly tough, warm to the touch, and crackling with insidious energies. When \
 	the Sinistar was torn from the sky, Zizo knew that the Apotheosis failed. She loomed before the world's mana, hopeless and fraught, ready to throw Herself \
@@ -460,15 +460,8 @@
 	armor_class = ARMOR_CLASS_MEDIUM
 	max_integrity = ARMOR_INT_CHEST_PLATE_STEEL
 	icon_state = "zizoplatechest_med"
-	armor = ARMOR_BSTEEL
+	armor = ARMOR_PLATE_BSTEEL
 	smeltresult = /obj/item/ingot/avantyne
-
-/*/obj/item/clothing/suit/roguetown/armor/plate/fluted/zizo/Initialize()
-	. = ..()
-	AddComponent(/datum/component/cursed_item, TRAIT_CABAL, "ARMOR")
-
-/obj/item/clothing/suit/roguetown/armor/plate/fluted/zizo/dropped(mob/living/carbon/human/user)
-	return ..()*/ //Collaborative idea's that anyone can use avantyne made from wafers. Think of it as an agnostic, Ascendant-friendly variant of the holy silver alloy used for Templars.
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/zizo
 	name = "avantyne fullplate"
@@ -489,7 +482,6 @@
 	if(QDELETED(src))
 		return
 	qdel(src)
-
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/bikini
 	name = "full-plate corset"
