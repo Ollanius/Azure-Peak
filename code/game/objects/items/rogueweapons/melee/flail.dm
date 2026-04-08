@@ -329,7 +329,7 @@
 	associated_skill = /datum/skill/combat/whipsflails
 	slot_flags = ITEM_SLOT_BACK
 	anvilrepair = /datum/skill/craft/weaponsmithing
-
+	smeltresult = /obj/item/scrap/matthios
 
 /obj/item/rogueweapon/flail/peasantwarflail/matthios/Initialize()
 	. = ..()
