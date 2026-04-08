@@ -379,6 +379,13 @@
 	color = "#bc9ab7"
 	sellprice = 30 //Rarer to obtain than iron, and feasible to sell off as salvage.
 
+/obj/item/ingot/avantyne
+	name = "avantyne wafer"
+	desc = "This ingot, though borne of unholy circumstance, rumbles with otherworldly potential. Chiseled onto the darksteel is a forbiddden iteration of the psycross - the very same, professed by Her disciples."
+	icon_state = "avantynewafer"
+	smeltresult = null
+	sellprice = 100
+
 //Components!
 
 /obj/item/ingot/component //Root. Don't use under most circumstances.
