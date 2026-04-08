@@ -1184,6 +1184,7 @@
 	bloody_icon = 'icons/effects/blood64.dmi'
 	experimental_inhand = FALSE
 	experimental_onhip = FALSE
+	smeltresult = /obj/item/scrap/matthios
 
 /obj/item/clothing/head/roguetown/helmet/heavy/matthios/Initialize()
 	. = ..()
@@ -1196,6 +1197,7 @@
 	max_integrity = ARMOR_INT_HELMET_ANTAG
 	flags_inv = HIDEEARS|HIDEFACE|HIDESNOUT|HIDEHAIR|HIDEFACIALHAIR
 	var/active_item = FALSE
+	smeltresult = /obj/item/scrap/graggar
 
 /obj/item/clothing/head/roguetown/helmet/heavy/graggar/Initialize()
 	. = ..()
@@ -1230,6 +1232,7 @@
 	chunkcolor = "#363030"
 	material_category = ARMOR_MAT_PLATE
 	toggle_icon_state = TRUE
+	smeltresult = /obj/item/scrap/zizo
 
 /obj/item/clothing/head/roguetown/helmet/heavy/zizo/frogge
 	icon_state = "zizofrogmouth"
@@ -1239,9 +1242,10 @@
 	flags_inv = HIDEFACE|HIDESNOUT|HIDEEARS
 	body_parts_covered = HEAD|EARS|HAIR
 	adjustable = CANT_CADJUST
+	smeltresult = /obj/item/scrap/zizo
 
 /obj/item/clothing/head/roguetown/helmet/heavy/zizo/bascinet
-	name = "avantyne full-face bascinet"
+	name = "avantyne veil"
 	desc = "She had bathed in the entrails of reality's gutted filament to become divine, yet it came at a cost that even She couldn't have forseen. To see Her works \
 	come to ruin, to see Her people die in unblinking agony, and to see the ultimate truth of Her world; it was too much for Her to handle. Godliness begat inzanity - \
 	for in Her throes of despair, She sought to end this dying world with the Final Wonder; the Sinistar."
@@ -1250,14 +1254,17 @@
 	flags_inv = HIDEFACE|HIDESNOUT|HIDEEARS
 	body_parts_covered = HEAD|EARS|HAIR
 	adjustable = CANT_CADJUST
+	smeltresult = /obj/item/ingot/avantyne
+	armor = ARMOR_BSTEEL
 
 /obj/item/clothing/head/roguetown/helmet/heavy/zizo/volfhelm
-	name = "avantyne volf-face bascinet"
+	name = "avantyne volfskull bascinet"
 	desc = "When She had ascended, so too was She overwhelmed with the cosmic truths of creation. She had seen the sorrow brought from Her empire's collapse, and \
 	had realized the world was already dead; a wretched and pathetic sum, aimlessly shambling forward while its entrails dragged 'cross the soil. Deluded by divine \
 	mania, She was quick to collude with Graggar in the cultivation of the Sinistar; a misericorde to finally end Psydonia's suffering."
 	icon_state = "volfplate_avantyne"
 	item_state = "volfplate_avantyne"
+	smeltresult = /obj/item/scrap/zizo
 
 /obj/item/clothing/head/roguetown/helmet/heavy/zizo/Initialize()
 	. = ..()
@@ -1273,6 +1280,7 @@
 	with minds so fragile and passionate. Yet, in the wake of His ascension, Graggar's sorrow led Him to find companionship in the only other force in this dying world \
 	that could truly relate to Him; Zizo. Their throes, intimate yet fleeting, birthed the resolve to end Psydonia's darkest hour - not through salvation, but damnation."
 	icon_state = "graggarplatehelm_heavy"
+	smeltresult = /obj/item/scrap/graggar
 
 /obj/item/clothing/head/roguetown/helmet/heavy/bucket/iron
 	name = "iron bucket helm"
