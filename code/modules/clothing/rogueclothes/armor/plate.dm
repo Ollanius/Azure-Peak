@@ -286,6 +286,7 @@
 	max_integrity = ARMOR_INT_CHEST_PLATE_STEEL // We are probably one of the best medium armor sets. At higher integ than most(heavy armor levels, pretty much. But worse resistances, we get the bonus over the other sets of being medium and being unequippable.)
 	icon_state = "graggarplate"
 	armor = ARMOR_PLATE
+	smeltresult = /obj/item/scrap/graggar
 
 /obj/item/clothing/suit/roguetown/armor/plate/fluted/graggar/Initialize()
 	. = ..()
@@ -300,6 +301,7 @@
 	max_integrity = ARMOR_INT_CHEST_PLATE_ANTAG
 	chunkcolor = "#363030"
 	material_category = ARMOR_MAT_PLATE
+	smeltresult = /obj/item/scrap/graggar
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/graggar/Initialize()
 	. = ..()
@@ -438,6 +440,7 @@
 	desc = "Often, you have heard that told,"
 	icon_state = "matthiosarmor"
 	max_integrity = ARMOR_INT_CHEST_PLATE_ANTAG
+	smeltresult = /obj/item/scrap/matthios
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/matthios/Initialize()
 	. = ..()
@@ -450,21 +453,22 @@
 	qdel(src)
 
 /obj/item/clothing/suit/roguetown/armor/plate/fluted/zizo
-	name = "avantyne half-plate"
-	desc = "Pauldrons lyke that of fire, burning the palms of those who no longer pray. The darksteel curves and curdles with insidious energies. When \
-	the Sinistar was torn from the sky, Zizo knew that the Apotheosis of the Sinistar had failed. She loomed before the world's mana, hopeless and fraught, \
-	ready to see Herself as a catalyst to poison the very leylines of Psydonia. Yet, She hesitated; for when She looked into the swirling abyss.. </br>‎  <font color='FF0000'>..something looked back.</font>"
+	name = "avantyne maille"
+	desc = "Pauldrons lyke that of fire, crested atop a veil of otherworldly maille - impossibly tough, warm to the touch, and crackling with insidious energies. When \
+	the Sinistar was torn from the sky, Zizo knew that the Apotheosis failed. She loomed before the world's mana, hopeless and fraught, ready to throw Herself \
+	down and curse the very leylines of Psydonia. Yet, She hesitated; for when She looked into the swirling abyss.. </br>‎  <font color='FF0000'>..something looked back.</font>"
 	armor_class = ARMOR_CLASS_MEDIUM
 	max_integrity = ARMOR_INT_CHEST_PLATE_STEEL
 	icon_state = "zizoplatechest_med"
-	armor = ARMOR_PLATE
+	armor = ARMOR_BSTEEL
+	smeltresult = /obj/item/ingot/avantyne
 
-/obj/item/clothing/suit/roguetown/armor/plate/fluted/zizo/Initialize()
+/*/obj/item/clothing/suit/roguetown/armor/plate/fluted/zizo/Initialize()
 	. = ..()
 	AddComponent(/datum/component/cursed_item, TRAIT_CABAL, "ARMOR")
 
 /obj/item/clothing/suit/roguetown/armor/plate/fluted/zizo/dropped(mob/living/carbon/human/user)
-	return ..()
+	return ..()*/ //Collaborative idea's that anyone can use avantyne made from wafers. Think of it as an agnostic, Ascendant-friendly variant of the holy silver alloy used for Templars.
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/zizo
 	name = "avantyne fullplate"
@@ -473,6 +477,7 @@
 	max_integrity = ARMOR_INT_CHEST_PLATE_ANTAG
 	chunkcolor = "#363030"
 	material_category = ARMOR_MAT_PLATE
+	smeltresult = /obj/item/scrap/zizo
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/zizo/Initialize()
 	. = ..()
