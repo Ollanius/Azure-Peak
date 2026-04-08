@@ -615,6 +615,7 @@
 	force_wielded = 40
 	max_blade_int = 250
 	gripped_intents = list(/datum/intent/axe/cut/long, /datum/intent/axe/chop/long, /datum/intent/axe/sweep)
+	smeltresult = /obj/item/scrap/graggar
 
 /obj/item/rogueweapon/greataxe/steel/doublehead/graggar/Initialize()
 	. = ..()
@@ -628,6 +629,7 @@
 	possible_item_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, /datum/intent/axe/bash, /datum/intent/axe/thrust/graggar)
 	force = 30
 	wdefense = 5
+	smeltresult = /obj/item/scrap/graggar
 
 /obj/item/rogueweapon/stoneaxe/woodcut/steel/graggar/Initialize()
 	. = ..()
