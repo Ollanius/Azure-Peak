@@ -1244,7 +1244,7 @@
 	adjustable = CANT_CADJUST
 	smeltresult = /obj/item/scrap/zizo
 
-/obj/item/clothing/head/roguetown/helmet/heavy/zizo/bascinet
+/obj/item/clothing/head/roguetown/helmet/heavy/avantyne
 	name = "avantyne veil"
 	desc = "She had bathed in the entrails of reality's gutted filament to become divine, yet it came at a cost that even She couldn't have forseen. To see Her works \
 	come to ruin, to see Her people die in unblinking agony, and to see the ultimate truth of Her world; it was too much for Her to handle. Godliness begat inzanity - \
