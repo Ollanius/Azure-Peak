@@ -92,7 +92,6 @@
 		return
 	qdel(src)
 
-
 /obj/item/clothing/gloves/roguetown/plate/zizo
 	name = "avantyne gauntlets"
 	desc = "Unknowing truths, veiling the hands that prayed. Called forth from the edge of what should be known, in Her name."
@@ -102,7 +101,7 @@
 	material_category = ARMOR_MAT_PLATE
 	smeltresult = /obj/item/scrap/zizo
 
-/obj/item/clothing/gloves/roguetown/plate/zizo/alt
+/obj/item/clothing/gloves/roguetown/plate/avantyne
 	name = "avantyne gloves"
 	desc = "Incongruent silks from a tymeline-most-doomed, woven to cradle the palms of God's successor. Razortips beckoned the greatest betrayal \
 	of all; for in Her divine mania, She refused to allow Graggar to rescind the Final Wonder's gaze. For just a moment, She had forced Him to be a \
@@ -110,10 +109,7 @@
 	and horrified brother - that Her inzanity finally abated."
 	icon_state = "zizoplategauntlets_med"
 	smeltresult = /obj/item/ingot/avantyne
-
-/*/obj/item/clothing/gloves/roguetown/plate/zizo/alt/Initialize()
-	. = ..()
-	REMOVE_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)*/
+	armor = ARMOR_PLATE_BSTEEL
 
 /obj/item/clothing/gloves/roguetown/plate/zizo/Initialize()
 	. = ..()
