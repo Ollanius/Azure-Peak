@@ -92,7 +92,7 @@
 	armor = ARMOR_PLATE_BSTEEL
 	smeltresult = /obj/item/scrap/zizo
 
-/obj/item/clothing/under/roguetown/platelegs/zizo/alt
+/obj/item/clothing/under/roguetown/platelegs/avantyne
 	name = "avantyne fauldcoat"
 	desc = "The fossilization of a memory, damned to be forgotten by all but the divine - Her lux, crystallized into a veil impenetratable by all but the sharpest \
 	blades. If the legends are to be believed, She had worn these very garments long ago during Psydonia's darkest hour; when the Ascendants were but-two, when the \
@@ -101,13 +101,7 @@
 	max_integrity = ARMOR_INT_LEG_STEEL_PLATE
 	armor_class = ARMOR_CLASS_MEDIUM
 	smeltresult = /obj/item/ingot/avantyne
-
-/*/obj/item/clothing/under/roguetown/platelegs/zizo/alt/Initialize(mapload)
-	. = ..()
-	REMOVE_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
-
-/obj/item/clothing/under/roguetown/platelegs/zizo/alt/dropped(mob/living/carbon/human/user)
-	return ..()*/ //Check armor.dm for the details. In short - idea's that this particular armor set can be used by any Ascendant.
+	armor = ARMOR_PLATE_BSTEEL
 
 /obj/item/clothing/under/roguetown/platelegs/zizo/Initialize()
 	. = ..()
