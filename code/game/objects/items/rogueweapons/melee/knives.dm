@@ -635,7 +635,7 @@
 	max_integrity = 200
 	wdefense = 9
 
-/obj/item/rogueweapon/huntingknife/idagger/steel/zizo
+/obj/item/rogueweapon/huntingknife/idagger/avantyne
 	name = "avantyne dagger"
 	desc = "An otherworldly misericorde, defying rhyme-and-reason in favor of unholy lethality. The jagged edge continuously remorphs itself, \
 	yearning to disembowel the divine filament once more; though for now, it will settle with the bellies of bastards."
@@ -645,10 +645,7 @@
 	max_integrity = 200
 	max_blade_int = 300
 	embedding = list("embedded_pain_multiplier" = 1.2, "embed_chance" = 50, "embedded_fall_chance" = 0) 
-
-/obj/item/rogueweapon/huntingknife/idagger/steel/zizo/Initialize()
-	. = ..()
-	AddComponent(/datum/component/cursed_item, TRAIT_CABAL, "DAGGER")
+	smeltresult = /obj/item/ingot/avantyne
 
 /obj/item/rogueweapon/huntingknife/idagger/steel/parrying/vaquero
 	name = "sail dagger"
