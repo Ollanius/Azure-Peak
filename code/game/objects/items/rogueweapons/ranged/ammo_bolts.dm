@@ -1,4 +1,4 @@
-#define MIN_BOLT_RANGE		2
+#define MIN_BOLT_RANGE		1
 #define MAX_BOLT_RANGE		9
 #define DAM_FALLOFF_BOLT	0.75
 //bolts ฅ^•ﻌ•^ฅ
@@ -104,7 +104,7 @@
 	name = "light bolt"
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/bolt/light
 	speed = 0.8
-	min_range = MIN_BOLT_RANGE - 1 // pointblank
+	min_range = MIN_BOLT_RANGE
 	max_range = MAX_BOLT_RANGE - 1
 	dam_falloff_factor = DAM_FALLOFF_BOLT
 
