@@ -67,3 +67,16 @@
 /datum/intent/axe/bash/battle
 	name = "heavy bash"
 	damfactor = 0.8 //Buttstrokes, in essence. +20% damage over the standard variant.
+
+/datum/intent/axe/thrust/graggar
+	name = "thrust"
+	animname = "stab"
+	icon_state = "instab"
+	warnie = "mobwarning"
+	penfactor = PEN_MEDIUM
+	clickcd = CLICK_CD_CHARGED
+	damfactor = 0.9
+	item_d_type = "stab"
+	hitsound = list('sound/combat/hits/bladed/genstab (1).ogg', 'sound/combat/hits/bladed/genstab (2).ogg', 'sound/combat/hits/bladed/genstab (3).ogg')
+	blade_class = BCLASS_STAB
+	attack_verb = list("thrusts")
