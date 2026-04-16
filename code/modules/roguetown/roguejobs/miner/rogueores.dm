@@ -385,7 +385,7 @@
 /obj/item/ingot/avantyne
 	name = "avantyne wafer"
 	desc = "This ingot, though borne of unholy circumstance, rumbles with otherworldly potential. Chiseled onto the darksteel is a forbidden iteration of the psycross; a foreboding sign for those who bow to lesser gods."
-	icon_state = "avantynewafer"
+	icon_state = "ingotavantyne"
 	smeltresult = null
 	sellprice = 130
 
