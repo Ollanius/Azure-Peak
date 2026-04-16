@@ -1644,9 +1644,9 @@
 	created_item = /obj/item/rogueweapon/sword/avantyne
 
 /datum/anvil_recipe/weapons/avantyne/greatsword
-	name = "Greatsword, Avantyne (+1 A. Wafer)"
+	name = "Greatsword, Avantyne (+2 A. Wafer)"
 	req_bar = /obj/item/ingot/avantyne
-	additional_items = list(/obj/item/ingot/avantyne)
+	additional_items = list(/obj/item/ingot/avantyne, /obj/item/ingot/avantyne)
 	created_item = /obj/item/rogueweapon/greatsword/avantyne
 
 /datum/anvil_recipe/weapons/avantyne/shield
