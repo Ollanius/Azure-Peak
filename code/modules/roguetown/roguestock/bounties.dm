@@ -65,6 +65,26 @@
 		return FALSE
 	if(istype(I, /obj/item/reagent_containers/food/snacks/allspice))
 		return FALSE
+	if(istype(I, /obj/item/ingot/avantyne))
+		return FALSE //Do you think the Police Department'd purchase a fresh baggie of crack from you?
+	if(istype(I, /obj/item/ingot/component/threadavantyne))
+		return FALSE
+	if(istype(I, /obj/item/ingot/component/berserkswordgrip))
+		return FALSE //Components for a superweapon - shouldn't accidentally be sellable, in most cases. The glut crystal can always be smelted back down into a proper blood diamond, if profit's on one's mind.
+	if(istype(I, /obj/item/ingot/component/berserkswordblade))
+		return FALSE
+	if(istype(I, /obj/item/ingot/component/heapofrawiron))
+		return FALSE
+	if(istype(I, /obj/item/ingot/component/glutcrystal))
+		return FALSE
+	if(istype(I, /obj/item/ingot/component/zizo))
+		return FALSE //Same reason as the Avantyne stuff.
+	if(istype(I, /obj/item/ingot/component/graggar))
+		return FALSE
+	if(istype(I, /obj/item/ingot/component/matthios))
+		return FALSE
+	if(istype(I, /obj/item/ingot/component/baotha))
+		return FALSE
 	if(istype(I, /obj/item/rogueweapon/scabbard))
 		return FALSE // If you have to sell your decorated scabbards for ozium-money, you'll have to barter.
 	if(I.get_real_price() > 0)
