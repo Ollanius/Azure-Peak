@@ -456,25 +456,21 @@
 	desc = "Whispering fragments of an otherworldly alloy. </br>Power always comes at a price."
 	icon_state = "component_zizo"
 	dropshrink = 0.7
-	sellprice = 44
 
 /obj/item/ingot/component/graggar
 	name = "vicious fragment"
 	desc = "Bleeding fragments of an otherworldly alloy. </br>Murder is nothing more than justice without arbitration."
 	icon_state = "component_graggar"
 	dropshrink = 0.7
-	sellprice = 44
 
 /obj/item/ingot/component/matthios
 	name = "gilded fragment"
 	desc = "Glimmering fragments of an otherworldly alloy. </br>Wealth drags even the noblest souls down to perdition."
 	icon_state = "component_matthios"
 	dropshrink = 0.7
-	sellprice = 44
 
 /obj/item/ingot/component/baotha
 	name = "saccharine fragment"
 	desc = "Aromatic fragments of an otherworldly alloy. </br>Despair is the gravest, most agonizing poison of them all."
 	icon_state = "component_baotha"
 	dropshrink = 0.7
-	sellprice = 44
