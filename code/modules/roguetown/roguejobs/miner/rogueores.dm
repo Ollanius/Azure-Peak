@@ -442,33 +442,39 @@
 /obj/item/ingot/component/threadavantyne
 	name = "avantyne thread"
 	desc = "These strands, though borne of unholy circumstance, shimmer with otherworldly potential. Each wire of darksteel seem to twitch with vigor, whenever brought close to another alloy; like a parasite drawn to a host."
-	icon_state = "avantynethread"
+	icon_state = "component_avantynethread"
 	sellprice = 66
+
+/obj/item/ingot/component/threadketryl
+	name = "ketryl thread"
+	desc = "Named after its mythical status, these glimmering strands are stronger than steel, yet unusually light at the same time."
+	icon_state = "component_ketrylthread"
+	sellprice = 111
 
 /obj/item/ingot/component/zizo
 	name = "avantyne fragment"
 	desc = "Whispering fragments of an otherworldly alloy. </br>Power always comes at a price."
-	icon_state = "scrap_zizo"
-	icon = 'icons/roguetown/items/misc.dmi'
+	icon_state = "component_zizo"
 	dropshrink = 0.7
+	sellprice = 44
 
 /obj/item/ingot/component/graggar
 	name = "vicious fragment"
 	desc = "Bleeding fragments of an otherworldly alloy. </br>Murder is nothing more than justice without arbitration."
-	icon_state = "scrap_graggar"
-	icon = 'icons/roguetown/items/misc.dmi'
+	icon_state = "component_graggar"
 	dropshrink = 0.7
+	sellprice = 44
 
 /obj/item/ingot/component/matthios
 	name = "gilded fragment"
 	desc = "Glimmering fragments of an otherworldly alloy. </br>Wealth drags even the noblest souls down to perdition."
-	icon_state = "scrap_matthios"
-	icon = 'icons/roguetown/items/misc.dmi'
+	icon_state = "component_matthios"
 	dropshrink = 0.7
+	sellprice = 44
 
 /obj/item/ingot/component/baotha
 	name = "saccharine fragment"
 	desc = "Aromatic fragments of an otherworldly alloy. </br>Despair is the gravest, most agonizing poison of them all."
-	icon_state = "scrap_baotha"
-	icon = 'icons/roguetown/items/misc.dmi'
+	icon_state = "component_baotha"
 	dropshrink = 0.7
+	sellprice = 44
