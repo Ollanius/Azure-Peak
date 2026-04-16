@@ -464,6 +464,18 @@
 	icon_state = "warden_machete"
 	sheathe_icon = "warden_machete"
 
+/obj/item/rogueweapon/huntingknife/idagger/avantyne
+	name = "avantyne dagger"
+	desc = "An otherworldly misericorde, defying rhyme-and-reason in favor of unholy lethality. The jagged edge continuously remorphs itself, \
+	yearning to disembowel the divine filament once more; though for now, it will settle with the bellies of blunderous bastards."
+	icon_state = "zizodagger"
+	sheathe_icon = "zizodagger"
+	force = 25
+	max_integrity = 200
+	max_blade_int = 300
+	embedding = list("embedded_pain_multiplier" = 1.2, "embed_chance" = 50, "embedded_fall_chance" = 0) 
+	smeltresult = /obj/item/ingot/avantyne
+
 /obj/item/rogueweapon/huntingknife/combat/messser //Just as Grenzelhoft intended
 	name = "kampfmesser"
 	desc = "An undersized steel messer that barely fits into a conventional dagger sheath, the saving grace of any hunter. It lacks a tip for stabbing - yet the edge alone is sharp enough to hack most issues right away. \
