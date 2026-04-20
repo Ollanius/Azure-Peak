@@ -333,12 +333,6 @@
 	additional_items = list(/obj/item/roguegem/diamond)
 	created_item = /obj/item/clothing/ring/diamonds
 
-/datum/anvil_recipe/valuables/archdevilamulet
-	name = "Unholy Amulet.. ?"
-	req_bar = /obj/item/ingot/avantyne
-	created_item = /obj/item/clothing/neck/roguetown/psicross/archdevil
-	craftdiff = 5
-
 /datum/anvil_recipe/valuables/terminus
 	name = "Terminus Est (+1 Gold Bar, +1 Steel, +1 Rontz)"
 	req_bar = /obj/item/ingot/gold
