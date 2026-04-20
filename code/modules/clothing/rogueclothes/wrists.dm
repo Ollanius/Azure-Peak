@@ -413,6 +413,7 @@
 /obj/item/clothing/wrists/roguetown/bracers/zizo/Initialize()
 	. = ..()
 	AddComponent(/datum/component/cursed_item, TRAIT_CABAL, "ARMOR")
+
 //
 
 /obj/item/clothing/wrists/roguetown/bracers/graggar
@@ -423,6 +424,26 @@
 /obj/item/clothing/wrists/roguetown/bracers/graggar/Initialize()
 	. = ..()
 	AddComponent(/datum/component/cursed_item, TRAIT_HORDE, "ARMOR", "RENDERED ASUNDER")
+
+
+/obj/item/clothing/wrists/roguetown/bracers/graggar/heavy
+	name = "vicious wristguards"
+	desc = "Swaying chains, padded with a mixture of twine, leather and entrails. Steel and bone on the outside. It won't survive the onslaught - but it's \
+	not meant to."
+	icon_state = "graggarplatebracer_heavy"
+	max_integrity = ARMOR_INT_SIDE_ANTAG
+	color = null
+	smeltresult = /obj/item/ingot/component/graggar
+
+/obj/item/clothing/wrists/roguetown/bracers/graggar/heavy/Initialize()
+	. = ..()
+	ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
+
+/obj/item/clothing/wrists/roguetown/bracers/graggar/heavy/dropped(mob/living/carbon/human/user)
+	. = ..()
+	if(QDELETED(src))
+		return
+	qdel(src)
 
 /obj/item/clothing/wrists/roguetown/bracers/hand
 	name = "hand's bracers"
