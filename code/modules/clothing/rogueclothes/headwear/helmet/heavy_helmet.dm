@@ -1257,7 +1257,7 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/avantyne
 	name = "avantyne veil"
-	desc = "A veil threaded from an otherworldly alloy, impervious to all but the sharpest blades. Fitted for God's mantle, yet donned to diminish the visages of Man."
+	desc = "A veil threaded from an otherworldly alloy, perpetually backlit with an eerie crimson haze. Glimpse into the abyss for too long.. </br>‎  <font color='FF0000'>..and something will look back.</font>."
 	icon_state = "zizoplatehelm_med"
 	item_state = "zizoplatehelm_med"
 	flags_inv = HIDEFACE|HIDESNOUT|HIDEEARS
