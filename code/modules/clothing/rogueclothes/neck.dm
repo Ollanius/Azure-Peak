@@ -1157,53 +1157,6 @@
 		active_item = FALSE
 	return
 
-//
-
-/obj/item/clothing/neck/roguetown/psicross/archdevil
-    name = "unholy amulet"
-    desc = "<font color='FF0000'>I am the violence and hatred that lives in the hearts of all.</font> \
-    </br>‎  <font color='FF0000'>I am of no age or place. I am that which I Am.</font> \
-    </br>‎  <font color='FF0000'>I am only an icon, a vision - making present a truth you cannot begin to grasp.</font> \
-    </br>‎  <font color='FF0000'>You will slay this form, but this will not end.</font> \
-    </br>‎  <font color='FF0000'>You will destroy the world, but this will not end.</font> \
-    </br>‎  <font color='FF0000'>You will suffer untold agonies for your sacrifice, but this will not end.</font> \
-    </br>‎  <font color='FF0000'>Suffer with me.</font>"
-    icon_state = "archdevil"
-    chunkcolor = "#FF0000"
-    material_category = ARMOR_MAT_PLATE
-	armor = ARMOR_PLATE_BSTEEL
-	body_parts_covered = NECK
-	max_integrity = 666
-    resistance_flags = FIRE_PROOF
-    equip_delay_self = 6 SECONDS
-    unequip_delay_self = 6 SECONDS 
-    inv_storage_delay = 6 SECONDS
-    var/active_item
-
-/obj/item/clothing/neck/roguetown/psicross/archdevil/examine()
-    . = ..()
-    . += span_suicide("I SEE YOU.")
-
-/obj/item/clothing/neck/roguetown/psicross/archdevil/equipped(mob/living/user, slot)
-    . = ..()
-    if(slot == SLOT_NECK)
-        active_item = TRUE
-        to_chat(user, span_suicide("UNFORGIVABLE. </br>UNFORGIVABLE. </br>UNFORGIVABLE."))
-        ADD_TRAIT(user, TRAIT_PSYCHOSIS, TRAIT_GENERIC)
-        ADD_TRAIT(user, TRAIT_DNR, TRAIT_GENERIC)
-    return
-
-/obj/item/clothing/neck/roguetown/psicross/archdevil/dropped(mob/living/user)
-    ..()
-    if(active_item)
-        to_chat(user, span_monkeyhive("..Gods above, what the hell was that?!"))
-        REMOVE_TRAIT(user, TRAIT_PSYCHOSIS, TRAIT_GENERIC)
-        REMOVE_TRAIT(user, TRAIT_DNR, TRAIT_GENERIC)
-        active_item = FALSE
-    return
-
-//
-
 /obj/item/clothing/neck/roguetown/carved
 	name = "carved amulet"
 	desc = "You shouldn't be seeing this."
