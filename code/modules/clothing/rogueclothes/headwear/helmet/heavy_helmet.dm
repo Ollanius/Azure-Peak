@@ -1203,12 +1203,6 @@
 	. = ..()
 	AddComponent(/datum/component/cursed_item, TRAIT_HORDE, "HELM", "RENDERED ASUNDER")
 
-/obj/item/clothing/head/roguetown/helmet/heavy/graggar/heavy
-	name = "vicious skullhelm"
-	desc = "Nigh lyke a crushed skull worn with pride; as sturdy as one that has seen fractures.. and survived them, too. Godliness was never meant to be tainted with minds so fragile and passionate."
-	icon_state = "graggarplatehelm_heavy"
-	smeltresult = /obj/item/ingot/component/graggar
-
 /obj/item/clothing/head/roguetown/helmet/heavy/graggar/equipped(mob/living/user, slot)
 	. = ..()
 	if(active_item)
@@ -1224,9 +1218,11 @@
 	active_item = FALSE
 	REMOVE_TRAIT(user, TRAIT_BITERHELM, TRAIT_GENERIC)
 
-/obj/item/clothing/head/roguetown/helmet/heavy/matthios/Initialize()
-	. = ..()
-	AddComponent(/datum/component/cursed_item, TRAIT_FREEMAN, "VISAGE")
+/obj/item/clothing/head/roguetown/helmet/heavy/graggar/heavy
+	name = "vicious skullhelm"
+	desc = "Nigh lyke a crushed skull worn with pride; as sturdy as one that has seen fractures.. and survived them, too. Godliness was never meant to be tainted with minds so fragile and passionate."
+	icon_state = "graggarplatehelm_heavy"
+	smeltresult = /obj/item/ingot/component/graggar
 
 /obj/item/clothing/head/roguetown/helmet/heavy/zizo
 	name = "avantyne barbute"
