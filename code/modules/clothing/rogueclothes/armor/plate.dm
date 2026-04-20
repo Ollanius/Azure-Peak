@@ -293,16 +293,39 @@
 	armor_class = ARMOR_CLASS_HEAVY
 
 /obj/item/clothing/suit/roguetown/armor/plate/fluted/graggar
-	name = "vicious half-plate"
+	name = "vicious fullplate"
 	desc = "A fluted vessel of Graggar's hatred, stirring with the same violence that drives our world. Such an inner motive leaves the steel unchained from flesh - enslaved, no more!"
 	armor_class = ARMOR_CLASS_MEDIUM
 	max_integrity = ARMOR_INT_CHEST_PLATE_STEEL // We are probably one of the best medium armor sets. At higher integ than most(heavy armor levels, pretty much. But worse resistances, we get the bonus over the other sets of being medium and being unequippable.)
 	icon_state = "graggarplate"
 	armor = ARMOR_PLATE
+	smeltresult = /obj/item/ingot/component/graggar
 
 /obj/item/clothing/suit/roguetown/armor/plate/fluted/graggar/Initialize()
 	. = ..()
 	AddComponent(/datum/component/cursed_item, TRAIT_HORDE, "ARMOR", "RENDERED ASUNDER")
+
+/obj/item/clothing/suit/roguetown/armor/plate/full/graggar
+	name = "vicious half-plate"
+	desc = "Shorn together plate, curated from hand-crafted bones and ligaments - combined under an unholy spirit of violence. It bleeds. </br>Now, the Sinistar lies in ruins; a monument to the sins of \
+	both Man and God, peppered in pieces across the permafrost of Mount Decapitation. Though better left forgotten, whispers of another force have begun to eek through the Ecclesiarchs - worshippers of a \
+	forgotten progenitor, seeking to collect the Sinistar's fragments for some nefarious purpose yet-to-be-seen."
+	icon_state = "graggarplate_heavy"
+	max_integrity = ARMOR_INT_CHEST_PLATE_ANTAG
+	chunkcolor = "#363030"
+	material_category = ARMOR_MAT_PLATE
+	smeltresult = /obj/item/ingot/component/graggar
+
+/obj/item/clothing/suit/roguetown/armor/plate/full/graggar/Initialize()
+	. = ..()
+	ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
+	AddComponent(/datum/component/cursed_item, TRAIT_HORDE, "ARMOR", "RENDERED ASUNDER")
+
+/obj/item/clothing/suit/roguetown/armor/plate/full/graggar/dropped(mob/living/carbon/human/user)
+	. = ..()
+	if(QDELETED(src))
+		return
+	qdel(src)
 
 /obj/item/clothing/suit/roguetown/armor/plate/fluted/ornate
 	name = "psydonic half-plate"
@@ -429,6 +452,7 @@
 	desc = "Often, you have heard that told,"
 	icon_state = "matthiosarmor"
 	max_integrity = ARMOR_INT_CHEST_PLATE_ANTAG
+	smeltresult = /obj/item/ingot/component/matthios
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/matthios/Initialize()
 	. = ..()
@@ -447,6 +471,7 @@
 	max_integrity = ARMOR_INT_CHEST_PLATE_ANTAG
 	chunkcolor = "#363030"
 	material_category = ARMOR_MAT_PLATE
+	smeltresult = /obj/item/ingot/component/zizo
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/zizo/Initialize()
 	. = ..()
@@ -458,6 +483,16 @@
 		return
 	qdel(src)
 
+/obj/item/clothing/suit/roguetown/armor/plate/fluted/avantyne
+	name = "avantyne maille"
+	desc = "Pauldrons lyke that of fire, crested atop a veil of otherworldly maille - impossibly tough, warm to the touch, and crackling with insidious energies. When \
+	the Sinistar was torn from the sky, Zizo knew that the Apotheosis failed. She loomed before the world's mana, hopeless and fraught, ready to throw Herself \
+	into the very leylines of Psydonia itself. Yet, She hesitated; for when She looked into the swirling abyss.. </br>‎  <font color='FF0000'>..something looked back.</font>"
+	armor_class = ARMOR_CLASS_MEDIUM
+	max_integrity = ARMOR_INT_CHEST_PLATE_STEEL
+	icon_state = "zizoplatechest_med"
+	armor = ARMOR_PLATE_BSTEEL
+	smeltresult = /obj/item/ingot/avantyne //Made from 'inert avantyne wafers', meaning that anyone can feasibly wear it.
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/bikini
 	name = "full-plate corset"
