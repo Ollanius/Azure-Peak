@@ -60,16 +60,36 @@
 	desc = "Fluted gauntlets, razor-tipped and fluidic in motion. Most are led to believe that 'might makes right', yet Graggar's truth is far more succinct - 'might makes'. Murder is the ultimate force; the only difference between you and them is that they're too afraid to admit it."
 	max_integrity = ARMOR_INT_SIDE_ANTAG
 	icon_state = "graggarplategloves"
+	smeltresult = /obj/item/ingot/component/graggar
 
 /obj/item/clothing/gloves/roguetown/plate/graggar/Initialize()
 	. = ..()
 	AddComponent(/datum/component/cursed_item, TRAIT_HORDE, "ARMOR", "RENDERED ASUNDER")
+
+/obj/item/clothing/gloves/roguetown/plate/graggar/heavy
+	name = "vicious plate gauntlets"
+	desc = "Steel plated gauntlets overlaid by an ornamental imagery of fractured bone and entrails. The violet smears; a tether to the lyfe that once was. </br>The Sinistar blotted out Astrata's glare, and \
+	threatened to finally end Psydonia; cold, alone, and whimpering. Amidst the chaos of Apotheosis, Ravox and Eora - though wholly mortal - hurried to the summit of Mount Decapitation to confront the \
+	ascended Graggar. Were it not for Her intervention, their pleas may've been enough to end His divine mania."
+	icon_state = "graggarplategloves_heavy"
+	smeltresult = /obj/item/ingot/component/graggar
+
+/obj/item/clothing/gloves/roguetown/plate/graggar/alt/Initialize()
+	. = ..()
+	ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
+
+/obj/item/clothing/gloves/roguetown/plate/graggar/alt/dropped(mob/living/carbon/human/user)
+	. = ..()
+	if(QDELETED(src))
+		return
+	qdel(src)
 
 /obj/item/clothing/gloves/roguetown/plate/matthios
 	name = "gilded gauntlets"
 	desc = "Many a man his life hath sold,"
 	icon_state = "matthiosgloves"
 	max_integrity = ARMOR_INT_SIDE_ANTAG
+	smeltresult = /obj/item/ingot/component/matthios
 
 /obj/item/clothing/gloves/roguetown/plate/matthios/Initialize()
 	. = ..()
@@ -81,7 +101,6 @@
 		return
 	qdel(src)
 
-
 /obj/item/clothing/gloves/roguetown/plate/zizo
 	name = "avantyne gauntlets"
 	desc = "Unknowing truths, veiling the hands that prayed. Called forth from the edge of what should be known, in Her name."
@@ -89,6 +108,7 @@
 	max_integrity = ARMOR_INT_SIDE_ANTAG
 	chunkcolor = "#363030"
 	material_category = ARMOR_MAT_PLATE
+	smeltresult = /obj/item/ingot/component/zizo
 
 /obj/item/clothing/gloves/roguetown/plate/zizo/Initialize()
 	. = ..()
@@ -99,6 +119,17 @@
 	if(QDELETED(src))
 		return
 	qdel(src)
+
+
+/obj/item/clothing/gloves/roguetown/plate/avantyne
+	name = "avantyne gloves"
+	desc = "Incongruent silks from a tymeline-most-doomed, woven to cradle the palms of God's successor. </br>Razortips beckoned the greatest betrayal \
+	of all; for in Her divine mania, She refused to allow Graggar to rescind the Final Wonder's gaze. For just a moment, She had forced Him to be a \
+	slave once more; and worse yet, to cleave the pleading Eora in twain with His blade. It was only after their screams - that of the mourning lover \
+	and the horrified brother - that Her inzanity finally abated."
+	icon_state = "zizoplategauntlets_med"
+	smeltresult = /obj/item/ingot/avantyne
+	armor = ARMOR_PLATE_BSTEEL
 
 /obj/item/clothing/gloves/roguetown/plate/shadowgauntlets
 	name = "darkplate gauntlets"
