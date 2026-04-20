@@ -1184,6 +1184,7 @@
 	bloody_icon = 'icons/effects/blood64.dmi'
 	experimental_inhand = FALSE
 	experimental_onhip = FALSE
+	smeltresult = /obj/item/ingot/component/matthios
 
 /obj/item/clothing/head/roguetown/helmet/heavy/matthios/Initialize()
 	. = ..()
@@ -1196,10 +1197,17 @@
 	max_integrity = ARMOR_INT_HELMET_ANTAG
 	flags_inv = HIDEEARS|HIDEFACE|HIDESNOUT|HIDEHAIR|HIDEFACIALHAIR
 	var/active_item = FALSE
+	smeltresult = /obj/item/ingot/component/graggar
 
 /obj/item/clothing/head/roguetown/helmet/heavy/graggar/Initialize()
 	. = ..()
 	AddComponent(/datum/component/cursed_item, TRAIT_HORDE, "HELM", "RENDERED ASUNDER")
+
+/obj/item/clothing/head/roguetown/helmet/heavy/graggar/heavy
+	name = "vicious skullhelm"
+	desc = "Nigh lyke a crushed skull worn with pride; as sturdy as one that has seen fractures.. and survived them, too. Godliness was never meant to be tainted with minds so fragile and passionate."
+	icon_state = "graggarplatehelm_heavy"
+	smeltresult = /obj/item/ingot/component/graggar
 
 /obj/item/clothing/head/roguetown/helmet/heavy/graggar/equipped(mob/living/user, slot)
 	. = ..()
@@ -1229,6 +1237,7 @@
 	chunkcolor = "#363030"
 	material_category = ARMOR_MAT_PLATE
 	toggle_icon_state = TRUE
+	smeltresult = /obj/item/ingot/component/zizo
 
 /obj/item/clothing/head/roguetown/helmet/heavy/zizo/frogge
 	icon_state = "zizofrogmouth"
@@ -1237,12 +1246,26 @@
 	flags_inv = HIDEFACE|HIDESNOUT|HIDEEARS
 	body_parts_covered = HEAD|EARS|HAIR
 	adjustable = CANT_CADJUST
+	smeltresult = /obj/item/ingot/component/zizo
 
 /obj/item/clothing/head/roguetown/helmet/heavy/zizo/volfhelm
 	name = "avantyne volf-face bascinet"
-	desc = "An unholy combination of a bastardised volf-face bascinet, along with avantyne reinforcements. Progress is an agonising process."
+	desc = "A terminal prognosis, a lethal parasite; unholy strands of avantyne, worming their way through the steel to make something greater. Progress is an agonising process, both unto flesh and metal."
 	icon_state = "volfplate_avantyne"
 	item_state = "volfplate_avantyne"
+	smeltresult = /obj/item/ingot/component/zizo
+
+/obj/item/clothing/head/roguetown/helmet/heavy/avantyne
+	name = "avantyne veil"
+	desc = "A veil threaded from an otherworldly alloy, impervious to all but the sharpest blades. Fitted for God's mantle, yet donned to diminish the visages of Man."
+	icon_state = "zizoplatehelm_med"
+	item_state = "zizoplatehelm_med"
+	flags_inv = HIDEFACE|HIDESNOUT|HIDEEARS
+	body_parts_covered = HEAD|EARS|HAIR
+	adjustable = CANT_CADJUST
+	smeltresult = /obj/item/ingot/avantyne
+	armor = ARMOR_PLATE_BSTEEL
+	armor_class = ARMOR_CLASS_LiGHT
 
 /obj/item/clothing/head/roguetown/helmet/heavy/zizo/Initialize()
 	. = ..()
