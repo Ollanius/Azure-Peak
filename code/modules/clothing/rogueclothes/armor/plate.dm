@@ -307,9 +307,7 @@
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/graggar
 	name = "vicious half-plate"
-	desc = "Shorn together plate, curated from hand-crafted bones and ligaments - combined under an unholy spirit of violence. It bleeds. </br>Now, the Sinistar lies in ruins; a monument to the sins of \
-	both Man and God, peppered in pieces across the permafrost of Mount Decapitation. Though better left forgotten, whispers of another force have begun to eek through the Ecclesiarchs - worshippers of a \
-	forgotten progenitor, seeking to collect the Sinistar's fragments for some nefarious purpose yet-to-be-seen."
+	desc = "Shorn together plate, curated from hand-crafted bones and ligaments - combined under an unholy spirit of violence. It drools with the distilled essence of worldlux; the afterbirth of ascensionism."
 	icon_state = "graggarplate_heavy"
 	max_integrity = ARMOR_INT_CHEST_PLATE_ANTAG
 	chunkcolor = "#363030"
@@ -485,9 +483,7 @@
 
 /obj/item/clothing/suit/roguetown/armor/plate/fluted/avantyne
 	name = "avantyne maille"
-	desc = "Pauldrons lyke that of fire, crested atop a veil of otherworldly maille - impossibly tough, warm to the touch, and crackling with insidious energies. When \
-	the Sinistar was torn from the sky, Zizo knew that the Apotheosis failed. She loomed before the world's mana, hopeless and fraught, ready to throw Herself \
-	into the very leylines of Psydonia itself. Yet, She hesitated; for when She looked into the swirling abyss.. </br>‎  <font color='FF0000'>..something looked back.</font>"
+	desc = "Pauldrons lyke that of fire, crested atop a veil of otherworldly maille - impossibly tough, warm to the touch, and crackling with insidious energies."
 	armor_class = ARMOR_CLASS_MEDIUM
 	max_integrity = ARMOR_INT_CHEST_PLATE_STEEL
 	icon_state = "zizoplatechest_med"
