@@ -121,7 +121,7 @@
 
 /obj/item/clothing/gloves/roguetown/plate/avantyne
 	name = "avantyne gloves"
-	desc = "Incongruent silks from a tymeline-most-doomed, woven to cradle the palms of God's successor. It feels like wearing nothing at all - nothing at all.."
+	desc = "Incongruent silks from a tymeline-most-doomed, woven to cradle the palms of God's successor. Softer than silk, yet unfettered by the blows from those who know no better."
 	icon_state = "zizoplategauntlets_med"
 	smeltresult = /obj/item/ingot/avantyne
 	armor = ARMOR_PLATE_BSTEEL
