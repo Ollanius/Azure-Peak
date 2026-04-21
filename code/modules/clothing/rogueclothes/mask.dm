@@ -501,6 +501,21 @@
 	salvage_result = /obj/item/natural/hide/cured
 	salvage_amount = 1
 
+/obj/item/clothing/mask/rogue/physician/ComponentInitialize()
+	AddComponent(/datum/component/armour_filtering/positive, TRAIT_NOSTINK, "plague_mask")
+
+/obj/item/clothing/mask/rogue/physician/feld
+	name = "feldsher's mask"
+	desc = "Tragedy, neutrality, and comedy; the guise of a master, tempered against the most sorrowful and sudden consequences of bad medicine."
+	icon_state = "pestramask"
+	item_state = "pestramask"
+
+/obj/item/clothing/mask/rogue/physician/phys
+	name = "physicker's mask"
+	desc = "A beaked guise, stuffed with herbs to keep one's humors unmarred during more grizzlesome labors."
+	icon_state = "feldmask"
+	item_state = "feldmask"
+
 /obj/item/clothing/mask/rogue/skullmask
 	name = "skull mask"
 	desc = "A mask in the shape of a skull, designed to terrify."
