@@ -49,6 +49,17 @@
 			if("onback")
 				return list("shrink" = 0.6,"sx" = -1,"sy" = 2,"nx" = 0,"ny" = 2,"wx" = 2,"wy" = 1,"ex" = 0,"ey" = 1,"nturn" = 0,"sturn" = 0,"wturn" = 70,"eturn" = 15,"nflip" = 1,"sflip" = 1,"wflip" = 1,"eflip" = 1,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0)
 
+/obj/item/rogueweapon/greatsword/avantyne
+	name = "avantyne greatsword"
+	desc = "Malediction made manifest. Take your birthright and ascend to the heavens beyond, or die trying."
+	gripped_intents = list(/datum/intent/sword/cut/zwei, /datum/intent/sword/thrust/estoc, /datum/intent/sword/cut/zwei/cleave, /datum/intent/sword/cut/zwei/sweep)
+	icon_state = "zizogsw"
+	force = 16
+	force_wielded = 38
+	smeltresult = /obj/item/ingot/avantyne
+	max_blade_int = 400
+	max_integrity = 500
+
 /obj/item/rogueweapon/greatsword/elfgsword
 	name = "elven kriegsmesser"
 	desc = "An elegant greatsword, crested with a glistening blade that - in spite of its intimidating length - is mysteriously light. Unlike most elven masterworks, the grip is dressed in rosaleather; a foreboding symbol, christening it as a weapon of war against those who'd threaten elvekind."
