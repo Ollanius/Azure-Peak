@@ -1261,7 +1261,7 @@
 	adjustable = CANT_CADJUST
 	smeltresult = /obj/item/ingot/avantyne
 	armor = ARMOR_PLATE_BSTEEL
-	armor_class = ARMOR_CLASS_LiGHT
+	armor_class = ARMOR_CLASS_LIGHT
 
 /obj/item/clothing/head/roguetown/helmet/heavy/zizo/Initialize()
 	. = ..()
