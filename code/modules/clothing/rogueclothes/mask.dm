@@ -501,9 +501,6 @@
 	salvage_result = /obj/item/natural/hide/cured
 	salvage_amount = 1
 
-/obj/item/clothing/mask/rogue/physician/ComponentInitialize()
-	AddComponent(/datum/component/armour_filtering/positive, TRAIT_NOSTINK, "plague_mask")
-
 /obj/item/clothing/mask/rogue/physician/feld
 	name = "feldsher's mask"
 	desc = "Tragedy, neutrality, and comedy; the guise of a master, tempered against the most sorrowful and sudden consequences of bad medicine."
