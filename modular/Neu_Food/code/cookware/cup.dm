@@ -225,7 +225,7 @@
 
 /obj/item/reagent_containers/glass/cup/golden
 	name = "golden goblet"
-	desc = "A golden goblet, radiating with opulence and granduer."
+	desc = "Adorned with gemstones, this goblet radiates opulence and grandeur."
 	icon_state = "golden"
 	sellprice = 50
 	force = 10
@@ -233,24 +233,15 @@
 
 /obj/item/reagent_containers/glass/cup/golden/small
 	name = "golden cup"
-	desc = "A golden goblet, glimmering with lesser opulence and granduer."
+	desc = "Adorned with gemstones, this cup glimmers with lesser opulence and grandeur."
 	icon_state = "gcup"
 	sellprice = 40
 	force = 5
 	throwforce = 10
 
-/obj/item/reagent_containers/glass/cup/golden/royal
-	name = "royal goblet"
-	desc = "Adorned with gemstones, this goblet radiates with greater opulence and grandeur. It has overseen many-a-feast, and has housed many-a-liqour more."
-	icon_state = "royalgolden"
-	sellprice = 100
-	force = 20
-	throwforce = 25
-	volume = 50
-
 /obj/item/reagent_containers/glass/cup/golden/poison
 	name = "golden goblet"
-	desc = "A golden goblet, radiating with opulence and granduer."
+	desc = "Adorned with gemstones, this goblet radiates opulence and grandeur."
 	icon_state = "golden"
 	sellprice = 50
 	list_reagents = list(/datum/reagent/toxin/killersice = 1, /datum/reagent/consumable/ethanol/elfred = 20)
