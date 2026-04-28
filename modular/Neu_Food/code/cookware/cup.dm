@@ -240,8 +240,8 @@
 	throwforce = 10
 
 /obj/item/reagent_containers/glass/cup/golden/royal
-	name = "royal golden goblet"
-	desc = "Adorned with gemstones, this goblet radiates with greater opulence and grandeur."
+	name = "royal goblet"
+	desc = "Adorned with gemstones, this goblet radiates with greater opulence and grandeur. It has overseen many-a-feast, and has housed many-a-liqour more."
 	icon_state = "royalgolden"
 	sellprice = 100
 	force = 20
