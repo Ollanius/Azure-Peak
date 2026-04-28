@@ -208,7 +208,8 @@
 
 /obj/item/reagent_containers/glass/cup/silver/pewter //ugly but better than the alternatives
 	name = "pewter goblet"
-	desc = "A pewter goblet; cheaper than silver, but still blessed with quite the alluring shine."
+	desc = "A pewter goblet, blessed with an alluring shine. Though tin with a sprinkling of silver isn't \
+	particularly valuable on its own, most peasants and foreign noblemen tend to be none-the-wiser."
 	is_silver = FALSE
 	is_lesser_silver = FALSE
 
@@ -224,7 +225,7 @@
 
 /obj/item/reagent_containers/glass/cup/golden
 	name = "golden goblet"
-	desc = "Adorned with gemstones, this goblet radiates opulence and grandeur."
+	desc = "A golden goblet, radiating with opulence and granduer."
 	icon_state = "golden"
 	sellprice = 50
 	force = 10
@@ -232,15 +233,24 @@
 
 /obj/item/reagent_containers/glass/cup/golden/small
 	name = "golden cup"
-	desc = "Adorned with gemstones, this cup radiates opulence and grandeur."
+	desc = "A golden goblet, glimmering with lesser opulence and granduer."
 	icon_state = "gcup"
 	sellprice = 40
 	force = 5
 	throwforce = 10
 
+/obj/item/reagent_containers/glass/cup/golden/royal
+	name = "royal golden goblet"
+	desc = "Adorned with gemstones, this goblet radiates with greater opulence and grandeur."
+	icon_state = "royalgolden"
+	sellprice = 100
+	force = 20
+	throwforce = 25
+	volume = 50
+
 /obj/item/reagent_containers/glass/cup/golden/poison
 	name = "golden goblet"
-	desc = "Adorned with gemstones, this goblet radiates opulence and grandeur."
+	desc = "A golden goblet, radiating with opulence and granduer."
 	icon_state = "golden"
 	sellprice = 50
 	list_reagents = list(/datum/reagent/toxin/killersice = 1, /datum/reagent/consumable/ethanol/elfred = 20)
