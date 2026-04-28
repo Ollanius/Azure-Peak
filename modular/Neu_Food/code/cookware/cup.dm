@@ -208,7 +208,9 @@
 
 /obj/item/reagent_containers/glass/cup/silver/pewter //ugly but better than the alternatives
 	name = "pewter goblet"
-	desc = "A pewter goblet, cheaper than silver, but with a similar shine!"
+	desc = "A pewter goblet; cheaper than silver, but still blessed with quite the alluring shine."
+	is_silver = FALSE
+	is_lesser_silver = FALSE
 
 /obj/item/reagent_containers/glass/cup/silver/small
 	name = "silver cup"
