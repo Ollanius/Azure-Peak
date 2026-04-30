@@ -499,7 +499,7 @@
 	qdel(src)
 
 /obj/item/clothing/suit/roguetown/armor/plate/fluted/avantyne
-	name = "avantyne maille"
+	name = "avantyne-threaded maille"
 	desc = "Pauldrons lyke that of fire, crested atop a veil of otherworldly maille - impossibly tough, warm to the touch, and crackling with insidious energies."
 	armor_class = ARMOR_CLASS_MEDIUM
 	max_integrity = ARMOR_INT_CHEST_PLATE_STEEL
