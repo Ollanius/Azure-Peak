@@ -565,7 +565,7 @@
 	embedding = list("embedded_pain_multiplier" = 1.2, "embed_chance" = 20, "embedded_fall_chance" = 0) 
 	smeltresult = /obj/item/ingot/component/zizo
 
-/obj/item/rogueweapon/huntingknife/idagger/steel/avantyne
+/obj/item/rogueweapon/huntingknife/idagger/avantyne
 	name = "avantyne-threaded dagger"
 	desc = "An otherworldly misericorde, defying rhyme-and-reason in favor of unholy lethality. The jagged edge continuously remorphs itself, \
 	yearning to disembowel the divine filament once more; though for now, it will settle with the bellies of blunderous bastards."
