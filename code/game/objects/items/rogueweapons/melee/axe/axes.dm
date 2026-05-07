@@ -221,6 +221,7 @@
 	grid_width = 32
 	throw_speed = 3 
 	armor_penetration = PEN_LIGHT
+	is_tool = TRUE
 
 /datum/intent/axe/cut/handaxe
 	damfactor = 1.1
@@ -331,7 +332,8 @@
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
 	bigboy = TRUE
-	
+	is_tool = TRUE
+
 /obj/item/rogueweapon/stoneaxe/woodcut/getonmobprop(tag)
 	. = ..()
 	if(tag)
