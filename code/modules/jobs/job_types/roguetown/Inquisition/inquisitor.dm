@@ -152,7 +152,7 @@
 			H.put_in_hands(new /obj/item/rogueweapon/mace/cudgel/psyclassic/preblessed(H))
 			H.adjust_skillrank_up_to(/datum/skill/combat/maces, 4, TRUE)
 		if("Psydonic Flanged Mace - Heavy-Balanced")
-			H.put_in_hands(new= /obj/item/rogueweapon/mace/cudgel/psy/preblessed(H))
+			H.put_in_hands(new /obj/item/rogueweapon/mace/cudgel/psy/preblessed(H))
 			H.adjust_skillrank_up_to(/datum/skill/combat/maces, 4, TRUE)	
 		if("Your Faith (Expertise With Most Weapons)")
 			H.equip_to_slot_or_del(new /obj/item/quiver/bolt/standard, SLOT_BELT_R, TRUE)
