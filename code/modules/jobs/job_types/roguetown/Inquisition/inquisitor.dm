@@ -102,7 +102,7 @@
 	backpack_contents = list(
 		/obj/item/storage/keyring/inquisitor = 1,
 		/obj/item/lockpickring/mundane = 1,
-		/obj/item/rogueweapon/huntingknife/idagger/silver/psydagger,
+		/obj/item/rogueweapon/huntingknife/idagger/silver/psydagger/heavy,
 		/obj/item/clothing/head/inqarticles/blackbag = 1,
 		/obj/item/inqarticles/garrote = 1,
 		/obj/item/rope/inqarticles/inquirycord = 1,
