@@ -87,7 +87,7 @@
 	armor = /obj/item/clothing/suit/roguetown/armor/regenerating/skin/disciple
 	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants
 	shoes = /obj/item/clothing/shoes/roguetown/boots/psydonboots
-	neck = /obj/item/clothing/neck/roguetown/psicross/g
+	neck = /obj/item/clothing/neck/roguetown/psicross/silver/naledi
 	id = /obj/item/clothing/ring/signet
 	belt = /obj/item/storage/belt/rogue/leather/rope/dark
 	beltl = /obj/item/storage/belt/rogue/pouch/coins/mid
