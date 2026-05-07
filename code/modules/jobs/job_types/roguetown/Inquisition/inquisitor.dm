@@ -6,7 +6,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	allowed_sexes = list(MALE, FEMALE)
-	forbidden_races = list(RACES_CONSTRUCT RACES_DESPISED)		//Would you trust a machine to handle a role that requires non-logical intuition and commanding? Maybe. Could undo this if the community likes it. Purpose-built supermachines sound cool, too.
+	allowed_races = RACES_SHUNNED_UP		//Would you trust a machine to handle a role that requires non-logical intuition and commanding? Maybe. Could undo this if the community likes it. Purpose-built supermachines sound cool, too.
 	allowed_patrons = list(/datum/patron/old_god) //Requires your character's patron to be Psydon. This role is explicitly designed to be played by Psydonites, only, and almost everything they have - down to the equipment and statblock - is rooted in Psydonism. Do NOT make this accessable to other faiths, unless you go through the efforts of redesigning it from the ground up.
 	tutorial = "You are a puritan of unmatched aptitude, adherent to the Psydonic doctrine and entrusted with the authority to lead a local sect. Otava - the largest Psydonic kingdom left on this world - has seen it fit to treat you like a silver-tipped olive branch, gifted to Azuria to ward off the encroaching darkness. Tread carefully when pursuing your missives, lest the faithless strap you to the pyre as well."
 	whitelist_req = TRUE
@@ -35,7 +35,8 @@
 
 /datum/advclass/inquisitor/inspector
 	name = "Inquisitor"
-	tutorial = "Investigators and diplomats, oft-selected from Confessors who've shown their aptitude in a variety of skills. A precise strike is all that's needed to forward the Orthodoxy's missive; whether it's struck with a diplomat's charm or a rapier's tip, however, is up to you."
+	tutorial = "Investigators and diplomats, oft-selected from Confessors who've shown their aptitude in a variety of skills. A precise \
+	strike is all that's needed to forward the Orthodoxy's missive; whether it's struck with a diplomat's charm or a rapier's tip, however, is up to you."
 	outfit = /datum/outfit/job/roguetown/inquisitor/inspector
 	subclass_languages = list(/datum/language/otavan)
 	category_tags = list(CTAG_INQUSITOR)
@@ -62,11 +63,12 @@
 		/datum/skill/misc/tracking = SKILL_LEVEL_MASTER,
 		/datum/skill/misc/sneaking = SKILL_LEVEL_MASTER,
 		/datum/skill/combat/knives = SKILL_LEVEL_EXPERT,
-		/datum/skill/misc/climbing = SKILL_LEVEL_EXPERT,
-		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT,
-		/datum/skill/combat/crossbows = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/whipsflails = SKILL_LEVEL_EXPERT,
+		/datum/skill/combat/crossbows = SKILL_LEVEL_EXPERT,
 		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/climbing = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT,
 		/datum/skill/misc/reading = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/medicine = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/craft/sewing = SKILL_LEVEL_APPRENTICE,
@@ -87,9 +89,8 @@
 	neck = /obj/item/clothing/neck/roguetown/gorget/steel
 	shoes = /obj/item/clothing/shoes/roguetown/boots/otavan/inqboots
 	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants/otavan
-	backr =  /obj/item/storage/backpack/rogue/satchel/otavan
-	backl = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
-	beltr = /obj/item/quiver/bolt/standard
+	backr = /obj/item/storage/backpack/rogue/satchel/otavan
+	beltl = /obj/item/rogueweapon/whip/antique/psywhip
 	head = /obj/item/clothing/head/roguetown/inqhat
 	mask = /obj/item/clothing/mask/rogue/spectacles/inq/spawnpair
 	gloves = /obj/item/clothing/gloves/roguetown/otavan/psygloves
@@ -112,34 +113,56 @@
 
 /datum/outfit/job/roguetown/inquisitor/inspector/choose_loadout(mob/living/carbon/human/H)
 	. = ..()
-	var/weapons = list("Psydonic Longsword", "Psydonic Rapier", "Daybreak (Whip)", "Stigmata (Halberd)", "Eucharist (Rapier)")
+	var/weapons = list("Relic, 'Stigmata' (Halberd)", "Relic, 'Eucharist' (Rapier)", "Relic, 'Providence' (Siegebow)", "Psydonic Longsword", "Psydonic Rapier", "Your Faith (Expertise With Most Weapons)")
 	var/weapon_choice = input(H,"FLOURISH YOUR SILVER.", "WIELD THEM IN HIS NAME.") as anything in weapons
 	switch(weapon_choice)
+		if("Relic, 'Stigmata' (Halberd)")
+			H.put_in_hands(new /obj/item/rogueweapon/halberd/psyhalberd/relic(H))
+			H.put_in_hands(new /obj/item/rogueweapon/scabbard/gwstrap(H))
+			H.equip_to_slot_or_del(new /obj/item/quiver/bolt/standard, SLOT_BELT_R, TRUE)
+			H.equip_to_slot_or_del(new /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow, SLOT_BACK_L, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/polearms, 4, TRUE)
+		if("Relic, 'Eucharist' (Rapier)")
+			H.put_in_hands(new /obj/item/rogueweapon/sword/rapier/psy/relic(H))
+			H.put_in_hands(new /obj/item/rogueweapon/scabbard/sword/noble(H))
+			H.equip_to_slot_or_del(new /obj/item/quiver/bolt/standard, SLOT_BELT_R, TRUE)
+			H.equip_to_slot_or_del(new /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow, SLOT_BACK_L, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/swords, 4, TRUE)
+		if("Relic, 'Providence' (Siegebow)")
+			H.put_in_hands(new /obj/item/rogueweapon/sword/rapier/psy/relic(H))
+			H.put_in_hands(new /obj/item/rogueweapon/scabbard/sword/noble(H))
+			H.equip_to_slot_or_del(new /obj/item/quiver/bolt/heavy/silver, SLOT_BELT_R, TRUE)
+			H.equip_to_slot_or_del(new /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy/relic, SLOT_BACK_L, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/crossbows, 5, TRUE)
 		if("Psydonic Longsword")
 			H.put_in_hands(new /obj/item/rogueweapon/sword/long/psysword/preblessed(H))
-			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/sword/noble, SLOT_BELT_L, TRUE)
+			H.put_in_hands(new /obj/item/rogueweapon/scabbard/sword/noble(H))
+			H.equip_to_slot_or_del(new /obj/item/quiver/bolt/standard, SLOT_BELT_R, TRUE)
+			H.equip_to_slot_or_del(new /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow, SLOT_BACK_L, TRUE)
 			H.adjust_skillrank_up_to(/datum/skill/combat/swords, 4, TRUE)
 		if("Psydonic Rapier")
 			H.put_in_hands(new /obj/item/rogueweapon/sword/rapier/psy/preblessed(H))
-			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/sword/noble, SLOT_BELT_L, TRUE)
+			H.put_in_hands(new /obj/item/rogueweapon/scabbard/sword/noble(H))
+			H.equip_to_slot_or_del(new /obj/item/quiver/bolt/standard, SLOT_BELT_R, TRUE)
+			H.equip_to_slot_or_del(new /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow, SLOT_BACK_L, TRUE)
 			H.adjust_skillrank_up_to(/datum/skill/combat/swords, 4, TRUE)
-		if("Daybreak (Whip)")
-			H.put_in_hands(new /obj/item/rogueweapon/whip/antique/psywhip(H))
-			H.adjust_skillrank_up_to(/datum/skill/combat/whipsflails, 4, TRUE)
-		if("Stigmata (Halberd)")
-			H.put_in_hands(new /obj/item/rogueweapon/halberd/psyhalberd/relic(H))
-			H.put_in_hands(new /obj/item/rogueweapon/scabbard/gwstrap(H))
+		if("Your Faith (Expertise With Most Weapons)")
+			H.equip_to_slot_or_del(new /obj/item/quiver/bolt/standard, SLOT_BELT_R, TRUE)
+			H.equip_to_slot_or_del(new /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow, SLOT_BACK_L, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/swords, 4, TRUE)
 			H.adjust_skillrank_up_to(/datum/skill/combat/polearms, 4, TRUE)
-		if("Eucharist (Rapier)")
-			H.put_in_hands(new /obj/item/rogueweapon/sword/rapier/psy/relic(H))
-			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/sword/noble, SLOT_BELT_L, TRUE)
-			H.adjust_skillrank_up_to(/datum/skill/combat/swords, 4, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/axes, 4, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/maces, 4, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, 4, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/shields, 3, TRUE)
 
 ///The Inquisitor's 'martial' archetype. Portrayed similarly to a Hollywood knight; remarkably strong and skilled, but cripplingly slow and vulnerable to the environment. Superb for one-on-one clashes, but relies on a full sect - and a saiga - for maximum effectiveness.
 
 /datum/advclass/inquisitor/ordinator
 	name = "Ordinator"
-	tutorial = "Adjudicator-Sergeants, hailing from the neighboring Psydonic Orders. Oft-mistaken for golems due to the lethargy imposed by their blessed plate armor, these holy knights have forsaken every other pursuit for a singular purpose: to break the inhumen against their knee."
+	tutorial = "Adjudicator-Sergeants, hailing from the neighboring Psydonic Orders. Oft-mistaken for golems due \
+	to the lethargy imposed by their blessed plate armor, these holy knights have forsaken every other pursuit for \
+	a singular purpose: to break the inhumen against their knee."
 	outfit = /datum/outfit/job/roguetown/inquisitor/ordinator
 	subclass_languages = list(/datum/language/otavan)
 	cmode_music = 'sound/music/combat_inqordinator.ogg'
@@ -162,12 +185,13 @@
 	)
 	subclass_skills = list(
 		/datum/skill/misc/climbing = SKILL_LEVEL_EXPERT,
-		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/athletics = SKILL_LEVEL_MASTER,
 		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/riding = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/reading = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/medicine = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/magic/holy = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/tracking = SKILL_LEVEL_MASTER,
 	)
 	subclass_stashed_items = list(
@@ -202,31 +226,17 @@
 /datum/outfit/job/roguetown/inquisitor/ordinator/choose_loadout(mob/living/carbon/human/H)
 	. = ..()
 	change_origin(H, /datum/virtue/origin/otava, "Holy order")
-	var/weapons = list("Psydonic Broadsword + Dagger", "Psydonic Poleaxe + Dagger", "Apocrypha (Greatsword) + Dagger", "Covenant And Creed (Broadsword + Shield)", "Covenant and Consecratia (Flail + Shield)")
+	var/weapons = list("Relic, 'Apocrypha' (Greatsword) + Dagger", "Relic, 'Creed & Covenant' (Broadsword + Greatshield)", "Relic, 'Consecratia & Covenant' (Flail + Greatshield)", "Relic, 'Stigmata' (Halberd) + Dagger", "Psydonic Broadsword + Dagger", "Psydonic Poleaxe + Dagger")
 	var/weapon_choice = input(H,"CHOOSE YOUR RELIQUARY PIECE.", "WIELD THEM IN HIS NAME.") as anything in weapons
 	switch(weapon_choice)
-		if("Psydonic Broadsword + Dagger")
-			H.put_in_hands(new /obj/item/rogueweapon/sword/long/kriegmesser/psy/preblessed(H))
-			H.put_in_hands(new /obj/item/rogueweapon/huntingknife/idagger/silver/psydagger(H))
-			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/sword/noble, SLOT_BACK_R, TRUE)
-			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/sheath/noble, SLOT_BELT_L, TRUE)
-			H.adjust_skillrank_up_to(/datum/skill/combat/swords, 5, TRUE)
-			H.adjust_skillrank_up_to(/datum/skill/combat/knives, 4, TRUE)
-		if("Psydonic Poleaxe + Dagger")
-			H.put_in_hands(new /obj/item/rogueweapon/greataxe/psy/preblessed(H))
-			H.put_in_hands(new /obj/item/rogueweapon/huntingknife/idagger/silver/psydagger(H))
-			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/gwstrap, SLOT_BELT_L, TRUE)
-			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/sheath/noble, SLOT_BELT_L, TRUE)
-			H.adjust_skillrank_up_to(/datum/skill/combat/axes, 5, TRUE)
-			H.adjust_skillrank_up_to(/datum/skill/combat/knives, 4, TRUE)
-		if("Apocrypha (Greatsword) + Dagger")
+		if("Relic, 'Apocrypha' (Greatsword) + Dagger")
 			H.put_in_hands(new /obj/item/rogueweapon/greatsword/psygsword/relic(H))
-			H.put_in_hands(new /obj/item/rogueweapon/huntingknife/idagger/silver/psydagger(H))
+			H.put_in_hands(new /obj/item/rogueweapon/huntingknife/idagger/silver/heavypsydagger(H))
 			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/gwstrap, SLOT_BACK_R, TRUE)
 			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/sheath/noble, SLOT_BELT_L, TRUE)
 			H.adjust_skillrank_up_to(/datum/skill/combat/swords, 5, TRUE)
 			H.adjust_skillrank_up_to(/datum/skill/combat/knives, 4, TRUE)
-		if("Covenant And Creed (Broadsword + Shield)")
+		if("Relic, 'Creed & Covenant' (Broadsword + Greatshield)")
 			H.put_in_hands(new /obj/item/rogueweapon/greatsword/bsword/psy/relic(H))
 			H.put_in_hands(new /obj/item/paper/inqslip/arrival/inq(H))
 			H.equip_to_slot_or_del(new /obj/item/rogueweapon/shield/tower/metal/psy, SLOT_BACK_R, TRUE)
@@ -236,11 +246,32 @@
 			H.equip_to_slot_or_del(new /obj/item/storage/keyring/inquisitor, SLOT_BELT_L, TRUE)
 			H.adjust_skillrank_up_to(/datum/skill/combat/swords, 5, TRUE)
 			H.adjust_skillrank_up_to(/datum/skill/combat/shields, 4, TRUE)
-		if("Covenant and Consecratia (Flail + Shield)")
+		if("Relic, 'Consecratia & Covenant' (Flail + Greatshield)")
 			H.put_in_hands(new /obj/item/rogueweapon/flail/sflail/psyflail/relic(H))
 			H.equip_to_slot_or_del(new /obj/item/rogueweapon/shield/tower/metal/psy, SLOT_BACK_R, TRUE)
 			H.adjust_skillrank_up_to(/datum/skill/combat/whipsflails, 5, TRUE)
 			H.adjust_skillrank_up_to(/datum/skill/combat/shields, 4, TRUE)
+		if("Relic, 'Stigmata' (Halberd) + Dagger")
+			H.put_in_hands(new /obj/item/rogueweapon/halberd/psyhalberd/relic(H))
+			H.put_in_hands(new /obj/item/rogueweapon/huntingknife/idagger/silver/heavypsydagger(H))
+			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/gwstrap, SLOT_BACK_R, TRUE)
+			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/sheath/noble, SLOT_BELT_L, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/polearms, 5, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/knives, 4, TRUE)
+		if("Psydonic Broadsword + Dagger")
+			H.put_in_hands(new /obj/item/rogueweapon/sword/long/kriegmesser/psy/preblessed(H))
+			H.put_in_hands(new /obj/item/rogueweapon/huntingknife/idagger/silver/heavypsydagger(H))
+			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/sword/noble, SLOT_BACK_R, TRUE)
+			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/sheath/noble, SLOT_BELT_L, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/swords, 5, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/knives, 4, TRUE)
+		if("Psydonic Poleaxe + Dagger")
+			H.put_in_hands(new /obj/item/rogueweapon/greataxe/psy/preblessed(H))
+			H.put_in_hands(new /obj/item/rogueweapon/huntingknife/idagger/silver/heavypsydagger(H))
+			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/gwstrap, SLOT_BELT_L, TRUE)
+			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/sheath/noble, SLOT_BELT_L, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/axes, 5, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/knives, 4, TRUE)
 
 /obj/item/clothing/gloves/roguetown/chain/blk
 		color = CLOTHING_GREY
