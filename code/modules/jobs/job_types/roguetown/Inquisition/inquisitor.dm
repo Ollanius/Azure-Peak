@@ -188,6 +188,7 @@
 	subclass_skills = list(
 		/datum/skill/misc/climbing = SKILL_LEVEL_EXPERT,
 		/datum/skill/misc/athletics = SKILL_LEVEL_MASTER,
+		/datum/skill/combat/knives = SKILL_LEVEL_EXPERT,
 		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/riding = SKILL_LEVEL_JOURNEYMAN,
@@ -222,22 +223,22 @@
 	gloves = /obj/item/clothing/gloves/roguetown/otavan/psygloves
 	backpack_contents = list(
 		/obj/item/storage/keyring/inquisitor = 1,
-		/obj/item/paper/inqslip/arrival/inq = 1
+		/obj/item/paper/inqslip/arrival/inq = 1,
+		/obj/item/natural/inqfeather = 1,
+		/obj/item/rogueweapon/scabbard/sheath/noble = 1,
+		/obj/item/rogueweapon/huntingknife/idagger/silver/heavypsydagger = 1
 		)
 
 /datum/outfit/job/roguetown/inquisitor/ordinator/choose_loadout(mob/living/carbon/human/H)
 	. = ..()
 	change_origin(H, /datum/virtue/origin/otava, "Holy order")
-	var/weapons = list("Relic, 'Apocrypha' (Greatsword) + Dagger", "Relic, 'Creed & Covenant' (Broadsword + Greatshield)", "Relic, 'Consecratia & Covenant' (Flail + Greatshield)", "Relic, 'Stigmata' (Halberd) + Dagger", "Psydonic Broadsword + Dagger", "Psydonic Poleaxe + Dagger")
+	var/weapons = list("Relic, 'Apocrypha' (Greatsword)", "Relic, 'Creed & Covenant' (Broadsword + Greatshield)", "Relic, 'Consecratia & Covenant' (Flail + Greatshield)", "Relic, 'Stigmata' (Halberd)", "Psydonic Broadsword", "Psydonic Poleaxe")
 	var/weapon_choice = input(H,"CHOOSE YOUR RELIQUARY PIECE.", "WIELD THEM IN HIS NAME.") as anything in weapons
 	switch(weapon_choice)
-		if("Relic, 'Apocrypha' (Greatsword) + Dagger")
+		if("Relic, 'Apocrypha' (Greatsword)")
 			H.put_in_hands(new /obj/item/rogueweapon/greatsword/psygsword/relic(H))
-			H.put_in_hands(new /obj/item/rogueweapon/huntingknife/idagger/silver/heavypsydagger(H))
 			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/gwstrap, SLOT_BACK_R, TRUE)
-			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/sheath/noble, SLOT_BELT_L, TRUE)
 			H.adjust_skillrank_up_to(/datum/skill/combat/swords, 5, TRUE)
-			H.adjust_skillrank_up_to(/datum/skill/combat/knives, 4, TRUE)
 		if("Relic, 'Creed & Covenant' (Broadsword + Greatshield)")
 			H.put_in_hands(new /obj/item/rogueweapon/greatsword/bsword/psy/relic(H))
 			H.put_in_hands(new /obj/item/paper/inqslip/arrival/inq(H))
@@ -253,27 +254,18 @@
 			H.equip_to_slot_or_del(new /obj/item/rogueweapon/shield/tower/metal/psy, SLOT_BACK_R, TRUE)
 			H.adjust_skillrank_up_to(/datum/skill/combat/whipsflails, 5, TRUE)
 			H.adjust_skillrank_up_to(/datum/skill/combat/shields, 4, TRUE)
-		if("Relic, 'Stigmata' (Halberd) + Dagger")
+		if("Relic, 'Stigmata' (Halberd)")
 			H.put_in_hands(new /obj/item/rogueweapon/halberd/psyhalberd/relic(H))
-			H.put_in_hands(new /obj/item/rogueweapon/huntingknife/idagger/silver/heavypsydagger(H))
 			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/gwstrap, SLOT_BACK_R, TRUE)
-			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/sheath/noble, SLOT_BELT_L, TRUE)
 			H.adjust_skillrank_up_to(/datum/skill/combat/polearms, 5, TRUE)
-			H.adjust_skillrank_up_to(/datum/skill/combat/knives, 4, TRUE)
-		if("Psydonic Broadsword + Dagger")
+		if("Psydonic Broadsword")
 			H.put_in_hands(new /obj/item/rogueweapon/sword/long/kriegmesser/psy/preblessed(H))
-			H.put_in_hands(new /obj/item/rogueweapon/huntingknife/idagger/silver/heavypsydagger(H))
 			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/sword/noble, SLOT_BACK_R, TRUE)
-			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/sheath/noble, SLOT_BELT_L, TRUE)
 			H.adjust_skillrank_up_to(/datum/skill/combat/swords, 5, TRUE)
-			H.adjust_skillrank_up_to(/datum/skill/combat/knives, 4, TRUE)
-		if("Psydonic Poleaxe + Dagger")
+		if("Psydonic Poleaxe")
 			H.put_in_hands(new /obj/item/rogueweapon/greataxe/psy/preblessed(H))
-			H.put_in_hands(new /obj/item/rogueweapon/huntingknife/idagger/silver/heavypsydagger(H))
-			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/gwstrap, SLOT_BELT_L, TRUE)
-			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/sheath/noble, SLOT_BELT_L, TRUE)
+			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/gwstrap, SLOT_BELT_R, TRUE)
 			H.adjust_skillrank_up_to(/datum/skill/combat/axes, 5, TRUE)
-			H.adjust_skillrank_up_to(/datum/skill/combat/knives, 4, TRUE)
 
 /obj/item/clothing/gloves/roguetown/chain/blk
 		color = CLOTHING_GREY
