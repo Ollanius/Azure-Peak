@@ -1,6 +1,7 @@
 /datum/advclass/psydoniantemplar // A templar, but for the Inquisition
 	name = "Adjudicator"
-	tutorial = "Psydonite knights, clad in fluted chainmaille and blessed with the capacity to invoke lesser miracles. In lieu of greater miracles and rituals, they compensate through martial discipline and blessed weaponry."
+	tutorial = "Psydonite knights, clad in fluted chainmaille and blessed with the capacity to invoke lesser \
+	miracles. In lieu of greater miracles and rituals, they compensate through martial discipline and blessed weaponry."
 	allowed_sexes = list(MALE, FEMALE)
 	
 	outfit = /datum/outfit/job/roguetown/psydoniantemplar
@@ -88,31 +89,31 @@
 	var/weapon_choice = input(H,"Choose your WEAPON.", "TAKE UP PSYDON'S ARMS.") as anything in weapons
 	switch(weapon_choice)
 		if("Psydonic Longsword")
-			H.put_in_hands(new /obj/item/rogueweapon/sword/long/psysword(H))
+			H.put_in_hands(new /obj/item/rogueweapon/sword/long/psysword/preblessed(H))
 			H.put_in_hands(new /obj/item/rogueweapon/scabbard/sword/noble(H))
 			H.adjust_skillrank_up_to(/datum/skill/combat/swords, 4, TRUE)
 		if("Psydonic War Axe")
-			H.put_in_hands(new /obj/item/rogueweapon/stoneaxe/battle/psyaxe(H))
+			H.put_in_hands(new /obj/item/rogueweapon/stoneaxe/battle/psyaxe/preblessed(H))
 			H.adjust_skillrank_up_to(/datum/skill/combat/axes, 4, TRUE)
 		if("Psydonic Whip")
-			H.put_in_hands(new /obj/item/rogueweapon/whip/psywhip_lesser(H))
+			H.put_in_hands(new /obj/item/rogueweapon/whip/psywhip_lesser/preblessed(H))
 			H.adjust_skillrank_up_to(/datum/skill/combat/whipsflails, 4, TRUE)
 		if("Psydonic Flail")
-			H.put_in_hands(new /obj/item/rogueweapon/flail/sflail/psyflail(H))
+			H.put_in_hands(new /obj/item/rogueweapon/flail/sflail/psyflail/preblessed(H))
 			H.adjust_skillrank_up_to(/datum/skill/combat/whipsflails, 4, TRUE)
 		if("Psydonic Grand Mace")
-			H.put_in_hands(new /obj/item/rogueweapon/mace/goden/psymace(H))
+			H.put_in_hands(new /obj/item/rogueweapon/mace/goden/psymace/preblessed(H))
 			H.adjust_skillrank_up_to(/datum/skill/combat/maces, 4, TRUE)
 		if("Psydonic Spear + Flanged Mace")
-			H.put_in_hands(new /obj/item/rogueweapon/spear/psyspear(H))
-			H.put_in_hands(new /obj/item/rogueweapon/mace/cudgel/psy(H))
+			H.put_in_hands(new /obj/item/rogueweapon/spear/psyspear/preblessed(H))
+			H.put_in_hands(new /obj/item/rogueweapon/mace/cudgel/psy/preblessed(H))
 			H.put_in_hands(new /obj/item/rogueweapon/scabbard/gwstrap(H))
 			H.adjust_skillrank_up_to(/datum/skill/combat/polearms, 4, TRUE)
 		if("Psydonic Poleaxe + Shortsword")
-			H.put_in_hands(new /obj/item/rogueweapon/greataxe/psy(H))
-			H.put_in_hands(new /obj/item/rogueweapon/sword/short/psy(H))
+			H.put_in_hands(new /obj/item/rogueweapon/greataxe/psy/preblessed(H))
+			H.put_in_hands(new /obj/item/rogueweapon/sword/short/psy/preblessed(H))
 			H.put_in_hands(new /obj/item/rogueweapon/scabbard/gwstrap(H))
 			H.adjust_skillrank_up_to(/datum/skill/combat/axes, 4, TRUE)
 		if("Psydonic Flanged Mace")
-			H.put_in_hands(new /obj/item/rogueweapon/mace/cudgel/psy(H))
+			H.put_in_hands(new /obj/item/rogueweapon/mace/cudgel/psy/preblessed(H))
 			H.adjust_skillrank_up_to(/datum/skill/combat/maces, 4, TRUE)

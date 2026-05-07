@@ -225,9 +225,8 @@
 
 /obj/structure/closet/crate/chest/inqreliquary/relic/superbow/Initialize()
 	. = ..()
-	new /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy(src)
-	new /obj/item/quiver/bolt/heavy/standard(src)
-	new /obj/item/ammo_casing/caseless/rogue/heavy_bolt/silver(src)
+	new /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy/relic/marque(src)
+	new /obj/item/quiver/bolt/heavy/silver(src)
 
 /datum/inqports/articles/stampstuff
 	name = "1 Lump of Redtallow"
@@ -292,20 +291,20 @@
 /datum/inqports/equipment/silvarrow
 	name = "1 Silver Arrow"
 	item_type = /obj/item/ammo_casing/caseless/rogue/arrow/silver
-	maximum = 3
-	marquescost = 6
+	maximum = 5
+	marquescost = 4
 
 /datum/inqports/equipment/silvbolt
 	name = "1 Silver Bolt"
 	item_type = /obj/item/ammo_casing/caseless/rogue/bolt/silver
-	maximum = 3
-	marquescost = 6
+	maximum = 5
+	marquescost = 4
 
 /datum/inqports/equipment/silvheavybolt
 	name = "1 Silver Heavy Bolt"
 	item_type = /obj/item/ammo_casing/caseless/rogue/heavy_bolt/silver
-	maximum = 3
-	marquescost = 8
+	maximum = 5
+	marquescost = 4
 
 /datum/inqports/equipment/silverstake
 	name = "1 Silver-Tipped Stake"

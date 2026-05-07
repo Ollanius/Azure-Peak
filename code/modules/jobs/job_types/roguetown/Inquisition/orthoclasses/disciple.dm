@@ -50,14 +50,14 @@
 				gloves = /obj/item/clothing/gloves/roguetown/bandages/pugilist
 				ADD_TRAIT(H, TRAIT_IGNOREDAMAGESLOWDOWN, TRAIT_GENERIC)
 			if("Katar")
-				r_hand = /obj/item/rogueweapon/katar/psydon
+				r_hand = /obj/item/rogueweapon/katar/psydon/preblessed
 				gloves = /obj/item/clothing/gloves/roguetown/bandages/weighted
 			if("Knuckledusters")
 				r_hand = /obj/item/clothing/gloves/roguetown/knuckles/psydon
 			if("Quarterstaff")
 				H.adjust_skillrank_up_to(/datum/skill/combat/staves, 4, TRUE)
 				H.adjust_skillrank_up_to(/datum/skill/combat/polearms, 3, TRUE)
-				r_hand = /obj/item/rogueweapon/woodstaff/quarterstaff/psy
+				r_hand = /obj/item/rogueweapon/woodstaff/quarterstaff/psy/preblessed
 				gloves = /obj/item/clothing/gloves/roguetown/bandages/weighted
 				H.change_stat(STATKEY_PER, 1)
 				H.change_stat(STATKEY_INT, 1) //Changes statblock from 3/3/3/-2/-1/0 to 3/3/3/-1/-1/1. Note that this comes at the cost of losing the 'critical resistance' trait, and retaining the unarmorable status.
