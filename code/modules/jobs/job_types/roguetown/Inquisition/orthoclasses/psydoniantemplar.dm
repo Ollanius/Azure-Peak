@@ -92,11 +92,15 @@
 			H.change_stat(STATKEY_CON, -2)
 			H.change_stat(STATKEY_WIL, -2)
 
-	var/weapons = list("Psydonic Longsword", "Psydonic War Axe", "Psydonic Whip", "Psydonic Flail", "Psydonic Grand Mace", "Psydonic Spear + Flanged Mace", "Psydonic Poleaxe + Shortsword", "Psydonic Flanged Mace")
+	var/weapons = list("Psydonic Longsword", "Psydonic Broadsword", "Psydonic War Axe", "Psydonic Whip", "Psydonic Flail", "Psydonic Grand Mace", "Psydonic Spear + Flanged Mace", "Psydonic Poleaxe + Shortsword", "Psydonic Flanged Mace")
 	var/weapon_choice = input(H,"Choose your WEAPON.", "TAKE UP PSYDON'S ARMS.") as anything in weapons
 	switch(weapon_choice)
 		if("Psydonic Longsword")
 			H.put_in_hands(new /obj/item/rogueweapon/sword/long/psysword/preblessed(H))
+			H.put_in_hands(new /obj/item/rogueweapon/scabbard/sword/noble(H))
+			H.adjust_skillrank_up_to(/datum/skill/combat/swords, 4, TRUE)
+		if("Psydonic Broadsword")
+			H.put_in_hands(new /obj/item/rogueweapon/sword/long/kriegmesser/psy/preblessed(H))
 			H.put_in_hands(new /obj/item/rogueweapon/scabbard/sword/noble(H))
 			H.adjust_skillrank_up_to(/datum/skill/combat/swords, 4, TRUE)
 		if("Psydonic War Axe")
