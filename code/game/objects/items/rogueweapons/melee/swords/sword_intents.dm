@@ -292,8 +292,8 @@
 	demolition_mod = 0.05
 
 /datum/intent/sword/chop/cleave
-	name = "cleave"
-	icon_state = "intear"
+	name = "powerful cleave"
+	icon_state = "incarve"
 	attack_verb = list("cleaves", "tears through")
 	chargedrain = 1.8
 	chargetime = 12
