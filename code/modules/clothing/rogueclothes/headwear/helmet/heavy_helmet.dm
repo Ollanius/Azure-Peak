@@ -814,7 +814,19 @@
 			pic2.color = get_altdetail_color()
 		add_overlay(pic2)
 
-/obj/item/clothing/head/roguetown/helmet/heavy/psydonhelm/greatplume
+/obj/item/clothing/head/roguetown/helmet/heavy/knight/psy
+	name = "psydonic armet"
+	desc = "An ornate helmet, whose visor has been bound shut with blacksteel chains. The Order of Saint Eora often decorates \
+	these armets with flowers - not only as a lucky charm gifted to them by fair maidens and family, but also as a vibrant reminder \
+	that 'happiness has to be fought for.'"
+	icon_state = "psyknight"
+	item_state = "psyknight"
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	bloody_icon = 'icons/effects/blood64.dmi'
+
+/obj/item/clothing/head/roguetown/helmet/heavy/knight/psy/greatplume
 	name = "psydonic armet with greatplume"
 	desc = "An ornate helmet, whose visor has been bound shut with blacksteel chains. The Order of Saint Eora often decorates \
 	these armets with flowers - not only as a lucky charm gifted to them by fair maidens and family, but also as a vibrant reminder \
@@ -823,14 +835,14 @@
 	item_state = "psyknight"
 	worn_x_dimension = 64
 	worn_y_dimension = 64
-	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
-	bloody_icon = 'icons/effects/blood64.dmi'
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDESNOUT
 	adjustable = CAN_CADJUST
 	max_integrity = ARMOR_INT_HELMET_HEAVY_STEEL - ARMOR_INT_HELMET_HEAVY_ADJUSTABLE_PENALTY
 	smeltresult = /obj/item/ingot/silver
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
+	bloody_icon = 'icons/effects/blood64.dmi'
 
-/obj/item/clothing/head/roguetown/helmet/heavy/psydonhelm/greatplume/attackby(obj/item/W, mob/living/user, params)
+/obj/item/clothing/head/roguetown/helmet/heavy/knight/iron/greatplume/attackby(obj/item/W, mob/living/user, params)
 	..()
 	if(istype(W, /obj/item/natural/feather) && !detail_tag)
 		var/choice = input(user, "Choose a color.", "Greatplume") as anything in COLOR_MAP
@@ -843,7 +855,7 @@
 			var/mob/living/carbon/H = user
 			H.update_inv_head()
 
-/obj/item/clothing/head/roguetown/helmet/heavy/psydonhelm/greatplume/update_icon()
+/obj/item/clothing/head/roguetown/helmet/heavy/knight/iron/greatplume/update_icon()
 	cut_overlays()
 	if(get_detail_tag())
 		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
