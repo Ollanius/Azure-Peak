@@ -327,6 +327,12 @@
 	smeltresult = /obj/item/ingot/aaslag
 	sellprice = 6
 
+/obj/item/ingot/bsslag
+	name = "blacksteel-speckled slag"
+	desc = "A mass of smoldered blacksteel, rendered lame form the forge's heat. It has taken its secrets to the grave."
+	icon_state = "oreada"
+	sellprice = 7
+
 /obj/item/ingot/aaslag/Initialize()
   ..()
   add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = GLOW_COLOR_FIRE, "alpha" = 50, "size" = 1))
