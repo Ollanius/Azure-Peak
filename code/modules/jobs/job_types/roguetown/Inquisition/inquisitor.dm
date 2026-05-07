@@ -226,7 +226,7 @@
 		/obj/item/paper/inqslip/arrival/inq = 1,
 		/obj/item/natural/inqfeather = 1,
 		/obj/item/rogueweapon/scabbard/sheath/noble = 1,
-		/obj/item/rogueweapon/huntingknife/idagger/silver/heavypsydagger = 1
+		/obj/item/rogueweapon/huntingknife/idagger/silver/psydagger/heavy = 1
 		)
 
 /datum/outfit/job/roguetown/inquisitor/ordinator/choose_loadout(mob/living/carbon/human/H)
