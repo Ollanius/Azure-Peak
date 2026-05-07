@@ -664,7 +664,6 @@
 	max_integrity = 200
 	wdefense = 9
 
-
 /obj/item/rogueweapon/huntingknife/idagger/steel/parrying/vaquero
 	name = "sail dagger"
 	force = 15
@@ -843,6 +842,26 @@
 		added_force = 0,\
 		added_blade_int = 0,\
 		added_int = 100,\
+		added_def = 2,\
+	)
+	sellprice += 200
+
+/obj/item/rogueweapon/huntingknife/idagger/silver/psydagger/heavy
+	name = "psydonic misericorde"
+	desc = "A sanctified misericorde, purposemade for piercing the perverted plate of pestilent paladins. Rarely seen in Azuria, beyond the tasseted \
+	sheaths of Otava's most knightly delegates."
+	icon_state = "psydaggerheavy"
+	sheathe_icon = "psydagger"
+	force = 20
+
+/obj/item/rogueweapon/huntingknife/idagger/silver/psydagger/heavy/ComponentInitialize()
+	AddComponent(\
+		/datum/component/silverbless,\
+		pre_blessed = BLESSING_PSYDONIAN,\
+		silver_type = SILVER_PSYDONIAN,\
+		added_force = 0,\
+		added_blade_int = 50,\
+		added_int = 150,\
 		added_def = 2,\
 	)
 	sellprice += 200
