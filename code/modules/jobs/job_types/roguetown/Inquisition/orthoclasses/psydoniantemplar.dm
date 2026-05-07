@@ -34,7 +34,7 @@
 	subclass_stashed_items = list(
 		"Tome of Psydon" = /obj/item/book/rogue/bibble/psy
 	)
-	extra_context = "This subclass can choose between two Disciplines; the Crusader and Exorcist. The latter - armed with a Cuirass instead of Mailled Hauberk - sacrifices its Willpower and Constitution, in exchange for a major bonus to Perception and Intelligence."
+	extra_context = "This subclass can choose between two Disciplines; the Justicar and Exorcist. The latter - armed with a Cuirass instead of Mailled Hauberk - sacrifices its Willpower and Constitution, in exchange for a major bonus to Perception and Intelligence."
 
 /datum/outfit/job/roguetown/psydoniantemplar
 	job_bitflag = BITFLAG_HOLY_WARRIOR
@@ -80,10 +80,10 @@
 		if("Greatplumed Armet")
 			H.equip_to_slot_or_del(new /obj/item/clothing/head/roguetown/helmet/heavy/psydonhelm/greatplume, SLOT_HEAD, TRUE)
 
-	var/armors = list("Crusader - Mailled Hauberk, +II CON / +II WIL", "Exorcist - Cuirass, +II INT / +II PER")
+	var/armors = list("Justicar - Mailled Hauberk, +II CON / +II WIL", "Exorcist - Cuirass, +II INT / +II PER")
 	var/armor_choice = input(H, "Choose your OATH.", "TAKE UP PSYDON'S MANTLE.") as anything in armors
 	switch(armor_choice)
-		if("Crusader - Mailled Hauberk, +II CON / +II WIL")
+		if("Justicar - Mailled Hauberk, +II CON / +II WIL")
 			H.equip_to_slot_or_del(new /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/ornate, SLOT_ARMOR, TRUE)
 		if("Exorcist - Cuirass, +II INT / +II PER")
 			H.equip_to_slot_or_del(new /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/ornate, SLOT_ARMOR, TRUE)
