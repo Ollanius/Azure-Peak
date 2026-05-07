@@ -19,6 +19,7 @@
 		/datum/skill/combat/swords = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/combat/maces = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/combat/whipsflails = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/combat/knives = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/combat/crossbows = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/combat/bows = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
@@ -33,7 +34,7 @@
 	subclass_stashed_items = list(
 		"Tome of Psydon" = /obj/item/book/rogue/bibble/psy
 	)
-	extra_context = "This subclass can choose between two types of armor: a set of plated hauberk, and a tasseted cuirass. Selecting the latter provides less coverage and durability, but removes the innate malus to Speed."
+	extra_context = "This subclass can choose between two Disciplines; the Crusader and Exorcist. The latter - armed with a Cuirass instead of Mailled Hauberk - sacrifices its Willpower and Constitution, in exchange for a major bonus to Perception and Intelligence."
 
 /datum/outfit/job/roguetown/psydoniantemplar
 	job_bitflag = BITFLAG_HOLY_WARRIOR
@@ -54,7 +55,8 @@
 	beltl = /obj/item/storage/belt/rogue/pouch/coins/mid
 	id = /obj/item/clothing/ring/signet/silver
 	backpack_contents = list(/obj/item/roguekey/inquisitionmanor = 1,
-	/obj/item/paper/inqslip/arrival/ortho = 1)
+	/obj/item/paper/inqslip/arrival/ortho = 1,
+	/obj/item/rogueweapon/huntingknife/idagger/silver/stake/psy = 1)
 
 	H.dna.species.soundpack_m = new /datum/voicepack/male/knight()
 	var/datum/devotion/C = new /datum/devotion(H, H.patron)
@@ -64,7 +66,7 @@
 
 /datum/outfit/job/roguetown/psydoniantemplar/choose_loadout(mob/living/carbon/human/H)
 	. = ..()
-	var/helmets = list("Barbute", "Sallet", "Armet", "Bucket Helm")
+	var/helmets = list("Barbute", "Sallet", "Armet", "Bucket Helm", "Greatplumed Armet")
 	var/helmet_choice = input(H,"Choose your HELMET.", "TAKE UP PSYDON'S HELMS.") as anything in helmets
 	switch(helmet_choice)
 		if("Barbute")
@@ -75,15 +77,20 @@
 			H.equip_to_slot_or_del(new /obj/item/clothing/head/roguetown/helmet/heavy/psydonhelm, SLOT_HEAD, TRUE)
 		if("Bucket Helm")
 			H.equip_to_slot_or_del(new /obj/item/clothing/head/roguetown/helmet/heavy/psybucket, SLOT_HEAD, TRUE)
+		if("Greatplumed Armet")
+			H.equip_to_slot_or_del(new /obj/item/clothing/head/roguetown/helmet/heavy/psydonhelm/greatplume, SLOT_HEAD, TRUE)
 
-	var/armors = list("Hauberk", "Cuirass")
-	var/armor_choice = input(H, "Choose your ARMOR.", "TAKE UP PSYDON'S MANTLE.") as anything in armors
+	var/armors = list("Crusader - Mailled Hauberk, +II CON / +II WIL", "Exorcist - Cuirass, +II INT / +II PER")
+	var/armor_choice = input(H, "Choose your OATH.", "TAKE UP PSYDON'S MANTLE.") as anything in armors
 	switch(armor_choice)
-		if("Hauberk")
+		if("Crusader - Mailled Hauberk, +II CON / +II WIL")
 			H.equip_to_slot_or_del(new /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/ornate, SLOT_ARMOR, TRUE)
-		if("Cuirass")
+		if("Exorcist - Cuirass, +II INT / +II PER")
 			H.equip_to_slot_or_del(new /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/ornate, SLOT_ARMOR, TRUE)
-			H.change_stat(STATKEY_SPD, 1) //Less durability and coverage, but still upgradable. Balances out the innate -1 SPD debuff.
+			H.change_stat(STATKEY_INT, 2)
+			H.change_stat(STATKEY_PER, 2)
+			H.change_stat(STATKEY_CON, -2)
+			H.change_stat(STATKEY_WIL, -2)
 
 	var/weapons = list("Psydonic Longsword", "Psydonic War Axe", "Psydonic Whip", "Psydonic Flail", "Psydonic Grand Mace", "Psydonic Spear + Flanged Mace", "Psydonic Poleaxe + Shortsword", "Psydonic Flanged Mace")
 	var/weapon_choice = input(H,"Choose your WEAPON.", "TAKE UP PSYDON'S ARMS.") as anything in weapons
