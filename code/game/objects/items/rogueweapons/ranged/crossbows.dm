@@ -417,8 +417,6 @@
 	</br>'Because I have set my love upon Him, therefore will He deliver me.' \
 	</br>'I shall call upon Him, and He will answer me.' \
 	</br>'He will be with me in trouble. He will deliver me and honor me.' \
-	</br>'...' \
-	</br>'I cannot explain what happened in those halls, your eminence..' \
-	</br>'..I can only have faith that I did the right thing.'"
+	</br>'...' </br>'I cannot explain what happened in those halls, your eminence..' </br>'..I can only have faith that I did the right thing.'"
 
 //
