@@ -272,7 +272,10 @@
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/aalloy
 	name = "ancient crossbow"
-	desc = "A deadly weapon from another tyme, which shoots a bolt with terrific power. Unlike the common bow, it uses a sophisticated mechanism to renock - and retain - its half-length bolts; a matter that relies more on raw strength than dexterity to master. </br>Once, these mechanical delights bristled the arms of Zaelorian's ancient empire; now, it shudders in the grasp of Zizo's deathless crusade."
+	desc = "A deadly weapon from another tyme, which shoots a bolt with terrific power. Unlike the common bow, it \
+	uses a sophisticated mechanism to renock - and retain - its half-length bolts; a matter that relies more on raw \
+	strength than dexterity to master. </br>Once, these mechanical delights bristled the arms of Zaelorian's ancient \
+	empire; now, it shudders in the grasp of Zizo's deathless crusade."
 	icon = 'icons/roguetown/weapons/misc32.dmi'
 	icon_state = "ancientcrossbow0"
 	item_state = "ancientcrossbow"
@@ -295,7 +298,9 @@
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/slurbow
 	name = "slurbow"
-	desc = "A lighter weight crossbow with a distinct barrel shroud holding the bolt in place. While its reduced draw-weight does hamper the power of its bolts, it's consequently much easier to rearm and aim than the common crossbow; doubly-so, while on the move. </br>They're popular among among highwaymen and the patrolling lamplighters of Otava."
+	desc = "A lighter weight crossbow with a distinct barrel shroud holding the bolt in place. While its reduced draw-weight \
+	does hamper the power of its bolts, it's consequently much easier to rearm and aim than the common crossbow; doubly-so, \
+	while on the move. </br>They're popular among among highwaymen and the patrolling lamplighters of Otava."
 	icon = 'icons/roguetown/weapons/misc32.dmi'
 	icon_state = "slurbow0"
 	item_state = "slurbow"
@@ -323,7 +328,10 @@
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy
 	name = "siegebow"
-	desc = "A heavier weight crossbow - the basis of a mounted ballista, made fit for handheld usage. Integrated just beneath the stock is a windlass mechanism, necessary to surmount the siegebow's titanic draw-strength. It loads heavier, full-length bolts; purpose-made to pulverize. </br>Assembled in Grenzelhoft, championed by Valoria, and unfamiliar to the highlands of Azure Peak."
+	desc = "A heavier weight crossbow - the basis of a mounted ballista, made fit for handheld usage. Integrated just \
+	beneath the stock is a windlass mechanism, necessary to surmount the siegebow's titanic draw-strength. It loads \
+	heavier, full-length bolts; purpose-made to pulverize. </br>Assembled in Grenzelhoft, championed by Valoria, and \
+	unfamiliar to the highlands of Azure Peak."
 	icon = 'icons/roguetown/weapons/misc32.dmi'
 	icon_state = "heavybow0"
 	item_state = "heavybow"
@@ -380,9 +388,36 @@
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy/paalloy
 	name = "ancient siegebow"
-	desc = "A heavier weight crossbow from another tyme - the basis of a mounted ballista, made fit for handheld usage. Integrated just beneath the stock is a windlass mechanism, necessary to surmount the siegebow's titanic draw-strength. It loads heavier, full-length bolts; purpose-made to pulverize. </br>'Rudmarsch's walls broke beneath the volley, and Her sickness petered through the cracks..'"
+	desc = "A heavier weight crossbow from another tyme - the basis of a mounted ballista, made fit for handheld \
+	usage. Integrated just beneath the stock is a windlass mechanism, necessary to surmount the siegebow's titanic \
+	draw-strength. It loads heavier, full-length bolts; purpose-made to pulverize. </br>'Rudmarsch's walls broke \
+	beneath the volley, and Her sickness petered through the cracks..'"
 	icon_state = "ancientheavybow0"
 	item_state = "ancientheavybow"
 	max_integrity = 130
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy/relic
+	name = "Deliverance"
+	desc = "In the hands of Saint Augustere, this specially-hewn siegebow felled the traitorous Archbishop of Rockhill; \
+	mere moments before the completion of a terrible ritual. Decades later, it has been called into action once more \
+	to destroy those who'd seek to sully His greatest works."
+	minstr = 10 //X STR. Intended for use by the Inquisitor, or as a purchased alternative.
+	max_integrity = 200
+	chargingspeed = 50 //Halfway between the standard crossbow and siegebow.
+	reloadtime = 120 //Halfway between the standard crossbow and siegebow.
+	icon_state = "relicpsyheavybow0"
+	item_state = "relicpsyheavybow"
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy/relic/marque
+	name = "Epistle"
+	desc = "'I will say of the Lord; He is my refuge and my fortress.' </br>'My God, in Him I will trust.' \
+	</br>'I shall not be afraid of the terror in the night, nor the evil that walketh in darkness..' \
+	</br>'..for I have made the Lord my refuge." \
+	</br>'Because I have set my love upon Him, therefore will He deliver me.' \
+	</br>'I shall call upon Him, and He will answer me.' \
+	</br>'He will be with me in trouble. He will deliver me and honor me.' \
+	</br>'...'
+	</br>'I cannot explain what happened in those halls, your eminence..' \
+	</br>'..I can only have faith that I did the right thing.'"
 
 //
