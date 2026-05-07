@@ -790,6 +790,14 @@
     . = ..()
     . += span_info("Silver amulets protect against most unholy curses, hexes, and other mind-altering spells.")
 
+/obj/item/clothing/neck/roguetown/psicross/silver/naledi
+	name = "golden psycross"
+	desc = "'The horrors persist, but so do I!' </br>The surface is meticulously lined with Naledian glyphs, said to ward off the possessive allure of djinns."
+	icon_state = "psycross_g"
+	item_state = "psycross_g"
+	sellprice = 75
+	is_silver = TRUE
+
 /obj/item/clothing/neck/roguetown/psicross/pearl //put it as a psycross so it can be used for miracles
 	name = "pearl amulet"
 	icon_state = "pearlcross"
