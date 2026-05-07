@@ -220,6 +220,7 @@
 	cloak = /obj/item/clothing/cloak/ordinatorcape
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
 	head = /obj/item/clothing/head/roguetown/helmet/heavy/ordinatorhelm
+	mask = /obj/item/clothing/head/roguetown/helmet/blacksteel/psychains
 	gloves = /obj/item/clothing/gloves/roguetown/otavan/psygloves
 	backpack_contents = list(
 		/obj/item/storage/keyring/inquisitor = 1,
