@@ -288,6 +288,8 @@
 	name = "Creed"
 	desc = "Psydonian prayers and Tennite smiths, working as one to craft a weapon to slay the Four. A heavy and large blade, favored by Saint Ravox, to lay \
 	waste to those who threaten His flock. The crossguard's psycross reflects even the faintest of Noc's light. You're the light - show them the way."
+	force = 25 
+	force_wielded = 28
 	icon_state = "psybroadsword"
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silver
