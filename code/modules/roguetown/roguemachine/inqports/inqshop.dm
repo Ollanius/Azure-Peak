@@ -321,7 +321,7 @@
 
 /datum/inqports/equipment/silverstake
 	name = "1 Silver-Tipped Stake"
-	item_type = /obj/item/rogueweapon/huntingknife/idagger/silver/stake/psy
+	item_type = /obj/item/rogueweapon/huntingknife/idagger/silver/stake/psy/preblessed
 	maximum = 5
 	marquescost = 6
 
