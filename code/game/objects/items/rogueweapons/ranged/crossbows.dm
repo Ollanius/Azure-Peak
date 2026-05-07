@@ -397,10 +397,10 @@
 	max_integrity = 130
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy/relic
-	name = "Deliverance"
+	name = "Providence"
 	desc = "In the hands of Saint Augustere, this specially-hewn siegebow felled the traitorous Archbishop of Rockhill; \
 	mere moments before the completion of a terrible ritual. Decades later, it has been called into action once more \
-	to destroy those who'd seek to sully His greatest works."
+	to destroy those who'd seek to sacrifice His greatest works. May thy aim be true, childe o' God - and thy judgement, unfettered."
 	minstr = 10 //X STR. Intended for use by the Inquisitor, or as a purchased alternative.
 	max_integrity = 200
 	chargingspeed = 50 //Halfway between the standard crossbow and siegebow.
@@ -410,7 +410,8 @@
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy/relic/marque
 	name = "Epistle"
-	desc = "'I will say of the Lord; He is my refuge and my fortress.' </br>'My God, in Him I will trust.' \
+	desc = "'I will say of the Lord; He is my refuge and my fortress.' \
+	</br>'My God, in Him I will trust.' \
 	</br>'I shall not be afraid of the terror in the night, nor the evil that walketh in darkness..' \
 	</br>'..for I have made the Lord my refuge." \
 	</br>'Because I have set my love upon Him, therefore will He deliver me.' \
