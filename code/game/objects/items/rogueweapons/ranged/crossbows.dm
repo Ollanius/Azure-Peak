@@ -410,10 +410,4 @@
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy/relic/marque
 	name = "Epistle"
-	desc = "'I will say of the Lord; He is my refuge and my fortress.' \
-	</br>'My God, in Him I will trust.' \
-	</br>'I shall not be afraid of the terror in the night, nor the evil that walketh in darkness..' \
-	</br>'..for I have made the Lord my refuge." \
-	</br>'Because I have set my love upon Him, therefore will He deliver me.' \
-	</br>'I shall call upon Him, and He will answer me.' \
-	</br>'He will be with me in trouble. He will deliver me and honor me.' </br>'...' </br>'I cannot explain what happened in those halls, your eminence..' </br>'..I can only have faith that I did the right thing.'"
+	desc = "'I cannot explain what happened in those halls, your eminence..' </br>'..I can only have faith that I did the right thing.'"
