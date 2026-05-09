@@ -302,7 +302,7 @@
 	smoke.start()
 	new /obj/item/ash(T)
 	qdel(src)
-	
+
 /obj/item/tntstick
 	name = "blastpowder stick"
 	desc = "A bewicked vessel, filled to the brim with explosive powder. Ignition begets eruption; a dizzying shockwave which pulverizes stone, wood, and flesh alike with little discrimination."
@@ -442,7 +442,7 @@
 //admin only mega bomb, should never be made craftable
 /obj/item/satchel_bomb/mega
 	name = "MEGA blastpowder satchel"
-	desc = "An over filled satchel of Blastpowder originally made by Lubbin' Bleat, Octava's Famed sheep-kin bathhouse attendant and ruler of the slumber beat... this type of bomb has been banned by all nations and labeled as a threat by both the church of the ten and Pysdonia. IF YOU SEE A LIT WICK, YOU BEST RUN AWAY QUICK!"
+	desc = "An overfilled satchel of blastpowder originally made by Lubbin' Bleat, Octava's famed sheep-kin bathhouse attendant and ruler of the slumber beat.. </br>This type of bomb has been banned by all kingdoms and labeled as a threat by both the CHurches of the Pantheon and Orthodoxy. IF YOU SEE A LIT WICK, YOU BEST RUN AWAY QUICK!"
 	icon_state = "satchel_bomb"
 	lit_state = "satchel_bomb-lit"
 	icon = 'icons/roguetown/items/misc.dmi'
@@ -698,7 +698,6 @@
 	icon_state = "smokeshell_red"
 	smoke_type = /datum/effect_system/smoke_spread/healing_gas
 
-
 /obj/item/impact_grenade/smoke/fire_gas
 	name = "burning gas belcher"
 	desc = "A vented canister, filled with a fiery payload. It feels uncomfortably hot in your palm, and carries a curious scent - not unlike roasted frybirds."
@@ -716,3 +715,37 @@
 	desc = "A vented canister, filled with a numbing payload. A strange prickling sensation graces your mind and throat, not unlike the 'pins and needles' of a sleeping limb."
 	icon_state = "smokeshell_purple"
 	smoke_type = /datum/effect_system/smoke_spread/mute_gas	
+
+/obj/item/impact_grenade/smoke/psyalchemic
+	name = "canister of blessed incense"
+	desc = "Divine miasma, sealed within a casket of blessed silver and redtallow. It is said to contain the Golgatha's fragrance, both reinvigorating \
+	to His children and debilitating to Her disciples. A good toss should be enough to disrupt the seals and indunate the surroundings in its incense."
+	dropshrink = 0.6
+	icon_state = "psyalchemicbomb"
+	var/datum/effect_system/smoke_spread/smoke_type = /datum/effect_system/smoke_spread
+	grid_width = 32
+	grid_height = 64
+	is_silver = TRUE
+
+/obj/item/impact_grenade/smoke/psyalchemic/explodes()
+	var/turf/T = get_turf(src)
+	playsound(T, 'sound/misc/explode/incendiary (1).ogg', 100)
+	var/datum/effect_system/smoke_spread/psycomet_gas = new smoke_type
+	new /obj/item/psyalchemicshell (get_turf(src.loc)) //leaving the empty case behind
+	smoke.set_up(3, T) // radius of 3 around T
+	smoke.start()
+	..()
+
+/obj/item/psyalchemicshell
+	name = "emptied canister of blessed incense"
+	desc = "A casket of blessed silver and redtallow, deprived of its divine miasma. Gracing it with the Golgatha's blessings should be \
+	enough to both refill and reseal it for usage, once more."
+	dropshrink = 0.6
+	icon_state = "psyalchemicbomb_empty"
+	icon = 'icons/roguetown/items/misc.dmi'
+	w_class = WEIGHT_CLASS_SMALL
+	throwforce = 0
+	throw_speed = 1
+	grid_width = 32
+	grid_height = 64
+	is_silver = TRUE

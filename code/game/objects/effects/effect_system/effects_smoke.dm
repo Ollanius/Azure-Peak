@@ -261,6 +261,34 @@
 	effect_type = /obj/effect/particle_effect/smoke/sleeping
 
 /////////////////////////////////////////////
+// BLESSED (PSYDONIC) SMOKE
+/////////////////////////////////////////////
+
+
+/obj/effect/particle_effect/smoke/psycomet_gas
+  color = "#74cde0"
+  lifetime = 15
+
+/obj/effect/particle_effect/smoke/psycomet_gas/smoke_mob(mob/living/carbon/M)
+	if(..())
+		if(HAS_TRAIT(M, TRAIT_PSYDONIAN_GRIT))
+			M.adjustBruteLoss(-3, 0)
+			M.adjustFireLoss(-3, 0)
+			M.adjustOxyLoss(-3, 0)
+			M.adjustToxLoss(-3, 0)
+			for(var/datum/wound/wound as anything in M.get_wounds())
+				wound.remove_from_bodypart() //closing up all wounds
+			M.emote("cough")
+		if(HAS_TRAIT(M, TRAIT_SILVER_WEAK))
+			M.adjustFireLoss(3, 0)
+			M.adjust_fire_stacks(3)
+			M.ignite_mob()
+			M.emote("scream")
+
+/datum/effect_system/smoke_spread/psycomet_gas
+	effect_type = /obj/effect/particle_effect/smoke/psycomet_gas
+
+/////////////////////////////////////////////
 // Chem smoke
 /////////////////////////////////////////////
 

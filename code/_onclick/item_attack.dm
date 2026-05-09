@@ -31,6 +31,12 @@
 			if(istype(weapon) && !weapon.is_tool)
 				to_chat(user, span_warning("I am too small to properly wield a weapon."))
 				return
+		// Uniquely reskinned variant, for those who don't happen to be familiars.
+		if(HAS_TRAIT(user, TRAIT_WEAPONLESS))
+			var/obj/item/rogueweapon/weapon = src
+			if(istype(weapon) && !weapon.is_tool)
+				to_chat(user, span_warning("I cannot properly wield this weapon."))
+				return
 	if(tool_behaviour && target.tool_act(user, src, tool_behaviour))
 		return
 	if(pre_attack(target, user, params))
