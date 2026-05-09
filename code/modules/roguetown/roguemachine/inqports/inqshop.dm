@@ -61,6 +61,7 @@
 	name = "The Archibishop's Bullion - Blessed Silver Ingots"
 	item_type = /obj/structure/closet/crate/chest/inqreliquary/relic/bullion/
 	marquescost = 16
+	maximum = 5
 
 /obj/structure/closet/crate/chest/inqreliquary/relic/bullion/Initialize()
 	. = ..()
