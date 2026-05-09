@@ -144,7 +144,7 @@
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/bolt/holy
 	embedchance = 100
 	poisontype = /datum/reagent/water/blessed
-	poisonamount = 10
+	poisonamount = 5
 	npc_simple_damage_mult = 5 //175, compared to the regular bolt's 140. Slightly more damage, as to imitate its anti-unholy properties on mobs who aren't affected by any form of poison.
 
 /obj/projectile/bullet/reusable/bolt/blunt
