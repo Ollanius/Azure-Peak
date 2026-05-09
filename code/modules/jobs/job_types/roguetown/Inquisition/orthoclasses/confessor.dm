@@ -79,11 +79,17 @@
 				H.change_stat(STATKEY_PER, 1) //Applies a base statblock of 11/11/11/13 to CON, STR, SPD and PER - compared to the standard 10/9/13/12 + DODGE EXPERT. Physically adept and capable of higher ranged damage..
 				H.change_stat(STATKEY_SPD, -2) //..but with a massive loss to mobility and damage evasion, alongside the naturally low defense of their sidearms.
 		var/rangedweapons = list("Slurbow - Lesser Damage, Rapid & Accurate", "Crossbow - Access To Special Bolts", "Siegebow - Greater Damage, Structurebreaker")
-		var/rangedweapon_choice = input(H,"Choose your BOW.", "TAKE UP PSYDON'S ARC.") as anything in rangedweapons
+		var/rangedweapon_choice = input(H,"Choose your BOW.", "TAKE UP PSYDON'S ARCAGE.") as anything in rangedweapons
 		switch(rangedweapon_choice)
 			if("Slurbow - Lesser Damage, Rapid & Accurate")
 				backl = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/slurbow
-				beltl = /obj/item/quiver/bolt/light
+				var/lightquivers = list("Light Bolts - Steel-Tipped", "Light Sunderbolts - Silver-Tipped, Halved Damage")
+				var/lightboltchoice = input(H,"Choose your MUNITIONS.", "TAKE UP PSYDON'S MISSILES.") as anything in lightquivers
+				switch(lightboltchoice)
+					if("Light Bolts - Steel-Tipped")
+						beltl = /obj/item/quiver/bolt/light
+					if("Light Sunderbolts - Silver-Tipped, Halved Damage")
+						beltl = /obj/item/quiver/bolt/lightholy
 			if("Crossbow - Access To Special Bolts")
 				backl = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
 				var/quivers = list("Bolts - Steel-Tipped", "Sunderbolts - Silver-Tipped, Halved Damage", "Pyrobolts - Incendiary-Tipped, Minimal Damage")
