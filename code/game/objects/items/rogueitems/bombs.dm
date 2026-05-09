@@ -730,10 +730,10 @@
 /obj/item/impact_grenade/smoke/psyalchemic/explodes()
 	var/turf/T = get_turf(src)
 	playsound(T, 'sound/misc/explode/incendiary (1).ogg', 100)
-	var/datum/effect_system/smoke_spread/psycomet_gas = new smoke_type
+	/datum/effect_system/smoke_spread/psycomet_gas = new smoke_type
 	new /obj/item/psyalchemicshell (get_turf(src.loc)) //leaving the empty case behind
-	smoke.set_up(3, T) // radius of 3 around T
-	smoke.start()
+	var/smoke.set_up(3, T) // radius of 3 around T
+	var/smoke.start()
 	..()
 
 /obj/item/psyalchemicshell
