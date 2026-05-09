@@ -62,11 +62,21 @@
 
 /obj/item/ammo_casing/caseless/rogue/bolt/holy
 	name = "sunderbolt"
-	desc = "A silver-tipped bolt, containing a small vial of holy water. Though it inflicts lesser wounds on living flesh, it exceeds when employed against the unholy; a snap and a crack, followed by a fiery surprise. </br>'One baptism for the remission of sins.'"
+	desc = "A silver-tipped bolt, containing a small vial of holy water. Though it inflicts lesser wounds on living flesh, it exceeds when \
+	employed against the unholy; a snap and a crack, followed by a fiery surprise. </br>'One baptism for the remission of sins.'"
 	projectile_type = /obj/projectile/bullet/reusable/bolt/holy
 	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/thrust)
 	caliber = "regbolt"
 	icon_state = "bolt_holywater"
+
+/obj/item/ammo_casing/caseless/rogue/bolt/lightholy
+	name = "light sunderbolt"
+	desc = "A compact silver-tipped bolt, containing a small vial of holy water. Though it inflicts lesser wounds on living flesh, it exceeds when \
+	employed against the unholy; a snap and a crack, followed by a fiery surprise. </br>'One baptism for the remission of sins.'"
+	projectile_type = /obj/projectile/bullet/reusable/bolt/holy //Most of the effectiveness comes from the debuffs, rather than the damage itself. Simple, but sweet.
+	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/thrust)
+	caliber = "lightbolt"
+	icon_state = "light_bolt_holywater"
 
 /obj/projectile/bullet/reusable/bolt
 	name = "bolt"
@@ -134,7 +144,7 @@
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/bolt/holy
 	embedchance = 100
 	poisontype = /datum/reagent/water/blessed
-	poisonamount = 5
+	poisonamount = 10
 	npc_simple_damage_mult = 5 //175, compared to the regular bolt's 140. Slightly more damage, as to imitate its anti-unholy properties on mobs who aren't affected by any form of poison.
 
 /obj/projectile/bullet/reusable/bolt/blunt
