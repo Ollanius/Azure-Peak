@@ -722,7 +722,7 @@
 	to His children and debilitating to Her disciples. A good toss should be enough to disrupt the seals and indunate the surroundings in its incense."
 	dropshrink = 0.6
 	icon_state = "psyalchemicbomb"
-	var/datum/effect_system/smoke_spread/smoke_type = /datum/effect_system/smoke_spread
+	smoke_type = /datum/effect_system/smoke_spread/psycomet_gas 
 	grid_width = 32
 	grid_height = 64
 	is_silver = TRUE
@@ -738,8 +738,7 @@
 
 /obj/item/psyalchemicshell
 	name = "emptied canister of blessed incense"
-	desc = "A casket of blessed silver and redtallow, deprived of its divine miasma. Gracing it with the Golgatha's blessings should be \
-	enough to both refill and reseal it for usage, once more."
+	desc = "A casket of blessed silver and redtallow, deprived of its divine miasma."
 	dropshrink = 0.6
 	icon_state = "psyalchemicbomb_empty"
 	icon = 'icons/roguetown/items/misc.dmi'
