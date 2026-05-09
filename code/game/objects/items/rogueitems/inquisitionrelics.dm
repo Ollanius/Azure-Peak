@@ -418,14 +418,6 @@ Inquisitorial armory down here
 					new /obj/effect/temp_visual/censer_dust(get_turf(A))
 			else
 				to_chat(user, span_info("It has already been blessed."))
-	if(isitem(/obj/item/psyalchemicshell) && on && user.used_intent.type == /datum/intent/bless)
-		playsound(user, 'sound/magic/censercharging.ogg', 100)
-		user.visible_message(span_info("[user] holds \the [src] over \the [A]..."))
-		if(do_after(user, 50, target = A))
-			CP.try_bless(BLESSING_PSYDONIAN)
-			new /obj/effect/temp_visual/censer_dust(get_turf(A))
-		else
-			to_chat(user, span_info("It has already been blessed."))
 	if(ishuman(A) && on && (user.used_intent.type == /datum/intent/bless))
 		var/mob/living/carbon/human/H = A
 		if(H.patron?.type == /datum/patron/old_god)
