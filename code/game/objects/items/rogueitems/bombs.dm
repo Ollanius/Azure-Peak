@@ -715,36 +715,3 @@
 	desc = "A vented canister, filled with a numbing payload. A strange prickling sensation graces your mind and throat, not unlike the 'pins and needles' of a sleeping limb."
 	icon_state = "smokeshell_purple"
 	smoke_type = /datum/effect_system/smoke_spread/mute_gas	
-
-/obj/item/impact_grenade/smoke/psyalchemic
-	name = "canister of blessed incense"
-	desc = "Divine miasma, sealed within a casket of blessed silver and redtallow. It is said to contain the Golgatha's fragrance, both reinvigorating \
-	to His children and debilitating to Her disciples. A good toss should be enough to disrupt the seals and indunate the surroundings in its incense."
-	dropshrink = 0.6
-	icon_state = "psyalchemicbomb"
-	smoke_type = /datum/effect_system/smoke_spread/psycomet_gas 
-	grid_width = 32
-	grid_height = 64
-	is_silver = TRUE
-
-/obj/item/impact_grenade/smoke/psyalchemic/explodes()
-	var/turf/T = get_turf(src)
-	playsound(T, 'sound/misc/explode/incendiary (1).ogg', 100)
-	/datum/effect_system/smoke_spread/psycomet_gas = new smoke_type
-	new /obj/item/psyalchemicshell (get_turf(src.loc)) //leaving the empty case behind
-	var/smoke.set_up(3, T) // radius of 3 around T
-	var/smoke.start()
-	..()
-
-/obj/item/psyalchemicshell
-	name = "emptied canister of blessed incense"
-	desc = "A casket of blessed silver and redtallow, deprived of its divine miasma."
-	dropshrink = 0.6
-	icon_state = "psyalchemicbomb_empty"
-	icon = 'icons/roguetown/items/misc.dmi'
-	w_class = WEIGHT_CLASS_SMALL
-	throwforce = 0
-	throw_speed = 1
-	grid_width = 32
-	grid_height = 64
-	is_silver = TRUE
