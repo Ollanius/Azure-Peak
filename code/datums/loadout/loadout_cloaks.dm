@@ -124,9 +124,14 @@
 	path = /obj/item/clothing/cloak/poncho/fancycoat
 	sort_category = "Cloaks"
 
-/datum/loadout_item/goldenordercloak
-	name = "Golden Order Cloak"
-	path = /obj/item/clothing/cloak/cape/inquisitor
+/datum/loadout_item/cloakgoldenorder
+	name = "Cloak, Golden Order"
+	path = /obj/item/clothing/cloak/cape/inquisitorgold
+	sort_category = "Cloaks"
+
+/datum/loadout_item/cloaksilverorder
+	name = "Cloak, Silver Order"
+	path = /obj/item/clothing/cloak/cape/inquisitorsilver
 	sort_category = "Cloaks"
 
 /datum/loadout_item/surcoatheavy
