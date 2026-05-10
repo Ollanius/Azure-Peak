@@ -333,7 +333,7 @@
 /obj/item/ammo_casing/caseless/rogue/bolt/pyro
 	name = "pyroclastic bolt"
 	desc = "A flint-tipped bolt, housed in a thin alloy and smeared with a flammable tincture. The lightest impact tends to violently crumple its alloyed blanket \
-  against the flint, spawning a flurry of sparks that turns its jellified accompaniment into a firestorm."
+	against the flint, spawning a flurry of sparks that turns its jellified accompaniment into a firestorm."
 	projectile_type = /obj/projectile/bullet/bolt/pyro
 	possible_item_intents = list(/datum/intent/mace/strike)
 	icon_state = "bolt_pyroclastic"
@@ -341,13 +341,13 @@
 /obj/projectile/bullet/bolt/pyro
 	name = "pyroclastic bolt"
 	desc = "A flint-tipped bolt, housed in a thin alloy and smeared with a flammable tincture. The lightest impact tends to violently crumple its alloyed blanket \
-  against the flint, spawning a flurry of sparks that turns its jellified accompaniment into a firestorm."
+	against the flint, spawning a flurry of sparks that turns its jellified accompaniment into a firestorm."
 	damage = 20
 	icon_state = "boltpyro_proj"
 	hitsound = 'sound/blank.ogg'
 	embedchance = 0
 	woundclass = BCLASS_BLUNT
-  npc_simple_damage_mult = 4 //..or 100 damage against a mindless mob. Fairly mild, but also comes with the benefit of inducing heavy firestacks on impact.
+	npc_simple_damage_mult = 4 //..or 100 damage against a mindless mob. Fairly mild, but also comes with the benefit of inducing heavy firestacks on impact.
 
 /obj/projectile/bullet/bolt/pyro/on_hit(target)
 	..()
