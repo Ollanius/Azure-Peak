@@ -974,11 +974,20 @@
 	color = CLOTHING_BLACK
 	allowed_race = CLOTHED_RACES_TYPES
 
-/obj/item/clothing/cloak/cape/inquisitor
+/obj/item/clothing/cloak/cape/inquisitorgold
 	name = "golden order cloak"
 	desc = "A time honored cloak inlined with golden threading, the stitchwork tethers it to the Golden Orders; a catch-all term for the various faith-militances that \
 	ward Psydonia from heathens, cultists, and the ever-looming threat of another calamity."
 	icon_state = "inquisitor_cloak"
+	icon = 'icons/roguetown/clothing/cloaks.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/cloaks.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
+
+/obj/item/clothing/cloak/cape/inquisitorsilver
+	name = "silver order cloak"
+	desc = "A time honored cloak inlined with silver threading, the stitchwork tethers it to the Silver Orders; a catch-all term for the various faith-militances that \
+	ward Psydonia from monsters, creechers, and the ever-looming threat of the Archdevil's return."
+	icon_state = "sinquisitor_cloak"
 	icon = 'icons/roguetown/clothing/cloaks.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/cloaks.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
@@ -1046,7 +1055,7 @@
 
 /obj/item/clothing/cloak/heartfelt
 	name = "red cloak"
-	desc = ""
+	desc = "Blessings upon thee."
 	icon_state = "heartfelt_cloak"
 	body_parts_covered = CHEST|GROIN|VITALS|ARMS
 	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
@@ -1172,7 +1181,6 @@
 	item_state = "wicker_cloak"
 	alternate_worn_layer = CLOAK_BEHIND_LAYER
 	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK
-	allowed_sex = list(MALE, FEMALE)
 	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
 	sleevetype = "shirt"
 	nodismemsleeves = TRUE
