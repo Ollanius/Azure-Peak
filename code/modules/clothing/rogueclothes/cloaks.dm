@@ -158,8 +158,8 @@
 		add_overlay(pic)
 
 /obj/item/clothing/cloak/sleevedtabard
-	name = "Sleeved Tabard"
-	desc = " A tabard with a light sleeve and pauldron sewn on, it lacks the explicit detailing of other tabards in exchange."
+	name = "sleeved tabard"
+	desc = "A tabard with a light sleeve and pauldron sewn on, it lacks the explicit detailing of other tabards in exchange."
 	color = null 
 	boobed = TRUE
 	icon_state = "halfsurcoat"
@@ -710,7 +710,6 @@
 	sleevetype = "shirt"
 	nodismemsleeves = TRUE
 	inhand_mod = TRUE
-	allowed_race = NON_DWARVEN_RACE_TYPES
 	detail_tag = "_det"
 	detail_color = CLOTHING_AZURE
 
@@ -762,6 +761,7 @@
 	desc = "Made from the finest, warmest bear pelt. It might be worth more than your life."
 	icon_state = "bear_cloak"
 	item_state = "bear_cloak"
+	allowed_race = CLOTHED_RACES_TYPES
 	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK
 	salvage_result = /obj/item/natural/hide/cured
 	salvage_amount = 3
@@ -1003,7 +1003,7 @@
 
 /obj/item/clothing/cloak/chasuble
 	name = "chasuble"
-	desc = ""
+	desc = "Gilded promises, golden works."
 	icon_state = "chasuble"
 	body_parts_covered = CHEST|GROIN|ARMS
 	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
@@ -1015,7 +1015,7 @@
 
 /obj/item/clothing/cloak/stole
 	name = "stole"
-	desc = ""
+	desc = "Thine authority, divine; thine faith, unfettered."
 	icon_state = "stole_gold"
 	item_state = "stole_gold"
 	sleeved = null
@@ -1136,7 +1136,6 @@
 	desc = "A heavy leather cloak held together by a gilded pin, depicting the Grand Duke's house. The sign of a faithful servant."
 	icon_state = "shadowcloak"
 	color = null
-	allowed_race = NON_DWARVEN_RACE_TYPES
 
 /obj/item/clothing/cloak/thief_cloak
 	name = "rapscallion's shawl"
@@ -1680,7 +1679,7 @@
 	grid_height = 64
 
 /obj/item/clothing/cloak/scaledcloak
-	name = "Scaled Cloak"
+	name = "scaled cloak"
 	desc = "A light cloak covered in shimmering metal scales. Beautiful even if too light to protect it's wearer from more than other travel cloaks."
 	icon_state = "scalecloak"
 	item_state = "scalecloak"
