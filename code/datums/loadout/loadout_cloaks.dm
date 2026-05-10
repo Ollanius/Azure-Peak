@@ -114,6 +114,11 @@
 	path = /obj/item/clothing/cloak/poncho
 	sort_category = "Cloaks"
 
+/datum/loadout_item/toga
+	name = "Toga"
+	path = /obj/item/clothing/cloak/tabard/toga
+	sort_category = "Cloaks"
+
 /datum/loadout_item/aproncook
 	name = "Apron, Cooking"
 	path = /obj/item/clothing/cloak/apron/cook
