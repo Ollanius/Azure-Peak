@@ -144,7 +144,7 @@
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/bolt/holy
 	embedchance = 100
 	poisontype = /datum/reagent/water/blessed
-	poisonamount = 10
+	poisonamount = 5
 	is_silver_proj = TRUE //Uniquely deals a 'double whammy', in terms of both applying Sunder and some lingering post-impact damage.
 	npc_simple_damage_mult = 5 //175, compared to the regular bolt's 140. Slightly more damage, as to imitate its anti-unholy properties on mobs who aren't affected by any form of poison.
 
@@ -346,7 +346,7 @@
 	name = "pyroclastic bolt"
 	desc = "A flint-tipped bolt, housed in a thin alloy and smeared with a flammable tincture. The lightest impact tends to violently crumple its alloyed blanket \
   against the flint, spawning a flurry of sparks that turns its jellified accompaniment into a firestorm."
-	damage = 25
+	damage = 20
 	icon_state = "boltpyro_proj"
 	hitsound = 'sound/blank.ogg'
 	embedchance = 0
