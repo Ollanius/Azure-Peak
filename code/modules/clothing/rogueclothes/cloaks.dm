@@ -267,7 +267,7 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/cloaks.dmi'
 	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
 	custom_design = TRUE
-	open_wear = FALSE
+	var/open_wear = FALSE
 
 /obj/item/clothing/cloak/tabard/toga/get_mechanics_examine(mob/user)
 	. = ..()
