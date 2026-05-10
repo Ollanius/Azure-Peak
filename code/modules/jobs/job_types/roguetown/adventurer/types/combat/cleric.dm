@@ -93,7 +93,7 @@
 	H.cmode_music = 'sound/music/combat_holy.ogg' // left in bc i feel like monk players want their darktide TRAIT_DODGEEXPERT
 	switch(H.patron?.type)
 		if(/datum/patron/old_god)
-			cloak = /obj/item/clothing/cloak/tabard/psydontabard
+			cloak = /obj/item/clothing/cloak/tabard/blackpsydontabard
 			mask = /obj/item/clothing/head/roguetown/roguehood/psydon
 		if(/datum/patron/divine/astrata)
 			mask = /obj/item/clothing/head/roguetown/roguehood/astrata
@@ -237,7 +237,7 @@
 	H.cmode_music = 'sound/music/cmode/church/combat_reckoning.ogg'
 	switch(H.patron?.type)
 		if(/datum/patron/old_god)
-			cloak = /obj/item/clothing/cloak/tabard/psydontabard
+			cloak = /obj/item/clothing/cloak/tabard/blackpsydontabard
 			if(H.mind)
 				helmets += list("Psydonic Armet" = /obj/item/clothing/head/roguetown/helmet/heavy/psydonhelm,
 							"Psydonic Bucket Helm" = /obj/item/clothing/head/roguetown/helmet/heavy/psybucket)
@@ -449,7 +449,7 @@
 	H.mind?.AddSpell(new /datum/action/cooldown/spell/projectile/vicious_mockery)
 	switch(H.patron?.type)
 		if(/datum/patron/old_god)
-			cloak = /obj/item/clothing/cloak/tabard/devotee/psydon
+			cloak = /obj/item/clothing/cloak/blackabsolutionistrobe //Formerly /obj/item/clothing/cloak/tabard/devotee/psydon.
 		if(/datum/patron/divine/astrata)
 			cloak = /obj/item/clothing/cloak/tabard/devotee/astrata
 		if(/datum/patron/divine/noc)
@@ -593,7 +593,7 @@
 	H.cmode_music = 'sound/music/cmode/church/combat_reckoning.ogg'
 	switch(H.patron?.type)
 		if(/datum/patron/old_god)
-			cloak = /obj/item/clothing/cloak/tabard/psydontabard
+			cloak = /obj/item/clothing/cloak/blackabsolutionistrobe
 			head = /obj/item/clothing/head/roguetown/roguehood/psydon
 		if(/datum/patron/divine/undivided)
 			head = /obj/item/clothing/head/roguetown/roguehood
