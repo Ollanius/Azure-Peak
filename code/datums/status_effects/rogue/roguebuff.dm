@@ -835,7 +835,7 @@
 	icon_state = "buff"
 
 /atom/movable/screen/alert/status_effect/buff/censerbuff
-	name = "Syon's Blessings"
+	name = "SYON's Blessings"
 	desc = "I have been anointed in His comet's radiance - let no evil befall me!"
 	icon_state = "censerbuff"
 
