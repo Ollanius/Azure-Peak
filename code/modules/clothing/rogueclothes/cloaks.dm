@@ -223,53 +223,34 @@
 			H.update_inv_cloak()
 			H.update_inv_armor()
 
-/obj/item/clothing/cloak/tabard/psydontabardblack
+/obj/item/clothing/cloak/tabard/psydontabard/black
 	name = "psydonic tabard"
 	desc = "A tabard worn by the worshippers of Psydon. Delicate stitchwork professes the psycross with pride."
-	color = null
 	icon_state = "blackpsydontabard"
 	item_state = "blackpsydontabard"
-	mob_overlay_icon = 'icons/roguetown/clothing/onmob/cloaks.dmi'
-	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
-	custom_design = TRUE
-	var/open_wear = FALSE
 
-/obj/item/clothing/cloak/tabard/blackpsydontabard/get_mechanics_examine(mob/user)
-	. = ..()
-	. += span_info("Right-clicking this cloak allows for it to be dynamically worn as a traditional tabard, or as a sleeveless robe that partially exposes the chest.")
-
-/obj/item/clothing/cloak/tabard/blackpsydontabard/alt
+/obj/item/clothing/cloak/tabard/psydontabard/black/alt
 	name = "opened psydonic tabard"
 	desc = "A tabard worn by the worshippers of Psydon, peeled back to reveal its enduring innards."
 	body_parts_covered = GROIN
-	icon_state = "blackpsydontabardalt"
-	item_state = "blackpsydontabardalt"
-	flags_inv = HIDECROTCH
-	open_wear = TRUE
 
-/obj/item/clothing/cloak/tabard/blackpsydontabard/MiddleClick(mob/user)
+/obj/item/clothing/cloak/tabard/psydontabard/black/MiddleClick(mob/user)
 	..()
 	user.update_inv_shirt()
 
-/obj/item/clothing/cloak/tabard/blackpsydontabard/attack_right(mob/user)
+/obj/item/clothing/cloak/tabard/psydontabard/black/attack_right(mob/user)
 	switch(open_wear)
 		if(FALSE)
 			name = "opened psydonic tabard"
 			desc = "A tabard worn by the worshippers of Psydon, peeled back to reveal its enduring innards."
-			body_parts_covered = GROIN
 			icon_state = "blackpsydontabardalt"
 			item_state = "blackpsydontabardalt"
-			open_wear = TRUE
-			flags_inv = HIDECROTCH // BARE YOUR CHEST, NOT YOUR WEEN!
 			to_chat(usr, span_warning("You pull back the threaded cloth, baring your heart to Psydonia's eyes."))
 		if(TRUE)
 			name = "psydonic tabard"
 			desc = "A tabard worn by the worshippers of Psydon. Delicate stitchwork professes the psycross with pride."
-			body_parts_covered = CHEST|GROIN
 			icon_state = "blackpsydontabard"
 			item_state = "blackpsydontabard"
-			flags_inv = HIDECROTCH|HIDEBOOB
-			open_wear = FALSE
 			to_chat(usr, span_warning("You cloak yourself in the threaded cloth, veiling your heart from Psydonia's eyes."))
 	update_icon()
 	if(user)
@@ -286,7 +267,7 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/cloaks.dmi'
 	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
 	custom_design = TRUE
-	var/open_wear = FALSE
+	open_wear = FALSE
 
 /obj/item/clothing/cloak/tabard/toga/get_mechanics_examine(mob/user)
 	. = ..()
