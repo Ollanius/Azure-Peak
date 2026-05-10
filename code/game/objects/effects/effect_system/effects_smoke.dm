@@ -289,7 +289,7 @@
 	effect_type = /obj/effect/particle_effect/smoke/psycomet_gas
 
 /////////////////////////////////////////////
-// Chem smoke
+// Chem Smoke
 /////////////////////////////////////////////
 
 /obj/effect/particle_effect/smoke/chem
