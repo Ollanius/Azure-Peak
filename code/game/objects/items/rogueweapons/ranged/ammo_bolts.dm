@@ -217,9 +217,6 @@
 		M.Slowdown(6 SECONDS)
 		M.OffBalance(1 SECONDS)
 		M.Immobilize(1 SECONDS)
-    var/throw_dir = get_dir(src, target)
-    var/atom/throw_target = get_edge_target_turf(M, throw_dir)
-    M.safe_throw_at(throw_target, 2, 1)
 		return
 
 	var/turf/T = target
