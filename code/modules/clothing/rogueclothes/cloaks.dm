@@ -1686,11 +1686,22 @@
 
 /obj/item/clothing/cloak/absolutionistrobe
 	name = "absolver's robe"
-	desc = "Absolve them of their pain. Absolve them of their longing. Lyve, as PSYDON lyves."
+	desc = "Absolve them of their pain. Absolve them of their longing. Lyve, as He lyves."
 	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK
 	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
 	icon_state = "absolutionistrobe"
 	item_state = "absolutionistrobe"
+	sleevetype = "shirt"
+	nodismemsleeves = TRUE
+	inhand_mod = TRUE
+
+/obj/item/clothing/cloak/blackabsolutionistrobe
+	name = "psydonic robe"
+	desc = "Weep for what was lost. Pray for those who may yet be saved. Endure, in His name."
+	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK
+	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
+	icon_state = "blackabsolutionistrobe"
+	item_state = "blackabsolutionistrobe"
 	sleevetype = "shirt"
 	nodismemsleeves = TRUE
 	inhand_mod = TRUE
