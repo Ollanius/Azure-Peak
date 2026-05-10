@@ -1528,6 +1528,13 @@
 	additional_items = list(/obj/item/ingot/silverblessed)
 	i_type = "Weapons"
 
+/datum/anvil_recipe/weapons/psy/rapier
+	name = "Psydonic Rapier (+1 Blessed Silver)"
+	req_bar = /obj/item/ingot/silverblessed
+	created_item = /obj/item/rogueweapon/sword/rapier/psy
+	additional_items = list(/obj/item/ingot/silverblessed)
+	i_type = "Weapons"
+
 /datum/anvil_recipe/weapons/psy/whip
 	name = "Psydonic Whip (+1 Leather Whip)"
 	req_bar = /obj/item/ingot/silverblessed
