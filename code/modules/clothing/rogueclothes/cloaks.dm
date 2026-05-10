@@ -243,15 +243,21 @@
 		if(FALSE)
 			name = "opened psydonic tabard"
 			desc = "A tabard worn by the worshippers of Psydon, peeled back to reveal its enduring innards."
+			body_parts_covered = GROIN
 			icon_state = "blackpsydontabardalt"
 			item_state = "blackpsydontabardalt"
-			to_chat(usr, span_warning("You pull back the threaded cloth, baring your heart to Psydonia's eyes."))
+			open_wear = TRUE
+			flags_inv = HIDECROTCH // BARE YOUR CHEST, NOT YOUR WEEN!
+			to_chat(usr, span_warning("You pull back the threaded burlap, baring your heart to Psydonia's eyes."))
 		if(TRUE)
 			name = "psydonic tabard"
 			desc = "A tabard worn by the worshippers of Psydon. Delicate stitchwork professes the psycross with pride."
+			body_parts_covered = CHEST|GROIN
 			icon_state = "blackpsydontabard"
 			item_state = "blackpsydontabard"
-			to_chat(usr, span_warning("You cloak yourself in the threaded cloth, veiling your heart from Psydonia's eyes."))
+			flags_inv = HIDECROTCH|HIDEBOOB
+			open_wear = FALSE
+			to_chat(usr, span_warning("You cloak yourself in the threaded burlap, veiling your heart from Psydonia's eyes."))
 	update_icon()
 	if(user)
 		if(ishuman(user))
