@@ -96,7 +96,6 @@
 	max_range = MAX_BOLT_RANGE
 	dam_falloff_factor = DAM_FALLOFF_BOLT
 
-
 /obj/projectile/bullet/reusable/bolt/on_hit(atom/target)
 	. = ..()
 	var/mob/living/L = firer
@@ -144,7 +143,7 @@
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/bolt/holy
 	embedchance = 100
 	poisontype = /datum/reagent/water/blessed
-	poisonamount = 5
+	poisonamount = 7
 	is_silver_proj = TRUE //Uniquely deals a 'double whammy', in terms of both applying Sunder and some lingering post-impact damage.
 	npc_simple_damage_mult = 5 //175, compared to the regular bolt's 140. Slightly more damage, as to imitate its anti-unholy properties on mobs who aren't affected by any form of poison.
 
