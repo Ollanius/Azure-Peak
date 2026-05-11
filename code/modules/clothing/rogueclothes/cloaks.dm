@@ -1683,7 +1683,7 @@
 	inhand_mod = TRUE
 
 /obj/item/clothing/cloak/absolutionistrobe/black
-	name = "psydonic robe"
+	name = "blessed robe"
 	desc = "Weep for what was lost. Pray for those who may yet be saved. Endure, in His name."
 	icon_state = "blackabsolutionistrobe"
 	item_state = "blackabsolutionistrobe"
