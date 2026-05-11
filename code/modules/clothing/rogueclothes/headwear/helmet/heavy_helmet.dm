@@ -842,6 +842,7 @@
 	smeltresult = /obj/item/ingot/silver
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
 	bloody_icon = 'icons/effects/blood64.dmi'
+	smelt_bar_num = 1
 
 /obj/item/clothing/head/roguetown/helmet/heavy/knight/iron/greatplume/attackby(obj/item/W, mob/living/user, params)
 	..()

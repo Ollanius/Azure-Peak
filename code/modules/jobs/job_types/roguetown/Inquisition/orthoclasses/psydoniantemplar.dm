@@ -30,6 +30,7 @@
 		/datum/skill/magic/holy = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/misc/medicine = SKILL_LEVEL_NOVICE,
 		/datum/skill/combat/shields = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/swimming = SKILL_LEVEL_JOURNEYMAN,
 	)
 	subclass_stashed_items = list(
 		"Tome of Psydon" = /obj/item/book/rogue/bibble/psy
@@ -42,7 +43,6 @@
 /datum/outfit/job/roguetown/psydoniantemplar/pre_equip(mob/living/carbon/human/H)
 	..()
 	has_loadout = TRUE
-	wrists = /obj/item/clothing/neck/roguetown/psicross/silver
 	cloak = /obj/item/clothing/cloak/tabard/psydontabard
 	backr = /obj/item/rogueweapon/shield/tower/metal
 	gloves = /obj/item/clothing/gloves/roguetown/chain/psydon
@@ -53,10 +53,11 @@
 	shoes = /obj/item/clothing/shoes/roguetown/boots/psydonboots
 	belt = /obj/item/storage/belt/rogue/leather/black
 	beltl = /obj/item/storage/belt/rogue/pouch/coins/mid
-	id = /obj/item/clothing/ring/signet/silver
+	id = /obj/item/clothing/neck/roguetown/psicross/silver
 	backpack_contents = list(/obj/item/roguekey/inquisitionmanor = 1,
 	/obj/item/paper/inqslip/arrival/ortho = 1,
-	/obj/item/rogueweapon/huntingknife/idagger/silver/stake/psy/lesser = 1)
+	/obj/item/rogueweapon/huntingknife/idagger/silver/stake/psy/lesser = 1,
+	/obj/item/clothing/ring/signet/silver = 1)
 
 	H.dna.species.soundpack_m = new /datum/voicepack/male/knight()
 	var/datum/devotion/C = new /datum/devotion(H, H.patron)
@@ -86,9 +87,11 @@
 		if("Justicar - Mailled Hauberk, +II CON / +II WIL")
 			H.equip_to_slot_or_del(new /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/ornate, SLOT_ARMOR, TRUE)
 			H.equip_to_slot_or_del(new /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/inq, SLOT_SHIRT, TRUE)
+			H.equip_to_slot_or_del(new /obj/item/clothing/wrists/roguetown/bracers/chain, SLOT_WRISTS, TRUE)
 		if("Exorcist - Cuirass, +II INT / +II PER")
 			H.equip_to_slot_or_del(new /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/ornate, SLOT_ARMOR, TRUE)
 			H.equip_to_slot_or_del(new /obj/item/clothing/suit/roguetown/armor/leather/studded/cuirbouilli, SLOT_SHIRT, TRUE)
+			H.equip_to_slot_or_del(new /obj/item/clothing/wrists/roguetown/bracers, SLOT_SHIRT, TRUE)
 			H.change_stat(STATKEY_INT, 2)
 			H.change_stat(STATKEY_PER, 2)
 			H.change_stat(STATKEY_CON, -2)

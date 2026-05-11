@@ -23,7 +23,8 @@
 		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN, //Should rely on the seizing garrote to properly subdue foes.
 		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/reading = SKILL_LEVEL_NOVICE,
-		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT, 
+		/datum/skill/misc/athletics = SKILL_LEVEL_EXPERT,
+		/datum/skill/misc/swimming = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/climbing = SKILL_LEVEL_EXPERT,
 		/datum/skill/misc/medicine = SKILL_LEVEL_JOURNEYMAN, //Ensures that captured individuals are less likely to die, if subdued with harsher force.
 		/datum/skill/misc/sneaking = SKILL_LEVEL_MASTER,
@@ -74,6 +75,7 @@
 				shirt = /obj/item/clothing/suit/roguetown/armor/manual/sewable/confessor
 				REMOVE_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 				H.adjust_skillrank_up_to(/datum/skill/combat/crossbows, 5, TRUE)
+				H.adjust_skillrank_up_to(/datum/skill/misc/swimming, 4, TRUE)
 				H.change_stat(STATKEY_CON, 1)
 				H.change_stat(STATKEY_STR, 2)
 				H.change_stat(STATKEY_PER, 1) //Applies a base statblock of 11/11/11/13 to CON, STR, SPD and PER - compared to the standard 10/9/13/12 + DODGE EXPERT. Physically adept and capable of higher ranged damage..

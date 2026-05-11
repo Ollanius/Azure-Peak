@@ -74,6 +74,7 @@
 		/datum/skill/misc/reading = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/misc/medicine = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/craft/sewing = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/misc/swimming = SKILL_LEVEL_JOURNEYMAN,
 	)
 	subclass_stashed_items = list(
 		"Tome of Psydon" = /obj/item/book/rogue/bibble/psy
@@ -194,6 +195,7 @@
 	subclass_skills = list(
 		/datum/skill/misc/climbing = SKILL_LEVEL_EXPERT,
 		/datum/skill/misc/athletics = SKILL_LEVEL_MASTER,
+		/datum/skill/misc/swimming = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/combat/knives = SKILL_LEVEL_EXPERT,
 		/datum/skill/combat/wrestling = SKILL_LEVEL_JOURNEYMAN,
 		/datum/skill/combat/unarmed = SKILL_LEVEL_JOURNEYMAN,
@@ -220,8 +222,8 @@
 	neck = /obj/item/clothing/neck/roguetown/gorget/steel
 	shoes = /obj/item/clothing/shoes/roguetown/boots/otavan/inqboots
 	backl = /obj/item/storage/backpack/rogue/satchel/otavan
-	wrists = /obj/item/clothing/neck/roguetown/psicross/silver
-	id = /obj/item/clothing/ring/signet/silver
+	wrists = /obj/item/clothing/wrists/roguetown/bracers
+	id = /obj/item/clothing/neck/roguetown/psicross/silver
 	pants = /obj/item/clothing/under/roguetown/platelegs
 	cloak = /obj/item/clothing/cloak/ordinatorcape
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
@@ -233,7 +235,8 @@
 		/obj/item/paper/inqslip/arrival/inq = 1,
 		/obj/item/natural/inqfeather = 1,
 		/obj/item/rogueweapon/scabbard/sheath/noble = 1,
-		/obj/item/rogueweapon/huntingknife/idagger/silver/psydagger/heavy = 1
+		/obj/item/rogueweapon/huntingknife/idagger/silver/psydagger/heavy = 1,
+		/obj/item/clothing/ring/signet/silver = 1
 		)
 
 /datum/outfit/job/roguetown/inquisitor/ordinator/choose_loadout(mob/living/carbon/human/H)

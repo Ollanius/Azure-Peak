@@ -48,6 +48,7 @@
 			if("Abboteer - Weaponless Oath, No Wrestling & Maluses")
 				H.adjust_skillrank_down_to(/datum/skill/combat/wrestling, SKILL_LEVEL_NOVICE, TRUE) //Softkills the option of grapplecombat, in favor of being the first purely dedicated pugilist subclass.
 				H.adjust_skillrank_up_to(/datum/skill/misc/athletics, SKILL_LEVEL_LEGENDARY, TRUE)
+				H.adjust_skillrank_up_to(/datum/skill/misc/swimming, SKILL_LEVEL_EXPERT, TRUE)
 				H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_MASTER, TRUE)
 				H.adjust_skillrank_up_to(/datum/skill/magic/holy, SKILL_LEVEL_JOURNEYMAN, TRUE)
 				gloves = /obj/item/clothing/gloves/roguetown/bandages/pugilist
