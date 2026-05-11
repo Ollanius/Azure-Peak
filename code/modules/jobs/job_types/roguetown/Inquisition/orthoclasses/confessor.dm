@@ -35,7 +35,7 @@
 		/datum/skill/combat/knives = SKILL_LEVEL_EXPERT
 	)
 	subclass_stashed_items = list(
-		"Tome of Psydon" = /obj/item/book/rogue/bibble/psy
+		"The Book" = /obj/item/book/rogue/bibble/psy
 	)
 	extra_context = "This subclass can choose between two Disciplines; the Confessor and Arbalist. Taking the latter will provide Master skills for their ranged weapon and a minor increase to all physical stats, but imparts a heavy Speed malus and removes the 'Dodge Expert' trait."
 
