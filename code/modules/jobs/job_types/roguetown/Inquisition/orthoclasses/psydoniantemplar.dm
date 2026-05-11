@@ -87,7 +87,7 @@
 		if("Justicar - Mailled Hauberk, +II CON / +II WIL")
 			H.equip_to_slot_or_del(new /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/ornate, SLOT_ARMOR, TRUE)
 			H.equip_to_slot_or_del(new /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/inq, SLOT_SHIRT, TRUE)
-			H.equip_to_slot_or_del(new /obj/item/clothing/wrists/roguetown/bracers/brigandine, SLOT_WRISTS, TRUE)
+			H.equip_to_slot_or_del(new /obj/item/clothing/wrists/roguetown/bracers/chain, SLOT_WRISTS, TRUE)
 		if("Exorcist - Cuirass, +II INT / +II PER")
 			H.equip_to_slot_or_del(new /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/ornate, SLOT_ARMOR, TRUE)
 			H.equip_to_slot_or_del(new /obj/item/clothing/suit/roguetown/armor/leather/studded/cuirbouilli, SLOT_SHIRT, TRUE)
