@@ -169,7 +169,7 @@
 	sleevetype = "shirt"
 
 /obj/item/clothing/cloak/tabard/psydontabard
-	name = "inquisitorial tabard"
+	name = "psydonian tabard"
 	desc = "A tabard worn by the adherents of the Holy Psydonic Inquisition. Delicate stitchwork professes the psycross with pride."
 	color = null
 	icon_state = "psydontabard"
@@ -184,7 +184,7 @@
 	. += span_info("Right-clicking this cloak allows for it to be dynamically worn as a traditional tabard, or as a sleeveless robe that partially exposes the chest.")
 
 /obj/item/clothing/cloak/tabard/psydontabard/alt
-	name = "opened inquisitorial tabard"
+	name = "opened psydonian tabard"
 	desc = "A tabard worn by the adherents of the Holy Psydonic Inquisition, peeled back to reveal its enduring innards."
 	body_parts_covered = GROIN
 	icon_state = "psydontabardalt"
@@ -199,7 +199,7 @@
 /obj/item/clothing/cloak/tabard/psydontabard/attack_right(mob/user)
 	switch(open_wear)
 		if(FALSE)
-			name = "opened inquisitorial tabard"
+			name = "opened psydonian tabard"
 			desc = "A tabard worn by the adherents of the Holy Psydonic Inquisition, peeled back to reveal its enduring innards."
 			body_parts_covered = GROIN
 			icon_state = "psydontabardalt"
@@ -208,7 +208,7 @@
 			flags_inv = HIDECROTCH // BARE YOUR CHEST, NOT YOUR WEEN!
 			to_chat(usr, span_warning("You pull back the threaded burlap, baring your heart to Psydonia's eyes."))
 		if(TRUE)
-			name = "inquisitorial tabard"
+			name = "psydonian tabard"
 			desc = "A tabard worn by the adherents of the Holy Psydonic Inquisition. Delicate stitchwork professes the psycross with pride."
 			body_parts_covered = CHEST|GROIN
 			icon_state = "psydontabard"
@@ -224,14 +224,14 @@
 			H.update_inv_armor()
 
 /obj/item/clothing/cloak/tabard/psydontabard/black
-	name = "psydonic tabard"
-	desc = "A tabard worn by the worshippers of Psydon. Delicate stitchwork professes the psycross with pride."
+	name = "blessed tabard"
+	desc = "A tabard worn by the worshippers of Psydon. A funeral shroud for the paradise that could've been, and a solemn vow to continue the struggle towards salvation."
 	icon_state = "blackpsydontabard"
 	item_state = "blackpsydontabard"
 
 /obj/item/clothing/cloak/tabard/psydontabard/black/alt
-	name = "opened psydonic tabard"
-	desc = "A tabard worn by the worshippers of Psydon, peeled back to reveal its enduring innards."
+	name = "opened blessed tabard"
+	desc = "A tabard worn by the worshippers of Psydon, peeled back to reveal its mourning innards."
 	body_parts_covered = GROIN
 
 /obj/item/clothing/cloak/tabard/psydontabard/black/MiddleClick(mob/user)
@@ -241,8 +241,8 @@
 /obj/item/clothing/cloak/tabard/psydontabard/black/attack_right(mob/user)
 	switch(open_wear)
 		if(FALSE)
-			name = "opened psydonic tabard"
-			desc = "A tabard worn by the worshippers of Psydon, peeled back to reveal its enduring innards."
+			name = "opened blessed tabard"
+			desc = "A tabard worn by the worshippers of Psydon, peeled back to reveal its mourning innards."
 			body_parts_covered = GROIN
 			icon_state = "blackpsydontabardalt"
 			item_state = "blackpsydontabardalt"
@@ -250,8 +250,8 @@
 			flags_inv = HIDECROTCH // BARE YOUR CHEST, NOT YOUR WEEN!
 			to_chat(usr, span_warning("You pull back the threaded burlap, baring your heart to Psydonia's eyes."))
 		if(TRUE)
-			name = "psydonic tabard"
-			desc = "A tabard worn by the worshippers of Psydon. Delicate stitchwork professes the psycross with pride."
+			name = "blessed tabard"
+			desc = "A tabard worn by the worshippers of Psydon. A funeral shroud for the paradise that could've been, and a solemn vow to continue the struggle towards salvation."
 			body_parts_covered = CHEST|GROIN
 			icon_state = "blackpsydontabard"
 			item_state = "blackpsydontabard"

@@ -94,7 +94,7 @@
 	switch(H.patron?.type)
 		if(/datum/patron/old_god)
 			cloak = /obj/item/clothing/cloak/tabard/psydontabard/black
-			mask = /obj/item/clothing/head/roguetown/roguehood/psydon
+			mask = /obj/item/clothing/head/roguetown/roguehood/psydon/black
 		if(/datum/patron/divine/astrata)
 			mask = /obj/item/clothing/head/roguetown/roguehood/astrata
 			cloak = /obj/item/clothing/suit/roguetown/shirt/robe/astrata
@@ -594,7 +594,7 @@
 	switch(H.patron?.type)
 		if(/datum/patron/old_god)
 			cloak = /obj/item/clothing/cloak/absolutionistrobe/black
-			head = /obj/item/clothing/head/roguetown/roguehood/psydon
+			head = /obj/item/clothing/head/roguetown/roguehood/psydon/black
 		if(/datum/patron/divine/undivided)
 			head = /obj/item/clothing/head/roguetown/roguehood
 			cloak = /obj/item/clothing/cloak/tabard/stabard/crusader/undivided
