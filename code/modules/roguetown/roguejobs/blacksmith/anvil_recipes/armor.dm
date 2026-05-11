@@ -210,6 +210,16 @@
 	req_bar = /obj/item/ingot/purifiedaalloy
 	created_item = /obj/item/clothing/wrists/roguetown/bracers/paalloy
 
+/datum/anvil_recipe/armor/aalloy/chainsleeves
+	name = "Chainsleeves, Decrepit"
+	req_bar = /obj/item/ingot/aalloy
+	created_item = /obj/item/clothing/wrists/roguetown/bracers/aalloy/chain
+
+/datum/anvil_recipe/armor/paalloy/chainsleeves
+	name = "Chainsleeves, Ancient"
+	req_bar = /obj/item/ingot/purifiedaalloy
+	created_item = /obj/item/clothing/wrists/roguetown/bracers/paalloy/chain
+
 /datum/anvil_recipe/armor/aalloy/sandals
 	name = "Sandals, Decrepit"
 	req_bar = /obj/item/ingot/aalloy
@@ -528,6 +538,12 @@
 	created_item = /obj/item/clothing/wrists/roguetown/bracers/iron
 	createditem_num = 1
 
+/datum/anvil_recipe/armor/iron/chainsleeves
+	name = "Chainsleeves, Iron"
+	req_bar = /obj/item/ingot/iron
+	created_item = /obj/item/clothing/wrists/roguetown/bracers/iron/chain
+	createditem_num = 1
+
 /datum/anvil_recipe/armor/iron/jackchain
 	name = "Jack Chain, Iron"
 	req_bar = /obj/item/ingot/iron
@@ -793,6 +809,12 @@
 	name = "Plate Bracers, Steel"
 	req_bar = /obj/item/ingot/steel
 	created_item = /obj/item/clothing/wrists/roguetown/bracers
+	createditem_num = 1
+
+/datum/anvil_recipe/armor/steel/chainsleeves
+	name = "Chainsleeves, Steel"
+	req_bar = /obj/item/ingot/steel
+	created_item = /obj/item/clothing/wrists/roguetown/bracers/chain
 	createditem_num = 1
 
 /datum/anvil_recipe/armor/steel/helmetnasal
