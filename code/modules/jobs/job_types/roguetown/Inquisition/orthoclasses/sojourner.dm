@@ -13,7 +13,8 @@
 	traits_applied = list(
 		TRAIT_CIVILIZEDBARBARIAN,
 		TRAIT_ARCYNE,
-		TRAIT_NALEDI
+		TRAIT_NALEDI,
+		TRAIT_BLOOD_RESISTANCE
 	)
 	subclass_stats = list(
 		STATKEY_STR = 1,
@@ -35,7 +36,7 @@
 	)
 	subclass_mage_aspects = list("mastery" = FALSE, "major" = 0, "minor" = 0, "utilities" = 4)
 	subclass_stashed_items = list(
-		"Tome of Psydon" = /obj/item/book/rogue/bibble/psy
+		"The Book" = /obj/item/book/rogue/bibble/psy
 	)
 
 /datum/outfit/job/roguetown/sojourner
@@ -76,9 +77,9 @@
 
 	switch(sidearm_selected)
 		if("katar")
-			H.put_in_hands(new /obj/item/rogueweapon/katar(H))
+			H.put_in_hands(new /obj/item/rogueweapon/katar/psydon/preblessed(H))
 		if("knuckledusters")
-			H.put_in_hands(new /obj/item/clothing/gloves/roguetown/knuckles(H))
+			H.put_in_hands(new /obj/item/clothing/gloves/roguetown/knuckles/psydon(H))
 
 	head = /obj/item/clothing/head/roguetown/headband/naledi
 	mask = /obj/item/clothing/mask/rogue/lordmask/naledi/sojourner
