@@ -30,6 +30,7 @@
 		/datum/skill/magic/holy = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/misc/medicine = SKILL_LEVEL_NOVICE,
 		/datum/skill/combat/shields = SKILL_LEVEL_JOURNEYMAN,
+		/datum/skill/misc/swimming = SKILL_LEVEL_JOURNEYMAN,
 	)
 	subclass_stashed_items = list(
 		"Tome of Psydon" = /obj/item/book/rogue/bibble/psy
