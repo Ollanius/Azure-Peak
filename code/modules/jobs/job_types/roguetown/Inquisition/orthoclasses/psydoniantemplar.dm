@@ -33,7 +33,7 @@
 		/datum/skill/misc/swimming = SKILL_LEVEL_JOURNEYMAN,
 	)
 	subclass_stashed_items = list(
-		"Tome of Psydon" = /obj/item/book/rogue/bibble/psy
+		"The Book" = /obj/item/book/rogue/bibble/psy
 	)
 	extra_context = "This subclass can choose between two Disciplines; the Justicar and Exorcist. The latter - armed with a Cuirass instead of Mailled Hauberk - sacrifices its Willpower and Constitution, in exchange for a major bonus to Perception and Intelligence."
 
