@@ -29,7 +29,7 @@
 		/datum/skill/magic/holy = SKILL_LEVEL_APPRENTICE,
 	)
 	subclass_stashed_items = list(
-		"Tome of Psydon" = /obj/item/book/rogue/bibble/psy
+		"The Book" = /obj/item/book/rogue/bibble/psy
 	)
 	extra_context = "This subclass can choose from multiple Disciplines. The further your chosen Discipline strays from unarmed combat, however, the greater your skills in fistfighting and wrestling will atrophy."
 
@@ -42,10 +42,10 @@
 /datum/outfit/job/roguetown/disciple/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 	if(H.mind)
-		var/weapons = list("Abboteer - Weaponless Oath, No Wrestling & Maluses", "Pugilist - Master Athletics & Unarmed", "Katar", "Knuckledusters", "Quarterstaff - +I PER / +I INT")
+		var/weapons = list("Abboteer - Pugilist+, No Maluses, Weaponless Oath", "Pugilist - Master Athletics & Unarmed", "Katar", "Knuckledusters", "Quarterstaff - +I PER / +I INT")
 		var/weapon_choice = input(H,"Choose your WEAPON.", "TAKE UP PSYDON'S ARMS.") as anything in weapons
 		switch(weapon_choice)
-			if("Abboteer - Weaponless Oath, No Wrestling & Maluses")
+			if("Abboteer - Pugilist+, No Maluses, Weaponless Oath")
 				H.adjust_skillrank_down_to(/datum/skill/combat/wrestling, SKILL_LEVEL_NOVICE, TRUE) //Softkills the option of grapplecombat, in favor of being the first purely dedicated pugilist subclass.
 				H.adjust_skillrank_up_to(/datum/skill/misc/athletics, SKILL_LEVEL_LEGENDARY, TRUE)
 				H.adjust_skillrank_up_to(/datum/skill/misc/swimming, SKILL_LEVEL_EXPERT, TRUE)
