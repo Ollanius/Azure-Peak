@@ -31,7 +31,7 @@
 	// Also because the alternative is not very clean codewise.
 	subclass_stashed_items = list(
 		"The Verses and Acts of the Ten" = /obj/item/book/rogue/bibble,
-		"Tome of Psydon" = /obj/item/book/rogue/bibble/psy
+		"The Book" = /obj/item/book/rogue/bibble/psy
 	)
 	extra_context = "This subclass can choose from multiple disciplines. The further your chosen discipline strays from unarmed combat, however, the greater your skills in fistfighting and wrestling will atrophy. Taking a Quarterstaff provides a minor bonus to Perception, but removes the 'Dodge Expert' trait."
 
@@ -196,7 +196,7 @@
 	)
 	subclass_stashed_items = list(
 		"The Verses and Acts of the Ten" = /obj/item/book/rogue/bibble,
-		"Tome of Psydon" = /obj/item/book/rogue/bibble/psy
+		"The Book" = /obj/item/book/rogue/bibble/psy
 	)
 	extra_context = "This subclass can choose to take one of two holy items to take along: a potion of lifeblood and Novice skills in Medicine, or a silver longsword that gives Journeyman skills in Swordsmanship."
 
@@ -419,7 +419,7 @@
 	)
 	subclass_stashed_items = list(
 		"The Verses and Acts of the Ten" = /obj/item/book/rogue/bibble,
-		"Tome of Psydon" = /obj/item/book/rogue/bibble/psy
+		"The Book" = /obj/item/book/rogue/bibble/psy
 	)
 	extra_context = "This subclass has higher-tier miracles, but regenerates Devotion far slower."
 
@@ -573,7 +573,7 @@
 	)
 	subclass_stashed_items = list(
 		"The Verses and Acts of the Ten" = /obj/item/book/rogue/bibble,
-		"Tome of Psydon" = /obj/item/book/rogue/bibble/psy
+		"The Book" = /obj/item/book/rogue/bibble/psy
 	)
 	extra_context = "This subclass regenerates Devotion far quicker, but only has access to lesser miracles."
 
