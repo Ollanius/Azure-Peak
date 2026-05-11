@@ -32,7 +32,8 @@
 		/datum/skill/misc/lockpicking = SKILL_LEVEL_MASTER,
 		/datum/skill/misc/tracking = SKILL_LEVEL_EXPERT,
 		/datum/skill/combat/crossbows = SKILL_LEVEL_EXPERT,
-		/datum/skill/combat/knives = SKILL_LEVEL_EXPERT
+		/datum/skill/combat/knives = SKILL_LEVEL_EXPERT,
+		/datum/skill/craft/traps = SKILL_LEVEL_JOURNEYMAN
 	)
 	subclass_stashed_items = list(
 		"The Book" = /obj/item/book/rogue/bibble/psy
