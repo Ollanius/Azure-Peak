@@ -702,6 +702,17 @@
 		added_def = 1,\
 	)
 
+/obj/item/rogueweapon/mace/goden/psymace/preblessed/ComponentInitialize()
+	AddComponent(\
+		/datum/component/silverbless,\
+		pre_blessed = BLESSING_PSYDONIAN,\
+		silver_type = SILVER_PSYDONIAN,\
+		added_force = 0,\
+		added_blade_int = 0,\
+		added_int = 50,\
+		added_def = 1,\
+	)
+
 /obj/item/rogueweapon/mace/spiked
 	icon_state = "spiked_club"
 
