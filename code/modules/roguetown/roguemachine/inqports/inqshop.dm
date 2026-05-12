@@ -44,7 +44,7 @@
 	name = "The Archbishop's Allowance - Hundreds Of Mammons"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/extrafunding
 	marquescost = 16
-	maximum = 1
+	maximum = 3
 
 /obj/item/roguecoin/silver/inqpile/Initialize()
 	. = ..()
@@ -61,7 +61,7 @@
 	name = "The Archibishop's Bullion - Blessed Silver Ingots"
 	item_type = /obj/structure/closet/crate/chest/inqreliquary/relic/bullion/
 	marquescost = 16
-	maximum = 3
+	maximum = 5
 
 /obj/structure/closet/crate/chest/inqreliquary/relic/bullion/Initialize()
 	. = ..()
@@ -73,7 +73,7 @@
 	new /obj/item/ingot/silverblessed/bullion(src)
 
 /datum/inqports/supplies/quicksilver
-	name = "The Archbishop's Poultice"
+	name = "The Archbishop's Poultice - Cure For Cursed Blood"
 	item_type = /obj/item/quicksilver
 	maximum = 1
 	marquescost = 12
@@ -169,7 +169,6 @@
 	name = "3 Bottlebombs"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/bottlebombs
 	marquescost = 6
-	maximum = 3
 
 /obj/structure/closet/crate/chest/inqcrate/supplies/bottlebombs/Initialize()
 	. = ..()
@@ -192,8 +191,8 @@
 /datum/inqports/supplies/tntsatchel
 	name = "1 Blastpowder Satchel"
 	item_type = /obj/item/satchel_bomb
-	marquescost = 12
-	maximum = 2
+	marquescost = 10
+	maximum = 3
 
 // ✤ ARTICLES ✤ RIGHT HERE! THAT'S RIGHT!
 
@@ -218,16 +217,32 @@
 	new /obj/item/inqarticles/bmirror(src)
 
 /datum/inqports/articles/superbow
-	name = "Relic - The Ballista, Evercracking"
+	name = "Relic - The Ballista, Eversundering"
 	item_type = /obj/structure/closet/crate/chest/inqreliquary/relic/superbow/
 	marquescost = 16
 	maximum = 1
 
 /obj/structure/closet/crate/chest/inqreliquary/relic/superbow/Initialize()
 	. = ..()
-	new /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy(src)
-	new /obj/item/quiver/bolt/heavy/standard(src)
-	new /obj/item/ammo_casing/caseless/rogue/heavy_bolt/silver(src)
+	new /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy/relic/marque(src)
+	new /obj/item/quiver/bolt/heavy/silver(src)
+
+/datum/inqports/articles/psyarmor
+	name = "Relic - The Platemaille, Everwithstanding"
+	item_type = /obj/structure/closet/crate/chest/inqreliquary/relic/psyarmor/
+	marquescost = 16
+	maximum = 1
+
+/obj/structure/closet/crate/chest/inqreliquary/relic/psyarmor/Initialize()
+	. = ..()
+	new /obj/item/clothing/head/roguetown/helmet/heavy/ordinatorhelm(src)
+	new /obj/item/clothing/suit/roguetown/armor/plate/full/fluted/ornate/ordinator(src)
+	new /obj/item/clothing/wrists/roguetown/bracers/psythorns(src)
+	new /obj/item/clothing/head/roguetown/helmet/blacksteel/psychains(src)
+	new /obj/item/clothing/shoes/roguetown/boots/otavan/inqboots(src)
+	new /obj/item/clothing/gloves/roguetown/plate(src)
+	new /obj/item/clothing/under/roguetown/platelegs(src)
+	new /obj/item/clothing/suit/roguetown/armor/leather/studded/cuirbouilli(src)
 
 /datum/inqports/articles/stampstuff
 	name = "1 Lump of Redtallow"
@@ -292,36 +307,43 @@
 /datum/inqports/equipment/silvarrow
 	name = "1 Silver Arrow"
 	item_type = /obj/item/ammo_casing/caseless/rogue/arrow/silver
-	maximum = 3
-	marquescost = 6
+	marquescost = 3
 
 /datum/inqports/equipment/silvbolt
 	name = "1 Silver Bolt"
 	item_type = /obj/item/ammo_casing/caseless/rogue/bolt/silver
-	maximum = 3
-	marquescost = 6
+	marquescost = 3
 
 /datum/inqports/equipment/silvheavybolt
 	name = "1 Silver Heavy Bolt"
 	item_type = /obj/item/ammo_casing/caseless/rogue/heavy_bolt/silver
-	maximum = 3
-	marquescost = 8
+	marquescost = 6
 
 /datum/inqports/equipment/silverstake
 	name = "1 Silver-Tipped Stake"
-	item_type = /obj/item/rogueweapon/huntingknife/idagger/silver/stake/psy
+	item_type = /obj/item/rogueweapon/huntingknife/idagger/silver/stake/psy/preblessed
 	maximum = 5
-	marquescost = 8
+	marquescost = 6
+
+/datum/inqports/supplies/blessedlightbolts
+	name = "1 Quiver of Light Sunderbolts"
+	item_type = /obj/item/quiver/bolt/lightholy
+	marquescost = 6
 
 /datum/inqports/supplies/blessedbolts
 	name = "1 Quiver of Sunderbolts"
 	item_type = /obj/item/quiver/bolt/holy
 	marquescost = 6
 
+/datum/inqports/supplies/blessedbolts
+	name = "1 Quiver of Pyrobolts"
+	item_type = /obj/item/quiver/bolt/pyro
+	marquescost = 8
+
 /datum/inqports/equipment/nocshades
 	name = "1 Pair of Nocshade-Lenses"
 	item_type = /obj/item/clothing/mask/rogue/spectacles/inq
-	marquescost = 10
+	marquescost = 8
 
 /datum/inqports/equipment/climbinggear
 	name = "1 Set of Climbing Gear"
@@ -377,7 +399,7 @@
 	new /obj/item/clothing/head/inqarticles/blackbag(src)
 
 /datum/inqports/equipment/psybles
-	name = "3 Tomes of Psydonic Scripture"
+	name = "3 Books of the Psydonic Orthodoxy"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/articles/psybles
 	marquescost = 3
 
@@ -400,13 +422,13 @@
 /datum/inqports/wardrobe/psycross
 	name = "1 Psycross"
 	item_type = /obj/item/clothing/neck/roguetown/psicross
-	marquescost = 2
+	marquescost = 1
 
 /datum/inqports/wardrobe/psycrosssilver
 	name = "1 Silver Psycross"
 	item_type = /obj/item/clothing/neck/roguetown/psicross/silver
-	maximum = 3
-	marquescost = 12
+	maximum = 5
+	marquescost = 8
 
 /datum/inqports/wardrobe/otavansatchel
 	name = "1 Satchel, Otavan Leather"
@@ -432,6 +454,11 @@
 	name = "1 Psydonian Crown of Thorns"
 	item_type = /obj/item/clothing/wrists/roguetown/bracers/psythorns
 	marquescost = 12
+
+/datum/inqports/wardrobe/psydonchains
+	name = "1 Psydonian Chain-Orle"
+	item_type = /obj/item/clothing/head/roguetown/helmet/blacksteel/psychains
+	marquescost = 4
 
 /datum/inqports/wardrobe/psydonhelms
 	name = "The 'Greathelms of Psydon' Crate"
