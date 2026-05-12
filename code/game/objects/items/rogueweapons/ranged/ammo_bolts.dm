@@ -69,6 +69,15 @@
 	caliber = "regbolt"
 	icon_state = "bolt_holywater"
 
+/obj/item/ammo_casing/caseless/rogue/bolt/lightholy
+	name = "light sunderbolt"
+	desc = "A compact silver-tipped bolt, containing a small vial of holy water. Though it inflicts lesser wounds on living flesh, it exceeds when \
+	employed against the unholy; a snap and a crack, followed by a fiery surprise. </br>'One baptism for the remission of sins.'"
+	projectile_type = /obj/projectile/bullet/reusable/bolt/holy //Most of the effectiveness comes from the debuffs, rather than the damage itself. Simple, but sweet.
+	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/thrust)
+	caliber = "lightbolt"
+	icon_state = "light_bolt_holywater"
+
 /obj/projectile/bullet/reusable/bolt
 	name = "bolt"
 	damage = 70
@@ -86,7 +95,6 @@
 	min_range = MIN_BOLT_RANGE
 	max_range = MAX_BOLT_RANGE
 	dam_falloff_factor = DAM_FALLOFF_BOLT
-
 
 /obj/projectile/bullet/reusable/bolt/on_hit(atom/target)
 	. = ..()
@@ -135,7 +143,7 @@
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/bolt/holy
 	embedchance = 100
 	poisontype = /datum/reagent/water/blessed
-	poisonamount = 5
+	poisonamount = 7
 	is_silver_proj = TRUE //Uniquely deals a 'double whammy', in terms of both applying Sunder and some lingering post-impact damage.
 	npc_simple_damage_mult = 5 //175, compared to the regular bolt's 140. Slightly more damage, as to imitate its anti-unholy properties on mobs who aren't affected by any form of poison.
 
@@ -171,7 +179,7 @@
 
 /obj/projectile/bullet/reusable/heavy_bolt
 	name = "heavy bolt"
-	damage = 90 // +20 damage over the regular bolt
+	damage = 90 // +20 damage over the regular bolt.
 	damage_type = BRUTE
 	armor_penetration = PEN_BSTEEL
 	object_damage_multiplier = 14 //Determines the multiplier that's applied to the bolt's damage value, when striking a structure. By default, it can destroy any wooden defense - a door, barricade, wall - in one shot.
@@ -278,7 +286,6 @@
 	icon_state = "bronzebolt_proj"
 	speed = 0.8
 
-
 /obj/item/ammo_casing/caseless/rogue/bolt/silver
 	name = "silver bolt"
 	desc = "A masterworked bolt of silver, fitted to a winged rod of boswellia wood. Expensive, yet uncompromisingly lethal; the \
@@ -325,19 +332,22 @@
 // PYRO AMMO
 /obj/item/ammo_casing/caseless/rogue/bolt/pyro
 	name = "pyroclastic bolt"
-	desc = "A bolt smeared with a flammable tincture."
+	desc = "A flint-tipped bolt, housed in a thin alloy and smeared with a flammable tincture. The lightest impact tends to violently crumple its alloyed blanket \
+	against the flint, spawning a flurry of sparks that turns its jellified accompaniment into a firestorm."
 	projectile_type = /obj/projectile/bullet/bolt/pyro
 	possible_item_intents = list(/datum/intent/mace/strike)
 	icon_state = "bolt_pyroclastic"
 
 /obj/projectile/bullet/bolt/pyro
 	name = "pyroclastic bolt"
-	desc = "A bolt smeared with a flammable tincture."
+	desc = "A flint-tipped bolt, housed in a thin alloy and smeared with a flammable tincture. The lightest impact tends to violently crumple its alloyed blanket \
+	against the flint, spawning a flurry of sparks that turns its jellified accompaniment into a firestorm."
 	damage = 20
 	icon_state = "boltpyro_proj"
 	hitsound = 'sound/blank.ogg'
 	embedchance = 0
 	woundclass = BCLASS_BLUNT
+	npc_simple_damage_mult = 4 //..or 100 damage against a mindless mob. Fairly mild, but also comes with the benefit of inducing heavy firestacks on impact.
 
 /obj/projectile/bullet/bolt/pyro/on_hit(target)
 	..()
