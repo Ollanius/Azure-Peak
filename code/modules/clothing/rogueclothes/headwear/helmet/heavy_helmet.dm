@@ -757,8 +757,6 @@
 	icon_state = "psydonbarbute"
 	item_state = "psydonbarbute"
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDESNOUT
-	is_silver = TRUE
-	is_lesser_silver = TRUE
 
 /obj/item/clothing/head/roguetown/helmet/heavy/psydonbarbute/getonmobprop(tag)
 	if(tag)
@@ -779,8 +777,6 @@
 	adjustable = CAN_CADJUST
 	max_integrity = ARMOR_INT_HELMET_HEAVY_STEEL - ARMOR_INT_HELMET_HEAVY_ADJUSTABLE_PENALTY
 	smeltresult = /obj/item/ingot/silver
-	is_silver = TRUE
-	is_lesser_silver = TRUE
 
 /obj/item/clothing/head/roguetown/helmet/heavy/psydonhelm/getonmobprop(tag)
 	if(tag)
@@ -844,8 +840,6 @@
 	worn_y_dimension = 64
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
 	bloody_icon = 'icons/effects/blood64.dmi'
-	is_silver = TRUE
-	is_lesser_silver = TRUE
 
 /obj/item/clothing/head/roguetown/helmet/heavy/knight/psy/greatplume
 	name = "psydonic armet with greatplume"
@@ -863,8 +857,6 @@
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
 	bloody_icon = 'icons/effects/blood64.dmi'
 	smelt_bar_num = 1
-	is_silver = TRUE
-	is_lesser_silver = TRUE
 
 /obj/item/clothing/head/roguetown/helmet/heavy/knight/iron/greatplume/attackby(obj/item/W, mob/living/user, params)
 	..()
@@ -988,6 +980,7 @@
 	</br>'Let them hurt and march in procession.' </br>'I curse you forever in name, I bless you forever in death..'"
 	armor_class = ARMOR_CLASS_MEDIUM
 	block2add = FOV_RIGHT|FOV_LEFT
+	is_silver = FALSE
 
 /obj/item/clothing/head/roguetown/helmet/heavy/psybucket
 	name = "psydonic bucket helmet"
@@ -999,8 +992,6 @@
 	adjustable = CAN_CADJUST
 	max_integrity = ARMOR_INT_HELMET_HEAVY_STEEL
 	smeltresult = /obj/item/ingot/silver
-	is_silver = TRUE
-	is_lesser_silver = TRUE
 
 /obj/item/clothing/head/roguetown/helmet/heavy/psybucket/attackby(obj/item/W, mob/living/user, params)
 	..()
@@ -1055,8 +1046,6 @@
 	adjustable = CAN_CADJUST
 	max_integrity = ARMOR_INT_HELMET_HEAVY_STEEL
 	smeltresult = /obj/item/ingot/silver
-	is_silver = TRUE
-	is_lesser_silver = TRUE
 
 /obj/item/clothing/head/roguetown/helmet/heavy/nochelm
 	name = "noc helmet"
