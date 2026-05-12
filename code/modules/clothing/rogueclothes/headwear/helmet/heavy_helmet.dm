@@ -21,7 +21,9 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/bronze
 	name = "bronze barbute"
-	desc = "A greathelm of bronze, who's nasalguard and mandibles leave the wearer's face cloaked in darkness. The heroes of yore have long since passed, yet their blood still courses through the veins of Psydonia's children; you are no different. Quiff a feather to its skullcap to bare your allegience with pride."
+	desc = "A greathelm of bronze, who's nasalguard and mandibles leave the wearer's face cloaked in darkness. The heroes of yore have long since \
+	passed, yet their blood still courses through the veins of Psydonia's children; you are no different. Quiff a feather to its skullcap to bare \
+	your allegience with pride."
 	body_parts_covered = FULL_HEAD
 	icon_state = "bronzebarbute"
 	item_state = "bronzebarbute"
@@ -59,7 +61,8 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/aalloy
 	name = "decrepit barbute"
-	desc = "Frayed bronze plates, pounded into a visored helmet. Scrapes and dents line the curved plating, weathered from centuries of neglect. The remains of a plume's stub hang atop its rim."
+	desc = "Frayed bronze plates, pounded into a visored helmet. Scrapes and dents line the curved plating, weathered from centuries of \
+	neglect. The remains of a plume's stub hang atop its rim."
 	body_parts_covered = COVERAGE_HEAD
 	max_integrity = ARMOR_INT_HELMET_HEAVY_DECREPIT
 	icon_state = "ancientbarbute"
@@ -182,7 +185,8 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/paalloy
 	name = "ancient barbute"
-	desc = "Polished gilbranze plates, pounded to form a visored helmet. Zizo commands progress, and progress commands sacrifice; let these sundered legionnaires rise again, to spill the blood of unenlightened fools. A coiled pocket is perched atop the rim, awaiting to be plumed."
+	desc = "Polished gilbranze plates, pounded to form a visored helmet. Zizo commands progress, and progress commands sacrifice; let these \
+	sundered legionnaires rise again, to spill the blood of unenlightened fools. A coiled pocket is perched atop the rim, awaiting to be plumed."
 	icon_state = "ancientbarbute"
 	smeltresult = /obj/item/ingot/aaslag
 	worn_x_dimension = 64
@@ -240,7 +244,8 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/guard/paalloy
 	name = "ancient savoyard"
-	desc = "Polished gilbranze plates, molded into a bulwark's greathelm. The Comet Syon's glare has been forever burnt into the alloy; a decayed glimpse into the world that was, before Psydon's slumber and Zizo's awakening."
+	desc = "Polished gilbranze plates, molded into a bulwark's greathelm. The Comet Syon's glare has been forever burnt into the alloy; a \
+	decayed glimpse into the world that was, before Psydon's slumber and Zizo's awakening."
 	icon_state = "ancientsavoyard"
 	smeltresult = /obj/item/ingot/aaslag
 
@@ -268,7 +273,8 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/sheriff/gold
 	name = "golden helmet"
-	desc = "A resplendant barbute, masterfully forged from pure gold. Its nasalguard is marked by a holy sigil, and its interior is fitted with a besilked arming cap. Even in absolute darkness, the polished surface sparkles with imbued sunlight."
+	desc = "A resplendant barbute, masterfully forged from pure gold. Its nasalguard is marked by a holy sigil, and its interior is fitted \
+	with a besilked arming cap. Even in absolute darkness, the polished surface sparkles with imbued sunlight."
 	icon_state = "goldbarbute"
 	armor = ARMOR_INDESTRUCTIBLE //Renders its wearer completely invulnerable to damage. The caveat is, however..
 	max_integrity = ARMOR_INT_SIDE_GOLD // ..is that it's extraordinarily fragile. To note, this is lower than even Decrepit-tier armor.
@@ -283,7 +289,8 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/sheriff/gold/king
 	name = "royal golden helmet"
-	desc = "A resplendant barbute, masterfully forged from pure gold. Its nasalguard is marked by a holy sigil, and its interior is fitted with a besilked arming cap. The dorpeled crown atop its brow invokes authority, be it misbegotten or endowed."
+	desc = "A resplendant barbute, masterfully forged from pure gold. Its nasalguard is marked by a holy sigil, and its interior is fitted \
+	with a besilked arming cap. The dorpeled crown atop its brow invokes authority, be it misbegotten or endowed."
 	icon_state = "goldbarbute_crown"
 	max_integrity = ARMOR_INT_SIDE_GOLDPLUS // Doubled integrity.
 	sellprice = 300
@@ -424,7 +431,9 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/knight/iron/greatplume
 	name = "iron greatplumed armet"
-	desc = "A venerable iron greathelm with a visor, which protects the entire head. It is not the alloy that truly matters, but the champion who has chosen to don such alloys in the face of peril and adversity. The wider couplet atop its neckguard's rear can accept a uniquely large greatplume."
+	desc = "A venerable iron greathelm with a visor, which protects the entire head. It is not the alloy that truly matters, but the \
+	champion who has chosen to don such alloys in the face of peril and adversity. The wider couplet atop its neckguard's rear can accept \
+	a uniquely large greatplume."
 	worn_x_dimension = 64
 	worn_y_dimension = 64
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x64/head.dmi'
@@ -455,25 +464,29 @@
 /obj/item/clothing/head/roguetown/helmet/heavy/knight/iron
 	name = "iron knight's armet"
 	icon_state = "iknight"
-	desc = "A noble knight's greathelm made of iron; a popular choice in the preceding centuries, before many knew the answer to the riddle of steel.  Add a feather to show the colors of your family or allegiance."
+	desc = "A noble knight's greathelm made of iron; a popular choice in the preceding centuries, before many knew the answer to the riddle of \
+	steel.  Add a feather to show the colors of your family or allegiance."
 	smeltresult = /obj/item/ingot/iron
 	max_integrity = ARMOR_INT_HELMET_HEAVY_IRON
 
 /obj/item/clothing/head/roguetown/helmet/heavy/knight/old
 	name = "knight's helmet"
-	desc = "A knight's greathelm, forged from steel in the antiquated 'Rockhillic' style. Add a feather to show the colors of your family or allegiance. </br>‎  </br>'She waited in the dragon's keep, in the highest room of the tallest tower, for her true love, and true love's first kiss..'"
+	desc = "A knight's greathelm, forged from steel in the antiquated 'Rockhillic' style. Add a feather to show the colors of your family or \
+	allegiance. </br>‎  </br>'She waited in the dragon's keep, in the highest room of the tallest tower, for her true love, and true love's first kiss..'"
 	icon_state = "knightclassic"
 
 /obj/item/clothing/head/roguetown/helmet/heavy/knight/old/iron
 	name = "iron knight's helmet"
-	desc = "A knight's greathelm, forged from iron in the antiquated 'Rockhillic' style. Add a feather to show the colors of your family or allegiance. </br>‎  </br>'Despite everything, it's still you.'"
+	desc = "A knight's greathelm, forged from iron in the antiquated 'Rockhillic' style. Add a feather to show the colors of your family or \
+	allegiance. </br>‎  </br>'Despite everything, it's still you.'"
 	icon_state = "iknightclassic"
 	smeltresult = /obj/item/ingot/iron
 	max_integrity = ARMOR_INT_HELMET_HEAVY_IRON
 
 /obj/item/clothing/head/roguetown/helmet/heavy/knight/gold
 	name = "golden knight's armet"
-	desc = "A resplendant armet, masterfully forged from pure gold. Hexagrammic etchings of a holy sigil line its visor, and its interior is fitted with a besilked arming cap. Even in absolute darkness, the polished surface sparkles with imbued sunlight."
+	desc = "A resplendant armet, masterfully forged from pure gold. Hexagrammic etchings of a holy sigil line its visor, and its interior is fitted \
+	with a besilked arming cap. Even in absolute darkness, the polished surface sparkles with imbued sunlight."
 	icon_state = "goldknight"
 	armor = ARMOR_INDESTRUCTIBLE //Renders its wearer completely invulnerable to damage. The caveat is, however..
 	max_integrity = ARMOR_INT_SIDE_GOLD // ..is that it's extraordinarily fragile. To note, this is lower than even Decrepit-tier armor.
@@ -514,7 +527,8 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/knight/gold/king
 	name = "royal golden armet"
-	desc = "A resplendant armet, masterfully forged from pure gold. Hexagrammic etchings of a holy sigil line its visor, and its interior is fitted with a besilked arming cap. The dorpeled crown atop its brow invokes authority, be it misbegotten or endowed."
+	desc = "A resplendant armet, masterfully forged from pure gold. Hexagrammic etchings of a holy sigil line its visor, and its interior is fitted \
+	with a besilked arming cap. The dorpeled crown atop its brow invokes authority, be it misbegotten or endowed."
 	icon_state = "goldknight_crown"
 	max_integrity = ARMOR_INT_SIDE_GOLDPLUS // Doubled integrity.
 	sellprice = 300
@@ -867,9 +881,9 @@
 		add_overlay(pic)
 
 /obj/item/clothing/head/roguetown/helmet/heavy/ordinatorhelm
-	name = "inquisitorial ordinator's helmet"
+	name = "ordinator's froggemund"
 	desc = "A design suggested by a Grenzelhoftian smith, an avid follower of Saint Abyssor - implying to base it on the templar's \
-	greathelm design, and it was proved worthy of usage: A steel casket with thin slits that allow for deceptively clear vision. The \
+	greathelm design, and it was proved worthy of usage: a steel casket with thin slits that allow for deceptively clear vision. The \
 	tainted will drown on the blood you will bring their way."
 	icon_state = "ordinatorhelm"
 	item_state = "ordinatorhelm"
@@ -932,7 +946,8 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/absolver
 	name = "absolver's greathelm"
-	desc = "Based on the visage worn by Saint Pestra's order, this cryptic helmet provides its wearer with the satisfaction of reminding heathens that fear is not an emotion easily lost. Even the dead may learn to taste terror again."
+	desc = "Based on the visage worn by Saint Pestra's order, this cryptic helmet provides its wearer with the satisfaction \
+	of reminding heathens that fear is not an emotion easily lost. Even the dead may learn to taste terror again."
 	icon_state = "absolutionisthelm"
 	item_state = "absolutionisthelm"
 	emote_environment = 3
@@ -1076,7 +1091,8 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/ravoxhelm
 	name = "justice eagle"
-	desc = "Forged in reverence to Ravox, this helm bears the stylized visage of an eagle, symbol of unyielding judgment and divine vigilance. Its hollow eyes see not just foes, but the truth behind every deed."
+	desc = "Forged in reverence to Ravox, this helm bears the stylized visage of an eagle, symbol of unyielding judgment and \
+	divine vigilance. Its hollow eyes see not just foes, but the truth behind every deed."
 	icon_state = "ravoxhelmet"
 	item_state = "ravoxhelmet"
 	emote_environment = 3
@@ -1117,7 +1133,8 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/volfplate/puritan
 	name = "volfskulle bascinet"
-	desc = "A steel bascinet helmet with a snarling visor that protects the entire head and face. It mimics the guise of a terrible nitebeast; intimidating to the levyman, inspiring to the hunter."
+	desc = "A steel bascinet helmet with a snarling visor that protects the entire head and face. It mimics the \
+	guise of a terrible nitebeast; intimidating to the levyman, inspiring to the hunter."
 
 /obj/item/clothing/head/roguetown/helmet/heavy/volfplate/berserker
 	name = "volfskulle bascinet"
@@ -1143,7 +1160,9 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/elven_helm
 	name = "woad elven helm"
-	desc = "A helm of thickly woven trunk, kept alive by ancient song and shaped to guard both face and spirit. Living fibers tighten and shift with each movement, as if the forest itself resists every blow struck against it. It is not merely worn - it watches alongside its bearer."
+	desc = "A helm of thickly woven trunk, kept alive by ancient song and shaped to guard both face and spirit. Living \
+	fibers tighten and shift with each movement, as if the forest itself resists every blow struck against it. It is not \
+	merely worn - it watches alongside its bearer."
 	allowed_race = list(/datum/species/elf/wood, /datum/species/human/halfelf, /datum/species/elf/dark)
 	body_parts_covered = FULL_HEAD|NECK
 	armor = ARMOR_BLACKOAK //Resistant to blunt & stab, but very weak to slash.
@@ -1163,7 +1182,8 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/elven_helm/light
 	name = "woad elven barbute"
-	desc = "A helm of woven trunk, kept alive by ancient song and crowned with living leaves of endless verdure. Lighter and more pliant than it's fuller counterpart, it bends with the will of it's bearer, never truly severed from the living grove."
+	desc = "A helm of woven trunk, kept alive by ancient song and crowned with living leaves of endless verdure. Lighter and more pliant \
+	than it's fuller counterpart, it bends with the will of it's bearer, never truly severed from the living grove."
 	body_parts_covered = HEAD|HAIR|NOSE|EARS|NECK
 	icon = 'icons/roguetown/clothing/special/race_armor.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/race_armor.dmi'
@@ -1175,7 +1195,9 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/frogmouth
 	name = "froggemund helmet"
-	desc = "A tall and imposing frogmouth-style helm popular in the highest plateaus of the Azure Peak. It covers not only the entire head and face, but the neck as well. Add some cloth to show the colors of your family or allegiance, or a nurse's veil to ward off the chilliness of a winterborn tournament."
+	desc = "A tall and imposing frogmouth-style helm popular in the highest plateaus of the Azure Peak. It covers not only the \
+	entire head and face, but the neck as well. Add some cloth to show the colors of your family or allegiance, or a nurse's \
+	veil to ward off the chilliness of a winterborn tournament."
 	icon_state = "frogmouth"
 	item_state = "frogmouth"
 	emote_environment = 3
@@ -1328,7 +1350,8 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/graggar/skull
 	name = "vicious skullhelm"
-	desc = "Nigh lyke a crushed skull worn with pride; as sturdy as one that has seen fractures.. and survived them, too. Godliness was never meant to be tainted with minds so fragile and passionate."
+	desc = "Nigh lyke a crushed skull worn with pride; as sturdy as one that has seen fractures.. and survived them, too. Godliness \
+	was never meant to be tainted with minds so fragile and passionate."
 	icon_state = "graggarplatehelm_heavy"
 	smeltresult = /obj/item/ingot/component/graggar
 
@@ -1338,7 +1361,8 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/zizo
 	name = "avantyne barbute"
-	desc = "Crystallized inzanity, brought to a lower plane of existence and flared into an ethereal greathelm. It has been called forth from the edge of reality, in Her name."
+	desc = "Crystallized inzanity, brought to a lower plane of existence and flared into an ethereal greathelm. It has been \
+	called forth from the edge of reality, in Her name."
 	adjustable = CAN_CADJUST
 	icon_state = "zizobarbute"
 	max_integrity = ARMOR_INT_HELMET_ANTAG
@@ -1349,7 +1373,8 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/zizo/frogge
 	name = "avantyne froggemund"
-	desc = "A monolithic, suffocating cage of darksteel that narrows one's perspective to a single, hateful point. It grants the wearer the clarity of a predator, blinding them to everything but the object of their malice."
+	desc = "A monolithic, suffocating cage of darksteel that narrows one's perspective to a single, hateful point. It grants the \
+	wearer the clarity of a predator, blinding them to everything but the object of their malice."
 	icon_state = "zizofrogmouth"
 	flags_inv = HIDEFACE|HIDESNOUT|HIDEEARS|HIDEHAIR
 	body_parts_covered = HEAD|EARS|HAIR
@@ -1358,14 +1383,16 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/zizo/volfhelm
 	name = "avantyne volf-face bascinet"
-	desc = "A terminal prognosis, a lethal parasite; unholy strands of avantyne, worming their way through the steel to make something greater. Progress is an agonising process, both unto flesh and metal."
+	desc = "A terminal prognosis, a lethal parasite; unholy strands of avantyne, worming their way through the steel to make something \
+	greater. Progress is an agonising process, both unto flesh and metal."
 	icon_state = "volfplate_avantyne"
 	item_state = "volfplate_avantyne"
 	smeltresult = /obj/item/ingot/component/zizo
 
 /obj/item/clothing/head/roguetown/helmet/heavy/zizo/bascinet
 	name = "avantyne bascinet"
-	desc = "A darksteeled bascinet, perpetually backlit with an eerie crimson haze. Glimpse into the abyss for too long..</br>‎<font color='FF0000'>..and something will look back.</font>"
+	desc = "A darksteeled bascinet, perpetually backlit with an eerie crimson haze. Glimpse into the abyss for too \
+	long..</br>‎<font color='FF0000'>..and something will look back.</font>"
 	icon_state = "zizobascinet"
 	item_state = "zizobascinet"
 	flags_inv = HIDEFACE|HIDESNOUT|HIDEEARS|HIDEHAIR
@@ -1383,7 +1410,8 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/avantyne
 	name = "avantyne-threaded veil"
-	desc = "A veil threaded from an otherworldly alloy, perpetually backlit with an eerie crimson haze. Glimpse into the abyss for too long.. </br>‎  <font color='FF0000'>..and something will look back.</font>."
+	desc = "A veil threaded from an otherworldly alloy, perpetually backlit with an eerie crimson haze. Glimpse into the abyss for too \
+	long.. </br>‎  <font color='FF0000'>..and something will look back.</font>."
 	body_parts_covered = FULL_HEAD|NECK
 	icon_state = "zizoplatehelm_med"
 	item_state = "zizoplatehelm_med"
