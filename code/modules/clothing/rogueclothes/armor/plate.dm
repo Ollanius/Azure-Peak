@@ -382,7 +382,8 @@
 	icon_state = "ironplate"
 	desc = "A 'munition'-grade set of iron plate armor, fitted with pauldrons and tassets for additional coverage. Most \ 
 	of these sets, produced within the last century, can trace their origins to an edict from Hammerhold's former \
-	King: one which demanded a munitions run, but forgot to specify its tailoring towards the dwarven physique. </br>‎  </br>'Slow to don-and-doff, without a trusted Levyman's aid..'"
+	King: one which demanded a munitions run, but forgot to specify its tailoring towards the dwarven \
+	physique. </br>‎  </br>'Slow to don-and-doff, without a trusted Levyman's aid..'"
 	smeltresult = /obj/item/ingot/iron
 	max_integrity = ARMOR_INT_CHEST_PLATE_IRON
 
