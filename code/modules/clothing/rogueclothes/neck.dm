@@ -515,7 +515,7 @@
 
 /obj/item/clothing/neck/roguetown/psicross/silver/naledi
 	name = "golden psycross"
-	desc = "'Purity afloat, for paradise awaits!'" </br>The surface is meticulously lined with Naledian glyphs, said to ward off the possessive allure of djinns."
+	desc = "'Purity afloat, for paradise awaits!' </br>The surface is meticulously lined with Naledian glyphs, said to ward off the possessive allure of djinns."
 	icon_state = "psycross_g"
 	item_state = "psycross_g"
 	//dropshrink = 0.75
