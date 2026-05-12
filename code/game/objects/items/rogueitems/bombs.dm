@@ -442,7 +442,7 @@
 //admin only mega bomb, should never be made craftable
 /obj/item/satchel_bomb/mega
 	name = "MEGA blastpowder satchel"
-	desc = "An over filled satchel of Blastpowder originally made by Lubbin' Bleat, Octava's Famed sheep-kin bathhouse attendant and ruler of the slumber beat... this type of bomb has been banned by all nations and labeled as a threat by both the church of the ten and Pysdonia. IF YOU SEE A LIT WICK, YOU BEST RUN AWAY QUICK!"
+	desc = "An overfilled satchel of blastpowder originally made by Lubbin' Bleat, Otava's famed sheep-kin bathhouse attendant and ruler of the slumber beat.. </br>This type of bomb has been banned by all kingdoms and labeled as a threat by both the Churches of the Pantheon and Orthodoxy. IF YOU SEE A LIT WICK, YOU BEST RUN AWAY QUICK!"
 	icon_state = "satchel_bomb"
 	lit_state = "satchel_bomb-lit"
 	icon = 'icons/roguetown/items/misc.dmi'
