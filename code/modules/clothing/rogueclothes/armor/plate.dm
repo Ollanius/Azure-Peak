@@ -467,29 +467,12 @@
 	smelt_bar_num = 2
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/fluted/ornate/ordinator
-	name = "ordinator's plate armor"
+	name = "ordinator's blessed plate"
 	desc = "A relic that is said to have survived the Grenzelhoft-Otavan war, refurbished and repurposed to \
 	slay the Archenemy in the name of Psydon. <br> A fluted cuirass that has been reinforced with thick \
 	padding and an additional shoulder piece. You will endure."
 	icon_state = "ordinatorplate"	
 	is_silver = TRUE
-	is_lesser_silver = TRUE
-
-/obj/item/clothing/suit/roguetown/armor/plate/full/fluted/ornate/aegis
-	name = "ordinator's aegis"
-	desc = "'Why did you continue to fight?' \
-	</br>'Were you simply following your oath?' \
-	</br>'Or.. are you more than just a servant?' \
-	</br>'The power within you; it was not given.' \
-	</br>'You chose to wield it; to be their hero.' \
-	</br>'The innocent, the guilty, the saved and the damned; they now all look to you for hope.' \
-	</br>'Their fate is in your hands; but your body is broken.. your weapons, destroyed..' \
-	</br>'..yet, you endure - even as <font color='FF0000'>IT</font> looms before you.' \
-	</br>'Are you bound by your limitations?' \
- 	</br>‎'Or will you continue to <font color='74CED0'>FIGHT?</font>'"
-	icon_state = "ordinatorplate"	
-	is_silver = TRUE
-	is_lesser_silver = TRUE
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/matthios
 	name = "gilded full-plate"
