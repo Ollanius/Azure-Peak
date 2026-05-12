@@ -164,13 +164,15 @@
 	slot_flags = ITEM_SLOT_ARMOR
 	armor_class = ARMOR_CLASS_HEAVY
 	name = "psydonic mailled cuirass"
-	desc = "A beautiful steel cuirass, decorated with blessed silver fluting and worn atop thick chainmaille. While it falters against \
+	desc = "A beautiful cuirass, decorated with blessed silver fluting and worn atop thick chainmaille. While it falters against \
 	arrows and bolts, these interlinked layers are superb at warding off the blows of inhumen claws and axes. </br>‎  </br>'..the knowledge \
 	of evil, and the burden of carrying Psydonia's hope upon thine shoulders..'"
 	icon_state = "ornatehauberk"
 	item_state = "ornatehauberk"
 	max_integrity = ARMOR_INT_CHEST_PLATE_PSYDON + 50
 	smeltresult = /obj/item/ingot/silverblessed
+	is_silver = TRUE
+	is_lesser_silver = TRUE
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/ornate/get_mechanics_examine(mob/user)
 	. = ..()
