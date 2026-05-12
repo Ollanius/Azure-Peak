@@ -472,6 +472,13 @@
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/fluted/ornate/ordinator
 	name = "ordinator's plate armor"
+	desc = "A relic that is said to have survived the Grenzelhoft-Otavan war, refurbished and repurposed to \
+	slay the Archenemy in the name of Psydon. <br> A fluted cuirass that has been reinforced with thick \
+	padding and an additional shoulder piece. You will endure."
+	icon_state = "ordinatorplate"	
+
+/obj/item/clothing/suit/roguetown/armor/plate/full/fluted/ornate/aegis
+	name = "ordinator's aegis"
 	desc = "'Why did you continue to fight?' \
 	</br>'Were you simply following your oath?' \
 	</br>'Or.. are you more than just a servant?' \
