@@ -344,7 +344,7 @@
 
 /obj/item/clothing/suit/roguetown/armor/plate/fluted/ornate
 	name = "psydonic half-plate"
-	desc = "A beautiful steel cuirass, fitted with tassets and pauldrons for additional coverage. Lesser clerics of \
+	desc = "A beautiful silver cuirass, fitted with tassets and pauldrons for additional coverage. Lesser clerics of \
 	Psydon oft-decorate these sets with dyed cloths, so that those who're wounded can still find salvation in the madness  \
 	of battle. </br>‎  </br>'..the thrumbing of madness, to think that your suffering was all-for-naught to Adonai's sacrifical lamb..'"
 	icon_state = "ornatehalfplate"
@@ -692,7 +692,7 @@
 
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fencer/psydon
 	name = "psydonic chestplate"
-	desc = "An expertly smithed form-fitting steel cuirass that is much lighter and agile, but breaks with much more \
+	desc = "An expertly smithed form-fitting silver cuirass that is much lighter and agile, but breaks with much more \
 	ease. It's thinner, but backed with silk and leather."
 	smelt_bar_num = 1
 	max_integrity = ARMOR_INT_CHEST_LIGHT_BASE
@@ -761,7 +761,7 @@
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/ornate
 	name = "psydonic cuirass"
 	icon_state = "ornatecuirass"
-	desc = "A beautiful steel cuirass, fitted with tassets for additional coverage. Strips of blessed silver have been meticulously \
+	desc = "A beautiful silver cuirass, fitted with tassets for additional coverage. Strips of blessed silver have been meticulously \
 	incorporated into the fluting; a laborous decoration that denotes it as originating from the Order of the Silver Psycross. </br>‎  </br>'..the feeling \
 	of Aeon's grasp upon your shoulders, imparting the world's burden unto flesh and bone..'"
 	smeltresult = /obj/item/ingot/silverblessed
@@ -772,8 +772,7 @@
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/ornate/get_mechanics_examine(mob/user)
 	. = ..()
 	. += span_info("With more blessed silver and an armorsmith's hammer, this armor can be further upgraded.")
-	. += span_info("If a character has the 'Maille Training' trait and has Psydon as their selected patron, they can comfortably wear Psydonic \
-	plate armor without suffering any downsides.")
+	. += span_info("If a character has the 'Maille Training' trait and has Psydon as their selected patron, they can comfortably wear Psydonic plate armor without suffering any downsides.")
 
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/iron
 	name = "iron breastplate"
