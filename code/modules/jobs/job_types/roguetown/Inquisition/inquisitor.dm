@@ -99,7 +99,7 @@
 	mask = /obj/item/clothing/mask/rogue/spectacles/inq/spawnpair
 	gloves = /obj/item/clothing/gloves/roguetown/otavan/psygloves
 	wrists = /obj/item/clothing/neck/roguetown/psicross/silver
-	id = /obj/item/clothing/ring/signet/silver
+	id = /obj/item/clothing/ring/signet/psy
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/scale/inqcoat
 	backpack_contents = list(
 		/obj/item/storage/keyring/inquisitor = 1,
@@ -237,7 +237,7 @@
 		/obj/item/natural/inqfeather = 1,
 		/obj/item/rogueweapon/scabbard/sheath/noble = 1,
 		/obj/item/rogueweapon/huntingknife/idagger/silver/psydagger/heavy = 1,
-		/obj/item/clothing/ring/signet/silver = 1
+		/obj/item/clothing/ring/signet/psy = 1
 		)
 
 /datum/outfit/job/roguetown/inquisitor/ordinator/choose_loadout(mob/living/carbon/human/H)
