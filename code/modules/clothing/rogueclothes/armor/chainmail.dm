@@ -148,7 +148,6 @@
 /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/ornate
 	slot_flags = ITEM_SLOT_ARMOR
 	armor_class = ARMOR_CLASS_HEAVY
-	armor = ARMOR_PLATE
 	name = "psydonic mailled cuirass"
 	desc = "A beautiful steel cuirass, decorated with blessed silver fluting and worn atop thick chainmaille. While it falters against arrows and bolts, these interlinked layers are superb at warding off the blows of inhumen claws and axes. </br>‎  </br>'..the knowledge of evil, and the burden of carrying Psydonia's hope upon thine shoulders..'"
 	icon_state = "ornatehauberk"
@@ -213,6 +212,24 @@
 	craftdiff = 0
 	req_table = TRUE
 	bypass_dupe_test = TRUE
+
+/datum/crafting_recipe/roguetown/survival/ornatemailledhauberk
+	name = "layer a psydonic cuirass atop hauberk"
+	result = list(/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/ornate)
+	reqs = list(/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/ornate = 1,
+	            /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk = 1)
+	craftdiff = 0 //Note that its Decrepit-tier variant is intended to largely be used by mobs and not players; hence, the lack of a crafting recipe.
+	req_table = TRUE //If someone wants to add that in post, hwoever, I don't mind. You can easily do so by copy-pasting the format, here.
+	bypass_dupe_test = TRUE
+
+/datum/crafting_recipe/roguetown/survival/ornatemailledhauberk/off
+	name = "take psydonic cuirass off the hauberk"
+	result = list(/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/ornate = 1, /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk = 1)
+	reqs = list(/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/ornate = 1)
+	craftdiff = 0
+	req_table = TRUE
+	bypass_dupe_test = TRUE
+
 
 //
 
