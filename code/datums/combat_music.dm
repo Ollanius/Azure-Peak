@@ -280,7 +280,7 @@ GLOBAL_LIST_EMPTY(cmode_tracks_by_name)
 
 /datum/combat_music/inquis_commander
 	name = "Inquisitor ('Commander' Mix)"
-	desc = "One final effort; a dance at midnight, a parlay at the end of the world. Finish the fight, no matter the odds."
+	desc = "One final effort; a dance at midnight, and a parlay at the end of the world. Finish the fight, no matter the odds."
 	shortname = "Inq. Commander"
 	credits = "Summit - TimG"
 	musicpath = list('sound/music/combat_inqcommander.ogg')
