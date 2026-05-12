@@ -30,7 +30,7 @@
 	subclass_stashed_items = list(
 		"The Book" = /obj/item/book/rogue/bibble/psy
 	)
-	extra_context = "This subclass can choose from multiple Disciplines. The further your chosen Discipline strays from unarmed combat, however, the greater your skills in fistfighting and wrestling will atrophy."
+	extra_context = "This subclass can choose from multiple Disciplines. Your unarmed skills are inversely scaled; the better that a chosen Discipline is at fistfighting, the worse that they'll be at wrestling."
 
 /datum/outfit/job/roguetown/disciple
 	job_bitflag = BITFLAG_HOLY_WARRIOR
@@ -41,15 +41,9 @@
 /datum/outfit/job/roguetown/disciple/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 	if(H.mind)
-		var/weapons = list("Pugilist - Master Athletics & Unarmed", "Abboteer - Pugilist+, No Maluses, Weaponless Oath", "Katar", "Knuckledusters", "Quarterstaff - +I PER / +I INT")
+		var/weapons = list("Abboteer - Pugilist+, No Maluses, Weaponless Oath", "Pugilist - Master Athletics & Unarmed", "Katar", "Knuckledusters", "Quarterstaff - +I PER / +I INT")
 		var/weapon_choice = input(H,"Choose your WEAPON.", "TAKE UP PSYDON'S ARMS.") as anything in weapons
 		switch(weapon_choice)
-			if("Pugilist - Master Athletics & Unarmed")
-				H.adjust_skillrank_up_to(/datum/skill/misc/athletics, SKILL_LEVEL_MASTER, TRUE)
-				H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_MASTER, TRUE)
-				H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, SKILL_LEVEL_EXPERT, TRUE)
-				gloves = /obj/item/clothing/gloves/roguetown/bandages/pugilist
-				ADD_TRAIT(H, TRAIT_IGNOREDAMAGESLOWDOWN, TRAIT_GENERIC)
 			if("Abboteer - Pugilist+, No Maluses, Weaponless Oath")
 				H.adjust_skillrank_up_to(/datum/skill/misc/athletics, SKILL_LEVEL_LEGENDARY, TRUE)
 				H.adjust_skillrank_up_to(/datum/skill/misc/swimming, SKILL_LEVEL_EXPERT, TRUE)
@@ -59,8 +53,15 @@
 				ADD_TRAIT(H, TRAIT_IGNOREDAMAGESLOWDOWN, TRAIT_GENERIC)
 				ADD_TRAIT(H, TRAIT_WEAPONLESS, TRAIT_GENERIC)
 				ADD_TRAIT(H, TRAIT_STRONGBITE, TRAIT_GENERIC)
+				ADD_TRAIT(H, TRAIT_BITERHELM, TRAIT_GENERIC)
 				H.change_stat(STATKEY_INT, 2)
 				H.change_stat(STATKEY_SPD, 1)
+			if("Pugilist - Master Athletics & Unarmed")
+				H.adjust_skillrank_up_to(/datum/skill/misc/athletics, SKILL_LEVEL_MASTER, TRUE)
+				H.adjust_skillrank_up_to(/datum/skill/combat/unarmed, SKILL_LEVEL_MASTER, TRUE)
+				H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, SKILL_LEVEL_JOURNEYMAN, TRUE)
+				gloves = /obj/item/clothing/gloves/roguetown/bandages/pugilist
+				ADD_TRAIT(H, TRAIT_IGNOREDAMAGESLOWDOWN, TRAIT_GENERIC)
 			if("Katar")
 				H.adjust_skillrank_up_to(/datum/skill/combat/wrestling, SKILL_LEVEL_EXPERT, TRUE)
 				r_hand = /obj/item/rogueweapon/katar/psydon/preblessed
