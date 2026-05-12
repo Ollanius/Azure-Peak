@@ -351,8 +351,6 @@
 	smeltresult = /obj/item/ingot/silverblessed
 	body_parts_covered = COVERAGE_ALL_BUT_HANDFEET // Less durability than proper plate, more expensive to manufacture, and accurate to the sprite.
 	max_integrity = ARMOR_INT_CHEST_PLATE_PSYDON
-	is_silver = TRUE
-	is_lesser_silver = TRUE
 
 /obj/item/clothing/suit/roguetown/armor/plate/fluted/ornate/ComponentInitialize()
 	AddComponent(/datum/component/armour_filtering/positive, TRAIT_PSYDONIAN_GRIT, "ornate_plate")
@@ -442,8 +440,6 @@
 	icon_state = "ornateplate"
 	smeltresult = /obj/item/ingot/silverblessed
 	max_integrity = ARMOR_INT_CHEST_PLATE_PSYDON
-	is_silver = TRUE
-	is_lesser_silver = TRUE
 	/// Whether the user has the Heavy Armour Trait prior to donning.
 	var/traited = FALSE
 	smelt_bar_num = 3
@@ -682,8 +678,6 @@
 	smeltresult = /obj/item/ingot/silverblessed
 	icon_state = "ornatechestplate"
 	item_state = "ornatechestplate"
-	is_silver = TRUE
-	is_lesser_silver = TRUE
 
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/aalloy
 	name = "decrepit cuirass"
@@ -749,8 +743,6 @@
 	of Aeon's grasp upon your shoulders, imparting the world's burden unto flesh and bone..'"
 	smeltresult = /obj/item/ingot/silverblessed
 	smelt_bar_num = 1
-	is_silver = TRUE
-	is_lesser_silver = TRUE
 
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/ornate/get_mechanics_examine(mob/user)
 	. = ..()
