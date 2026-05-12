@@ -57,7 +57,7 @@
 	backpack_contents = list(/obj/item/roguekey/inquisitionmanor = 1,
 	/obj/item/paper/inqslip/arrival/ortho = 1,
 	/obj/item/rogueweapon/huntingknife/idagger/silver/stake/psy/lesser = 1,
-	/obj/item/clothing/ring/signet/silver = 1)
+	/obj/item/clothing/ring/signet/psy = 1)
 
 	H.dna.species.soundpack_m = new /datum/voicepack/male/knight()
 	var/datum/devotion/C = new /datum/devotion(H, H.patron)
