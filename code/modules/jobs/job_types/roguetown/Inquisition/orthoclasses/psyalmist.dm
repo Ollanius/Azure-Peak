@@ -26,7 +26,7 @@
 		/datum/skill/craft/cooking = SKILL_LEVEL_APPRENTICE
 	)
 	subclass_stashed_items = list(
-		"Of Psydon" = /obj/item/book/rogue/bibble/psy
+		"The Book" = /obj/item/book/rogue/bibble/psy
 	)
 	
 /datum/outfit/job/roguetown/psyaltrist/pre_equip(mob/living/carbon/human/H)
@@ -81,10 +81,10 @@
 	var/weapon_choice = tgui_input_list(H,"Choose your WEAPON.", "TAKE UP PSYDON'S ARMS.", weapons)
 	switch(weapon_choice)
 		if("Psydonic Whip")
-			H.put_in_hands(new /obj/item/rogueweapon/whip/psywhip_lesser(H))
+			H.put_in_hands(new /obj/item/rogueweapon/whip/psywhip_lesser/preblessed(H))
 			H.adjust_skillrank_up_to(/datum/skill/combat/whipsflails, 4, TRUE)
 		if("Psydonic Shortsword")
-			H.put_in_hands(new /obj/item/rogueweapon/sword/short/psy(H))
+			H.put_in_hands(new /obj/item/rogueweapon/sword/short/psy/preblessed(H))
 			H.put_in_hands(new /obj/item/rogueweapon/scabbard/sword(H))
 			H.adjust_skillrank_up_to(/datum/skill/combat/swords, 4, TRUE)
 	change_origin(H, /datum/virtue/origin/otava, "Holy order")
