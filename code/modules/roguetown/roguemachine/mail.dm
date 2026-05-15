@@ -406,12 +406,12 @@
 						if(cursedblood)
 							bonuses = bonuses + bonuses * I.paired.cursedblood
 							if(I.waxed)
-								bonuses += 2
+								bonuses += 4
 							budget2change(bonuses, user, "MARQUE")
 							record_round_statistic(STATS_MARQUES_MADE, bonuses)
 						if(I.paired && !indexed && !correct && !cursedblood)
 							if(I.waxed)
-								bonuses += 2	
+								bonuses += 4	
 						budget2change(bonuses, user, "MARQUE")
 						record_round_statistic(STATS_MARQUES_MADE, bonuses)
 					else
@@ -421,7 +421,7 @@
 							bonuses = bonuses + bonuses * I.paired.cursedblood	
 							I.marquevalue += bonuses
 						if(accused)	
-							I.marquevalue -= 4
+							I.marquevalue -= 8
 						budget2change(I.marquevalue, user, "MARQUE")
 						record_round_statistic(STATS_MARQUES_MADE, I.marquevalue)
 					if(I.paired)	
@@ -528,7 +528,7 @@
 						return
 					else
 						if(!indexed && !correct && !cursedblood)
-							(I.marquevalue -= 4) += bonuses 
+							(I.marquevalue -= 8) += bonuses 
 							budget2change(I.marquevalue, user, "MARQUE")
 							record_round_statistic(STATS_MARQUES_MADE, I.marquevalue)
 						if(correct)
