@@ -116,6 +116,7 @@
 #define TRAIT_ROOT_WALKER "Root Walker"
 #define TRAIT_WYRD_LABOURER "Wyrd Labourer" // Hag boon
 #define TRAIT_CURSE_SCAR "Curse Scar"
+#define TRAIT_MANORKEEPER "Manorkeeper" //Cosmetic trait. Unviewable through traditional means, but seen upon examination with other Inquistioneers.
 
 //Hearthstone port (Tracking)
 #define TRAIT_PERFECT_TRACKER "Huntmaster" //Will always find any tracks and analyzes them perfectly.
