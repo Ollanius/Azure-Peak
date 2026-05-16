@@ -114,6 +114,7 @@
 		/obj/item/rogueweapon/scabbard/sheath/noble = 1
 		)
 
+	change_origin(H, /datum/virtue/origin/otava, "Holy order")
 
 /datum/outfit/job/roguetown/inquisitor/inspector/choose_loadout(mob/living/carbon/human/H)
 	. = ..()
@@ -239,10 +240,11 @@
 		/obj/item/rogueweapon/huntingknife/idagger/silver/psydagger/heavy = 1,
 		/obj/item/clothing/ring/signet/psy = 1
 		)
+	
+	change_origin(H, /datum/virtue/origin/otava, "Holy order")
 
 /datum/outfit/job/roguetown/inquisitor/ordinator/choose_loadout(mob/living/carbon/human/H)
 	. = ..()
-	change_origin(H, /datum/virtue/origin/otava, "Holy order")
 	var/weapons = list("Relic, 'Apocrypha' (Greatsword)", "Relic, 'Creed & Covenant' (Broadsword + Greatshield)", "Relic, 'Consecratia & Covenant' (Flail + Greatshield)", "Relic, 'Stigmata' (Halberd)", "Relic, 'Covenant' (Greatshield) + Psydonic War Axe", "Psydonic Grand Mace", "Psydonic Broadsword", "Psydonic Poleaxe")
 	var/weapon_choice = input(H,"CHOOSE YOUR RELIQUARY PIECE.", "WIELD THEM IN HIS NAME.") as anything in weapons
 	switch(weapon_choice)
