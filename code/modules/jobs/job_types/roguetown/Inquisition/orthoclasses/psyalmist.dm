@@ -77,7 +77,7 @@
 			if("Flute")
 				backr = /obj/item/rogue/instrument/flute
 
-	var/weapons = list("Psydonic Whip", "Psydonic Shortsword")
+	var/weapons = list("Psydonic Whip", "Psydonic Shortsword", "Psydonic Handmace - Swift-Balanced", "Psydonic Flanged Mace - Heavy-Balanced")
 	var/weapon_choice = tgui_input_list(H,"Choose your WEAPON.", "TAKE UP PSYDON'S ARMS.", weapons)
 	switch(weapon_choice)
 		if("Psydonic Whip")
@@ -87,6 +87,12 @@
 			H.put_in_hands(new /obj/item/rogueweapon/sword/short/psy/preblessed(H))
 			H.put_in_hands(new /obj/item/rogueweapon/scabbard/sword(H))
 			H.adjust_skillrank_up_to(/datum/skill/combat/swords, 4, TRUE)
+		if("Psydonic Handmace - Swift-Balanced")
+			l_hand = /obj/item/rogueweapon/mace/cudgel/psyclassic/preblessed
+			H.adjust_skillrank_up_to(/datum/skill/combat/maces, 4, TRUE)
+		if("Psydonic Flanged Mace - Heavy-Balanced")
+			l_hand = /obj/item/rogueweapon/mace/cudgel/psy/preblessed
+			H.adjust_skillrank_up_to(/datum/skill/combat/maces, 4, TRUE)	
 	change_origin(H, /datum/virtue/origin/otava, "Holy order")
 /datum/outfit/job/roguetown/psyaltrist
 	job_bitflag = BITFLAG_HOLY_WARRIOR

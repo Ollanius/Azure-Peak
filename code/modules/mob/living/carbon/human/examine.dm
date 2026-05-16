@@ -1152,8 +1152,19 @@
 		inquisition_text = "A subordinate to my authority, as willed by the Holy Otavan Inquisition."
 	if(HAS_TRAIT(src, TRAIT_PURITAN) && HAS_TRAIT(examiner, TRAIT_PURITAN))
 		inquisition_text = "Myself. I lead this sect of the Holy Otavan Inquisition."
+	if(HAS_TRAIT(src, TRAIT_MANORKEEPER) && HAS_TRAIT(examiner, TRAIT_INQUISITION))
+		inquisition_text = "A honored priest of Psydon, this Manor's lord, and the Inquisitor's confidant."
+	if(HAS_TRAIT(src, TRAIT_INQUISITION) && HAS_TRAIT(examiner, TRAIT_MANORKEEPER))
+		inquisition_text = "A guest from the Holy Otavan Inquisition, assigned to garrison my manor."
+	if(HAS_TRAIT(src, TRAIT_PURITAN) && HAS_TRAIT(examiner, TRAIT_MANORKEEPER))
+		inquisition_text = "An esteemed guest from the Holy Otavan Inquisition, whose sect I currently host."
+	if(HAS_TRAIT(src, TRAIT_MANORKEEPER) && HAS_TRAIT(examiner, TRAIT_PURITAN))
+		inquisition_text = "A honored priest of Psydon, this Manor's lord, and my respected confidant."
+	if(HAS_TRAIT(src, TRAIT_MANORKEEPER) && HAS_TRAIT(examiner, TRAIT_MANORKEEPER))
+		inquisition_text = "Myself. I am a honored priest from the Holy Otavan Inquisition, and this Manor's lord."
 
 	return inquisition_text
+
 
 // Used for Church tags
 /mob/living/proc/get_clergy_text(mob/examiner)
