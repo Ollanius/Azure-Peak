@@ -165,7 +165,7 @@
 
 /datum/sprite_accessory/ears/big/bunny_floppy
 	name = "Bunny (Floppy)"
-	icon_state = "bunnyfloppy"
+	icon_state = "bunny_floppy"
 	color_keys = 3
 	color_key_names = list("Ears", "Inner", "Tips")
 	relevant_layers = list(BODY_BEHIND_LAYER, BODY_FRONT_LAYER, BODY_ADJ_LAYER)
