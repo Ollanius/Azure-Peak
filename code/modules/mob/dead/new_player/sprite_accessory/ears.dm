@@ -163,9 +163,9 @@
 	color_keys = 2
 	color_key_names = list("Ears", "Tips")
 
-/datum/sprite_accessory/ears/big/bunny_large
-	name = "Bunny (Large)"
-	icon_state = "bunny_large"
+/datum/sprite_accessory/ears/big/bunny_classic
+	name = "Bunny (Classic)"
+	icon_state = "bunnyclassic"
 	color_keys = 3
 	color_key_names = list("Ears", "Inner", "Tips")
 	relevant_layers = list(BODY_BEHIND_LAYER, BODY_FRONT_LAYER, BODY_ADJ_LAYER)
