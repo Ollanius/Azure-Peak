@@ -163,7 +163,7 @@
 	color_keys = 2
 	color_key_names = list("Ears", "Tips")
 
-/datum/sprite_accessory/ears/bunny_floppy
+/datum/sprite_accessory/ears/big/bunny_floppy
 	name = "Bunny (Floppy)"
 	icon_state = "bunnyfloppy"
 	color_keys = 3
