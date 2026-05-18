@@ -228,7 +228,7 @@
 	obj_flags = CAN_BE_HIT
 	var/signed
 	var/mob/living/carbon/signee
-	var/marquevalue = 2
+	var/marquevalue = 4
 	var/sealed
 	var/waxed
 	var/sliptype = 1
@@ -254,7 +254,7 @@
 /obj/item/paper/inqslip/accusation
 	name = "accusation"
 	desc = "A writ of religious suspicion, printed on Otavan parchment: one signed not in ink, but blood. Contrary to the name, these writs - while primarly used to request haemological investigations - can also be used to simply catalogue the blood of others. </br>Fold and seal it, it's only proper."
-	marquevalue = 4
+	marquevalue = 8
 	sliptype = 0
 
 /obj/item/paper/inqslip/accusation/get_mechanics_examine(mob/user)
@@ -269,7 +269,7 @@
 /obj/item/paper/inqslip/confession
 	name = "confession"
 	base_icon_state = "confession"
-	marquevalue = 6
+	marquevalue = 12
 	desc = "A writ of religious guilt, printed on Otavan parchment: one signed not in ink, but blood. To sign it is to confess your indulgence in whatever sins've been levied your way; whether it is done willingly or not, however, is a completely different question. </br>Fold and seal it, it's only proper."
 	sliptype = 2
 
@@ -295,13 +295,13 @@
     . += span_info("Successfully mailing a SLIP will reward the sender with MARQUES. The amount of rewarded MARQUES increases, depending on whether you're an Orthodoxist, Absolver, or Inquisitor.")
 
 /obj/item/paper/inqslip/arrival/ortho
-	marquevalue = 4
+	marquevalue = 8 //At least two Orthodoxists can now get one relic.
 
 /obj/item/paper/inqslip/arrival/inq
-	marquevalue = 10
+	marquevalue = 16
 
 /obj/item/paper/inqslip/arrival/abso
-	marquevalue = 6
+	marquevalue = 16 //The presence of one Absolver means enough for one relic, or additional supplies.
 
 /obj/item/paper/inqslip/proc/attemptsign(mob/user, mob/living/carbon/human/M)
 	if(sliptype == 2)
