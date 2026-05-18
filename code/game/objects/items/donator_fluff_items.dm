@@ -452,6 +452,7 @@ As Excaliber."
 	icon_state = "wazialong"
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
 	sheathe_icon = "wazialong"
+	bigboy = TRUE
 
 /obj/item/rogueweapon/koruu/etrusca
 	name = "Colada"
@@ -459,6 +460,7 @@ As Excaliber."
 	icon_state = "waziaetrusc"
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
 	sheathe_icon = "waziaetrusc"
+	bigboy = TRUE
 
 /obj/item/rogueweapon/koruu/judgement
 	name = "A Durthurian Tale"
@@ -466,6 +468,7 @@ As Excaliber."
 	icon_state = "waziajudgement"
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
 	sheathe_icon = "waziajudgement"
+	bigboy = TRUE
 
 //DAKKEN12
 /obj/item/clothing/head/roguetown/helmet/bascinet/pigface/hounskull/dakken
@@ -734,6 +737,8 @@ As Excaliber."
 	nodismemsleeves = TRUE
 
 /obj/item/clothing/mask/rogue/spectacles/magi1138
-    name = "modified Nocshade lens-pair"
-    desc = "A pair of Otavan Nocshade Lenses with cut and polished amythortz lenses."
-    icon_state = "bglasses"
+	name = "modified Nocshade lens-pair"
+	desc = "A pair of Otavan Nocshade Lenses with cut and polished amythortz lenses."
+	icon_state = "magi_glasses"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
