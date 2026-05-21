@@ -130,7 +130,7 @@
 	if(victim.stat != DEAD)
 		victim.apply_status_effect(/datum/status_effect/debuff/permadeath) //The deathmark in question. This temporarily adds unrevivability to the target; die again while it's active, and your story'll be over.. for now.
 		victim.play_permadeath_indicator()
-		to_chat(target, span_danger("You feel cold within, as the lux begins to creep across your heart once more. The thread betwixt your soul and body remains thin; to succumb again so soon would ensure its total severance."))
+		to_chat(victim, span_danger("You feel cold within, as the lux begins to creep across your heart once more. The thread betwixt your soul and body remains thin; to succumb again so soon would ensure its total severance."))
 
 /obj/effect/proc_holder/spell/invoked/resurrect/cast_check(skipcharge, mob/user = usr)
 	if(!..())
@@ -267,7 +267,7 @@
 
 /obj/effect/proc_holder/spell/invoked/summon_dreamfiend_curse
 	name = "Confront Terror"
-	desc = "Summon the dreamfiend haunting you to confront it directly"
+	desc = "Summon the dreamfiend haunting you, in order to confront it directly."
 	action_icon = 'icons/mob/actions/abyssormiracles.dmi'
 	overlay_icon = 'icons/mob/actions/abyssormiracles.dmi'
 	overlay_state = "revive"
