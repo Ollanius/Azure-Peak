@@ -518,3 +518,8 @@
 	timer = 30 SECONDS
 	stressadd = 2
 	desc = span_red("The nerve! Water in my face? This indignity is intolerable.")
+
+/datum/stressevent/permadeath_threat
+	stressadd = 5
+	desc = span_boldred("I've barely escaped death's grasp!")
+	timer = 15 MINUTES

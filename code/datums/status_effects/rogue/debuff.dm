@@ -273,7 +273,8 @@
 
 /atom/movable/screen/alert/status_effect/debuff/devitalised
 	name = "Devitalised"
-	desc = "Something has been taken from me, and it will take time to recover."
+	desc = "Something vital has been taken from me; my heart beats in arrythmia, as it struggles to restore what has been lost."
+	icon_state = "lux"
 
 /datum/status_effect/debuff/vamp_dreams
 	id = "sleepytime"
@@ -291,13 +292,12 @@
 	effectedstats = list(STATKEY_STR = -1, STATKEY_WIL = -1, STATKEY_CON = -1, STATKEY_SPD = -1, STATKEY_LCK = -1)
 	duration = 1 HOURS // Punishing AS FUCK, but not as punishing as being dead.
 
-
 /atom/movable/screen/alert/status_effect/debuff/ritualdefiled
-	name = "Tainted Lux"
-	desc = "My Lux has been tainted in a vile heretic ritual."
+	name = "Defilementia"
+	desc = "My very spirit aches, as my body struggles against the lux-cursing whims of a forbidden ritual!"
+	icon_state = "rituos_cooldown_greater"
 
 /// SURRENDERING DEBUFFS
-
 /datum/status_effect/debuff/breedable
 	id = "breedable"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/breedable
@@ -343,7 +343,7 @@
 	desc = "I can barely feel my limbs!"
 	icon_state = "chilled"
 
-
+/// RITUOS DEBUFFS
 /datum/status_effect/debuff/ritesexpended
 	id = "ritesexpended"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/ritesexpended
@@ -352,19 +352,21 @@
 /datum/status_effect/debuff/ritesexpended/heretic
 	duration = 2 HOURS
 
+/atom/movable/screen/alert/status_effect/debuff/ritesexpended
+	name = "Rituos Fatigatio"
+	desc = "My ritual is complete, yet not without cost. I must gift my lux tyme to recover, before I can conduct another rite."
+	icon_state = "rituos_cooldown"
+
 /datum/status_effect/debuff/lux_exhausted
 	id = "lux_exhausted"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/lux_exhausted
 	effectedstats = list(STATKEY_STR = -2, STATKEY_WIL = -2, STATKEY_LCK = -2)
 	duration = 2 HOURS
 
-/atom/movable/screen/alert/status_effect/debuff/ritesexpended
-	name = "Rites Complete"
-	desc = "It will take time before I can next perform a rite."
-
 /atom/movable/screen/alert/status_effect/debuff/lux_exhausted
-	name = "Lux Exhausted"
-	desc = "My lux is spent, leaving body and will diminished."
+	name = "Rituos Langouria"
+	desc = "Body and will alike, sacrificed to complete the rites for another. Your will shall be done, but it will be quite some time before your lux can sustain another rite."
+	icon_state = "rituos_exchange"
 
 /datum/status_effect/debuff/ritesexpended_heavy
 	id = "ritesexpended_heavy"
@@ -372,55 +374,79 @@
 	duration = 1 HOURS
 
 /atom/movable/screen/alert/status_effect/debuff/ritesexpended_heavy
-	name = "Rites Complete"
-	desc = "It will take a lot of time before I can perform a next rite. I am drained."
+	name = "Rituos Desicco"
+	desc = "My ritual is complete, yet not without cost. I must gift my lux plenty of tyme to recover, before I can conduct another rite."
+	icon_state = "rituos_cooldown_greater"
 
 /atom/movable/screen/alert/status_effect/debuff/ravox_spirit_backlash
 	name = "Spiritual Backlash"
-	desc = "Myne body weak, myne muscles burn- but I must fight on."
+	desc = "Myne body weak, myne muscles burn - but I must fight on!"
 	icon_state = "call_to_arms_negative"
 
 /atom/movable/screen/alert/status_effect/debuff/ravox_warrior_spirit
-	name = "Lux-strain"
-	desc = "My spirit is momentarily stretched thin."
-	icon_state = "astrata_gaze"
+	name = "Luxstrain"
+	desc = "My spirit is momentarily stretched thin!"
+	icon_state = "luxtrain"
 
-//For revive - your body DIDN'T rot, but it did suffer damage. Unlike being rotted, this one is only timed. Not forever.
+/// RESURRECTION DEBUFFS
 /datum/status_effect/debuff/revived
-	id = "revived"
+	id = "revived" //For revive - your body DIDN'T rot, but it did suffer damage. Unlike being rotted, this one is only timed. Not forever.
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/revived
 	effectedstats = list(STATKEY_STR = -1, STATKEY_PER = -1, STATKEY_INT = -1, STATKEY_WIL = -1, STATKEY_CON = -1, STATKEY_SPD = -1, STATKEY_LCK = -1)
 	duration = 15 MINUTES		//Should be long enough to stop someone from running back into battle. Plus, this stacks with body-rot debuff. RIP.
 
 /atom/movable/screen/alert/status_effect/debuff/revived
 	name = "Revival Sickness"
-	desc = "You felt lyfe itself course through you, restoring your lux and your essance. You.. live - but your body aches. It still needs time to recover.."
+	desc = "You felt lyfe itself course through you, restoring your lux and your essence. You live - but your body aches. It still needs time to recover.."
 	icon_state = "revived"
 
-//For de-rot - your body ROTTED. Harsher penalty for longer, can be fully off-set with a cure-rot potion.
 /datum/status_effect/debuff/rotted
-	id = "rotted_body"
+	id = "rotted_body" //For de-rot - your body ROTTED. Harsher penalty for longer, can be fully off-set with a cure-rot potion.
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/rotted
 	effectedstats = list(STATKEY_STR = -2, STATKEY_PER = -2, STATKEY_INT = -2, STATKEY_WIL = -2, STATKEY_CON = -2, STATKEY_SPD = -2, STATKEY_LCK = -2)
-	duration = 30 MINUTES	//Back to a temporary 30 min duration. It hurts.
+	duration = 30 MINUTES	// Back to a temporary 30 minute duration. It hurts.
 
 /atom/movable/screen/alert/status_effect/debuff/rotted
-	name = "Body Rot Paralysis"
-	desc = "You came back from death, but everything aches.. you can feel it in your muscles. Even in your nose, you can smell something putrid and foul. You live yet, but at what cost..?"
-	icon_state = "rotted_body"
+	name = "Atrophia"
+	desc = "You came back from death, but everything aches.. you can feel it in your muscles, your bones.. Even in your nose, you can smell something putrid and foul. You.. live yet, but at what cost.. ?"
+	icon_state = "revived_rot"
 
-//Replaces the flat-stat change, this should ONLY apply to zombies who have been dead for some time. Makes them easier to kill.
 /datum/status_effect/debuff/rotted_zombie
-	id = "rotted_zombie"
+	id = "rotted_zombie" //Replaces the flat-stat change, this should ONLY apply to zombies who have been dead for some time. Makes them easier to kill.
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/rotted_zombie
-	effectedstats = list(STATKEY_CON = -8)
-	//No duration = infinate in time - this is removed on de-rot miricle OR de-rot surgery. Won't be applied unless you've been a zombie for ~20 min.
+	effectedstats = list(STATKEY_CON = -8) //No duration = infinate in time - this is removed on de-rot miricle OR de-rot surgery. Won't be applied unless you've been a zombie for ~20 min.
 
 /atom/movable/screen/alert/status_effect/debuff/rotted_zombie
-	name = "Decomposing Corpse"
-	desc = "You've been dead for some time.. your body is finally starting to give out on you."
-	icon_state = "rotted_body"	//Temp holdover, no idea what I'd do for a new icon for this.
+	name = "Decomposing"
+	desc = "Death's grasp has begun to take its toll, for even your body is finally starting to give out on you."
+	icon_state = "rot"
 
+/atom/movable/screen/alert/status_effect/debuff/breedable
+	name = "Obedient"
+	desc = "They won't hurt me too much..."
+
+/datum/status_effect/debuff/permadeath
+	id = "permadeath"
+	alert_type = /atom/movable/screen/alert/status_effect/debuff/permadeath
+	duration = 15 MINUTES //Effectively determines how long a character can be threatened with permadeath. Kicks into gear once the initial deathmark-imposed grace period completes.
+
+/atom/movable/screen/alert/status_effect/debuff/permadeath
+	name = "Death's Door"
+	desc = "My spirit has yet to fully settle within this body. Should I perish again within a half-dae's tyme, nothing will be able to bring me back from Necra's grasp."
+	icon_state = "permadeath"
+
+/datum/status_effect/debuff/permadeath/on_apply()
+	. = ..()
+	ADD_TRAIT(owner, TRAIT_DNR, id)
+	owner.add_stress(/datum/stressevent/permadeath_threat)
+
+/datum/status_effect/debuff/permadeath/on_remove()
+	. = ..()
+	REMOVE_TRAIT(owner, TRAIT_DNR, id)
+	owner.remove_stress(/datum/stressevent/permadeath_threat)
+	owner.add_stress(/datum/stressevent/permadeath_end)
+
+/// CONT. DEBUFFS
 /datum/status_effect/debuff/dazed
 	id = "dazed"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/dazed
