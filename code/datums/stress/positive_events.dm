@@ -470,7 +470,6 @@
 	stressadd = -1
 	desc = list(span_blue("A pleasant feeling bitter-spicy and tart on the tongue."))
 	
-	
 /datum/stressevent/ziggarasmoke
 	timer = 2 MINUTES
 	stressadd = -2
@@ -505,3 +504,8 @@
 	timer = 10 MINUTES // this will :) you for a while
 	stressadd = -2
 	desc = span_boldred("Long ago, XYLIX put up an extra star in the sky to anger NOC... seeing it is a FANTASTIC sign!")
+
+/datum/stressevent/permadeath_end
+	timer = 5 MINUTES
+	stressadd = -3
+	desc = span_boldgreen("I feel whole, once more! Death shant claim me yet!")
