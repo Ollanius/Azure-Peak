@@ -922,8 +922,11 @@
 
 /obj/item/rogueweapon/halberd/psyhalberd/relic
 	name = "Stigmata"
-	desc = "Christened in the Siege of Lirvas, these silver-tipped poleaxes - wielded by a lonesome contingent of Saint Eora's paladins - kept the horrors at bay for forty daes-and-nites. Long-since-recovered from the rubble, this relic now serve as a bulwark for the defenseless."
+	desc = "Christened in the Siege of Lirvas, these silver-tipped poleaxes - wielded by a lonesome contingent of Saint Eora's paladins - kept the horrors at bay for \
+	forty daes-and-nites. Long-since-recovered from the rubble, this relic now serve as a bulwark for the defenseless; perfectly weighted for use with a greatshield."
 	icon_state = "psyhalberd"
+	force = 25
+	force_wielded = 25
 
 /obj/item/rogueweapon/halberd/psyhalberd/relic/ComponentInitialize()
 	AddComponent(\
@@ -938,9 +941,10 @@
 
 /obj/item/rogueweapon/halberd/psyhalberd
 	name = "psydonic halberd"
-	desc = "A reliable design that has served humenkind to fell the enemy and defend Psydon's flock - now fitted with a lengthier blade and twin, silver-tipped beaks."
+	desc = "A blessed polearm that has guarded the walls of kingdoms-a-plenty, ever since the first castles of mortar-and-stone arose in Syon's wake. It \
+	not only professes the elegance of its knightly wielder, but also their vow to keep the innocent guarded from the guilty."
 	icon_state = "silverhalberd"
-	force = 10
+	force = 15
 	force_wielded = 25
 	minstr = 11
 	wdefense = 7
@@ -948,6 +952,17 @@
 	smeltresult = /obj/item/ingot/silverblessed
 
 /obj/item/rogueweapon/halberd/psyhalberd/ComponentInitialize()
+	AddComponent(\
+		/datum/component/silverbless,\
+		pre_blessed = BLESSING_NONE,\
+		silver_type = SILVER_PSYDONIAN,\
+		added_force = 0,\
+		added_blade_int = 0,\
+		added_int = 50,\
+		added_def = 2,\
+	)
+
+/obj/item/rogueweapon/halberd/psyhalberd/preblessed/ComponentInitialize()
 	AddComponent(\
 		/datum/component/silverbless,\
 		pre_blessed = BLESSING_PSYDONIAN,\
