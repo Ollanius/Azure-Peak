@@ -106,7 +106,7 @@
 						beltl = /obj/item/quiver/bolt/pyro
 			if("Siegebow - Greater Damage, Structurebreaker")
 				backl = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy
-				beltl = /obj/item/quiver/bolt/heavy/standard
+				beltl = /obj/item/quiver/bolt/heavy/stake
 
 	cloak = /obj/item/storage/backpack/rogue/satchel/beltpack
 	wrists = /obj/item/clothing/neck/roguetown/psicross/silver
