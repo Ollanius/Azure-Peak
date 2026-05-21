@@ -126,10 +126,10 @@
 	revert_cast()
 	return FALSE
 
-/obj/effect/proc_holder/spell/invoked/resurrect/proc/deathmark(mob/target)
-	if(target.stat != DEAD)
-		target.apply_status_effect(/datum/status_effect/debuff/permadeath) //The deathmark in question. This temporarily adds unrevivability to the target; die again while it's active, and your story'll be over.. for now.
-		target.play_permadeath_indicator()
+/obj/effect/proc_holder/spell/invoked/resurrect/proc/deathmark(mob/victim)
+	if(victim.stat != DEAD)
+		victim.apply_status_effect(/datum/status_effect/debuff/permadeath) //The deathmark in question. This temporarily adds unrevivability to the target; die again while it's active, and your story'll be over.. for now.
+		victim.play_permadeath_indicator()
 		to_chat(target, span_danger("You feel cold within, as the lux begins to creep across your heart once more. The thread betwixt your soul and body remains thin; to succumb again so soon would ensure its total severance."))
 
 /obj/effect/proc_holder/spell/invoked/resurrect/cast_check(skipcharge, mob/user = usr)
