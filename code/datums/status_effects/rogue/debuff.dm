@@ -396,8 +396,8 @@
 	duration = 15 MINUTES		//Should be long enough to stop someone from running back into battle. Plus, this stacks with body-rot debuff. RIP.
 
 /atom/movable/screen/alert/status_effect/debuff/revived
-	name = "Revival Sickness"
-	desc = "You felt lyfe itself course through you, restoring your lux and your essence. You live - but your body aches. It still needs time to recover.."
+	name = "Resurrected"
+	desc = "Brought back from death's sweet embrace, you walk amongst the living once more. Yet, it is not without consequence - your body aches, your spirit wanes, and your fate is still uncertain."
 	icon_state = "revived"
 
 /datum/status_effect/debuff/rotted
@@ -432,7 +432,7 @@
 
 /atom/movable/screen/alert/status_effect/debuff/permadeath
 	name = "Death's Door"
-	desc = "My spirit has yet to fully settle within this body. Should I perish again within a half-dae's tyme, nothing will be able to bring me back from Necra's grasp."
+	desc = "Your heart beats with arrythmic fright, and your mind lays besieged by the sudden onset of post-resurrective trauma. Should you perish again within a half-dae's tyme, nothing will be able to bring you back from Necra's grasp."
 	icon_state = "permadeath"
 
 /datum/status_effect/debuff/permadeath/on_apply()
