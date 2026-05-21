@@ -192,7 +192,7 @@
 		M.remove_status_effect(src)
 		addtimer(CALLBACK(src, PROC_REF(deathmark), M), 5 MINUTES) //Performs a check after the listed time has elapsed, post-resurrection. If the target is still alive by then, it'll apply the 'DNR' trait.
 
-/obj/effect/proc_holder/spell/invoked/resurrect/proc/deathmark(mob/living/victim)
+/datum/status_effect/buff/eoran_balm_effect/proc/deathmark(mob/living/victim)
 	if(victim.stat != DEAD)
 		victim.apply_status_effect(/datum/status_effect/debuff/permadeath) //The deathmark in question. This temporarily adds unrevivability to the target; die again while it's active, and your story'll be over.. for now.
 		victim.play_permadeath_indicator()
