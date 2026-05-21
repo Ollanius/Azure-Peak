@@ -432,7 +432,7 @@
 
 /atom/movable/screen/alert/status_effect/debuff/permadeath
 	name = "Death's Door"
-	desc = "Your heart beats with arrythmic fright, and your mind lays besieged by the sudden onset of post-resurrective trauma. Should you perish again within a half-dae's tyme, nothing will be able to bring you back from Necra's grasp."
+	desc = "Your heart beats with arrythmic fright, as an otherworldly chill rolls through your very spirit. Should you perish again within a half-dae's tyme, nothing will be able to bring you back from Necra's grasp."
 	icon_state = "permadeath"
 
 /datum/status_effect/debuff/permadeath/on_apply()
