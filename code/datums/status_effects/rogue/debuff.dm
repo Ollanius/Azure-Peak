@@ -396,9 +396,23 @@
 	duration = 15 MINUTES		//Should be long enough to stop someone from running back into battle. Plus, this stacks with body-rot debuff. RIP.
 
 /atom/movable/screen/alert/status_effect/debuff/revived
-	name = "Resurrected"
+	name = "Resurrection" //Formerly 'Revival Sickness'.
 	desc = "Brought back from death's sweet embrace, you walk amongst the living once more. Yet, it is not without consequence - your body aches, your spirit wanes, and your fate is still uncertain."
 	icon_state = "revived"
+
+/datum/status_effect/debuff/revived/on_remove()
+	. = ..()
+	owner.apply_status_effect(/datum/status_effect/debuff/revival_addendum, 5 MINUTES) //Cosmetic continuance, to ensure it ends with the 'Permadeath' debuff.
+
+/datum/status_effect/debuff/revived_addendum
+	id = "revived_addendum"
+	alert_type = /atom/movable/screen/alert/status_effect/debuff/revived_addendum
+	duration = 5 MINUTES		//If timed right, it should naturally end alongside the 'Death's Door' debuff. Purely cosmetic, for the sake of keeping some continuity with the effects of resurrection.
+
+/atom/movable/screen/alert/status_effect/debuff/revived_addendum
+	name = "Resurr.."
+	desc = "You can feel yourself, in both body and soul, becoming fully grounded once more. Tyme will tell if you'll lyve to see tomorrow, however, or if this is merely an intermission.."
+	icon_state = "revived_addendum"
 
 /datum/status_effect/debuff/rotted
 	id = "rotted_body" //For de-rot - your body ROTTED. Harsher penalty for longer, can be fully off-set with a cure-rot potion.
@@ -418,21 +432,17 @@
 
 /atom/movable/screen/alert/status_effect/debuff/rotted_zombie
 	name = "Decomposing"
-	desc = "Death's grasp has begun to take its toll, for even your body is finally starting to give out on you."
+	desc = "Rotting flesh, dangling innards - the decay of what once was, no longer guarded by lyfe's thrumbings. Your spirit is struggling to remain rooted within this world.."
 	icon_state = "rot"
-
-/atom/movable/screen/alert/status_effect/debuff/breedable
-	name = "Obedient"
-	desc = "They won't hurt me too much..."
 
 /datum/status_effect/debuff/permadeath
 	id = "permadeath"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/permadeath
-	duration = 15 MINUTES //Effectively determines how long a character can be threatened with permadeath. Kicks into gear once the initial deathmark-imposed grace period completes.
+	duration = 15 MINUTES //Effectively determines how long a character can be threatened with permadeath. Kicks into gear once the initial deathmark-imposed grace period completes. Timed to match Revival Sickness.
 
 /atom/movable/screen/alert/status_effect/debuff/permadeath
 	name = "Death's Door"
-	desc = "Your heart beats with arrythmic fright, and your mind lays besieged by the sudden onset of post-resurrective trauma. Should you perish again within a half-dae's tyme, nothing will be able to bring you back from Necra's grasp."
+	desc = "Your heart beats with arrythmic fright, as an otherworldly chill rolls through your very spirit. Should you perish again within a half-dae's tyme, nothing will be able to bring you back from death's grasp."
 	icon_state = "permadeath"
 
 /datum/status_effect/debuff/permadeath/on_apply()
