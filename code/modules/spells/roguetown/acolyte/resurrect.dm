@@ -120,10 +120,52 @@
 			target.apply_status_effect(debuff_type)	//Temp debuff on revive, your stats get hit temporarily. Doubly so if having rotted.
 		//Due to an increased cost and cooldown, these revival types heal quite a bit.
 		target.apply_status_effect(/datum/status_effect/buff/healing, 14)
-		consume_items(target)
-		return TRUE
-	revert_cast()
-	return FALSE
+        addtimer(CALLBACK(src, PROC_REF(deathmark), M), 5 MINUTES) //Performs a check after the listed time has elapsed, post-resurrection. If the target is still alive by then, it'll apply the 'DNR' trait.
+        consume_items(target)
+        return TRUE
+    revert_cast()
+    return FALSE
+
+/obj/effect/proc_holder/spell/invoked/resurrect/proc/deathmark(mob/victim)
+    if(victim.stat == DEAD)
+		return
+    target.apply_status_effect(/datum/status_effect/debuff/permadeath) //The deathmark in question. This temporarily adds unrevivability to the target; die again while it's active, and your story'll be over.. for now.
+	play_permadeath_indicator()
+	switch(H.patron?.type)
+		if(/datum/patron/old_god)
+			to_chat(victim, span_danger("Blinding light, enveloping warmth, unconditional love. The darkness recedes behind me, as I come closer to the end of the tunnel - yet, just before I crest the horizon, something jerks me back into the inky-black.."))
+		if(/datum/patron/divine/undivided)
+			to_chat(victim, span_danger("Blinding light, enveloping warmth, unconditional love. The darkness recedes behind me, as I come closer to the end of the tunnel - yet, just before I crest the horizon, something jerks me back into the inky-black.."))
+		if(/datum/patron/divine/astrata)
+			to_chat(victim, span_danger("It was so cold without Her light. I felt it in my bones and my skin and my insides. Permeating darkness - consuming what little light I took with me. I will never take Her warmth for granted again.."))
+		if(/datum/patron/divine/noc)
+			to_chat(victim, span_danger("There, at the edge of reality, laid a singular point of light. The more I focused upon it, the more it expanded. A tapestry of stars, speckled amongst a sea of phlogiston, forming indecipherable truths for me to ponder. I shouldn't have stared for so long.."))
+		if(/datum/patron/divine/necra)
+			to_chat(victim, span_danger("Her halls were beautiful. Cold. Sterile. The world seems so much more chaotic compared to her demesne. I wasn't meant to come back.."))
+		if(/datum/patron/divine/pestra)
+			to_chat(victim, span_danger("I trailed my body as it laid slumped over in that terrible, terrible place. To see my life spilling out onto the soil, to see my flesh wither into crusted rot, and to feel my grasp on this world slipping; it was too much for anyone to bare, let alone me.."))
+		if(/datum/patron/divine/malum)
+			to_chat(victim, span_danger("The heat of the forge was overwhelming. My skin was tempered into moving steel and living armor. They fitted me with weapons of war and sent me to the line. There were so many others. All perfect in their construction. Waking up was the sweetest relief.."))
+		if(/datum/patron/divine/dendor)
+			to_chat(victim, span_danger("The hunting grounds! Absolute freedom - primal violence and dancing madmen. So many were consumed by the beasts. But I was faster, more cunning, staying just ahead of the Mad God.."))
+		if(/datum/patron/divine/xylix)
+			to_chat(victim, span_danger("The play has come to a close, yet the crowd hungers for an encore. Amidst a sea of tossed rosas, who am I to deny the audience what they crave the most? I clear my throat and prepare.."))
+		if(/datum/patron/divine/eora)
+			to_chat(victim, span_danger("I woke upon a bed of silken sheets and creamy pillows, surrounded by my family. They looked overjoyed to see me - but I could hardly see their faces. They smiled and spoke, reaching out to welcome me. I wish I could remember what they looked like.."))
+		if(/datum/patron/divine/abyssor)
+			to_chat(victim, span_danger("The rushing currents swept me down, down. Down towards the sleeping God. My lungs cried out in pain as I took saltwater into them. Vision clouding with red and black. His eye opened. His eye opened his eye opened HIS EYE OPENED HIS EYE OPENED HE WAS STIRRING-"))
+		if(/datum/patron/divine/ravox)
+			to_chat(victim, span_danger("One by one - the injustices I committed were set upon the scales. Sweat ran down my back as I watched those that I saved plead my case. One by one - the scale lifted so slowly. The line of petitioners growing shorter.."))
+		if(/datum/patron/inhumen/matthios)
+			to_chat(victim, span_danger("It was so cold without Her light. I felt it in my bones and my skin and my insides. Permeating darkness - consuming what little light I took with me. I will never take Her warmth for granted again.."))
+		if(/datum/patron/inhumen/graggar)
+			to_chat(victim, span_danger("One by one - the injustices I committed were set upon the scales. Sweat ran down my back as I watched those that I saved plead my case. One by one - the scale lifted so slowly. The line of petitioners growing shorter.."))
+		if(/datum/patron/inhumen/baotha)
+			to_chat(victim, span_danger("I woke upon a bed of silken sheets and creamy pillows, surrounded by my family. They looked overjoyed to see me - but I could hardly see their faces. They smiled and spoke, reaching out to welcome me. I wish I could remember what they looked like.."))
+		if(/datum/patron/inhumen/zizo)
+			to_chat(victim, span_danger("There, at the edge of reality, laid a singular point of light. The more I focused upon it, the more it expanded. A tapestry of stars, speckled amongst a sea of phlogiston, forming indecipherable truths for me to ponder. I shouldn't have stared for so long.."))
+		else
+			to_chat(victim, span_danger("Blinding light, enveloping warmth, unconditional love. The darkness recedes behind me, as I come closer to the end of the tunnel - yet, just before I crest the horizon, something jerks me back into the inky-black.."))
 
 /obj/effect/proc_holder/spell/invoked/resurrect/cast_check(skipcharge, mob/user = usr)
 	if(!..())
