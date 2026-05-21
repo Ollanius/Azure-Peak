@@ -521,5 +521,5 @@
 
 /datum/stressevent/permadeath_threat
 	stressadd = 5
-	desc = span_boldred("<B>I've barely escaped death's grasp!</B>")
+	desc = span_boldred("I've barely escaped death's grasp!")
 	timer = 15 MINUTES
