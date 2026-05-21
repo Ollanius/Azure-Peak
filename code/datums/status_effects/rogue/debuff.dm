@@ -389,16 +389,6 @@
 	icon_state = "luxstrain"
 
 /// RESURRECTION DEBUFFS
-/datum/status_effect/debuff/revived_addendum
-	id = "revived_addendum"
-	alert_type = /atom/movable/screen/alert/status_effect/debuff/revived_addendum
-	duration = 5 MINUTES		//If timed right, it should naturally end alongside the 'Death's Door' debuff. Purely cosmetic, for the sake of keeping some continuity with the effects of resurrection.
-
-/atom/movable/screen/alert/status_effect/debuff/revived_addendum
-	name = "Resurr.."
-	desc = "You can feel yourself, in both body and soul, becoming fully grounded once more. Tyme will tell if you'll lyve to see tomorrow, however, or if this is merely an intermission.."
-	icon_state = "revived_addendum"
-
 /datum/status_effect/debuff/revived
 	id = "revived" //For revive - your body DIDN'T rot, but it did suffer damage. Unlike being rotted, this one is only timed. Not forever.
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/revived
@@ -409,10 +399,6 @@
 	name = "Resurrection" //Formerly 'Revival Sickness'.
 	desc = "Brought back from death's sweet embrace, you walk amongst the living once more. Yet, it is not without consequence - your body aches, your spirit wanes, and your fate is still uncertain."
 	icon_state = "revived"
-
-/datum/status_effect/debuff/revived/on_remove()
-	. = ..()
-	owner.apply_status_effect(/datum/status_effect/debuff/revival_addendum, 5 MINUTES) //Cosmetic continuance, to ensure it ends with the 'Permadeath' debuff.
 
 /datum/status_effect/debuff/rotted
 	id = "rotted_body" //For de-rot - your body ROTTED. Harsher penalty for longer, can be fully off-set with a cure-rot potion.
