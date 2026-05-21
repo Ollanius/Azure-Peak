@@ -120,7 +120,7 @@
 			target.apply_status_effect(debuff_type)	//Temp debuff on revive, your stats get hit temporarily. Doubly so if having rotted.
 		//Due to an increased cost and cooldown, these revival types heal quite a bit.
 		target.apply_status_effect(/datum/status_effect/buff/healing, 14)
-		addtimer(CALLBACK(src, PROC_REF(deathmark), target), 5 MINUTES) //Performs a check after the listed time has elapsed, post-resurrection. If the target is still alive by then, it'll apply the 'DNR' trait.
+		addtimer(CALLBACK(src, PROC_REF(deathmark), M), 5 MINUTES) //Performs a check after the listed time has elapsed, post-resurrection. If the target is still alive by then, it'll apply the 'DNR' trait.
 		consume_items(target)
 		return TRUE
 	revert_cast()
