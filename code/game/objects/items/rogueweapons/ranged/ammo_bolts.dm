@@ -163,10 +163,10 @@
 	desc = "A massive steel bolt that is designed to pulverize the defenses of \
 	another, whether it be a castle's parapit or a knight's plate."
 	projectile_type = /obj/projectile/bullet/reusable/heavy_bolt
-	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/thrust)
+	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/thrust, /datum/intent/dagger/thrust/pick)
 	caliber = "heabolt"
 	icon = 'icons/roguetown/weapons/ammo.dmi'
-	icon_state = "heavybolt" //NOTE!!! FIND A WAY TO MAKE BOLTS DEAL EXTRA DAMAGE TO BARRICADES AND STRUCTURES ASAP!!! IF YOU KNOW, FEEL FREE TO PR IT ASAP!!!
+	icon_state = "heavybolt"
 	dropshrink = 0.8
 	max_integrity = 15
 	force = 15
@@ -227,7 +227,7 @@
 /obj/item/ammo_casing/caseless/rogue/heavy_bolt/blunt
 	name = "blunt heavy bolt"
 	desc = "Ostensibly, these wrought-iron siegebolts are meant for the calibration of a siegebow's ever-particular mechanisms. In practice, besieged artificers have discovered another use for these ten-kilogram battering rams."
-	possible_item_intents = list(/datum/intent/mace/strike)
+	possible_item_intents = list(/datum/intent/mace/strike, /datum/intent/dagger/thrust/pick/blunt)
 	icon_state = "bluntheavybolt"
 	projectile_type = /obj/projectile/bullet/reusable/heavy_bolt/blunt
 
@@ -328,6 +328,55 @@
 	speed = 0.8 //Same speed as a crossbow bolt. 
 	is_silver_proj = TRUE
 	npc_simple_damage_mult = 10 //..or 1000 damage against a mindless mob. If you're using this against one, you're either a fool or have no other choice left. Godspeed.
+
+/obj/item/ammo_casing/caseless/rogue/heavy_bolt/stake
+	name = "siegestake"
+	desc = "A large branch that has been broken off of a boswellia tree, sharpened to a fine points. Though its prodigious \
+	size - comparable to a fencepost in length and width - makes it cumbersome for hand-to-hand stakings, siegestakes like these are perfect for disrupting \
+	curses from afar. </br>'Vampyres, gargoyles, necromancers, they're all the same - best when cooked well.'"
+	projectile_type = /obj/projectile/bullet/reusable/heavy_bolt/stake
+	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/thrust, /datum/intent/dagger/thrust/wood)
+	icon_state = "heavystake"
+	max_integrity = 15
+	force = 20
+
+/obj/projectile/bullet/reusable/heavy_bolt/stake
+	name = "siegestake"
+	damage = 70
+	armor_penetration = PEN_BSTEEL 
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/heavy_bolt/stake
+	icon_state = "heavystake_proj"
+	hitsound = 'sound/combat/hits/hi_bolt (3).ogg'
+	speed = 0.8
+	npc_simple_damage_mult = 10 //..or 750 damage against a mindless mob.
+	poisontype = /datum/reagent/water/blessed
+	poisonamount = 5 //Deals 70 BRUTE and 25 BURN, on top of some mild afterburn.
+
+/obj/item/ammo_casing/caseless/rogue/heavy_bolt/stake_silver
+	name = "silver-tipped siegestake"
+	desc = "A large branch that has been broken off of a boswellia tree, sharpened to a fine point and tipped with blessed silver. Though its prodigious \
+	size - comparable to a fencepost in length and width - makes it cumbersome for hand-to-hand stakings, siegestakes like these are perfect for disrupting \
+	curses from afar.  </br>'Requiescat in pace..' - '..may thee rest in peace.'"
+	projectile_type = /obj/projectile/bullet/reusable/heavy_bolt/stake_silver
+	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/thrust, /datum/intent/dagger/thrust/pick)
+	icon_state = "silvheavystake"
+	max_integrity = 15
+	force = 20
+	is_silver = TRUE
+	is_lesser_silver = TRUE
+
+/obj/projectile/bullet/reusable/heavy_bolt/stake_silver
+	name = "silver-tipped siegestake"
+	damage = 90 // In essence, a lesser version of the traditional silver siegebolts.
+	armor_penetration = PEN_BSTEEL 
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/heavy_bolt/stake_silver
+	icon_state = "silvheavystake_proj"
+	hitsound = 'sound/combat/hits/hi_bolt (3).ogg'
+	speed = 0.8 //Same speed as a crossbow bolt. 
+	is_silver_proj = TRUE
+	npc_simple_damage_mult = 10 //..or 900 damage against a mindless mob. If you're using this against one, you're either a fool or have no other choice left. Godspeed.
+	poisontype = /datum/reagent/water/blessed
+	poisonamount = 3 //Deals 90 BRUTE and 15 BURN, on top of some mild afterburn.
 
 // PYRO AMMO
 /obj/item/ammo_casing/caseless/rogue/bolt/pyro
