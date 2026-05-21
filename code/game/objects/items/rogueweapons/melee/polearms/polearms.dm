@@ -911,7 +911,6 @@
 	icon_state = "ancient_bardiche"
 	smeltresult = /obj/item/ingot/aaslag
 
-
 /obj/item/rogueweapon/halberd/bardiche/scythe
 	name = "summer scythe"
 	desc = "Summer's verdancy runs through the head of this scythe. All the more to sow."
@@ -936,6 +935,29 @@
 		added_force = 0,\
 		added_blade_int = 100,\
 		added_int = 100,\
+		added_def = 2,\
+	)
+
+/obj/item/rogueweapon/halberd/silver
+	name = "silver halberd"
+	desc = "A resplendant polearm with a forked eagle's beak, a maillebreaker's point, and an axhead with a silvered edge. While traditionally \
+	reserved for ceremonial affairs, the ever-creeping threat of undeath has seen these halberds being used for war once more."
+	icon_state = "silverhalberd"
+	force = 15
+	force_wielded = 25
+	minstr = 11
+	wdefense = 7
+	is_silver = TRUE
+	smeltresult = /obj/item/ingot/silver
+
+/obj/item/rogueweapon/halberd/silver/ComponentInitialize()
+	AddComponent(\
+		/datum/component/silverbless,\
+		pre_blessed = BLESSING_NONE,\
+		silver_type = SILVER_TENNITE,\
+		added_force = 0,\
+		added_blade_int = 0,\
+		added_int = 50,\
 		added_def = 2,\
 	)
 
