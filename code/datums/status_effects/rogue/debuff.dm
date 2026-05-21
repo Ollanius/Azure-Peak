@@ -386,7 +386,7 @@
 /atom/movable/screen/alert/status_effect/debuff/ravox_warrior_spirit
 	name = "Luxstrain"
 	desc = "My spirit is momentarily stretched thin!"
-	icon_state = "luxtrain"
+	icon_state = "luxstrain"
 
 /// RESURRECTION DEBUFFS
 /datum/status_effect/debuff/revived
