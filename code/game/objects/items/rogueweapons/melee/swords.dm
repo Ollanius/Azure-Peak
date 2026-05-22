@@ -331,7 +331,12 @@
 
 /obj/item/rogueweapon/sword/long/ravox_spirit
 	name = "\"Adjudicator\""
-	desc = "A blessed longsword of Ravox, held by the devout crusaders in service to the Divine Ten against the encroaching darkness. The crossguard bears motif of the Justicar, and psalms from the Pantheon's holy tome have been meticulously carved along the blade's edge. </br>'...And upon the Lands came the DIVINE. In PSYDON's absence, so came the TRUE GODS from their rest. So were THEIR gifts spread across the breadth of the world.' </br>'...It was the Justicar's hand that stayed the blade, for He objected to the execution, and demanded that Justice overcome where Vengeance reigned.'</br>Many tales surround this mythical blade - the demise of the Dark Star and the Mad Duke are often cited as to have been result of such - with little evidence to support these claims."
+	desc = "A blessed longsword of Ravox, held by the devout crusaders in service to the Divine Ten against the encroaching darkness. The crossguard \
+	bears motif of the Justicar, and psalms from the Pantheon's holy tome have been meticulously carved along the blade's edge. </br>'...And upon the \
+	Lands came the DIVINE. In PSYDON's absence, so came the TRUE GODS from their rest. So were THEIR gifts spread across the breadth of the \
+	world.' </br>'...It was the Justicar's hand that stayed the blade, for He objected to the execution, and demanded that Justice overcome where \
+	Vengeance reigned.'</br>Many tales surround this mythical blade - the demise of the Dark Star and the Mad Duke are often cited as to have been \
+	result of such - with little evidence to support these claims."
 	icon_state = "seemasterblade"
 	sheathe_icon = "eclipsum"
 	force = 30
@@ -654,20 +659,55 @@
 
 /obj/item/rogueweapon/sword/long/exe/silver
 	name = "silver executioners sword"
-	desc = "A thorned executioner's sword, whose massive silver blade lays mounted atop an intricately-carved \
-	handle. Though the barbs dig into your hands, it's said that such pricklings will only draw blood if the \
+	desc = "A resplendant executioner's sword, whose massive silver blade lays mounted atop an intricately-carved \
+	handle. Though the grooves dig into your hands, it's said that such chaffings will only draw blood if the \
 	silvered edge falls upon the neck of the innocent."
-	icon_state = "psygsword"
+	icon_state = "silvexe"
 	force = 22
 	force_wielded = 25
 	minstr_req = TRUE
 	smeltresult = /obj/item/ingot/silver
+	is_silver = TRUE
 
 /obj/item/rogueweapon/sword/long/exe/silver/ComponentInitialize()
 	AddComponent(\
 		/datum/component/silverbless,\
 		pre_blessed = BLESSING_NONE,\
 		silver_type = SILVER_TENNITE,\
+		added_force = 0,\
+		added_blade_int = 100,\
+		added_int = 100,\
+		added_def = 2,\
+	)
+
+/obj/item/rogueweapon/sword/long/exe/psy
+	name = "psydonic executioners sword"
+	desc = "A blessed executioner's sword, whose massive silver blade lays mounted atop an intricately-carved \
+	handle. The heft belies a purpose most holy, when hoisted beyond the chopping block; to cleave through hordes, and \
+	to march knee-deep through the dead in search of absolution."
+	icon_state = "silvexe"
+	force = 22
+	force_wielded = 25
+	minstr_req = TRUE
+	smeltresult = /obj/item/ingot/silverblessed
+	is_silver = TRUE
+
+/obj/item/rogueweapon/sword/long/exe/psy/ComponentInitialize()
+	AddComponent(\
+		/datum/component/silverbless,\
+		pre_blessed = BLESSING_NONE,\
+		silver_type = SILVER_PSYDONIAN,\
+		added_force = 0,\
+		added_blade_int = 100,\
+		added_int = 100,\
+		added_def = 2,\
+	)
+
+/obj/item/rogueweapon/sword/long/exe/psy/preblessed/ComponentInitialize()
+	AddComponent(\
+		/datum/component/silverbless,\
+		pre_blessed = BLESSING_PSYDONIAN,\
+		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
 		added_blade_int = 100,\
 		added_int = 100,\
@@ -828,6 +868,17 @@
 	gripped_intents = list(/datum/intent/sword/cut/rend, /datum/intent/sword/chop/heavy, /datum/intent/sword/thrust/heavy, /datum/intent/sword/strike)
 	smeltresult = /obj/item/ingot/silverblessed
 	is_silver = TRUE
+
+/obj/item/rogueweapon/sword/long/kriegmesser/psy/ComponentInitialize()
+	AddComponent(\
+		/datum/component/silverbless,\
+		pre_blessed = BLESSING_NONE,\
+		silver_type = SILVER_PSYDONIAN,\
+		added_force = 0,\
+		added_blade_int = 100,\
+		added_int = 50,\
+		added_def = 2,\
+	)
 
 /obj/item/rogueweapon/sword/long/kriegmesser/psy/preblessed/ComponentInitialize()
 	AddComponent(\

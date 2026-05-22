@@ -228,7 +228,7 @@
 	obj_flags = CAN_BE_HIT
 	var/signed
 	var/mob/living/carbon/signee
-	var/marquevalue = 4
+	var/marquevalue = 2
 	var/sealed
 	var/waxed
 	var/sliptype = 1
@@ -254,7 +254,7 @@
 /obj/item/paper/inqslip/accusation
 	name = "accusation"
 	desc = "A writ of religious suspicion, printed on Otavan parchment: one signed not in ink, but blood. Contrary to the name, these writs - while primarly used to request haemological investigations - can also be used to simply catalogue the blood of others. </br>Fold and seal it, it's only proper."
-	marquevalue = 8
+	marquevalue = 4
 	sliptype = 0
 
 /obj/item/paper/inqslip/accusation/get_mechanics_examine(mob/user)
@@ -269,7 +269,7 @@
 /obj/item/paper/inqslip/confession
 	name = "confession"
 	base_icon_state = "confession"
-	marquevalue = 12
+	marquevalue = 6
 	desc = "A writ of religious guilt, printed on Otavan parchment: one signed not in ink, but blood. To sign it is to confess your indulgence in whatever sins've been levied your way; whether it is done willingly or not, however, is a completely different question. </br>Fold and seal it, it's only proper."
 	sliptype = 2
 

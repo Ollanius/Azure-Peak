@@ -51,6 +51,7 @@
 		TRAIT_INQUISITION,
 		TRAIT_PERFECT_TRACKER,
 		TRAIT_PURITAN,
+		TRAIT_SLEUTH,
 		)
 	subclass_stats = list(
 		STATKEY_CON = 1,
@@ -136,7 +137,7 @@
 		if("Relic, 'Providence' (Siegebow)")
 			H.put_in_hands(new /obj/item/rogueweapon/sword/rapier/psy/relic(H))
 			H.put_in_hands(new /obj/item/rogueweapon/scabbard/sword/noble(H))
-			H.equip_to_slot_or_del(new /obj/item/quiver/bolt/heavy/silver, SLOT_BELT_R, TRUE)
+			H.equip_to_slot_or_del(new /obj/item/quiver/bolt/heavy/stake_silver, SLOT_BELT_R, TRUE)
 			H.equip_to_slot_or_del(new /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy/relic, SLOT_BACK_L, TRUE)
 			H.adjust_skillrank_up_to(/datum/skill/combat/crossbows, 5, TRUE)
 		if("Psydonic Longsword")
@@ -185,6 +186,7 @@
 		TRAIT_SILVER_BLESSED,
 		TRAIT_INQUISITION,
 		TRAIT_PURITAN,
+		TRAIT_PERFECT_TRACKER,
 		)
 	subclass_stats = list(
 		STATKEY_CON = 3,
@@ -245,7 +247,7 @@
 
 /datum/outfit/job/roguetown/inquisitor/ordinator/choose_loadout(mob/living/carbon/human/H)
 	. = ..()
-	var/weapons = list("Relic, 'Apocrypha' (Greatsword)", "Relic, 'Creed & Covenant' (Broadsword + Greatshield)", "Relic, 'Consecratia & Covenant' (Flail + Greatshield)", "Relic, 'Stigmata' (Halberd)", "Relic, 'Covenant' (Greatshield) + Psydonic War Axe", "Psydonic Grand Mace", "Psydonic Broadsword", "Psydonic Poleaxe")
+	var/weapons = list("Relic, 'Apocrypha' (Greatsword)", "Relic, 'Creed & Covenant' (Broadsword + Greatshield)", "Relic, 'Consecratia & Covenant' (Flail + Greatshield)", "Relic, 'Stigmata & Covenant' (Halberd + Greatshield)", "Relic, 'Covenant' (Greatshield) + Psydonic War Axe", "Psydonic Grand Mace", "Psydonic Broadsword", "Psydonic Poleaxe")
 	var/weapon_choice = input(H,"CHOOSE YOUR RELIQUARY PIECE.", "WIELD THEM IN HIS NAME.") as anything in weapons
 	switch(weapon_choice)
 		if("Relic, 'Apocrypha' (Greatsword)")
@@ -263,10 +265,12 @@
 			H.put_in_hands(new /obj/item/rogueweapon/shield/tower/metal/psy(H))
 			H.adjust_skillrank_up_to(/datum/skill/combat/whipsflails, 5, TRUE)
 			H.adjust_skillrank_up_to(/datum/skill/combat/shields, 4, TRUE)
-		if("Relic, 'Stigmata' (Halberd)")
+		if("Relic, 'Stigmata & Covenant' (Halberd + Greatshield)")
 			H.put_in_hands(new /obj/item/rogueweapon/halberd/psyhalberd/relic(H))
+			H.put_in_hands(new /obj/item/rogueweapon/shield/tower/metal/psy(H))
 			H.equip_to_slot_or_del(new /obj/item/rogueweapon/scabbard/gwstrap, SLOT_BACK_R, TRUE)
 			H.adjust_skillrank_up_to(/datum/skill/combat/polearms, 5, TRUE)
+			H.adjust_skillrank_up_to(/datum/skill/combat/shields, 4, TRUE)
 		if("Relic, 'Covenant' (Greatshield) + Psydonic War Axe")
 			H.put_in_hands(new /obj/item/rogueweapon/stoneaxe/battle/psyaxe(H))
 			H.put_in_hands(new /obj/item/rogueweapon/shield/tower/metal/psy(H))

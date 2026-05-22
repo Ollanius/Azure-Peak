@@ -395,7 +395,7 @@
 					else if(stopfarming)
 						to_chat(user, span_notice("We already have a sample of their accursed blood."))
 					if(selfreport)
-						to_chat(user, span_notice("Why was that confession signed by an inquisition member? What?"))
+						to_chat(user, span_notice("Why was that confession signed by another of the Inquisition? What?"))
 					if(indexed)
 						visible_message(span_warning("[user] recieves something."))
 						var/obj/item/inqarticles/indexer/replacement = new /obj/item/inqarticles/indexer/
@@ -421,7 +421,7 @@
 							bonuses = bonuses + bonuses * I.paired.cursedblood	
 							I.marquevalue += bonuses
 						if(accused)	
-							I.marquevalue -= 8
+							I.marquevalue -= 4
 						budget2change(I.marquevalue, user, "MARQUE")
 						record_round_statistic(STATS_MARQUES_MADE, I.marquevalue)
 					if(I.paired)	
@@ -528,7 +528,7 @@
 						return
 					else
 						if(!indexed && !correct && !cursedblood)
-							(I.marquevalue -= 8) += bonuses 
+							(I.marquevalue -= 4) += bonuses 
 							budget2change(I.marquevalue, user, "MARQUE")
 							record_round_statistic(STATS_MARQUES_MADE, I.marquevalue)
 						if(correct)
