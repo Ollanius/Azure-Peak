@@ -350,7 +350,7 @@
 	speed = 0.8
 	npc_simple_damage_mult = 10 //..or 750 damage against a mindless mob.
 	poisontype = /datum/reagent/water/blessed
-	poisonamount = 5 //Deals 70 BRUTE and 25 BURN, on top of some mild afterburn.
+	poisonamount = 4 //Deals 70 BRUTE and 20 BURN, on top of some mild afterburn.
 
 /obj/item/ammo_casing/caseless/rogue/heavy_bolt/stake_silver
 	name = "silver-tipped siegestake"
@@ -376,7 +376,7 @@
 	is_silver_proj = TRUE
 	npc_simple_damage_mult = 10 //..or 900 damage against a mindless mob. If you're using this against one, you're either a fool or have no other choice left. Godspeed.
 	poisontype = /datum/reagent/water/blessed
-	poisonamount = 3 //Deals 90 BRUTE and 15 BURN, on top of some mild afterburn.
+	poisonamount = 4 //Deals 90 BRUTE and 20 BURN, on top of some mild afterburn.
 
 // PYRO AMMO
 /obj/item/ammo_casing/caseless/rogue/bolt/pyro
