@@ -469,7 +469,6 @@
 /datum/inqports/wardrobe/psycrosssilver
 	name = "1 Silver Psycross"
 	item_type = /obj/item/clothing/neck/roguetown/psicross/silver
-	maximum = 5
 	marquescost = 8
 
 /datum/inqports/wardrobe/otavansatchel
