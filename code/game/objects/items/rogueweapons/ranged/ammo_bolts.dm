@@ -163,7 +163,7 @@
 	desc = "A massive steel bolt that is designed to pulverize the defenses of \
 	another, whether it be a castle's parapit or a knight's plate."
 	projectile_type = /obj/projectile/bullet/reusable/heavy_bolt
-	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/thrust, /datum/intent/dagger/thrust/pick)
+	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/thrust)
 	caliber = "heabolt"
 	icon = 'icons/roguetown/weapons/ammo.dmi'
 	icon_state = "heavybolt"
@@ -227,7 +227,7 @@
 /obj/item/ammo_casing/caseless/rogue/heavy_bolt/blunt
 	name = "blunt heavy bolt"
 	desc = "Ostensibly, these wrought-iron siegebolts are meant for the calibration of a siegebow's ever-particular mechanisms. In practice, besieged artificers have discovered another use for these ten-kilogram battering rams."
-	possible_item_intents = list(/datum/intent/mace/strike, /datum/intent/dagger/thrust/pick/blunt)
+	possible_item_intents = list(/datum/intent/mace/strike)
 	icon_state = "bluntheavybolt"
 	projectile_type = /obj/projectile/bullet/reusable/heavy_bolt/blunt
 
@@ -335,7 +335,7 @@
 	size - comparable to a fencepost in length and width - makes it cumbersome for hand-to-hand stakings, siegestakes like these are perfect for disrupting \
 	curses from afar. </br>'Vampyres, gargoyles, necromancers, they're all the same - best when cooked well.'"
 	projectile_type = /obj/projectile/bullet/reusable/heavy_bolt/stake
-	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/thrust, /datum/intent/dagger/thrust/wood)
+	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/thrust, /datum/intent/dagger/thrust/pick)
 	icon_state = "heavystake"
 	max_integrity = 15
 	force = 20
