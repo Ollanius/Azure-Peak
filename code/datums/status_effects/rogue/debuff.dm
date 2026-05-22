@@ -411,8 +411,8 @@
 	icon_state = "revived_addendum"
 
 /datum/status_effect/debuff/revived/on_remove()
-	. = ..()
 	owner.apply_status_effect(/datum/status_effect/debuff/revival_addendum) //Cosmetic continuance, to ensure it ends with the 'Permadeath' debuff.
+	. = ..()
 
 /datum/status_effect/debuff/rotted
 	id = "rotted_body" //For de-rot - your body ROTTED. Harsher penalty for longer, can be fully off-set with a cure-rot potion.
