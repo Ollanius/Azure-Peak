@@ -130,22 +130,43 @@
 	new /obj/item/natural/bundle/cloth/bandage/full(src)
 	new /obj/item/natural/bundle/cloth/bandage/full(src)
 
-/datum/inqports/supplies/lifeblood
-	name = "3 Vials of Strong Lifeblood"
-	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/sredvials
-	maximum = 1
+/datum/inqports/supplies/restorationbig
+	name = "3 Bottles of Restoration"
+	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/restorationbig
+	marquescost = 12
+	maximum = 3
+
+/obj/structure/closet/crate/chest/inqcrate/supplies/restorationbig/Initialize()
+	. = ..()
+	new /obj/item/reagent_containers/glass/bottle/restoration(src)
+	new /obj/item/reagent_containers/glass/bottle/restoration(src)
+	new /obj/item/reagent_containers/glass/bottle/restoration(src)
+
+/datum/inqports/supplies/restoration
+	name = "3 Vials of Restoration"
+	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/restoration
 	marquescost = 8
 
-/obj/structure/closet/crate/chest/inqcrate/supplies/sredvials/Initialize()
+/obj/structure/closet/crate/chest/inqcrate/supplies/restoration/Initialize()
 	. = ..()
-	new /obj/item/reagent_containers/glass/bottle/alchemical/healthpotnew(src)
-	new /obj/item/reagent_containers/glass/bottle/alchemical/healthpotnew(src)
-	new /obj/item/reagent_containers/glass/bottle/alchemical/healthpotnew(src)
+	new /obj/item/reagent_containers/glass/bottle/alchemical/restoration(src)
+	new /obj/item/reagent_containers/glass/bottle/alchemical/restoration(src)
+	new /obj/item/reagent_containers/glass/bottle/alchemical/restoration(src)
+
+/datum/inqports/supplies/lifeblood
+	name = "3 Bottles of Lifeblood"
+	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/lifeblood
+	marquescost = 8
+
+/obj/structure/closet/crate/chest/inqcrate/supplies/lifeblood/Initialize()
+	. = ..()
+	new /obj/item/reagent_containers/glass/bottle/rogue/healthpot(src)
+	new /obj/item/reagent_containers/glass/bottle/rogue/healthpot(src)
+	new /obj/item/reagent_containers/glass/bottle/rogue/healthpot(src)
 
 /datum/inqports/supplies/manna
 	name = "3 Bottles of Manna"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/manna
-	maximum = 3
 	marquescost = 8
 
 /obj/structure/closet/crate/chest/inqcrate/supplies/manna/Initialize()
@@ -153,6 +174,11 @@
 	new /obj/item/reagent_containers/glass/bottle/rogue/manapot(src)
 	new /obj/item/reagent_containers/glass/bottle/rogue/manapot(src)
 	new /obj/item/reagent_containers/glass/bottle/rogue/manapot(src)
+
+/datum/inqports/supplies/flint
+	name = "1 Tool of Firestarting"
+	item_type = /obj/item/flint
+	marquescost = 2
 
 /datum/inqports/supplies/smokes
 	name = "3 Smokebombs"
@@ -252,6 +278,11 @@
 /datum/inqports/articles/stamppot
 	name = "1 Tallowpot"
 	item_type = /obj/item/tallowpot
+	marquescost = 2
+
+/datum/inqports/articles/blessedring
+	name = "1 Blessed Signet Ring"
+	item_type = /obj/item/clothing/ring/signet/psy
 	marquescost = 4
 
 /datum/inqports/articles/indexers
@@ -339,6 +370,17 @@
 	name = "1 Quiver of Pyrobolts"
 	item_type = /obj/item/quiver/bolt/pyro
 	marquescost = 8
+
+/datum/inqports/supplies/siegestake
+	name = "1 Quiver of Siegestakes"
+	item_type = /obj/item/quiver/bolt/heavy/stake
+	marquescost = 8
+
+/datum/inqports/supplies/siegestakesilver
+	name = "1 Quiver of Silver-Tipped Siegestakes"
+	maximum = 3
+	item_type = /obj/item/quiver/bolt/heavy/stake_silver
+	marquescost = 12
 
 /datum/inqports/equipment/nocshades
 	name = "1 Pair of Nocshade-Lenses"
