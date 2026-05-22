@@ -148,7 +148,7 @@
 
 /atom/movable/screen/alert/status_effect/debuff/bleedingt1
 	name = "Dizzy"
-	desc = ""
+	desc = "I've lost a bit of blood, and my humors feel imbalanced.."
 	icon_state = "bleed1"
 
 /datum/status_effect/debuff/bleedingworse
@@ -172,7 +172,7 @@
 
 /atom/movable/screen/alert/status_effect/debuff/bleedingt2
 	name = "Faint"
-	desc = ""
+	desc = "I've lost some blood, and it's hard to keep myself steady.."
 	icon_state = "bleed2"
 
 /datum/status_effect/debuff/bleedingworst
@@ -196,7 +196,7 @@
 
 /atom/movable/screen/alert/status_effect/debuff/bleedingt3
 	name = "Drained"
-	desc = ""
+	desc = "I've lost a lot of blood, and I can barely keep myself conscious.."
 	icon_state = "bleed3"
 
 /datum/status_effect/debuff/sleepytime
@@ -400,10 +400,6 @@
 	desc = "Brought back from death's sweet embrace, you walk amongst the living once more. Yet, it is not without consequence - your body aches, your spirit wanes, and your fate is still uncertain."
 	icon_state = "revived"
 
-/datum/status_effect/debuff/revived/on_remove()
-	. = ..()
-	owner.apply_status_effect(/datum/status_effect/debuff/revival_addendum) //Cosmetic continuance, to ensure it ends with the 'Permadeath' debuff.
-
 /datum/status_effect/debuff/revived_addendum
 	id = "revived_addendum"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/revived_addendum
@@ -413,6 +409,10 @@
 	name = "Resurr.."
 	desc = "You can feel yourself, in both body and soul, becoming fully grounded once more. Tyme will tell if you'll lyve to see tomorrow, however, or if this is merely an intermission.."
 	icon_state = "revived_addendum"
+
+/datum/status_effect/debuff/revived/on_remove()
+	. = ..()
+	owner.apply_status_effect(/datum/status_effect/debuff/revival_addendum) //Cosmetic continuance, to ensure it ends with the 'Permadeath' debuff.
 
 /datum/status_effect/debuff/rotted
 	id = "rotted_body" //For de-rot - your body ROTTED. Harsher penalty for longer, can be fully off-set with a cure-rot potion.
@@ -600,9 +600,6 @@
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/excomm
 	effectedstats = list(STATKEY_LCK = -2, STATKEY_INT = -2, STATKEY_SPD = -1, STATKEY_WIL = -1, STATKEY_CON = -1)
 	duration = -1
-
-
-
 
 /atom/movable/screen/alert/status_effect/debuff/excomm
 	name = "Excommunicated!"
