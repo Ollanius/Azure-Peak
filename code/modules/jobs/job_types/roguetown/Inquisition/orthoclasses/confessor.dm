@@ -47,8 +47,6 @@
 /datum/outfit/job/roguetown/confessor/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
 	if(H.mind)
-	H.verbs |= /mob/living/carbon/human/proc/faith_test
-	H.verbs |= /mob/living/carbon/human/proc/torture_victim
 		var/weapons = list("Psydonic Rapier", "Psydonic Shortsword", "Psydonic Handmace - Swift-Balanced", "Psydonic Flanged Mace - Heavy-Balanced")
 		var/weapon_choice = input(H,"Choose your WEAPON.", "TAKE UP PSYDON'S ARMS.") as anything in weapons
 		switch(weapon_choice)
@@ -133,5 +131,7 @@
 		/obj/item/rogueweapon/huntingknife/idagger/silver/psydagger = 1,
 		/obj/item/rogueweapon/scabbard/sheath = 1
 		)
-	
+
+	H.verbs |= /mob/living/carbon/human/proc/faith_test
+	H.verbs |= /mob/living/carbon/human/proc/torture_victim
 	change_origin(H, /datum/virtue/origin/otava, "Holy order")

@@ -138,9 +138,9 @@
 
 /obj/structure/closet/crate/chest/inqcrate/supplies/restorationbig/Initialize()
 	. = ..()
-	new /obj/item/reagent_containers/glass/bottle/restoration(src)
-	new /obj/item/reagent_containers/glass/bottle/restoration(src)
-	new /obj/item/reagent_containers/glass/bottle/restoration(src)
+	new /obj/item/reagent_containers/glass/bottle/rogue/restoration(src)
+	new /obj/item/reagent_containers/glass/bottle/rogue/restoration(src)
+	new /obj/item/reagent_containers/glass/bottle/rogue/restoration(src)
 
 /datum/inqports/supplies/restoration
 	name = "3 Vials of Restoration"
@@ -251,7 +251,7 @@
 /obj/structure/closet/crate/chest/inqreliquary/relic/superbow/Initialize()
 	. = ..()
 	new /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy/relic/marque(src)
-	new /obj/item/quiver/bolt/heavy/silver(src)
+	new /obj/item/quiver/bolt/heavy/stake_silver(src)
 
 /datum/inqports/articles/psyarmor
 	name = "Relic - The Platemaille, Everwithstanding"
@@ -469,7 +469,6 @@
 /datum/inqports/wardrobe/psycrosssilver
 	name = "1 Silver Psycross"
 	item_type = /obj/item/clothing/neck/roguetown/psicross/silver
-	maximum = 5
 	marquescost = 8
 
 /datum/inqports/wardrobe/otavansatchel
