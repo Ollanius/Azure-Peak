@@ -315,6 +315,7 @@
 	thrown_bclass = BCLASS_CHOP
 	w_class = WEIGHT_CLASS_NORMAL
 	smeltresult = /obj/item/ingot/steel
+	is_tool = TRUE
 
 //
 
@@ -332,6 +333,7 @@
 	thrown_bclass = BCLASS_CUT
 	w_class = WEIGHT_CLASS_SMALL
 	smeltresult = /obj/item/ingot/steel
+	is_tool = TRUE
 
 /obj/item/rogueweapon/huntingknife/chefknife/cleaver
 	name = "cleaver"
@@ -343,6 +345,7 @@
 	thrown_bclass = BCLASS_CHOP
 	w_class = WEIGHT_CLASS_NORMAL
 	smeltresult = /obj/item/ingot/steel
+	is_tool = TRUE
 
 /obj/item/rogueweapon/huntingknife/chefknife/cleaver/getonmobprop(tag)
 	. = ..()
@@ -835,6 +838,32 @@
 		added_def = 0,\
 	)
 
+/obj/item/rogueweapon/huntingknife/idagger/silver/stake/psy/lesser
+	name = "silver-tipped handstake"
+	desc = "A smaller branch that has been broken off of an Otavan boswellia tree, sharpened to a fine point and tipped with blessed silver. It can lay most unholy creechers to rest, but only by piercing their hearts."
+	force = 15
+	icon_state = "stake_silver"
+
+/obj/item/rogueweapon/huntingknife/idagger/silver/stake/psy/lesser/ComponentInitialize()
+	AddComponent(\
+		/datum/component/silverbless,\
+		pre_blessed = BLESSING_PSYDONIAN,\
+		silver_type = SILVER_PSYDONIAN,\
+		added_force = 0,\
+		added_blade_int = 100,\
+		added_int = 0,\
+		added_def = 0,\
+	)
+
+/obj/item/rogueweapon/huntingknife/idagger/silver/stake/psy/lesser/getonmobprop(tag)
+	. = ..()
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.6,"sx" = -10,"sy" = 0,"nx" = 11,"ny" = 0,"wx" = -4,"wy" = 0,"ex" = 2,"ey" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
+			if("onbelt")
+				return list("shrink" = 0.4,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
+
 /obj/item/rogueweapon/huntingknife/idagger/silver/psydagger
 	name = "psydonic dagger"
 	desc = "An ornate dagger, plated in a ceremonial veneer of silver. The bane of vampyres and verevolves, in the hands of a faithful hunter."
@@ -855,6 +884,26 @@
 	)
 	sellprice += 200
 
+/obj/item/rogueweapon/huntingknife/idagger/silver/psydagger/heavy
+	name = "psydonic misericorde"
+	desc = "A sanctified misericorde, purposemade for piercing the perverted plate of pestilent paladins. Rarely seen in Azuria, beyond the tasseted \
+	sheaths of Otava's most knightly delegates."
+	icon_state = "psydaggerheavy"
+	sheathe_icon = "psydagger"
+	force = 20 //In essence, a Silver Stake without many of the drawbacks.
+
+/obj/item/rogueweapon/huntingknife/idagger/silver/psydagger/heavy/ComponentInitialize()
+	AddComponent(\
+		/datum/component/silverbless,\
+		pre_blessed = BLESSING_PSYDONIAN,\
+		silver_type = SILVER_PSYDONIAN,\
+		added_force = 0,\
+		added_blade_int = 50,\
+		added_int = 150,\
+		added_def = 2,\
+	)
+	sellprice += 200
+
 /obj/item/rogueweapon/huntingknife/stoneknife
 	possible_item_intents = list(/datum/intent/dagger/cut,/datum/intent/dagger/chop)
 	name = "stone knife"
@@ -865,6 +914,7 @@
 	max_blade_int = 100
 	wdefense = 1
 	resistance_flags = FLAMMABLE
+	is_tool = TRUE
 
 /obj/item/rogueweapon/huntingknife/stoneknife/kukri
 	name = "jade kukri"
@@ -1013,7 +1063,7 @@
 	wdefense = 1
 	icon_state = "throw_knifei"
 	embedding = list("embedded_pain_multiplier" = 4, "embed_chance" = 25, "embedded_fall_chance" = 10)
-	possible_item_intents = list(/datum/intent/dagger/thrust, /datum/intent/dagger/chop)
+	possible_item_intents = list(/datum/intent/dagger/thrust, /datum/intent/dagger/cut, /datum/intent/dagger/chop)
 	smeltresult = null
 	sellprice = 1
 	thrown_damage_flag = "piercing"		//Checks piercing type like an arrow.
@@ -1108,6 +1158,17 @@
 		added_def = 3,\
 	)
 
+/obj/item/rogueweapon/huntingknife/throwingknife/psydon/preblessed/ComponentInitialize()
+	AddComponent(\
+		/datum/component/silverbless,\
+		pre_blessed = BLESSING_PSYDONIAN,\
+		silver_type = SILVER_PSYDONIAN,\
+		added_force = 0,\
+		added_blade_int = 0,\
+		added_int = 100,\
+		added_def = 3,\
+	)	
+
 /obj/item/rogueweapon/huntingknife/throwingknife/triumph
 	name = "knife"
 	desc = "A stout blade affixed to a stouter handle, fit for any labor that the dae thrusts upon it. Keeping one tucked inside the boot is a favored trick amongst overcautious adventurers; a surprise for disarming presences."
@@ -1120,6 +1181,7 @@
 	throwforce = 10
 	embedding = list("embedded_pain_multiplier" = 4, "embed_chance" = 50, "embedded_fall_chance" = 15)
 	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/chop/cleaver, /datum/intent/snip, /datum/intent/dagger/thrust)
+	is_tool = TRUE
 
 /obj/item/rogueweapon/huntingknife/scissors
 	possible_item_intents = list(/datum/intent/snip, /datum/intent/dagger/thrust, /datum/intent/dagger/cut)
@@ -1129,6 +1191,7 @@
 	icon = 'icons/roguetown/weapons/misc32.dmi'
 	icon_state = "iscissors"
 	inv_storage_delay = null
+	is_tool = TRUE
 
 /obj/item/rogueweapon/huntingknife/scissors/steel
 	force = 14
@@ -1137,7 +1200,8 @@
 	desc = "Scissors made of solid steel that may be used to salvage usable materials from clothing, more durable and a tad more deadly than their iron conterpart."
 	icon_state = "sscissors"
 	smeltresult = /obj/item/ingot/steel
-
+	is_tool = TRUE
+	
 /datum/intent/snip // The salvaging intent!
 	name = "snip"
 	desc = "Target a piece of clothing to sheer it apart. Sheered clothing is destroyed in the process, but provides some salvaged materials in turn. The amount of salvaged materials gained from sheered clothing scales with your Sewing skill. </br>Target the head-or-skull of someone else to begin grooming their hair. This can be used to give someone a completely new hairstyle, or to shave away whatever hair they have."

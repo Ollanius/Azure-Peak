@@ -1028,6 +1028,12 @@
 	additional_items = list(/obj/item/ingot/silver, /obj/item/ingot/silver, /obj/item/ingot/silver, /obj/item/grown/log/tree/small)
 	created_item = /obj/item/rogueweapon/greatsword/silver
 
+/datum/anvil_recipe/weapons/silver/exesword
+	name = "Executioner Sword, Silver (+2 Silver, +1 Small Log)"
+	req_bar = /obj/item/ingot/silver
+	additional_items = list(/obj/item/ingot/silver, /obj/item/ingot/silver, /obj/item/grown/log/tree/small)
+	created_item = /obj/item/rogueweapon/sword/long/exe/silver
+
 /datum/anvil_recipe/weapons/silver/waraxe
 	name = "War Axe, Silver (+1 Silver, +1 Small Log)"
 	req_bar = /obj/item/ingot/silver
@@ -1039,6 +1045,12 @@
 	req_bar = /obj/item/ingot/silver
 	additional_items = list(/obj/item/ingot/silver, /obj/item/ingot/silver, /obj/item/grown/log/tree/small, /obj/item/grown/log/tree/small)
 	created_item = /obj/item/rogueweapon/greataxe/silver
+
+/datum/anvil_recipe/weapons/silver/halberd
+	name = "Halberd, Silver (+2 Silver, +2 Small Logs)"
+	req_bar = /obj/item/ingot/silver
+	additional_items = list(/obj/item/ingot/silver, /obj/item/ingot/silver, /obj/item/grown/log/tree/small, /obj/item/grown/log/tree/small)
+	created_item = /obj/item/rogueweapon/halberd/silver
 
 /datum/anvil_recipe/weapons/silver/mace
 	name = "Mace, Silver (+2 Silver, +1 Small Log)"
@@ -1528,6 +1540,40 @@
 	additional_items = list(/obj/item/ingot/silverblessed)
 	i_type = "Weapons"
 
+/datum/anvil_recipe/weapons/psy/broadsword
+	name = "Psydonic Broadsword (+1 Blessed Silver)"
+	req_bar = /obj/item/ingot/silverblessed
+	created_item = /obj/item/rogueweapon/sword/long/kriegmesser/psy
+	additional_items = list(/obj/item/ingot/silverblessed)
+	i_type = "Weapons"
+
+/datum/anvil_recipe/weapons/psy/exesword
+	name = "Psydonic Executioner Sword (+1 Blessed Silver)"
+	req_bar = /obj/item/ingot/silverblessed
+	created_item = /obj/item/rogueweapon/sword/long/exe/psy
+	additional_items = list(/obj/item/ingot/silverblessed)
+	i_type = "Weapons"
+
+/datum/anvil_recipe/weapons/psy/heavydagger
+	name = "Psydonic Misericorde"
+	req_bar = /obj/item/ingot/silverblessed
+	created_item = /obj/item/rogueweapon/huntingknife/idagger/silver/psydagger/heavy
+	i_type = "Weapons"
+
+/datum/anvil_recipe/weapons/psy/tomahawk
+	name = "Psydonic Tomahawk (+1 Small Log)"
+	req_bar = /obj/item/ingot/silverblessed
+	created_item = /obj/item/rogueweapon/stoneaxe/handaxe/psy
+	additional_items = list(/obj/item/grown/log/tree/small)
+	i_type = "Weapons"
+
+/datum/anvil_recipe/weapons/psy/rapier
+	name = "Psydonic Rapier (+1 Blessed Silver)"
+	req_bar = /obj/item/ingot/silverblessed
+	created_item = /obj/item/rogueweapon/sword/rapier/psy
+	additional_items = list(/obj/item/ingot/silverblessed)
+	i_type = "Weapons"
+
 /datum/anvil_recipe/weapons/psy/whip
 	name = "Psydonic Whip (+1 Leather Whip)"
 	req_bar = /obj/item/ingot/silverblessed
@@ -1536,6 +1582,13 @@
 	i_type = "Weapons"
 
 /// BLESSED SILVER, BULLION VARIANTS - FALLBACK
+
+/datum/anvil_recipe/weapons/psy/rapier/inq
+	name = "Psydonic Rapier (+1 Blessed Silver)"
+	req_bar = /obj/item/ingot/silverblessed/bullion
+	created_item = /obj/item/rogueweapon/sword/rapier/psy
+	additional_items = list(/obj/item/ingot/silverblessed/bullion)
+	i_type = "Weapons"
 
 /datum/anvil_recipe/weapons/psy/axe/inq
 	name = "Psydonic War Axe (+1 Blessed Silver, +1 Stick)"
@@ -1549,6 +1602,13 @@
 	req_bar = /obj/item/ingot/silverblessed/bullion
 	created_item = /obj/item/rogueweapon/mace/goden/psymace
 	additional_items = list(/obj/item/ingot/silverblessed/bullion, /obj/item/grown/log/tree/stick)
+	i_type = "Weapons"
+
+/datum/anvil_recipe/weapons/psy/tomahawk/inq
+	name = "Psydonic Tomahawk (+1 Small Log)"
+	req_bar = /obj/item/ingot/silverblessed/bullion
+	created_item = /obj/item/rogueweapon/stoneaxe/handaxe/psy
+	additional_items = list(/obj/item/grown/log/tree/small)
 	i_type = "Weapons"
 
 /datum/anvil_recipe/weapons/psy/cudgelmace/inq
@@ -1569,6 +1629,13 @@
 	name = "Psydonic Dagger"
 	req_bar = /obj/item/ingot/silverblessed/bullion
 	created_item = /obj/item/rogueweapon/huntingknife/idagger/silver/psydagger
+	i_type = "Weapons"
+
+/datum/anvil_recipe/weapons/psy/heavydagger/inq
+	name = "Psydonic Misericorde"
+	req_bar = /obj/item/ingot/silverblessed/bullion
+	created_item = /obj/item/rogueweapon/huntingknife/idagger/silver/psydagger/heavy
+	additional_items = list(/obj/item/ingot/silverblessed/bullion)
 	i_type = "Weapons"
 
 /datum/anvil_recipe/weapons/psy/shortsword/inq
@@ -1607,6 +1674,20 @@
 	name = "Psydonic Longsword (+1 Blessed Silver)"
 	req_bar = /obj/item/ingot/silverblessed/bullion
 	created_item = /obj/item/rogueweapon/sword/long/psysword
+	additional_items = list(/obj/item/ingot/silverblessed/bullion)
+	i_type = "Weapons"
+
+/datum/anvil_recipe/weapons/psy/broadsword/inq
+	name = "Psydonic Broadsword (+1 Blessed Silver)"
+	req_bar = /obj/item/ingot/silverblessed/bullion
+	created_item = /obj/item/rogueweapon/sword/long/kriegmesser/psy
+	additional_items = list(/obj/item/ingot/silverblessed/bullion)
+	i_type = "Weapons"
+
+/datum/anvil_recipe/weapons/psy/exesword/inq
+	name = "Psydonic Executioner Sword (+1 Blessed Silver)"
+	req_bar = /obj/item/ingot/silverblessed/bullion
+	created_item = /obj/item/rogueweapon/sword/long/exe/psy
 	additional_items = list(/obj/item/ingot/silverblessed/bullion)
 	i_type = "Weapons"
 

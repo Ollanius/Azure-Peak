@@ -428,6 +428,17 @@
 		added_def = 2,\
 	)
 
+/obj/item/rogueweapon/katar/psydon/preblessed/ComponentInitialize()
+	AddComponent(\
+		/datum/component/silverbless,\
+		pre_blessed = BLESSING_PSYDONIAN,\
+		silver_type = SILVER_PSYDONIAN,\
+		added_force = 0,\
+		added_blade_int = 0,\
+		added_int = 50,\
+		added_def = 2,\
+	)
+
 /obj/item/rogueweapon/katar/silver
 	name = "silver katar"
 	desc = "An exotic weapon that was born from frugality and scarcity, strongly associated with Saint Abenjunne of Astrata. As the folktale goes, this humble preacher belonged to an old village, whose \
