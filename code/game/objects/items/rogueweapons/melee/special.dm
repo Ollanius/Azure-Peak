@@ -1119,7 +1119,7 @@
 	name = "silver knuckledusters"
 	desc = "A simple piece of harm that has been molded from pure silver, and further studded to stop errant strikes dead in their tracks. Though ostensibly holy, these heftsome knuckleweights are \
 	more strongly associated with underground pugilistic tournaments; a solid right hook could drive more-than-enough force to blow a yeoman's jaw clean off."
-	icon_state "silverknuckledusters"
+	icon_state = "silverknuckledusters"
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silver
 
