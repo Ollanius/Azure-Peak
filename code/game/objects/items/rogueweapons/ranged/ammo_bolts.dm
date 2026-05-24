@@ -343,7 +343,7 @@
 
 /obj/projectile/bullet/reusable/heavy_bolt/stake
 	name = "siegestake"
-	damage = 70
+	damage = 60
 	armor_penetration = PEN_BSTEEL 
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/heavy_bolt/stake
 	icon_state = "heavystake_proj"
@@ -351,7 +351,7 @@
 	speed = 0.8
 	npc_simple_damage_mult = 10 //..or 750 damage against a mindless mob.
 	poisontype = /datum/reagent/water/blessed
-	poisonamount = 4 //Deals 70 BRUTE and 20 BURN, on top of some mild afterburn.
+	poisonamount = 6 //Deals 60 BRUTE and 30 BURN, on top of some mild afterburn.
 
 /obj/item/ammo_casing/caseless/rogue/heavy_bolt/stake_silver
 	name = "silver-tipped siegestake"
@@ -368,16 +368,16 @@
 
 /obj/projectile/bullet/reusable/heavy_bolt/stake_silver
 	name = "silver-tipped siegestake"
-	damage = 90 // In essence, a lesser version of the traditional silver siegebolts.
+	damage = 70 // In essence, a lesser version of the traditional silver siegebolts.
 	armor_penetration = PEN_BSTEEL 
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/heavy_bolt/stake_silver
 	icon_state = "silvheavystake_proj"
 	hitsound = 'sound/combat/hits/hi_bolt (3).ogg'
-	speed = 0.8 //Same speed as a crossbow bolt. 
+	speed = 0.6
 	is_silver_proj = TRUE
 	npc_simple_damage_mult = 10 //..or 900 damage against a mindless mob. If you're using this against one, you're either a fool or have no other choice left. Godspeed.
 	poisontype = /datum/reagent/water/blessed
-	poisonamount = 4 //Deals 90 BRUTE and 20 BURN, on top of some mild afterburn.
+	poisonamount = 4 //Deals 70 BRUTE and 40 BURN, on top of some mild afterburn.
 
 // PYRO AMMO
 /obj/item/ammo_casing/caseless/rogue/bolt/pyro
