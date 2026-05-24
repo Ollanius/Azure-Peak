@@ -1154,7 +1154,20 @@
 			user.dropItemToGround(src)
 			user.put_in_hands(P)
 		P.obj_integrity = src.obj_integrity
-		P.obj_silverbless = src.obj_silverbless
+		qdel(src)
+	else
+		user.visible_message(span_warning("[user] stops adjusting their grip on [src]."))
+		return
+
+/obj/item/rogueweapon/knuckledusters/silver/preblessed/attack_self(mob/living/user)
+	. = ..()
+	user.visible_message(span_warning("[user] starts adjusting their grip on [src]."))
+	if(do_after(user, 3 SECONDS))
+		var/obj/item/rogueweapon/knuckledusters/silver/preblessed/P = new /obj/item/clothing/gloves/roguetown/knuckles/silver/preblessed(get_turf(src.loc))
+		if(user.is_holding(src))
+			user.dropItemToGround(src)
+			user.put_in_hands(P)
+		P.obj_integrity = src.obj_integrity
 		qdel(src)
 	else
 		user.visible_message(span_warning("[user] stops adjusting their grip on [src]."))
@@ -1198,7 +1211,20 @@
 			user.dropItemToGround(src)
 			user.put_in_hands(P)
 		P.obj_integrity = src.obj_integrity
-		P.obj_silverbless = src.obj_silverbless
+		qdel(src)
+	else
+		user.visible_message(span_warning("[user] stops adjusting their grip on [src]."))
+		return
+
+/obj/item/rogueweapon/knuckledusters/psy/preblessed/attack_self(mob/living/user)
+	. = ..()
+	user.visible_message(span_warning("[user] starts adjusting their grip on [src]."))
+	if(do_after(user, 3 SECONDS))
+		var/obj/item/rogueweapon/knuckledusters/psy/preblessed/P = new /obj/item/clothing/gloves/roguetown/knuckles/psydon/preblessed(get_turf(src.loc))
+		if(user.is_holding(src))
+			user.dropItemToGround(src)
+			user.put_in_hands(P)
+		P.obj_integrity = src.obj_integrity
 		qdel(src)
 	else
 		user.visible_message(span_warning("[user] stops adjusting their grip on [src]."))

@@ -113,17 +113,30 @@
 	. = ..()
 	user.visible_message(span_warning("[user] starts adjusting their grip on[src]."))
 	if(do_after(user, 3 SECONDS))
-		var/obj/obj/item/clothing/gloves/roguetown/knuckles/psydon/P = new /obj/item/rogueweapon/knuckledusters/psy(get_turf(src.loc))
+		var/obj/item/clothing/gloves/roguetown/knuckles/psydon/P = new /obj/item/rogueweapon/knuckledusters/psy(get_turf(src.loc))
 		if(user.is_holding(src))
 			user.dropItemToGround(src)
 			user.put_in_hands(P)
 		P.obj_integrity = src.obj_integrity
-		P.obj_silverbless = src.obj_silverbless
 		qdel(src)
 	else
 		user.visible_message(span_warning("[user] stops adjusting their grip on [src]."))
 		return
 
+/obj/item/clothing/gloves/roguetown/knuckles/psydon/preblessed/attack_self(mob/living/user)
+	. = ..()
+	user.visible_message(span_warning("[user] starts adjusting their grip on[src]."))
+	if(do_after(user, 3 SECONDS))
+		var/obj/item/clothing/gloves/roguetown/knuckles/psydon/preblessed/P = new /obj/item/rogueweapon/knuckledusters/psy/preblessed(get_turf(src.loc))
+		if(user.is_holding(src))
+			user.dropItemToGround(src)
+			user.put_in_hands(P)
+		P.obj_integrity = src.obj_integrity
+		qdel(src)
+	else
+		user.visible_message(span_warning("[user] stops adjusting their grip on [src]."))
+		return
+	
 /obj/item/clothing/gloves/roguetown/knuckles/silver
 	name = "silver knuckles"
 	desc = "A simple piece of harm that has been molded from pure silver, and further studded to stop errant strikes dead in their tracks. Though ostensibly holy, these heftsome knuckleweights are \
@@ -158,12 +171,25 @@
 	. = ..()
 	user.visible_message(span_warning("[user] starts adjusting their grip on[src]."))
 	if(do_after(user, 3 SECONDS))
-		var/obj/obj/item/clothing/gloves/roguetown/knuckles/silver/P = new /obj/item/rogueweapon/knuckledusters/silver(get_turf(src.loc))
+		var/obj/item/clothing/gloves/roguetown/knuckles/silver/P = new /obj/item/rogueweapon/knuckledusters/silver(get_turf(src.loc))
 		if(user.is_holding(src))
 			user.dropItemToGround(src)
 			user.put_in_hands(P)
 		P.obj_integrity = src.obj_integrity
-		P.obj_silverbless = src.obj_silverbless
+		qdel(src)
+	else
+		user.visible_message(span_warning("[user] stops adjusting their grip on [src]."))
+		return
+
+/obj/item/clothing/gloves/roguetown/knuckles/silver/preblessed/attack_self(mob/living/user)
+	. = ..()
+	user.visible_message(span_warning("[user] starts adjusting their grip on[src]."))
+	if(do_after(user, 3 SECONDS))
+		var/obj/item/clothing/gloves/roguetown/knuckles/silver/preblessed/P = new /obj/item/rogueweapon/knuckledusters/silver/preblessed(get_turf(src.loc))
+		if(user.is_holding(src))
+			user.dropItemToGround(src)
+			user.put_in_hands(P)
+		P.obj_integrity = src.obj_integrity
 		qdel(src)
 	else
 		user.visible_message(span_warning("[user] stops adjusting their grip on [src]."))
