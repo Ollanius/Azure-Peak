@@ -237,6 +237,7 @@
 	gripped_intents = null
 	thrown_damage_flag = "piercing"
 	minstr = 8
+	smeltresult = /obj/item/ingot/silver
 
 /obj/item/rogueweapon/stoneaxe/handaxe/silver/ComponentInitialize()
 	AddComponent(\
@@ -260,6 +261,7 @@
 	gripped_intents = null
 	thrown_damage_flag = "piercing"
 	minstr = 8
+	smeltresult = /obj/item/ingot/silverblessed
 
 /obj/item/rogueweapon/stoneaxe/handaxe/psy/ComponentInitialize()
 	AddComponent(\
