@@ -67,14 +67,14 @@
 			if("Psydonic Flanged Mace - Heavy-Balanced")
 				l_hand = /obj/item/rogueweapon/mace/cudgel/psy/preblessed
 				H.adjust_skillrank_up_to(/datum/skill/combat/maces, 4, TRUE)	
-		var/armors = list("Confessor - Dodge Expert, Complete Coverage", "Arbalist - Master Crossbows, +II STR / -II SPD")
+		var/armors = list("Confessor - Dodge Expert, Complete Coverage", "Arbalist - Master Crossbows, +III STR / -III SPD")
 		var/armor_choice = input(H, "Choose your ARCHETYPE.", "TAKE UP PSYDON'S DUTY.") as anything in armors
 		switch(armor_choice)
 			if("Confessor - Dodge Expert, Complete Coverage")
 				head = /obj/item/clothing/head/roguetown/roguehood/psydon/confessor
 				armor = /obj/item/clothing/suit/roguetown/armor/leather/heavy/coat/confessor
 				shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/inq
-			if("Arbalist - Master Crossbows, +II STR / -II SPD")
+			if("Arbalist - Master Crossbows, +III STR / -III SPD")
 				head = /obj/item/clothing/head/roguetown/headband/bloodied
 				armor = /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fencer/psydon
 				shirt = /obj/item/clothing/suit/roguetown/armor/manual/sewable/confessor
@@ -82,9 +82,9 @@
 				H.adjust_skillrank_up_to(/datum/skill/combat/crossbows, 5, TRUE)
 				H.adjust_skillrank_up_to(/datum/skill/misc/swimming, 4, TRUE)
 				H.change_stat(STATKEY_CON, 1)
-				H.change_stat(STATKEY_STR, 2)
-				H.change_stat(STATKEY_PER, 1) //Applies a base statblock of 11/11/11/13 to CON, STR, SPD and PER - compared to the standard 10/9/13/12 + DODGE EXPERT. Physically adept and capable of higher ranged damage..
-				H.change_stat(STATKEY_SPD, -2) //..but with a massive loss to mobility and damage evasion, alongside the naturally low defense of their sidearms.
+				H.change_stat(STATKEY_STR, 3)
+				H.change_stat(STATKEY_PER, 1) //Applies a base statblock of 11/12/10/13 to CON, STR, SPD and PER - compared to the standard 10/9/13/12 + DODGE EXPERT. Physically adept and capable of higher ranged damage..
+				H.change_stat(STATKEY_SPD, -3) //..but with a massive loss to mobility and damage evasion, alongside the naturally low defense of their sidearms.
 		var/rangedweapons = list("Slurbow - Lesser Damage, Rapid & Accurate", "Crossbow - Access To Special Bolts", "Siegebow - Greater Damage, Structurebreaker")
 		var/rangedweapon_choice = input(H,"Choose your BOW.", "TAKE UP PSYDON'S ARCAGE.") as anything in rangedweapons
 		switch(rangedweapon_choice)

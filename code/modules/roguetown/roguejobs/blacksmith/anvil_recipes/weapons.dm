@@ -980,6 +980,11 @@
 	req_bar = /obj/item/ingot/silver
 	created_item = /obj/item/rogueweapon/katar/silver
 
+/datum/anvil_recipe/weapons/silver/knuckledusters
+	name = "Knuckledusters, Silver"
+	req_bar = /obj/item/ingot/silver
+	created_item = /obj/item/rogueweapon/knuckledusters/silver
+
 /datum/anvil_recipe/weapons/silver/sword
 	name = "Arming Sword, Silver (+1 Silver)"
 	req_bar = /obj/item/ingot/silver
@@ -1509,7 +1514,7 @@
 /datum/anvil_recipe/weapons/psy/knuckles
 	name = "Psydonic Knuckledusters"
 	req_bar = /obj/item/ingot/silverblessed
-	created_item = /obj/item/clothing/gloves/roguetown/knuckles/psydon
+	created_item = /obj/item/rogueweapon/knuckledusters/psy
 	i_type = "Weapons"
 
 /datum/anvil_recipe/weapons/psy/cudgelmace
@@ -1651,9 +1656,9 @@
 	i_type = "Weapons"
 
 /datum/anvil_recipe/weapons/psy/knuckles/inq
-	name = "Psydonic Knuckles"
+	name = "Psydonic Knuckledusters"
 	req_bar = /obj/item/ingot/silverblessed/bullion
-	created_item = /obj/item/clothing/gloves/roguetown/knuckles/psydon
+	created_item = /obj/item/rogueweapon/knuckledusters/psy
 	i_type = "Weapons"
 
 /datum/anvil_recipe/weapons/psy/halberd/inq
