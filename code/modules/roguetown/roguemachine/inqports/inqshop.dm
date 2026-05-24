@@ -156,7 +156,7 @@
 /datum/inqports/supplies/lifeblood
 	name = "3 Bottles of Lifeblood"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/lifeblood
-	marquescost = 8
+	marquescost = 6
 
 /obj/structure/closet/crate/chest/inqcrate/supplies/lifeblood/Initialize()
 	. = ..()
@@ -167,7 +167,7 @@
 /datum/inqports/supplies/manna
 	name = "3 Bottles of Manna"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/manna
-	marquescost = 8
+	marquescost = 6
 
 /obj/structure/closet/crate/chest/inqcrate/supplies/manna/Initialize()
 	. = ..()
