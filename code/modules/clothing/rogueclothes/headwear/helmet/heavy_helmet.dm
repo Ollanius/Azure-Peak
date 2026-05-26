@@ -284,7 +284,6 @@
 	smelt_bar_num = 1 //Prevents resmelting to easily recreate.
 	grid_height = 96 //Prevents 'armorstacking'. That, and it's like.. carrying a golden watermelon.
 	grid_width = 96
-	sellprice = 200
 	unenchantable = TRUE
 
 /obj/item/clothing/head/roguetown/helmet/heavy/sheriff/gold/king
@@ -293,7 +292,6 @@
 	with a besilked arming cap. The dorpeled crown atop its brow invokes authority, be it misbegotten or endowed."
 	icon_state = "goldbarbute_crown"
 	max_integrity = ARMOR_INT_SIDE_GOLDPLUS // Doubled integrity.
-	sellprice = 300
 	unenchantable = TRUE
 
 /obj/item/clothing/head/roguetown/helmet/heavy/knight
@@ -496,7 +494,6 @@
 	smelt_bar_num = 1 //Prevents resmelting to easily recreate.
 	grid_height = 96 //Prevents 'armorstacking'. That, and it's like.. carrying a golden watermelon.
 	grid_width = 96
-	sellprice = 200
 	unenchantable = TRUE
 	worn_x_dimension = 64
 	worn_y_dimension = 64
@@ -531,7 +528,6 @@
 	with a besilked arming cap. The dorpeled crown atop its brow invokes authority, be it misbegotten or endowed."
 	icon_state = "goldknight_crown"
 	max_integrity = ARMOR_INT_SIDE_GOLDPLUS // Doubled integrity.
-	sellprice = 300
 	unenchantable = TRUE
 
 /obj/item/clothing/head/roguetown/helmet/heavy/knight/skettle

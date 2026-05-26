@@ -6,6 +6,7 @@
 	return max(1, newtime)
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
+	has_item_quality = TRUE
 	name = "crossbow"
 	flags_ai_inventory = AI_ITEM_GUN
 	desc = "A deadly weapon that shoots a bolt with terrific power. Unlike the common bow, \
@@ -392,7 +393,6 @@
 	draw-strength. It loads heavier, full-length bolts; purpose-made to pulverize. </br>'Rudmarsch's walls broke \
 	beneath the volley, and Her sickness petered through the cracks..'"
 	item_state = "ancientheavybow"
-	max_integrity = 130
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy/relic
 	name = "Providence"
