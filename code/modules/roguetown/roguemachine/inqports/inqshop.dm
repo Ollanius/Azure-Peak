@@ -145,7 +145,7 @@
 /datum/inqports/supplies/restoration
 	name = "3 Vials of Restoration"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/restoration
-	marquescost = 8
+	marquescost = 12
 
 /obj/structure/closet/crate/chest/inqcrate/supplies/restoration/Initialize()
 	. = ..()
@@ -156,7 +156,7 @@
 /datum/inqports/supplies/lifeblood
 	name = "3 Bottles of Lifeblood"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/lifeblood
-	marquescost = 6
+	marquescost = 10
 
 /obj/structure/closet/crate/chest/inqcrate/supplies/lifeblood/Initialize()
 	. = ..()
@@ -167,7 +167,7 @@
 /datum/inqports/supplies/manna
 	name = "3 Bottles of Manna"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/supplies/manna
-	marquescost = 6
+	marquescost = 8
 
 /obj/structure/closet/crate/chest/inqcrate/supplies/manna/Initialize()
 	. = ..()
@@ -217,7 +217,7 @@
 /datum/inqports/supplies/tntsatchel
 	name = "1 Blastpowder Satchel"
 	item_type = /obj/item/satchel_bomb
-	marquescost = 10
+	marquescost = 12
 	maximum = 3
 
 // ✤ ARTICLES ✤ RIGHT HERE! THAT'S RIGHT!
@@ -354,7 +354,7 @@
 	name = "1 Silver-Tipped Stake"
 	item_type = /obj/item/rogueweapon/huntingknife/idagger/silver/stake/psy/preblessed
 	maximum = 5
-	marquescost = 6
+	marquescost = 8
 
 /datum/inqports/supplies/blessedlightbolts
 	name = "1 Quiver of Light Sunderbolts"
@@ -464,12 +464,12 @@
 /datum/inqports/wardrobe/psycross
 	name = "1 Psycross"
 	item_type = /obj/item/clothing/neck/roguetown/psicross
-	marquescost = 1
+	marquescost = 2
 
 /datum/inqports/wardrobe/psycrosssilver
 	name = "1 Silver Psycross"
 	item_type = /obj/item/clothing/neck/roguetown/psicross/silver
-	marquescost = 8
+	marquescost = 12
 
 /datum/inqports/wardrobe/otavansatchel
 	name = "1 Satchel, Otavan Leather"
@@ -499,7 +499,7 @@
 /datum/inqports/wardrobe/psydonchains
 	name = "1 Psydonian Chain-Orle"
 	item_type = /obj/item/clothing/head/roguetown/helmet/blacksteel/psychains
-	marquescost = 4
+	marquescost = 6
 
 /datum/inqports/wardrobe/psydonhelms
 	name = "The 'Greathelms of Psydon' Crate"
@@ -542,7 +542,7 @@
 /datum/inqports/wardrobe/confessionalcombo
 	name = "The 'Confessional Combination' Crate"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/wardrobe/confessionalcombo
-	marquescost = 10
+	marquescost = 12
 
 /obj/structure/closet/crate/chest/inqcrate/wardrobe/confessionalcombo/Initialize()
 	. = ..()
@@ -552,7 +552,7 @@
 /datum/inqports/wardrobe/inspectorcoat
 	name = "The 'Inquisitior's Spare Laundry' Crate"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/wardrobe/inspectorcoats
-	marquescost = 10
+	marquescost = 12
 
 /obj/structure/closet/crate/chest/inqcrate/wardrobe/inspectorcoats/Initialize()
 	. = ..()
@@ -564,7 +564,7 @@
 /datum/inqports/wardrobe/inspector
 	name = "The 'Inquisitor's Personal Wardrobe' Crate"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/wardrobe/inspector
-	marquescost = 10
+	marquescost = 12
 
 /obj/structure/closet/crate/chest/inqcrate/wardrobe/inspector/Initialize()
 	. = ..()
@@ -576,7 +576,7 @@
 /datum/inqports/wardrobe/psydonianstandard
 	name = "The 'Inquisitorial Standard' Crate"
 	item_type = /obj/structure/closet/crate/chest/inqcrate/wardrobe/psydonian
-	marquescost = 10
+	marquescost = 12
 
 /obj/structure/closet/crate/chest/inqcrate/wardrobe/psydonian/Initialize()
 	. = ..()

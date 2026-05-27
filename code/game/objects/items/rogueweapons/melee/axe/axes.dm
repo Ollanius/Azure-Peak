@@ -238,6 +238,7 @@
 	minstr = 8
 	smeltresult = /obj/item/ingot/silver
 	special = /datum/special_intent/axe_swing //Cannot be wielded, otherwise.
+	is_tool = FALSE
 
 /obj/item/rogueweapon/stoneaxe/handaxe/silver/ComponentInitialize()
 	AddComponent(\
@@ -263,6 +264,7 @@
 	minstr = 8
 	smeltresult = /obj/item/ingot/silverblessed
 	special = /datum/special_intent/axe_swing //Cannot be wielded, otherwise.
+	is_tool = FALSE
 
 /obj/item/rogueweapon/stoneaxe/handaxe/psy/ComponentInitialize()
 	AddComponent(\
