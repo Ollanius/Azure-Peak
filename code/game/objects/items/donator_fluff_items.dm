@@ -151,7 +151,7 @@
 //Zydras donator items - ironclad baddie
 /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/iron/heavy/zycuirass
 	name = "iron gardbrace and fauld"
-	desc = "An aged piece of damaged mailled hauberk, with only its skirt and a spiked shoulder remaining. It glimmers with a reddish hue."
+	desc = "An aged piece of damaged mailled cuirass, with only its skirt and a spiked shoulder remaining. It glimmers with a reddish hue."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	icon_state = "zy_cuirass"
@@ -789,3 +789,18 @@ As Excaliber."
 	icon = 'icons/obj/items/donor_weapons.dmi'
 	icon_state = "sylvan_dagger" 
 	sheathe_icon = "sylvan_dagger"
+
+// DESMINUS
+
+/obj/item/rogueweapon/example/des_gaebolg
+	name = "Gae Bolg"
+	desc = "A double headed polearm with sharp curvacious edges that come to a point. \
+	One side is fit with a large viscious blade whilst the dull and flattend. \
+	Adorned with blackened steel that rusted to a dark crimson along the handle and blade; \
+	the rust has hardened to time to ressemble blood dripping along the blade, whom over owned \
+	it must not have seen it well cared for in their deliverance. \n\
+	\n\ \
+	Along the Handle reads a silver engraving, 'Justice in Blood'"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+	icon_state = "gae_bolg"
+	bigboy = TRUE
