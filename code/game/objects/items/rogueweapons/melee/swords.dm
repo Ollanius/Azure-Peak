@@ -1763,6 +1763,7 @@
 	smelt_bar_num = 2
 	max_blade_int = 230
 	max_integrity = 200
+	smelt_bar_num = 1
 
 /obj/item/rogueweapon/sword/psy/ComponentInitialize()
 	AddComponent(\
