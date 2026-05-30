@@ -1776,6 +1776,13 @@
 	display_category = ITEM_CAT_WEAPONS_MACES
 	i_type = "Weapons"
 
+/datum/anvil_recipe/weapons/psy/armingsword
+	name = "Psydonic Arming Sword"
+	req_bar = /obj/item/ingot/silverblessed
+	created_item = /obj/item/rogueweapon/sword/psy
+	display_category = ITEM_CAT_WEAPONS_SWORDS
+	i_type = "Weapons"
+
 /datum/anvil_recipe/weapons/psy/cudgelmace
 	name = "Psydonic Handmace (+1 Small Log)"
 	req_bar = /obj/item/ingot/silverblessed
@@ -1911,10 +1918,17 @@
 	i_type = "Weapons"
 
 /datum/anvil_recipe/weapons/psy/knuckles/inq
-	name = "Psydonic Knuckles"
+	name = "Psydonic Knuckledusters"
 	req_bar = /obj/item/ingot/silverblessed/bullion
 	created_item = /obj/item/clothing/gloves/roguetown/knuckles/psydon
 	display_category = ITEM_CAT_WEAPONS_MACES
+	i_type = "Weapons"
+
+/datum/anvil_recipe/weapons/psy/armingsword/inq
+	name = "Psydonic Arming Sword"
+	req_bar = /obj/item/ingot/silverblessed/bullion
+	created_item = /obj/item/rogueweapon/sword/psy
+	display_category = ITEM_CAT_WEAPONS_SWORDS
 	i_type = "Weapons"
 
 /datum/anvil_recipe/weapons/psy/halberd/inq
