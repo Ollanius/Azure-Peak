@@ -135,8 +135,6 @@
 			H.equip_to_slot_or_del(new /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow, SLOT_BACK_L, TRUE)
 			H.adjust_skillrank_up_to(/datum/skill/combat/swords, 4, TRUE)
 		if("Relic, 'Providence' (Siegebow)")
-			H.put_in_hands(new /obj/item/rogueweapon/sword/rapier/psy/relic(H))
-			H.put_in_hands(new /obj/item/rogueweapon/scabbard/sword/noble(H))
 			H.equip_to_slot_or_del(new /obj/item/quiver/bolt/heavy/stake_silver, SLOT_BELT_R, TRUE)
 			H.equip_to_slot_or_del(new /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy/relic, SLOT_BACK_L, TRUE)
 			H.adjust_skillrank_up_to(/datum/skill/combat/crossbows, 5, TRUE)
