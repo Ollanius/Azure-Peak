@@ -866,6 +866,7 @@
 	desc = "A heavy longcoat with layers of maille hidden beneath the leather, donned by the Holy Psydonic Inquisition's \
 	finest. </br>A Psydonic Cuirass can be fitted with this longcoat, in order to ward off deadlier blows without compromising \
 	one's fashion sense."
+	sewrepair = TRUE
 	body_parts_covered = COVERAGE_ALL_BUT_HANDFEET
 	allowed_sex = list(MALE, FEMALE)
 	allowed_sex = list(MALE, FEMALE)
@@ -906,6 +907,7 @@
 	name = "armored inquisitorial duster"
 	desc = "A heavy longcoat with layers of maille hidden beneath the leather, donned by the Holy Psydonic Inquisition's finest. Where \
 	the longcoat parts, a surprise awaits; an ornate steel cuirass, worn beneath the leathers to ward off crippling blows."
+	sewrepair = FALSE
 	smeltresult = /obj/item/ingot/steel 
 	icon_state = "inqcoata"
 	item_state = "inqcoata"
