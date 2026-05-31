@@ -866,6 +866,7 @@
 	desc = "A heavy longcoat with layers of maille hidden beneath the leather, donned by the Holy Psydonic Inquisition's \
 	finest. </br>A Psydonic Cuirass can be fitted with this longcoat, in order to ward off deadlier blows without compromising \
 	one's fashion sense."
+	sewrepair = TRUE
 	body_parts_covered = COVERAGE_ALL_BUT_HANDFEET
 	allowed_sex = list(MALE, FEMALE)
 	allowed_sex = list(MALE, FEMALE)
