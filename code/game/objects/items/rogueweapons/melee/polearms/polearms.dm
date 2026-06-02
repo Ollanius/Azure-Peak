@@ -664,6 +664,7 @@
 	max_blade_int = 70
 	smeltresult = null
 	associated_skill = /datum/skill/combat/polearms
+	anvilrepair = /datum/skill/craft/crafting
 	walking_stick = TRUE
 	wdefense = 4
 	max_integrity = 50
@@ -681,6 +682,7 @@
 	dam_icon = 'icons/effects/item_damage32.dmi'
 	icon_state = "cspear"
 	smeltresult = null
+	anvilrepair = /datum/skill/craft/weaponsmithing
 
 /obj/item/rogueweapon/fishspear
 	force = 20
