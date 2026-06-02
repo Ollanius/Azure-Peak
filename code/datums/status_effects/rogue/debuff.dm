@@ -401,9 +401,9 @@
 	icon_state = "revived"
 
 // /datum/status_effect/debuff/revived_addendum
-	id = "revived_addendum"
-	alert_type = /atom/movable/screen/alert/status_effect/debuff/revived_addendum
-	duration = 5 MINUTES		//If timed right, it should naturally end alongside the 'Death's Door' debuff. Purely cosmetic, for the sake of keeping some continuity with the effects of resurrection.
+//	id = "revived_addendum"
+//	alert_type = /atom/movable/screen/alert/status_effect/debuff/revived_addendum
+//	duration = 5 MINUTES		//If timed right, it should naturally end alongside the 'Death's Door' debuff. Purely cosmetic, for the sake of keeping some continuity with the effects of resurrection.
 
 //	/atom/movable/screen/alert/status_effect/debuff/revived_addendum
 //	name = "Resurr.."
