@@ -161,7 +161,7 @@
 		if(H.cmode)
 			if(H != target)
 				H.visible_message(span_blue("[H] fervently recites an orison, invoking the warmth of a dying light."))
-				H.say(pick("ENDURE!!","COME ON!!","HANG ON!!")) // because I miss this! :(
+				H.say(pick("ENDURE!!","ENDURE!!","ENDURE!!","ENDURE!!","ENDURE!!","COME ON!!","COME ON!!","HANG ON!!","GRIT!!","STAND TALL!!")) // because I miss this! :(
 			else
 				H.visible_message(span_blue("[H] grits their teeth and recites an orison, invoking the warmth of a dying light."))
 		else
