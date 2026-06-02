@@ -594,7 +594,7 @@
 	desc = "A light leather canister with specially-tailored hoops on the inside, made for carrying heat-treated shotstakes by the dozens."
 	icon_state = "stakepouch0"
 	item_state = "stakepouch"
-	max_storage = 12
+	max_storage = 24
 	allowed_ammo_type = /obj/item/ammo_casing/caseless/rogue/stake
 
 /obj/item/quiver/bolt/stake/attack_turf(turf/T, mob/living/user)
