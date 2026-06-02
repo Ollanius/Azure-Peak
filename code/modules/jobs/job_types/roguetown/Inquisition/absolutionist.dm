@@ -27,6 +27,7 @@
 		TRAIT_STEELHEARTED,
 		TRAIT_INQUISITION,
 		TRAIT_MANORKEEPER,
+		TRAIT_SELF_SUSTENANCE,
 	)
 
 	advclass_cat_rolls = list(CTAG_ABSOLVER = 2)
@@ -63,6 +64,8 @@
 		/datum/skill/craft/tanning = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/craft/carpentry = SKILL_LEVEL_APPRENTICE,
 		/datum/skill/craft/masonry = SKILL_LEVEL_APPRENTICE,
+		/datum/skill/combat/unarmed = SKILL_LEVEL_EXPERT, // Needed because otherwise they'll not be able to use their bracers to unarmed parry. They also lack Exp. Pugilist, so this will be like 60%~ on average.
+		/datum/skill/combat/wrestling = SKILL_LEVEL_EXPERT, // Needed to not be so easily kidnappable, and to arrest people more reliably. They're still a part of the Inquisition, after all.
 
 	)
 	subclass_stashed_items = list(
@@ -104,7 +107,7 @@
 	head = /obj/item/clothing/head/roguetown/helmet/heavy/absolver
 	id = /obj/item/clothing/ring/signet/psy
 	backpack_contents = list(
-		/obj/item/book/rogue/bibble/psy = 1,
+		/obj/item/rope/inqarticles/inquirycord = 1,
 		/obj/item/natural/bundle/cloth/bandage/full = 2,
 		/obj/item/reagent_containers/glass/bottle/rogue/healthpot = 2,
 		/obj/item/paper/inqslip/arrival/abso = 1,
@@ -153,6 +156,8 @@
 	if(target.devotion) //Remove all granted miracles and does NOT replace them, since Psydonic "miracles" don't work the same way and your old skills don't help with it.
 
 		for(var/obj/effect/proc_holder/spell/S in target.devotion.granted_spells)
+			target.mind.RemoveSpell(S)
+		for(var/datum/action/cooldown/S in target.devotion.granted_spells)
 			target.mind.RemoveSpell(S)
 
 		target.devotion.Destroy()
