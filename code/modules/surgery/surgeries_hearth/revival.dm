@@ -95,4 +95,5 @@
 	display_results(user, target, span_warning("I screwed up!"),
 		span_warning("[user] screws up!"),
 		span_notice("[user] works the lux into [target]'s innards."), TRUE)
+
 	return TRUE

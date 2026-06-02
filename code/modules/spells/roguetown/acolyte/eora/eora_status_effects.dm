@@ -200,8 +200,6 @@
 
 #define POM_FILTER "pom_aura"
 
-#define POM_FILTER "pom_aura"
-
 /datum/status_effect/debuff/pomegranate_aura
 	id = "pomegranate_aura"
 	duration = -1
