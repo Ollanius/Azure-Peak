@@ -387,7 +387,7 @@
 
 /obj/projectile/bullet/reusable/stake
 	name = "shotstake"
-	damage = 35
+	damage = 25
 	damage_type = BRUTE
 	armor_penetration = PEN_HEAVY
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/stake
@@ -395,7 +395,7 @@
 	hitsound = 'sound/combat/hits/hi_bolt (1).ogg'
 	npc_simple_damage_mult = 6 //..or 150 damage against a mindless mob.
 	poisontype = /datum/reagent/water/blessed
-	poisonamount = 3 //Deals 35 BRUTE and 15 BURN, on top of some mild afterburn.
+	poisonamount = 3 //Deals 25 BRUTE and 15 BURN, on top of some mild afterburn.
 	range = 15
 	speed = 0.4
 	min_range = MIN_BOLT_RANGE - 1
@@ -418,13 +418,13 @@
 
 /obj/projectile/bullet/reusable/stake/silver
 	name = "silver-tipped shotstake"
-	damage = 50
+	damage = 40
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/stake/silver
 	icon_state = "silverstake_proj"
 	hitsound = 'sound/combat/hits/hi_bolt (1).ogg'
 	npc_simple_damage_mult = 6 //..or 300 damage against a mindless mob.
 	poisontype = /datum/reagent/water/blessed
-	poisonamount = 4 //Deals 50 BRUTE and 20 BURN, on top of some mild afterburn.
+	poisonamount = 4 //Deals 40 BRUTE and 20 BURN, on top of some mild afterburn.
 	is_silver_proj = TRUE
 
 // PYRO AMMO
