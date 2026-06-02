@@ -190,6 +190,15 @@
 		M.remove_status_effect(/datum/status_effect/debuff/rotted_zombie)
 		M.apply_status_effect(/datum/status_effect/debuff/revived)
 		M.remove_status_effect(src)
+		addtimer(CALLBACK(src, PROC_REF(deathmark), M), 5 MINUTES) //Performs a check after the listed time has elapsed, post-resurrection. If the target is still alive by then, it'll apply the 'DNR' trait.
+
+/datum/status_effect/buff/eoran_balm_effect/proc/deathmark(mob/living/victim)
+	if(victim.stat != DEAD)
+		victim.apply_status_effect(/datum/status_effect/debuff/permadeath) //The deathmark in question. This temporarily adds unrevivability to the target; die again while it's active, and your story'll be over.. for now.
+		victim.play_permadeath_indicator()
+		to_chat(victim, span_danger("You feel cold within, as the lux begins to creep across your heart once more. The thread betwixt your soul and body remains thin; to succumb again so soon would ensure its total severance."))
+
+#define POM_FILTER "pom_aura"
 
 #define POM_FILTER "pom_aura"
 

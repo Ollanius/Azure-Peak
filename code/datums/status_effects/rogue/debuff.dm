@@ -148,7 +148,7 @@
 
 /atom/movable/screen/alert/status_effect/debuff/bleedingt1
 	name = "Dizzy"
-	desc = ""
+	desc = "I've lost a bit of blood, and my humors feel imbalanced.."
 	icon_state = "bleed1"
 
 /datum/status_effect/debuff/bleedingworse
@@ -172,7 +172,7 @@
 
 /atom/movable/screen/alert/status_effect/debuff/bleedingt2
 	name = "Faint"
-	desc = ""
+	desc = "I've lost some blood, and it's hard to keep myself steady.."
 	icon_state = "bleed2"
 
 /datum/status_effect/debuff/bleedingworst
@@ -196,7 +196,7 @@
 
 /atom/movable/screen/alert/status_effect/debuff/bleedingt3
 	name = "Drained"
-	desc = ""
+	desc = "I've lost a lot of blood, and I can barely keep myself conscious.."
 	icon_state = "bleed3"
 
 /datum/status_effect/debuff/sleepytime
@@ -396,9 +396,23 @@
 	duration = 15 MINUTES		//Should be long enough to stop someone from running back into battle. Plus, this stacks with body-rot debuff. RIP.
 
 /atom/movable/screen/alert/status_effect/debuff/revived
-	name = "Resurrected" //Formerly 'Revival Sickness'.
+	name = "Resurrection" //Formerly 'Revival Sickness'.
 	desc = "Brought back from death's sweet embrace, you walk amongst the living once more. Yet, it is not without consequence - your body aches, your spirit wanes, and your fate is still uncertain."
 	icon_state = "revived"
+
+/*/datum/status_effect/debuff/revived_addendum
+	id = "revived_addendum"
+	alert_type = /atom/movable/screen/alert/status_effect/debuff/revived_addendum
+	duration = 5 MINUTES		//If timed right, it should naturally end alongside the 'Death's Door' debuff. Purely cosmetic, for the sake of keeping some continuity with the effects of resurrection.
+
+/atom/movable/screen/alert/status_effect/debuff/revived_addendum
+	name = "Resurr.."
+	desc = "You can feel yourself, in both body and soul, becoming fully grounded once more. Tyme will tell if you'll lyve to see tomorrow, however, or if this is merely an intermission.."
+	icon_state = "revived_addendum"
+
+/datum/status_effect/debuff/revived/on_remove()
+	owner.apply_status_effect(/datum/status_effect/debuff/revival_addendum) //Cosmetic continuance, to ensure it ends with the 'Permadeath' debuff.*/ //Readd when someone can figure out how to un-errorify this.
+	. = ..()*/
 
 /datum/status_effect/debuff/rotted
 	id = "rotted_body" //For de-rot - your body ROTTED. Harsher penalty for longer, can be fully off-set with a cure-rot potion.
@@ -418,21 +432,17 @@
 
 /atom/movable/screen/alert/status_effect/debuff/rotted_zombie
 	name = "Decomposing"
-	desc = "Death's grasp has begun to take its toll, for even your body is finally starting to give out on you."
+	desc = "Rotting flesh, dangling innards - the decay of what once was, no longer guarded by lyfe's thrumbings. Your spirit is struggling to remain rooted within this world.."
 	icon_state = "rot"
-
-/atom/movable/screen/alert/status_effect/debuff/breedable
-	name = "Obedient"
-	desc = "They won't hurt me too much..."
 
 /datum/status_effect/debuff/permadeath
 	id = "permadeath"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/permadeath
-	duration = 10 MINUTES //Effectively determines how long a character can be threatened with permadeath. Kicks into gear once the initial deathmark-imposed grace period completes. Timed to match Revival Sickness.
+	duration = 15 MINUTES //Effectively determines how long a character is threatened with permadeath. Kicks into gear once the initial deathmark-imposed grace period completes. Timed to match Revival Sickness.
 
 /atom/movable/screen/alert/status_effect/debuff/permadeath
 	name = "Death's Door"
-	desc = "Your heart beats with arrythmic fright, as an otherworldly chill rolls through your very spirit. Should you perish again within a half-dae's tyme, nothing will be able to bring you back from Necra's grasp."
+	desc = "Your heart beats with arrythmic fright, as an otherworldly chill rolls through your very spirit. Should you perish again within a half-dae's tyme, nothing will be able to bring you back from death's grasp."
 	icon_state = "permadeath"
 
 /datum/status_effect/debuff/permadeath/on_apply()
@@ -590,9 +600,6 @@
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/excomm
 	effectedstats = list(STATKEY_LCK = -2, STATKEY_INT = -2, STATKEY_SPD = -1, STATKEY_WIL = -1, STATKEY_CON = -1)
 	duration = -1
-
-
-
 
 /atom/movable/screen/alert/status_effect/debuff/excomm
 	name = "Excommunicated!"
@@ -846,8 +853,8 @@
 			PM.backdrop(owner)
 
 /atom/movable/screen/alert/status_effect/debuff/vampbite
-	name = "Vampyrebiten"
-	desc = "You are feeling something... interesting.."
+	name = "Vampire biten"
+	desc = "You are feeling something... Interesting.."
 	icon_state = "acid"
 
 /datum/status_effect/debuff/joybringer_druqks
@@ -910,7 +917,7 @@
 
 
 /datum/status_effect/debuff/necrandeathdoorwilloss
-	id = "Necran Deathly calm!"
+	id = "Necran Deathly Calm"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/necranwilloss
 	effectedstats = list(STATKEY_WIL = -4)
 	var/blimmune = FALSE
@@ -952,7 +959,7 @@
 /atom/movable/screen/alert/status_effect/debuff/necranwilloss
 	name = "Necran Deathly Calm"
 	desc = "I am on the edge of my lady's realm. My motivation slackens with such deathly tranquility."
-	icon_state = "debuff"
+	icon_state = "necravow"
 	color ="#af9f9f"
 
 /datum/status_effect/debuff/deathdoorwilloss
@@ -995,7 +1002,7 @@
 /atom/movable/screen/alert/status_effect/debuff/deathdoorwilloss
 	name = "Deathly Calm"
 	desc = "I am on the edge of Death's realm. It is hard to feel motivated with such deathly tranquility."
-	icon_state = "debuff"
+	icon_state = "necravow"
 	color ="#af9f9f"
 
 /datum/status_effect/debuff/no_coom_cheating //Gets triggered when someone sets their arousal, prevents orgasms from sating vice/giving mood boosts
