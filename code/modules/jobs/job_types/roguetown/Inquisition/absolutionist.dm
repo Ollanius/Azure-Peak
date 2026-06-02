@@ -154,6 +154,8 @@
 
 		for(var/obj/effect/proc_holder/spell/S in target.devotion.granted_spells)
 			target.mind.RemoveSpell(S)
+		for(var/datum/action/cooldown/S in target.devotion.granted_spells)
+			target.mind.RemoveSpell(S)
 
 		target.devotion.Destroy()
 		target.mind.RemoveSpell(/obj/effect/proc_holder/spell/invoked/projectile/divineblast)

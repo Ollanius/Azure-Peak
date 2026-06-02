@@ -1099,21 +1099,7 @@
 /obj/item/rogueweapon/knuckledusters/get_mechanics_examine(mob/user)
 	. = ..()
 	. += span_notice("Knuckledusters, similar to Katars, can still parry oncoming blows. Note that their fragility makes this a bit more of a daunting process, however, for unskilled swingers.")
-	. += span_notice("Activate - while held in your current hand - to turn these into knuckles, which can be worn as gloves to greatly improve your unarmed damage and parrying chances.")
-
-/obj/item/rogueweapon/knuckledusters/attack_self(mob/living/user)
-	. = ..()
-	user.visible_message(span_warning("[user] starts adjusting their grip on [src]."))
-	if(do_after(user, 3 SECONDS))
-		var/obj/item/rogueweapon/knuckledusters/P = new /obj/item/clothing/gloves/roguetown/knuckles(get_turf(src.loc))
-		if(user.is_holding(src))
-			user.dropItemToGround(src)
-			user.put_in_hands(P)
-		P.obj_integrity = src.obj_integrity
-		qdel(src)
-	else
-		user.visible_message(span_warning("[user] stops adjusting their grip on [src]."))
-		return
+	//. += span_notice("Activate - while held in your current hand - to turn these into knuckles, which can be worn as gloves to greatly improve your unarmed damage and parrying chances.")
 
 /obj/item/rogueweapon/knuckledusters/silver
 	name = "silver knuckledusters"
