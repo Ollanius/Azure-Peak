@@ -1114,7 +1114,7 @@
 /obj/item/rogueweapon/knuckledusters/silver/ComponentInitialize()
 	AddComponent(\
 		/datum/component/silverbless,\
-		pre_blessed = BLESSING_TENNITE,\ //Temporary stopgap to prevent blessings from vanishing mid-transform. Replace with '_NONE' if-or-when this is solved.
+		pre_blessed = BLESSING_TENNITE,\
 		silver_type = SILVER_TENNITE,\
 		added_force = 0,\
 		added_blade_int = 0,\
@@ -1171,7 +1171,7 @@
 /obj/item/rogueweapon/knuckledusters/psy/ComponentInitialize()
 	AddComponent(\
 		/datum/component/silverbless,\
-		pre_blessed = BLESSING_PSYDONIAN,\  //Temporary stopgap to prevent blessings from vanishing mid-transform. Replace with '_NONE' if-or-when this is solved.
+		pre_blessed = BLESSING_PSYDONIAN,\
 		silver_type = SILVER_PSYDONIAN,\ 
 		added_force = 0,\
 		added_blade_int = 0,\
