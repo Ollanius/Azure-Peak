@@ -377,7 +377,7 @@
 	desc = "A small branch that has been broken off a boswellia tree, and sharpened to a fine point. While imbalanced for hand-to-hand stakings, the \
 	heat-treated wood makes it perfect for being loaded-and-launched out of a staker."
 	projectile_type = /obj/projectile/bullet/reusable/stake
-	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/thrust)
+	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/thrust, /datum/intent/dagger/thrust/pick)
 	caliber = "stake"
 	icon_state = "stake"
 	dropshrink = 0.6
@@ -409,10 +409,10 @@
 	desc = "A small branch that has been broken off a boswellia tree, sharpened to a fine point, and tipped with blessed silver. While imbalanced for \
 	hand-to-hand stakings, the heat-treated wood makes it perfect for being loaded-and-launched out of a staker. </br>'Requiescat in pace..' - '..may thee rest in peace.'"
 	projectile_type = /obj/projectile/bullet/reusable/stake/silver
-	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/thrust)
+	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/thrust, /datum/intent/dagger/thrust/pick)
 	icon_state = "silverstake"
 	max_integrity = 15
-	force = 15
+	force = 20
 	is_silver = TRUE
 	is_lesser_silver = TRUE
 
