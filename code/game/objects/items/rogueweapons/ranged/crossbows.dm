@@ -433,6 +433,8 @@
 	w_class = WEIGHT_CLASS_SMALL
 	wdefense = 2
 	max_integrity = 100
+	smeltresult = /obj/item/ingot/silver
+	smelt_bar_num = 1
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/staker/get_mechanics_examine(mob/user)
 	. = ..()
