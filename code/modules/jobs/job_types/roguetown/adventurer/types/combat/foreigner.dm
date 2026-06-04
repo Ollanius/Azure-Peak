@@ -425,7 +425,7 @@
 		/datum/skill/misc/medicine = SKILL_LEVEL_NOVICE,
 	)
 
-	extra_context = "This subclass can pick from a wide array of bronze weapons, armor, and origins - in the form of four trait-altering Disciplines - to specialize in. Most options for a primary weapon will provide an Expert-tier combat skill."
+	extra_context = "This subclass can pick from a wide array of bronze weapons, armor, and origins - in the form of four trait-altering Disciplines - to specialize in. Most options for a primary weapon will provide an Expert-tier combat skill, while Bulwarks are locked to Journeyman-tier combat skills."
 
 /datum/outfit/job/roguetown/adventurer/bronzeclad/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	..()
@@ -540,21 +540,21 @@
 			if("Another Shortsword & Skills In Dual-Wielding")
 				ADD_TRAIT(H, TRAIT_DUALWIELDER, TRAIT_GENERIC)
 				l_hand = /obj/item/rogueweapon/sword/short/gladius
-				H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_APPRENTICE, TRUE)
+				H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_JOURNEYMAN, TRUE)
 				beltl = /obj/item/rogueweapon/scabbard/sword/strap
 			if("Another Messer & Skills In Dual-Wielding")
 				ADD_TRAIT(H, TRAIT_DUALWIELDER, TRAIT_GENERIC)
 				l_hand = /obj/item/rogueweapon/sword/short/messer/bronze
-				H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_APPRENTICE, TRUE)
+				H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_JOURNEYMAN, TRUE)
 				beltl = /obj/item/rogueweapon/scabbard/sword/strap
 			if("Another Khopesh & Skills In Dual-Wielding")
 				ADD_TRAIT(H, TRAIT_DUALWIELDER, TRAIT_GENERIC)
 				l_hand = /obj/item/rogueweapon/sword/sabre/bronzekhopesh
-				H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_APPRENTICE, TRUE)
+				H.adjust_skillrank_up_to(/datum/skill/combat/swords, SKILL_LEVEL_JOURNEYMAN, TRUE)
 				beltl = /obj/item/rogueweapon/scabbard/sword/strap
 			if("Another Axe & Skills In Dual-Wielding")
 				ADD_TRAIT(H, TRAIT_DUALWIELDER, TRAIT_GENERIC)
-				H.adjust_skillrank_up_to(/datum/skill/combat/axes, SKILL_LEVEL_APPRENTICE, TRUE)
+				H.adjust_skillrank_up_to(/datum/skill/combat/axes, SKILL_LEVEL_JOURNEYMAN, TRUE)
 				l_hand = /obj/item/rogueweapon/stoneaxe/woodcut/bronze
 			if("A Bottle Of Medicinal Fish Vinegar.. ?")
 				beltl = /obj/item/reagent_containers/glass/bottle/rogue/healthpot/zarum
@@ -592,6 +592,11 @@
 				belt = /obj/item/storage/belt/rogue/leather
 			if("Bulwark - Fully-Armored & Plate Training")
 				ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
+				H.adjust_skillrank(/datum/skill/combat/swords, -1, TRUE)
+				H.adjust_skillrank(/datum/skill/combat/maces, -1, TRUE)
+				H.adjust_skillrank(/datum/skill/combat/whipsflails, -1, TRUE)
+				H.adjust_skillrank(/datum/skill/combat/axes, -1, TRUE) 	
+				H.adjust_skillrank(/datum/skill/combat/polearms, -1, TRUE)
 				head = /obj/item/clothing/head/roguetown/helmet/bronze
 				neck = /obj/item/clothing/neck/roguetown/bevor/bronze
 				wrists = /obj/item/clothing/wrists/roguetown/bracers/bronze
