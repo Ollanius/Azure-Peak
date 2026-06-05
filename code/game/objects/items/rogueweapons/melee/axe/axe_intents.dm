@@ -74,7 +74,7 @@
 
 /datum/intent/axe/chop/long
 	reach = 2
-	damfactor = 1.5
+	damfactor = 1.3
 	demolition_mod = 1.5
 	swingdelay = 0.5 SECONDS
 
