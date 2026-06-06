@@ -521,5 +521,10 @@
 
 /datum/stressevent/permadeath_threat
 	stressadd = 5
+	desc = span_boldred("<B>A deathly chill rolls through my heart! Flesh and soul, oh-so-meagerly tethered to this world!</B>")
+	timer = 10 MINUTES
+
+/datum/stressevent/resurrected
+	stressadd = 3
 	desc = span_boldred("<B>I've barely escaped death's grasp!</B>")
 	timer = 15 MINUTES
