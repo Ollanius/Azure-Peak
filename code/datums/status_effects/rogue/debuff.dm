@@ -436,6 +436,8 @@
 			to_chat(owner, span_gamedeadsay("I woke upon a bed of silken sheets and creamy pillows, surrounded by my family. They looked overjoyed to see me - but I could hardly see their faces. They smiled and spoke, reaching out to welcome me. I wish I could remember what they looked like.."))
 		if(/datum/patron/inhumen/zizo)
 			to_chat(owner, span_gamedeadsay("There, at the edge of reality, laid a singular point of light. The more I focused upon it, the more it expanded. A tapestry of stars, speckled amongst a sea of phlogiston, forming indecipherable truths for me to ponder. I shouldn't have stared for so long.."))
+		if(/datum/patron/godless)
+			to_chat(owner, span_gamedeadsay("I saw my entire lyfe flash before my eyes, and then-.. nothing. No light, no darkness; complete, utter nothingness - save for a single thought, sinking into the inky-blackness.. and into whatever awaited on the other side. Suddenly, I feel myself yanked in a non-existing direction!"))
 		else
 			to_chat(owner, span_gamedeadsay("Blinding light, enveloping warmth, unconditional love. The darkness recedes behind me, as I come closer to the end of the tunnel - yet, just before I crest the horizon, something jerks me back into the inky-black.."))
 
