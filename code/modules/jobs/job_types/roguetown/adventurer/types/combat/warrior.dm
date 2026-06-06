@@ -688,7 +688,21 @@
 		if(/datum/patron/divine/necra)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/silver/necra
 		if(/datum/patron/divine/noc)
-			wrists = /obj/item/clothing/neck/roguetown/psicross/silver/noc 
+			wrists = /obj/item/clothing/neck/roguetown/psicross/silver/noc
+		if(/datum/patron/inhumen)
+			var/inhumensilveramulets = list("Silver Amulet of the Undivided", "Silver Amulet of Psydon", "Silver Amulet of Astrata", "Silver Amulet of Necra", "Silver Amulet of Noc")
+			var/inhumensilveramuletchoice = input(H,"Choose your AMULET.", "SCORNED BY FAITH, BUT NOT BY FATE.") as anything in inhumensilveramulets
+			switch(inhumensilveramuletchoice)
+				if("Silver Amulet of the Undivided")
+					wrists = /obj/item/clothing/neck/roguetown/psicross/silver/undivided
+				if("Silver Amulet of Psydon")
+					wrists = /obj/item/clothing/neck/roguetown/psicross/silver
+				if("Silver Amulet of Astrata")
+					wrists = /obj/item/clothing/neck/roguetown/psicross/silver/astrata
+				if("Silver Amulet of Necra")
+					wrists = /obj/item/clothing/neck/roguetown/psicross/silver/necra
+				if("Silver Amulet of Noc")
+					wrists = /obj/item/clothing/neck/roguetown/psicross/silver/noc
 		else
 			wrists = /obj/item/clothing/neck/roguetown/psicross/silver/undivided
 
