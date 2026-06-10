@@ -239,8 +239,8 @@
 	desc = "A large, but light wooden shield with a steel boss in the center to deflect blows more easily."
 	icon_state = "atgervi_shield"
 	item_state = "atgervi_shield"
-	lefthand_file = 'icons/mob/inhands/weapons/rogue_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/rogue_righthand.dmi'
+	//lefthand_file = 'icons/mob/inhands/weapons/rogue_lefthand.dmi'
+	//righthand_file = 'icons/mob/inhands/weapons/rogue_righthand.dmi'
 	force = 15
 	throwforce = 10
 	dropshrink = 0.8
@@ -248,7 +248,7 @@
 	attacked_sound = list('sound/combat/parry/shield/towershield (1).ogg','sound/combat/parry/shield/towershield (2).ogg','sound/combat/parry/shield/towershield (3).ogg')
 	parrysound = list('sound/combat/parry/shield/towershield (1).ogg','sound/combat/parry/shield/towershield (2).ogg','sound/combat/parry/shield/towershield (3).ogg')
 	max_integrity = 300
-	experimental_inhand = FALSE
+	experimental_inhand = TRUE
 
 /obj/item/rogueweapon/stoneaxe/woodcut/steel/atgervi
 	name = "bearded axe"
