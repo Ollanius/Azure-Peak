@@ -42,7 +42,7 @@
 /datum/supply_pack/rogue/gronn/kite_shield
 	name = "Gronnic Kite Shield"
 	cost = 90
-	contains = list(/obj/item/rogueweapon/shield/atgervi)
+	contains = list(/obj/item/rogueweapon/shield/tower/atgervi)
 	ship_qty_min = 1
 	ship_qty_max = 3
 
@@ -92,7 +92,7 @@
 		/obj/item/clothing/gloves/roguetown/angle/atgervi,
 		/obj/item/clothing/under/roguetown/trou/leather/atgervi,
 		/obj/item/clothing/shoes/roguetown/boots/leather/atgervi,
-		/obj/item/rogueweapon/shield/atgervi,
+		/obj/item/rogueweapon/shield/tower/atgervi,
 	)
 	ship_qty_min = 1
 	ship_qty_max = 1
