@@ -248,7 +248,7 @@
 	attacked_sound = list('sound/combat/parry/shield/towershield (1).ogg','sound/combat/parry/shield/towershield (2).ogg','sound/combat/parry/shield/towershield (3).ogg')
 	parrysound = list('sound/combat/parry/shield/towershield (1).ogg','sound/combat/parry/shield/towershield (2).ogg','sound/combat/parry/shield/towershield (3).ogg')
 	max_integrity = 300
-	experimental_inhand = FALSE
+	experimental_inhand = TRUE
 
 /obj/item/rogueweapon/shield/atgervi/getonmobprop(tag)
 	. = ..()
