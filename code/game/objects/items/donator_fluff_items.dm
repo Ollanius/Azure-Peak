@@ -1,5 +1,25 @@
 //Lazily shoving all donator fluff items in here for now. Feel free to make this a sub-folder or something, I think it's just easier to keep a list here and just modify as needed.
 
+///////////////////
+// UNIVERSAL     //
+///////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////
+// CKEY SPECIFIC //
+///////////////////
 //Plexiant's donator item - rapier
 /obj/item/rogueweapon/sword/rapier/aliseo
 	name = "Rapier di Aliseo"
@@ -653,7 +673,6 @@ As Excaliber."
 	bigboy = TRUE
 
 //KETRAI
-
 /obj/item/clothing/head/roguetown/octopus
 	name = "octopus hat"
 	desc = "A deep red, slimy cephalopod that clings to your scalp. Its tentacles can be adjusted."
@@ -689,7 +708,6 @@ As Excaliber."
 	user.update_inv_head()
 
 // CASTORTROY23
-
 /obj/item/rogueweapon/example/darling 
 	name = "Darling"
 	desc = "<i>'... since this is the basic tenet of swordsmanship: that a man is always in motion and never at rest.'</i> <br> \
@@ -702,7 +720,6 @@ As Excaliber."
 	bigboy = TRUE
 
 //RIVERCADAVER
-
 /obj/item/rogueweapon/example/sumquoderis
 	name = "Sum Quod Eris"
 	desc = "<b>'I AM AS YOU WERE. YOU WILL BE AS I AM NOW.'</b> <br> \
@@ -755,7 +772,6 @@ As Excaliber."
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 
 // NEROCAVALIER
-
 /obj/item/rogueweapon/example/nero_sylvanlsword
 	name = "sylvan longsword"
 	desc = "The blades of Men are broad, heavy, and simple in countenance. This is no such blade. \n\
@@ -806,7 +822,6 @@ As Excaliber."
 	bigboy = TRUE
 
 // INVERSERUN
-
 /obj/item/rogueweapon/example/arra_amdir
 	name = "Amdir"
 	desc = "This is a strange weapon, a mix of Elven steel, and obvious Otavan silversmithing. \
@@ -821,7 +836,6 @@ As Excaliber."
 	bigboy = TRUE
 
 // PESSIME959
-
 /obj/item/rogue/instrument/guitar/pes_guitar
 	name = "Red-Stained Guitar"
 	desc = "\"A song sang, love shared, and promise fulfilled. \
@@ -830,7 +844,6 @@ As Excaliber."
 	icon_state = "redstainedguitar"
 
 // VAKIOVA
-
 /obj/item/clothing/cloak/vaki_gravetender
 	name = "\improper Gravetender's Winter Coat"
 	desc = "A fine woven coat that excels at protecting from the cold. It signifies the wearer as one who tends to those in her embrace."
@@ -845,7 +858,7 @@ As Excaliber."
 	flags_inv = HIDECROTCH|HIDEBOOB
 
 
-//sakuyzo
+// SAKYUZO
 /obj/item/rogueweapon/sakuyzo/sword
 	name = "Hævatein"
 	desc = "A precious Relic of the highest rarity - a blacksteel sword coated in dragonfyre, found at the base of a river of lava. Inscribed with runic symbols, it is deeply attuned in the arcyne and serves any Spellblade as a vessel for channeling overwhelming power through it - Ironically, at the cost of requiring an aptitude to wield it."
