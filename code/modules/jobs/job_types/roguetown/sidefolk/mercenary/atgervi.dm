@@ -47,7 +47,7 @@
 	pants = /obj/item/clothing/under/roguetown/trou/leather/atgervi
 	wrists = /obj/item/clothing/wrists/roguetown/bracers
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather/atgervi
-	backr = /obj/item/rogueweapon/shield/atgervi
+	backr = /obj/item/rogueweapon/shield/tower/atgervi
 	backl = /obj/item/storage/backpack/rogue/satchel/black
 	beltr = /obj/item/rogueweapon/stoneaxe/woodcut/steel/atgervi
 	belt = /obj/item/storage/belt/rogue/leather
