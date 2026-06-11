@@ -77,9 +77,13 @@
 	name = "Gift - Kit, Plackart"
 	path = /obj/item/enchantingkit/plackart
 
+/datum/loadout_item/donator/universal/maille_throwback
+	name = "Gift - Kit, Elven Haubergeon"
+	path = /obj/item/enchantingkit/elvenchainmail
+
 /datum/loadout_item/donator/universal/cuirass_throwback
-	name = "Gift - Kit, Throwback Vests"
-	path = /obj/item/enchantingkit/throwbackvests
+	name = "Gift - Kit, Heroic Leather Cuirass"
+	path = /obj/item/enchantingkit/heroicleathercuirass
 
 /datum/loadout_item/donator/universal/belt
 	name = "Gift - Kit, Belt of Caped Leather"

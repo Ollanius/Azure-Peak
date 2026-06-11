@@ -180,10 +180,20 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 	item_state = "cropmaillei"
 	icon_state = "cropmaillei"
 
+/obj/item/clothing/suit/roguetown/armor/chainmail/donator_elven
+	name = "elven haubergeon"
+	desc = "An ancestral design, passed down from the oldest of Azuria's native elven inhabitants. The greenish tint present along the leatherbound \
+	steel maille is the byproduct of its links being fashioned through magicks, not a forge's heat."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+	item_state = "elven_chain"
+	icon_state = "elven_chain"
+
 /obj/item/clothing/suit/roguetown/armor/chainmail/iron/donator_elven
 	name = "elven haubergeon"
 	desc = "An ancestral design, passed down from the oldest of Azuria's native elven inhabitants. The greenish tint present along the leatherbound \
-	maille is the byproduct of its links being fashioned through magicks, not a forge's heat."
+	iron maille is the byproduct of its links being fashioned through magicks, not a forge's heat."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'

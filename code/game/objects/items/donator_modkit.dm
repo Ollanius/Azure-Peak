@@ -149,14 +149,22 @@
 	)
 	result_item = null
 
-/obj/item/enchantingkit/throwbackvests
-	name = "'Throwback Vest' morphing elixir"
-	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of an Iron Haubergeon, or a set of Leather Armor."
+/obj/item/enchantingkit/elvenchainmail
+	name = "'Elven Haubergeon' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of an Iron Haubergeon, or a Steel Haubergeon."
 	target_items = list(
-		/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/iron		= /obj/item/clothing/suit/roguetown/armor/chainmail/iron/donator_elven,
-		/obj/item/clothing/suit/roguetown/armor/leather						= /obj/item/clothing/suit/roguetown/armor/leather/donator_cuirass
+		/obj/item/clothing/suit/roguetown/armor/chainmail/iron		= /obj/item/clothing/suit/roguetown/armor/chainmail/iron/donator_elven,
+		/obj/item/clothing/suit/roguetown/armor/chainmail			= /obj/item/clothing/suit/roguetown/armor/chainmail/donator_elven
 	)
 	result_item = null
+
+/obj/item/enchantingkit/heroicleathercuirass
+	name = "'Heroic Leather Cuirass' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a set of Leather Armor."
+	target_items = list(
+		/obj/item/clothing/suit/roguetown/armor/leather
+	)
+	result_item = /obj/item/clothing/suit/roguetown/armor/leather/donator_cuirass
 
 /obj/item/enchantingkit/cackledagger
 	name = "'Cackledagger' morphing elixir"
