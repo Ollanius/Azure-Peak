@@ -21,28 +21,28 @@
 	name = "Universal Donator Kit - Azurosa Flower"
 	path = /obj/item/alch/rosa/azure
 
+/datum/loadout_item/donator/universal/azurosa_seeds
+	name = "Universal Donator Kit - Azurosa Flower, Seeds"
+	path = /obj/item/storage/belt/rogue/pouch/azurosa_seeds
+
 /datum/loadout_item/donator/universal/azurosa_crown
-	name = "Universal Donator Kit - Crown of Azurosas Flowers"
+	name = "Universal Donator Kit - Azurosa Flowers, Crown"
 	path = /obj/item/flowercrown/rosa/azure
 
 /datum/loadout_item/donator/universal/azurosa_bouquet
-	name = "Universal Donator Kit - Bouquet of Azurosas Flowers"
+	name = "Universal Donator Kit - Azurosas Flowers, Bouquet"
 	path = /obj/item/bouquet/rosa/azure
-
-/datum/loadout_item/donator/universal/azurosa_seeds
-	name = "Universal Donator Kit - Seeds of Azurosa Flowers"
-	path = /obj/item/storage/belt/rogue/pouch/azurosa_seeds
 
 /datum/loadout_item/donator/universal/cackledagger
 	name = "Universal Donator Kit - Cackledagger"
 	path = /obj/item/enchantingkit/cackledagger
 
 /datum/loadout_item/donator/universal/longsword
-	name = "Universal Donator Kit - Elegant Longsword"
+	name = "Universal Donator Kit - Longsword, Elegant"
 	path = /obj/item/enchantingkit/weapon/donator_longsword
 
 /datum/loadout_item/donator/universal/longsword_imbued
-	name = "Universal Donator Kit - Imbued Longsword"
+	name = "Universal Donator Kit - Longsword, Imbued"
 	path = /obj/item/enchantingkit/weapon/donator_imbuedlongsword
 
 /datum/loadout_item/donator/universal/cloak_goldmaillekini
@@ -71,19 +71,19 @@
 
 /datum/loadout_item/donator/universal/belt
 	name = "Universal Donator Kit - Belt of Caped Leather"
-	path = /obj/item/storage/belt/rogue/leather/donator
+	path = /obj/item/enchantingkit/beltleather
 
 /datum/loadout_item/donator/universal/belt_fur
 	name = "Universal Donator Kit - Belt of Caped Fur"
-	path = /obj/item/storage/belt/rogue/leather/donator_fur
+	path = /obj/item/enchantingkit/beltfur
 
 /datum/loadout_item/donator/universal/belt_iron
 	name = "Universal Donator Kit - Belt of Iron Maille"
-	path = /obj/item/storage/belt/rogue/leather/donator_iron
+	path = /obj/item/enchantingkit/beltironmaille
 
 /datum/loadout_item/donator/universal/belt_steel
 	name = "Universal Donator Kit - Belt of Maille"
-	path = /obj/item/storage/belt/rogue/leather/donator_steel
+	path = /obj/item/enchantingkit/beltsteelmaille
 
 /////////////////////////////
 // ! Player / Donor Kits ! //
