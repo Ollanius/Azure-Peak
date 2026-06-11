@@ -65,9 +65,9 @@
 	name = "Universal Donator Kit - High-Heeled Shoes, Silver"
 	path = /obj/item/clothing/shoes/roguetown/simpleshoes/heels/donator_silver
 
-/datum/loadout_item/donator/universal/jademask_donator
-	name = "Universal Donator Kit - Elegant Jade Mask"
-	path = /obj/item/enchantingkit/elegantjademask
+/datum/loadout_item/donator/universal/jadehalfmask_donator
+	name = "Universal Donator Kit - Jade Halfask"
+	path = /obj/item/enchantingkit/jadehalfmask
 
 /datum/loadout_item/donator/universal/maille_cropped
 	name = "Universal Donator Kit - Cropped Haubergeon"

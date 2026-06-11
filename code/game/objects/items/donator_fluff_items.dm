@@ -338,7 +338,7 @@
 	item_state = "silverheels"
 
 /obj/item/clothing/mask/rogue/facemask/donator
-	name = "elegant jade mask"
+	name = "jade halfmask"
 	desc = "An intimidating mandible, chiseled from jade and decorated with indeterminable alloys. It is smiling back at you with eternal malice."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
@@ -348,7 +348,7 @@
 	stack_fovs = FALSE //Consistency with other halfmasks.
 
 /obj/item/clothing/mask/rogue/facemask/steel/donator
-	name = "elegant jade mask"
+	name = "jade halfmask"
 	desc = "An intimidating mandible, chiseled from jade and decorated with indeterminable alloys. It is smiling back at you with eternal malice."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
@@ -358,7 +358,7 @@
 	stack_fovs = FALSE //Consistency with other halfmasks.
 
 /obj/item/clothing/mask/rogue/facemask/bronze/donator
-	name = "elegant jade mask"
+	name = "jade halfmask"
 	desc = "An intimidating mandible, chiseled from jade and decorated with indeterminable alloys. It is smiling back at you with eternal malice."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
@@ -368,7 +368,7 @@
 	stack_fovs = FALSE //Consistency with other halfmasks.
 
 /obj/item/clothing/mask/rogue/facemask/carved/jademask/donator
-	name = "elegant jade mask"
+	name = "jade halfmask"
 	desc = "An intimidating mandible, chiseled from jade and decorated with indeterminable alloys. It is smiling back at you with eternal malice."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'

@@ -205,8 +205,8 @@
 	)
 	result_item = /obj/item/rogueweapon/donator_imbuedlongsword
 
-/obj/item/enchantingkit/elegantjademask
-	name = "'Elegant Jade Mask' morphing elixir"
+/obj/item/enchantingkit/jadehalfmask
+	name = "'Jade Halfask' morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of an Iron Mask, Steel Mask, Bronze Mask, or a Carved Jade Mask."
 	target_items = list(
 		/obj/item/clothing/mask/rogue/facemask						= /obj/item/clothing/mask/rogue/facemask/donator,
