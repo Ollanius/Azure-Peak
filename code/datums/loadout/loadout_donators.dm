@@ -53,6 +53,22 @@
 	name = "Universal Donator Kit - Maillekini"
 	path = /obj/item/enchantingkit/maillekini
 
+/datum/loadout_item/donator/universal/highheelshoes
+	name = "Universal Donator Kit - High-Heeled Shoes"
+	path = /obj/item/clothing/shoes/roguetown/simpleshoes/heels
+
+/datum/loadout_item/donator/universal/highheelshoes_gold
+	name = "Universal Donator Kit - High-Heeled Shoes, Gold"
+	path = /obj/item/clothing/shoes/roguetown/simpleshoes/heels/donator_gold
+
+/datum/loadout_item/donator/universal/highheelshoes_silver
+	name = "Universal Donator Kit - High-Heeled Shoes, Silver"
+	path = /obj/item/clothing/shoes/roguetown/simpleshoes/heels/donator_silver
+
+/datum/loadout_item/donator/universal/jademask_donator
+	name = "Universal Donator Kit - Elegant Jade Mask"
+	path = /obj/item/enchantingkit/elegantjademask
+
 /datum/loadout_item/donator/universal/maille_cropped
 	name = "Universal Donator Kit - Cropped Haubergeon"
 	path = /obj/item/enchantingkit/croppedhaubergeon

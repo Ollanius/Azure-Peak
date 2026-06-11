@@ -287,6 +287,99 @@
 
 //
 
+/obj/item/clothing/shoes/roguetown/simpleshoes/heels
+	name = "high-heeled shoes"
+	desc = "Elegant shoes that're lightly elevated in the rear, providing a distinctive 'click' with each step. Allegedly, it's \
+	quite the fashion statement in Heartfelt's noble galas - a sentiment yet to be fully appreciated by Azuria's own."
+	icon_state = "heels"
+	item_state = "heels"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	detail_tag = "_detail"
+	color = "#FFFFFF"
+	detail_color = "#FFFFFF"
+	var/picked = FALSE
+
+/obj/item/clothing/shoes/roguetown/simpleshoes/heels/attack_right(mob/user)
+	..()
+	if(!picked)
+		var/choice = input(user, "Choose a color.", "Uniform colors") as anything in COLOR_MAP
+		var/playerchoice = COLOR_MAP[choice]
+		picked = TRUE
+		detail_color = playerchoice
+		detail_tag = "_detail"
+		update_icon()
+		if(loc == user && ishuman(user))
+			var/mob/living/carbon/H = user
+			H.update_inv_armor()
+			H.update_icon()
+	
+/obj/item/clothing/shoes/roguetown/simpleshoes/heels/update_icon()
+	cut_overlays()
+	if(get_detail_tag())
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)
+
+/obj/item/clothing/shoes/roguetown/simpleshoes/heels/donator_gold
+	name = "high-heeled golden shoes"
+	desc = "Gold-laced shoes that're lightly elevated in the rear, providing a distinctive 'click' with each step. Allegedly, it's \
+	quite the fashion statement in Heartfelt's noble galas - a sentiment yet to be fully appreciated by Azuria's own."
+	icon_state = "goldheels"
+	item_state = "goldheels"
+
+/obj/item/clothing/shoes/roguetown/simpleshoes/heels/donator_silver
+	name = "high-heeled silver shoes"
+	desc = "Silver-laced shoes that're lightly elevated in the rear, providing a distinctive 'click' with each step. Allegedly, it's \
+	quite the fashion statement in Heartfelt's noble galas - a sentiment yet to be fully appreciated by Azuria's own."
+	icon_state = "silverheels"
+	item_state = "silverheels"
+
+/obj/item/clothing/mask/rogue/facemask/donator
+	name = "elegant jade mask"
+	desc = "An intimidating mandible, chiseled from jade and decorated with indeterminable alloys. It is smiling back at you with eternal malice."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	icon_state = "elegantjademask"
+	item_state = "elegantjademask"
+	smeltresult = /obj/item/ingot/aaslag
+	stack_fovs = FALSE //Consistency with other halfmasks.
+
+/obj/item/clothing/mask/rogue/facemask/steel/donator
+	name = "elegant jade mask"
+	desc = "An intimidating mandible, chiseled from jade and decorated with indeterminable alloys. It is smiling back at you with eternal malice."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	icon_state = "elegantjademask"
+	item_state = "elegantjademask"
+	smeltresult = /obj/item/ingot/aaslag
+	stack_fovs = FALSE //Consistency with other halfmasks.
+
+/obj/item/clothing/mask/rogue/facemask/bronze/donator
+	name = "elegant jade mask"
+	desc = "An intimidating mandible, chiseled from jade and decorated with indeterminable alloys. It is smiling back at you with eternal malice."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	icon_state = "elegantjademask"
+	item_state = "elegantjademask"
+	smeltresult = /obj/item/ingot/aaslag
+	stack_fovs = FALSE //Consistency with other halfmasks.
+
+/obj/item/clothing/mask/rogue/facemask/carved/jademask/donator
+	name = "elegant jade mask"
+	desc = "An intimidating mandible, chiseled from jade and decorated with indeterminable alloys. It is smiling back at you with eternal malice."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	icon_state = "elegantjademask"
+	item_state = "elegantjademask"
+	smeltresult = /obj/item/ingot/aaslag
+	stack_fovs = FALSE //Consistency with other halfmasks.
+
+
+//
+
 /obj/item/rogueweapon/huntingknife/idagger/steel/donator
 	name = "cackledagger"
 	desc = "A curious iteration of the steel dagger, fitted with a wooden handle that's been carved in mimicry of a certain anatomical feature. While \
