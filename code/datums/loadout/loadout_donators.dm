@@ -69,6 +69,10 @@
 	name = "Gift - Kit, Cropped Haubergeon"
 	path = /obj/item/enchantingkit/croppedhaubergeon
 
+/datum/loadout_item/donator/universal/maille_throwback
+	name = "Gift - Kit, Elven Haubergeon"
+	path = /obj/item/enchantingkit/elvenchainmail
+
 /datum/loadout_item/donator/universal/cuirass_heartplate
 	name = "Gift - Kit, Heartplate"
 	path = /obj/item/enchantingkit/heartplate
@@ -77,9 +81,9 @@
 	name = "Gift - Kit, Plackart"
 	path = /obj/item/enchantingkit/plackart
 
-/datum/loadout_item/donator/universal/maille_throwback
-	name = "Gift - Kit, Elven Haubergeon"
-	path = /obj/item/enchantingkit/elvenchainmail
+/datum/loadout_item/donator/universal/armor_gothic_steel
+	name = "Gift - Kit, Gothic Steel Armor"
+	path = /obj/item/enchantingkit/gothicsteelarmor
 
 /datum/loadout_item/donator/universal/cuirass_throwback
 	name = "Gift - Kit, Heroic Leather Cuirass"

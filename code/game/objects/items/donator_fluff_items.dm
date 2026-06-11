@@ -151,7 +151,8 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 /obj/item/clothing/cloak/donator_goldmaillekini
 	name = "golden maillekini"
 	desc = "A curious - and particularly revealing - variant of a common maille-aketon, fashioned from interlinked rings of pure gold. Unlike \
-	its iron- and steel-mailled cousins, this regal corset is far too fragile to double as armor; but that's not going to stop you, is it?"
+	its iron- and steel-mailled cousins, this regal corset is far too fragile to double as armor; but that's not going to stop you, is it? </br> It \
+	feels light enough to be worn above-or-below most garments."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	item_state = "chainking"
@@ -159,7 +160,8 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 	drop_sound = 'sound/foley/dropsound/chain_drop.ogg'
 	pickup_sound = 'sound/foley/equip/equip_armor_chain.ogg'
 	equip_sound = 'sound/foley/equip/equip_armor_chain.ogg'
-	
+	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK 
+
 /obj/item/clothing/suit/roguetown/armor/chainmail/donator
 	name = "cropped haubergeon"
 	desc = "A curious - and particularly revealing - variant of a common maille-garment. It's said that the intentionally provocative design \
