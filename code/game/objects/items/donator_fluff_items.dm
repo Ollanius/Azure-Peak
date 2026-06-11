@@ -7,7 +7,7 @@
 /obj/item/herbseed/rosa/azure
 	name = "azurosa seeds"
 	seed_identity = "azurosa seeds"
-	makes_herb = /obj/structure/flora/roguegrass/herb/rosa/azurosa
+	makes_herb = /obj/structure/flora/roguegrass/herb/rosa/azure
 
 /obj/item/storage/belt/rogue/pouch/azurosa_seeds
 	name = "pouch of azurosa seeds"
@@ -25,7 +25,7 @@
 	central Azuria, this flower rarely grows upon the Azurian coast. Its sight here means only \
 	one thing: a donation from the inner lands."
 	icon_state = "azurosa_plant"
-	icon = 'icons\obj\items\donor_objects.dmi'
+	icon = 'icons/obj/items/donor_objects.dmi'
 
 	herbtype = /obj/item/alch/rosa/azure
 
@@ -35,7 +35,7 @@
 	item_state = "azurosa"
 	desc = "A reminder, hued blue, that happiness is always worth fighting for."
 	sellprice = SELLPRICE_HERB_COMMON
-	icon = 'icons\obj\items\donor_objects.dmi'
+	icon = 'icons/obj/items/donor_objects.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_MASK|ITEM_SLOT_MOUTH
 	body_parts_covered = NONE
@@ -61,7 +61,7 @@
 	name = "crown of azurosa"
 	desc = "A crown formed of azurosas, freshly plucked from the plains of central Azuria. Often worn during \
 	the many festivals and holidaes that're celebrated throughout the yil, as a sign of pride and propserity."
-	icon = 'icons\obj\items\donor_objects.dmi'
+	icon = 'icons/obj/items/donor_objects.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	item_state = "azurosa_crown"
 	icon_state = "azurosa_crown"
@@ -69,14 +69,14 @@
 /obj/item/bouquet/rosa/azure
 	name = "azurosa bouquet"
 	desc = "Azurian affections bundled together in string."
-	icon = 'icons\obj\items\donor_objects.dmi'
+	icon = 'icons/obj/items/donor_objects.dmi'
 	item_state = "azurosa_bouquet"
 	icon_state = "azurosa_bouquet"
 
 /obj/item/reagent_containers/food/snacks/grown/rogue/rosa_petals/azure
 	name = "fresh azurosa petals"
 	desc = "Crushed azurosa petals. Edible."
-	icon = 'icons\obj\items\donor_objects.dmi'
+	icon = 'icons/obj/items/donor_objects.dmi'
 	icon_state = "azurosa_petal"
 	tastes = list("pleasantly mild sweetness" = 1)
 	bitesize = 1
@@ -87,7 +87,7 @@
 /obj/item/reagent_containers/food/snacks/grown/rogue/rosa_petals_dried/azure
 	name = "dried azurosa petals"
 	desc = "Dried azurosa petals, can be used to brew tea."
-	icon = 'icons\obj\items\donor_objects.dmi'
+	icon = 'icons/obj/items/donor_objects.dmi'
 	icon_state = "azurosa_petal_dry"
 	tastes = list("pleasantly mild sweetness" = 1)
 	bitesize = 1
@@ -120,7 +120,7 @@
 
 /datum/crafting_recipe/roguetown/bouquet_azurrosa
 	name = "azurosa bouquet"
-	result = /obj/item/bouquet/azurosa
+	result = /obj/item/bouquet/rosa/azure
 	reqs = list(/obj/item/alch/rosa/azure = 4,
 				/obj/item/natural/fibers = 2,
 				/obj/item/paper/scroll = 1)
@@ -134,7 +134,7 @@
 	name = "maillekini"
 	desc = "A curious - and particularly revealing - variant of a common maille-aketon. It's said that the intentionally provocative design \
 	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
-	icon = 'icons\obj\items\donor_objects.dmi'
+	icon = 'icons/obj/items/donor_objects.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	item_state = "chainkinis"
 	icon_state = "chainkinis"
@@ -143,7 +143,7 @@
 	name = "iron maillekini"
 	desc = "A curious - and particularly revealing - variant of an iron maille-aketon. It's said that the intentionally provocative design \
 	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
-	icon = 'icons\obj\items\donor_objects.dmi'
+	icon = 'icons/obj/items/donor_objects.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	item_state = "chainkinii"
 	icon_state = "chainkinii"
@@ -152,7 +152,7 @@
 	name = "golden maillekini"
 	desc = "A curious - and particularly revealing - variant of a common maille-aketon, fashioned from interlinked rings of pure gold. Unlike \
 	its iron- and steel-mailled cousins, this regal corset is far too fragile to double as armor; but that's not going to stop you, is it?"
-	icon = 'icons\obj\items\donor_objects.dmi'
+	icon = 'icons/obj/items/donor_objects.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	item_state = "chainkinii"
 	icon_state = "chainkinii"
@@ -164,7 +164,7 @@
 	name = "cropped haubergeon"
 	desc = "A curious - and particularly revealing - variant of a common maille-garment. It's said that the intentionally provocative design \
 	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
-	icon = 'icons\obj\items\donor_objects.dmi'
+	icon = 'icons/obj/items/donor_objects.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	item_state = "cropmailles"
@@ -174,7 +174,7 @@
 	name = "cropped iron haubergeon"
 	desc = "A curious - and particularly revealing - variant of an iron maille-garment. It's said that the intentionally provocative design \
 	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
-	icon = 'icons\obj\items\donor_objects.dmi'
+	icon = 'icons/obj/items/donor_objects.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	item_state = "cropmaillei"
@@ -184,7 +184,7 @@
 	name = "elven haubergeon"
 	desc = "An ancestral design, passed down from the oldest of Azuria's native elven inhabitants. The greenish tint present along the leatherbound \
 	maille is the byproduct of its links being fashioned through magicks, not a forge's heat."
-	icon = 'icons\obj\items\donor_objects.dmi'
+	icon = 'icons/obj/items/donor_objects.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	item_state = "elven_chain"
@@ -194,7 +194,7 @@
 	name = "steel heartplate"
 	desc = "A curious - and particularly revealing - variant of a common cuirass. It's said that the intentionally provocative design \
 	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
-	icon = 'icons\obj\items\donor_objects.dmi'
+	icon = 'icons/obj/items/donor_objects.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	item_state = "heartplates"
 	icon_state = "heartplates"
@@ -203,7 +203,7 @@
 	name = "iron heartplate"
 	desc = "A curious - and particularly revealing - variant of an iron cuirass. It's said that the intentionally provocative design \
 	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
-	icon = 'icons\obj\items\donor_objects.dmi'
+	icon = 'icons/obj/items/donor_objects.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	item_state = "heartplatei"
 	icon_state = "heartplatei"
@@ -212,7 +212,7 @@
 	name = "leather heartplate"
 	desc = "A curious - and particularly revealing - variant of a leather vest. It's said that the intentionally provocative design \
 	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
-	icon = 'icons\obj\items\donor_objects.dmi'
+	icon = 'icons/obj/items/donor_objects.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	item_state = "heartplatel"
 	icon_state = "heartplatel"
@@ -221,7 +221,7 @@
 	name = "heroic leather cuirass"
 	desc = "A flexible vest, stitched together from lengths of cured leather. It hugs the wearer's form, gifting them a mimicked form \
 	of a sculpted physique - or maybe that's just a byproduct of it being so damn tight."
-	icon = 'icons\obj\items\donor_objects.dmi'
+	icon = 'icons/obj/items/donor_objects.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	item_state = "leathercuirass"
 	icon_state = "leathercuirass"
@@ -230,7 +230,7 @@
 	name = "steel plackart"
 	desc = "A curious - and particularly revealing - variant of a common cuirass. It's said that the intentionally provocative design \
 	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
-	icon = 'icons\obj\items\donor_objects.dmi'
+	icon = 'icons/obj/items/donor_objects.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	item_state = "plackarts"
 	icon_state = "plackarts"
@@ -239,7 +239,7 @@
 	name = "iron plackart"
 	desc = "A curious - and particularly revealing - variant of an iron cuirass. It's said that the intentionally provocative design \
 	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
-	icon = 'icons\obj\items\donor_objects.dmi'
+	icon = 'icons/obj/items/donor_objects.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	item_state = "plackarti"
 	icon_state = "plackarti"
@@ -248,7 +248,7 @@
 	name = "leather plackart"
 	desc = "A curious - and particularly revealing - variant of a common leather cuirass. It's said that the intentionally provocative design \
 	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
-	icon = 'icons\obj\items\donor_objects.dmi'
+	icon = 'icons/obj/items/donor_objects.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	item_state = "plackartleather"
 	icon_state = "plackartleather"
@@ -256,7 +256,7 @@
 /obj/item/storage/belt/rogue/leather/donator
 	name = "belt of caped leathers"
 	desc = "A fine leather belt that's been decorated with a skirt of thin leather strips."
-	icon = 'icons\obj\items\donor_objects.dmi'
+	icon = 'icons/obj/items/donor_objects.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	item_state = "leatherbases"
 	icon_state = "leatherbases"
@@ -264,7 +264,7 @@
 /obj/item/storage/belt/rogue/leather/donator_fur
 	name = "belt of caped fur"
 	desc = "A fine leather belt that's been decorated with a skirt of well-groomed fur."
-	icon = 'icons\obj\items\donor_objects.dmi'
+	icon = 'icons/obj/items/donor_objects.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	item_state = "furbases"
 	icon_state = "furbases"
@@ -272,7 +272,7 @@
 /obj/item/storage/belt/rogue/leather/donator_steel
 	name = "belt of maille"
 	desc = "A fine leather belt that's been decorated with a skirt of steel chainmail."
-	icon = 'icons\obj\items\donor_objects.dmi'
+	icon = 'icons/obj/items/donor_objects.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	item_state = "chainbases"
 	icon_state = "chainbases"
@@ -280,7 +280,7 @@
 /obj/item/storage/belt/rogue/leather/donator_iron
 	name = "belt of iron maille"
 	desc = "A fine leather belt that's been decorated with a skirt of iron chainmail."
-	icon = 'icons\obj\items\donor_objects.dmi'
+	icon = 'icons/obj/items/donor_objects.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	item_state = "chainbasei"
 	icon_state = "chainbasei"
