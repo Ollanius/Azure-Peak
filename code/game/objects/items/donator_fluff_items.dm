@@ -19,7 +19,7 @@
 	/obj/item/herbseed/rosa/azure,
 	)
 
-/obj/structure/flora/roguegrass/herb/rose/azure
+/obj/structure/flora/roguegrass/herb/rosa/azure
 	name = "azurosa"
 	desc = "A prickly, blueish mutation of the common Rosa found uniquely in the plains of \
 	central Azuria, this flower rarely grows upon the Azurian coast. Its sight here means only \
@@ -1180,7 +1180,7 @@ As Excaliber."
 	name = "shoulderless haubergeon"
 	desc = "A maille shirt fashioned from hundreds of interlinked steel rings. This blouse covers all the little nooks-and-crannies \
 	that're neglected by a standard cuirass, save for the shoulders and biceps; a curious concession, ostensibly made for agility's sake."
-	icon = 'icons\obj\items\donor_objects.dmi'
+	icon = 'icons/obj/items/donor_objects.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	item_state = "ollanius_hoeburk"
