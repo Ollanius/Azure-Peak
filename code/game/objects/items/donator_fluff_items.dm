@@ -127,11 +127,6 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 			if (upd)
 				M.update_damage_overlays()
 
-/datum/stew_recipe/azurosa_tea
-	inputs = list(/obj/item/reagent_containers/food/snacks/grown/rogue/rosa_petals_dried/azure)
-	output = /datum/reagent/water/azurosa_tea
-	cooktime = STEW_COOKING_TIME / 4
-
 /datum/crafting_recipe/roguetown/dryazurrosa
 	name = "dry azurosa petals"
 	result = /obj/item/reagent_containers/food/snacks/grown/rogue/rosa_petals_dried/azure
