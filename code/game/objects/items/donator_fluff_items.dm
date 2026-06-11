@@ -4,18 +4,326 @@
 // UNIVERSAL     //
 ///////////////////
 
+/obj/item/herbseed/rosa/azure
+	name = "azurosa seeds"
+	seed_identity = "azurosa seeds"
+	makes_herb = /obj/structure/flora/roguegrass/herb/rosa/azurosa
 
+/obj/item/storage/belt/rogue/pouch/azurosa_seeds
+	name = "pouch of azurosa seeds"
+	desc = "A pouch that's been filled with seeds of the Azurosa flower, freshly harvested from the highest plateaus of the Azure Peak."
+	populate_contents = list(
+	/obj/item/herbseed/rosa/azure,
+	/obj/item/herbseed/rosa/azure,
+	/obj/item/herbseed/rosa/azure,
+	/obj/item/herbseed/rosa/azure,
+	)
 
+/obj/structure/flora/roguegrass/herb/rose/azure
+	name = "azurosa"
+	desc = "A prickly, blueish mutation of the common Rosa found uniquely in the plains of \
+	central Azuria, this flower rarely grows upon the Azurian coast. Its sight here means only \
+	one thing: a donation from the inner lands."
+	icon_state = "azurosa_plant"
+	icon = 'icons\obj\items\donor_objects.dmi'
 
+	herbtype = /obj/item/alch/rosa/azure
 
+/obj/item/alch/rosa/azure
+	name = "azurosa"
+	icon_state = "azurosa"
+	item_state = "azurosa"
+	desc = "A reminder, hued blue, that happiness is always worth fighting for."
+	sellprice = SELLPRICE_HERB_COMMON
+	icon = 'icons\obj\items\donor_objects.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_MASK|ITEM_SLOT_MOUTH
+	body_parts_covered = NONE
+	w_class = WEIGHT_CLASS_TINY
+	spitoutmouth = FALSE
+	muteinmouth = FALSE
+	alternate_worn_layer  = 8.9 //On top of helmet
+	mill_result = /obj/item/reagent_containers/food/snacks/grown/rogue/rosa_petals/azure
+	major_pot = /datum/alch_cauldron_recipe/lck_potion
+	med_pot = /datum/alch_cauldron_recipe/antidote
+	minor_pot = /datum/alch_cauldron_recipe/restoration_potion
 
+/obj/item/alch/rosa/azure/equipped(mob/living/carbon/human/user, slot)
+	. = ..()
+	if(slot == SLOT_MOUTH)
+		icon_state = "azurosa_mouth"
+		user.update_inv_mouth()
+	else
+		icon_state = "azurosa"
+		user.update_icon()
 
+/obj/item/flowercrown/rosa/azure
+	name = "crown of azurosa"
+	desc = "A crown formed of azurosas, freshly plucked from the plains of central Azuria. Often worn during \
+	the many festivals and holidaes that're celebrated throughout the yil, as a sign of pride and propserity."
+	icon = 'icons\obj\items\donor_objects.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "azurosa_crown"
+	icon_state = "azurosa_crown"
 
+/obj/item/bouquet/rosa/azure
+	name = "azurosa bouquet"
+	desc = "Azurian affections bundled together in string."
+	icon = 'icons\obj\items\donor_objects.dmi'
+	item_state = "azurosa_bouquet"
+	icon_state = "azurosa_bouquet"
 
+/obj/item/reagent_containers/food/snacks/grown/rogue/rosa_petals/azure
+	name = "fresh azurosa petals"
+	desc = "Crushed azurosa petals. Edible."
+	icon = 'icons\obj\items\donor_objects.dmi'
+	icon_state = "azurosa_petal"
+	tastes = list("pleasantly mild sweetness" = 1)
+	bitesize = 1
+	list_reagents = list(/datum/reagent/consumable/nutriment = 2)
+	rotprocess = null
+	w_class = WEIGHT_CLASS_TINY
 
+/obj/item/reagent_containers/food/snacks/grown/rogue/rosa_petals_dried/azure
+	name = "dried azurosa petals"
+	desc = "Dried azurosa petals, can be used to brew tea."
+	icon = 'icons\obj\items\donor_objects.dmi'
+	icon_state = "azurosa_petal_dry"
+	tastes = list("pleasantly mild sweetness" = 1)
+	bitesize = 1
+	list_reagents = list(/datum/reagent/consumable/nutriment = 2)
+	rotprocess = null
+	w_class = WEIGHT_CLASS_TINY
 
+/datum/crafting_recipe/roguetown/dryazurrosa
+	name = "dry azurosa petals"
+	result = /obj/item/reagent_containers/food/snacks/grown/rogue/rosa_petals_dried/azure
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/rogue/rosa_petals/azure = 1)
+	structurecraft = /obj/machinery/tanningrack
+	time = 2 SECONDS
+	verbage_simple = "dry"
+	verbage = "dries"
+	craftsound = null
+	skillcraft = null
 
+/datum/crafting_recipe/roguetown/survival/flowercrown_azurosa
+	name = "azurosa crown"
+	category = "Clothes"
+	result = /obj/item/bouquet/rosa/azure
+	reqs = list(
+		/obj/item/alch/rosa/azure = 4,
+		/obj/item/natural/fibers = 2,
+		)
+	craftdiff = 0
+	verbage_simple = "tied"
+	verbage = "ties"
 
+/datum/crafting_recipe/roguetown/bouquet_azurrosa
+	name = "azurosa bouquet"
+	result = /obj/item/bouquet/azurosa
+	reqs = list(/obj/item/alch/rosa/azure = 4,
+				/obj/item/natural/fibers = 2,
+				/obj/item/paper/scroll = 1)
+	craftdiff = 0
+	verbage_simple = "arranged"
+	verbage = "arranges"
+
+//
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/donator
+	name = "maillekini"
+	desc = "A curious - and particularly revealing - variant of a common maille-aketon. It's said that the intentionally provocative design \
+	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
+	icon = 'icons\obj\items\donor_objects.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "chainkinis"
+	icon_state = "chainkinis"
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/iron/donator
+	name = "iron maillekini"
+	desc = "A curious - and particularly revealing - variant of an iron maille-aketon. It's said that the intentionally provocative design \
+	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
+	icon = 'icons\obj\items\donor_objects.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "chainkinii"
+	icon_state = "chainkinii"
+
+/obj/item/clothing/cloak/donator_goldmaillekini
+	name = "golden maillekini"
+	desc = "A curious - and particularly revealing - variant of a common maille-aketon, fashioned from interlinked rings of pure gold. Unlike \
+	its iron- and steel-mailled cousins, this regal corset is far too fragile to double as armor; but that's not going to stop you, is it?"
+	icon = 'icons\obj\items\donor_objects.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "chainkinii"
+	icon_state = "chainkinii"
+	drop_sound = 'sound/foley/dropsound/chain_drop.ogg'
+	pickup_sound = 'sound/foley/equip/equip_armor_chain.ogg'
+	equip_sound = 'sound/foley/equip/equip_armor_chain.ogg'
+	
+/obj/item/clothing/suit/roguetown/armor/chainmail/donator
+	name = "cropped haubergeon"
+	desc = "A curious - and particularly revealing - variant of a common maille-garment. It's said that the intentionally provocative design \
+	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
+	icon = 'icons\obj\items\donor_objects.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+	item_state = "cropmailles"
+	icon_state = "cropmailles"
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/iron/donator
+	name = "cropped iron haubergeon"
+	desc = "A curious - and particularly revealing - variant of an iron maille-garment. It's said that the intentionally provocative design \
+	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
+	icon = 'icons\obj\items\donor_objects.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+	item_state = "cropmaillei"
+	icon_state = "cropmaillei"
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/iron/donator_elven
+	name = "elven haubergeon"
+	desc = "An ancestral design, passed down from the oldest of Azuria's native elven inhabitants. The greenish tint present along the leatherbound \
+	maille is the byproduct of its links being fashioned through magicks, not a forge's heat."
+	icon = 'icons\obj\items\donor_objects.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+	item_state = "elven_chain"
+	icon_state = "elven_chain"
+
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/donator
+	name = "steel heartplate"
+	desc = "A curious - and particularly revealing - variant of a common cuirass. It's said that the intentionally provocative design \
+	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
+	icon = 'icons\obj\items\donor_objects.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "heartplates"
+	icon_state = "heartplates"
+
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/iron/donator
+	name = "iron heartplate"
+	desc = "A curious - and particularly revealing - variant of an iron cuirass. It's said that the intentionally provocative design \
+	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
+	icon = 'icons\obj\items\donor_objects.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "heartplatei"
+	icon_state = "heartplatei"
+
+/obj/item/clothing/suit/roguetown/armor/leather/donator
+	name = "leather heartplate"
+	desc = "A curious - and particularly revealing - variant of a leather vest. It's said that the intentionally provocative design \
+	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
+	icon = 'icons\obj\items\donor_objects.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "heartplatel"
+	icon_state = "heartplatel"
+
+/obj/item/clothing/suit/roguetown/armor/leather/donator_cuirass
+	name = "heroic leather cuirass"
+	desc = "A flexible vest, stitched together from lengths of cured leather. It hugs the wearer's form, gifting them a mimicked form \
+	of a sculpted physique - or maybe that's just a byproduct of it being so damn tight."
+	icon = 'icons\obj\items\donor_objects.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "leathercuirass"
+	icon_state = "leathercuirass"
+
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/donator_girdle
+	name = "steel plackart"
+	desc = "A curious - and particularly revealing - variant of a common cuirass. It's said that the intentionally provocative design \
+	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
+	icon = 'icons\obj\items\donor_objects.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "plackarts"
+	icon_state = "plackarts"
+
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/iron/donator_girdle
+	name = "iron plackart"
+	desc = "A curious - and particularly revealing - variant of an iron cuirass. It's said that the intentionally provocative design \
+	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
+	icon = 'icons\obj\items\donor_objects.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "plackarti"
+	icon_state = "plackarti"
+
+/obj/item/clothing/suit/roguetown/armor/leather/donator_girdle
+	name = "leather plackart"
+	desc = "A curious - and particularly revealing - variant of a common leather cuirass. It's said that the intentionally provocative design \
+	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
+	icon = 'icons\obj\items\donor_objects.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "plackartleather"
+	icon_state = "plackartleather"
+
+/obj/item/storage/belt/rogue/leather/donator
+	name = "belt of caped leathers"
+	desc = "A fine leather belt that's been decorated with a skirt of thin leather strips."
+	icon = 'icons\obj\items\donor_objects.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "leatherbases"
+	icon_state = "leatherbases"
+
+/obj/item/storage/belt/rogue/leather/donator_fur
+	name = "belt of caped fur"
+	desc = "A fine leather belt that's been decorated with a skirt of well-groomed fur."
+	icon = 'icons\obj\items\donor_objects.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "furbases"
+	icon_state = "furbases"
+	
+/obj/item/storage/belt/rogue/leather/donator_steel
+	name = "belt of maille"
+	desc = "A fine leather belt that's been decorated with a skirt of steel chainmail."
+	icon = 'icons\obj\items\donor_objects.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "chainbases"
+	icon_state = "chainbases"
+
+/obj/item/storage/belt/rogue/leather/donator_iron
+	name = "belt of iron maille"
+	desc = "A fine leather belt that's been decorated with a skirt of iron chainmail."
+	icon = 'icons\obj\items\donor_objects.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "chainbasei"
+	icon_state = "chainbasei"
+
+//
+
+/obj/item/rogueweapon/huntingknife/idagger/steel/donator
+	name = "cackledagger"
+	desc = "A curious iteration of the steel dagger, fitted with a wooden handle that's been carved in mimicry of a certain anatomical feature. While \
+	no one's quite sure as to where this design originated from, one thing's clear; it's not fit to be wielded by the faint-hearted."
+	icon_state = "bollockdagger"
+	sheathe_icon = "bollockdagger"
+	icon = 'icons/obj/items/donor_weapons.dmi'
+
+/obj/item/rogueweapon/huntingknife/idagger/steel/decorated/donator
+	name = "decorated cackledagger"
+	desc = "A decorated iteration of the steel dagger, fitted with a wooden handle that's been carved in mimicry of a certain anatomical feature. While \
+	no one's quite sure as to where this design originated from, one thing's clear; it's not fit to be wielded by the faint-hearted."
+	icon_state = "decbollockdagger"
+	sheathe_icon = "decbollockdagger"
+	icon = 'icons/obj/items/donor_weapons.dmi'
+
+/obj/item/rogueweapon/donator_longsword
+	name = "elegant longsword"
+	desc = "A lethal and perfectly balanced weapon, endowed with regional flair. The longsword is the protagonist of endless tales and myths \
+	all across Psydonia, seen in the hands of noblemen and an ever-decreasing quantity of master duelists. \
+	It has great cultural significance in the empires of Grenzelhoft and Etrusca, where legendary swordsmen \
+	have created and perfected many fighting techniques of todae."
+	icon_state = "longswordalt"
+	sheathe_icon = "longswordalt"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+	bigboy = TRUE
+
+/obj/item/rogueweapon/donator_imbuedlongsword
+	name = "imbued longsword"
+	desc = "A lethal and perfectly balanced weapon, imbued with decorative flair. The longsword is the protagonist of endless tales and myths \
+	all across Psydonia, seen in the hands of noblemen and an ever-decreasing quantity of master duelists. \
+	It has great cultural significance in the empires of Grenzelhoft and Etrusca, where legendary swordsmen \
+	have created and perfected many fighting techniques of todae."
+	icon_state = "longswordaltred"
+	sheathe_icon = "longswordaltred"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+	bigboy = TRUE
 
 ///////////////////
 // CKEY SPECIFIC //
@@ -866,3 +1174,14 @@ As Excaliber."
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
 	sheathe_icon = "sakuyzo"
 	bigboy = TRUE
+
+// OLLANIUS
+/obj/item/clothing/suit/roguetown/armor/chainmail/ollanius_maille
+	name = "shoulderless haubergeon"
+	desc = "A maille shirt fashioned from hundreds of interlinked steel rings. This blouse covers all the little nooks-and-crannies \
+	that're neglected by a standard cuirass, save for the shoulders and biceps; a curious concession, ostensibly made for agility's sake."
+	icon = 'icons\obj\items\donor_objects.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+	item_state = "ollanius_hoeburk"
+	icon_state = "ollanius_hoeburk"

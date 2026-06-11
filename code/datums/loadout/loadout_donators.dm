@@ -6,6 +6,89 @@
 /datum/loadout_item/donator
 	sort_category = "Donator"
 
+/////////////////////////////
+// ! Unlocked Donor Kits ! //
+/////////////////////////////
+
+/datum/loadout_item/donator/universal 
+	ckeywhitelist = list("plexiant", "cheekycrenando", "funkemonke", "eekasqueak", "ketrai", "alfalah", "toasterstrudes", "kitchifox", "pepperoniplayboy", "rebel0", "bigfoot02", "1ceres", "eirenxiv", "magicalbard", "muhsollini", "waffai", "inverserun", "vakiova", "maesune", "koruu", "rezathedwarf", "theneogamer42", "zoetheorc", "willmbrink", "dasfox", "purplepineapple", "cre77", "pneumothorax", "ryan180602", "stinkethstonketh", "drd2021", "lmwevil", "shudderfly", "nerocavalier", "walkthewaste", "scidragon", "aisu9", "nauticall", "iamcrystalclear", "castortroy23", "rivercadaver", "nekosam", "nicksone", "koruu", "magi1138", "nerocavalier", "yeeteryieter", "irlcatgirl", "wickedcybs", "spartanbobby", "eirenxiv", "freestylalt", "lagomorphica", "desminus", "pessime959", "astartee", "sakuzyo", "ollanius")
+	// 'Look upon my works, ye mighty, and despair!'
+	// I know this is horrifically inefficent, but this is mostly just to prove that the system works in the first place; for testmerges and such.
+	// My hope is that a coder, far more trained and competent than me, can properly implement a check that's much less bulky than this.
+	// (Either through the good will of their heart, or through the spite that'd be kindled from witnessing such an abhorrent codestring.)
+
+/datum/loadout_item/donator/universal/azurosa
+	name = "Universal Donator Kit - Azurosa Flower"
+	path = /obj/item/alch/rosa/azure
+
+/datum/loadout_item/donator/universal/azurosa_crown
+	name = "Universal Donator Kit - Crown of Azurosas Flowers"
+	path = /obj/item/flowercrown/rosa/azure
+
+/datum/loadout_item/donator/universal/azurosa_bouquet
+	name = "Universal Donator Kit - Bouquet of Azurosas Flowers"
+	path = /obj/item/bouquet/rosa/azure
+
+/datum/loadout_item/donator/universal/azurosa_seeds
+	name = "Universal Donator Kit - Seeds of Azurosa Flowers"
+	path = /obj/item/storage/belt/rogue/pouch/azurosa_seeds
+
+/datum/loadout_item/donator/universal/cackledagger
+	name = "Universal Donator Kit - Cackledagger"
+	path = /obj/item/enchantingkit/cackledagger
+
+/datum/loadout_item/donator/universal/longsword
+	name = "Universal Donator Kit - Elegant Longsword"
+	path = /obj/item/enchantingkit/weapon/donator_longsword
+
+/datum/loadout_item/donator/universal/longsword_imbued
+	name = "Universal Donator Kit - Imbued Longsword"
+	path = /obj/item/enchantingkit/weapon/donator_imbuedlongsword
+
+/datum/loadout_item/donator/universal/cloak_goldmaillekini
+	name = "Universal Donator Kit - Golden Maillekini"
+	path = /obj/item/clothing/cloak/donator_goldmaillekini
+
+/datum/loadout_item/donator/universal/maille_chainkini
+	name = "Universal Donator Kit - Maillekini"
+	path = /obj/item/enchantingkit/maillekini
+
+/datum/loadout_item/donator/universal/maille_cropped
+	name = "Universal Donator Kit - Cropped Haubergeon"
+	path = /obj/item/enchantingkit/croppedhaubergeon
+
+/datum/loadout_item/donator/universal/cuirass_heartplate
+	name = "Universal Donator Kit - Heartplate"
+	path = /obj/item/enchantingkit/heartplate
+
+/datum/loadout_item/donator/universal/cuirass_plackart
+	name = "Universal Donator Kit - Plackart"
+	path = /obj/item/enchantingkit/plackart
+
+/datum/loadout_item/donator/universal/cuirass_throwback
+	name = "Universal Donator Kit - Throwback Vests"
+	path = /obj/item/enchantingkit/throwbackvests
+
+/datum/loadout_item/donator/universal/belt
+	name = "Universal Donator Kit - Belt of Caped Leather"
+	path = /obj/item/storage/belt/rogue/leather/donator
+
+/datum/loadout_item/donator/universal/belt_fur
+	name = "Universal Donator Kit - Belt of Caped Fur"
+	path = /obj/item/storage/belt/rogue/leather/donator_fur
+
+/datum/loadout_item/donator/universal/belt_iron
+	name = "Universal Donator Kit - Belt of Iron Maille"
+	path = /obj/item/storage/belt/rogue/leather/donator_iron
+
+/datum/loadout_item/donator/universal/belt_steel
+	name = "Universal Donator Kit - Belt of Maille"
+	path = /obj/item/storage/belt/rogue/leather/donator_steel
+
+/////////////////////////////
+// ! Player / Donor Kits ! //
+/////////////////////////////
+
 /datum/loadout_item/donator/plex
 	name = "Donator Kit - Rapier di Aliseo"
 	path = /obj/item/enchantingkit/plexiant
@@ -391,3 +474,8 @@
 	name = "Donator Kit - Hævatein"
 	path = /obj/item/enchantingkit/weapon/sakuyzo
 	ckeywhitelist = list("sakuzyo")
+
+/datum/loadout_item/donator/ollanius_maille
+	name = "Donator Kit - Shoulderless Haubergeon"
+	path = /obj/item/enchantingkit/ollanius_maille
+	ckeywhitelist = list("ollanius")
