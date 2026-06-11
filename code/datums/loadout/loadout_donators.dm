@@ -30,7 +30,7 @@
 	path = /obj/item/flowercrown/rosa/azure
 
 /datum/loadout_item/donator/universal/azurosa_bouquet
-	name = "Universal Donator Kit - Azurosas Flowers, Bouquet"
+	name = "Universal Donator Kit - Azurosa Flowers, Bouquet"
 	path = /obj/item/bouquet/rosa/azure
 
 /datum/loadout_item/donator/universal/cackledagger
