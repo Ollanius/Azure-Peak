@@ -10,12 +10,8 @@
 // ! Unlocked Donor Kits ! //
 /////////////////////////////
 
-/datum/loadout_item/donator/universal 
-	ckeywhitelist = list("plexiant", "cheekycrenando", "funkemonke", "eekasqueak", "ketrai", "alfalah", "toasterstrudes", "kitchifox", "pepperoniplayboy", "rebel0", "bigfoot02", "1ceres", "eirenxiv", "magicalbard", "muhsollini", "waffai", "inverserun", "vakiova", "maesune", "koruu", "rezathedwarf", "theneogamer42", "zoetheorc", "willmbrink", "dasfox", "purplepineapple", "cre77", "pneumothorax", "ryan180602", "stinkethstonketh", "drd2021", "lmwevil", "shudderfly", "nerocavalier", "walkthewaste", "scidragon", "aisu9", "nauticall", "iamcrystalclear", "castortroy23", "rivercadaver", "nekosam", "nicksone", "koruu", "magi1138", "nerocavalier", "yeeteryieter", "irlcatgirl", "wickedcybs", "spartanbobby", "eirenxiv", "freestylalt", "lagomorphica", "desminus", "pessime959", "astartee", "sakuzyo", "ollanius")
-	// 'Look upon my works, ye mighty, and despair!'
-	// I know this is horrifically inefficent, but this is mostly just to prove that the system works in the first place; for testmerges and such.
-	// My hope is that a coder, far more trained and competent than me, can properly implement a check that's much less bulky than this.
-	// (Either through the good will of their heart, or through the spite that'd be kindled from witnessing such an abhorrent codestring.)
+/datum/loadout_item/donator/universal
+	donator_unlocked = TRUE
 
 /datum/loadout_item/donator/universal/azurosa
 	name = "Universal Donator Kit - Azurosa Flower"
