@@ -1,4 +1,4 @@
-//Lazily shoving all donator fluff items in here for now. Feel free to make this a sub-folder or something, I think it's just easier to keep a list here and just modify as needed.
+mas//Lazily shoving all donator fluff items in here for now. Feel free to make this a sub-folder or something, I think it's just easier to keep a list here and just modify as needed.
 
 ///////////////////
 // UNIVERSAL     //
@@ -345,7 +345,6 @@
 	icon_state = "elegantjademask"
 	item_state = "elegantjademask"
 	smeltresult = /obj/item/ingot/aaslag
-	stack_fovs = FALSE //Consistency with other halfmasks.
 
 /obj/item/clothing/mask/rogue/facemask/steel/donator
 	name = "jade halfmask"
@@ -355,7 +354,6 @@
 	icon_state = "elegantjademask"
 	item_state = "elegantjademask"
 	smeltresult = /obj/item/ingot/aaslag
-	stack_fovs = FALSE //Consistency with other halfmasks.
 
 /obj/item/clothing/mask/rogue/facemask/bronze/donator
 	name = "jade halfmask"
@@ -365,7 +363,6 @@
 	icon_state = "elegantjademask"
 	item_state = "elegantjademask"
 	smeltresult = /obj/item/ingot/aaslag
-	stack_fovs = FALSE //Consistency with other halfmasks.
 
 /obj/item/clothing/mask/rogue/facemask/carved/jademask/donator
 	name = "jade halfmask"
@@ -375,8 +372,6 @@
 	icon_state = "elegantjademask"
 	item_state = "elegantjademask"
 	smeltresult = /obj/item/ingot/aaslag
-	stack_fovs = FALSE //Consistency with other halfmasks.
-
 
 //
 

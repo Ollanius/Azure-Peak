@@ -1366,7 +1366,7 @@
 	display_category = ITEM_CAT_ARMOR_CHESTPIECES
 
 /datum/anvil_recipe/armor/blessedsilver/psyfullplatealt
-	name = "Psydonic Full-Plate, Hauberked (+ Psydonic Hauberk, +2 Blessed Silver, +2 Cured Leather)"
+	name = "Psydonic Full-Plate, Hauberked (+ Psydonic Plate-And-Maille, +2 Blessed Silver, +2 Cured Leather)"
 	req_bar = /obj/item/ingot/silverblessed
 	additional_items = list(/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/ornate, /obj/item/ingot/silverblessed, /obj/item/ingot/silverblessed, /obj/item/natural/hide/cured, /obj/item/natural/hide/cured)
 	created_item = /obj/item/clothing/suit/roguetown/armor/plate/full/fluted/ornate
@@ -1432,7 +1432,7 @@
 	display_category = ITEM_CAT_ARMOR_CHESTPIECES
 
 /datum/anvil_recipe/armor/blessedsilver/psyfullplatealt/inq
-	name = "Psydonic Full-Plate, Hauberked (+ Psydonic Hauberk, +2 Blessed Silver, +2 Cured Leather)"
+	name = "Psydonic Full-Plate, Hauberked (+ Psydonic Plate-And-Maille, +2 Blessed Silver, +2 Cured Leather)"
 	req_bar = /obj/item/ingot/silverblessed/bullion
 	additional_items = list(/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/ornate, /obj/item/ingot/silverblessed/bullion, /obj/item/ingot/silverblessed/bullion, /obj/item/natural/hide/cured, /obj/item/natural/hide/cured)
 	created_item = /obj/item/clothing/suit/roguetown/armor/plate/full/fluted/ornate
