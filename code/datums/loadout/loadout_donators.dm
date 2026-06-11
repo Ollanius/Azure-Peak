@@ -14,87 +14,87 @@
 	donator_unlocked = TRUE
 
 /datum/loadout_item/donator/universal/azurosa
-	name = "Universal Donator Kit - Azurosa Flower"
+	name = "Gift - Azurosa Flower"
 	path = /obj/item/alch/rosa/azure
 
 /datum/loadout_item/donator/universal/azurosa_seeds
-	name = "Universal Donator Kit - Azurosa Flower, Seeds"
+	name = "Gift - Azurosa Flower, Seeds"
 	path = /obj/item/storage/belt/rogue/pouch/azurosa_seeds
 
 /datum/loadout_item/donator/universal/azurosa_crown
-	name = "Universal Donator Kit - Azurosa Flowers, Crown"
+	name = "Gift - Azurosa Flowers, Crown"
 	path = /obj/item/flowercrown/rosa/azure
 
 /datum/loadout_item/donator/universal/azurosa_bouquet
-	name = "Universal Donator Kit - Azurosa Flowers, Bouquet"
+	name = "Gift - Azurosa Flowers, Bouquet"
 	path = /obj/item/bouquet/rosa/azure
 
 /datum/loadout_item/donator/universal/cackledagger
-	name = "Universal Donator Kit - Cackledagger"
+	name = "Gift - Kit, Cackledagger"
 	path = /obj/item/enchantingkit/cackledagger
 
 /datum/loadout_item/donator/universal/longsword
-	name = "Universal Donator Kit - Longsword, Elegant"
+	name = "Gift - Kit, Elegant Longsword"
 	path = /obj/item/enchantingkit/weapon/donator_longsword
 
 /datum/loadout_item/donator/universal/longsword_imbued
-	name = "Universal Donator Kit - Longsword, Imbued"
+	name = "Gift - Kit, Imbued Longsword"
 	path = /obj/item/enchantingkit/weapon/donator_imbuedlongsword
 
 /datum/loadout_item/donator/universal/cloak_goldmaillekini
-	name = "Universal Donator Kit - Golden Maillekini"
+	name = "Gift - Golden Maillekini"
 	path = /obj/item/clothing/cloak/donator_goldmaillekini
 
 /datum/loadout_item/donator/universal/maille_chainkini
-	name = "Universal Donator Kit - Maillekini"
+	name = "Gift - Kit, Maillekini"
 	path = /obj/item/enchantingkit/maillekini
 
 /datum/loadout_item/donator/universal/highheelshoes
-	name = "Universal Donator Kit - High-Heeled Shoes"
+	name = "Gift - High-Heeled Shoes"
 	path = /obj/item/clothing/shoes/roguetown/simpleshoes/heels
 
 /datum/loadout_item/donator/universal/highheelshoes_gold
-	name = "Universal Donator Kit - High-Heeled Shoes, Gold"
+	name = "Gift - High-Heeled Shoes, Gold"
 	path = /obj/item/clothing/shoes/roguetown/simpleshoes/heels/donator_gold
 
 /datum/loadout_item/donator/universal/highheelshoes_silver
-	name = "Universal Donator Kit - High-Heeled Shoes, Silver"
+	name = "Gift - High-Heeled Shoes, Silver"
 	path = /obj/item/clothing/shoes/roguetown/simpleshoes/heels/donator_silver
 
 /datum/loadout_item/donator/universal/jadehalfmask_donator
-	name = "Universal Donator Kit - Jade Halfask"
+	name = "Gift - Kit, Jade Halfask"
 	path = /obj/item/enchantingkit/jadehalfmask
 
 /datum/loadout_item/donator/universal/maille_cropped
-	name = "Universal Donator Kit - Cropped Haubergeon"
+	name = "Gift - Kit, Cropped Haubergeon"
 	path = /obj/item/enchantingkit/croppedhaubergeon
 
 /datum/loadout_item/donator/universal/cuirass_heartplate
-	name = "Universal Donator Kit - Heartplate"
+	name = "Gift - Kit, Heartplate"
 	path = /obj/item/enchantingkit/heartplate
 
 /datum/loadout_item/donator/universal/cuirass_plackart
-	name = "Universal Donator Kit - Plackart"
+	name = "Gift - Kit, Plackart"
 	path = /obj/item/enchantingkit/plackart
 
 /datum/loadout_item/donator/universal/cuirass_throwback
-	name = "Universal Donator Kit - Throwback Vests"
+	name = "Gift - Kit, Throwback Vests"
 	path = /obj/item/enchantingkit/throwbackvests
 
 /datum/loadout_item/donator/universal/belt
-	name = "Universal Donator Kit - Belt of Caped Leather"
+	name = "Gift - Kit, Belt of Caped Leather"
 	path = /obj/item/enchantingkit/beltleather
 
 /datum/loadout_item/donator/universal/belt_fur
-	name = "Universal Donator Kit - Belt of Caped Fur"
+	name = "Gift - Kit, Belt of Caped Fur"
 	path = /obj/item/enchantingkit/beltfur
 
 /datum/loadout_item/donator/universal/belt_iron
-	name = "Universal Donator Kit - Belt of Iron Maille"
+	name = "Gift - Kit, Belt of Iron Maille"
 	path = /obj/item/enchantingkit/beltironmaille
 
 /datum/loadout_item/donator/universal/belt_steel
-	name = "Universal Donator Kit - Belt of Maille"
+	name = "Gift - Kit, Belt of Maille"
 	path = /obj/item/enchantingkit/beltsteelmaille
 
 /////////////////////////////
