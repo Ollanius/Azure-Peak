@@ -7,15 +7,7 @@
 	max_integrity = ARMOR_INT_CHEST_LIGHT_STEEL
 	armor_class = ARMOR_CLASS_LIGHT
 	body_parts_covered = COVERAGE_TORSO
-	adjustable = CAN_CADJUST
-
-/obj/item/clothing/suit/roguetown/armor/chainmail/light/ComponentInitialize()
-	..()
-	AddComponent(/datum/component/adjustable_clothing, CHEST, null, null, 'sound/foley/equip/equip_armor_chain.ogg', null, null)
-
-/obj/item/clothing/suit/roguetown/armor/chainmail/light/get_mechanics_examine(mob/user)
-	. = ..()
-	. += span_info("Right click to adjust the haubyrine's coverage; it can either cover the entire torso, or be tightened up to just cover the chest.")
+	//adjustable = CAN_CADJUST
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/light/iron
 	name = "iron haubyrnie"
@@ -23,6 +15,14 @@
 	blouse, yet tough enough to thwart the razor-sharp edges of unwelcomed company. Fit for ignobility."
 	icon_state = "ihaubyrnie"
 	max_integrity = ARMOR_INT_CHEST_LIGHT_IRON
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/light/cropped
+	icon_state = "haubyrnie_t"
+	body_parts_covered = CHEST
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/light/iron/cropped
+	icon_state = "ihaubyrnie_t"
+	body_parts_covered = CHEST
 
 //MEDIUM ARMOR - HAUBERGEON//
 /obj/item/clothing/suit/roguetown/armor/chainmail

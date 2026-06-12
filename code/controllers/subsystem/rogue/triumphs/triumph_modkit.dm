@@ -259,6 +259,15 @@
 		)
 	result_item = /obj/item/rogueweapon/example/clericsword
 
+/obj/item/enchantingkit/triumph_armorkit_croptop //Explicitly temporary, until someone can figure out how to make adjustable armor work.
+	name = "'Cropped Haubyrnie' armor morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of an Iron Haubyrnie, or a Steel Haubyrnie."
+	target_items = list(
+		/obj/item/clothing/suit/roguetown/armor/chainmail/light					= /obj/item/clothing/suit/roguetown/armor/chainmail/light/cropped,
+		/obj/item/clothing/suit/roguetown/armor/chainmail/light/iron			= /obj/item/clothing/suit/roguetown/armor/chainmail/light/iron/cropped
+		)
+	result_item = null
+
 //////////////////////////////
 // TRIUMPH-RESKIN EXAMPLES! //
 //////////////////////////////
