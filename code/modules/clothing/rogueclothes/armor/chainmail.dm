@@ -15,6 +15,7 @@
 	blouse, yet tough enough to thwart the razor-sharp edges of unwelcomed company. Fit for ignobility."
 	icon_state = "ihaubyrnie"
 	max_integrity = ARMOR_INT_CHEST_LIGHT_IRON
+	smeltresult = /obj/item/ingot/iron
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/light/cropped
 	icon_state = "haubyrnie_t"
