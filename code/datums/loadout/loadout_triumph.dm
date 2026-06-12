@@ -347,7 +347,7 @@
 /datum/loadout_item/triumph_armorkit_croptop
 	name = "Morphing Elixir, 'Cropped Haubyrnie'"
 	path = /obj/item/enchantingkit/triumph_armorkit_croptop
-	triumph_cost = 3 //Explicitly temporary, until someone can figure out how to make adjustable armor work.
+	triumph_cost = 1 //Explicitly temporary, until someone can figure out how to make adjustable armor work.
 	sort_category = "Triumphs"
 
 //////////////////
