@@ -9,7 +9,7 @@
 	body_parts_covered = COVERAGE_TORSO
 	flags_inv = HIDEBOOB //Let it hang, sire.
 	adjustable = CAN_CADJUST
-	toggle_icon_sprite = TRUE
+	toggle_icon_state = TRUE
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/light/ComponentInitialize()
 	..()
