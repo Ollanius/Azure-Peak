@@ -338,18 +338,6 @@
 	triumph_cost = 3
 	sort_category = "Triumphs"
 
-/datum/loadout_item/triumph_weaponkit_clericsword
-	name = "Morphing Elixir, 'Clerical Longsword'"
-	path = /obj/item/enchantingkit/weapon/triumph_weaponkit_clericsword
-	triumph_cost = 3
-	sort_category = "Triumphs"
-
-/datum/loadout_item/triumph_armorkit_croptop
-	name = "Morphing Elixir, 'Cropped Haubyrnie'"
-	path = /obj/item/enchantingkit/triumph_armorkit_croptop
-	triumph_cost = 1 //Explicitly temporary, until someone can figure out how to make adjustable armor work.
-	sort_category = "Triumphs"
-
 //////////////////
 //  PERFUMES !  //
 //////////////////

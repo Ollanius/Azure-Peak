@@ -2,7 +2,7 @@
 /obj/item/clothing/suit/roguetown/armor/chainmail/light
 	name = "haubyrnie"
 	desc = "A sleeveless maille shirt, fashioned from dozens of interlinked steel rings. It's light enough to comfortably tuck underneath a \
-	blouse, yet tough enough to thwart the razor-sharp edges of unwelcomed company. Fit for nobility."
+	blouse, yet tough enough to thwart the razor-sharp edges of unwelcomed company. For the discerning nobleman."
 	icon_state = "haubyrnie"
 	max_integrity = ARMOR_INT_CHEST_LIGHT_STEEL
 	armor_class = ARMOR_CLASS_LIGHT
@@ -17,23 +17,15 @@
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/light/get_mechanics_examine(mob/user)
 	. = ..()
-	. += span_info("Right click to adjust the haubyrine's coverage; it can either cover the entire torso, or be tightened up to just cover the chest.")
+	. += span_info("RMB to adjust the haubyrine's coverage; it can either cover the entire torso, or be tightened up to just cover the chest.")
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/light/iron
 	name = "iron haubyrnie"
 	desc = "A sleeveless maille shirt, fashioned from dozens of interlinked iron rings. It's light enough to comfortably tuck underneath a \
-	blouse, yet tough enough to thwart the razor-sharp edges of unwelcomed company. Fit for ignobility."
+	blouse, yet tough enough to thwart the razor-sharp edges of unwelcomed company. For the discerning peasant."
 	icon_state = "ihaubyrnie"
 	max_integrity = ARMOR_INT_CHEST_LIGHT_IRON
 	smeltresult = /obj/item/ingot/iron
-
-/obj/item/clothing/suit/roguetown/armor/chainmail/light/cropped
-	icon_state = "haubyrnie_t"
-	body_parts_covered = CHEST
-
-/obj/item/clothing/suit/roguetown/armor/chainmail/light/iron/cropped
-	icon_state = "ihaubyrnie_t"
-	body_parts_covered = CHEST //Remove these two if-or-when we can get the adjustable thing working.
 
 //MEDIUM ARMOR - HAUBERGEON//
 /obj/item/clothing/suit/roguetown/armor/chainmail
