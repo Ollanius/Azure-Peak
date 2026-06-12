@@ -306,9 +306,7 @@
 
 /obj/item/clothing/shoes/roguetown/boots/armor
 	name = "plated boots"
-	desc = "Custom-fitted sabatons, made from a series of interlinking steel plates. The only weakness it has, beyond its inaffordability \
-	amongst those of ignobility, is its inability to properly stand firm across softer surfaces. There's a very good reason as to why \
-	you'd rarely see a knight treading the Terrorbog's muddied paths, after all."
+	desc = "Alloyed sabatons, fitted to guard one's toes from blows-most-unpleasant."
 	body_parts_covered = FEET
 	icon_state = "armorboots"
 	item_state = "armorboots"
@@ -326,56 +324,6 @@
 /obj/item/clothing/shoes/roguetown/boots/armor/ComponentInitialize()
 	AddComponent(/datum/component/armour_filtering/negative, TRAIT_FENCERDEXTERITY)
 	AddComponent(/datum/component/armour_filtering/negative, TRAIT_HONORBOUND)
-
-/obj/item/clothing/shoes/roguetown/boots/armor/iron
-	name = "iron plated boots"
-	desc = "Antiquated sabatons, fitted to leather boots that've been reinforced with layers of iron maille. While it has largely fallen \
-	out of favor with Psydonia's knights since the advent of custom-fitted steel sabatons, it nevertheless remains an excellent choice \
-	for those who'd rather not catch an career-ending arrow to the knee."
-	body_parts_covered = FEET
-	icon_state = "iplateboots"
-	item_state = "iplateboots"
-	color = null
-	blocksound = PLATEHIT
-	max_integrity = ARMOR_INT_SIDE_IRON
-	armor = ARMOR_PLATE
-	anvilrepair = /datum/skill/craft/armorsmithing
-	smeltresult = /obj/item/ingot/iron
-
-/obj/item/clothing/shoes/roguetown/boots/maille
-	name = "maille boots"
-	desc = "A pair of leather boots, reinforced with smaller steel plates along the feet and ankles. Woven into the top of each boot's cuff is a \
-	thick layer of chainmail, which further protects the wearer's lower legs from harm. A favorite amongst men-at-arms and clerics, alongside the \
-	occassional plucky squire that's a few sizes too short to properly wade in them."
-	body_parts_covered = FEET
-	icon_state = "shalfplateboots"
-	item_state = "shalfplateboots"
-	color = null
-	max_integrity = ARMOR_INT_SIDE_STEEL
-	armor = ARMOR_MAILLE
-	resistance_flags = FIRE_PROOF
-	blocksound = CHAINHIT
-	break_sound = 'sound/foley/breaksound.ogg'
-	drop_sound = 'sound/foley/dropsound/chain_drop.ogg'
-	pickup_sound = 'sound/foley/equip/equip_armor_chain.ogg'
-	equip_sound = 'sound/foley/equip/equip_armor_chain.ogg'
-	anvilrepair = /datum/skill/craft/armorsmithing
-	sewrepair = FALSE
-	smeltresult = /obj/item/ingot/steel
-
-/obj/item/clothing/shoes/roguetown/boots/maille/ComponentInitialize()
-	AddComponent(/datum/component/armour_filtering/negative, TRAIT_FENCERDEXTERITY)
-	AddComponent(/datum/component/armour_filtering/negative, TRAIT_HONORBOUND)
-
-/obj/item/clothing/shoes/roguetown/boots/maille/iron
-	name = "iron maille boots"
-	desc = "A pair of leather boots, reinforced with smaller iron plates along the feet and ankles. A thick layer of chainmail has been woven across \
-	the cuffs of each boot, and tastefully riveted into place. Colloquially known as 'soldier's boots', due to its widespread usage amongst Psydonia's \
-	oft-conscripted levies."
-	icon_state = "soldierboots"
-	item_state = "soldierboots"
-	max_integrity = ARMOR_INT_SIDE_IRON
-	smeltresult = /obj/item/ingot/iron
 
 /obj/item/clothing/shoes/roguetown/boots/armor/gold
 	name = "golden greaves"
@@ -468,6 +416,19 @@
 	armor = ARMOR_PLATE_BSTEEL
 	armor_class = ARMOR_CLASS_MEDIUM
 	smeltresult = /obj/item/ingot/avantyne
+
+/obj/item/clothing/shoes/roguetown/boots/armor/iron
+	name = "light plated boots"
+	desc = "A pair of boots, further reinforced with leather-strapped plates."
+	body_parts_covered = FEET
+	icon_state = "soldierboots"
+	item_state = "soldierboots"
+	color = null
+	blocksound = PLATEHIT
+	max_integrity = ARMOR_INT_SIDE_IRON
+	armor = ARMOR_PLATE
+	anvilrepair = /datum/skill/craft/armorsmithing
+	smeltresult = /obj/item/ingot/iron
 
 /obj/item/clothing/shoes/roguetown/boots/leather/reinforced/kazengun
 	name = "armored sandals"
