@@ -68,32 +68,64 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 
 /obj/item/bouquet/rosa/azure
 	name = "azurosa bouquet"
-	desc = "Azurian affections bundled together in string."
+	desc = "Azurian affections bundled together in string, most popularly seen in the grand tournmanets that're \
+	hosted, every yil, at the summer's solstice. Should a jousting knight successfully catch such a bouquet during \
+	their charge, they're surely to be blessed with incoming fortune by a higher power; that, or they might just \
+	be particularly dextrous."
 	icon = 'icons/obj/items/donor_objects.dmi'
 	item_state = "azurosa_bouquet"
 	icon_state = "azurosa_bouquet"
 
 /obj/item/reagent_containers/food/snacks/grown/rogue/rosa_petals/azure
 	name = "fresh azurosa petals"
-	desc = "Crushed azurosa petals. Edible."
+	desc = "Crushed azurosa petals, teeming with a sweet fragrance. Long ago, Azuria's original settlers used these herbs \
+	as an antiquated treatment for poisonings and sickness. Though alchemical solutions are more popular nowadaes, those who \
+	grew up in Azuria's highest peaks might still remember chewing on these leaves in their youngest yils, to riposte fell humors."
 	icon = 'icons/obj/items/donor_objects.dmi'
 	icon_state = "azurosa_petal"
 	tastes = list("pleasantly mild sweetness" = 1)
 	bitesize = 1
-	list_reagents = list(/datum/reagent/consumable/nutriment = 2)
+	list_reagents = list(/datum/reagent/consumable/nutriment = 3, /datum/reagent/medicine/antidote = 2)
 	rotprocess = null
 	w_class = WEIGHT_CLASS_TINY
 
 /obj/item/reagent_containers/food/snacks/grown/rogue/rosa_petals_dried/azure
 	name = "dried azurosa petals"
-	desc = "Dried azurosa petals, can be used to brew tea."
+	desc = "Dried azurosa petals, fragrant and fragile. When dried out on a tanning rack and steeped in \
+	boiling water for long enough, these petals brew into a bright herbal tea; a cultural delight, commonly \
+	served to visiting diplomats and to those who're recovering from both injury-and-malaise alike."
 	icon = 'icons/obj/items/donor_objects.dmi'
 	icon_state = "azurosa_petal_dry"
 	tastes = list("pleasantly mild sweetness" = 1)
 	bitesize = 1
-	list_reagents = list(/datum/reagent/consumable/nutriment = 2)
+	list_reagents = list(/datum/reagent/consumable/nutriment = 3, /datum/reagent/medicine/antidote = 2)
 	rotprocess = null
 	w_class = WEIGHT_CLASS_TINY
+
+/datum/reagent/water/azurosa_tea
+	name = "azurosa tea"
+	description = "A herbal tea that's been brewed from steeped-and-dried azurosa petals, providing slightly more health regeneration and antidotal properties."
+	reagent_state = LIQUID
+	color = "#5e50e9"
+	taste_description = "pleasantly floral sweetness"
+	overdose_threshold = 0
+	metabolization_rate = REAGENTS_METABOLISM
+	alpha = 173
+
+/datum/reagent/water/azurosa_tea/on_mob_life(mob/living/carbon/M)
+	. = ..()
+	if (M.mob_biotypes & MOB_BEAST)
+		M.adjustFireLoss(0.5  * REAGENTS_EFFECT_MULTIPLIER)
+	else
+		M.adjustBruteLoss(-0.3  * REAGENTS_EFFECT_MULTIPLIER)
+		M.adjustFireLoss(-0.3  * REAGENTS_EFFECT_MULTIPLIER)
+		M.adjustOxyLoss(-0.3, 0)
+		M.adjustToxLoss(-3, 0)
+		var/list/our_wounds = M.get_wounds()
+		if (LAZYLEN(our_wounds))
+			var/upd = M.heal_wounds(1)
+			if (upd)
+				M.update_damage_overlays()
 
 /datum/crafting_recipe/roguetown/dryazurrosa
 	name = "dry azurosa petals"
