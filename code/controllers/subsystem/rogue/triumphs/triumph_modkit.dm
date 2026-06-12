@@ -8,7 +8,7 @@
 // No harm in using these if you prefer, but it's strongly suggested to implement reskins via the 'Skinned' system, below. This works best for clothing (like plate armor) and special weapons (like silver or avantyne.)
 
 /obj/item/enchantingkit/triumph_armorkit
-	name = "'Valorian Armor' morphing elixir"
+	name = "'Valorian Steel Armor' morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can restore the original appearance of a Steel Cuirass, a Steel Halfplate, a set of Steel Plate Armor, or a set of Fluted Plate Armor."
 	target_items = list(
 		/obj/item/clothing/suit/roguetown/armor/plate/cuirass 		= /obj/item/clothing/suit/roguetown/armor/plate/cuirass/legacy,
@@ -19,7 +19,7 @@
 	result_item = null
 
 /obj/item/enchantingkit/triumph_armorkit_drow
-	name = "'Drowcraft' morphing elixir"
+	name = "'Drowcraft Armor' morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a set of Hardened Leather Armor, or a set of Studded Leather Armor."
 	target_items = list(
 		/obj/item/clothing/suit/roguetown/armor/leather/heavy 		= /obj/item/clothing/suit/roguetown/armor/leather/heavy/shadowvest,
@@ -44,7 +44,7 @@
 		/obj/item/rogueweapon/stoneaxe/woodcut/bronze					= /obj/item/rogueweapon/stoneaxe/woodcut/bronze/triumph,
 		/obj/item/rogueweapon/stoneaxe/woodcut/silver					= /obj/item/rogueweapon/stoneaxe/woodcut/silver/triumph,
 		/obj/item/rogueweapon/stoneaxe/battle/psyaxe					= /obj/item/rogueweapon/stoneaxe/battle/psyaxe/triumph,
-		/obj/item/rogueweapon/stoneaxe/woodcut							= /obj/item/rogueweapon/stoneaxe/woodcut/triumphalt,
+		/obj/item/rogueweapon/stoneaxe/woodcut							= /obj/item/rogueweapon/stoneaxe/woodcut/triumph_doublehead,
 		/obj/item/rogueweapon/stoneaxe/battle	  						= /obj/item/rogueweapon/stoneaxe/battle/triumph
 		)
 	result_item = null
@@ -143,7 +143,6 @@
 		/obj/item/rogueweapon/sword/sabre/shamshir = /obj/item/rogueweapon/sword/sabre/shamshir/dono_scidragon_flame
 	)
 	
-
 /obj/item/enchantingkit/sci_sand
 	name = "'Sandlash' morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Shamshir."
@@ -252,7 +251,7 @@
 	result_item = /obj/item/rogueweapon/example/sengese
 
 /obj/item/enchantingkit/weapon/triumph_weaponkit_clericsword
-	name = "'Crusaderblade' morphing elixir"
+	name = "'Anointed Longsword' morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Steel Longsword."
 	target_items = list(
 		/obj/item/rogueweapon/sword/long,
@@ -641,7 +640,7 @@
 	icon_state = "hatchetlegacy"
 	desc = "'What is that rag for, anyways?'"
 
-/obj/item/rogueweapon/stoneaxe/woodcut/triumphalt
+/obj/item/rogueweapon/stoneaxe/woodcut/triumph_doublehead
 	name = "double-headed axe"
 	desc = "'For Karl!'"
 	icon_state = "axedouble"
