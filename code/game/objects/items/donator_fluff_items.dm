@@ -265,6 +265,106 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 	item_state = "plackartleather"
 	icon_state = "plackartleather"
 
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/donator_gothic
+	name = "gothic cuirass"
+	desc = "A magnificent steel cuirass, assembled by an Azurian mastersmith. The intricate fluting and interlocked plates are clear \
+	signs of its Grenzelhoftian heritage; expensive, but second-to-none when it comes to what truly matters in life."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "gcuirass"
+	icon_state = "gcuirass"
+
+/obj/item/clothing/suit/roguetown/armor/plate/donator_gothic
+	name = "gothic half-plate"
+	desc = "A magnificent steel cuirass, fitted with tassets and assembled by an Azurian mastersmith. The intricate fluting \
+	and interlocked plates are clear signs of its Grenzelhoftian heritage; expensive, but second-to-none when it comes to what \
+	truly matters in life."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "ghalfplate"
+	icon_state = "ghalfplate"
+
+/obj/item/clothing/suit/roguetown/armor/plate/full/donator_gothic
+	name = "gothic plate armor"
+	desc = "A magnificent set of steel plate armor, assembled by an Azurian mastersmith. The intricate fluting \
+	and interlocked plates are clear signs of its Grenzelhoftian heritage; expensive, but second-to-none when it comes to what \
+	truly matters in life."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+	item_state = "gplate"
+	icon_state = "gplate"
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/heavy/donator_gothic
+	name = "gothic plate-and-maille"
+	desc = "A magnificent steel cuirass, fitted atop a hauberk and assembled by an Azurian mastersmith. The intricate fluting \
+	and interlocked plates are clear signs of its Grenzelhoftian heritage; expensive, but second-to-none when it comes to what \
+	truly matters in life."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+	item_state = "gcuirasshauberk"
+	icon_state = "gcuirasshauberk"
+
+/datum/crafting_recipe/roguetown/survival/gothicmailledhauberk
+	name = "layer a gothic cuirass atop hauberk"
+	result = list(/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/heavy/donator_gothic)
+	reqs = list(/obj/item/clothing/suit/roguetown/armor/plate/cuirass/donator_gothic = 1,
+	            /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk = 1)
+	craftdiff = 0 
+	req_table = TRUE
+	bypass_dupe_test = TRUE
+
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/iron/donator_gothic
+	name = "gothic iron cuirass"
+	desc = "A magnificent iron cuirass, assembled by an Azurian mastersmith. The intricate fluting and interlocked plates are clear \
+	signs of its Grenzelhoftian heritage; expensive, but second-to-none when it comes to what truly matters in life."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "igcuirass"
+	icon_state = "igcuirass"
+
+/obj/item/clothing/suit/roguetown/armor/plate/iron/donator_gothic
+	name = "gothic iron half-plate"
+	desc = "A magnificent iron cuirass, fitted with tassets and assembled by an Azurian mastersmith. The intricate fluting \
+	and interlocked plates are clear signs of its Grenzelhoftian heritage; expensive, but second-to-none when it comes to what \
+	truly matters in life."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "ighalfplate"
+	icon_state = "ighalfplate"
+
+/obj/item/clothing/suit/roguetown/armor/plate/full/iron/donator_gothic
+	name = "gothic iron plate armor"
+	desc = "A magnificent set of iron plate armor, assembled by an Azurian mastersmith. The intricate fluting \
+	and interlocked plates are clear signs of its Grenzelhoftian heritage; expensive, but second-to-none when it comes to what \
+	truly matters in life."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+	item_state = "igplate"
+	icon_state = "igplate"
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/iron/heavy/donator_gothic
+	name = "gothic iron plate-and-maille"
+	desc = "A magnificent iron cuirass, fitted atop a hauberk and assembled by an Azurian mastersmith. The intricate fluting \
+	and interlocked plates are clear signs of its Grenzelhoftian heritage; expensive, but second-to-none when it comes to what \
+	truly matters in life."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+	item_state = "igcuirasshauberk"
+	icon_state = "igcuirasshauberk"
+
+/datum/crafting_recipe/roguetown/survival/gothicironmailledhauberk
+	name = "layer a gothic iron cuirass atop hauberk"
+	result = list(/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/iron/heavy/donator_gothic)
+	reqs = list(/obj/item/clothing/suit/roguetown/armor/plate/cuirass/iron/donator_gothic = 1,
+	            /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/iron = 1)
+	craftdiff = 0 
+	req_table = TRUE
+	bypass_dupe_test = TRUE
+
 /obj/item/storage/belt/rogue/leather/donator
 	name = "belt of caped leathers"
 	desc = "A fine leather belt that's been decorated with a skirt of thin leather strips."

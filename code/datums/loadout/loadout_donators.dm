@@ -81,6 +81,10 @@
 	name = "Gift - Kit, Plackart"
 	path = /obj/item/enchantingkit/plackart
 
+/datum/loadout_item/donator/universal/armor_gothic_iron
+	name = "Gift - Kit, Gothic Iron Armor"
+	path = /obj/item/enchantingkit/gothicironarmor
+
 /datum/loadout_item/donator/universal/armor_gothic_steel
 	name = "Gift - Kit, Gothic Steel Armor"
 	path = /obj/item/enchantingkit/gothicsteelarmor
