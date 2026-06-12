@@ -94,21 +94,26 @@
 	name = "Gift - Kit, Heroic Leather Cuirass"
 	path = /obj/item/enchantingkit/heroicleathercuirass
 
+//Brief explanation - as Spear found out, using a Morphing Elixir on a storage item works.. but permenantly deletes -anything- stored inside.
+//To prevent any chance of someone accidentally destroying a round-important item, I'm replacing the kits with the main thing..
+// ..for now(?). If someone else comes around and adds a check that prevents belts with stored items inside from being transformed, then they can -
+// - restore the original Morphing Elixir filepaths, saved below.______qdel_list_wrapper(list/L)
+
 /datum/loadout_item/donator/universal/belt
 	name = "Gift - Kit, Belt of Caped Leather"
-	path = /obj/item/enchantingkit/beltleather
+	path = /obj/item/storage/belt/rogue/leather/donator //If-or-when the aforementioned bug's fixed, replace this with /obj/item/enchantingkit/beltleather.
 
 /datum/loadout_item/donator/universal/belt_fur
 	name = "Gift - Kit, Belt of Caped Fur"
-	path = /obj/item/enchantingkit/beltfur
+	path = /obj/item/storage/belt/rogue/leather/donator_fur //If-or-when the aforementioned bug's fixed, replace this with /obj/item/enchantingkit/beltfur.
 
 /datum/loadout_item/donator/universal/belt_iron
 	name = "Gift - Kit, Belt of Iron Maille"
-	path = /obj/item/enchantingkit/beltironmaille
+	path = /obj/item/storage/belt/rogue/leather/donator_steel //If-or-when the aforementioned bug's fixed, replace this with /obj/item/enchantingkit/beltironmaille.
 
 /datum/loadout_item/donator/universal/belt_steel
 	name = "Gift - Kit, Belt of Maille"
-	path = /obj/item/enchantingkit/beltsteelmaille
+	path = /obj/item/storage/belt/rogue/leather/donator_iron //If-or-when the aforementioned bug's fixed, replace this with /obj/item/enchantingkit/beltsteelmaille.
 
 /////////////////////////////
 // ! Player / Donor Kits ! //
