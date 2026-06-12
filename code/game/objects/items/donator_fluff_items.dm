@@ -1469,3 +1469,4 @@ As Excaliber."
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	item_state = "ollanius_hoeburk"
 	icon_state = "ollanius_hoeburk"
+	flags_inv = HIDEBOOB

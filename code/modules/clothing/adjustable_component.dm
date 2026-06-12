@@ -128,3 +128,14 @@
 	if(update_flags & UPD_MASK)
 		H.update_inv_wear_mask()
 		return
+	 if(update_flags & (UPD_CHEST|UPD_ARMOR))  
+        H.update_inv_shirt()
+		H.update_inv_armor()
+        return
+    if(update_flags & UPD_CHEST)  
+        H.update_inv_shirt()
+        return
+	if(update_flags & UPD_ARMOR)  
+        H.update_inv_armor()
+        return
+				
