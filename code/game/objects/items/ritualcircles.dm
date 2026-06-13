@@ -2027,7 +2027,7 @@
 	name = "Rune of Hedonism"
 	desc = "A holy rune of Baotha. </br> <i>Relief for the broken hearted.</i>"
 	icon_state = "baotha_chalky"
-	var/baotharites = list("Rite of Armaments", "Joybringer")
+	var/baothanrites = list("Rite of Armaments", "Joybringer")
 
 /obj/structure/ritualcircle/baotha/attack_hand(mob/living/user)
 	if(!..())
@@ -2041,7 +2041,7 @@
 	if(user.has_status_effect(/datum/status_effect/debuff/ritesexpended))
 		to_chat(user,span_warning("I have performed enough rituals for the day... I must rest before communing more."))
 		return
-	var/riteselection = input(user, "Rituals of Indulgence", src) as null|anything in baotharites
+	var/riteselection = input(user, "Rituals of Indulgence", src) as null|anything in baothanrites
 	switch(riteselection) // put ur rite selection here
 		if("Rite of Armaments")
 			if(user.has_status_effect(/datum/status_effect/debuff/armamentrites))
@@ -2111,7 +2111,7 @@
 	loc.visible_message(span_cult("[target]'s lux gushes out from their mouth, splashing onto the rune and causing the chalk to fizzle into prismatic smoke; and once it clears, their ascended presence is made clear!"))
 	spawn(20)
 		playsound(loc, 'sound/combat/hits/onmetal/grille (2).ogg', 50)
-		target.equipOutfit(/datum/outfit/job/roguetown/saccharinerite)
+		target.equipOutfit(/datum/outfit/job/roguetown/baothanrite)
 		tag_kit_items(target, list(
 			"armor" = target.get_item_by_slot(SLOT_ARMOR),
 			"shirt" = target.get_item_by_slot(SLOT_SHIRT),
@@ -2127,7 +2127,7 @@
 		spawn(40)
 			to_chat(target, span_cult("Live deliciously."))
 
-/datum/outfit/job/roguetown/saccharinerite/medium/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/roguetown/baothanrite/medium/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	head = /obj/item/clothing/head/roguetown/helmet/baotha
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/fluted/baotha
