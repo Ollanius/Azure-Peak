@@ -2028,7 +2028,6 @@
 	desc = "A holy rune of Baotha. </br> <i>Relief for the broken hearted.</i>"
 	icon_state = "baotha_chalky"
 	var/baotharites = list("Rite of Armaments", "Joybringer")
-	allowed_patron = /datum/patron/inhumen/baotha
 
 /obj/structure/ritualcircle/baotha/attack_hand(mob/living/user)
 	if(!..())
