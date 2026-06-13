@@ -105,6 +105,18 @@
 	triumph_cost = 3
 	sort_category = "Triumphs"
 
+/datum/loadout_item/triumph_steelbelt
+	name = "Belt of Steel"
+	path = /obj/item/storage/belt/rogue/leather/steel
+	triumph_cost = 3
+	sort_category = "Triumphs"
+
+/datum/loadout_item/triumph_plaquesilverbelt
+	name = "Belt of Plaque, Silver"
+	path = /obj/item/storage/belt/rogue/leather/plaquesilver
+	triumph_cost = 3
+	sort_category = "Triumphs"
+
 // -5 TRI
 /datum/loadout_item/triumph_shortsatchel
 	name = "Short Satchel"
@@ -277,6 +289,18 @@
 /datum/loadout_item/triumph_royalsleeves
 	name = "Royal Sleeves"
 	path = /obj/item/clothing/wrists/roguetown/royalsleeves
+	triumph_cost = 5
+	sort_category = "Triumphs"
+
+/datum/loadout_item/triumph_tassetsteelbelt
+	name = "Belt of Steel, Tasseted"
+	path = /obj/item/storage/belt/rogue/leather/steel/tasset
+	triumph_cost = 5
+	sort_category = "Triumphs"
+
+/datum/loadout_item/triumph_plaquegoldenbelt
+	name = "Belt of Plaque, Golden"
+	path = /obj/item/storage/belt/rogue/leather/plaquegold
 	triumph_cost = 5
 	sort_category = "Triumphs"
 
