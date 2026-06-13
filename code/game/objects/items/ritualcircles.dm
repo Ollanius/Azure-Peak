@@ -352,7 +352,7 @@
 /obj/structure/ritualcircle/dendor
 	name = "Rune of Beasts"
 	icon_state = "dendor_chalky"
-	desc = "A holy rune of Dendor. </br> <i>Becoming one with nature is to connect with ones true instinct.</i>"
+	desc = "A holy rune of Dendor. </br> <i>To become one with nature is to connect with one's true instinct.</i>"
 	var/dendorrites = list ("Rite of the Lesser Volf")
 
 /obj/structure/ritualcircle/dendor/attack_hand(mob/living/user)
@@ -2069,6 +2069,8 @@
 				return
 			icon_state = "baotha_active"
 			user.apply_status_effect(/datum/status_effect/debuff/ritesexpended)
+			ADD_TRAIT(target, TRAIT_NOPAIN, TRAIT_RITUAL)
+			ADD_TRAIT(target, TRAIT_DODGEEXPERT, TRAIT_RITUAL)
 			var/is_heretic = istype(user.mind?.picked_advclass, /datum/advclass/wretch/heretic)
 			if(is_heretic)
 				user.apply_status_effect(/datum/status_effect/debuff/armamentrites)
@@ -2095,7 +2097,7 @@
 			playsound(loc, 'sound/misc/evilevent.ogg', 100, FALSE, -1)
 			user.apply_status_effect(/datum/status_effect/debuff/ritesexpended)
 			user.apply_status_effect(/datum/status_effect/joybringer)
-		
+	
 			return TRUE
 
 /obj/structure/ritualcircle/baotha/proc/baothaarmaments(mob/living/carbon/human/target)
@@ -2128,6 +2130,7 @@
 
 /datum/outfit/job/roguetown/saccharinerite/medium/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
+	head = /obj/item/clothing/head/roguetown/helmet/baotha
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/fluted/baotha
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/baotha
 	pants = /obj/item/clothing/under/roguetown/skirt/baotha
@@ -2135,19 +2138,149 @@
 	gloves = /obj/item/clothing/gloves/roguetown/plate/baotha
 	neck = /obj/item/clothing/neck/roguetown/coif/baotha
 	r_hand = /obj/item/rogueweapon/spear/partizan/baotha
-	l_hand = /obj/item/reagent_containers/glass/cup/golden/baotha
 
 	H.mind.RemoveSpell(new /datum/action/cooldown/spell/mending/lesser)
 
 //
-/obj/item/clothing/suit/roguetown/armor/plate/fluted/baotha
-/obj/item/clothing/suit/roguetown/armor/gambeson/baotha
-/obj/item/clothing/under/roguetown/skirt/baotha
-/obj/item/clothing/shoes/roguetown/boots/armor/baotha
-/obj/item/clothing/gloves/roguetown/plate/baotha
-/obj/item/clothing/neck/roguetown/coif/baotha
-/obj/item/rogueweapon/spear/partizan/baotha
 
+/obj/item/clothing/head/roguetown/helmet/baotha
+	name = "saccharine sallet"
+	desc = "Lo', the twins of beauty; Eora and Belladoth, they sought a prize which but one may have.."
+	icon_state = "baothahelm"
+	item_state = "baothahelm"
+	body_parts_covered = HEAD|HAIR|EARS|MOUTH
+	armor_class = ARMOR_CLASS_LIGHT
+	max_integrity = ARMOR_INT_HELMET_ANTAG - 300 //Halved durability, compared to traditional Ascendant-tier armor.
+	smeltresult = /obj/item/ingot/component/baotha
+
+/obj/item/clothing/head/roguetown/helmet/baotha/Initialize()
+	. = ..()
+	AddComponent(/datum/component/cursed_item, TRAIT_DEPRAVED, "ARMOR")
+
+/obj/item/clothing/neck/roguetown/coif/baotha
+	name = "saccharine veil"
+	desc = "And yet, their methods differed; Belladoth proposed with Her lust and temptation, Eora with Her love and warmth.."
+	icon_state = "baothacoif"
+	item_state = "baothacoif"
+	armor = ARMOR_PADDED
+	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER + 150
+	body_parts_covered = NECK|HAIR|EARS|HEAD|NOSE
+	armor_class = ARMOR_CLASS_LIGHT
+	adjustable = CAN_CADJUST
+	toggle_icon_state = TRUE
+	blocksound = SOFTHIT
+	color = null
+	chunkcolor = "#645567"
+	smeltresult = /obj/item/ingot/component/baotha
+
+/obj/item/clothing/neck/roguetown/coif/baotha/Initialize()
+	. = ..()
+	AddComponent(/datum/component/cursed_item, TRAIT_DEPRAVED, "VEIL")
+	AddComponent(/datum/component/adjustable_clothing, NECK, null, null, 'sound/foley/cloth_wipe (1).ogg', null, (UPD_HEAD|UPD_MASK|UPD_NECK))
+
+/obj/item/clothing/suit/roguetown/armor/plate/fluted/baotha
+	name = "saccharine plate armor"
+	desc = "Is it not obvious what Ravox would've chosen? Yet upon the dae of His choice, She refused to gift any chance to Her sister.."
+	icon_state = "baothaplate"
+	item_state = "baothaplate"
+	max_integrity = ARMOR_INT_CHEST_PLATE_ANTAG - 350 //Halved durability, compared to traditional Ascendant-tier armor.
+	armor_class = ARMOR_CLASS_LIGHT //The big, big thing.
+	color = null
+	chunkcolor = "#dd2166"
+	body_parts_covered = CHEST | GROIN | ARMS | LEGS
+	smeltresult = /obj/item/ingot/component/baotha
+
+/obj/item/clothing/suit/roguetown/armor/plate/fluted/baotha/Initialize()
+	. = ..()
+	AddComponent(/datum/component/cursed_item, TRAIT_DEPRAVED, "ARMOR")
+
+/obj/item/clothing/suit/roguetown/armor/gambeson/baotha
+	name = "saccharine vestments"
+	desc = "A gemmed chalice, Eora's own, swilled with Psydonia's most noxious venoms - and but a simple sip was enough to bring Her to death's door.."
+	icon_state = "baothagamb"
+	armor_class = ARMOR_CLASS_LIGHT
+	armor = ARMOR_PADDED
+	color = null
+	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER + 150
+	armor_class = ARMOR_CLASS_LIGHT
+	body_parts_covered = CHEST | GROIN | ARMS
+	smeltresult = /obj/item/ingot/component/baotha
+
+/obj/item/clothing/suit/roguetown/armor/gambeson/baotha/Initialize()
+	. = ..()
+	AddComponent(/datum/component/cursed_item, TRAIT_DEPRAVED, "VESTMENTS")
+
+/obj/item/clothing/under/roguetown/skirt/baotha
+	name = "saccharine fauldcoat"
+	desc = "Only did Belladona's haze clear, once She heard Eora's gasps and Ravox's fright; what else could She've done besides fleeing the heavens?"
+	armor = ARMOR_PADDED
+	color = "#524756"
+	armor_class = ARMOR_CLASS_LIGHT
+	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER + 150
+	body_parts_covered = GROIN |LEGS
+	smeltresult = /obj/item/ingot/component/baotha
+
+/obj/item/clothing/under/roguetown/skirt/baotha/Initialize()
+	. = ..()
+	AddComponent(/datum/component/cursed_item, TRAIT_DEPRAVED, "SKIRT")
+	add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = "#720f62", "alpha" = 120, "size" = 1))
+
+/obj/item/clothing/gloves/roguetown/plate/baotha
+	name = "saccharine gauntlets"
+	desc = "Belladonna's ego died on that dae, and Baotha's venomous id rose in Her stead; for it was better to numb the regret than to face the guilt.."
+	icon_state = "baothagloves"
+	item_state = "baothagloves"
+	chunkcolor = "#6d1c87"
+	max_integrity = ARMOR_INT_SIDE_ANTAG - 250
+	armor_class = ARMOR_CLASS_LIGHT
+	smeltresult = /obj/item/ingot/component/baotha
+
+/obj/item/clothing/gloves/roguetown/plate/baotha/Initialize()
+	. = ..()
+	AddComponent(/datum/component/cursed_item, TRAIT_DEPRAVED, "GLOVES")
+
+/obj/item/clothing/shoes/roguetown/boots/armor/baotha
+	name = "saccharine heels"
+	desc = "..yet, even as She indulges and mourns beneath the stars, one must wonder; is She truly damned by the Pantheon, or by Herself alone?"
+	icon_state = "baothaboots"
+	item_state = "baothaboots"
+	chunkcolor = "#6d1c87"
+	max_integrity = ARMOR_INT_SIDE_ANTAG - 250
+	armor_class = ARMOR_CLASS_LIGHT
+	smeltresult = /obj/item/ingot/component/baotha
+
+/obj/item/clothing/shoes/roguetown/boots/armor/baotha/Initialize()
+	. = ..()
+	AddComponent(/datum/component/cursed_item, TRAIT_DEPRAVED, "BOOTS")
+
+/obj/item/rogueweapon/spear/partizan/baotha
+	name = "saccharine swordspear"
+	desc = "Keep the rest at arm's reach, lest you're burdened with the pain of rememberance."
+	force_wielded = 25
+	force_wielded = 35
+	possible_item_intents = list(SPEAR_THRUST, SPEAR_CUT, SPEAR_BASH)
+	gripped_intents = list(SPEAR_THRUST, PARTIZAN_REND, /datum/intent/spear/cut/bardiche/cleave, /datum/intent/spear/cut/glaive/sweep)
+	icon_state = "swordstaff"
+	icon = 'icons/roguetown/weapons/polearms64.dmi'
+	minstr = 4
+	max_blade_int = 400
+	throwforce = 45 //Pierce the heavens!
+	smeltresult = /obj/item/ingot/component/baotha
+	slot_flags = ITEM_SLOT_BACK //No need for a supplemental greatweapon strap.
+	equip_delay_self = 2 SECONDS
+	unequip_delay_self = 2 SECONDS
+	inv_storage_delay = 1 SECONDS
+
+/obj/item/rogueweapon/spear/partizan/baotha/Initialize()
+	. = ..()
+	AddComponent(/datum/component/cursed_item, TRAIT_DEPRAVED, "SWORDSPEAR")
+
+/obj/item/rogueweapon/spear/partizan/baotha/getonmobprop(tag)
+	. = ..()
+	if(tag)
+		switch(tag)
+			if("gen") return list("shrink" = 0.7, "sx" = -14, "sy" = -8, "nx" = 9, "ny" = -6, "wx" = -6, "wy" = -6, "ex" = -1, "ey" = -4, "northabove" = 0, "southabove" = 1, "eastabove" = 1, "westabove" = 0, "nturn" = -10, "sturn" = 108, "wturn" = -72, "eturn" = -10, "nflip" = 1, "sflip" = 1, "wflip" = 8, "eflip" = 1)
+			if("wielded") return list("shrink" = 0.75, "sx" = 5, "sy" = -3, "nx" = -5, "ny" = -3, "wx" = -5, "wy" = -3, "ex" = 3, "ey" = -4, "northabove" = 0, "southabove" = 1, "eastabove" = 1, "westabove" = 0, "nturn" = 6, "sturn" = -8, "wturn" = 10, "eturn"= -10, "nflip" = 8, "sflip" = 0, "wflip" = 8, "eflip" = 0)
 
 //
 
