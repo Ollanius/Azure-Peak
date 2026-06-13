@@ -141,7 +141,7 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 /datum/crafting_recipe/roguetown/survival/flowercrown_azurosa
 	name = "azurosa crown"
 	category = "Clothes"
-	result = /obj/item/bouquet/rosa/azure
+	result = /obj/item/flowercrown/rosa/azure
 	reqs = list(
 		/obj/item/alch/rosa/azure = 4,
 		/obj/item/natural/fibers = 2,
@@ -150,7 +150,7 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 	verbage_simple = "tied"
 	verbage = "ties"
 
-/datum/crafting_recipe/roguetown/bouquet_azurrosa
+/datum/crafting_recipe/roguetown/bouquet_azurosa
 	name = "azurosa bouquet"
 	result = /obj/item/bouquet/rosa/azure
 	reqs = list(/obj/item/alch/rosa/azure = 4,
