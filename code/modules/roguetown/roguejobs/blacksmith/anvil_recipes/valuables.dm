@@ -215,14 +215,30 @@
 	craftdiff = 1
 
 /datum/anvil_recipe/valuables/matthios
-	name = "Amulet of Matthios"
+	name = "Amulets of Matthios (x2)"
+	req_bar = /obj/item/ingot/gold
+	created_item = /obj/item/clothing/neck/roguetown/psicross/inhumen/matthios
+	display_category = ITEM_CAT_VALUABLES_HOLY
+	craftdiff = 3
+	createditem_num = 2
+
+/datum/anvil_recipe/valuables/gold_cross_matthios
+	name = "Golden Amulet of Matthios"
 	req_bar = /obj/item/ingot/gold
 	created_item = /obj/item/clothing/neck/roguetown/psicross/inhumen/matthios/g
 	display_category = ITEM_CAT_VALUABLES_HOLY
 	craftdiff = 4
 
 /datum/anvil_recipe/valuables/baotha
-	name = "Amulet of Baotha"
+	name = "Amulets of Baotha (x2)"
+	req_bar = /obj/item/ingot/gold
+	created_item = /obj/item/clothing/neck/roguetown/psicross/inhumen/baotha
+	display_category = ITEM_CAT_VALUABLES_HOLY
+	craftdiff = 3
+	createditem_num = 2
+
+/datum/anvil_recipe/valuables/gold_cross_baotha
+	name = "Golden Amulet of Baotha"
 	req_bar = /obj/item/ingot/gold
 	created_item = /obj/item/clothing/neck/roguetown/psicross/inhumen/baotha/g
 	display_category = ITEM_CAT_VALUABLES_HOLY
@@ -234,6 +250,21 @@
 	created_item = /obj/item/clothing/neck/roguetown/psicross/inhumen/graggar
 	display_category = ITEM_CAT_VALUABLES_HOLY
 	craftdiff = 1
+
+/datum/anvil_recipe/valuables/undivided_cross
+	name = "Amulets of Ten (x2)"
+	req_bar = /obj/item/ingot/gold
+	created_item = /obj/item/clothing/neck/roguetown/psicross/undivided
+	display_category = ITEM_CAT_VALUABLES_HOLY
+	craftdiff = 3
+	createditem_num = 2
+
+/datum/anvil_recipe/valuables/gold_undivided_cross
+	name = "Golden Amulet of Ten"
+	req_bar = /obj/item/ingot/gold
+	created_item = /obj/item/clothing/neck/roguetown/psicross/undivided/g
+	display_category = ITEM_CAT_VALUABLES_HOLY
+	craftdiff = 4
 
 /datum/anvil_recipe/valuables/ringb
 	name = "Rings, Bronze (x2)"

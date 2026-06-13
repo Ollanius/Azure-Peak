@@ -679,6 +679,12 @@
 	icon_state = "undivided_s"
 	sellprice = 50
 
+/obj/item/clothing/neck/roguetown/psicross/undivided/g
+	name = "golden amulet of Ten"
+	desc = "The Ten eternal, unified in strength. For centuries, their glistening light has remained stalwart against the darkness."
+	sellprice = 100
+	resistance_flags = FIRE_PROOF
+
 /obj/item/clothing/neck/roguetown/psicross/undivided/wood
 	name = "wooden amulet of Ten"
 	desc = "A talisman of the faithful, hewn from sticks and fibers."
