@@ -270,6 +270,33 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 	item_state = "leathercuirass"
 	icon_state = "leathercuirass"
 
+/obj/item/clothing/suit/roguetown/armor/leather/heavy/donator_cuirass
+	name = "heroic leather cuirass"
+	desc = "A flexible vest, stitched together from lengths of cured leather. It hugs the wearer's form, gifting them a mimicked form \
+	of a sculpted physique - or maybe that's just a byproduct of it being so damn tight."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "leathercuirass"
+	icon_state = "leathercuirass"
+
+/obj/item/clothing/suit/roguetown/armor/leather/studded/donator_cuirass
+	name = "heroic leather cuirass"
+	desc = "A flexible vest, stitched together from lengths of cured leather. It hugs the wearer's form, gifting them a mimicked form \
+	of a sculpted physique - or maybe that's just a byproduct of it being so damn tight."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "leathercuirass"
+	icon_state = "leathercuirass"
+
+/obj/item/clothing/suit/roguetown/armor/leather/studded/psyaltrist/donator_cuirass
+	name = "heroic leather cuirass"
+	desc = "A flexible vest, stitched together from lengths of cured leather. It hugs the wearer's form, gifting them a mimicked form \
+	of a sculpted physique - or maybe that's just a byproduct of it being so damn tight."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "leathercuirass"
+	icon_state = "leathercuirass"
+
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/donator_girdle
 	name = "steel plackart"
 	desc = "A curious - and particularly revealing - variant of a common cuirass. It's said that the intentionally provocative design \
