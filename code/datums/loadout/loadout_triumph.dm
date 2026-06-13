@@ -226,6 +226,12 @@
 	triumph_cost = 5
 	sort_category = "Triumphs"
 
+/datum/loadout_item/triumph_graggarcross
+	name = "Golden Graggarite Amulet, Ornate"
+	path = /obj/item/clothing/neck/roguetown/psicross/inhumen/graggar/g/triumph
+	triumph_cost = 5
+	sort_category = "Triumphs"
+
 /datum/loadout_item/triumph_signet
 	name = "Golden Signet Ring, Ornate"
 	path = /obj/item/clothing/ring/signet/triumph

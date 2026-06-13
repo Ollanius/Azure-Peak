@@ -97,6 +97,10 @@
 	name = "ornate amulet of Xylix"
 	sellprice = 77
 
+/obj/item/clothing/neck/roguetown/psicross/inhumen/graggar/g/triumph
+	name = "ornate amulet of Graggar"
+	sellprice = 77
+
 //
 
 /obj/item/clothing/ring/diamond/triumph

@@ -600,7 +600,7 @@
 
 /obj/item/clothing/neck/roguetown/psicross/inhumen/matthios
 	name = "amulet of Matthios"
-	desc = "He was but one flame in the dark. Together, his flock shall outblaze the tyrant sun."
+	desc = "He was but one flame in the dark. Together, His flock shall outblaze the Tyrant-Sun."
 	icon_state = "matthios"
 	resistance_flags = FIRE_PROOF
 	slot_flags = ITEM_SLOT_NECK|ITEM_SLOT_HIP|ITEM_SLOT_WRISTS|ITEM_SLOT_RING
@@ -614,7 +614,13 @@
 	sellprice = 0
 	salvage_result = /obj/item/grown/log/tree/stick
 	salvage_amount = 1
-	
+
+/obj/item/clothing/neck/roguetown/psicross/inhumen/matthios/g
+	name = "golden amulet of Matthios"
+	desc = "He was but one flame in the dark. Together, His flock shall outblaze the Tyrant-Sun, and shall live deliciously atop the highest throne."
+	icon_state = "matthios"
+	sellprice = 100
+
 /obj/item/clothing/neck/roguetown/psicross/inhumen/graggar
 	name = "amulet of Graggar"
 	desc = "Blood leads only to glory, and violence begets divinity. Nothing less. Conquest is simply another name for victory."
@@ -622,6 +628,12 @@
 	resistance_flags = FIRE_PROOF
 	slot_flags = ITEM_SLOT_NECK|ITEM_SLOT_HIP|ITEM_SLOT_WRISTS|ITEM_SLOT_RING
 	smeltresult = null
+
+/obj/item/clothing/neck/roguetown/psicross/inhumen/graggar/g
+	name = "golden amulet of Graggar"
+	desc = "Might makes right."
+	icon_state = "graggar_g"
+	sellprice = 100
 
 /obj/item/clothing/neck/roguetown/psicross/inhumen/graggar/wood
 	name = "wooden amulet of Graggar"
@@ -639,6 +651,12 @@
 	resistance_flags = FIRE_PROOF
 	slot_flags = ITEM_SLOT_NECK|ITEM_SLOT_HIP|ITEM_SLOT_WRISTS|ITEM_SLOT_RING
 	smeltresult = null
+
+/obj/item/clothing/neck/roguetown/psicross/inhumen/baotha/g
+	name = "golden amulet of Baotha"
+	desc = "A hollow promise, rendered in gold and glistening with value. It weighs heavy with the memory of sweet wine turned to poison, and the comfort of a sorrow that refuses to fade."
+	icon_state = "baotha"
+	sellprice = 100
 
 /obj/item/clothing/neck/roguetown/psicross/inhumen/baotha/wood
 	name = "wooden amulet of Baotha"

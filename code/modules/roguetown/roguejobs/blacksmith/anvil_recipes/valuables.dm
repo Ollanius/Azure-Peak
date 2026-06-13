@@ -136,6 +136,14 @@
 	created_item = /obj/item/clothing/neck/roguetown/psicross/xylix/g
 	display_category = ITEM_CAT_VALUABLES_HOLY
 
+/datum/anvil_recipe/valuables/gold_cross_graggar
+	name = "Golden Amulet of Graggar (+1 Graggarite Amulet)"
+	req_bar = /obj/item/ingot/gold
+	additional_items = list(/obj/item/clothing/neck/roguetown/psicross/inhumen/graggar)
+	craftdiff = SKILL_LEVEL_EXPERT
+	created_item = /obj/item/clothing/neck/roguetown/psicross/inhumen/graggar/g
+	display_category = ITEM_CAT_VALUABLES_HOLY
+
 //
 
 /datum/anvil_recipe/valuables/noccrossaalloy
@@ -209,9 +217,16 @@
 /datum/anvil_recipe/valuables/matthios
 	name = "Amulet of Matthios"
 	req_bar = /obj/item/ingot/gold
-	created_item = /obj/item/clothing/neck/roguetown/psicross/inhumen/matthios
+	created_item = /obj/item/clothing/neck/roguetown/psicross/inhumen/matthios/g
 	display_category = ITEM_CAT_VALUABLES_HOLY
-	craftdiff = 1
+	craftdiff = 4
+
+/datum/anvil_recipe/valuables/baotha
+	name = "Amulet of Baotha"
+	req_bar = /obj/item/ingot/gold
+	created_item = /obj/item/clothing/neck/roguetown/psicross/inhumen/baotha/g
+	display_category = ITEM_CAT_VALUABLES_HOLY
+	craftdiff = 4
 
 /datum/anvil_recipe/valuables/graggar
 	name = "Amulet of Graggar"

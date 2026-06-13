@@ -69,6 +69,8 @@
 		return FALSE
 	if(istype(I, /obj/item/clothing/neck/roguetown/psicross/xylix/g/triumph))
 		return FALSE
+	if(istype(I, /obj/item/clothing/neck/roguetown/psicross/inhumen/graggar/g/triumph))
+		return FALSE
 	if(istype(I, /obj/item/clothing/head/roguetown/circlet/triumph))
 		return FALSE
 	if(istype(I, /obj/item/clothing/mask/rogue/lordmask/triumph))
