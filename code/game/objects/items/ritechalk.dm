@@ -23,7 +23,7 @@
 		if(/datum/patron/inhumen/baotha)
 			ritechoices+="Rune of Hedonism"
 		if(/datum/patron/divine/undivided)
-			ritechoices+= "Rune of Deca Divinity"
+			ritechoices+= "Rune of Divinity"
 		if(/datum/patron/divine/astrata)
 			ritechoices+="Rune of Sun"
 		if(/datum/patron/divine/noc)
@@ -46,7 +46,7 @@
 			ritechoices+="Rune of Storm"
 			ritechoices+="Rune of Stirring"
 		if(/datum/patron/old_god)
-			ritechoices+="Rune of Enduring"
+			ritechoices+="Rune of Mourning"
 
 	if(HAS_TRAIT(user, TRAIT_DREAMWALKER) && !("Rune of Stirring" in ritechoices))
 		ritechoices+="Rune of Stirring"
@@ -129,13 +129,13 @@
 			if(do_after(user, 30, src))
 				playsound(src, 'sound/foley/scribble.ogg', 40, TRUE)
 				new /obj/effect/decal/cleanable/roguerune/god/baotha(step_turf)
-		if("Rune of Enduring")
+		if("Rune of Mourning")
 			to_chat(user,span_cultsmall("I begin inscribing His holy symbol..."))
 			if(do_after(user, 30, src))
 				playsound(src, 'sound/foley/scribble.ogg', 40, TRUE)
 				new /obj/effect/decal/cleanable/roguerune/god/psydon(step_turf)
-		if("Rune of Deca Divinity")
-			to_chat(user,span_cultsmall("I begin inscribing the rune of the Ten Undivided..."))
+		if("Rune of Divinity")
+			to_chat(user,span_cultsmall("I begin inscribing the rune of the Undivided..."))
 			if(do_after(user, 30, src))
 				playsound(src, 'sound/foley/scribble.ogg', 40, TRUE)
 				new /obj/structure/ritualcircle/undivided(step_turf)

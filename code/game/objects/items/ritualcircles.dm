@@ -1434,7 +1434,7 @@
 
 //UNDIVIDED
 /obj/structure/ritualcircle/undivided
-	name = "Rune of Deca Divinity"
+	name = "Rune of Divinity"
 	desc = "A holy rune of the Undivided Pantheon. </br> <i>United, we stand. Divided, we fall.</i>"
 	icon_state = "undivided_chalky"
 	//var/decarites = list()
@@ -1451,7 +1451,7 @@
 	if(user.has_status_effect(/datum/status_effect/debuff/ritesexpended))
 		to_chat(user,span_smallred("I have performed enough rituals for the day... I must rest before communing more."))
 		return
-	var/riteselection = input(user, "Rituals of Deca Divinity", src) as null|anything in decarites
+	var/riteselection = input(user, "Rituals of Divinity", src) as null|anything in decarites
 	switch(riteselection) // put ur rite selection here
 		if()
 */
@@ -2027,7 +2027,7 @@
 	name = "Rune of Hedonism"
 	desc = "A holy rune of Baotha. </br> <i>Relief for the broken hearted.</i>"
 	icon_state = "baotha_chalky"
-	var/baothanrites = list("Rite of Armaments", "Joybringer")
+	var/baotharites = list("Rite of Armaments", "Joybringer")
 
 /obj/structure/ritualcircle/baotha/attack_hand(mob/living/user)
 	if(!..())
@@ -2041,7 +2041,7 @@
 	if(user.has_status_effect(/datum/status_effect/debuff/ritesexpended))
 		to_chat(user,span_warning("I have performed enough rituals for the day... I must rest before communing more."))
 		return
-	var/riteselection = input(user, "Rituals of Indulgence", src) as null|anything in baothanrites
+	var/riteselection = input(user, "Rituals of Indulgence", src) as null|anything in baotharites
 	switch(riteselection) // put ur rite selection here
 		if("Rite of Armaments")
 			if(user.has_status_effect(/datum/status_effect/debuff/armamentrites))
