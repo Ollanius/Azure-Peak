@@ -2027,7 +2027,7 @@
 	name = "Rune of Hedonism"
 	desc = "A holy rune of Baotha. </br> <i>Relief for the broken hearted.</i>"
 	icon_state = "baotha_chalky"
-	var/matthiosrites = list("Rite of Armaments", "Joybringer")
+	var/baotharites = list("Rite of Armaments", "Joybringer")
 	allowed_patron = /datum/patron/inhumen/baotha
 
 /obj/structure/ritualcircle/baotha/attack_hand(mob/living/user)
@@ -2042,7 +2042,7 @@
 	if(user.has_status_effect(/datum/status_effect/debuff/ritesexpended))
 		to_chat(user,span_warning("I have performed enough rituals for the day... I must rest before communing more."))
 		return
-	var/riteselection = input(user, "Rituals of Transaction", src) as null|anything in baotharites
+	var/riteselection = input(user, "Rituals of Indulgence", src) as null|anything in baotharites
 	switch(riteselection) // put ur rite selection here
 		if("Rite of Armaments")
 			if(user.has_status_effect(/datum/status_effect/debuff/armamentrites))
@@ -2077,7 +2077,7 @@
 			if(is_heretic && target != user)
 				user.apply_status_effect(/datum/status_effect/debuff/lux_exhausted)
 				target.apply_status_effect(/datum/status_effect/debuff/lux_exhausted)
-			matthiosarmaments(target)
+			baothaarmaments(target)
 			spawn(120)
 				icon_state = "baotha_chalky"
 		if("Joybringer")
