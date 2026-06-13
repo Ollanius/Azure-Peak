@@ -2262,14 +2262,25 @@
 	gripped_intents = list(SPEAR_THRUST, PARTIZAN_REND, /datum/intent/spear/cut/bardiche/cleave, /datum/intent/spear/cut/glaive/sweep)
 	icon_state = "swordstaff"
 	icon = 'icons/roguetown/weapons/polearms64.dmi'
+	parrysound = list(
+	'sound/combat/parry/bladed/bladedmedium (1).ogg',
+	'sound/combat/parry/bladed/bladedmedium (2).ogg',
+	'sound/combat/parry/bladed/bladedmedium (3).ogg',
+	)
+	pickup_sound = 'sound/foley/equip/swordlarge1.ogg'
 	minstr = 4
+	thrown_bclass = BCLASS_PIERCE
 	max_blade_int = 400
+	max_integrity = 400
 	throwforce = 45 //Pierce the heavens!
+	wdefense = 4
+	wdefense_wbonus = 5
 	smeltresult = /obj/item/ingot/component/baotha
 	slot_flags = ITEM_SLOT_BACK //No need for a supplemental greatweapon strap.
 	equip_delay_self = 2 SECONDS
 	unequip_delay_self = 2 SECONDS
 	inv_storage_delay = 1 SECONDS
+	icon_angle_wielded = null
 
 /obj/item/rogueweapon/spear/partizan/baotha/Initialize()
 	. = ..()
