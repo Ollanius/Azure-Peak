@@ -829,8 +829,8 @@
 
 /obj/item/clothing/suit/roguetown/armor/plate/scale/copper
 	name = "copper lamellar"
-	desc = "A coat of small copper plates, segmented together in a manner not unlike chainmail. While copper is traditionally \
-	too fragile to employ in flexible armor, the nature of this platecoat's design makes it just feasbile enough to work."
+	desc = "A coat of small copper plates, segmented together in a manner not unlike chainmail. Rarely seen since the dawn of civilization, copper \
+	garbs like these were the undersung heroes of humenity's earliest daes; a story of vintage proportions, still fresh in the minds of only a few blessed Aasimarites."
 	icon_state = "clamellar"
 	max_integrity = ARMOR_INT_CHEST_MEDIUM_SCALE
 	smeltresult = /obj/item/ingot/copper

@@ -478,6 +478,12 @@
 	created_item = /obj/item/clothing/suit/roguetown/armor/plate/scale/bronze
 	display_category = ITEM_CAT_ARMOR_CHESTPIECES
 
+/datum/anvil_recipe/armor/bronze/mailleskirt
+	name = "Chainmaille Skirt, Bronze"
+	req_bar = /obj/item/ingot/bronze
+	created_item = /obj/item/clothing/under/roguetown/chainlegs/kilt/bronze
+	display_category = ITEM_CAT_ARMOR_LEGS
+
 // IRON
 /datum/anvil_recipe/armor/iron/lightchainmail
 	name = "Haubyrine, Iron"
