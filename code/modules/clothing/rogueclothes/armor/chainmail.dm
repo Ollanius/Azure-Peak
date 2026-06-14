@@ -27,6 +27,14 @@
 	max_integrity = ARMOR_INT_CHEST_LIGHT_IRON
 	smeltresult = /obj/item/ingot/iron
 
+/obj/item/clothing/suit/roguetown/armor/chainmail/light/bronze
+	name = "bronze haubyrnie"
+	desc = "A sleeveless maille shirt, fashioned from dozens of interlinked bronze rings. It's light enough to comfortably tuck underneath a \
+	blouse, yet tough enough to thwart the razor-sharp edges of unwelcomed company. For the discerning traveler - ideally, from an antique land."
+	icon_state = "baubyrnie"
+	max_integrity = ARMOR_INT_CHEST_LIGHT_IRON - 30
+	smeltresult = /obj/item/ingot/bronze
+
 //MEDIUM ARMOR - HAUBERGEON//
 /obj/item/clothing/suit/roguetown/armor/chainmail
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
@@ -57,6 +65,15 @@
 	is favored amongst Psydonia's levymen, alongside a sharpened spear and a cooled pint of ale."
 	max_integrity = ARMOR_INT_CHEST_MEDIUM_IRON
 	smeltresult = /obj/item/ingot/iron
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/bronze
+	icon_state = "bhaubergeon"
+	name = "bronze haubergeon"
+	desc = "A maille shirt fashioned from hundreds of interlinked bronze rings. The value of flexible protection, especially in \
+	the centuries before plate, made any form of chainmail a rather valuable commodity; enough-so that it was worth its own weight \
+	in gold."
+	max_integrity = ARMOR_INT_CHEST_MEDIUM_BRONZE
+	smeltresult = /obj/item/ingot/bronze
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/Initialize(mapload)
 	. = ..()
@@ -119,6 +136,17 @@
 	item_state = "ihauberk"
 	smeltresult = /obj/item/ingot/iron
 	max_integrity = ARMOR_INT_CHEST_MEDIUM_IRON
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/bronze
+	name = "bronze hauberk"
+	desc = "A maille-aketon of bronze, sleeved to cover both the arms and legs. In antiquity, such an armored garment was seen as second-to-none \
+	in every facet; light enough to leave a well-trained warrior unfettered, yet still capable of turning away both arrow-and-blade."
+	icon_state = "bhauberk"
+	item_state = "bhauberk"
+	smeltresult = /obj/item/ingot/bronze
+	max_integrity = ARMOR_INT_CHEST_MEDIUM_BRONZE
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/aalloy
 	name = "decrepit hauberk"

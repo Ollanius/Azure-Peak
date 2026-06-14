@@ -28,37 +28,6 @@
 	AddComponent(/datum/component/armour_filtering/negative, TRAIT_FENCERDEXTERITY)
 	AddComponent(/datum/component/armour_filtering/negative, TRAIT_HONORBOUND)
 
-//
-
-/obj/item/clothing/suit/roguetown/armor/plate/cuirass/legacy
-    name = "valorian cuirass"
-    desc = "A steel cuirass. Do you still remember the first time you tasted blood; that sanguine succor, dribbling from a busted lip?"
-    icon_state = "legacycuirass"
-    item_state = "legacycuirass"
-
-/obj/item/clothing/suit/roguetown/armor/plate/legacy
-    name = "valorian half-plate"
-    desc = "A padded steel cuirass, 'adventurer-fitted' with a pair of pauldrons. Before you is your weapon; when was the last time \
-	you had ever thought without its presence?"
-    icon_state = "legacyhalfplate"
-    item_state = "legacyhalfplate"
-
-/obj/item/clothing/suit/roguetown/armor/plate/full/legacy
-    name = "valorian plate armor"
-    desc = "A complete set of steel plate armor, fitted with tassets and bracers for additional coverage. When the kingdom comes \
-	crashing down, will you deliver its people from evil; or will you be the one to string up 'pon the pyre?"
-    icon_state = "legacyplate"
-    item_state = "legacyplate"
-
-/obj/item/clothing/suit/roguetown/armor/plate/full/fluted/legacy
-    name = "valorian fluted plate armor"
-    desc = "A resplendant set of steel plate armor, decorated with silver flutings. Blessed dreamer, accursed heathen, lowly \
-	fool; the curtain call is a mere heartbeat away. Are you ready for one last dance, before midnight calls?"
-    icon_state = "legacyornateplate"
-    item_state = "legacyornateplate"
-
-//
-
 /obj/item/clothing/suit/roguetown/armor/plate/iron
 	name = "iron half-plate"
 	desc = "A padded iron cuirass, bottomed with segmented tassets. It is inexpensive yet robust; a desirable combination, which \
@@ -70,6 +39,16 @@
 	max_integrity = ARMOR_INT_CHEST_PLATE_IRON
 	armor_class = ARMOR_CLASS_MEDIUM
 	smeltresult = /obj/item/ingot/iron
+
+/obj/item/clothing/suit/roguetown/armor/plate/iron/bikini
+	name = "iron half-plate corslet"
+	desc = "A high breastplate and hip armor of iron. It allows flexibility and great protection, save for the stomach."
+	body_parts_covered = CHEST|GROIN
+	icon_state = "ihalfplatekini"
+	item_state = "ihalfplatekini"
+	max_integrity = ARMOR_INT_CHEST_MEDIUM_IRON	
+	armor_class = ARMOR_CLASS_MEDIUM
+	smelt_bar_num = 2
 
 /obj/item/clothing/suit/roguetown/armor/plate/iron/banded
 	name = "banded iron armor"
@@ -387,6 +366,17 @@
 	to don-and-doff, without a trusted Levyman's aid..'"
 	smeltresult = /obj/item/ingot/iron
 	max_integrity = ARMOR_INT_CHEST_PLATE_IRON
+
+/obj/item/clothing/suit/roguetown/armor/plate/full/iron/bikini
+	name = "iron full-plate corset"
+	desc = "Breastplate, pauldrons, couters, cuisses.. did you forget something?"
+	icon_state = "iplatekini"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	equip_delay_self = 8 SECONDS
+	unequip_delay_self = 8 SECONDS
+	equip_delay_other = 3 SECONDS
+	strip_delay = 6 SECONDS
+	smelt_bar_num = 3
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/samsibsa
 	name = "samsibsa scaleplate"
@@ -777,7 +767,7 @@
 	smelt_bar_num = 2
 
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/copper
-	name = "heart protector"
+	name = "copper heartplate"
 	desc = "Shingled copper disks, strapped together to ward the heart from harm. As discovered by its antiquital wearers, it is \
 	deceptively protective; yet, its straps can only sustain so much stress before snapping.."
 	icon_state = "copperchest"
@@ -808,7 +798,7 @@
 /obj/item/clothing/suit/roguetown/armor/plate/scale
 	slot_flags = ITEM_SLOT_ARMOR
 	name = "scalemail"
-	desc = "Metal scales interwoven intricately to form flexible protection!"
+	desc = "Alloyed scales interwoven intricately to form flexible protection!"
 	body_parts_covered = COVERAGE_ALL_BUT_ARMFEET
 	allowed_sex = list(MALE, FEMALE)
 	icon_state = "lamellar"
@@ -818,6 +808,34 @@
 	equip_delay_self = 4 SECONDS
 	armor_class = ARMOR_CLASS_MEDIUM
 	smelt_bar_num = 2
+
+/obj/item/clothing/suit/roguetown/armor/plate/scale/iron
+	name = "lamellar"
+	desc = "A coat of small iron plates, segmented together in a manner not unlike chainmail. This curious combination \
+	provides the best of both worlds; protection on par with more rigid sets of plate armor, but without all the weight."
+	icon_state = "ilamellar"
+	max_integrity = ARMOR_INT_CHEST_MEDIUM_IRON
+	smeltresult = /obj/item/ingot/iron
+	armor_class = ARMOR_CLASS_MEDIUM
+
+/obj/item/clothing/suit/roguetown/armor/plate/scale/bronze
+	name = "bronze lamellar"
+	desc = "A coat of small bronze plates, segmented together in a manner not unlike chainmail. Divorced from the \
+	romanticized images of bare-chested legionnaires banishing nightmares from a pre-Syonic world, but venerable nevertheless."
+	icon_state = "blamellar"
+	max_integrity = ARMOR_INT_CHEST_MEDIUM_BRONZE
+	smeltresult = /obj/item/ingot/bronze
+	armor_class = ARMOR_CLASS_MEDIUM
+
+/obj/item/clothing/suit/roguetown/armor/plate/scale/copper
+	name = "copper lamellar"
+	desc = "A coat of small copper plates, segmented together in a manner not unlike chainmail. While copper is traditionally \
+	too fragile to employ in flexible armor, the nature of this platecoat's design makes it just feasbile enough to work."
+	icon_state = "clamellar"
+	max_integrity = ARMOR_INT_CHEST_MEDIUM_SCALE
+	smeltresult = /obj/item/ingot/copper
+	armor_class = ARMOR_CLASS_MEDIUM
+	armor = ARMOR_LEATHER
 
 /obj/item/clothing/suit/roguetown/armor/plate/scale/marshal
 	name = "coat of the commander"

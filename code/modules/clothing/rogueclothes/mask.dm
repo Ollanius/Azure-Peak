@@ -388,7 +388,7 @@
 /obj/item/clothing/mask/rogue/facemask/copper
 	name = "copper mask"
 	icon_state = "cmask"
-	desc = "A heavy copper mask that conceals and protects the face, though not very effectively."
+	desc = "A crass-looking mask of copper, befittingly paired with a small viewing slit that nearly spans its entire width."
 	armor = ARMOR_BRONZE
 	smeltresult = /obj/item/ingot/copper
 

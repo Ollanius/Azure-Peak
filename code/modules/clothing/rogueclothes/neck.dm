@@ -193,6 +193,14 @@
 	smeltresult = /obj/item/ingot/iron
 	max_integrity = ARMOR_INT_SIDE_IRON
 
+/obj/item/clothing/neck/roguetown/chaincoif/bronze
+	name = "bronze chain coif"
+	desc = "A maille-hood, fashioned from interlinked bronze rings. As preached by the Pantheon, these maille-hoods were originally made in mimicry of what was worn by the earliest priests."
+	icon_state = "bchaincoif"
+	anvilrepair = /datum/skill/craft/armorsmithing
+	smeltresult = /obj/item/ingot/bronze
+	max_integrity = ARMOR_INT_SIDE_BRONZE
+
 /obj/item/clothing/neck/roguetown/chaincoif/full
 	name = "full chain coif"
 	icon_state = "fchaincoif"

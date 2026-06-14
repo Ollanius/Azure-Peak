@@ -76,10 +76,17 @@
 	display_category = ITEM_CAT_ARMOR_BRACERS
 
 /datum/anvil_recipe/armor/copper/cap
-	name = "Lamellar Cap"
+	name = "Helmet, Copper"
 	req_bar = /obj/item/ingot/copper
 	created_item = /obj/item/clothing/head/roguetown/helmet/coppercap
 	display_category = ITEM_CAT_ARMOR_HELMETS
+
+/datum/anvil_recipe/armor/copper/scalemail
+	name = "Lamellar, Copper (+1 Copper)"
+	req_bar = /obj/item/ingot/copper
+	additional_items = list(/obj/item/ingot/copper)
+	created_item = /obj/item/clothing/suit/roguetown/armor/plate/scale/copper
+	display_category = ITEM_CAT_ARMOR_CHESTPIECES
 
 /datum/anvil_recipe/armor/copper/gorget
 	name = "Neck Protector, Copper"
@@ -426,6 +433,51 @@
 	created_item = /obj/item/clothing/mask/rogue/facemask/bronze/classic
 	display_category = ITEM_CAT_ARMOR_MASKS
 
+/datum/anvil_recipe/armor/bronze/mask
+	name = "Mask, Bronze (+1 Cured Leather)"
+	req_bar = /obj/item/ingot/bronze
+	additional_items = list(/obj/item/natural/hide/cured)
+	created_item = /obj/item/clothing/mask/rogue/facemask/bronze
+	display_category = ITEM_CAT_ARMOR_MASKS
+
+/datum/anvil_recipe/armor/bronze/chainmail
+	name = "Haubergeon, Bronze"
+	req_bar = /obj/item/ingot/bronze
+	created_item = /obj/item/clothing/suit/roguetown/armor/chainmail/bronze
+	display_category = ITEM_CAT_ARMOR_CHESTPIECES
+
+/datum/anvil_recipe/armor/bronze/hauberk
+	name = "Hauberk, Bronze (+1 Bronze)"
+	req_bar = /obj/item/ingot/bronze
+	additional_items = list(/obj/item/ingot/bronze)
+	created_item = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/bronze
+	display_category = ITEM_CAT_ARMOR_CHESTPIECES
+
+/datum/anvil_recipe/armor/bronze/lightchainmail
+	name = "Haubyrine, Bronze"
+	req_bar = /obj/item/ingot/bronze
+	created_item = /obj/item/clothing/suit/roguetown/armor/chainmail/light/bronze
+	display_category = ITEM_CAT_ARMOR_CHESTPIECES
+
+/datum/anvil_recipe/armor/bronze/maillebracers
+	name = "Chainsleeves, Bronze"
+	req_bar = /obj/item/ingot/bronze
+	created_item = /obj/item/clothing/wrists/roguetown/bracers/bronze/chain
+	display_category = ITEM_CAT_ARMOR_BRACERS
+
+/datum/anvil_recipe/armor/bronze/maillecoif
+	name = "Chain Coif, Bronze"
+	req_bar = /obj/item/ingot/bronze
+	created_item = /obj/item/clothing/neck/roguetown/chaincoif/bronze
+	display_category = ITEM_CAT_ARMOR_NECK
+
+/datum/anvil_recipe/armor/bronze/scalemail
+	name = "Lamellar, Bronze (+1 Bronze, +1 Cured Leather)"
+	req_bar = /obj/item/ingot/bronze
+	additional_items = list(/obj/item/ingot/bronze, /obj/item/natural/hide/cured)
+	created_item = /obj/item/clothing/suit/roguetown/armor/plate/scale/bronze
+	display_category = ITEM_CAT_ARMOR_CHESTPIECES
+
 // IRON
 /datum/anvil_recipe/armor/iron/lightchainmail
 	name = "Haubyrine, Iron"
@@ -444,6 +496,20 @@
 	req_bar = /obj/item/ingot/iron
 	additional_items = list(/obj/item/ingot/iron)
 	created_item = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/iron
+	display_category = ITEM_CAT_ARMOR_CHESTPIECES
+
+/datum/anvil_recipe/armor/iron/scalemail
+	name = "Lamellar, Iron (+1 Iron)"
+	req_bar = /obj/item/ingot/iron
+	additional_items = list(/obj/item/ingot/iron)
+	created_item = /obj/item/clothing/suit/roguetown/armor/plate/scale/iron
+	display_category = ITEM_CAT_ARMOR_CHESTPIECES
+
+/datum/anvil_recipe/armor/iron/coatofplates
+	name = "Coat of Plates, Iron (+1 Iron)"
+	req_bar = /obj/item/ingot/iron
+	additional_items = list(/obj/item/ingot/iron)
+	created_item = /obj/item/clothing/suit/roguetown/armor/brigandine/heavy/iron
 	display_category = ITEM_CAT_ARMOR_CHESTPIECES
 
 /datum/anvil_recipe/armor/iron/knightarmetgreatplume
