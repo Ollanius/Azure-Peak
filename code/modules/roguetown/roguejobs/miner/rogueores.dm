@@ -138,7 +138,6 @@
 	var/datum/anvil_recipe/currecipe
 	grid_width = 64
 	grid_height = 32
-	dropshrink = 0.8
 
 /obj/item/ingot/examine()
 	. += ..()
