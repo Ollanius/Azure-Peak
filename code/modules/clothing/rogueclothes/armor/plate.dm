@@ -56,6 +56,7 @@
 	fool; the curtain call is a mere heartbeat away. Are you ready for one last dance, before midnight calls?"
     icon_state = "legacyornateplate"
     item_state = "legacyornateplate"
+
 //
 
 /obj/item/clothing/suit/roguetown/armor/plate/iron
