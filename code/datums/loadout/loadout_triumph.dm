@@ -347,12 +347,6 @@
 	triumph_cost = 7
 	sort_category = "Triumphs"
 
-/datum/loadout_item/triumph_armorkit_triheartfelthand
-	name = "Triumph Kit - Azurosa-Robed Plate Armor"
-	path = /obj/item/enchantingkit/triheartfelthand
-	triumph_cost = 7
-	sort_category = "Triumphs"
-
 //////////////////
 //  RESKINS  !  //
 //////////////////
