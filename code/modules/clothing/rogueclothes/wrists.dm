@@ -570,21 +570,24 @@
 /obj/item/clothing/wrists/roguetown/bracers/matthios
 	name = "gilded bracers"
 	desc = "Away with you, vile beggar!"
-	color = "#ffc960"
+	icon_state = "matthiosbracers"
+	item_state = "matthiosbracers"
 	smeltresult = /obj/item/ingot/component/matthios
 	unenchantable = TRUE
 
 /obj/item/clothing/wrists/roguetown/bracers/matthios/Initialize()
 	. = ..()
 	AddComponent(/datum/component/cursed_item, TRAIT_FREEMAN, "ARMOR")
-	add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = "#fff385", "alpha" = 120, "size" = 1)) //IS THIS TRVE?
+	/*add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = "#fff385", "alpha" = 120, "size" = 1)) //IS THIS TRVE?
+*/ // Combine with #ffc960 to make an easier, do-it-yourself version of Gilded items without the need for exotic sprites.
 
 //
 
 /obj/item/clothing/wrists/roguetown/bracers/zizo
 	name = "avantyne bracers"
 	desc = "Clasped yet practical, these avantyne wristguards are reinforced for the rite without binding themselves to the wearer forever."
-	color = "#c1b18d"
+	icon_state = "zizobracers"
+	item_state = "zizobracers"
 	chunkcolor = "#363030"
 	material_category = ARMOR_MAT_PLATE
 	max_integrity = ARMOR_INT_SIDE_STEEL
@@ -595,7 +598,8 @@
 /obj/item/clothing/wrists/roguetown/bracers/zizo/Initialize()
 	. = ..()
 	AddComponent(/datum/component/cursed_item, TRAIT_CABAL, "ARMOR")
-	add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = "#5f1515", "alpha" = 120, "size" = 1)) //Cursed look.
+	/*add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = "#5f1515", "alpha" = 120, "size" = 1)) //Cursed look.
+*/ // Combine with #c1b18d to make an easier, do-it-yourself version of Avantyne items without the need for exotic sprites.
 
 /obj/item/clothing/wrists/roguetown/bracers/zizo/heavy
 	name = "fused avantyne bracers"
@@ -615,14 +619,16 @@
 /obj/item/clothing/wrists/roguetown/bracers/graggar
 	name = "vicious bracers"
 	desc = "Oh, to plunge hands into cold water; to play a melody upon an ivory-keyed piano; to watch steam rise from boiling, twisting entrails.."
-	color = "#ddc0a7"
+	icon_state = "graggarbracers"
+	item_state = "graggarbracers"
 	smeltresult = /obj/item/ingot/component/graggar
 	unenchantable = TRUE
 
 /obj/item/clothing/wrists/roguetown/bracers/graggar/Initialize()
 	. = ..()
 	AddComponent(/datum/component/cursed_item, TRAIT_HORDE, "ARMOR", "RENDERED ASUNDER")
-	add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = "#1a146e", "alpha" = 120, "size" = 1)) //Cursed look.
+	/*add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = "#1a146e", "alpha" = 120, "size" = 1)) //Cursed look.
+*/ // Combine with #ddc0a7 to make an easier, do-it-yourself version of Vicious items without the need for exotic sprites.
 
 /obj/item/clothing/wrists/roguetown/bracers/graggar/heavy
 	name = "vicious wristguards"

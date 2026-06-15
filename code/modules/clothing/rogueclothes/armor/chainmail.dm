@@ -279,21 +279,24 @@
 /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/matthios
 	name = "gilded hauberk"
 	desc = "All that glimmers is gold; yet only shining stars shalt break the mold.."
-	color = "#ffc960"
+	icon_state = "matthioshauberk"
+	item_state = "matthioshauberk"
 	smeltresult = /obj/item/ingot/component/matthios
 	unenchantable = TRUE
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/matthios/Initialize()
 	. = ..()
 	AddComponent(/datum/component/cursed_item, TRAIT_FREEMAN, "ARMOR")
-	add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = "#fff385", "alpha" = 120, "size" = 1)) //IS THIS TRVE?
+	/*add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = "#fff385", "alpha" = 120, "size" = 1)) //IS THIS TRVE?
+*/ // Combine with #ffc960 to make an easier, do-it-yourself version of Gilded items without the need for exotic sprites.
 
 //
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/zizo
 	name = "avantyne hauberk"
 	desc = "The rings crackle softly with avantynic power, yet this lighter weave can still be taken off without being lost to the rite."
-	color = "#c1b18d"
+	icon_state = "zizohauberk"
+	item_state = "zizohauberk"
 	chunkcolor = "#363030"
 	material_category = ARMOR_MAT_CHAINMAIL
 	smeltresult = /obj/item/ingot/component/zizo
@@ -302,7 +305,8 @@
 /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/zizo/Initialize()
 	. = ..()
 	AddComponent(/datum/component/cursed_item, TRAIT_CABAL, "ARMOR")
-	add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = "#5f1515", "alpha" = 120, "size" = 1)) //Cursed look.
+	/*add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = "#5f1515", "alpha" = 120, "size" = 1)) //Cursed look.
+*/ // Combine with #c1b18d to make an easier, do-it-yourself version of Avantyne items without the need for exotic sprites.
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/zizo/heavy
 	name = "fused avantyne hauberk"
@@ -323,13 +327,15 @@
 /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/graggar
 	name = "vicious hauberk"
 	desc = "The blessing of a Martyr is nothing, when put before the Sinistar's rage."
-	color = "#ddc0a7"
+	icon_state = "graggarhauberk"
+	item_state = "graggarhauberk"
 	smeltresult = /obj/item/ingot/component/graggar
 	unenchantable = TRUE
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/graggar/Initialize()
 	. = ..()
 	AddComponent(/datum/component/cursed_item, TRAIT_HORDE, "ARMOR", "RENDERED ASUNDER")
-
+	/*add_filter(FORCE_FILTER, 2, list("type" = "outline", "color" = "#1a146e", "alpha" = 120, "size" = 1)) //Cursed look.
+*/ // Combine with #ddc0a7 to make an easier, do-it-yourself version of Vicious items without the need for exotic sprites.
 
 //
