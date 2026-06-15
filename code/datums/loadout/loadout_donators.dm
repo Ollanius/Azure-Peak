@@ -111,6 +111,10 @@
 	name = "Gift - Kit, Belt of Caped Fur"
 	path = /obj/item/storage/belt/rogue/leather/donator_fur //If-or-when the aforementioned bug's fixed, replace this with /obj/item/enchantingkit/beltfur.
 
+/datum/loadout_item/donator/universal/belt_bronze
+	name = "Gift - Kit, Belt of Bronze Maille"
+	path = /obj/item/storage/belt/rogue/leather/donator_bronze 
+
 /datum/loadout_item/donator/universal/belt_iron
 	name = "Gift - Kit, Belt of Iron Maille"
 	path = /obj/item/storage/belt/rogue/leather/donator_iron //If-or-when the aforementioned bug's fixed, replace this with /obj/item/enchantingkit/beltironmaille.

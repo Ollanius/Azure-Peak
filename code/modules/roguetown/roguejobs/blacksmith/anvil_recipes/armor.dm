@@ -471,6 +471,12 @@
 	created_item = /obj/item/clothing/wrists/roguetown/bracers/bronze/chain
 	display_category = ITEM_CAT_ARMOR_BRACERS
 
+/datum/anvil_recipe/armor/bronze/maillegloves
+	name = "Chain Gauntlets, Bronze"
+	req_bar = /obj/item/ingot/bronze
+	created_item = /obj/item/clothing/gloves/roguetown/chain/bronze
+	display_category = ITEM_CAT_ARMOR_GLOVES
+
 /datum/anvil_recipe/armor/bronze/maillecoif
 	name = "Chain Coif, Bronze"
 	req_bar = /obj/item/ingot/bronze

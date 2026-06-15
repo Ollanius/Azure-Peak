@@ -180,6 +180,15 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 	item_state = "chainkinii"
 	icon_state = "chainkinii"
 
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/bronze/donator
+	name = "bronze maillekini"
+	desc = "A curious - and particularly revealing - variant of a bronze maille-aketon. It's said that the intentionally provocative design \
+	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "chainkinib"
+	icon_state = "chainkinib"
+
 /obj/item/clothing/cloak/donator_goldmaillekini
 	name = "golden maillekini"
 	desc = "A curious - and particularly revealing - variant of a common maille-aketon, fashioned from interlinked rings of pure gold. Unlike \
@@ -213,6 +222,16 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	item_state = "cropmaillei"
 	icon_state = "cropmaillei"
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/bronze/donator
+	name = "cropped iron haubergeon"
+	desc = "A curious - and particularly revealing - variant of a bronze maille-garment. It's said that the intentionally provocative design \
+	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+	item_state = "cropmailleb"
+	icon_state = "cropmailleb"
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/donator_elven
 	name = "elven haubergeon"
@@ -251,6 +270,15 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	item_state = "heartplatei"
 	icon_state = "heartplatei"
+
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/bronze/donator
+	name = "bronze heartplate"
+	desc = "A curious - and particularly revealing - variant of a bronze cuirass. It's said that the intentionally provocative design \
+	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "heartplateb"
+	icon_state = "heartplateb"
 
 /obj/item/clothing/suit/roguetown/armor/leather/donator
 	name = "leather heartplate"
@@ -456,6 +484,14 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	item_state = "chainbasei"
 	icon_state = "chainbasei"
+
+/obj/item/storage/belt/rogue/leather/donator_bronze
+	name = "belt of bronze maille"
+	desc = "A fine leather belt that's been decorated with a skirt of bronze chainmail."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "chainbaseb"
+	icon_state = "chainbaseb"
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/donator_triheartfelt
 	name = "azurian plate armor"
