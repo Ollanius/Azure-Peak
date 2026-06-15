@@ -17,7 +17,7 @@
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/light/get_mechanics_examine(mob/user)
 	. = ..()
-	. += span_info("RMB to adjust the haubyrine's coverage; it can either cover the entire torso, or be tightened up to just cover the chest.")
+	. += span_info("RMB to adjust the haubyrnie's coverage; it can either cover the entire torso, or be tightened up to just cover the chest.")
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/light/iron
 	name = "iron haubyrnie"
@@ -31,9 +31,10 @@
 	name = "bronze haubyrnie"
 	desc = "A sleeveless maille shirt, fashioned from dozens of interlinked bronze rings. It's light enough to comfortably tuck underneath a \
 	blouse, yet tough enough to thwart the razor-sharp edges of unwelcomed company. For the discerning traveler - ideally, from an antique land."
-	icon_state = "baubyrnie"
+	icon_state = "bhaubyrnie"
 	max_integrity = ARMOR_INT_CHEST_LIGHT_IRON - 30
 	smeltresult = /obj/item/ingot/bronze
+	armor = ARMOR_BRONZE
 
 //MEDIUM ARMOR - HAUBERGEON//
 /obj/item/clothing/suit/roguetown/armor/chainmail

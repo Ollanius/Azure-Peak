@@ -200,6 +200,7 @@
 	anvilrepair = /datum/skill/craft/armorsmithing
 	smeltresult = /obj/item/ingot/bronze
 	max_integrity = ARMOR_INT_SIDE_BRONZE
+	armor = ARMOR_BRONZE
 
 /obj/item/clothing/neck/roguetown/chaincoif/full
 	name = "full chain coif"

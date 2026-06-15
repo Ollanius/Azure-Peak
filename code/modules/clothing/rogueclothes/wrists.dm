@@ -501,7 +501,7 @@
 	icon_state = "bchainsleevesalt"
 	item_state = "bchainsleevesalt"
 	blocksound = CHAINHIT
-	armor = ARMOR_MAILLE
+	armor = ARMOR_BRONZE
 	material_category = ARMOR_MAT_CHAINMAIL
 	body_parts_covered = ARMS
 	drop_sound = 'sound/foley/dropsound/chain_drop.ogg'
