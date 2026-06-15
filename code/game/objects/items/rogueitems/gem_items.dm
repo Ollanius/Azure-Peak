@@ -36,7 +36,7 @@
 
 /obj/item/carvedgem/shell/cameo
 	name = "shell cameo"
-	desc = "A cameo carved out of shell depicting...someone? Use your imagination on who it could be."
+	desc = "A cameo carved out of shell depicting depicting someone's grandest features in greater detail; a memoir, perhaps."
 	icon_state = "cameo_shell"
 	grid_height = 32
 	grid_width = 32
@@ -128,7 +128,7 @@
 //.....................Rose......................//
 /obj/item/carvedgem/rose/
 	name = "rose base"
-	desc = "if you are seeing this, it's a bug, report it to coders"
+	desc = "if you are seeing this, it's a bug, report it to coders!"
 	icon = 'icons/roguetown/gems/gem_rose.dmi'
 	icon_state = "raw_rose"
 	grid_height = 32
@@ -136,7 +136,7 @@
 
 /obj/item/carvedgem/rose/rawrose
 	name = "rosestone"
-	desc = "Pink and lustrous, these pearls produced by fossilized clamshells are valued by Eorans: and are usually gifted to expecting mothers and newlyweds."
+	desc = "Pink and lustrous, these pearls produced by fossilized clamshells are valued by Eorans; and are usually gifted to expecting mothers and newlyweds."
 	icon_state = "raw_rose"
 	grid_height = 32
 	grid_width = 32
@@ -144,7 +144,7 @@
 
 /obj/item/carvedgem/rose/cameo
 	name = "rosestone cameo"
-	desc = "A cameo carved out of rosestone depicting...someone? Use your imagination on who it could be."
+	desc = "A cameo carved out of rosestone depicting someone's grandest features in greater detail; a memoir, perhaps."
 	icon_state = "cameo_rose"
 	grid_height = 32
 	grid_width = 32
@@ -245,7 +245,7 @@
 
 /obj/item/carvedgem/jade
 	name = "jade base"
-	desc =  "if you are seeing this, it's a bug, report it to coders"
+	desc =  "if you are seeing this, it's a bug, report it to coders!"
 	icon = 'icons/roguetown/gems/gem_jade.dmi'
 	icon_state = "cutgem_jade"
 	grid_height = 32
@@ -253,7 +253,7 @@
 
 /obj/item/carvedgem/jade/cameo
 	name = "jade cameo"
-	desc = "A cameo carved out of jade depicting...someone? Use your imagination on who it could be."
+	desc = "A cameo carved out of jade depicting someone's grandest features in greater detail; a memoir, perhaps."
 	icon_state = "cameo_jade"
 	grid_height = 32
 	grid_width = 32
@@ -337,7 +337,7 @@
 
 /obj/item/carvedgem/jade/wyrm
 	name = "jade wyrm"
-	desc = "A large sculpture of a wyrm made out of jade. Few wyrms remain in Faience, but their legacies continue to live on in the art of humens."
+	desc = "A large sculpture of a wyrm made out of jade. Few wyrms remain in Psydonia, but their legacies continue to live on in the art of humens."
 	icon_state = "dragon_jade"
 	grid_height = 64
 	grid_width = 32
@@ -346,7 +346,7 @@
 
 /obj/item/carvedgem/onyxa
 	name = "onyxa base"
-	desc = "if you are seeing this, it's a bug, report it to coders"
+	desc = "if you are seeing this, it's a bug, report it to coders!"
 	icon = 'icons/roguetown/gems/gem_onyxa.dmi'
 	icon_state = "cutgem_onyxa"
 	grid_height = 32
@@ -354,7 +354,7 @@
 
 /obj/item/carvedgem/onyxa/cameo
 	name = "onyxa cameo"
-	desc = "A cameo carved out of onyxa depicting...someone? Use your imagination on who it could be."
+	desc = "A cameo carved out of onyxa depicting depicting someone's grandest features in greater detail; a memoir, perhaps."
 	icon_state = "cameo_onyxa"
 	grid_height = 32
 	grid_width = 32
@@ -454,7 +454,7 @@
 
 /obj/item/carvedgem/turq
 	name = "cerulite base"
-	desc = "if you are seeing this, it's a bug, report it to coders"
+	desc = "if you are seeing this, it's a bug, report it to coders!"
 	icon = 'icons/roguetown/gems/gem_turq.dmi'
 	icon_state = "cutgem_turq"
 	grid_height = 32
@@ -462,7 +462,7 @@
 
 /obj/item/carvedgem/turq/cameo
 	name = "cerulite cameo"
-	desc = "A cameo carved out of cerulite depicting...someone? Use your imagination on who it could be."
+	desc = "A cameo carved out of cerulite depicting someone's grandest features in greater detail; a memoir, perhaps."
 	icon_state = "cameo_turq"
 	grid_height = 32
 	grid_width = 32
@@ -571,7 +571,7 @@
 
 /obj/item/carvedgem/coral/cameo
 	name = "heartstone cameo"
-	desc = "A cameo carved out of heartstone depicting...someone? Use your imagination on who it could be.."
+	desc = "A cameo carved out of heartstone depicting someone's grandest features in greater detail; a memoir, perhaps."
 	icon_state = "cameo_coral"
 	grid_height = 32
 	grid_width = 32
@@ -655,7 +655,7 @@
 
 /obj/item/carvedgem/coral/jaw
 	name = "shark jaw statue"
-	desc = "A statue of a shark's jaw carved out of heartstone. Its probably best if you don't touch the teeth."
+	desc = "A statue of a shark's jaw carved out of heartstone. It's probably best if you don't touch the teeth."
 	icon_state = "jaw_coral"
 	grid_height = 64
 	grid_width = 64
@@ -671,7 +671,7 @@
 
 /obj/item/carvedgem/amber
 	name = "amber base"
-	desc = "if you are seeing this, it's a bug, report it to coders"
+	desc = "if you are seeing this, it's a bug, report it to coders!"
 	icon = 'icons/roguetown/gems/gem_amber.dmi'
 	icon_state = "cutgem_amber"
 	grid_height = 32
@@ -681,7 +681,7 @@
 
 /obj/item/carvedgem/amber/cameo
 	name = "amber cameo"
-	desc = "A cameo carved out of amber depicting... someone? Use your imagination on who it could be..."
+	desc = "A cameo carved out of amber depicting someone's grandest features in greater detail; a memoir, perhaps."
 	icon_state = "cameo_amber"
 	grid_height = 32
 	grid_width = 32
@@ -781,7 +781,7 @@
 
 /obj/item/carvedgem/opal
 	name = "opal base"
-	desc = "if you are seeing this, it's a bug, report it to coders"
+	desc = "if you are seeing this, it's a bug, report it to coders!"
 	icon = 'icons/roguetown/gems/gem_opal.dmi'
 	icon_state = "cutgem_opal"
 	grid_height = 32
@@ -789,7 +789,7 @@
 
 /obj/item/carvedgem/opal/cameo
 	name = "opal cameo"
-	desc = "A cameo carved out of opal depicting...someone? Use your imagination on who it could be."
+	desc = "A cameo carved out of opal depicting someone's grandest features in greater detail; a memoir, perhaps."
 	icon_state = "cameo_opal"
 	grid_height = 32
 	grid_width = 32

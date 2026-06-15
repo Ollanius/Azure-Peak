@@ -150,6 +150,7 @@
 	sleevetype = "bchainkilt"
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
 	alternate_worn_layer = (SHIRT_LAYER)
+	smeltresult = /obj/item/ingot/bronze
 
 /obj/item/clothing/under/roguetown/chainlegs/banneret
 	name = "knight banneret's chausses"

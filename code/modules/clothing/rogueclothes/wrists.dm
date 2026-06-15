@@ -340,6 +340,8 @@
 	name = "gem bracelet base"
 	desc = "You shouldn't be seeing this."
 	slot_flags = ITEM_SLOT_WRISTS
+	armor = ARMOR_PLATE
+	max_integrity = ARMOR_INT_SIDE_CLOTH
 	icon = 'icons/roguetown/clothing/wrists.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/gembracelet.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_gembracelet.dmi'
@@ -501,6 +503,7 @@
 	blocksound = CHAINHIT
 	armor = ARMOR_MAILLE
 	material_category = ARMOR_MAT_CHAINMAIL
+	body_parts_covered = ARMS
 	drop_sound = 'sound/foley/dropsound/chain_drop.ogg'
 	pickup_sound = 'sound/foley/equip/equip_armor_chain.ogg'
 	equip_sound = 'sound/foley/equip/equip_armor_chain.ogg'

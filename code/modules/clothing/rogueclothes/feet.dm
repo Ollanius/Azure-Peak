@@ -377,6 +377,16 @@
 	max_integrity = ARMOR_INT_SIDE_IRON
 	smeltresult = /obj/item/ingot/iron
 
+/obj/item/clothing/shoes/roguetown/boots/maille/bronze
+	name = "bronze maille boots"
+	desc = "A pair of leather boots, reinforced with smaller bronze plates along the feet and ankles. A thick layer of chainmail has been woven across \
+	the cuffs of each boot, and tastefully stitched into place. Between the glory of Ur-Syon's collapse and the rise of the Celestial Empire, these soles \
+	carried the steps of armies-a-plenty across the yet-supple steppes."
+	icon_state = "bsoldierboots"
+	item_state = "bsoldierboots"
+	max_integrity = ARMOR_INT_SIDE_BRONZE
+	smeltresult = /obj/item/ingot/bronze
+
 /obj/item/clothing/shoes/roguetown/boots/armor/gold
 	name = "golden greaves"
 	desc = "Resplendant sabatons of pure gold, adorned with angled greaves that proudly bare the holy sigil. Its besilked cuffs have remained surprisingly bereft of debris - not even a sprig of lint remains to be criticized."
@@ -470,11 +480,13 @@
 	smeltresult = /obj/item/ingot/avantyne
 
 /obj/item/clothing/shoes/roguetown/boots/armor/iron
-	name = "light plated boots"
-	desc = "A pair of boots, further reinforced with leather-strapped plates."
+	name = "iron plated boots"
+	desc = "A pair of leather boots, reinforced with smaller steel plates along the feet and ankles. Woven into the top of each boot's cuff is a \
+	thick layer of chainmail, which further protects the wearer's lower legs from harm. Commonly worn by well-seasoned adventurers, who happen \
+	to put more trust in their skills than their steel."
 	body_parts_covered = FEET
-	icon_state = "soldierboots"
-	item_state = "soldierboots"
+	icon_state = "iplateboots"
+	item_state = "iplateboots"
 	color = null
 	blocksound = PLATEHIT
 	max_integrity = ARMOR_INT_SIDE_IRON
@@ -695,6 +707,16 @@
 	sewrepair = FALSE
 	armor = ARMOR_PLATE // these are awful!
 	smeltresult = /obj/item/ingot/gold
+
+/obj/item/clothing/shoes/roguetown/horseshoes/bronze
+	name = "bronze horseshoes"
+	desc = "A pair of venerable bronze horsehoes nailed onto thick leather soles. These are ready to be attached to some hooves."
+	icon_state = "bronze_horseshoes"
+	item_state = "bronze_horseshoes"
+	clothing_flags = TAUR_COMPATIBLE
+	max_integrity = ARMOR_INT_LEG_BRONZE
+	sewrepair = FALSE
+	smeltresult = /obj/item/ingot/bronze
 
 /obj/item/clothing/shoes/courtphysician
 	name = "sanguine shoes"

@@ -484,6 +484,19 @@
 	created_item = /obj/item/clothing/under/roguetown/chainlegs/kilt/bronze
 	display_category = ITEM_CAT_ARMOR_LEGS
 
+/datum/anvil_recipe/armor/bronze/mailleboots
+	name = "Maille Boots, Bronze"
+	req_bar = /obj/item/ingot/bronze
+	created_item = /obj/item/clothing/shoes/roguetown/boots/maille/bronze
+	display_category = ITEM_CAT_ARMOR_BOOTS
+
+/datum/anvil_recipe/armor/bronze/horseshoes
+	name = "Horseshoes, Bronze (+1 Cured Leather)"
+	req_bar = /obj/item/ingot/bronze
+	additional_items = list(/obj/item/natural/hide/cured)
+	created_item = /obj/item/clothing/shoes/roguetown/horseshoes/bronze
+	display_category = ITEM_CAT_SMITHING_MISC
+
 // IRON
 /datum/anvil_recipe/armor/iron/lightchainmail
 	name = "Haubyrine, Iron"
@@ -785,7 +798,7 @@
 	craftdiff = 2
 
 /datum/anvil_recipe/armor/plategoblin
-	name = "Goblin Mail (+1 Iron)"
+	name = "Goblin Maille (+1 Iron)"
 	req_bar = /obj/item/ingot/iron
 	additional_items = list(/obj/item/ingot/iron)
 	created_item = /obj/item/clothing/suit/roguetown/armor/plate/cuirass/iron/goblin
