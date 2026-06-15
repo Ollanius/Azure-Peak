@@ -94,6 +94,12 @@
 	created_item = /obj/item/clothing/neck/roguetown/gorget/copper
 	display_category = ITEM_CAT_ARMOR_NECK
 
+/datum/anvil_recipe/armor/copper/boots
+	name = "Lamellar Boots, Copper"
+	req_bar = /obj/item/ingot/copper
+	created_item = /obj/item/clothing/shoes/roguetown/boots/maille/copper
+	display_category = ITEM_CAT_ARMOR_NECK
+
 /datum/anvil_recipe/armor/copper/chest
 	name = "Heart Protector, Copper"
 	req_bar = /obj/item/ingot/copper

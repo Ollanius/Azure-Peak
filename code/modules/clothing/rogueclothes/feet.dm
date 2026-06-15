@@ -387,6 +387,16 @@
 	max_integrity = ARMOR_INT_SIDE_BRONZE
 	smeltresult = /obj/item/ingot/bronze
 
+/obj/item/clothing/shoes/roguetown/boots/maille/copper
+	name = "copper lamellar boots"
+	desc = "A pair of leather boots, reinforced with smaller copper plates along the feet and ankles. Rarely seen since the dawn of civilization, copper \
+	garbs like these were the undersung heroes of humenity's earliest daes; a story of vintage proportions, still fresh in the minds of only a few blessed Aasimarites."
+	icon_state = "csoldierboots"
+	item_state = "csoldierboots"
+	max_integrity = ARMOR_INT_SIDE_LEATHER
+	armor = ARMOR_LEATHER
+	smeltresult = /obj/item/ingot/copper
+
 /obj/item/clothing/shoes/roguetown/boots/armor/gold
 	name = "golden greaves"
 	desc = "Resplendant sabatons of pure gold, adorned with angled greaves that proudly bare the holy sigil. Its besilked cuffs have remained surprisingly bereft of debris - not even a sprig of lint remains to be criticized."
