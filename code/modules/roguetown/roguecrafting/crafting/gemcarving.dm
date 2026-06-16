@@ -612,7 +612,7 @@
 	display_category = ITEM_CAT_WEAPONS_DAGGERS
 	name = "rosestone dagger"
 	result = /obj/item/rogueweapon/huntingknife/idagger/steel/rondel/rose
-	reqs = list(/obj/item/roguegem/rawrose = 1)
+	reqs = list(/obj/item/carvedgem/rose/rawrose = 1)
 	tools = list(/obj/item/rogueweapon/huntingknife)
 	craftdiff = SKILL_LEVEL_MASTER
 
