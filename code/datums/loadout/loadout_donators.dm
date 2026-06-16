@@ -102,7 +102,7 @@
 	name = "Gift - Oathtaker's Noble Longcoat"
 	path = /obj/item/clothing/cloak/tabard/stabard/surcoat/donator_oathkeeper
 
-/datum/loadout_item/donator/universalcloak_oathkeepershort
+/datum/loadout_item/donator/universal/cloak_oathkeepershort
 	name = "Gift - Oathtaker's Noble Shortcoat"
 	path = /obj/item/clothing/cloak/tabard/stabard/donator_oathkeeper
 
