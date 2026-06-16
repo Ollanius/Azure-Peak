@@ -521,8 +521,7 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	item_state = "d_stripes"
 	icon_state = "d_stripes"
-	pixel_y = 7
-	pixel_x = 0
+	worn_y_dimension = 39
 	//Originally found in icons/roguetown/topadd/johnie/noldor.dmi. Full credit to Johnie, who - from what I might guess - was a very early contributor to Roguetown. Hi!
 
 /obj/item/clothing/head/roguetown/decoration/donator_oathkeeper
@@ -531,6 +530,9 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 	golden winged shield; an unofficial coat-of-arms used to represent Azuria's many noble houses. To wear such garments is to command respect from those that've come after you; hopefully, not undue."
 	item_state = "d_oathtaker"
 	icon_state = "d_oathtaker"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	worn_y_dimension = 39
 	color = null
 
 /obj/item/clothing/head/roguetown/decoration/donator_lion
@@ -539,6 +541,9 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 	golden lion that is waving a flag, intricately detailed with the wearer's heraldry. To wear such garments is to command respect from those that've come after you; hopefully, not undue."
 	item_state = "d_triumph"
 	icon_state = "d_triumph"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	worn_y_dimension = 39
 	color = null
 
 /obj/item/clothing/cloak/tabard/stabard/donator_oathkeeper
