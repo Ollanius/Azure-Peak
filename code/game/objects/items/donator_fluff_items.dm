@@ -521,7 +521,8 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	item_state = "d_stripes"
 	icon_state = "d_stripes"
-	worn_y_dimension = 39
+	worn_y_dimension = 40
+	pixel_y = 8
 	//Originally found in icons/roguetown/topadd/johnie/noldor.dmi. Full credit to Johnie, who - from what I might guess - was a very early contributor to Roguetown. Hi!
 
 /obj/item/clothing/head/roguetown/decoration/donator_oathkeeper
@@ -532,7 +533,8 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 	icon_state = "d_oathtaker"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
-	worn_y_dimension = 39
+	worn_y_dimension = 40
+	pixel_y = 8
 	color = null
 
 /obj/item/clothing/head/roguetown/decoration/donator_lion
@@ -543,7 +545,8 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 	icon_state = "d_triumph"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
-	worn_y_dimension = 39
+	worn_y_dimension = 40
+	pixel_y = 8
 	color = null
 
 /obj/item/clothing/cloak/tabard/stabard/donator_oathkeeper
