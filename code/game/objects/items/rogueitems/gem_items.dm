@@ -28,7 +28,7 @@
 
 /obj/item/carvedgem/shell/rawshell
 	name = "clamshell"
-	desc = "A piece of a fossilized clamshell. Although not as valuable as other gems, it holds a special place in Coastal and Sea Elven cultures. The origin of these clams is still under heavy speculation."
+	desc = "A piece of a fossilized clamshell. Although not as valuable as other gems, it holds a special place in Sea and Coastal Elven cultures. The origin of these clams is still under heavy speculation."
 	icon_state = "raw_shell"
 	grid_height = 32
 	grid_width = 32
@@ -241,6 +241,19 @@
 	grid_height = 64
 	grid_width = 64
 
+/obj/item/rogueweapon/huntingknife/idagger/steel/rondel/rose
+	name = "rosestone dagger"
+	desc = "A pristine dagger carved out of rosestone, intended for ceremonies over combat. Such a blade is famous amongst both Eorans and Baothans; the \
+	former cherishes it as a ceremonial means of ending one's suffering - the latter, a twisted representation of the sin that brought about their patron's fall from grace."
+	icon = 'icons/roguetown/gems/gem_rose.dmi'
+	icon_state = "misericorde_rose"
+	max_integrity = 75
+	max_blade_int = 50
+	wdefense = 3
+	resistance_flags = FIRE_PROOF | ACID_PROOF
+	anvilrepair = /datum/skill/craft/weaponsmithing
+	smeltresult = null
+
 //.....................Jade......................//
 
 /obj/item/carvedgem/jade
@@ -450,6 +463,19 @@
 	grid_height = 64
 	grid_width = 32
 
+/obj/item/rogueweapon/sword/short/messer/onyxa
+	name = "onyxa macuahuitl"
+	desc = "A resplendant macuahuitl carved out of onyxa, intended for ceremonies over combat. Traditionally made with shards of onyxa or \
+	obsidian, this paddle-like cleaver - though absurdly fragile - remains sharp enough to carve straight through a saiga's neck in one blow."
+	icon = 'icons/roguetown/gems/gem_onyxa.dmi'
+	icon_state = "macuahuitl_onyxa"
+	max_integrity = 75
+	max_blade_int = 50
+	wdefense = 3
+	resistance_flags = FIRE_PROOF | ACID_PROOF
+	anvilrepair = /datum/skill/craft/weaponsmithing
+	smeltresult = null
+
 //.....................Cerulite......................//
 
 /obj/item/carvedgem/turq
@@ -559,6 +585,20 @@
 	grid_height = 64
 	grid_width = 64
 
+/obj/item/rogueweapon/spear/turq
+	name = "cerulite spear"
+	desc = "A perfect spear carved out of cerulite, intended for ceremonies over combat. Before the advent of alloys, gemstone-tipped weapons \
+	were seen as the pinnacle of penetration; it didn't take a well-learned man to understand that one who held the shiniest article had the greatest authority."
+	pixel_y = 0
+	pixel_x = 0
+	max_integrity = 75
+	max_blade_int = 50
+	dam_icon = 'icons/effects/item_damage32.dmi'
+	icon = 'icons/roguetown/gems/gem_turq.dmi'
+	icon_state = "spear_turq"
+	smeltresult = null
+	anvilrepair = /datum/skill/craft/weaponsmithing
+
 // heartstone //
 
 /obj/item/carvedgem/coral
@@ -667,6 +707,19 @@
 	grid_height = 64
 	grid_width = 64
 
+/obj/item/rogueweapon/stoneaxe/battle/coral
+	name = "heartstone nsapo"
+	desc = "An ornate nsapo carved out of heartstone, intended for ceremonies over combat. As gemstoned items were - and still are - seen as talismans that \
+	can invoke divine attention, it's only fitting that these hatchets serve a pivotal part in settling ancient feuds; through the rite of Ravox."
+	icon = 'icons/roguetown/gems/gem_coral.dmi'
+	icon_state = "nsapo_coral"
+	max_integrity = 75
+	max_blade_int = 50
+	wdefense = 3
+	resistance_flags = FIRE_PROOF | ACID_PROOF
+	anvilrepair = /datum/skill/craft/weaponsmithing
+	smeltresult = null
+
 // amber //
 
 /obj/item/carvedgem/amber
@@ -676,8 +729,6 @@
 	icon_state = "cutgem_amber"
 	grid_height = 32
 	grid_width = 32
-
-
 
 /obj/item/carvedgem/amber/cameo
 	name = "amber cameo"
@@ -776,6 +827,19 @@
 	icon_state = "sun_amber"
 	grid_height = 32
 	grid_width = 32
+
+/obj/item/rogueweapon/sword/amber
+	name = "amber kaskara"
+	desc = "A resplendant kaskara carved out of amber, intended for ceremonies over combat. It's believed that each piece of amber contains \
+	a sliver of Astrata's divine warmth; something that once made it invaluable to decorating the reigns of Psydonia's earliest kings."
+	icon = 'icons/roguetown/gems/gem_amber.dmi'
+	icon_state = "kaskara_amber"
+	max_integrity = 75
+	max_blade_int = 50
+	wdefense = 3
+	resistance_flags = FIRE_PROOF | ACID_PROOF
+	anvilrepair = /datum/skill/craft/weaponsmithing
+	smeltresult = null
 
 // opal
 

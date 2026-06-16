@@ -349,42 +349,42 @@
 
 /obj/item/clothing/wrists/roguetown/gem/jadebracelet
 	name = "jade bracelets"
-	desc = "A set of bracelets carved out of jade."
+	desc = "A set of gemstoned bracelets that've been carved from jade."
 	icon_state = "br_jade"
 
 /obj/item/clothing/wrists/roguetown/gem/turqbracelet
 	name = "cerulite bracelets"
-	desc = "A set of bracelets carved out of cerulite."
+	desc = "A set of gemstoned bracelets that've been carved out from cerulite."
 	icon_state = "br_turq"
 
 /obj/item/clothing/wrists/roguetown/gem/onyxabracelet
 	name = "onyxa bracelets"
-	desc = "A set of bracelets carved out of onyxa."
+	desc = "A set of gemstoned bracelets that've been carved out from onyxa."
 	icon_state = "br_onyxa"
 
 /obj/item/clothing/wrists/roguetown/gem/coralbracelet
 	name = "heartstone bracelets"
-	desc = "A set of bracelets carved out of heartstone."
+	desc = "A set of gemstoned bracelets that've been carved out from heartstones."
 	icon_state = "br_coral"
 
 /obj/item/clothing/wrists/roguetown/gem/amberbracelet
 	name = "amber bracelets"
-	desc = "A set of bracelets carved out of amber."
+	desc = "A set of gemstoned bracelets that've been carved out from amber."
 	icon_state = "br_amber"
 
 /obj/item/clothing/wrists/roguetown/gem/shellbracelet
 	name = "shell bracelets"
-	desc = "A set of bracelets carved out of shell."
+	desc = "A set of gemstoned bracelets that've been carved out from shells."
 	icon_state = "br_shell"
 
 /obj/item/clothing/wrists/roguetown/gem/rosebracelet
 	name = "rosestone bracelets"
-	desc = "A set of bracelets carved out of rosestone."
+	desc = "A set of gemstoned bracelets that've been carved out from rosestones."
 	icon_state = "br_rose"
 
 /obj/item/clothing/wrists/roguetown/gem/opalbracelet
 	name = "opal bracelets"
-	desc = "A set of bracelets carved out of opal."
+	desc = "A set of gemstoned bracelets that've been carved out from opals.
 	icon_state = "br_opal"
 
 //

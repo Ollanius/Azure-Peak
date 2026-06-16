@@ -343,6 +343,15 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 	item_state = "plackarti"
 	icon_state = "plackarti"
 
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/bronze/donator_girdle
+	name = "bronze plackart"
+	desc = "A curious - and particularly revealing - variant of a bronze cuirass. It's said that the intentionally provocative design \
+	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "plackartb"
+	icon_state = "plackartb"
+
 /obj/item/clothing/suit/roguetown/armor/leather/donator_girdle
 	name = "leather plackart"
 	desc = "A curious - and particularly revealing - variant of a common leather cuirass. It's said that the intentionally provocative design \

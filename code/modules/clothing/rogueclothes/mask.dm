@@ -693,42 +693,42 @@
 /obj/item/clothing/mask/rogue/facemask/carved/jademask
 	name = "jade mask"
 	icon_state = "mask_jade"
-	desc = "A jade mask that both conceals and protects the face."
+	desc = "A jade mask that both conceals and protects the face. It mimics the guise of a jubilant shaman."
 
 /obj/item/clothing/mask/rogue/facemask/carved/turqmask
 	name = "cerulite mask"
 	icon_state = "mask_turq"
-	desc = "A cerulite mask that both conceals and protects the face."
+	desc = "A cerulite mask that both conceals and protects the face. It mimics the guise of a ferocious lion."
 
 /obj/item/clothing/mask/rogue/facemask/carved/rosemask
 	name = "rosestone mask"
 	icon_state = "mask_rose"
-	desc = "A rosestone mask that both conceals and protects the face."
+	desc = "A rosestone mask that both conceals and protects the face. It mimics the guise of a contemplative monk."
 
 /obj/item/clothing/mask/rogue/facemask/carved/shellmask
 	name = "shell mask"
 	icon_state = "mask_shell"
-	desc = "A shell mask that both conceals and protects the face."
+	desc = "A shell mask that both conceals and protects the face. It mimics the guise of a stoic wanderer."
 
 /obj/item/clothing/mask/rogue/facemask/carved/coralmask
 	name = "heartstone mask"
 	icon_state = "mask_coral"
-	desc = "An heartstone mask that both conceals and protects the face."
+	desc = "An heartstone mask that both conceals and protects the face. It mimics the guise of a laughing spirit."
 
 /obj/item/clothing/mask/rogue/facemask/carved/ambermask
 	name = "amber mask"
 	icon_state = "mask_amber"
-	desc = "A amber mask that both conceals and protects the face."
+	desc = "A amber mask that both conceals and protects the face. It mimics the guise of a stalwart king."
 
 /obj/item/clothing/mask/rogue/facemask/carved/onyxamask
 	name = "onyxa mask"
 	icon_state = "mask_onyxa"
-	desc = "An onyxa mask that both conceals and protects the face."
+	desc = "An onyxa mask that both conceals and protects the face. It mimics the guise of a bulbous alchemist."
 
 /obj/item/clothing/mask/rogue/facemask/carved/opalmask
 	name = "opal mask"
 	icon_state = "mask_opal"
-	desc = "An opal mask that both conceals and protects the face."
+	desc = "An opal mask that both conceals and protects the face. It mimics the guise of a jubilant shaman."
 
 /obj/item/clothing/mask/rogue/xylixmask
 	name = "jester mask"

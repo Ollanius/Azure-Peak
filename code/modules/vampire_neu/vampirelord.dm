@@ -246,7 +246,7 @@
 	armor = ARMOR_VAMP
 	max_integrity = ARMOR_INT_CHEST_PLATE_ANTAG
 	resistance_flags = FIRE_PROOF | ACID_PROOF
-	smeltresult = /obj/item/ingot/ancientroyalalloy
+	smeltresult = /obj/item/ingot/vampire
 	unenchantable = TRUE //Its pretty much near-perfect protection, you do not need this.
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/paalloy/vampire/Initialize()
