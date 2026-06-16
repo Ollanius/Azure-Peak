@@ -513,6 +513,56 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 	item_state = "triheartfelt"
 	icon_state = "triheartfelt"
 
+/obj/item/clothing/head/roguetown/decoration/base
+	name = "helmet's striped decoration"
+	desc = "A delicate weaving of colored fabric, intended to be worn atop a helmet; a touch of elegance, indiscriminate of the alloy."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+	item_state = "d_stripes"
+	icon_state = "d_stripes"
+	pixel_y = 7
+	pixel_x = 0
+	//Originally found in icons/roguetown/topadd/johnie/noldor.dmi. Full credit to Johnie, who - from what I might guess - was a very early contributor to Roguetown. Hi!
+
+/obj/item/clothing/head/roguetown/decoration/donator_oathkeeper
+	name = "oathkeeper's noble decoration"
+	desc = "A delicate weaving of colored fabric, intended to be worn atop a helmet; a touch of elegance, indiscriminate of the alloy. This weave is crested with a \
+	golden winged shield; an unofficial coat-of-arms used to represent Azuria's many noble houses. To wear such garments is to command respect from those that've come after you; hopefully, not undue."
+	item_state = "d_oathtaker"
+	icon_state = "d_oathtaker"
+	color = null
+
+/obj/item/clothing/head/roguetown/decoration/donator_lion
+	name = "oathkeeper's noble lioncrest"
+	desc = "A delicate weaving of colored fabric, intended to be worn atop a helmet; a touch of elegance, indiscriminate of the alloy. This weave is crested with a \
+	golden lion that is waving a flag, intricately detailed with the wearer's heraldry. To wear such garments is to command respect from those that've come after you; hopefully, not undue.""
+	item_state = "d_triumph"
+	icon_state = "d_triumph"
+	color = null
+
+/obj/item/clothing/cloak/tabard/stabard/donator_oathkeeper
+	name = "oathkeeper's noble surcoat"
+	icon_state = "oa_fancy_short"
+	icon_state = "oa_fancy_short"
+	desc = "An elegant surcoat, toned in cadence with the unofficial coat-of-arms that's used to represent Azuria's many noble houses. One shoulder is decorated with a golden-laced \
+	sleeve, while the other supports a small ecranche. To wear such garments is to command respect from those that've come after you; hopefully, not undue."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+	color = null
+
+/obj/item/clothing/cloak/tabard/stabard/surcoat/donator_oathkeeper
+	name = "oathkeeper's noble jupon"
+	icon_state = "oa_fancy_long"
+	icon_state = "oa_fancy_long"
+	desc = "An elegant jupon, toned in cadence with the unofficial coat-of-arms that's used to represent Azuria's many noble houses. One shoulder is decorated with a golden-laced \
+	sleeve, while the other supports a small ecranche. To wear such garments is to command respect from those that've come after you; hopefully, not undue."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+	color = null
+
 /obj/item/clothing/shoes/roguetown/simpleshoes/heels
 	name = "high-heeled shoes"
 	desc = "Elegant shoes that're lightly elevated in the rear, providing a distinctive 'click' with each step. Allegedly, it's \

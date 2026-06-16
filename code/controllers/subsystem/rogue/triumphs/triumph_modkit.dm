@@ -795,14 +795,3 @@
 	desc = "A complete set of iron plate armor, fitted with tassets and bracers for additional coverage. Ask yourself one last question, before \
 	you twist the blade; is humenity still worth saving?"
 	icon_state = "ilegacyplate"
-
-/obj/item/clothing/suit/roguetown/armor/plate/full/donator_triheartfelthand
-	name = "azurosa-robed plate armor"
-	desc = "A complete set of Heartfeltian-styled plate armor, decorated with a silk robe that's been dyed with \
-	dried azurosa powder. Azuria's most triumphant oft-don these elegant maille-garments, whenever they're tasked \
-	with representing their kingdom; be it in a tournament or a celebratory feast."
-	icon = 'icons/clothing/donor_clothes.dmi'
-	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
-	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
-	item_state = "triheartfelt_hand"
-	icon_state = "triheartfelt_hand"

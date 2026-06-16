@@ -95,8 +95,24 @@
 	path = /obj/item/enchantingkit/heroicleathercuirass
 
 /datum/loadout_item/donator/universal/armor_triheartfelt
-	name = "Gift - Kit, Azurosean Plate Armor"
+	name = "Gift - Kit, Azurian Plate Armor"
 	path = /obj/item/enchantingkit/triheartfelt
+
+/datum/loadout_item/donator/universal/cloak_oathkeeperlong
+	name = "Gift - Oathtaker's Noble Longcoat"
+	path = /obj/item/clothing/cloak/tabard/stabard/surcoat/donator_oathkeeper
+
+/datum/loadout_item/donator/universalcloak_oathkeepershort
+	name = "Gift - Oathtaker's Noble Shortcoat"
+	path = /obj/item/clothing/cloak/tabard/stabard/donator_oathkeeper
+
+/datum/loadout_item/donator/universal/headpiece_oathkeeperdec
+	name = "Gift - Oathtaker's Helmet Decoration"
+	path = /obj/item/clothing/head/roguetown/decoration/donator_oathkeeper
+
+/datum/loadout_item/donator/universal/headpiece_oathkeeperdec
+	name = "Gift - Oathtaker's Helmet Lioncrest"
+	path = /obj/item/clothing/head/roguetown/decoration/donator_lion
 
 //Brief explanation - as Spear found out, using a Morphing Elixir on a storage item works.. but permenantly deletes -anything- stored inside.
 //To prevent any chance of someone accidentally destroying a round-important item, I'm replacing the kits with the main thing..
