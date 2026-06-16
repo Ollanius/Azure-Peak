@@ -520,12 +520,13 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/decorated_head.dmi'
 	item_state = "d_stripes"
 	icon_state = "d_stripes"
-	bloody_icon = 'icons/effects/blood64.dmi'
-	pixel_y = -16
-	pixel_x = -16
-	inhand_x_dimension = 64
-	inhand_y_dimension = 64
+	bloody_icon = 'icons/effects/blood64.dmi' //Remove this if you ever replace this with a proper 32x32-offsetted version.
+	worn_x_dimension = 64 //Ditto.
+	worn_y_dimension = 64 //Ditto.
+	color = null
+
 	//Originally found in icons/roguetown/topadd/johnie/noldor.dmi. Full credit to Johnie, who - from what I might guess - was a very early contributor to Roguetown. Hi!
+	//Hatcheted implementation. If someone ever finds out how to use onmob offsets, use the sprites in onmob/donor_clothes with an offset of +7 Y instead.______qdel_list_wrapper(list/L)
 
 /obj/item/clothing/head/roguetown/decoration/donator_oathkeeper
 	name = "oathkeeper's noble decoration"
@@ -536,10 +537,8 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/decorated_head.dmi'
 	bloody_icon = 'icons/effects/blood64.dmi'
-	pixel_y = -16
-	pixel_x = -16
-	inhand_x_dimension = 64
-	inhand_y_dimension = 64
+	worn_x_dimension = 64
+	worn_y_dimension = 64
 	color = null
 
 /obj/item/clothing/head/roguetown/decoration/donator_lion
@@ -551,10 +550,8 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/decorated_head.dmi'
 	bloody_icon = 'icons/effects/blood64.dmi'
-	pixel_y = -16
-	pixel_x = -16
-	inhand_x_dimension = 64
-	inhand_y_dimension = 64
+	worn_x_dimension = 64
+	worn_y_dimension = 64
 	color = null
 
 /obj/item/clothing/cloak/tabard/stabard/donator_oathkeeper
