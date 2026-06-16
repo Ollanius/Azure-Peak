@@ -206,7 +206,7 @@
 	armor = ARMOR_VAMP
 	max_integrity = ARMOR_INT_CHEST_PLATE_ANTAG
 	resistance_flags = FIRE_PROOF | ACID_PROOF
-	smeltresult = /obj/item/ingot/ancientroyalalloy
+	smeltresult = /obj/item/ingot/vampire
 	unenchantable = TRUE //Its pretty much near-perfect protection, you do not need this.
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/iron/vampire/Initialize()
@@ -227,7 +227,7 @@
 	max_integrity = ARMOR_INT_CHEST_PLATE_ANTAG
 	allowed_sex = list(MALE, FEMALE)
 	anvilrepair = /datum/skill/craft/armorsmithing
-	smeltresult = /obj/item/ingot/ancientroyalalloy
+	smeltresult = /obj/item/ingot/vampire
 	equip_delay_self = 40
 	armor_class = ARMOR_CLASS_HEAVY
 	resistance_flags = FIRE_PROOF | ACID_PROOF
@@ -265,7 +265,7 @@
 	blocksound = PLATEHIT
 	drop_sound = 'sound/foley/dropsound/armor_drop.ogg'
 	anvilrepair = /datum/skill/craft/armorsmithing
-		smeltresult = /obj/item/ingot/ancientroyalalloy
+	smeltresult = /obj/item/ingot/vampire
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	unenchantable = TRUE //Its pretty much near-perfect protection, you do not need this.
 
@@ -285,7 +285,7 @@
 	blocksound = PLATEHIT
 	armor = ARMOR_VAMP
 	resistance_flags = FIRE_PROOF | ACID_PROOF
-	smeltresult = /obj/item/ingot/ancientroyalalloy
+	smeltresult = /obj/item/ingot/vampire
 	unenchantable = TRUE //Its pretty much near-perfect protection, you do not need this.
 
 /obj/item/clothing/shoes/roguetown/boots/armor/vampire/Initialize()
@@ -299,7 +299,7 @@
 	icon_state = "vgloves"
 	item_state = "vgloves"
 	armor = ARMOR_VAMP
-	smeltresult = /obj/item/ingot/ancientroyalalloy
+	smeltresult = /obj/item/ingot/vampire
 	body_parts_inherent = FULL_BODY
 	max_integrity = ARMOR_INT_SIDE_ANTAG
 	unenchantable = TRUE //Its pretty much near-perfect protection, you do not need this.
@@ -313,7 +313,7 @@
 	name = "ancient ceremonial bracers"
 	desc = "Enchanted gilbranze cuffings, clasped around the wrists. They call it a 'curse', but what would they know? What would they have in five hundred years? Would the oh-so-valiant heroes truly accept death, or would they see the pointlessness in besmirching eternal lyfe?"
 	icon_state = "vbracers"
-	smeltresult = /obj/item/ingot/ancientroyalalloy
+	smeltresult = /obj/item/ingot/vampire
 	armor = ARMOR_VAMP
 	max_integrity = ARMOR_INT_SIDE_ANTAG
 	unenchantable = TRUE //Its pretty much near-perfect protection, you do not need this.
@@ -327,7 +327,7 @@
 	name = "ancient ceremonial gorget"
 	desc = "A neckguard of enchanted gilbranze. Though a vampyre needn't air to lyve, they most certainly need a spine."
 	icon_state = "vgorget"
-	smeltresult = /obj/item/ingot/ancientroyalalloy
+	smeltresult = /obj/item/ingot/vampire
 	armor = ARMOR_VAMP
 	max_integrity = ARMOR_INT_SIDE_ANTAG
 	unenchantable = TRUE //Its pretty much near-perfect protection, you do not need this.
@@ -347,7 +347,7 @@
 	block2add = FOV_BEHIND
 	stack_fovs = FALSE
 	resistance_flags = FIRE_PROOF | ACID_PROOF
-	smeltresult = /obj/item/ingot/ancientroyalalloy
+	smeltresult = /obj/item/ingot/vampire
 	var/active_item = FALSE
 	unenchantable = TRUE //Its pretty much near-perfect protection, you do not need this.
 	throw_on_break = FALSE //We only get one set.
