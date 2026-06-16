@@ -585,15 +585,12 @@
 	grid_height = 64
 	grid_width = 64
 
-/obj/item/rogueweapon/spear/turq
+/obj/item/ammo_casing/caseless/rogue/javelin/turq
 	name = "cerulite spear"
 	desc = "A perfect spear carved out of cerulite, intended for ceremonies over combat. Before the advent of alloys, gemstone-tipped weapons \
 	were seen as the pinnacle of penetration; it didn't take a well-learned man to understand that one who held the shiniest article had the greatest authority."
-	pixel_y = 0
-	pixel_x = 0
 	max_integrity = 75
 	max_blade_int = 50
-	dam_icon = 'icons/effects/item_damage32.dmi'
 	icon = 'icons/roguetown/gems/gem_turq.dmi'
 	icon_state = "spear_turq"
 	smeltresult = null
