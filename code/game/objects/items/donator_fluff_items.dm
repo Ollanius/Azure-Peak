@@ -536,7 +536,7 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 /obj/item/clothing/head/roguetown/decoration/donator_lion
 	name = "oathkeeper's noble lioncrest"
 	desc = "A delicate weaving of colored fabric, intended to be worn atop a helmet; a touch of elegance, indiscriminate of the alloy. This weave is crested with a \
-	golden lion that is waving a flag, intricately detailed with the wearer's heraldry. To wear such garments is to command respect from those that've come after you; hopefully, not undue.""
+	golden lion that is waving a flag, intricately detailed with the wearer's heraldry. To wear such garments is to command respect from those that've come after you; hopefully, not undue."
 	item_state = "d_triumph"
 	icon_state = "d_triumph"
 	color = null
