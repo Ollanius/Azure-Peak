@@ -517,12 +517,14 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 	name = "helmet's striped decoration"
 	desc = "A delicate weaving of colored fabric, intended to be worn atop a helmet; a touch of elegance, indiscriminate of the alloy."
 	icon = 'icons/clothing/donor_clothes.dmi'
-	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
-	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/decorated_head.dmi'
 	item_state = "d_stripes"
 	icon_state = "d_stripes"
-	worn_y_dimension = 40
-	pixel_y = 8
+	bloody_icon = 'icons/effects/blood64.dmi'
+	pixel_y = -16
+	pixel_x = -16
+	inhand_x_dimension = 64
+	inhand_y_dimension = 64
 	//Originally found in icons/roguetown/topadd/johnie/noldor.dmi. Full credit to Johnie, who - from what I might guess - was a very early contributor to Roguetown. Hi!
 
 /obj/item/clothing/head/roguetown/decoration/donator_oathkeeper
@@ -532,9 +534,12 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 	item_state = "d_oathtaker"
 	icon_state = "d_oathtaker"
 	icon = 'icons/clothing/donor_clothes.dmi'
-	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
-	worn_y_dimension = 40
-	pixel_y = 8
+	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/decorated_head.dmi'
+	bloody_icon = 'icons/effects/blood64.dmi'
+	pixel_y = -16
+	pixel_x = -16
+	inhand_x_dimension = 64
+	inhand_y_dimension = 64
 	color = null
 
 /obj/item/clothing/head/roguetown/decoration/donator_lion
@@ -544,9 +549,12 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 	item_state = "d_triumph"
 	icon_state = "d_triumph"
 	icon = 'icons/clothing/donor_clothes.dmi'
-	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
-	worn_y_dimension = 40
-	pixel_y = 8
+	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/decorated_head.dmi'
+	bloody_icon = 'icons/effects/blood64.dmi'
+	pixel_y = -16
+	pixel_x = -16
+	inhand_x_dimension = 64
+	inhand_y_dimension = 64
 	color = null
 
 /obj/item/clothing/cloak/tabard/stabard/donator_oathkeeper
