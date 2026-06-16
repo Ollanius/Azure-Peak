@@ -541,19 +541,6 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 	worn_y_dimension = 64
 	color = null
 
-/obj/item/clothing/head/roguetown/decoration/donator_lion
-	name = "oathkeeper's noble lioncrest"
-	desc = "A delicate weaving of colored fabric, intended to be worn atop a helmet; a touch of elegance, indiscriminate of the alloy. This weave is crested with a \
-	golden lion that is waving a flag, intricately detailed with the wearer's heraldry. To wear such garments is to command respect from those that've come after you; hopefully, not undue."
-	item_state = "d_triumph"
-	icon_state = "d_triumph"
-	icon = 'icons/clothing/donor_clothes.dmi'
-	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/decorated_head.dmi'
-	bloody_icon = 'icons/effects/blood64.dmi'
-	worn_x_dimension = 64
-	worn_y_dimension = 64
-	color = null
-
 /obj/item/clothing/cloak/tabard/stabard/donator_oathkeeper
 	name = "oathkeeper's noble surcoat"
 	icon_state = "oa_fancy_short"
