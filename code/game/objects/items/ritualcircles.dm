@@ -2026,7 +2026,7 @@
 
 	H.mind.AddSpell(new /datum/action/cooldown/spell/mending/lesser)
 
-/obj/effect/decal/cleanable/roguerune/god/baotha
+/obj/structure/ritualcircle/baotha
 	name = "Rune of Hedonism"
 	desc = "A holy rune of Baotha. </br> <i>Relief for the broken hearted.</i>"
 	icon_state = "baotha_chalky"
