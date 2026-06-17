@@ -62,6 +62,10 @@
 	name = "Gift - High-Heeled Shoes, Silver"
 	path = /obj/item/clothing/shoes/roguetown/simpleshoes/heels/donator_silver
 
+/datum/loadout_item/donator/universal/cuirassplackart
+	name = "Gift - Kit, Armored Plackart"
+	path = /obj/item/enchantingkit/plackart
+
 /datum/loadout_item/donator/universal/jadehalfmask_donator
 	name = "Gift - Kit, Jade Halfask"
 	path = /obj/item/enchantingkit/jadehalfmask

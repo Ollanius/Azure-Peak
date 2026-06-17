@@ -357,6 +357,42 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 	item_state = "plackartleather"
 	icon_state = "plackartleather"
 
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/donator_girdle
+	name = "steel plackart"
+	desc = "A curious - and particularly revealing - variant of a common cuirass. It's said that the intentionally provocative design \
+	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "plackarts"
+	icon_state = "plackarts"
+
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/iron/donator_girdle
+	name = "iron plackart"
+	desc = "A curious - and particularly revealing - variant of an iron cuirass. It's said that the intentionally provocative design \
+	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "plackarti"
+	icon_state = "plackarti"
+
+/obj/item/clothing/suit/roguetown/armor/leather/donator_girdle
+	name = "leather plackart"
+	desc = "A curious - and particularly revealing - variant of a common leather cuirass. It's said that the intentionally provocative design \
+	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "plackartleather"
+	icon_state = "plackartleather"
+
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/bronze/donator_girdle
+	name = "bronzeplackart"
+	desc = "A curious - and particularly revealing - variant of an bronzecuirass. It's said that the intentionally provocative design \
+	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "plackartb"
+	icon_state = "plackartb"
+
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/donator_gothic
 	name = "gothic cuirass"
 	desc = "A magnificent steel cuirass, assembled by an Azurian mastersmith. The intricate fluting and interlocked plates are clear \
@@ -457,6 +493,33 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 	craftdiff = 0 
 	req_table = TRUE
 	bypass_dupe_test = TRUE
+
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fencer/donator
+	name = "steel heartplate"
+	desc = "A curious - and particularly revealing - variant of a common cuirass. It's said that the intentionally provocative design \
+	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "heartplates"
+	icon_state = "heartplates"
+
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fencer/donator_girdle
+	name = "steel plackart"
+	desc = "A curious - and particularly revealing - variant of a common cuirass. It's said that the intentionally provocative design \
+	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "plackarts"
+	icon_state = "plackarts"
+
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fencer/donator_gothic
+	name = "gothic fencing cuirass"
+	desc = "A magnificent steel cuirass, assembled by an Azurian mastersmith. The intricate fluting and interlocked plates are clear \
+	signs of its Grenzelhoftian heritage; expensive, but second-to-none when it comes to what truly matters in life."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "gcuirass"
+	icon_state = "gcuirass"
 
 /obj/item/storage/belt/rogue/leather/donator
 	name = "belt of caped leathers"
