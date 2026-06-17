@@ -162,17 +162,6 @@
 	)
 	result_item = null
 
-/obj/item/enchantingkit/plackart
-	name = "'Plackart' morphing elixir"
-	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Bronze Cuirass, anIron Breastplate, a Steel Cuirass, or a set of Leather Armor."
-	target_items = list(
-		/obj/item/clothing/suit/roguetown/armor/plate/cuirass/bronze		= /obj/item/clothing/suit/roguetown/armor/plate/cuirass/bronze/donator_girdle,
-		/obj/item/clothing/suit/roguetown/armor/plate/cuirass/iron			= /obj/item/clothing/suit/roguetown/armor/plate/cuirass/iron/donator_girdle,
-		/obj/item/clothing/suit/roguetown/armor/plate/cuirass				= /obj/item/clothing/suit/roguetown/armor/plate/cuirass/donator_girdle,
-		/obj/item/clothing/suit/roguetown/armor/leather						= /obj/item/clothing/suit/roguetown/armor/leather/donator_girdle
-	)
-	result_item = null
-
 /obj/item/enchantingkit/elvenchainmail
 	name = "'Elven Haubergeon' morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of an Iron Haubergeon, or a Steel Haubergeon."

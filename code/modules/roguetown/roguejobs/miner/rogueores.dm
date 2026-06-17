@@ -360,6 +360,12 @@
 	icon_state = "blacksteelslag"
 	sellprice = 7
 
+/obj/item/ingot/jadeslag
+	name = "jade-speckled slag"
+	desc = "A mass of smoldered jade, rendered lame from the forge's heat. Heavenly beauty, left barely recognizable." 
+	icon_state = "jadeslag"
+	sellprice = 9
+
 //Anomalous Smeltings
 /obj/item/ingot/weeping
 	name = "enduring ingot"
