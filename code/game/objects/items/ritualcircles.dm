@@ -1463,7 +1463,7 @@
 
 /obj/structure/ritualcircle/zizo
 	name = "Rune of Progress"
-	desc = "A holy rune of ZIZO. </br> <i>Progress at any cost.</i>"
+	desc = "A holy rune of <font color='ff0000'>Zizo.</font> </br> <i>Progress at any cost.</i>"
 	icon_state = "zizo_chalky"
 	var/zizorites = list("Rite of Armaments")
 
@@ -1627,7 +1627,7 @@
 
 /obj/structure/ritualcircle/matthios
 	name = "Rune of Transaction"
-	desc = "An unholy rune of Matthios. </br> <i>All has a price.</i>"
+	desc = "An unholy rune of <font color='ffd700'>Matthios.</font> </br> <i>All has a price.</i>"
 	icon_state = "matthios_chalky"
 	var/matthiosrites = list("Rite of Armaments", "Defenestration")
 
@@ -1809,7 +1809,7 @@
 
 /obj/structure/ritualcircle/graggar
 	name = "Rune of Violence"
-	desc = "A holy rune of Graggar. </br> <i>Fate broken once, His gift is true freedom for all.</i>"
+	desc = "A holy rune of <font color='969d7f'>Matthios.</font> </br> <i>Fate broken once, His gift is true freedom for all.</i>"
 	icon_state = "graggar_chalky"
 	var/graggarrites = list("Rite of Armaments", "War Ritual")
 
@@ -2028,7 +2028,7 @@
 
 /obj/structure/ritualcircle/baotha
 	name = "Rune of Hedonism"
-	desc = "A holy rune of Baotha. </br> <i>Relief for the broken hearted.</i>"
+	desc = "A holy rune of <font color='bf64d0'>Baotha.</font> </br> <i>Relief for the broken hearted.</i>"
 	icon_state = "baotha_chalky"
 	var/baotharites = list("Rite of Armaments", "Joybringer")
 
@@ -2130,7 +2130,7 @@
 		spawn(40)
 			to_chat(target, span_cult("Live deliciously."))
 
-/datum/outfit/job/roguetown/baothanrite/medium/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/roguetown/baothanrite/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	head = /obj/item/clothing/head/roguetown/helmet/baotha
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/fluted/baotha
