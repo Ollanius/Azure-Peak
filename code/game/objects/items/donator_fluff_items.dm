@@ -594,6 +594,7 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 	item_state = "d_oathtaker"
 	icon_state = "d_oathtaker"
 	worn_offsets = list("x" = 0, "y" = 7) // X is a horizontal offset, Y is a vertical offset. In this case, it's offset to be seven pixels north.
+	alternate_worn_layer  = 8.9
 
 /obj/item/clothing/cloak/tabard/stabard/donator_oathkeeper
 	name = "oathkeeper's noble surcoat"
