@@ -577,6 +577,7 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 	desc = "A delicate weaving of colored fabric, intended to be worn atop a helmet; a touch of elegance, indiscriminate of the alloy."
 	item_state = "d_stripes"
 	icon_state = "d_stripes"
+	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_MASK
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	worn_offsets = list("x" = 0, "y" = 7) // Allows for dynamic offsets, so that headpieces normally requiring a 64x .dmi can fit in a 32x .dmi.
@@ -592,10 +593,7 @@ mas//Lazily shoving all donator fluff items in here for now. Feel free to make t
 	golden winged shield; an unofficial coat-of-arms used to represent Azuria's many noble houses. To wear such garments is to command respect from those that've come after you; hopefully, not undue."
 	item_state = "d_oathtaker"
 	icon_state = "d_oathtaker"
-	icon = 'icons/clothing/donor_clothes.dmi'
-	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	worn_offsets = list("x" = 0, "y" = 7) // X is a horizontal offset, Y is a vertical offset. In this case, it's offset to be seven pixels north.
-	color = null
 
 /obj/item/clothing/cloak/tabard/stabard/donator_oathkeeper
 	name = "oathkeeper's noble surcoat"
