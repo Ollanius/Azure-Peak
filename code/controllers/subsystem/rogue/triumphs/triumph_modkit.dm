@@ -194,7 +194,6 @@
 		)
 	result_item = null
 
-//
 //'Skinned' variants. These are less thorough than the 'Replacement' variants, but are cleaner (and lead to a lot less extra instances that can clog up the spawning menu.)
 // Unlike the 'Replacement' variants, these basically just apply a new sprite onto the old item and call it a day. If you need to give custom onmobs to a certain weapon to make it look good, use the former method instead.
 
