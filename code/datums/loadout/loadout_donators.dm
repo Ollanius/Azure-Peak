@@ -558,3 +558,8 @@
 	name = "Donator Kit - Shoulderless Haubergeon"
 	path = /obj/item/enchantingkit/ollanius_maille
 	ckeywhitelist = list("ollanius")
+
+/datum/loadout_item/donator/olygsword
+    name = "Donator Kit - Gre'as'anto d'Shar"
+    path = /obj/item/rogueweapon/greatsword/olygsword
+    ckeywhitelist = list("olympus7")
