@@ -1634,3 +1634,10 @@ As Excaliber."
     icon_state = "olygsword"
     bigboy = TRUE
 
+// JADEMANIQUE 
+/obj/item/rogue/instrument/guitar/jade_guitar
+	name = "Gilbranzed Guitar"
+	desc = "\"A sturdy guitar with gilded strings, as well as numerous nicks and scratches, poorly hidden under loving maintenance \
+	The gilbranze fastens seem to be of museum quality, with a touchmark in the form of the initials 'AWE' on one end.\""
+	icon = 'icons/obj/items/donor_music.dmi'
+	icon_state = "gilbranzeguitar"
