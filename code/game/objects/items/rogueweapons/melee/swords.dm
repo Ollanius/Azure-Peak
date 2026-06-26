@@ -1781,8 +1781,8 @@
 	name = "psydonic arming sword"
 	desc = "An arming sword, fitted with a blade of pure silver. It is the bane of vampyres, nitebeasts, and deadites throughout all of Psydonia; \
 	cursed flesh erupts into holy fire, and unholy bravado twists into mortal fear."
-	icon_state = "silversword"
-	sheathe_icon = "silversword"
+	icon_state = "psyarmingsword"
+	sheathe_icon = "psyarmingsword"
 	force = 20
 	force_wielded = 25
 	minstr = 9
