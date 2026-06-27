@@ -222,7 +222,7 @@ TRAIT UNIQUE PROCS
 			REMOVE_TRAIT(user, TRAIT_NOSTINK, "plague_resistant")
 		return
 
-	if(id == "arcyne_unfriendly")
+	if(HAS_TRAIT(user, TRAIT_ARCYNE) &&id == "arcyne_unfriendly")
 		if(positive)
 			if(!user.has_stress_event(/datum/stressevent/illfittingarmor))
 				return
@@ -230,7 +230,7 @@ TRAIT UNIQUE PROCS
 			user.remove_status_effect(/datum/stressevent/illfittingarmor)
 		return
 
-	if(id == "pugilist_unfriendly")
+	if(HAS_TRAIT(user, TRAIT_CIVILIZEDBARBARIAN) && id == "pugilist_unfriendly")
 		if(positive)
 			if(!user.has_stress_event(/datum/stressevent/illfittingarmor))
 				return
@@ -238,7 +238,7 @@ TRAIT UNIQUE PROCS
 			user.remove_status_effect(/datum/stressevent/illfittingarmor)
 		return
 	
-	if(id == "dodge_unfriendly")
+	if(HAS_TRAIT(user, TRAIT_DODGEEXPERT) && id == "dodge_unfriendly")
 		if(positive)
 			if(!user.has_stress_event(/datum/stressevent/illfittingarmor))
 				return
