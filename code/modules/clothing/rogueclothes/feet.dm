@@ -63,6 +63,8 @@
 	icon_state = "ancientboots"
 	smeltresult = /obj/item/ingot/aaslag
 	color = "#bb9696"
+	armor = ARMOR_LEATHER
+	armor_class = ARMOR_CLASS_LIGHT
 
 /obj/item/clothing/shoes/roguetown/boots/paalloy
 	name = "ancient boots"
@@ -77,6 +79,7 @@
 	equip_sound = 'sound/foley/equip/equip_armor_plate.ogg'
 	anvilrepair = /datum/skill/craft/armorsmithing
 	smeltresult = /obj/item/ingot/aaslag
+	armor_class = ARMOR_CLASS_LIGHT
 
 /obj/item/clothing/shoes/roguetown/boots/psydonboots
 	name = "psydonic leather boots"
@@ -321,6 +324,7 @@
 	anvilrepair = /datum/skill/craft/armorsmithing
 	sewrepair = FALSE
 	smeltresult = /obj/item/ingot/steel
+	armor_class = ARMOR_CLASS_MEDIUM
 
 /obj/item/clothing/shoes/roguetown/boots/maille/ComponentInitialize()
 	AddComponent(/datum/component/armour_filtering/negative, TRAIT_FENCERDEXTERITY)
@@ -344,7 +348,9 @@
 	icon_state = "bsoldierboots"
 	item_state = "bsoldierboots"
 	max_integrity = ARMOR_INT_SIDE_BRONZE
+	armor = ARMOR_BRONZE
 	smeltresult = /obj/item/ingot/bronze
+	armor_class = ARMOR_CLASS_LIGHT
 
 /obj/item/clothing/shoes/roguetown/boots/maille/copper
 	name = "copper lamellar boots"
@@ -355,6 +361,7 @@
 	max_integrity = ARMOR_INT_SIDE_LEATHER
 	armor = ARMOR_LEATHER
 	smeltresult = /obj/item/ingot/copper
+	armor_class = ARMOR_CLASS_LIGHT
 
 /obj/item/clothing/shoes/roguetown/boots/armor
 	name = "plated boots"
