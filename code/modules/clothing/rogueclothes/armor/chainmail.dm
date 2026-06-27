@@ -15,9 +15,9 @@
 /obj/item/clothing/suit/roguetown/armor/chainmail/light/ComponentInitialize()
 	..()
 	AddComponent(/datum/component/adjustable_clothing, CHEST, null, null, 'sound/foley/equip/equip_armor_chain.ogg', null, UPD_CHEST)
-	AddComponent(/datum/component/armour_filtering/negative, TRAIT_ARCYNE, "arcyne_unfriendly")
-	AddComponent(/datum/component/armour_filtering/negative, TRAIT_DODGEEXPERT, "dodge_unfriendly")
-	AddComponent(/datum/component/armour_filtering/negative, TRAIT_CIVILIZEDBARBARIAN, "pugilist_unfriendly")
+	AddComponent(/datum/component/armour_filtering/positive, TRAIT_ARCYNE, "arcyne_unfriendly")
+	AddComponent(/datum/component/armour_filtering/positive, TRAIT_DODGEEXPERT, "dodge_unfriendly")
+	AddComponent(/datum/component/armour_filtering/positive, TRAIT_CIVILIZEDBARBARIAN, "pugilist_unfriendly")
 	
 /obj/item/clothing/suit/roguetown/armor/chainmail/light/get_mechanics_examine(mob/user)
 	. = ..()

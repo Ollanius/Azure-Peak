@@ -173,20 +173,20 @@ TRAIT UNIQUE PROCS
 		return
 
 	if(HAS_TRAIT(user, TRAIT_ARCYNE) && id == "arcyne_unfriendly")
-		if(positive)
-			ADD_TRAIT(user, TRAIT_SPELLCOCKBLOCK, "arcyne_unfriendly")
+		if(!positive)
+			ADD_TRAIT(user, TRAIT_SPELLCOCKBLOCK, TRAIT_GENERIC)
 			user.add_stress(/datum/stressevent/illfittingarmor)
 		return
 
 	if(HAS_TRAIT(user, TRAIT_CIVILIZEDBARBARIAN) && id == "pugilist_unfriendly")
-		if(positive)
-			REMOVE_TRAIT(user, TRAIT_CIVILIZEDBARBARIAN, "pugilist_unfriendly")
+		if(!positive)
+			REMOVE_TRAIT(user, TRAIT_CIVILIZEDBARBARIAN, TRAIT_GENERIC)
 			user.add_stress(/datum/stressevent/illfittingarmor)
 		return
 
 	if(HAS_TRAIT(user, 	TRAIT_DODGEEXPERT) && id == "dodge_unfriendly")
-		if(positive)
-			REMOVE_TRAIT(user, 	TRAIT_DODGEEXPERT, "dodge_unfriendly")
+		if(!positive)
+			REMOVE_TRAIT(user, 	TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 			user.add_stress(/datum/stressevent/illfittingarmor)
 		return
 
@@ -223,25 +223,25 @@ TRAIT UNIQUE PROCS
 		return
 
 	if(HAS_TRAIT(user, TRAIT_ARCYNE) &&id == "arcyne_unfriendly")
-		if(positive)
+		if(!positive)
 			if(!user.has_stress_event(/datum/stressevent/illfittingarmor))
-				REMOVE_TRAIT(user, TRAIT_SPELLCOCKBLOCK, "arcyne_unfriendly")
+				REMOVE_TRAIT(user, TRAIT_SPELLCOCKBLOCK, TRAIT_GENERIC)
 				return
 			user.remove_status_effect(/datum/stressevent/illfittingarmor)
 		return
 
 	if(HAS_TRAIT(user, TRAIT_CIVILIZEDBARBARIAN) && id == "pugilist_unfriendly")
-		if(positive)
+		if(!positive)
 			if(!user.has_stress_event(/datum/stressevent/illfittingarmor))
-				ADD_TRAIT(user, TRAIT_CIVILIZEDBARBARIAN, "pugilist_unfriendly")
+				ADD_TRAIT(user, TRAIT_CIVILIZEDBARBARIAN, TRAIT_GENERIC)
 				return
 			user.remove_status_effect(/datum/stressevent/illfittingarmor)
 		return
 	
 	if(HAS_TRAIT(user, TRAIT_DODGEEXPERT) && id == "dodge_unfriendly")
-		if(positive)
+		if(!positive)
 			if(!user.has_stress_event(/datum/stressevent/illfittingarmor))
-				ADD_TRAIT(user, TRAIT_DODGEEXPERT, "dodge_unfriendly")
+				ADD_TRAIT(user, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 				return
 			user.remove_status_effect(/datum/stressevent/illfittingarmor)
 		return
