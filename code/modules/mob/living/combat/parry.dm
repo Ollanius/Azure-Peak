@@ -240,7 +240,7 @@
 		prob2defend = clamp(prob2defend, 5, 70)
 	var/untrained_armor = FALSE
 	if(!H?.check_armor_skill())
-		prob2defend = clamp(prob2defend, 5, 75)			//Caps your max parry to 75 if using armor you're not trained in. Bad dexerity.
+		prob2defend = clamp(prob2defend, 5, 35)			//Caps your max parry to 35 (formerly, 75) if using armor you're not trained in. Bad dexerity.
 		drained = drained + 5							//More stamina usage for not being trained in the armor you're using.
 		untrained_armor = TRUE
 
