@@ -7,7 +7,7 @@
 	icon_state = "haubyrnie"
 	max_integrity = ARMOR_INT_CHEST_LIGHT_STEEL - 30
 	armor_class = ARMOR_CLASS_LIGHT
-	body_parts_covered = CHEST | STOMACH
+	body_parts_covered = CHEST | VITALS
 	flags_inv = HIDEBOOB //Let it hang, sire.
 	adjustable = CAN_CADJUST
 	toggle_icon_state = TRUE
