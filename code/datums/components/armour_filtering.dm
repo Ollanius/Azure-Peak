@@ -173,7 +173,7 @@ TRAIT UNIQUE PROCS
 		return
 
 	if(HAS_TRAIT(user, TRAIT_ARCYNE) && id == "arcyne_unfriendly")
-		if(!positive)
+		if(positive)
 			ADD_TRAIT(user, TRAIT_SPELLCOCKBLOCK, TRAIT_GENERIC)
 		return
 
@@ -222,7 +222,7 @@ TRAIT UNIQUE PROCS
 		return
 
 	if(HAS_TRAIT(user, TRAIT_ARCYNE) && id == "arcyne_unfriendly")
-		if(!positive)
+		if(positive)
 			REMOVE_TRAIT(user, TRAIT_SPELLCOCKBLOCK, TRAIT_GENERIC)
 		return
 
