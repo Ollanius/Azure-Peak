@@ -172,21 +172,31 @@ TRAIT UNIQUE PROCS
 			user.remove_stress(/datum/stressevent/dungeoneerhoodlost)
 		return
 
-	if(HAS_TRAIT(user, TRAIT_ARCYNE) && id == "arcyne_unfriendly")
-		if(positive)
-			ADD_TRAIT(user, TRAIT_SPELLCOCKBLOCK, TRAIT_GENERIC)
+	if(HAS_TRAIT(user, TRAIT_ARCYNE))
+		if(!positive)
+			user.dropItemToGround(parent, TRUE, TRUE)
+			to_chat(user, span_info("It may be light, but this armor chafes my focus far too much. I couldn't hope to channel my magicka, while wearing it."))
+			if(!HAS_TRAIT(user, TRAIT_ARMOUR_DISLIKED))
+				return
+			REMOVE_TRAIT(user, TRAIT_ARMOUR_DISLIKED, TRAIT_GENERIC)
 		return
 
-	if(HAS_TRAIT(user, TRAIT_CIVILIZEDBARBARIAN) && id == "pugilist_unfriendly")
+	if(HAS_TRAIT(user, TRAIT_CIVILIZEDBARBARIAN))
 		if(!positive)
-			REMOVE_TRAIT(user, TRAIT_CIVILIZEDBARBARIAN, TRAIT_GENERIC)
-			user.add_stress(/datum/stressevent/illfittingarmor)
+			user.dropItemToGround(parent, TRUE, TRUE)
+			to_chat(user, span_info("It may be light, but this armor chafes my focus far too much. I couldn't hope to hone my techniques, while wearing it."))
+			if(!HAS_TRAIT(user, TRAIT_ARMOUR_DISLIKED))
+				return
+			REMOVE_TRAIT(user, TRAIT_ARMOUR_DISLIKED, TRAIT_GENERIC)
 		return
 
-	if(HAS_TRAIT(user, 	TRAIT_DODGEEXPERT) && id == "dodge_unfriendly")
+	if(HAS_TRAIT(user, TRAIT_DODGEEXPERT))
 		if(!positive)
-			REMOVE_TRAIT(user, 	TRAIT_DODGEEXPERT, TRAIT_GENERIC)
-			user.add_stress(/datum/stressevent/illfittingarmor)
+			user.dropItemToGround(parent, TRUE, TRUE)
+			to_chat(user, span_info("It may be light, but this armor chafes my focus far too much. I couldn't hope to keep my reflexes sharp, while wearing it."))
+			if(!HAS_TRAIT(user, TRAIT_ARMOUR_DISLIKED))
+				return
+			REMOVE_TRAIT(user, TRAIT_ARMOUR_DISLIKED, TRAIT_GENERIC)
 		return
 
 	if(id == "plague_mask")
@@ -219,27 +229,6 @@ TRAIT UNIQUE PROCS
 	if(id == "plague_mask")
 		if(positive)
 			REMOVE_TRAIT(user, TRAIT_NOSTINK, "plague_resistant")
-		return
-
-	if(HAS_TRAIT(user, TRAIT_ARCYNE) && id == "arcyne_unfriendly")
-		if(positive)
-			REMOVE_TRAIT(user, TRAIT_SPELLCOCKBLOCK, TRAIT_GENERIC)
-		return
-
-	if(HAS_TRAIT(user, TRAIT_CIVILIZEDBARBARIAN) && id == "pugilist_unfriendly")
-		if(!positive)
-			if(!user.has_stress_event(/datum/stressevent/illfittingarmor))
-				ADD_TRAIT(user, TRAIT_CIVILIZEDBARBARIAN, TRAIT_GENERIC)
-				return
-			user.remove_status_effect(/datum/stressevent/illfittingarmor)
-		return
-	
-	if(HAS_TRAIT(user, TRAIT_DODGEEXPERT) && id == "dodge_unfriendly")
-		if(!positive)
-			if(!user.has_stress_event(/datum/stressevent/illfittingarmor))
-				ADD_TRAIT(user, TRAIT_DODGEEXPERT, "dodge_unfriendly")
-				return
-			user.remove_status_effect(/datum/stressevent/illfittingarmor)
 		return
 	
 	return
