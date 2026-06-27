@@ -124,7 +124,7 @@
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/heavy/atgervi
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 	pants = /obj/item/clothing/under/roguetown/trou/leather/atgervi
-	wrists = /obj/item/clothing/wrists/roguetown/bracers
+	wrists = /obj/item/clothing/wrists/roguetown/bracers/light
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather/atgervi
 	backr = /obj/item/storage/backpack/rogue/satchel/black
 	belt = /obj/item/storage/belt/rogue/leather

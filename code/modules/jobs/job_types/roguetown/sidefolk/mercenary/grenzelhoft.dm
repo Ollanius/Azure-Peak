@@ -193,7 +193,7 @@
 				r_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow/heavy
 				H.change_stat(STATKEY_STR, 1) //Without any statpack or racial modifier, this meets the bare minimum for using the Siegebow as a melee weapon.
 				H.change_stat(STATKEY_SPD, -1)
-	wrists = /obj/item/clothing/wrists/roguetown/bracers
+	wrists = /obj/item/clothing/wrists/roguetown/bracers/light
 	belt = /obj/item/storage/belt/rogue/leather
 	neck = /obj/item/clothing/neck/roguetown/gorget
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/grenzelhoft
@@ -255,7 +255,7 @@
 	backl = /obj/item/rogueweapon/woodstaff/implement/greater/blacksteel
 	cloak = /obj/item/clothing/cloak/tabard/stabard/grenzelmage
 	armor = /obj/item/clothing/suit/roguetown/armor/brigandine/light
-	wrists = /obj/item/clothing/wrists/roguetown/bracers
+	wrists = /obj/item/clothing/wrists/roguetown/bracers/light
 	neck = /obj/item/clothing/neck/roguetown/gorget
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/grenzelhoft
 	head = /obj/item/clothing/head/roguetown/grenzelhofthat

@@ -216,7 +216,7 @@
 			if("Leather Armor") //OG more or less RT guardsman archer
 				head = /obj/item/clothing/head/roguetown/roguehood/studded/retinue
 				armor = /obj/item/clothing/suit/roguetown/armor/leather/heavy
-				wrists = /obj/item/clothing/wrists/roguetown/bracers
+				wrists = /obj/item/clothing/wrists/roguetown/bracers/light
 				pants = /obj/item/clothing/under/roguetown/heavy_leather_pants
 				H.adjust_skillrank(/datum/skill/combat/knives, SKILL_LEVEL_EXPERT, TRUE)
 				ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
@@ -374,7 +374,7 @@
 	neck = /obj/item/clothing/neck/roguetown/gorget
 	mask = /obj/item/clothing/head/roguetown/roguehood/black
 	armor = /obj/item/clothing/suit/roguetown/armor/regenerating/skin/disciple/bailiff
-	wrists = /obj/item/clothing/wrists/roguetown/bracers
+	wrists = /obj/item/clothing/wrists/roguetown/bracers/light
 	gloves = /obj/item/clothing/gloves/roguetown/leather
 	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants
 	beltr = /obj/item/rogueweapon/whip/antique

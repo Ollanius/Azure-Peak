@@ -1019,6 +1019,13 @@
 	created_item = /obj/item/clothing/suit/roguetown/armor/chainmail/besilked/fencer
 	display_category = ITEM_CAT_ARMOR_CHESTPIECES
 
+/datum/anvil_recipe/armor/steel/fencingbracers
+	name = "Fencing Bracers, Steel (+1 Steel, +1 Besilked Royal Sleeves)" //needs cooperation with a tailor to make
+	req_bar = /obj/item/ingot/steel
+	additional_items = list(/obj/item/ingot/steel, /obj/item/clothing/wrists/roguetown/royalsleeves) //Quick patchwork to prevent loadouteers from gaming the system.
+	created_item = /obj/item/clothing/wrists/roguetown/bracers/fencer
+	display_category = ITEM_CAT_ARMOR_CHESTPIECES
+
 /datum/anvil_recipe/armor/steel/cuirass/legacy
 	name = "Valorian Cuirass, Steel (+1 Steel)"
 	req_bar = /obj/item/ingot/steel

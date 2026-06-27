@@ -194,6 +194,7 @@
 	desc = "Frayed bronze platforms, curled about to cradle the feet. The beaches that these sandals once treaded are no more; pearly sands, long since turnt to glass from the Comet Syon's impact."
 	icon_state = "ancientsandals"
 	color = "#bb9696"
+	armor = ARMOR_LEATHER
 
 /obj/item/clothing/shoes/roguetown/sandals/paalloy
 	name = "ancient sandals"
@@ -281,15 +282,6 @@
 	item_state = "freiboots"
 	max_integrity = ARMOR_INT_SIDE_HARDLEATHER + 50
 
-/obj/item/clothing/shoes/roguetown/boots/armor/dwarven
-	name = "grudgebearer dwarven boots"
-	desc = "Clatters mightily."
-	icon = 'icons/roguetown/clothing/special/race_armor.dmi'
-	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/race_armor.dmi'
-	allowed_race = list(/datum/species/dwarf, /datum/species/dwarf/mountain)
-	icon_state = "dwarfshoe"
-	item_state = "dwarfshoe"
-
 /obj/item/clothing/shoes/roguetown/boots/elven_boots
 	name = "woad elven boots"
 	desc = "'Tread lightly, for the ground remembers every footfall.'"
@@ -308,44 +300,6 @@
 /obj/item/clothing/shoes/roguetown/boots/elven_boots/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/item_equipped_movement_rustle, SFX_WOOD_ARMOR, 10)
-
-/obj/item/clothing/shoes/roguetown/boots/armor
-	name = "plated boots"
-	desc = "Custom-fitted sabatons, made from a series of interlinking steel plates. The only weakness it has, beyond its inaffordability \
-	amongst those of ignobility, is its inability to properly stand firm across softer surfaces. There's a very good reason as to why \
-	you'd rarely see a knight treading the Terrorbog's muddied paths, after all."
-	body_parts_covered = FEET
-	icon_state = "armorboots"
-	item_state = "armorboots"
-	color = null
-	blocksound = PLATEHIT
-	resistance_flags = FIRE_PROOF
-	max_integrity = ARMOR_INT_SIDE_STEEL
-	armor = ARMOR_PLATE
-	pickup_sound = 'sound/foley/equip/equip_armor_plate.ogg'
-	equip_sound = 'sound/foley/equip/equip_armor_plate.ogg'
-	anvilrepair = /datum/skill/craft/armorsmithing
-	sewrepair = FALSE
-	smeltresult = /obj/item/ingot/steel
-
-/obj/item/clothing/shoes/roguetown/boots/armor/ComponentInitialize()
-	AddComponent(/datum/component/armour_filtering/negative, TRAIT_FENCERDEXTERITY)
-	AddComponent(/datum/component/armour_filtering/negative, TRAIT_HONORBOUND)
-
-/obj/item/clothing/shoes/roguetown/boots/armor/iron
-	name = "iron plated boots"
-	desc = "Antiquated sabatons, fitted to leather boots that've been reinforced with layers of iron maille. While it has largely fallen \
-	out of favor with Psydonia's knights since the advent of custom-fitted steel sabatons, it nevertheless remains an excellent choice \
-	for those who'd rather not catch an career-ending arrow to the knee."
-	body_parts_covered = FEET
-	icon_state = "iplateboots"
-	item_state = "iplateboots"
-	color = null
-	blocksound = PLATEHIT
-	max_integrity = ARMOR_INT_SIDE_IRON
-	armor = ARMOR_PLATE
-	anvilrepair = /datum/skill/craft/armorsmithing
-	smeltresult = /obj/item/ingot/iron
 
 /obj/item/clothing/shoes/roguetown/boots/maille
 	name = "maille boots"
@@ -402,6 +356,54 @@
 	armor = ARMOR_LEATHER
 	smeltresult = /obj/item/ingot/copper
 
+/obj/item/clothing/shoes/roguetown/boots/armor
+	name = "plated boots"
+	desc = "Custom-fitted sabatons, made from a series of interlinking steel plates. The only weakness it has, beyond its inaffordability \
+	amongst those of ignobility, is its inability to properly stand firm across softer surfaces. There's a very good reason as to why \
+	you'd rarely see a knight treading the Terrorbog's muddied paths, after all."
+	body_parts_covered = FEET
+	icon_state = "armorboots"
+	item_state = "armorboots"
+	color = null
+	blocksound = PLATEHIT
+	resistance_flags = FIRE_PROOF
+	max_integrity = ARMOR_INT_SIDE_STEEL
+	armor = ARMOR_PLATE
+	pickup_sound = 'sound/foley/equip/equip_armor_plate.ogg'
+	equip_sound = 'sound/foley/equip/equip_armor_plate.ogg'
+	anvilrepair = /datum/skill/craft/armorsmithing
+	sewrepair = FALSE
+	smeltresult = /obj/item/ingot/steel
+	armor_class = ARMOR_CLASS_MEDIUM
+
+/obj/item/clothing/shoes/roguetown/boots/armor/ComponentInitialize()
+	AddComponent(/datum/component/armour_filtering/negative, TRAIT_FENCERDEXTERITY)
+	AddComponent(/datum/component/armour_filtering/negative, TRAIT_HONORBOUND)
+
+/obj/item/clothing/shoes/roguetown/boots/armor/iron
+	name = "iron plated boots"
+	desc = "Antiquated sabatons, fitted to leather boots that've been reinforced with layers of iron maille. While it has largely fallen \
+	out of favor with Psydonia's knights since the advent of custom-fitted steel sabatons, it nevertheless remains an excellent choice \
+	for those who'd rather not catch an career-ending arrow to the knee."
+	body_parts_covered = FEET
+	icon_state = "iplateboots"
+	item_state = "iplateboots"
+	color = null
+	blocksound = PLATEHIT
+	max_integrity = ARMOR_INT_SIDE_IRON
+	armor = ARMOR_PLATE
+	anvilrepair = /datum/skill/craft/armorsmithing
+	smeltresult = /obj/item/ingot/iron
+
+/obj/item/clothing/shoes/roguetown/boots/armor/dwarven
+	name = "grudgebearer dwarven boots"
+	desc = "Clatters mightily."
+	icon = 'icons/roguetown/clothing/special/race_armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/race_armor.dmi'
+	allowed_race = list(/datum/species/dwarf, /datum/species/dwarf/mountain)
+	icon_state = "dwarfshoe"
+	item_state = "dwarfshoe"
+
 /obj/item/clothing/shoes/roguetown/boots/armor/gold
 	name = "golden greaves"
 	desc = "Resplendant sabatons of pure gold, adorned with angled greaves that proudly bare the holy sigil. Its besilked cuffs have remained surprisingly bereft of debris - not even a sprig of lint remains to be criticized."
@@ -430,8 +432,9 @@
 	icon_state = "bronzegreaves"
 	body_parts_covered = FEET | LEGS
 	smeltresult = /obj/item/ingot/bronze
-	armor = ARMOR_PLATE
+	armor = ARMOR_BRONZE
 	max_integrity = ARMOR_INT_SIDE_BRONZE
+	armor_class = ARMOR_CLASS_LIGHT
 
 /obj/item/clothing/shoes/roguetown/boots/armor/graggar
 	name = "vicious boots"
@@ -519,6 +522,149 @@
 	armor = ARMOR_PLATE
 	anvilrepair = /datum/skill/craft/armorsmithing
 	smeltresult = /obj/item/ingot/iron
+
+/obj/item/clothing/shoes/roguetown/boots/armor/blacksteel/modern
+	name = "blacksteel plate boots"
+	desc = "Magnificent sabatons of blacksteel, pointed-yet-restrained. By the click of your heels, a thousand levymen shall march without question - and 'pon a leaping start, they shall see the bravery that earned such alloyed gifts to begin with."
+	icon_state = "bplateboots"
+	item_state = "bplateboots"
+
+/obj/item/clothing/shoes/roguetown/boots/armor/blacksteel
+	name = "ancient blacksteel plate boots"
+	desc = "Antiquated sabatons, forged from segmented plates of blacksteel. Am I the cancer that is killing this world? Is it my hate, my spite, my lust - that, which poisons the ones around me, and siphons away the hope of Man and God alike? When the last hearth is quenched and Psydonia is nothing more than a shriveled husk, will I still blame the corpses for what I had done? </br>‎  </br>Let go of your hate. Your lyfe is yours, and yours alone to arbitrate."
+	icon_state = "bkboots"
+	item_state = "bkboots"
+	max_integrity = ARMOR_INT_SIDE_BLACKSTEEL
+	armor = ARMOR_PLATE_BSTEEL
+	smeltresult = /obj/item/ingot/blacksteel
+	chunkcolor = "#303036"
+
+/obj/item/clothing/shoes/roguetown/anklets
+	name = "golden anklets"
+	desc = "Luxurious anklets made of the finest gold. They leave the feet bare while adding a silky flair."
+	gender = PLURAL
+	icon_state = "anklets"
+	item_state = "anklets"
+	is_barefoot = TRUE
+	sewrepair = TRUE
+	armor = ARMOR_CLOTHING
+
+//kazen update
+/obj/item/clothing/shoes/roguetown/armor/rumaclan
+	name = "raised sandals"
+	desc = "A pair of strange sandals that push you off the ground."
+	icon_state = "eastsandals"
+	item_state = "eastsandals"
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/stonekeep_merc.dmi'
+	armor = ARMOR_LEATHER
+	max_integrity = ARMOR_INT_SIDE_HARDLEATHER
+	sewrepair = TRUE
+	armor_class = ARMOR_CLASS_LIGHT
+
+/obj/item/clothing/shoes/roguetown/armor/rumaclan/shitty
+	armor = ARMOR_CLOTHING
+
+// horseshoes!
+/obj/item/clothing/shoes/roguetown/horseshoes
+	name = "iron horseshoes"
+	desc = "A pair of sturdy iron horseshoes nailed onto thick leather soles. These are ready to be attached to some hooves."
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x32/saiga.dmi'
+	icon_state = "iron_horseshoes"
+	item_state = "iron_horseshoes"
+	clothing_flags = TAUR_COMPATIBLE
+	max_integrity = ARMOR_INT_LEG_IRON_PLATE
+	sewrepair = FALSE
+	armor = ARMOR_PLATE
+	smeltresult = /obj/item/ingot/iron
+
+/obj/item/clothing/shoes/roguetown/horseshoes/build_worn_icon(default_layer, default_icon_file, isinhands, femaleuniform, override_state, female, customi, sleeveindex, boobed_overlay, icon/clip_mask)
+	var/mutable_appearance/image = ..()
+	image.pixel_x = -16
+	image.pixel_y = -1
+	return image
+
+/obj/item/clothing/shoes/roguetown/horseshoes/mob_can_equip(mob/living/M, mob/living/equipper, slot, disable_warning)
+	var/mob/living/equipped_to_mob = equipper || M
+	var/obj/item/bodypart/taur/taur = equipped_to_mob.get_taur_tail()
+	if(!istype(taur, /obj/item/bodypart/taur/horse))
+		if(!disable_warning)
+			to_chat(M, span_warning("These horseshoes can only be equipped by beings with hooves."))
+		return FALSE
+	return ..()
+
+/obj/item/clothing/shoes/roguetown/horseshoes/steel
+	name = "steel horseshoes"
+	desc = "A pair of robust steel horseshoes nailed onto thick leather soles. These are ready to be attached to some hooves."
+	icon_state = "steel_horseshoes"
+	item_state = "steel_horseshoes"
+	max_integrity = ARMOR_INT_LEG_STEEL_CHAIN
+	sewrepair = FALSE
+	armor = ARMOR_PLATE
+	smeltresult = /obj/item/ingot/steel
+
+/obj/item/clothing/shoes/roguetown/horseshoes/silver
+	name = "silver horseshoes"
+	desc = "A pair of shining silver horseshoes nailed onto thick leather soles. These are ready to be attached to some hooves."
+	icon_state = "silver_horseshoes"
+	item_state = "silver_horseshoes"
+	max_integrity = ARMOR_INT_LEG_HARDLEATHER
+	sewrepair = FALSE
+	armor = ARMOR_PLATE
+	smeltresult = /obj/item/ingot/silver
+
+/obj/item/clothing/shoes/roguetown/horseshoes/gold
+	name = "gold horseshoes"
+	desc = "A pair of opulent golden horseshoes nailed onto thick leather soles. These are ready to be attached to some hooves."
+	icon_state = "gold_horseshoes"
+	item_state = "gold_horseshoes"
+	max_integrity = ARMOR_INT_LEG_LEATHER
+	sewrepair = FALSE
+	armor = ARMOR_PLATE // these are awful!
+	smeltresult = /obj/item/ingot/gold
+
+/obj/item/clothing/shoes/roguetown/horseshoes/bronze
+	name = "bronze horseshoes"
+	desc = "A pair of venerable bronze horsehoes nailed onto thick leather soles. These are ready to be attached to some hooves."
+	icon_state = "bronze_horseshoes"
+	item_state = "bronze_horseshoes"
+	clothing_flags = TAUR_COMPATIBLE
+	max_integrity = ARMOR_INT_LEG_BRONZE
+	sewrepair = FALSE
+	smeltresult = /obj/item/ingot/bronze
+
+/obj/item/clothing/shoes/courtphysician
+	name = "sanguine shoes"
+	desc = "Leather shoes, the solemn tap of these bears grim news, or salvation."
+	icon_state = "docshoes"
+	item_state = "docshoes"
+	icon = 'icons/roguetown/clothing/special/courtphys.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_courtphys.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/courtphys.dmi'
+	salvage_result = /obj/item/natural/hide/cured
+
+/obj/item/clothing/shoes/courtphysician/female
+	name = "sanguine heels"
+	desc = "Leather heels, the solemn tap of these bears grim news, or salvation."
+	icon_state = "docheels"
+	item_state = "docheels"
+	icon = 'icons/roguetown/clothing/special/courtphys.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_courtphys.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/courtphys.dmi'
+	detail_tag = "_detail"
+	detail_color = CLOTHING_RED
+
+/obj/item/clothing/shoes/courtphysician/female/Initialize()
+	. = ..()
+	update_icon()
+
+/obj/item/clothing/shoes/courtphysician/female/update_icon()
+	cut_overlays()
+	if(get_detail_tag())
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)
 
 /obj/item/clothing/shoes/roguetown/boots/leather/reinforced/kazengun
 	name = "armored sandals"
@@ -635,150 +781,3 @@
 	item_state = "inqboots"
 	allowed_race = ALL_RACES_TYPES
 	armor = ARMOR_PLATE
-
-
-// ----------------- BLACKSTEEL -----------------------
-
-/obj/item/clothing/shoes/roguetown/boots/armor/blacksteel/modern
-	name = "blacksteel plate boots"
-	desc = "Magnificent sabatons of blacksteel, pointed-yet-restrained. By the click of your heels, a thousand levymen shall march without question - and 'pon a leaping start, they shall see the bravery that earned such alloyed gifts to begin with."
-	icon_state = "bplateboots"
-	item_state = "bplateboots"
-
-/obj/item/clothing/shoes/roguetown/boots/armor/blacksteel
-	name = "ancient blacksteel plate boots"
-	desc = "Antiquated sabatons, forged from segmented plates of blacksteel. Am I the cancer that is killing this world? Is it my hate, my spite, my lust - that, which poisons the ones around me, and siphons away the hope of Man and God alike? When the last hearth is quenched and Psydonia is nothing more than a shriveled husk, will I still blame the corpses for what I had done? </br>‎  </br>Let go of your hate. Your lyfe is yours, and yours alone to arbitrate."
-	icon_state = "bkboots"
-	item_state = "bkboots"
-	max_integrity = ARMOR_INT_SIDE_BLACKSTEEL
-	armor = ARMOR_PLATE_BSTEEL
-	smeltresult = /obj/item/ingot/blacksteel
-	chunkcolor = "#303036"
-
-// ----------------- BLACKSTEEL END -----------------------
-
-/obj/item/clothing/shoes/roguetown/anklets
-	name = "golden anklets"
-	desc = "Luxurious anklets made of the finest gold. They leave the feet bare while adding a silky flair."
-	gender = PLURAL
-	icon_state = "anklets"
-	item_state = "anklets"
-	is_barefoot = TRUE
-	sewrepair = TRUE
-	armor = ARMOR_CLOTHING
-
-//kazen update
-/obj/item/clothing/shoes/roguetown/armor/rumaclan
-	name = "raised sandals"
-	desc = "A pair of strange sandals that push you off the ground."
-	icon_state = "eastsandals"
-	item_state = "eastsandals"
-	sleeved = 'icons/roguetown/clothing/onmob/helpers/stonekeep_merc.dmi'
-	armor = ARMOR_LEATHER
-	max_integrity = ARMOR_INT_SIDE_HARDLEATHER
-	sewrepair = TRUE
-
-/obj/item/clothing/shoes/roguetown/armor/rumaclan/shitty
-	armor = ARMOR_CLOTHING
-
-// horseshoes!
-/obj/item/clothing/shoes/roguetown/horseshoes
-	name = "iron horseshoes"
-	desc = "A pair of sturdy iron horseshoes nailed onto thick leather soles. These are ready to be attached to some hooves."
-	mob_overlay_icon = 'icons/roguetown/clothing/onmob/64x32/saiga.dmi'
-	icon_state = "iron_horseshoes"
-	item_state = "iron_horseshoes"
-	clothing_flags = TAUR_COMPATIBLE
-	max_integrity = ARMOR_INT_LEG_IRON_PLATE
-	sewrepair = FALSE
-	armor = ARMOR_PLATE
-	smeltresult = /obj/item/ingot/iron
-
-/obj/item/clothing/shoes/roguetown/horseshoes/build_worn_icon(default_layer, default_icon_file, isinhands, femaleuniform, override_state, female, customi, sleeveindex, boobed_overlay, icon/clip_mask)
-	var/mutable_appearance/image = ..()
-	image.pixel_x = -16
-	image.pixel_y = -1
-	return image
-
-/obj/item/clothing/shoes/roguetown/horseshoes/mob_can_equip(mob/living/M, mob/living/equipper, slot, disable_warning)
-	var/mob/living/equipped_to_mob = equipper || M
-	var/obj/item/bodypart/taur/taur = equipped_to_mob.get_taur_tail()
-	if(!istype(taur, /obj/item/bodypart/taur/horse))
-		if(!disable_warning)
-			to_chat(M, span_warning("These horseshoes can only be equipped by beings with hooves."))
-		return FALSE
-	return ..()
-
-/obj/item/clothing/shoes/roguetown/horseshoes/steel
-	name = "steel horseshoes"
-	desc = "A pair of robust steel horseshoes nailed onto thick leather soles. These are ready to be attached to some hooves."
-	icon_state = "steel_horseshoes"
-	item_state = "steel_horseshoes"
-	max_integrity = ARMOR_INT_LEG_STEEL_CHAIN
-	sewrepair = FALSE
-	armor = ARMOR_PLATE
-	smeltresult = /obj/item/ingot/steel
-
-/obj/item/clothing/shoes/roguetown/horseshoes/silver
-	name = "silver horseshoes"
-	desc = "A pair of shining silver horseshoes nailed onto thick leather soles. These are ready to be attached to some hooves."
-	icon_state = "silver_horseshoes"
-	item_state = "silver_horseshoes"
-	max_integrity = ARMOR_INT_LEG_HARDLEATHER
-	sewrepair = FALSE
-	armor = ARMOR_PLATE
-	smeltresult = /obj/item/ingot/silver
-
-/obj/item/clothing/shoes/roguetown/horseshoes/gold
-	name = "gold horseshoes"
-	desc = "A pair of opulent golden horseshoes nailed onto thick leather soles. These are ready to be attached to some hooves."
-	icon_state = "gold_horseshoes"
-	item_state = "gold_horseshoes"
-	max_integrity = ARMOR_INT_LEG_LEATHER
-	sewrepair = FALSE
-	armor = ARMOR_PLATE // these are awful!
-	smeltresult = /obj/item/ingot/gold
-
-/obj/item/clothing/shoes/roguetown/horseshoes/bronze
-	name = "bronze horseshoes"
-	desc = "A pair of venerable bronze horsehoes nailed onto thick leather soles. These are ready to be attached to some hooves."
-	icon_state = "bronze_horseshoes"
-	item_state = "bronze_horseshoes"
-	clothing_flags = TAUR_COMPATIBLE
-	max_integrity = ARMOR_INT_LEG_BRONZE
-	sewrepair = FALSE
-	smeltresult = /obj/item/ingot/bronze
-
-/obj/item/clothing/shoes/courtphysician
-	name = "sanguine shoes"
-	desc = "Leather shoes, the solemn tap of these bears grim news, or salvation."
-	icon_state = "docshoes"
-	item_state = "docshoes"
-	icon = 'icons/roguetown/clothing/special/courtphys.dmi'
-	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_courtphys.dmi'
-	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/courtphys.dmi'
-	salvage_result = /obj/item/natural/hide/cured
-
-/obj/item/clothing/shoes/courtphysician/female
-	name = "sanguine heels"
-	desc = "Leather heels, the solemn tap of these bears grim news, or salvation."
-	icon_state = "docheels"
-	item_state = "docheels"
-	icon = 'icons/roguetown/clothing/special/courtphys.dmi'
-	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_courtphys.dmi'
-	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/courtphys.dmi'
-	detail_tag = "_detail"
-	detail_color = CLOTHING_RED
-
-/obj/item/clothing/shoes/courtphysician/female/Initialize()
-	. = ..()
-	update_icon()
-
-/obj/item/clothing/shoes/courtphysician/female/update_icon()
-	cut_overlays()
-	if(get_detail_tag())
-		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
-		pic.appearance_flags = RESET_COLOR
-		if(get_detail_color())
-			pic.color = get_detail_color()
-		add_overlay(pic)

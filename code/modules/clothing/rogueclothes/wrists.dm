@@ -41,6 +41,7 @@
 	anvilrepair = /datum/skill/craft/armorsmithing
 	sewrepair = FALSE
 	smeltresult = /obj/item/ingot/steel
+	armor_class = ARMOR_CLASS_MEDIUM
 
 /obj/item/clothing/wrists/roguetown/bracers/get_mechanics_examine(mob/user)
 	. = ..()
@@ -50,6 +51,13 @@
 /obj/item/clothing/wrists/roguetown/bracers/ComponentInitialize()
 	AddComponent(/datum/component/armour_filtering/negative, TRAIT_FENCERDEXTERITY)
 	AddComponent(/datum/component/armour_filtering/negative, TRAIT_HONORBOUND)
+
+/obj/item/clothing/wrists/roguetown/bracers/fencer
+	name = "besilked bracers"
+	desc = "A pair of light steel vambraces, protecting the arms from blows-most-foul. Silk cuffs comfort the arms of those not trained to \
+	carry maille, ensuring each noble flick remains unmarred by weight."
+	max_integrity = ARMOR_INT_SIDE_STEEL - 30
+	armor_class = ARMOR_CLASS_LIGHT
 
 /obj/item/clothing/wrists/roguetown/bracers/gold
 	name = "golden bracers"
@@ -80,6 +88,7 @@
 	desc = "Oversized gold pauldrons that protect the forearms and upper-arms. Surprisingly protective and flashy, but heavy...!"
 	icon_state = "goldpauldron"
 	sellprice = 20
+	armor_class = ARMOR_CLASS_LIGHT //Role-exclusive.
 
 /obj/item/clothing/wrists/roguetown/bracers/psythorns
 	name = "psydonic thorns"
@@ -94,7 +103,7 @@
 	anvilrepair = /datum/skill/craft/armorsmithing
 	sewrepair = FALSE
 	alternate_worn_layer = WRISTS_LAYER
-	armor_class = ARMOR_CLASS_LIGHT
+	armor_class = ARMOR_CLASS_LIGHT //Role-exclusive.
 
 /obj/item/clothing/wrists/roguetown/bracers/psythorns/equipped(mob/user, slot)
 	. = ..()
@@ -161,6 +170,7 @@
 	salvage_amount = 0 // sry
 	salvage_result = /obj/item/natural/hide/cured
 	color = "#b76f61"
+	armor_class = ARMOR_CLASS_LIGHT
 
 /obj/item/clothing/wrists/roguetown/bracers/leather/ComponentInitialize()
 	AddComponent(/datum/component/armour_filtering/positive, TRAIT_FENCERDEXTERITY)
@@ -185,6 +195,7 @@
 	smeltresult = /obj/item/ingot/copper
 	armor = ARMOR_BRONZE
 	max_integrity = ARMOR_INT_SIDE_BRONZE
+	armor_class = ARMOR_CLASS_LIGHT
 
 /obj/item/clothing/wrists/roguetown/wrappings
 	name = "solar wrappings"
@@ -222,6 +233,7 @@
 	blocksound = SOFTHIT
 	anvilrepair = null
 	sewrepair = TRUE
+	armor_class = ARMOR_CLASS_LIGHT
 
 /obj/item/clothing/wrists/roguetown/bracers/cloth/monk
 	name = "padded wrappings"
@@ -290,6 +302,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	resistance_flags = FIRE_PROOF
 	sewrepair = FALSE
+	armor_class = ARMOR_CLASS_LIGHT
 
 /obj/item/clothing/wrists/roguetown/bracers/brigandine/ComponentInitialize()
 	AddComponent(/datum/component/armour_filtering/negative, TRAIT_FENCERDEXTERITY)
@@ -309,6 +322,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	resistance_flags = FIRE_PROOF
 	sewrepair = FALSE
+	armor_class = ARMOR_CLASS_LIGHT
 
 /obj/item/clothing/wrists/roguetown/bracers/iron
 	name = "iron bracers"
@@ -332,6 +346,7 @@
 	equip_sound = 'sound/foley/equip/equip_armor_chain.ogg'
 	smeltresult = /obj/item/ingot/iron
 	anvilrepair = /datum/skill/craft/armorsmithing
+	armor_class = ARMOR_CLASS_LIGHT
 
 /obj/item/clothing/wrists/roguetown/bracers/jackchain/ComponentInitialize()
 	AddComponent(/datum/component/armour_filtering/positive, TRAIT_FENCERDEXTERITY)
@@ -402,6 +417,7 @@
 	drop_sound = 'sound/foley/dropsound/chain_drop.ogg'
 	pickup_sound = 'sound/foley/equip/equip_armor_chain.ogg'
 	equip_sound = 'sound/foley/equip/equip_armor_chain.ogg'
+	armor_class = ARMOR_CLASS_LIGHT
 	var/wrapped = FALSE
 
 /obj/item/clothing/wrists/roguetown/bracers/aalloy/chain/attack_right(mob/user)
@@ -437,6 +453,7 @@
 	drop_sound = 'sound/foley/dropsound/chain_drop.ogg'
 	pickup_sound = 'sound/foley/equip/equip_armor_chain.ogg'
 	equip_sound = 'sound/foley/equip/equip_armor_chain.ogg'
+	armor_class = ARMOR_CLASS_LIGHT
 	var/wrapped = FALSE
 
 /obj/item/clothing/wrists/roguetown/bracers/paalloy/chain/attack_right(mob/user)
@@ -472,6 +489,7 @@
 	drop_sound = 'sound/foley/dropsound/chain_drop.ogg'
 	pickup_sound = 'sound/foley/equip/equip_armor_chain.ogg'
 	equip_sound = 'sound/foley/equip/equip_armor_chain.ogg'
+	armor_class = ARMOR_CLASS_LIGHT
 	var/wrapped = FALSE
 
 /obj/item/clothing/wrists/roguetown/bracers/iron/chain/attack_right(mob/user)
@@ -508,6 +526,7 @@
 	drop_sound = 'sound/foley/dropsound/chain_drop.ogg'
 	pickup_sound = 'sound/foley/equip/equip_armor_chain.ogg'
 	equip_sound = 'sound/foley/equip/equip_armor_chain.ogg'
+	armor_class = ARMOR_CLASS_LIGHT
 	var/wrapped = FALSE
 
 /obj/item/clothing/wrists/roguetown/bracers/bronze/chain/attack_right(mob/user)
@@ -543,6 +562,7 @@
 	drop_sound = 'sound/foley/dropsound/chain_drop.ogg'
 	pickup_sound = 'sound/foley/equip/equip_armor_chain.ogg'
 	equip_sound = 'sound/foley/equip/equip_armor_chain.ogg'
+	armor_class = ARMOR_CLASS_LIGHT
 	var/wrapped = FALSE
 
 /obj/item/clothing/wrists/roguetown/bracers/chain/attack_right(mob/user)

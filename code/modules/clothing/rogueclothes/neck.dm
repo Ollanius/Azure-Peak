@@ -264,6 +264,7 @@
 	adjustable = CAN_CADJUST
 	toggle_icon_state = TRUE
 	blocksound = PLATEHIT
+	armor_class = ARMOR_CLASS_MEDIUM
 
 /obj/item/clothing/neck/roguetown/bevor/ComponentInitialize()
 	AddComponent(/datum/component/adjustable_clothing, NECK, null, null, 'sound/items/visor.ogg', null, (UPD_HEAD|UPD_MASK|UPD_NECK)) // adjustable falling buffe for the bevor
