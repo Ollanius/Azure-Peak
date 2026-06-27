@@ -172,6 +172,24 @@ TRAIT UNIQUE PROCS
 			user.remove_stress(/datum/stressevent/dungeoneerhoodlost)
 		return
 
+	if(HAS_TRAIT(user, TRAIT_ARCYNE) && id == "arcyne_unfriendly")
+		if(positive)
+			ADD_TRAIT(user, TRAIT_SPELLCOCKBLOCK, TRAIT_GENERIC)
+			user.add_stress(/datum/stressevent/illfittingarmor)
+		return
+
+	if(HAS_TRAIT(user, TRAIT_CIVILIZEDBARBARIAN) && id == "pugilist_unfriendly")
+		if(positive)
+			REMOVE_TRAIT(user, TRAIT_CIVILIZEDBARBARIAN, TRAIT_GENERIC)
+			user.add_stress(/datum/stressevent/illfittingarmor)
+		return
+
+	if(HAS_TRAIT(user, 	TRAIT_DODGEEXPERT) && id == "dodge_unfriendly")
+		if(positive)
+			REMOVE_TRAIT(user, 	TRAIT_DODGEEXPERT, TRAIT_GENERIC)
+			user.add_stress(/datum/stressevent/illfittingarmor)
+		return
+
 	if(id == "plague_mask")
 		if(positive)
 			ADD_TRAIT(user, TRAIT_NOSTINK, "plague_resistant")
@@ -204,4 +222,28 @@ TRAIT UNIQUE PROCS
 			REMOVE_TRAIT(user, TRAIT_NOSTINK, "plague_resistant")
 		return
 
+	if(id == "arcyne_unfriendly")
+		if(positive)
+			if(!user.has_stress_event(/datum/stressevent/illfittingarmor))
+				return
+			REMOVE_TRAIT(user, TRAIT_SPELLCOCKBLOCK, TRAIT_GENERIC)
+			user.remove_status_effect(/datum/stressevent/illfittingarmor)
+		return
+
+	if(id == "pugilist_unfriendly")
+		if(positive)
+			if(!user.has_stress_event(/datum/stressevent/illfittingarmor))
+				return
+			ADD_TRAIT(user, TRAIT_CIVILIZEDBARBARIAN, TRAIT_GENERIC)
+			user.remove_status_effect(/datum/stressevent/illfittingarmor)
+		return
+	
+	if(id == "dodge_unfriendly")
+		if(positive)
+			if(!user.has_stress_event(/datum/stressevent/illfittingarmor))
+				return
+			ADD_TRAIT(user, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
+			user.remove_status_effect(/datum/stressevent/illfittingarmor)
+		return
+	
 	return

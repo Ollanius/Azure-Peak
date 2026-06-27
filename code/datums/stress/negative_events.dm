@@ -403,6 +403,11 @@
 	desc = span_boldred("I have lost my mask! Anyone here could be a djinn! I'm dangerously exposed!")
 	timer = 999 MINUTES
 
+/datum/stressevent/illfittingarmor
+	stressadd = 1
+	desc = span_boldred("I can't practice my finer techniques while this armor chafes my focus!")
+	timer = 999 MINUTES
+
 /datum/stressevent/shamanhoodlost
 	stressadd = 3
 	desc = span_boldred("I have lost my hood! My faith wavers without it. I feel ashamed.")
