@@ -43,7 +43,7 @@
 /datum/outfit/job/roguetown/wretch/berserker/pre_equip(mob/living/carbon/human/H)
 	cloak = /obj/item/clothing/cloak/raincloak/furcloak/brown
 	gloves = /obj/item/clothing/gloves/roguetown/bandages/pugilist
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/light
+	wrists = /obj/item/clothing/wrists/roguetown/bracers/fencer
 	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather/reinforced
 	backr = /obj/item/storage/backpack/rogue/satchel

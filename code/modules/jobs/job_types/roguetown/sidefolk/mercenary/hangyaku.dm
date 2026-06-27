@@ -45,7 +45,7 @@
 	neck = /obj/item/clothing/neck/roguetown/gorget/steel/kazengun
 	cloak = /obj/item/clothing/cloak/kazengun
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather/reinforced/kazengun
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/light
+	wrists = /obj/item/clothing/wrists/roguetown/bracers/fencer
 	gloves = /obj/item/clothing/gloves/roguetown/plate/kote
 	beltr = /obj/item/rogueweapon/huntingknife/idagger/steel/kazengun
 	backl = /obj/item/storage/backpack/rogue/satchel
