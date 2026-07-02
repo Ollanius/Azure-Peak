@@ -1,5 +1,4 @@
 
-
 /obj/item/rogueweapon/stoneaxe
 	slot_flags = ITEM_SLOT_HIP | ITEM_SLOT_BACK
 	force = 18
