@@ -2130,9 +2130,9 @@
 	display_category = ITEM_CAT_WEAPONS_AXES
 
 /datum/anvil_recipe/weapons/blacksteel/axe
-	name = "Blacksteel Axe (+1 Silk, +1 Stick)"
+	name = "Blacksteel Axe (+1 Blacksteel, +1 Silk, +1 Stick)"
 	req_bar = /obj/item/ingot/blacksteel
-	additional_items = list(/obj/item/natural/silk, /obj/item/grown/log/tree/stick)
+	additional_items = list(/obj/item/ingot/blacksteel, /obj/item/natural/silk, /obj/item/grown/log/tree/stick)
 	created_item = /obj/item/rogueweapon/stoneaxe/battle/blacksteel
 	display_category = ITEM_CAT_WEAPONS_AXES
 
