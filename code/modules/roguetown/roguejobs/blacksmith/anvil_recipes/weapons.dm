@@ -2099,13 +2099,6 @@
 	created_item = /obj/item/rogueweapon/eaglebeak/blacksteel
 	display_category = ITEM_CAT_WEAPONS_POLEARMS
 
-/datum/anvil_recipe/weapons/blacksteel/lance
-	name = "Blacksteel Lance (+1 Blacksteel, +1 Small Log, +1 Silk)"
-	req_bar = /obj/item/ingot/blacksteel
-	additional_items = list(/obj/item/ingot/blacksteel, /obj/item/grown/log/tree/small, /obj/item/natural/silk)
-	created_item = /obj/item/rogueweapon/sword/blacksteel
-	display_category = ITEM_CAT_WEAPONS_POLEARMS
-
 /datum/anvil_recipe/weapons/blacksteel/mace
 	name = "Blacksteel Mace (+1 Blacksteel, +1 Silk)"
 	req_bar = /obj/item/ingot/blacksteel
