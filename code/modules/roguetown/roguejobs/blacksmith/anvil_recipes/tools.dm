@@ -783,3 +783,16 @@
 	req_bar = /obj/item/ingot/blacksteel
 	created_item = /obj/item/rogueweapon/tongs/blacksteel
 	display_category = ITEM_CAT_TOOLS_WORKSHOP
+
+/datum/anvil_recipe/tools/blacksteel/handsaw
+	name = "Handsaw, Blacksteel (+1 Stick)"
+	req_bar = /obj/item/ingot/blacksteel
+	additional_items = list(/obj/item/grown/log/tree/stick)
+	created_item = /obj/item/rogueweapon/handsaw/blacksteel
+	display_category = ITEM_CAT_TOOLS_WORKSHOP
+
+/datum/anvil_recipe/tools/blacksteel/chisel
+	name = "Chisel, Blacksteel"
+	req_bar = /obj/item/ingot/blacksteel
+	created_item = /obj/item/rogueweapon/chisel/blacksteel
+	display_category = ITEM_CAT_TOOLS_WORKSHOP
