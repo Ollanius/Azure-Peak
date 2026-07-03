@@ -27,7 +27,7 @@
 /obj/item/rogueweapon/spear/lance
 	name = "lance"
 	desc = "A long polearm designed to be used from horseback, couched under the arm. It has a vambrace to prevent the arm sliding up \
-	the shaft on impact. "
+	the shaft on impact."
 	icon = 'icons/roguetown/weapons/polearms64.dmi'
 	icon_state = "lance"
 	force = 15 // Its gonna sucks for 1 handed use
@@ -40,3 +40,38 @@
 	special = /datum/special_intent/charge
 	resistance_flags = null
 	smeltresult = /obj/item/ingot/steel
+
+/obj/item/rogueweapon/spear/lance/blacksteel
+	name = "blacksteel lance"
+	desc = "A magnificent lance of blacksteel, inteeeeeeeee"
+	icon_state = "bs_lance"
+	force = 20
+	force_wielded = 25
+	wdefense_wbonus = 2 //+1 over the traditional spear, once wielded.
+	max_integrity = 300
+	max_blade_int = 300
+	resistance_flags = FIRE_PROOF
+	smeltresult = /obj/item/ingot/blacksteel
+
+/obj/item/rogueweapon/spear/lance/blacksteel/attackby(obj/item/W, mob/living/user, params)
+	..()
+	if(istype(W, /obj/item/natural/cloth) && !detail_tag)
+		var/choice = input(user, "Choose a color.", "Banner") as anything in COLOR_MAP
+		user.visible_message(span_warning("[user] adds a banner to [src]."))
+		user.transferItemToLoc(W, src, FALSE, FALSE)
+		detail_color = COLOR_MAP[choice]
+		detail_tag = "detail"
+		update_icon()
+
+/obj/item/rogueweapon/spear/lance/blacksteel/update_icon()
+	cut_overlays()
+	if(get_detail_tag())
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)
+
+/obj/item/rogueweapon/spear/lance/blacksteel/attack_self(mob/living/user)
+	. = ..()
+	update_icon()

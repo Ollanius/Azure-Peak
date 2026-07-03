@@ -2064,6 +2064,62 @@
 	created_item = /obj/item/rogueweapon/sword/long/blacksteel
 	display_category = ITEM_CAT_WEAPONS_SWORDS
 
+/datum/anvil_recipe/weapons/blacksteel/arming
+	name = "Blacksteel Arming Sword (+1 Silk)"
+	req_bar = /obj/item/ingot/blacksteel
+	additional_items = list(/obj/item/natural/silk)
+	created_item = /obj/item/rogueweapon/sword/blacksteel
+	display_category = ITEM_CAT_WEAPONS_POLEARMS
+
+/datum/anvil_recipe/weapons/blacksteel/arming
+	name = "Blacksteel Arming Sword (+1 Silk)"
+	req_bar = /obj/item/ingot/blacksteel
+	additional_items = list(/obj/item/natural/silk)
+	created_item = /obj/item/rogueweapon/sword/blacksteel
+	display_category = ITEM_CAT_WEAPONS_MACES
+
+/datum/anvil_recipe/weapons/blacksteel/hurlbat
+	name = "Blacksteel Hurlbat (+1 Silk)"
+	req_bar = /obj/item/ingot/blacksteel
+	additional_items = list(/obj/item/natural/silk)
+	created_item = /obj/item/rogueweapon/stoneaxe/hurlbat/blacksteel
+	display_category = ITEM_CAT_WEAPONS_AXES
+
+/datum/anvil_recipe/weapons/blacksteel/axe
+	name = "Blacksteel Axe (+1 Silk, +1 Stick)"
+	req_bar = /obj/item/ingot/blacksteel
+	additional_items = list(/obj/item/natural/silk, /obj/item/grown/log/tree/stick)
+	created_item = /obj/item/rogueweapon/stoneaxe/battle/blacksteel
+	display_category = ITEM_CAT_WEAPONS_AXES
+
+/datum/anvil_recipe/weapons/blacksteel/greataxe
+	name = "Blacksteel Greataxe (+1 Blacksteel, +1 Small Log, +1 Silk)"
+	req_bar = /obj/item/ingot/blacksteel
+	additional_items = list(/obj/item/ingot/blacksteel, /obj/item/grown/log/tree/small, /obj/item/natural/silk)
+	created_item = /obj/item/rogueweapon/greataxe/blacksteel
+	display_category = ITEM_CAT_WEAPONS_AXES
+
+/datum/anvil_recipe/weapons/blacksteel/arming
+	name = "Blacksteel Arming Sword (+1 Silk)"
+	req_bar = /obj/item/ingot/blacksteel
+	additional_items = list(/obj/item/natural/silk)
+	created_item = /obj/item/rogueweapon/sword/blacksteel
+	display_category = ITEM_CAT_WEAPONS_FLAILS
+
+/datum/anvil_recipe/weapons/blacksteel/arming
+	name = "Blacksteel Arming Sword (+1 Silk)"
+	req_bar = /obj/item/ingot/blacksteel
+	additional_items = list(/obj/item/natural/silk)
+	created_item = /obj/item/rogueweapon/sword/blacksteel
+	display_category = ITEM_CAT_WEAPONS_DAGGERS
+
+/datum/anvil_recipe/weapons/blacksteel/arming
+	name = "Blacksteel Arming Sword (+1 Silk)"
+	req_bar = /obj/item/ingot/blacksteel
+	additional_items = list(/obj/item/natural/silk)
+	created_item = /obj/item/rogueweapon/sword/blacksteel
+	display_category = ITEM_CAT_WEAPONS_SHIELDS
+
 // AVANTYNE
 
 /datum/anvil_recipe/weapons/avantyne/dagger
