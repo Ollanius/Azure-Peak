@@ -410,11 +410,21 @@
 	loot_value = LOOT_VALUE_BLACKSTEEL_EQUIPMENT
 	junk_loot = list(/obj/item/rope/chain = 5, /obj/item/ash = 3)
 	loot = list(
-		/obj/item/clothing/suit/roguetown/armor/plate/full/blacksteel = 1,
-		/obj/item/clothing/suit/roguetown/armor/plate/blacksteel = 1,
-		/obj/item/clothing/shoes/roguetown/boots/armor/blacksteel = 1,
-		/obj/item/clothing/gloves/roguetown/plate/blacksteel = 1,
-		/obj/item/clothing/head/roguetown/helmet/blacksteel = 1,
-		/obj/item/clothing/under/roguetown/platelegs/blacksteel = 1,
+		/obj/item/clothing/suit/roguetown/armor/plate/full/blacksteel/modern = 1,
+		/obj/item/clothing/suit/roguetown/armor/plate/blacksteel/modern = 2,
+		/obj/item/clothing/suit/roguetown/armor/plate/cuirass/blacksteel = 3,
+		/obj/item/clothing/under/roguetown/platelegs/blacksteel/modern = 2,
+		/obj/item/clothing/head/roguetown/helmet/blacksteel/modern = 2,
+		/obj/item/clothing/gloves/roguetown/plate/blacksteel/modern = 3,
+		/obj/item/clothing/wrists/roguetown/bracers/blacksteel/modern = 3,
+		/obj/item/clothing/neck/roguetown/bevor/blacksteel/modern = 3, //Modern stuff ends here, ancient stuff begins.
+		/obj/item/clothing/suit/roguetown/armor/plate/full/blacksteel = 2,
+		/obj/item/clothing/suit/roguetown/armor/plate/blacksteel = 3,
+		/obj/item/clothing/under/roguetown/platelegs/blacksteel = 3,
+		/obj/item/clothing/head/roguetown/helmet/blacksteel = 3,
+		/obj/item/clothing/gloves/roguetown/plate/blacksteel = 4,
+		/obj/item/clothing/wrists/roguetown/bracers/blacksteel = 4,
+		/obj/item/clothing/neck/roguetown/bevor/blacksteel = 4, //Ancient stuff ends here, everything else begins.
 		/obj/item/rogueweapon/greatsword/grenz/flamberge/blacksteel = 1,
+
 	)
