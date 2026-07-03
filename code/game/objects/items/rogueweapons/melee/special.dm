@@ -903,7 +903,7 @@
 
 /obj/item/rogueweapon/handclaw/steel
 	name = "Steel Mantis Claws"
-	desc = "A pair of steel claws, An uncommon sight in Gronn as they do not forge their own steel, \
+	desc = "A pair of steel claws. An uncommon sight in Gronn as they do not forge their own steel, \
 			Their longer blades offer a superior defence option but their added weight slows them down."
 	icon_state = "steelclaws"
 	icon = 'icons/roguetown/weapons/unarmed32.dmi'
@@ -954,6 +954,21 @@
 		added_def = 2,\
 	)
 
+/obj/item/rogueweapon/handclaw/blacksteel
+	name = "Blacksteel Eagle Claws"
+	desc = "A magnificent pair of blacksteel claws. While the Northern Empty is unfamiliar with blacksteel, they are familiar with an alloy of \
+	startingly similar repute; blacker-than-black, impossibly strong, and purported to've been the remains of divine matter. Such were wielded by \
+	a legendary champion of the Fjall - one whose valor, though forgotten by tyme, still echoes throughout the world they saved."
+	icon_state = "bskatarclaw"
+	icon = 'icons/roguetown/weapons/unarmed32.dmi'
+	wdefense = 1
+	force = 35
+	possible_item_intents = list(/datum/intent/claw/cut/gronn, /datum/intent/claw/lunge/gronn, /datum/intent/claw/rend)
+	wbalance = WBALANCE_HEAVY
+	max_blade_int = 350
+	smeltresult = /obj/item/ingot/blacksteel
+	sharpness_mod = 2
+
 /obj/item/rogueweapon/handclaw/getonmobprop(tag)
 	. = ..()
 	if(tag)
@@ -971,6 +986,7 @@
 	blade_class = BCLASS_STAB
 	hitsound = list('sound/combat/hits/bladed/genstab (1).ogg', 'sound/combat/hits/bladed/genstab (2).ogg', 'sound/combat/hits/bladed/genstab (3).ogg')
 	item_d_type = "stab"
+
 /datum/intent/claw/lunge/iron
 	damfactor = 1.2
 	swingdelay = 8
@@ -1158,7 +1174,7 @@
 
 /obj/item/rogueweapon/knuckledusters/enduring/attack_self(mob/living/user)
 	. = ..()
-	user.visible_message(span_warning("[user] starts adjusting their grip on[src]."))
+	user.visible_message(span_warning("[user] starts adjusting their grip on [src]."))
 	if(do_after(user, 3 SECONDS))
 		var/obj/item/rogueweapon/knuckledusters/enduring/P = new /obj/item/clothing/gloves/roguetown/knuckles/psydon/old(get_turf(src.loc))
 		if(user.is_holding(src))
