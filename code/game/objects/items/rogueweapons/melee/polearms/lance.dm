@@ -41,6 +41,29 @@
 	resistance_flags = null
 	smeltresult = /obj/item/ingot/steel
 
+/obj/item/rogueweapon/spear/lance/attackby(obj/item/W, mob/living/user, params)
+	..()
+	if(istype(W, /obj/item/natural/cloth) && !detail_tag)
+		var/choice = input(user, "Choose a color.", "Banner") as anything in COLOR_MAP
+		user.visible_message(span_warning("[user] adds a banner to [src]."))
+		user.transferItemToLoc(W, src, FALSE, FALSE)
+		detail_color = COLOR_MAP[choice]
+		detail_tag = "detail"
+		update_icon()
+
+/obj/item/rogueweapon/spear/lance/update_icon()
+	cut_overlays()
+	if(get_detail_tag())
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)
+
+/obj/item/rogueweapon/spear/lance/attack_self(mob/living/user)
+	. = ..()
+	update_icon()
+
 /obj/item/rogueweapon/spear/lance/blacksteel
 	name = "blacksteel lance"
 	desc = "A magnificent lance of blacksteel, designed to be wielded on saigaback in jousting tournaments. Even so, it isn't uncommon to see it \
@@ -55,26 +78,3 @@
 	smeltresult = /obj/item/ingot/blacksteel
 	possible_item_intents = list(/datum/intent/spear/thrust, /datum/intent/lance/onehand, SPEAR_BASH)
 	gripped_intents = list(/datum/intent/spear/thrust/lance, /datum/intent/lance, SPEAR_BASH)
-
-/obj/item/rogueweapon/spear/lance/blacksteel/attackby(obj/item/W, mob/living/user, params)
-	..()
-	if(istype(W, /obj/item/natural/cloth) && !detail_tag)
-		var/choice = input(user, "Choose a color.", "Banner") as anything in COLOR_MAP
-		user.visible_message(span_warning("[user] adds a banner to [src]."))
-		user.transferItemToLoc(W, src, FALSE, FALSE)
-		detail_color = COLOR_MAP[choice]
-		detail_tag = "detail"
-		update_icon()
-
-/obj/item/rogueweapon/spear/lance/blacksteel/update_icon()
-	cut_overlays()
-	if(get_detail_tag())
-		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
-		pic.appearance_flags = RESET_COLOR
-		if(get_detail_color())
-			pic.color = get_detail_color()
-		add_overlay(pic)
-
-/obj/item/rogueweapon/spear/lance/blacksteel/attack_self(mob/living/user)
-	. = ..()
-	update_icon()
