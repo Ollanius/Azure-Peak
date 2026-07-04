@@ -615,6 +615,7 @@
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	color = null
 	custom_design = TRUE
+	alternate_worn_layer = 8.9
 
 /obj/item/clothing/cloak/tabard/stabard/donator_oathkeeper
 	name = "oathkeeper's noble surcoat"
@@ -1689,7 +1690,7 @@ As Excaliber."
     </br>‎  <font color='007FFF'>I DID NO MORE THAN YOU LET ME DO.</font>"
 	icon_state = "ollanius_sword"
 	icon = 'icons/obj/items/donor_weapons.dmi'
-	sheathe_icon = "scabbard_gensaber"
+	sheathe_icon = "gensaber"
 
 // JADEMANIQUE 
 /obj/item/rogue/instrument/guitar/jade_guitar
