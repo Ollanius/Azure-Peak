@@ -616,6 +616,9 @@
 	color = null
 	custom_design = TRUE
 	slot_flags = ITEM_SLOT_HEAD | ITEM_SLOT_CLOAK
+	storage = FALSE
+	grid_width = 32
+	grid_height = 32
 
 /obj/item/clothing/cloak/tabard/stabard/donator_oathkeeper
 	name = "oathkeeper's noble surcoat"
