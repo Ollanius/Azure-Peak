@@ -153,9 +153,9 @@
 	detail_tag = "_detail"
 	altdetail_tag = "_detailalt"
 	dynamic_hair_suffix = ""
-	armor = ARMOR_PADDED_BAD
+	armor = null
 	resistance_flags = FLAMMABLE
-	color = "#262927"
+	color = "#007fff"
 	detail_color = "#FFFFFF"
 	altdetail_color = "#007fff"
 

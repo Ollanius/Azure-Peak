@@ -118,6 +118,10 @@
 	name = "Gift - Helmet Cosmetic, Greatplume"
 	path = /obj/item/clothing/head/roguetown/decoration/greatplume
 
+/datum/loadout_item/donator/universal/armorpiece_shoulderguard
+	name = "Gift - Armor Cosmetic, Shoulderguard"
+	path = /obj/item/clothing/cloak/tabard/stabard/donator_shoulderguard
+
 //Brief explanation - as Spear found out, using a Morphing Elixir on a storage item works.. but permenantly deletes -anything- stored inside.
 //To prevent any chance of someone accidentally destroying a round-important item, I'm replacing the kits with the main thing..
 // ..for now(?). If someone else comes around and adds a check that prevents belts with stored items inside from being transformed, then they can -
@@ -561,6 +565,11 @@
 /datum/loadout_item/donator/ollanius_maille
 	name = "Donator Kit - Shoulderless Haubergeon"
 	path = /obj/item/enchantingkit/ollanius_maille
+	ckeywhitelist = list("ollanius")
+
+/datum/loadout_item/donator/ollanius_sword
+	name = "Donator Kit - Azurosa-Wrapped Sword"
+	path = /obj/item/enchantingkit/weapon/ollanius
 	ckeywhitelist = list("ollanius")
 
 /datum/loadout_item/donator/jade_guitar

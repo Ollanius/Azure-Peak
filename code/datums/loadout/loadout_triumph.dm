@@ -644,3 +644,9 @@
 	path = /obj/item/clothing/head/roguetown/decoration/greatplume
 	triumph_cost = 3
 	sort_category = "Triumphs"
+
+/datum/loadout_item/shoulderguardstandalone
+	name = "Armor Decoration, Shoulderguard"
+	path = /datum/loadout_item/donator/universal/armorpiece_shoulderguard
+	triumph_cost = 3
+	sort_category = "Triumphs"
