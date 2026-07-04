@@ -1683,14 +1683,14 @@ As Excaliber."
 /obj/item/rogueweapon/ollanius_sword
 	name = "azurosa-wrapped sword"
 	desc = "<font color='007FFF'>LIED TO YOU? TRICKED YOU? NOT I.</font> \
-    </br>‎  <font color='007FFF'>FOR I ANSWERED STRAIGHT. I TOLD YOU TRUE..</font> \
-    </br>‎  <font color='007FFF'>THE SCAFFOLD HAS BEEN RAISED FOR NONE BUT YOU.</font> \
-    </br>‎  <font color='007FFF'>FOR WHO HAS SERVED MORE FAITHFULLY THAN YOU?</font> \
-    </br>‎  <font color='007FFF'>AND WHERE ARE THE OTHERS THAT HAVE STOOD BY YOUR SIDE..</font> \
-    </br>‎  <font color='007FFF'>..ON YOUR SIDE, IN THE COMMON GOOD?</font> \
-    </br>‎  <font color='007FFF'>DEAD.</font> \
-	</br>‎  <font color='007FFF'>MURDERED.</font> \
-    </br>‎  <font color='007FFF'>I DID NO MORE THAN YOU LET ME DO.</font>"
+    </br>‎ <font color='007FFF'>FOR I ANSWERED STRAIGHT. I TOLD YOU TRUE..</font> \
+    </br>‎ <font color='007FFF'>THE SCAFFOLD HAS BEEN RAISED FOR NONE BUT YOU.</font> \
+    </br>‎ <font color='007FFF'>FOR WHO HAS SERVED MORE FAITHFULLY THAN YOU?</font> \
+    </br>‎ <font color='007FFF'>AND WHERE ARE THE OTHERS THAT HAVE STOOD BY YOUR SIDE..</font> \
+    </br>‎ <font color='007FFF'>..ON YOUR SIDE, IN THE COMMON GOOD?</font> \
+    </br>‎ <font color='007FFF'>DEAD.</font> \
+	</br>‎ <font color='007FFF'>MURDERED.</font> \
+    </br>‎ <font color='007FFF'>I DID NO MORE THAN YOU LET ME DO.</font>"
 	icon_state = "ollanius_sword"
 	icon = 'icons/obj/items/donor_weapons.dmi'
 	sheathe_icon = "gensaber"
