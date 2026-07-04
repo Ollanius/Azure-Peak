@@ -1241,7 +1241,7 @@
 	req_bar = /obj/item/ingot/silver
 	additional_items = list(/obj/item/grown/log/tree/small, /obj/item/grown/log/tree/small, /obj/item/grown/log/tree/small)
 	created_item = /obj/item/rogueweapon/woodstaff/quarterstaff/silver
-	display_category = ITEM_CAT_WEAPONS_SWORDS
+	display_category = ITEM_CAT_WEAPONS_POLEARMS
 
 /datum/anvil_recipe/weapons/silver/spear
 	name = "Spear, Silver (+3 Small Logs)"
@@ -2231,6 +2231,12 @@
 	created_item = /obj/item/rogueweapon/handclaw/blacksteel
 	display_category = ITEM_CAT_SMITHING_MISC
 
+/datum/anvil_recipe/weapons/blacksteel/quarterstaff
+	name = "Quarterstaff, Blacksteel (+3 Small Logs)"
+	req_bar = /obj/item/ingot/blacksteel
+	additional_items = list(/obj/item/grown/log/tree/small, /obj/item/grown/log/tree/small, /obj/item/grown/log/tree/small)
+	created_item = /obj/item/rogueweapon/woodstaff/quarterstaff/blacksteel
+	display_category = ITEM_CAT_WEAPONS_POLEARMS
 
 // AVANTYNE
 

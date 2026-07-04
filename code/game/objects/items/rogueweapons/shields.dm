@@ -843,6 +843,6 @@
 	throwforce = 20
 	coverage = 60
 	smeltresult = /obj/item/ingot/blacksteel
-	possible_item_intents = list(/datum/intent/shield/block, /datum/intent/mace/smash/shield/metal, /datum/intent/effect/daze, /datum/intent/shield/bash/metal)
+	possible_item_intents = list(/datum/intent/shield/bash/metal, /datum/intent/shield/block, /datum/intent/mace/smash/shield/metal, /datum/intent/effect/daze)
 	minstr = 11
 	wdefense = 13

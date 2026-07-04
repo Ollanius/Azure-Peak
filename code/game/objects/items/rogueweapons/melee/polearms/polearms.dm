@@ -1338,6 +1338,17 @@
 	max_integrity = 200
 	smeltresult = /obj/item/ingot/steel
 
+/obj/item/rogueweapon/woodstaff/quarterstaff/blacksteel
+	name = "blacksteel quarterstaff"
+	desc = "A quarterstaff reinforced with blacksteel tips. One might imagine that the elegance of such a design hardly befits the people \
+	who'd traditionally wield such a weapon; then again, who are we to judge?"
+	force = 20
+	force_wielded = 30
+	icon_state = "quarterstaff_blacksteel"
+	max_integrity = 350
+	smeltresult = /obj/item/ingot/blacksteel
+	wdefense_wbonus = 7	//12 when wielded.
+
 /obj/item/rogueweapon/woodstaff/quarterstaff/silver
 	name = "silver quarterstaff"
 	desc = "A quarterstaff reinforced with silver tips. A relatively new design, purportedly inspired by the warstaffs oft-carried by Naledian \

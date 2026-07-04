@@ -875,7 +875,7 @@
 
 /obj/item/rogueweapon/handclaw
 	slot_flags = ITEM_SLOT_HIP
-	name = "Iron Hound Claws"
+	name = "iron hound claws"
 	desc = "A pair of heavily curved claws, styled after beasts of the wilds for rending bare flesh, \
 			A show of the continual worship and veneration of beasts of strength in Gronn."
 	icon_state = "ironclaws"
@@ -902,7 +902,7 @@
 	grid_width = 32
 
 /obj/item/rogueweapon/handclaw/steel
-	name = "Steel Mantis Claws"
+	name = "steel mantis claws"
 	desc = "A pair of steel claws. An uncommon sight in Gronn as they do not forge their own steel, \
 			Their longer blades offer a superior defence option but their added weight slows them down."
 	icon_state = "steelclaws"
@@ -917,10 +917,10 @@
 	sharpness_mod = 2
 
 /obj/item/rogueweapon/handclaw/gronn
-	name = "Gronn Beast Claws"
+	name = "gronn beast claws"
 	desc = "A pair of uniquely reinforced iron claws forged with the addition of bone by the Iskarn shamans of the Northern Empty. \
 			Their unique design aids them in slipping between the plates in armor and their light weight supports rapid aggressive slashes. \
-			'To see the claws of the four, Is to see the true danger of the north. Not man, Not land but beast. We are all prey in their eyes.'"
+			</br>'To see the claws of the four, Is to see the true danger of the north. Not man, Not land but beast. We are all prey in their eyes.'"
 	icon_state = "gronnclaws"
 	icon = 'icons/roguetown/weapons/unarmed32.dmi'
 	wdefense = 3
@@ -931,11 +931,11 @@
 	max_integrity = 200
 
 /obj/item/rogueweapon/handclaw/gronn/silver
-	name = "Silver Ravager Claws"
+	name = "silver ravager claws"
 	desc = "A trinity of silver claws, forged in defiant reverence of the Old Ways that still permeate throughout the Northern Empty. \
 			The psicruciformic edge shreds through the hide of thralls; resurrected corpses from Fjallic antiquity, said to've been born through faithlessness and despair. \
 			Few shamen hold the strength to wield it, and fewer will speak of what they, alone, know - the true fate of the Weeping Father. \
-			'Here we stand, to turn and face the odds; sacrifice yourself, or bow to lesser gods!'"
+			</br>'Here we stand, to turn and face the odds; sacrifice yourself, or bow to lesser gods!'"
 	smeltresult = /obj/item/ingot/silver
 	icon_state = "silverclaws"
 	wdefense = 5
@@ -955,10 +955,11 @@
 	)
 
 /obj/item/rogueweapon/handclaw/blacksteel
-	name = "Blacksteel Eagle Claws"
+	name = "blacksteel eagle claws"
 	desc = "A magnificent pair of blacksteel claws. While the Northern Empty is unfamiliar with blacksteel, they are familiar with an alloy of \
-	startingly similar repute; blacker-than-black, impossibly strong, and purported to've been the remains of divine matter. Such were wielded by \
-	a legendary champion of the Fjall - one whose valor, though forgotten by tyme, still echoes throughout the world they saved."
+			startingly similar repute; blacker-than-black, impossibly strong, and purported to've been the remains of divine matter. Such were wielded by \
+			a legendary champion of the Fjall - one whose valor, though forgotten by tyme, still echoes throughout the world they saved. \
+			</br>'Here in the wake, I know when the noose was set, but the truth is that I regret what I have left!'"
 	icon_state = "bskatarclaw"
 	icon = 'icons/roguetown/weapons/unarmed32.dmi'
 	wdefense = 1
