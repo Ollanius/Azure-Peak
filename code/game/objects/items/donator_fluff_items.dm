@@ -615,7 +615,7 @@
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	color = null
 	custom_design = TRUE
-	alternate_worn_layer = 8.9
+	slot_flags = ITEM_SLOT_HEAD | ITEM_SLOT_CLOAK
 
 /obj/item/clothing/cloak/tabard/stabard/donator_oathkeeper
 	name = "oathkeeper's noble surcoat"
