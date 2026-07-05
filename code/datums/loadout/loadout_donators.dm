@@ -64,15 +64,15 @@
 
 /datum/loadout_item/donator/universal/elegant_weapons
 	name = "Gift - Kit, Elegant Weaponry"
-	path = /obj/item/enchantingkit/weapon/donator_universal
+	path = /obj/item/enchantingkit/donator_universal
 
 /datum/loadout_item/donator/universal/elegant_weapons_plus
 	name = "Gift - Kit, Elegant Weaponry (II)"
-	path = /obj/item/enchantingkit/weapon/donator_universal
+	path = /obj/item/enchantingkit/donator_universal
 
 /datum/loadout_item/donator/universal/elegant_weapons_plusplus
 	name = "Gift - Kit, Elegant Weaponry (III)"
-	path = /obj/item/enchantingkit/weapon/donator_universal
+	path = /obj/item/enchantingkit/donator_universal
 
 /datum/loadout_item/donator/universal/cuirassplackart
 	name = "Gift - Kit, Armored Plackart"
