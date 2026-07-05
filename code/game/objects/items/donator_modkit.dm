@@ -269,7 +269,7 @@
 	)
 	result_item = null
 
-/obj/item/enchantingkit/weapon/donator_universal
+/obj/item/enchantingkit/donator_universal
 	name = "'Elegant Weaponry' morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of almost any Steel-tiered weapon, alongside Kite Shields and Leather Whips."
 	target_items = list(
