@@ -1453,6 +1453,17 @@
 	max_blade_int = 200
 	smeltresult = /obj/item/ingot/steel
 
+/obj/item/rogueweapon/spear/blacksteel
+	name = "blacksteel spear"
+	desc = "A magnificent winged spear of blacksteel; 'nuff said."
+	icon = 'icons/roguetown/weapons/polearms64.dmi'
+	icon_state = "blacksteelspear"
+	force_wielded = 35
+	wdefense = 6
+	wdefense_wbonus = 3
+	max_blade_int = 400
+	smeltresult = /obj/item/ingot/blacksteel
+
 /obj/item/rogueweapon/spear/boar/frei
 	name = "Aavnic lándzsa"
 	desc = "A regional earspoon lance with a carved handle, adorned with the colours of the Freifechters. These are smithed \

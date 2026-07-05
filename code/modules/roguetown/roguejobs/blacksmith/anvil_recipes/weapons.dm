@@ -2238,6 +2238,13 @@
 	created_item = /obj/item/rogueweapon/woodstaff/quarterstaff/blacksteel
 	display_category = ITEM_CAT_WEAPONS_POLEARMS
 
+/datum/anvil_recipe/weapons/blacksteel/spear
+	name = "Spear, Blacksteel (+2 Small Logs)"
+	req_bar = /obj/item/ingot/blacksteel
+	additional_items = list(/obj/item/grown/log/tree/small, /obj/item/grown/log/tree/small)
+	created_item = /obj/item/rogueweapon/spear/blacksteel
+	display_category = ITEM_CAT_WEAPONS_POLEARMS
+
 // AVANTYNE
 
 /datum/anvil_recipe/weapons/avantyne/dagger

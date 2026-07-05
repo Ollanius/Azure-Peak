@@ -445,4 +445,5 @@
 		/obj/item/clothing/gloves/roguetown/knuckles/blacksteel = 3,
 		/obj/item/rogueweapon/mace/warhammer/blacksteel = 3,
 		/obj/item/rogueweapon/mace/blacksteel = 4,
+		/obj/item/rogueweapon/spear/blacksteel = 4,
 	)

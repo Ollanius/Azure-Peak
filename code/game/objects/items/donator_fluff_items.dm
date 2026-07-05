@@ -774,6 +774,184 @@
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
 	bigboy = TRUE
 
+//
+
+/obj/item/rogueweapon/donator_universal_axe
+	name = "elegant axe"
+	desc = "An elegant axe for an elegant wielder."
+	icon_state = "donator_axe"
+	icon = 'icons/obj/items/donor_weapons.dmi'
+
+/obj/item/rogueweapon/donator_universal_mace
+	name = "elegant mace"
+	desc = "An elegant mace for an elegant wielder."
+	icon_state = "donator_mace"
+	icon = 'icons/obj/items/donor_weapons.dmi'
+
+/obj/item/rogueweapon/donator_universal_barmace
+	name = "elegant bar mace"
+	desc = "An elegant bar mace for an elegant wielder."
+	icon_state = "donator_barmace"
+	icon = 'icons/obj/items/donor_weapons.dmi'
+
+/obj/item/rogueweapon/donator_universal_warhammer
+	name = "elegant warhammer"
+	desc = "An elegant warhammer for an elegant wielder."
+	icon_state = "donator_warhammer"
+	icon = 'icons/obj/items/donor_weapons.dmi'
+
+/obj/item/rogueweapon/donator_universal_flail
+	name = "elegant flail"
+	desc = "An elegant flail for an elegant wielder."
+	icon_state = "donator_flail"
+	icon = 'icons/obj/items/donor_weapons.dmi'
+
+/obj/item/rogueweapon/donator_universal_dagger
+	name = "elegant dagger"
+	desc = "An elegant dagger for an elegant wielder."
+	icon_state = "donator_dagger"
+	sheathe_icon = "donator_dagger"
+	icon = 'icons/obj/items/donor_weapons.dmi'
+
+/obj/item/rogueweapon/donator_universal_decdagger
+	name = "elegantly decorated dagger"
+	desc = "An elegantly decorated dagger for an elegantly decorated wielder."
+	icon_state = "donator_decdagger"
+	sheathe_icon = "donator_decdagger"
+	icon = 'icons/obj/items/donor_weapons.dmi'
+
+/obj/item/rogueweapon/donator_universal_whip
+	name = "elegant whip"
+	desc = "An elegant whip for an elegant wielder."
+	icon_state = "donator_whip"
+	icon = 'icons/obj/items/donor_weapons.dmi'
+
+/obj/item/rogueweapon/donator_universal_urumi
+	name = "elegant urumi"
+	desc = "An elegant urumi for an elegant wielder."
+	icon_state = "donator_urumi"
+	icon = 'icons/obj/items/donor_weapons.dmi'
+
+/obj/item/rogueweapon/donator_universal_knuckles
+	name = "elegant knuckles"
+	desc = "An elegant pair of knuckledusters for an elegant wielder."
+	icon_state = "donator_knuckle"
+	icon = 'icons/obj/items/donor_weapons.dmi'
+
+/obj/item/rogueweapon/donator_universal_katarclaw
+	name = "elegant handblade"
+	desc = "An elegant pair of handblades for an elegant wielder."
+	icon_state = "donatorkatarclaw"
+	icon = 'icons/obj/items/donor_weapons.dmi'
+
+/obj/item/rogueweapon/donator_universal_sword
+	name = "elegant sword"
+	desc = "An elegant sword for an elegant wielder."
+	icon_state = "donator_sword"
+	sheathe_icon = "donator_sword"
+	icon = 'icons/obj/items/donor_weapons.dmi'
+
+/obj/item/rogueweapon/donator_universal_decsword
+	name = "elegantly decorated sword"
+	desc = "An elegantly decorated sword for an elegantly decorated wielder."
+	icon_state = "donator_decsword"
+	sheathe_icon = "donator_decsword"
+	icon = 'icons/obj/items/donor_weapons.dmi'
+
+/obj/item/rogueweapon/donator_universal_messer
+	name = "elegant messer"
+	desc = "An elegant messer for an elegant wielder."
+	icon_state = "donator_messer"
+	sheathe_icon = "donator_messer"
+	icon = 'icons/obj/items/donor_weapons.dmi'
+
+/obj/item/rogueweapon/donator_universal_sabre
+	name = "elegant sabre"
+	desc = "An elegant sabre for an elegant wielder."
+	icon_state = "donator_sabre"
+	sheathe_icon = "donator_sabre"
+	icon = 'icons/obj/items/donor_weapons.dmi'
+
+/obj/item/rogueweapon/donator_universal_halberd
+	name = "elegant halberd"
+	desc = "An elegant halberd for an elegant wielder."
+	icon_state = "donator_halberd"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+	bigboy = TRUE
+
+/obj/item/rogueweapon/donator_universal_lance
+	name = "elegant lance"
+	desc = "An elegant lance for an elegant wielder."
+	icon_state = "donator_lance"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+	bigboy = TRUE
+
+/obj/item/rogueweapon/donator_universal_polehammer
+	name = "elegant polehammer"
+	desc = "An elegant polehammer for an elegant wielder."
+	icon_state = "donator_eaglebeak"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+	bigboy = TRUE
+
+/obj/item/rogueweapon/donator_universal_greataxe
+	name = "elegant greataxe"
+	desc = "An elegant greataxe for an elegant wielder."
+	icon_state = "donator_greataxe"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+	bigboy = TRUE
+
+/obj/item/rogueweapon/donator_universal_rapier
+	name = "elegant rapier"
+	desc = "An elegant rapier for an elegant wielder."
+	icon_state = "donatorrapier"
+	sheathe_icon = "donatorrapier"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+	bigboy = TRUE
+
+/obj/item/rogueweapon/donator_universal_longsword
+	name = "elegant longsword"
+	desc = "An elegant longsword for an elegant wielder."
+	icon_state = "donatorlongsword"
+	sheathe_icon = "donatorlongsword"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+	bigboy = TRUE
+
+/obj/item/rogueweapon/donator_universal_quarterstaff
+	name = "elegant quarterstaff"
+	desc = "An elegant quarterstaff for an elegant wielder."
+	icon_state = "quarterstaff_donator"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+	bigboy = TRUE
+
+/obj/item/rogueweapon/donator_universal_declongsword
+	name = "elegantly decorated longsword"
+	desc = "An elegantly decorated longsword for an elegantly decorated wielder."
+	icon_state = "donatordeclongsword"
+	sheathe_icon = "donatordeclongsword"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+	bigboy = TRUE
+
+/obj/item/rogueweapon/donator_universal_spear
+	name = "elegant spear"
+	desc = "An elegant spear for an elegant wielder."
+	icon_state = "donatorspear"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+	bigboy = TRUE
+
+/obj/item/rogueweapon/shield/tower/metal/donator_universal
+	name = "elegant kite shield"
+	desc = "An elegant kite shield for an elegant wielder."
+	icon_state = "donatorsh"
+	icon = 'icons/obj/items/donor_weapons.dmi'
+
+/obj/item/clothing/gloves/roguetown/knuckles/donator_universal
+	name = "elegant knuckles"
+	desc = "An elegant pair of knuckledusters for an elegant wielder."
+	icon_state = "donator_knuckle"
+	icon = 'icons/obj/items/donor_weapons.dmi'
+
+//
+
 /obj/item/rogueweapon/donator_imbuedlongsword
 	name = "imbued longsword"
 	desc = "A lethal and perfectly balanced weapon, imbued with decorative flair. The longsword is the protagonist of endless tales and myths \
@@ -1693,7 +1871,7 @@ As Excaliber."
     </br>‎ <font color='007FFF'>I DID NO MORE THAN YOU LET ME DO.</font>"
 	icon_state = "ollanius_sword"
 	icon = 'icons/obj/items/donor_weapons.dmi'
-	sheathe_icon = "gensaber"
+	sheathe_icon = "ollanius_sword"
 
 // JADEMANIQUE 
 /obj/item/rogue/instrument/guitar/jade_guitar
