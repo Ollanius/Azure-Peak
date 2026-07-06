@@ -336,7 +336,7 @@
 	name = "'Smallsword Rapier' morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Steel Rapier."
 	target_items = list(/obj/item/rogueweapon/sword/rapier)
-	result_item = /obj/item/rogueweapon/sword/rapier/donator_universal
+	result_item = /obj/item/rogueweapon/example/donator_grenzrapier
 
 /////////////////////////////
 // ! Player / Donor Kits ! //
