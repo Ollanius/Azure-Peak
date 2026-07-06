@@ -188,6 +188,15 @@
 		)
 	result_item = null
 
+/obj/item/enchantingkit/triumph_weaponkit_classicdaggers
+	name = "'Classic Daggers' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of an Iron Dagger or Steel Dagger."
+	target_items = list(
+		/obj/item/rogueweapon/huntingknife/idagger/steel		= /obj/item/rogueweapon/huntingknife/idagger/steel/triumph_classic,
+		/obj/item/rogueweapon/huntingknife/idagger				= /obj/item/rogueweapon/huntingknife/idagger/triumph_classic
+		)
+	result_item = null
+
 /obj/item/enchantingkit/triumph_transmutekit_armorkinis
 	name = "'Armorkini' transmutation elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to turn a set of Hide Armor, Leather Armor, Studded Leather Armor, Haubergeon, or Plate Armor into their corseted equivalents."
@@ -690,6 +699,16 @@
 	of Lakkaria, this ancient-yet-elegant knife excels at both attending to labors and languishing foes."
 	icon_state = "injora"
 	sheathe_icon = "sdagger"
+
+/obj/item/rogueweapon/huntingknife/idagger/triumph_classic
+	name = "iron dagger"
+	icon_state = "kavrick_idagger"
+	sheathe_icon = "kavrick_idagger"
+	
+/obj/item/rogueweapon/huntingknife/idagger/steel/triumph_classic
+	name = "steel dagger"
+	icon_state = "kavrick_sdagger"
+	sheathe_icon = "kavrick_sdagger"
 
 /obj/item/rogueweapon/whip/triumph
 	name = "alloy-tipped whip"

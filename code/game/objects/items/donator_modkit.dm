@@ -269,38 +269,74 @@
 	)
 	result_item = null
 
-/obj/item/enchantingkit/donator_universal
-	name = "'Elegant Weaponry' morphing elixir"
-	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of almost any Steel-tiered weapon, alongside Kite Shields and Leather Whips."
+/obj/item/enchantingkit/donator_universal_armory
+	name = "'Elegant Armory' morphing elixir" //Small compromise to avoid bloating the Loadout tab. 
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of most Steel weapons, including the Decorated Sword and Dagger."
 	target_items = list(
-		/obj/item/rogueweapon/huntingknife/idagger/steel/decorated	= /obj/item/rogueweapon/donator_universal_decdagger,
-		/obj/item/rogueweapon/huntingknife/idagger/steel			= /obj/item/rogueweapon/donator_universal_dagger,
-		/obj/item/rogueweapon/mace/warhammer/steel 					= /obj/item/rogueweapon/donator_universal_warhammer,
-		/obj/item/rogueweapon/mace/steel/silver 					= /obj/item/rogueweapon/donator_universal_barmace,
-		/obj/item/rogueweapon/sword/short/messer					= /obj/item/rogueweapon/donator_universal_messer,
-		/obj/item/rogueweapon/sword/long/dec 						= /obj/item/rogueweapon/donator_universal_declongsword,
-		/obj/item/rogueweapon/shield/tower/metal				 	= /obj/item/rogueweapon/shield/tower/metal/donator_universal,
-		/obj/item/clothing/gloves/roguetown/knuckles				= /obj/item/clothing/gloves/roguetown/knuckles/donator_universal,
-		/obj/item/rogueweapon/stoneaxe/woodcut/steel				= /obj/item/rogueweapon/donator_universal_axe,
-		/obj/item/rogueweapon/sword/rapier							= /obj/item/rogueweapon/donator_universal_rapier,
-		/obj/item/rogueweapon/sword/long							= /obj/item/rogueweapon/donator_universal_longsword,
-		/obj/item/rogueweapon/sword/sabre							= /obj/item/rogueweapon/donator_universal_sabre,
-		/obj/item/rogueweapon/sword/decorated						= /obj/item/rogueweapon/donator_universal_decsword,
-		/obj/item/rogueweapon/flail/sflail							= /obj/item/rogueweapon/donator_universal_flail,
-		/obj/item/rogueweapon/greataxe/steel						= /obj/item/rogueweapon/donator_universal_greataxe,
-		/obj/item/rogueweapon/spear/lance							= /obj/item/rogueweapon/donator_universal_lance,
-		/obj/item/rogueweapon/mace/steel							= /obj/item/rogueweapon/donator_universal_mace,
-		/obj/item/rogueweapon/stoneaxe/battle						= /obj/item/rogueweapon/donator_universal_axe,
-		/obj/item/rogueweapon/whip/antique							= /obj/item/rogueweapon/donator_universal_urumi,
-		/obj/item/rogueweapon/woodstaff/quarterstaff				= /obj/item/rogueweapon/donator_universal_quarterstaff,
-		/obj/item/rogueweapon/katar 								= /obj/item/rogueweapon/donator_universal_katarclaw,
-		/obj/item/rogueweapon/whip									= /obj/item/rogueweapon/donator_universal_whip,
-		/obj/item/rogueweapon/sword									= /obj/item/rogueweapon/donator_universal_sword,
-		/obj/item/rogueweapon/halberd								= /obj/item/rogueweapon/donator_universal_halberd,
-		/obj/item/rogueweapon/eaglebeak								= /obj/item/rogueweapon/donator_universal_polehammer,
-		/obj/item/rogueweapon/spear									= /obj/item/rogueweapon/donator_universal_spear
+		/obj/item/rogueweapon/huntingknife/idagger/steel/decorated 			= /obj/item/rogueweapon/huntingknife/idagger/steel/decorated/donator_elegant,
+		/obj/item/rogueweapon/huntingknife/idagger/steel					= /obj/item/rogueweapon/huntingknife/idagger/steel/donator_elegant,	
+		/obj/item/rogueweapon/mace/warhammer/steel 							= /obj/item/rogueweapon/mace/warhammer/steel/donator_elegant, 				
+		/obj/item/rogueweapon/mace/steel/silver 							= /obj/item/rogueweapon/mace/steel/silver/donator_elegant, 		
+		/obj/item/rogueweapon/sword/short/messer							= /obj/item/rogueweapon/sword/short/messer/donator_elegant,				
+		/obj/item/rogueweapon/sword/long/dec 								= /obj/item/rogueweapon/sword/long/dec/donator_elegant, 
+		/obj/item/rogueweapon/sword/long/exe								= /obj/item/rogueweapon/sword/long/exe/donator_elegant,
+		/obj/item/rogueweapon/sword/rapier/dec								= /obj/item/rogueweapon/sword/rapier/dec/donator_elegant,				
+		/obj/item/clothing/gloves/roguetown/knuckles						= /obj/item/clothing/gloves/roguetown/knuckles/donator_elegant,	
+		/obj/item/rogueweapon/stoneaxe/woodcut/steel						= /obj/item/rogueweapon/stoneaxe/woodcut/steel/donator_elegant,
+		/obj/item/rogueweapon/woodstaff/quarterstaff/steel					= /obj/item/rogueweapon/woodstaff/quarterstaff/steel/donator_elegant,
+		/obj/item/rogueweapon/sword/rapier									= /obj/item/rogueweapon/sword/rapier/donator_elegant,				
+		/obj/item/rogueweapon/sword/long									= /obj/item/rogueweapon/sword/long/donator_elegant,				
+		/obj/item/rogueweapon/sword/sabre									= /obj/item/rogueweapon/sword/sabre/donator_elegant,				
+		/obj/item/rogueweapon/sword/decorated								= /obj/item/rogueweapon/sword/decorated/donator_elegant,	
+		/obj/item/rogueweapon/flail/sflail									= /obj/item/rogueweapon/flail/sflail/donator_elegant,				
+		/obj/item/rogueweapon/greataxe/steel								= /obj/item/rogueweapon/greataxe/steel/donator_elegant,				
+		/obj/item/rogueweapon/spear/lance									= /obj/item/rogueweapon/spear/lance/donator_elegant,				
+		/obj/item/rogueweapon/mace/steel									= /obj/item/rogueweapon/mace/steel/donator_elegant,		
+		/obj/item/rogueweapon/stoneaxe/battle								= /obj/item/rogueweapon/stoneaxe/battle/donator_elegant,				
+		/obj/item/rogueweapon/spear/boar									= /obj/item/rogueweapon/spear/boar/donator_elegant,	
+		/obj/item/rogueweapon/greatsword									= /obj/item/rogueweapon/greatsword/donator_elegant,
+		/obj/item/rogueweapon/katar 										= /obj/item/rogueweapon/katar/donator_elegant, 														
+		/obj/item/rogueweapon/halberd										= /obj/item/rogueweapon/halberd/donator_elegant,					
+		/obj/item/rogueweapon/eaglebeak										= /obj/item/rogueweapon/eaglebeak/donator_elegant,
+		/obj/item/rogueweapon/sword											= /obj/item/rogueweapon/sword/donator_elegant
 	)
 	result_item = null
+
+/obj/item/enchantingkit/weapon/donator_universal_whips
+	name = "'Elegant Whip' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Whip."
+	target_items = list(/obj/item/rogueweapon/whip)
+	result_item = /obj/item/rogueweapon/example/donator_elegant_whip
+
+/obj/item/enchantingkit/weapon/donator_universal_urumi
+	name = "'Elegant Urumi' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of any Whip with an Alloyed Tip."
+	target_items = list(
+		/obj/item/rogueweapon/whip/antique,
+		/obj/item/rogueweapon/whip/bronze,
+		/obj/item/rogueweapon/whip/blacksteel,
+		/obj/item/rogueweapon/whip/silver,
+		/obj/item/rogueweapon/whip/psywhip_lesser
+	)
+	result_item = /obj/item/rogueweapon/example/donator_elegant_urumi
+
+/obj/item/enchantingkit/donator_universal_shield
+	name = "'Elegant Kite Shield' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Kite Shield."
+	target_items = list(/obj/item/rogueweapon/shield/tower/metal)
+	result_item = /obj/item/rogueweapon/shield/tower/metal/donator_elegant
+
+/obj/item/enchantingkit/weapon/donator_universal_grenzshortsword
+	name = "'Katzbalger Shortsword' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Steel Shortsword."
+	target_items = list(/obj/item/rogueweapon/sword/short)
+	result_item = /obj/item/rogueweapon/example/donator_grenzshortsword
+
+/obj/item/enchantingkit/weapon/donator_universal_grenzrapier
+	name = "'Smallsword Rapier' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Steel Rapier."
+	target_items = list(/obj/item/rogueweapon/sword/rapier)
+	result_item = /obj/item/rogueweapon/example/donator_grenzrapier
 
 /////////////////////////////
 // ! Player / Donor Kits ! //
