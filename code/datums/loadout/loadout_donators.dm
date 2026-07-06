@@ -84,7 +84,7 @@
 
 /datum/loadout_item/donator/universal/grenzrapier
 	name = "Gift - Kit, Smallsword-Style Rapier"
-	path = /obj/item/enchantingkit/weapon/donator_universal_grenzrapier
+	path = /obj/item/enchantingkit/donator_universal_grenzrapier
 
 /datum/loadout_item/donator/universal/cuirassplackart
 	name = "Gift - Kit, Armored Plackart"

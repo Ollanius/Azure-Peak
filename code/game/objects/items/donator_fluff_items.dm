@@ -1023,7 +1023,7 @@
 	icon_state = "donator_urumi"
 	icon = 'icons/obj/items/donor_weapons.dmi'
 
-/obj/item/rogueweapon/example/donator_grenzrapier
+/obj/item/rogueweapon/sword/donator_smallsword
 	name = "smallsword"
 	desc = "A thinner and lighter relative to the rapier, oft-carried upon the hips of nobility as a sidearm for the courts. Don't mistake the \
 	sleekness, however; it's still an armor-piercing length of steel, at the end of the dae."
@@ -1031,17 +1031,19 @@
 	sheathe_icon = "smallsword"
 	icon = 'icons/obj/items/donor_weapons.dmi'
 	dropshrink = null
-
-/obj/item/rogueweapon/example/donator_grenzsrapier/getonmobprop(tag)
-	. = ..()
-	if(tag)
-		switch(tag)
-			if("gen")
-				return list("shrink" = 0.6,"sx" = -10,"sy" = -8,"nx" = 13,"ny" = -8,"wx" = -8,"wy" = -7,"ex" = 7,"ey" = -8,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 90,"sturn" = -90,"wturn" = -80,"eturn" = 81,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
-			if("wielded")
-				return list("shrink" = 0.7,"sx" = 5,"sy" = -2,"nx" = -6,"ny" = -2,"wx" = -6,"wy" = -2,"ex" = 7,"ey" = -2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -28,"sturn" = 29,"wturn" = -35,"eturn" = 32,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
-			if("onbelt")
-				return list("shrink" = 0.5,"sx" = -4,"sy" = -6,"nx" = 5,"ny" = -6,"wx" = 0,"wy" = -6,"ex" = -1,"ey" = -6,"nturn" = 100,"sturn" = 156,"wturn" = 90,"eturn" = 180,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
+	max_blade_int = 230
+	possible_item_intents = list(/datum/intent/sword/thrust/rapier, /datum/intent/sword/cut/rapier, /datum/intent/sword/thrust/rapier/lunge)
+	gripped_intents = null
+	special = /datum/special_intent/piercing_lunge
+	parrysound = list(
+		'sound/combat/parry/bladed/bladedthin (1).ogg',
+		'sound/combat/parry/bladed/bladedthin (2).ogg',
+		'sound/combat/parry/bladed/bladedthin (3).ogg',
+		)
+	swingsound = BLADEWOOSH_SMALL
+	minstr = 6
+	wdefense = 7
+	wbalance = WBALANCE_SWIFT
 
 /obj/item/rogueweapon/example/donator_grenzshortsword
 	name = "katzbalger"
