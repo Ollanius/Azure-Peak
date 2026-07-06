@@ -965,6 +965,13 @@
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
 	bigboy = TRUE
 
+/obj/item/rogueweapon/mace/goden/steel/donator_elegant
+	name = "elegant grand mace"
+	desc = "Good morrow, sire."
+	icon_state = "donatorgmace"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+	bigboy = TRUE
+
 /obj/item/rogueweapon/shield/tower/metal/donator_elegant
 	name = "elegant kite shield"
 	desc = "An elegant kite shield for an elegant wielder."
@@ -1016,7 +1023,7 @@
 	icon_state = "donator_urumi"
 	icon = 'icons/obj/items/donor_weapons.dmi'
 
-/obj/item/rogueweapon/example/donator_grenzsrapier
+/obj/item/rogueweapon/example/donator_grenzrapier
 	name = "smallsword"
 	desc = "A thinner and lighter relative to the rapier, oft-carried upon the hips of nobility as a sidearm for the courts. Don't mistake the \
 	sleekness, however; it's still an armor-piercing length of steel, at the end of the dae."

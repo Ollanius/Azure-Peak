@@ -276,7 +276,8 @@
 		/obj/item/rogueweapon/huntingknife/idagger/steel/decorated 			= /obj/item/rogueweapon/huntingknife/idagger/steel/decorated/donator_elegant,
 		/obj/item/rogueweapon/huntingknife/idagger/steel					= /obj/item/rogueweapon/huntingknife/idagger/steel/donator_elegant,	
 		/obj/item/rogueweapon/mace/warhammer/steel 							= /obj/item/rogueweapon/mace/warhammer/steel/donator_elegant, 				
-		/obj/item/rogueweapon/mace/steel/silver 							= /obj/item/rogueweapon/mace/steel/silver/donator_elegant, 		
+		/obj/item/rogueweapon/mace/steel/silver 							= /obj/item/rogueweapon/mace/steel/silver/donator_elegant, 
+		/obj/item/rogueweapon/mace/goden/steel								= /obj/item/rogueweapon/mace/goden/steel/donator_elegant,	
 		/obj/item/rogueweapon/sword/short/messer							= /obj/item/rogueweapon/sword/short/messer/donator_elegant,				
 		/obj/item/rogueweapon/sword/long/dec 								= /obj/item/rogueweapon/sword/long/dec/donator_elegant, 
 		/obj/item/rogueweapon/sword/long/exe								= /obj/item/rogueweapon/sword/long/exe/donator_elegant,
@@ -332,11 +333,11 @@
 	target_items = list(/obj/item/rogueweapon/sword/short)
 	result_item = /obj/item/rogueweapon/example/donator_grenzshortsword
 
-/obj/item/enchantingkit/donator_universal_grenzrapier
+/obj/item/enchantingkit/weapon/donator_universal_grenzrapier
 	name = "'Smallsword Rapier' morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Steel Rapier."
 	target_items = list(/obj/item/rogueweapon/sword/rapier)
-	result_item = /obj/item/rogueweapon/sword/short/donator_grenzrapier
+	result_item = /obj/item/rogueweapon/example/donator_grenzrapier
 
 /////////////////////////////
 // ! Player / Donor Kits ! //
