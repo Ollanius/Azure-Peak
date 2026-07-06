@@ -701,14 +701,14 @@
 	sheathe_icon = "sdagger"
 
 /obj/item/rogueweapon/huntingknife/idagger/triumph_classic
-	name = "iron dagger"
 	icon_state = "kavrick_idagger"
 	sheathe_icon = "kavrick_idagger"
-	
+	icon = 'icons/obj/items/donor_weapons.dmi'
+
 /obj/item/rogueweapon/huntingknife/idagger/steel/triumph_classic
-	name = "steel dagger"
 	icon_state = "kavrick_sdagger"
 	sheathe_icon = "kavrick_sdagger"
+	icon = 'icons/obj/items/donor_weapons.dmi'
 
 /obj/item/rogueweapon/whip/triumph
 	name = "alloy-tipped whip"

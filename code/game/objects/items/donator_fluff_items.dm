@@ -815,7 +815,7 @@
 /obj/item/rogueweapon/stoneaxe/battle/donator_elegant
 	name = "elegant battle axe"
 	desc = "An elegant battle axe for an elegant wielder."
-	icon_state = "donator_axe"
+	icon_state = "donator_battleaxe"
 	icon = 'icons/obj/items/donor_weapons.dmi'
 
 /obj/item/rogueweapon/mace/steel/donator_elegant
@@ -1016,6 +1016,27 @@
 	icon_state = "donator_urumi"
 	icon = 'icons/obj/items/donor_weapons.dmi'
 
+/obj/item/rogueweapon/sword/short/donator_grenzrapier
+	name = "smallsword"
+	desc = "A thinner and lighter relative to the rapier, oft-carried upon the hips of nobility as a sidearm for the courts. Don't mistake the \
+	sleekness, however; it's still an armor-piercing length of steel, at the end of the dae."
+	icon_state = "smallsword"
+	sheathe_icon = "smallsword"
+	icon = 'icons/obj/items/donor_weapons.dmi'
+	max_blade_int = 230
+	possible_item_intents = list(/datum/intent/sword/thrust/rapier, /datum/intent/sword/cut/rapier, /datum/intent/sword/thrust/rapier/lunge)
+	gripped_intents = null
+	special = /datum/special_intent/piercing_lunge
+	parrysound = list(
+		'sound/combat/parry/bladed/bladedthin (1).ogg',
+		'sound/combat/parry/bladed/bladedthin (2).ogg',
+		'sound/combat/parry/bladed/bladedthin (3).ogg',
+		)
+	swingsound = BLADEWOOSH_SMALL
+	minstr = 6
+	wdefense = 7 //Don't panic; this is just bruteforcing the Rapier's one-to-one stats for a weapon that's meant to be a one-to-one Rapier copy.
+	wbalance = WBALANCE_SWIFT //Hacked to basically use the Shortsword's unfindable onmob transforms and dropshrink without ripping all the cables out.
+
 /obj/item/rogueweapon/example/donator_grenzshortsword
 	name = "katzbalger"
 	desc = "A wide-bladed shortsword with a winding handguard, not unlike a rapier in terms of presentation. Famously carried on the hips \
@@ -1023,16 +1044,6 @@
 	icon_state = "katzbalger"
 	sheathe_icon = "katzbalger"
 	icon = 'icons/obj/items/donor_weapons.dmi'
-
-/obj/item/rogueweapon/example/donator_grenzrapier
-	name = "smallsword"
-	desc = "A thinner and lighter relative to the rapier, oft-carried upon the hips of nobility as a sidearm for the courts. Don't mistake the \
-	sleekness, however; it's still an armor-piercing length of steel, at the end of the dae."
-	icon_state = "smallsword"
-	sheathe_icon = "smallsword"
-	icon = 'icons/obj/items/donor_weapons.dmi'
-	bigboy = FALSE
-	dropshrink = 1
 
 ///////////////////
 // CKEY SPECIFIC //
