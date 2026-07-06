@@ -610,7 +610,7 @@
 	. = ..()
 	update_icon()
 
-/obj/item/clothing/head/roguetown/decoration/orle/donator_dyeableupdate_icon()
+/obj/item/clothing/head/roguetown/decoration/orle/donator_dyeable/update_icon()
 	cut_overlays()
 	if(get_detail_tag())
 		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
