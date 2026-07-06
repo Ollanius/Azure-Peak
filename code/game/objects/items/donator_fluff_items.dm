@@ -818,7 +818,7 @@
 	icon_state = "donator_axe"
 	icon = 'icons/obj/items/donor_weapons.dmi'
 
-/obj/item/rogueweapon/donator_universal_mace
+/obj/item/rogueweapon/mace/steel/donator_elegant
 	name = "elegant mace"
 	desc = "An elegant mace for an elegant wielder."
 	icon_state = "donator_mace"
@@ -837,7 +837,7 @@
 	icon_state = "donator_warhammer"
 	icon = 'icons/obj/items/donor_weapons.dmi'
 
-/obj/item/rogueweapon/donator_universal_flail
+/obj/item/rogueweapon/flail/sflail/donator_elegant
 	name = "elegant flail"
 	desc = "An elegant flail for an elegant wielder."
 	icon_state = "donator_flail"
@@ -870,7 +870,7 @@
 	sheathe_icon = "donator_sword"
 	icon = 'icons/obj/items/donor_weapons.dmi'
 
-/obj/item/rogueweapon/sword/long/dec/donator_elegant
+/obj/item/rogueweapon/sword/decorated/donator_elegant
 	name = "elegantly decorated sword"
 	desc = "An elegantly decorated sword for an elegantly decorated wielder."
 	icon_state = "donator_decsword"
