@@ -606,11 +606,11 @@
 	detail_color = CLOTHING_SCARLET
 	altdetail_color = CLOTHING_AZUROSA
 
-/obj/item/clothing/under/roguetown/tights/hose/Initialize()
+/obj/item/clothing/head/roguetown/decoration/orle/donator_dyeable/Initialize()
 	. = ..()
 	update_icon()
 
-/obj/item/clothing/under/roguetown/tights/hose/update_icon()
+/obj/item/clothing/head/roguetown/decoration/orle/donator_dyeableupdate_icon()
 	cut_overlays()
 	if(get_detail_tag())
 		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
@@ -875,6 +875,13 @@
 	desc = "An elegantly decorated sword for an elegantly decorated wielder."
 	icon_state = "donator_decsword"
 	sheathe_icon = "donator_decsword"
+	icon = 'icons/obj/items/donor_weapons.dmi'
+
+/obj/item/rogueweapon/sword/short/donator_elegant
+	name = "elegant shortsword"
+	desc = "An elegant shortsword for an elegant wielder."
+	icon_state = "donator_messer"
+	sheathe_icon = "donator_messer"
 	icon = 'icons/obj/items/donor_weapons.dmi'
 
 /obj/item/rogueweapon/sword/short/messer/donator_elegant
