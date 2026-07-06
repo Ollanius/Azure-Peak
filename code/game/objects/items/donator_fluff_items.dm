@@ -828,7 +828,6 @@
 	name = "elegant bar mace"
 	desc = "An elegant bar mace for an elegant wielder."
 	icon_state = "donator_barmace"
-	is_silver = FALSE
 	icon = 'icons/obj/items/donor_weapons.dmi'
 
 /obj/item/rogueweapon/mace/warhammer/steel/donator_elegant
