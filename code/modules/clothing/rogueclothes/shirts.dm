@@ -52,6 +52,11 @@
 	boobed = TRUE
 	flags_inv= HIDEBOOB|HIDECROTCH
 	body_parts_covered = CHEST|GROIN|ARMS|VITALS
+	adjustable = CAN_CADJUST
+
+/obj/item/clothing/suit/roguetown/shirt/undershirt/priest/ComponentInitialize()
+	..()
+	AddComponent(/datum/component/adjustable_clothing, CHEST|GROIN|ARMS|VITALS, null, null, 'sound/foley/cloth_wipe (1).ogg', null, UPD_CHEST)
 
 /obj/item/clothing/suit/roguetown/armor/vestments_padded
 	name = "padded undervestments"
