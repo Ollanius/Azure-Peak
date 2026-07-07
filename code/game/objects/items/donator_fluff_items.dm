@@ -600,9 +600,8 @@
 	desc = "A delicate weaving of striped fabric, intended to be dyed in contrasting colors and worn atop a helmet. Perfect for tournaments."
 	item_state = "orle"
 	icon_state = "orle"
-	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_MASK
-	icon = 'icons/clothing/donor_clothes.dmi'
-	worn_offsets = list("x" = 0, "y" = 7)
+	detail_tag = "_detail"
+	altdetail_tag = "_detailalt"
 	detail_color = CLOTHING_SCARLET
 	altdetail_color = CLOTHING_AZUROSA
 
