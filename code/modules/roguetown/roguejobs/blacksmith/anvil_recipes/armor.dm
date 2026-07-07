@@ -1638,12 +1638,6 @@
 	created_item = /obj/item/clothing/barding/fogbeast/chain
 	display_category = ITEM_CAT_ARMOR_BARDING
 
-/datum/anvil_recipe/armor/steel/refitkit_slimmedsteel
-	name = "Plate-Slimming Refitter's Kit, Steel"
-	req_bar = /obj/item/ingot/steel
-	created_item = /obj/item/enchantingkit/triumph_armorkit_slimmedsteel/craftable
-	display_category = ITEM_CAT_SMITHING_MISC
-
 // HOLY STEEL
 
 /datum/anvil_recipe/armor/holysteel/astratahelmtemplar

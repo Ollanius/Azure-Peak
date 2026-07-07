@@ -23,9 +23,9 @@
 	name = "'Valorian Iron Armor' morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can restore the original appearance of an Iron Breastplate, an Iron Halfplate, or a set of Iron Plate Armor."
 	target_items = list(
+		/obj/item/clothing/suit/roguetown/armor/plate/full/iron	  			= /obj/item/clothing/suit/roguetown/armor/plate/full/iron/legacy,
 		/obj/item/clothing/suit/roguetown/armor/plate/cuirass/iron 			= /obj/item/clothing/suit/roguetown/armor/plate/cuirass/iron/legacy,
-		/obj/item/clothing/suit/roguetown/armor/plate/iron 					= /obj/item/clothing/suit/roguetown/armor/plate/iron/legacy,
-		/obj/item/clothing/suit/roguetown/armor/plate/full/iron	  			= /obj/item/clothing/suit/roguetown/armor/plate/full/iron/legacy
+		/obj/item/clothing/suit/roguetown/armor/plate/iron 					= /obj/item/clothing/suit/roguetown/armor/plate/iron/legacy
 		)
 	result_item = null
 
@@ -904,10 +904,3 @@
 /obj/item/clothing/suit/roguetown/armor/plate/full/fluted/triumph_slim
     icon_state = "ornateplateslim"
     item_state = "ornateplateslim"
-
-/obj/item/enchantingkit/triumph_armorkit_slimmedsteel/craftable
-	name = "plate-slimming refitter's kit"
-	desc = "A small array of plates, scripts, and tools; perfect for refitting a single set of plated armor. This can tighten the straps and \
-	reduce the visible bulkines of a Steel Halfplate, a Fluted Halfplate, a set of Plate Armor, or a set of Fluted Plate Armor."
-	icon_state = "metalrefittingkit"
-	icon = 'icons/roguetown/items/misc.dmi'
