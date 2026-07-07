@@ -29,6 +29,17 @@
 		)
 	result_item = null
 
+/obj/item/enchantingkit/triumph_armorkit_slimmedsteel
+	name = "'Slimfitted Steel Armor' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can alter the appearance of a set of a Steel Halfplate, a Fluted Halfplate, a set of Steel Plate armor, or a set of Fluted Plate Armor."
+	target_items = list(
+		/obj/item/clothing/suit/roguetown/armor/plate/full/fluted 	= /obj/item/clothing/suit/roguetown/armor/plate/full/fluted/triumph_slim,
+		/obj/item/clothing/suit/roguetown/armor/plate/full 			= /obj/item/clothing/suit/roguetown/armor/plate/full/triumph_slim,
+		/obj/item/clothing/suit/roguetown/armor/plate/fluted		= /obj/item/clothing/suit/roguetown/armor/plate/fluted/triumph_slim,
+		/obj/item/clothing/suit/roguetown/armor/plate	  			= /obj/item/clothing/suit/roguetown/armor/plate/triumph_slim
+		)
+	result_item = null
+
 /obj/item/enchantingkit/triumph_armorkit_drow
 	name = "'Drowcraft Armor' morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a set of Hardened Leather Armor, or a set of Studded Leather Armor."
@@ -877,3 +888,25 @@
 	name = "aged skull cap"
 	desc = "An aged helmet which covers the top of the head."
 	icon_state = "skullcapold"
+
+/obj/item/clothing/suit/roguetown/armor/plate/triumph_slim
+    icon_state = "halfplateslim"
+    item_state = "halfplateslim"
+
+/obj/item/clothing/suit/roguetown/armor/plate/full/triumph_slim
+    icon_state = "plateslim"
+    item_state = "plateslim"
+
+/obj/item/clothing/suit/roguetown/armor/plate/fluted/triumph_slim
+    icon_state = "ornatehalfplateslim"
+    item_state = "ornatehalfplateslim"
+
+/obj/item/clothing/suit/roguetown/armor/plate/full/fluted/triumph_slim
+    icon_state = "ornateplateslim"
+    item_state = "ornateplateslim"
+
+/obj/item/enchantingkit/triumph_armorkit_slimmedsteel/craftable
+	name = "plate-slimming refitter's kit"
+	desc = "A small array of plates, scripts, and tools; perfect for refitting a single set of plated armor. This can tighten the straps and \
+	reduce the visible bulkines of a Steel Halfplate, a Fluted Halfplate, a set of Plate Armor, or a set of Fluted Plate Armor."
+	icon_state = "metalrefittingkit"
