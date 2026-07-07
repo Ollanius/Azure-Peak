@@ -910,3 +910,4 @@
 	desc = "A small array of plates, scripts, and tools; perfect for refitting a single set of plated armor. This can tighten the straps and \
 	reduce the visible bulkines of a Steel Halfplate, a Fluted Halfplate, a set of Plate Armor, or a set of Fluted Plate Armor."
 	icon_state = "metalrefittingkit"
+	icon = 'icons/roguetown/items/misc.dmi'
