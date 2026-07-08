@@ -1041,10 +1041,9 @@
 
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fencer/decorated
 	name = "decorated chestplate"
-	desc = "An ornate steel chestplate, decorated with golden fluting. For when you need to bring a little bit of regal style to that \
-	upcoming duel with your lyfe's greatest adversary."
+	desc = "An ornate steel chestplate, decorated with golden fluting. For when you need to bring a little bit of regal style to that upcoming duel with your lyfe's greatest adversary."
 	icon_state = "gildedchestplate"
-    item_state = "gildedchestplate"
+	item_state = "gildedchestplate"
 	smeltresult = /obj/item/ingot/gold
 
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/decorated
