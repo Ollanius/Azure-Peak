@@ -1042,27 +1042,23 @@
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fencer/decorated
 	name = "decorated chestplate"
 	icon_state = "gildedchestplate"
-	item_state = "gildedchestplate"
 	smeltresult = /obj/item/ingot/gold
 	desc = "An ornate steel chestplate, decorated with golden fluting. For when you need to bring a little bit of regal style to that upcoming duel with your lyfe's greatest adversary."
 
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/decorated
 	name = "decorated cuirass"
 	icon_state = "gildedcuirass"
-	item_state = "gildedcuirass"
 	smeltresult = /obj/item/ingot/gold
 	desc = "An ornate steel cuirass, decorated with golden fluting. For when you need to ensure that you look dapper, during your mustering for the latest crusade into some gods-forsaken land."
 
 /obj/item/clothing/suit/roguetown/armor/plate/fluted/decorated
 	name = "decorated half-plate"
 	icon_state = "gildedhalfplate"
-    item_state = "gildedhalfplate"
 	smeltresult = /obj/item/ingot/gold
 	desc = "An ornate set of steel armor, decorated with golden fluting. For when you need to remind those of lesser stations about whose authority reigns supreme, in lieu of a King's command."
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/fluted/decorated
 	name = "decorated plate armor"
 	icon_state = "gildedplate"
-    item_state = "gildedplate"
 	smeltresult = /obj/item/ingot/gold
 	desc = "An ornate set of steel plate armor, decorated with golden fluting. For when you need to do something with all of that precious, precious wealth gathering dust in a fief's ducal treasury."
