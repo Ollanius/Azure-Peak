@@ -1049,20 +1049,20 @@
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/decorated
 	name = "decorated cuirass"
 	desc = "An ornate steel cuirass, decorated with golden fluting. For when you need to ensure that you look dapper, during your mustering for the latest crusade into some gods-forsaken land."
-    icon_state = "gildedcuirass"
+	icon_state = "gildedcuirass"
     item_state = "gildedcuirass"
 	smeltresult = /obj/item/ingot/gold
 
 /obj/item/clothing/suit/roguetown/armor/plate/fluted/decorated
 	name = "decorated half-plate"
 	desc = "An ornate steel cuirass, decorated with golden fluting. For when you need to remind those of lesser stations about whose authority reigns supreme, in lieu of a King's command."
-    icon_state = "gildedhalfplate"
+	icon_state = "gildedhalfplate"
     item_state = "gildedhalfplate"
 	smeltresult = /obj/item/ingot/gold
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/fluted/decorated
 	name = "decorated plate armor"
 	desc = "An ornate steel cuirass, decorated with golden fluting. For when you need to do something with all of that precious, precious wealth gathering dust in a fief's ducal treasury."
-    icon_state = "gildedplate"
+	icon_state = "gildedplate"
     item_state = "gildedplate"
 	smeltresult = /obj/item/ingot/gold
