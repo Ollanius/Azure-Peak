@@ -137,11 +137,21 @@
 
 /obj/item/enchantingkit/gothicsteelarmor
 	name = "'Gothic Steel Armor' morphing elixir"
-	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Steel Cuirass, Steel Halfplate, or a set of Steel Plate Armor."
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Steel Cuirass, Steel Halfplate, a set of Steel Plate Armor, or a set of Fluted Plate Armor."
 	target_items = list(
-		/obj/item/clothing/suit/roguetown/armor/plate/cuirass			= /obj/item/clothing/suit/roguetown/armor/plate/cuirass/donator_gothic,
-		/obj/item/clothing/suit/roguetown/armor/plate/full				= /obj/item/clothing/suit/roguetown/armor/plate/full/donator_gothic,
-		/obj/item/clothing/suit/roguetown/armor/plate					= /obj/item/clothing/suit/roguetown/armor/plate/donator_gothic
+		/obj/item/clothing/suit/roguetown/armor/plate/full/fluted			= /obj/item/clothing/suit/roguetown/armor/plate/full/donator_gothic,
+		/obj/item/clothing/suit/roguetown/armor/plate/full/iron	  			= null,
+		/obj/item/clothing/suit/roguetown/armor/plate/full/bronze			= null,
+		/obj/item/clothing/suit/roguetown/armor/plate/cuirass/iron 			= null,
+		/obj/item/clothing/suit/roguetown/armor/plate/cuirass/paalloy		= null,
+		/obj/item/clothing/suit/roguetown/armor/plate/cuirass/aalloy		= null,
+		/obj/item/clothing/suit/roguetown/armor/plate/iron 					= null,
+		/obj/item/clothing/suit/roguetown/armor/plate/paalloy				= null,
+		/obj/item/clothing/suit/roguetown/armor/plate/aalloy				= null,
+		/obj/item/clothing/suit/roguetown/armor/plate/bronze				= null,
+		/obj/item/clothing/suit/roguetown/armor/plate/cuirass				= /obj/item/clothing/suit/roguetown/armor/plate/cuirass/donator_gothic,
+		/obj/item/clothing/suit/roguetown/armor/plate/full					= /obj/item/clothing/suit/roguetown/armor/plate/full/donator_gothic,
+		/obj/item/clothing/suit/roguetown/armor/plate						= /obj/item/clothing/suit/roguetown/armor/plate/donator_gothic
 	)
 	result_item = null
 
@@ -232,6 +242,15 @@
 		/obj/item/clothing/suit/roguetown/armor/plate/full/fluted/legacy				= /obj/item/clothing/suit/roguetown/armor/plate/full/donator_triheartfelt,
 		/obj/item/clothing/suit/roguetown/armor/plate/full/fluted						= /obj/item/clothing/suit/roguetown/armor/plate/full/donator_triheartfelt,
 		/obj/item/clothing/suit/roguetown/armor/plate/full/legacy						= /obj/item/clothing/suit/roguetown/armor/plate/full/donator_triheartfelt,
+		/obj/item/clothing/suit/roguetown/armor/plate/full/iron	  						= null,
+		/obj/item/clothing/suit/roguetown/armor/plate/full/bronze						= null,
+		/obj/item/clothing/suit/roguetown/armor/plate/cuirass/iron 						= null,
+		/obj/item/clothing/suit/roguetown/armor/plate/cuirass/paalloy					= null,
+		/obj/item/clothing/suit/roguetown/armor/plate/cuirass/aalloy					= null,
+		/obj/item/clothing/suit/roguetown/armor/plate/iron 								= null,
+		/obj/item/clothing/suit/roguetown/armor/plate/paalloy							= null,
+		/obj/item/clothing/suit/roguetown/armor/plate/aalloy							= null,
+		/obj/item/clothing/suit/roguetown/armor/plate/bronze							= null,
 		/obj/item/clothing/suit/roguetown/armor/plate/full								= /obj/item/clothing/suit/roguetown/armor/plate/full/donator_triheartfelt
 	)
 	result_item = null
@@ -343,6 +362,12 @@
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Steel Rapier."
 	target_items = list(/obj/item/rogueweapon/sword/rapier)
 	result_item = /obj/item/rogueweapon/sword/donator_smallsword
+
+/obj/item/enchantingkit/donator_universal_armharness
+	name = "'Plate Arm Harness' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of Steel Bracers."
+	target_items = list(/obj/item/clothing/wrists/roguetown/bracers)
+	result_item = /obj/item/clothing/wrists/roguetown/bracers/armharness
 
 /////////////////////////////
 // ! Player / Donor Kits ! //
