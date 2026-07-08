@@ -914,9 +914,17 @@
 	desc = "An aged helmet which covers the top of the head."
 	icon_state = "skullcapold"
 
-/obj/item/clothing/suit/roguetown/armor/plate/triumph_slim
-    icon_state = "halfplateslim"
-    item_state = "halfplateslim"
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/triumph_slim
+    icon_state = "ornatecuirassslim"
+    item_state = "ornatecuirassslim"
+
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fencer/triumph_slim
+    icon_state = "ornatechestplateslim"
+    item_state = "ornatechestplateslim"
+
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/triumph_slim
+    icon_state = "cuirassslim"
+    item_state = "cuirassslim"
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/triumph_slim
     icon_state = "plateslim"
