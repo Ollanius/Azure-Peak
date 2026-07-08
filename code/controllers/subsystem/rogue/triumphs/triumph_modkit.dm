@@ -926,6 +926,10 @@
     icon_state = "cuirassslim"
     item_state = "cuirassslim"
 
+/obj/item/clothing/suit/roguetown/armor/plate/triumph_slim
+    icon_state = "halfplateslim"
+    item_state = "halfplateslim"
+
 /obj/item/clothing/suit/roguetown/armor/plate/full/triumph_slim
     icon_state = "plateslim"
     item_state = "plateslim"
