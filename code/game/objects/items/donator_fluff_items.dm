@@ -764,6 +764,7 @@
 	desc = "A snug-fitting tunic, favored by Azurians during the chillier daes of autumn."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi' 
 	icon_state = "doublet"
 	item_state = "doublet"
 	r_sleeve_status = SLEEVE_NORMAL

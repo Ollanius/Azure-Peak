@@ -904,3 +904,26 @@
 /obj/item/clothing/suit/roguetown/armor/plate/full/fluted/triumph_slim
     icon_state = "ornateplateslim"
     item_state = "ornateplateslim"
+
+/obj/item/enchantingkit/craftable_armorkit_slimmedsteel
+	name = "plate-slimming refitter's kit"
+	desc = "A small array of plates, scripts, and tools; perfect for refitting a single set of plated armor. This can tighten the straps and \
+	reduce the visible bulkines of a Steel Halfplate, a Fluted Halfplate, a set of Plate Armor, or a set of Fluted Plate Armor."
+	icon_state = "metalrefittingkit"
+	icon = 'icons/roguetown/items/misc.dmi'
+	target_items = list(
+		/obj/item/clothing/suit/roguetown/armor/plate/full/fluted 			= /obj/item/clothing/suit/roguetown/armor/plate/full/fluted/triumph_slim,
+		/obj/item/clothing/suit/roguetown/armor/plate/full/iron	  			= null,
+		/obj/item/clothing/suit/roguetown/armor/plate/full/bronze			= null,
+		/obj/item/clothing/suit/roguetown/armor/plate/cuirass/iron 			= null,
+		/obj/item/clothing/suit/roguetown/armor/plate/cuirass/paalloy		= null,
+		/obj/item/clothing/suit/roguetown/armor/plate/cuirass/aalloy		= null,
+		/obj/item/clothing/suit/roguetown/armor/plate/iron 					= null,
+		/obj/item/clothing/suit/roguetown/armor/plate/paalloy				= null,
+		/obj/item/clothing/suit/roguetown/armor/plate/aalloy				= null,
+		/obj/item/clothing/suit/roguetown/armor/plate/bronze				= null,
+		/obj/item/clothing/suit/roguetown/armor/plate/full 					= /obj/item/clothing/suit/roguetown/armor/plate/full/triumph_slim,
+		/obj/item/clothing/suit/roguetown/armor/plate/fluted				= /obj/item/clothing/suit/roguetown/armor/plate/fluted/triumph_slim,
+		/obj/item/clothing/suit/roguetown/armor/plate	  					= /obj/item/clothing/suit/roguetown/armor/plate/triumph_slim
+		)
+	result_item = null
