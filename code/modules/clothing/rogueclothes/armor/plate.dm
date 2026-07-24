@@ -928,7 +928,7 @@
 	icon_state = "clamellar"
 	max_integrity = ARMOR_INT_CHEST_MEDIUM_SCALE
 	smeltresult = /obj/item/ingot/copper
-	armor_class = ARMOR_CLASS_MEDIUM
+	armor_class = ARMOR_CLASS_LIGHT
 	armor = ARMOR_LEATHER
 
 /obj/item/clothing/suit/roguetown/armor/plate/scale/marshal
