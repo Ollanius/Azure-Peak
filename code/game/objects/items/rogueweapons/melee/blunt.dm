@@ -429,7 +429,7 @@
 	swingsound = BLUNTWOOSH_LARGE
 	minstr = 7
 	wdefense = 3
-
+	special = /datum/special_intent/ground_smash/unwielded
 	smeltresult = /obj/item/ingot/steel
 	icon_state = "flangedmace"
 
@@ -795,6 +795,7 @@
 	smeltresult = /obj/item/ingot/iron
 	wdefense = 3
 	max_integrity = 200
+	special = /datum/special_intent/ground_smash/unwielded
 
 /obj/item/rogueweapon/mace/warhammer/bronze
 	force = 22
@@ -863,7 +864,6 @@
 	max_integrity = 350
 	smeltresult = /obj/item/ingot/blacksteel
 	possible_item_intents = list(/datum/intent/mace/strike, /datum/intent/mace/smash, /datum/intent/mace/warhammer/pick, /datum/intent/mace/warhammer/stab)
-	special = /datum/special_intent/ground_smash
 
 /obj/item/rogueweapon/mace/warhammer/steel/silver
 	name = "silver warhammer"
@@ -887,7 +887,6 @@
 		added_int = 50,\
 		added_def = 2,\
 	)
-
 
 /datum/intent/mace/warhammer/stab
 	name = "thrust"
