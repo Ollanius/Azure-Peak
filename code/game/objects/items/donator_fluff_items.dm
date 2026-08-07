@@ -2376,7 +2376,7 @@ As Excaliber."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_MASK
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
-	alternate_worn_layer = HALO_LAYER
+	alternate_worn_layer = 3
 	body_parts_covered = null
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	icon_state = "chiv_halo"
