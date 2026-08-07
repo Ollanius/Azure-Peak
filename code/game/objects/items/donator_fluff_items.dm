@@ -2399,8 +2399,8 @@ As Excaliber."
 
 /obj/item/rogueweapon/mace/steel/aasimar
     name = "solar mace"
-    icon = 'icons/obj/items/donor_weapons.dmi'
 	desc = "Shaped bronze, solar might. </br>Bulwark of Her legionnaires. </br>Sundering darkness."
+    icon = 'icons/obj/items/donor_weapons.dmi'
     icon_state = "chiv_amace"
 	smeltresult = /obj/item/ingot/aaslag
 
