@@ -975,7 +975,7 @@
 		/obj/item/clothing/wrists/roguetown/bracers						= /obj/item/clothing/wrists/roguetown/bracers/aasimar,
 		/obj/item/clothing/gloves/roguetown/plate						= /obj/item/clothing/gloves/roguetown/plate/aasimar,
 		/obj/item/clothing/neck/roguetown/bevor							= /obj/item/clothing/neck/roguetown/bevor/aasimar,
-		/obj/item/rogueweapon/spear/partisan							= /obj/item/rogueweapon/spear/partizan/aasimar,
+		/obj/item/rogueweapon/spear/partizan							= /obj/item/rogueweapon/spear/partizan/aasimar,
 		/obj/item/rogueweapon/spear/boar								= /obj/item/rogueweapon/spear/boar/aasimar,
 		/obj/item/rogueweapon/sword/long								= /obj/item/rogueweapon/sword/long/aasimar,
 		/obj/item/rogueweapon/mace/steel								= /obj/item/rogueweapon/mace/steel/aasimar
