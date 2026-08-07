@@ -2388,36 +2388,36 @@ As Excaliber."
 	smeltresult = /obj/item/ingot/aaslag
 
 /obj/item/rogueweapon/sword/long/aasimar
-    name = "solar longsword"
-    desc = "A long blade of polished gilbranze, unfettered by Aeon's grasp. Solar motifs decorate the crossguard, denoting it as a weapon of \
+	name = "solar longsword"
+	desc = "A long blade of polished gilbranze, unfettered by Aeon's grasp. Solar motifs decorate the crossguard, denoting it as a weapon of \
 	Astrata's earliest legionnaires. The only imperfections along its edge are crusty smudges of crimson; the last remnants from a war known \
 	only through scripture."
-    icon = 'icons/obj/items/donor_weapons_64.dmi'
-    icon_state = "chiv_alongblade"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+	icon_state = "chiv_alongblade"
 	sheathe_icon = "chiv_alongblade"
 	smeltresult = /obj/item/ingot/aaslag
 
 /obj/item/rogueweapon/mace/steel/aasimar
-    name = "solar mace"
+	name = "solar mace"
 	desc = "Shaped bronze, solar might. </br>Bulwark of Her legionnaires. </br>Sundering darkness."
-    icon = 'icons/obj/items/donor_weapons.dmi'
-    icon_state = "chiv_amace"
+	icon = 'icons/obj/items/donor_weapons.dmi'
+	icon_state = "chiv_amace"
 	smeltresult = /obj/item/ingot/aaslag
 
 /obj/item/rogueweapon/spear/boar/aasimar
-    name = "solar spear"
-    desc = "Once believed to've been a standard of Astrata's ancient legions, the fabric has long-rotten off the shaft. Even so, the polished \
+	name = "solar spear"
+	desc = "Once believed to've been a standard of Astrata's ancient legions, the fabric has long-rotten off the shaft. Even so, the polished \
 	gilbranze underneath still looks as tough as the dae it was first forged."
-    icon = 'icons/obj/items/donor_weapons_64.dmi'
-    icon_state = "chiv_aspear"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+	icon_state = "chiv_aspear"
 	smeltresult = /obj/item/ingot/aaslag
 
 /obj/item/rogueweapon/spear/partizan/aasimar
-    name = "solar spear"
-    desc = "Once believed to've been a standard of Astrata's ancient legions, the fabric has long-rotten off the shaft. Even so, the polished \
+	name = "solar spear"
+	desc = "Once believed to've been a standard of Astrata's ancient legions, the fabric has long-rotten off the shaft. Even so, the polished \
 	gilbranze underneath still looks as tough as the dae it was first forged."
-    icon = 'icons/obj/items/donor_weapons_64.dmi'
-    icon_state = "chiv_aspear"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+	icon_state = "chiv_aspear"
 	smeltresult = /obj/item/ingot/aaslag
 
 /obj/item/clothing/head/roguetown/helmet/sallet/visored/aasimar
