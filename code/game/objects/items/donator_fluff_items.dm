@@ -2394,8 +2394,6 @@ As Excaliber."
 	only through scripture."
     icon = 'icons/obj/items/donor_weapons_64.dmi'
     icon_state = "chiv_alongblade"
-	sheathe_icon = "chiv_alongblade"
-	smeltresult = /obj/item/ingot/aaslag
 
 /obj/item/rogueweapon/mace/steel/aasimar
     name = "solar mace"
