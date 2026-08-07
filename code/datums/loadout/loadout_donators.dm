@@ -633,11 +633,6 @@
 	path = /obj/item/enchantingkit/sci_sand
 	ckeywhitelist = list("scidragon")
 
-/datum/loadout_item/donator/aisuwand
-    name = "Donator Kit - Crystalline Rapier"
-    path = /obj/item/enchantingkit/aisuwand
-    ckeywhitelist = list("aisu9")
-
 /datum/loadout_item/donator/regnum
 	name = "Donator Item - Regnum"
 	path = /obj/item/enchantingkit/weapon/regnum
@@ -826,3 +821,18 @@
 	name = "Donator Kit - For Love's Sake"
 	path = /obj/item/enchantingkit/aticius_fls
 	ckeywhitelist = list("aticius")
+
+/datum/loadout_item/donator/chivalre_aasimar
+	name = "Donator Kit - Aasimari Equipment"
+	path = /obj/item/enchantingkit/chivalre_aasimar
+	ckeywhitelist = list("oddbomber3768")
+
+/datum/loadout_item/donator/chivalre_aasimar_sack
+	name = "Donator Kit - Aasimari Equipment, Sackful"
+	path = /obj/item/storage/roguebag/donator_chivalre_elixirs
+	ckeywhitelist = list("oddbomber3768")
+
+/datum/loadout_item/donator/chivalre_halo
+	name = "Donator Item - Ornamental Halo"
+	path = /obj/item/clothing/head/roguetown/halo/aasimar
+	ckeywhitelist = list("oddbomber3768")

@@ -702,11 +702,6 @@
 	result_item = /obj/item/rogueweapon/nerocavalier/flsword
 */
 
-/obj/item/enchantingkit/aisuwand
-    name = "Crystalline Rapier morphing elixir"
-    target_items = list(/obj/item/rogueweapon/sword/rapier)
-    result_item = /obj/item/rogueweapon/sword/rapier/aisu
-
 /obj/item/enchantingkit/weapon/regnum
 	name = "'Regnum' morphing elixir"
 	target_items = list(
@@ -965,3 +960,39 @@
 		/obj/item/rogueweapon/greatsword/paalloy
 	)
 	result_item = /obj/item/rogueweapon/greatsword/falling_star
+
+//Oddbomber3768 - Aasimari Legionnaire Pack
+/obj/item/enchantingkit/chivalre_aasimar
+	name = "'Aasimaric Equipment' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. This particular elixir can be used to alter the appearance of any Steel-tiered armor piece, a \
+	Steel Cuirass, a Steel Spear, a Steel Mace, and a Longsword."
+	target_items = list(
+		/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted	= /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/aasimar,
+		/obj/item/clothing/suit/roguetown/armor/plate/cuirass			= /obj/item/clothing/suit/roguetown/armor/plate/cuirass/aasimar,
+		/obj/item/clothing/head/roguetown/helmet/sallet/visored			= /obj/item/clothing/head/roguetown/helmet/sallet/visored/aasimar,
+		/obj/item/clothing/shoes/roguetown/boots/armor					= /obj/item/clothing/shoes/roguetown/boots/armor/aasimar,
+		/obj/item/clothing/under/roguetown/platelegs					= /obj/item/clothing/under/roguetown/platelegs/aasimar,
+		/obj/item/clothing/wrists/roguetown/bracers						= /obj/item/clothing/wrists/roguetown/bracers/aasimar,
+		/obj/item/clothing/gloves/roguetown/plate						= /obj/item/clothing/gloves/roguetown/plate/aasimar,
+		/obj/item/clothing/neck/roguetown/bevor							= /obj/item/clothing/neck/roguetown/bevor/aasimar,
+		/obj/item/rogueweapon/spear/partisan							= /obj/item/rogueweapon/spear/partizan/aasimar,
+		/obj/item/rogueweapon/spear/boar								= /obj/item/rogueweapon/spear/boar/aasimar,
+		/obj/item/rogueweapon/sword/long								= /obj/item/rogueweapon/sword/long/aasimar,
+		/obj/item/rogueweapon/mace/steel								= /obj/item/rogueweapon/mace/steel/aasimar
+	)
+	result_item = null
+	exact_type = TRUE
+
+/obj/item/storage/roguebag/donator_chivalre_elixirs
+	populate_contents = list(
+	/obj/item/enchantingkit/chivalre_aasimar,
+	/obj/item/enchantingkit/chivalre_aasimar,
+	/obj/item/enchantingkit/chivalre_aasimar,
+	/obj/item/enchantingkit/chivalre_aasimar,
+	/obj/item/enchantingkit/chivalre_aasimar,
+	/obj/item/enchantingkit/chivalre_aasimar,
+	/obj/item/enchantingkit/chivalre_aasimar,
+	/obj/item/enchantingkit/chivalre_aasimar,
+	/obj/item/enchantingkit/chivalre_aasimar,
+	/obj/item/enchantingkit/chivalre_aasimar
+	) //Allows for a loadout's complete rethemeing, without retroactively bloating the loadout.dm file. Quick, dirty, but it'll work.

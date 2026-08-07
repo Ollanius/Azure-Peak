@@ -1895,22 +1895,6 @@ As Excaliber."
 	. = ..()
 	AddComponent(/datum/component/ignitable/fluff/sci_sand)
 
-/obj/item/rogueweapon/sword/rapier/aisu
-	base_implement_name = "crystalline rapier"
-	name = "crystalline rapier"
-	desc = "A crystalline rapier, born from a single tear and weeks of prayers and enchantments, Oh my guiding Moonlight!"
-	icon_state = "aisuwand"
-	icon = 'icons/obj/items/donor_weapons.dmi'
-
-/obj/item/rogueweapon/rapier/aisu/getonmobprop(tag)
-	. = ..()
-	if(tag)
-		switch(tag)
-			if("gen")
-				return list("shrink" = 0.6,"sx" = -14,"sy" = -8,"nx" = 15,"ny" = -7,"wx" = -10,"wy" = -5,"ex" = 7,"ey" = -6,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -13,"sturn" = 110,"wturn" = -60,"eturn" = -30,"nflip" = 1,"sflip" = 1,"wflip" = 8,"eflip" = 1)
-			if("onbelt")
-				return list("shrink" = 0.5,"sx" = -4,"sy" = -6,"nx" = 5,"ny" = -6,"wx" = 0,"wy" = -6,"ex" = -1,"ey" = -6,"nturn" = 100,"sturn" = 156,"wturn" = 90,"eturn" = 180,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
-
 //NAUTICALL
 /obj/item/rogueweapon/example/regnum
 	name = "Regnum"
@@ -2385,4 +2369,138 @@ As Excaliber."
     icon = 'icons/obj/items/donor_weapons_64.dmi'
     icon_state = "fallingstar"
 
-// CHV
+// CHIVALRE
+/obj/item/clothing/head/roguetown/halo
+	name = "halo"
+	desc = "<font color='FFFF00'>'Don't forget, I'm with you in the dark.'</font>"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_MASK
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	alternate_worn_layer = 1
+	icon_state = "chiv_halo"
+	item_state = "chiv_halo"
+	smeltresult = /obj/item/ingot/gold
+
+/obj/item/clothing/head/roguetown/halo/aasimar
+	name = "ornamental halo"
+	desc = "A gilded wafer, meticulously artificed to mimic the aureoles of anointed saints. Unknown mechanisms work to ensure that it \
+	always envelops the head of the crowned, no matter the angle they're viewed from."
+	smeltresult = /obj/item/ingot/aaslag
+
+/obj/item/rogueweapon/sword/long/aasimar
+    name = "solar longsword"
+    desc = "A long blade of polished gilbranze, unfettered by Aeon's grasp. Solar motifs decorate the crossguard, denoting it as a weapon of \
+	Astrata's earliest legionnaires. The only imperfections along its edge are crusty smudges of crimson; the last remnants from a war known \
+	only through scripture."
+    icon = 'icons/obj/items/donor_weapons_64.dmi'
+    icon_state = "chiv_alongblade"
+	sheathe_icon = "chiv_alongblade"
+	smeltresult = /obj/item/ingot/aaslag
+
+/obj/item/rogueweapon/mace/steel/aasimar
+    name = "solar mace"
+	desc = "Shaped bronze, solar might. </br>Bulwark of Her legionnaires. </br>Sundering darkness."
+    icon = 'icons/obj/items/donor_weapons.dmi'
+    icon_state = "chiv_amace"
+	smeltresult = /obj/item/ingot/aaslag
+
+/obj/item/rogueweapon/spear/boar/aasimar
+    name = "solar spear"
+    desc = "Once believed to've been a standard of Astrata's ancient legions, the fabric has long-rotten off the shaft. Even so, the polished \
+	gilbranze underneath still looks as tough as the dae it was first forged."
+    icon = 'icons/obj/items/donor_weapons_64.dmi'
+    icon_state = "chiv_aspear"
+	smeltresult = /obj/item/ingot/aaslag
+
+/obj/item/rogueweapon/spear/partizan/aasimar
+    name = "solar spear"
+    desc = "Once believed to've been a standard of Astrata's ancient legions, the fabric has long-rotten off the shaft. Even so, the polished \
+	gilbranze underneath still looks as tough as the dae it was first forged."
+    icon = 'icons/obj/items/donor_weapons_64.dmi'
+    icon_state = "chiv_aspear"
+	smeltresult = /obj/item/ingot/aaslag
+
+/obj/item/clothing/head/roguetown/helmet/sallet/visored/aasimar
+	name = "aasimari sayovard"
+	desc = "Statuesque beauty, forever preserved in polished gilbranze."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	icon_state = "chiv_adeathmask"
+	smeltresult = /obj/item/ingot/aaslag
+	chunkcolor = "#532e25"
+	adjustable = CANT_CADJUST
+
+/obj/item/clothing/neck/roguetown/bevor/aasimar
+	name = "aasimari gorget"
+	desc = "Chiseled lips of polished gilbranze, forever curled to mimic an expression you can't quite parse."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	icon_state = "chiv_abevor"
+	smeltresult = /obj/item/ingot/aaslag
+	chunkcolor = "#532e25"
+
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/aasimar
+	name = "aasimari cuirass"
+	desc = "A cuirass of polished gilbranze, tasseted and pauldroned. It has been meticulously sculpted to only fitthe physique of its wearer; \
+	one of Astrata's divine legionnaires."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	icon_state = "chiv_acuirass"
+	smeltresult = /obj/item/ingot/aaslag
+	chunkcolor = "#532e25"
+	allowed_sex = list(FEMALE) //Donator-exclusive to a Female Aasimar character. Applies to all other non-headpieces in the '/aasimar' branch.
+
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/aasimar
+	name = "aasimari cuirass"
+	desc = "A cuirass of polished gilbranze, tasseted and pauldroned. It has been meticulously sculpted to only fitthe physique of its wearer; \
+	one of Astrata's divine legionnaires."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	icon_state = "chiv_acuirass"
+	smeltresult = /obj/item/ingot/aaslag
+	chunkcolor = "#532e25"
+	allowed_sex = list(FEMALE) //Donator-exclusive to a Female Aasimar character. Applies to all other non-headpieces in the '/aasimar' branch.
+
+/obj/item/clothing/under/roguetown/platelegs/aasimar
+	name = "aasimari plated chausses"
+	desc = "Plated chausses of polished gilbranze, unfettered by Aeon's grasp. It has been meticulously sculpted to only fit the physique of its wearer; \
+	one of Astrata's divine legionnaires."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	icon_state = "chiv_achaussus"
+	smeltresult = /obj/item/ingot/aaslag
+	chunkcolor = "#532e25"
+	allowed_sex = list(FEMALE)
+
+/obj/item/clothing/shoes/roguetown/boots/armor/aasimar
+	name = "aasimari plated boots"
+	desc = "Boots of polished gilbranze, kept clean from mud and blood. It has been meticulously sculpted to only fit the physique of its wearer; \
+	one of Astrata's divine legionnaires."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	icon_state = "chiv_aboots"
+	smeltresult = /obj/item/ingot/aaslag
+	chunkcolor = "#532e25"
+	allowed_sex = list(FEMALE)
+
+/obj/item/clothing/gloves/roguetown/plate/aasimar
+	name = "aasimari plated gauntlets"
+	desc = "Gauntlets of polished gilbranze, grooved to ensure bloodied grips don't slip. It has been meticulously sculpted to only fit the physique of its wearer; \
+	one of Astrata's divine legionnaires."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	icon_state = "chiv_agauntlets"
+	smeltresult = /obj/item/ingot/aaslag
+	chunkcolor = "#532e25"
+	allowed_sex = list(FEMALE)
+
+/obj/item/clothing/wrists/roguetown/bracers/aasimar
+	name = "aasimari bracers"
+	desc = "Bracers of polished gilbranze, fluted with arterial designs. It has been meticulously sculpted to only fit the physique of its wearer; \
+	one of Astrata's divine legionnaires."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	icon_state = "chiv_abracers"
+	smeltresult = /obj/item/ingot/aaslag
+	chunkcolor = "#532e25"
+	allowed_sex = list(FEMALE)
