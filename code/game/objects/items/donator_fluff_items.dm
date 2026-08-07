@@ -2384,3 +2384,5 @@ As Excaliber."
 	The curved blade design makes it suitable for swings and chops, but poor for stabbing victims."
     icon = 'icons/obj/items/donor_weapons_64.dmi'
     icon_state = "fallingstar"
+
+// CHV
