@@ -2435,7 +2435,7 @@ As Excaliber."
 
 /obj/item/clothing/head/roguetown/helmet/sallet/visored/aasimar/ComponentInitialize()
 	..()
-	AddComponent(/datum/component/adjustable_clothing, (HEAD|EARS|HAIR|NOSE|EYES), HIDEEARS|HIDEFACE|HIDESNOUT|HIDEHAIR, FOV_BEHIND, 'sound/magic/bless.ogg', null, UPD_HEAD) //Hatcheted fix for now.
+	AddComponent(/datum/component/adjustable_clothing, (HEAD|EARS|HAIR|NOSE|EYES), HIDEEARS|HIDEFACE|HIDESNOUT|HIDEHAIR, null, 'sound/magic/bless.ogg', FOV_BEHIND, UPD_HEAD) //Hatcheted fix for now.
 
 /obj/item/clothing/head/roguetown/helmet/sallet/visored/aasimar/get_mechanics_examine(mob/user)
 	. = ..()
