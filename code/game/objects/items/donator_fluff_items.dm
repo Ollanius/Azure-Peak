@@ -2383,13 +2383,6 @@ As Excaliber."
 	item_state = "chiv_halo"
 	smeltresult = /obj/item/ingot/gold
 	max_integrity = 777
-	overarmor = FALSE
-
-/obj/item/clothing/head/roguetown/halo/MiddleClick(mob/user)
-	overarmor = !overarmor
-	alternate_worn_layer = overarmor ? HALO_LAYER : HALO_LAYER
-	user.update_inv_head()
-	user.update_inv_wear_mask()
 
 /obj/item/clothing/head/roguetown/halo/aasimar
 	name = "ornamental halo"
