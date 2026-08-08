@@ -2376,13 +2376,20 @@ As Excaliber."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_MASK
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
-	alternate_worn_layer = 3
+	alternate_worn_layer = HALO_LAYER
 	body_parts_covered = null
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	icon_state = "chiv_halo"
 	item_state = "chiv_halo"
 	smeltresult = /obj/item/ingot/gold
 	max_integrity = 777
+	var/overarmor = TRUE
+
+/obj/item/clothing/head/roguetown/halo/MiddleClick(mob/user)
+	overarmor = !overarmor
+	alternate_worn_layer = overarmor ? HALO_LAYER : HALO_LAYER
+	user.update_inv_head()
+	user.update_inv_wear_mask()
 
 /obj/item/clothing/head/roguetown/halo/aasimar
 	name = "ornamental halo"
