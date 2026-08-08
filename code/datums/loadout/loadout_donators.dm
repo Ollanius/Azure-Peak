@@ -831,8 +831,3 @@
 	name = "Donator Kit - Aasimari Equipment, Sackful"
 	path = /obj/item/storage/roguebag/donator_chivalre_elixirs
 	ckeywhitelist = list("oddbomber3768")
-
-/datum/loadout_item/donator/chivalre_halo
-	name = "Donator Item - Ornamental Halo"
-	path = /obj/item/clothing/head/roguetown/halo/aasimar
-	ckeywhitelist = list("oddbomber3768")
