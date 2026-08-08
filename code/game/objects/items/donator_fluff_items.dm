@@ -2383,7 +2383,7 @@ As Excaliber."
 	item_state = "chiv_halo"
 	smeltresult = /obj/item/ingot/gold
 	max_integrity = 777
-	var/overarmor = TRUE
+	var/overarmor = FALSE
 
 /obj/item/clothing/head/roguetown/halo/MiddleClick(mob/user)
 	overarmor = !overarmor
