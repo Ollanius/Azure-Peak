@@ -2431,7 +2431,15 @@ As Excaliber."
 	icon_state = "chiv_adeathmask"
 	smeltresult = /obj/item/ingot/aaslag
 	chunkcolor = "#532e25"
-	adjustable = CANT_CADJUST
+	worn_offsets = list("x" = 0, "y" = 1) //Offset to account for the adjustable aura.
+
+/obj/item/clothing/head/roguetown/helmet/sallet/visored/aasimar/ComponentInitialize()
+	..()
+	AddComponent(/datum/component/adjustable_clothing, (HEAD|EARS|HAIR|NOSE|EYES), HIDEEARS|HIDEFACE|HIDESNOUT|HIDEHAIR, FOV_BEHIND, 'sound/magic/bless.ogg', null, UPD_HEAD) //Hatcheted fix for now.
+
+/obj/item/clothing/head/roguetown/helmet/sallet/visored/aasimar/get_mechanics_examine(mob/user)
+	. = ..()
+	. += span_info("Right-clicking can either reveal or hide the helmet's ornamental halo.")
 
 /obj/item/clothing/neck/roguetown/bevor/aasimar
 	name = "aasimari gorget"
