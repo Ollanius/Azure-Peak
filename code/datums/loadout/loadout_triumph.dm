@@ -580,6 +580,11 @@
 	triumph_cost = 3
 	sort_category = "Triumphs"
 
+/datum/loadout_item/triumph_weaponkit_clasiscbeakhelm
+	name = "Triumph Kit - Valorian Beak Helmet"
+	path = /obj/item/enchantingkit/triumph_armorkit_classicbeakhelm
+	triumph_cost = 3
+	sort_category = "Triumphs"
 
 //////////////////
 //  PERFUMES !  //

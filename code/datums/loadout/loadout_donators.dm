@@ -831,3 +831,8 @@
 	name = "Donator Kit - Aasimari Equipment, Sackful"
 	path = /obj/item/storage/roguebag/donator_chivalre_elixirs
 	ckeywhitelist = list("oddbomber3768")
+
+/datum/loadout_item/donator/truill_flowerblade
+	name = "Donator Kit - Beflowered Longsword"
+	path = /obj/item/enchantingkit/truill_flowerblade
+	ckeywhitelist = list("truill")

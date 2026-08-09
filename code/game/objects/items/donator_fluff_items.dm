@@ -1130,6 +1130,13 @@
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
 	bigboy = TRUE
 
+/obj/item/rogueweapon/greatsword/grenz/donator_elegant
+	name = "elegant zweihander"
+	desc = "An elegant zweihander for an elegant wielder."
+	icon_state = "donatorgreatsword"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+	bigboy = TRUE
+
 /obj/item/rogueweapon/sword/long/exe/donator_elegant
 	name = "elegant executioner's sword"
 	desc = "An elegant executioner's sword for an elegant headsman."
@@ -2509,3 +2516,47 @@ As Excaliber."
 	smeltresult = /obj/item/ingot/aaslag
 	chunkcolor = "#532e25"
 	allowed_sex = list(FEMALE)
+
+//Truill
+/obj/item/rogueweapon/sword/long/oldpsysword/donator_triull
+	name = "beflowered longsword"
+	desc = "A longsword belonging to the Order of Saint Eora, wrapped in thorny vines that prickle the hand-that-grasps. Rosas, calendulas, and \
+	matricarias decorate the blade like a steel-edged bouquet; a colorful reminder that evil can never hope to tarnish Psydonia's beauty."
+	icon_state = "truill_flowerblade"
+	sheathe_icon = "truill_flowerblade"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+	bigboy = TRUE
+
+/obj/item/rogueweapon/sword/long/oldpsysword/donator_triull/pickup(mob/living/user)
+	. = ..()
+	to_chat(user, span_warning ("The thorns prick me."))
+	user.adjustBruteLoss(1)
+
+/obj/item/rogueweapon/sword/long/cleric/donator_triull
+	name = "beflowered longsword"
+	desc = "A longsword belonging to the Order of Saint Eora, wrapped in thorny vines that prickle the hand-that-grasps. Rosas, calendulas, and \
+	matricarias decorate the blade like a steel-edged bouquet; a colorful reminder that evil can never hope to tarnish Psydonia's beauty."
+	icon_state = "truill_flowerblade"
+	sheathe_icon = "truill_flowerblade"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+	bigboy = TRUE
+
+/obj/item/rogueweapon/sword/long/cleric/donator_triull/pickup(mob/living/user)
+	. = ..()
+	to_chat(user, span_warning ("The thorns prick me."))
+	user.adjustBruteLoss(1)
+
+/obj/item/rogueweapon/sword/long/psysword/donator_triull
+	name = "beflowered silver longsword"
+	desc = "A longsword belonging to the Order of Saint Eora, wrapped in thorny vines that prickle the hand-that-grasps. Rosas, calendulas, and \
+	matricarias decorate the blade like a silver-edged bouquet; a colorful reminder that evil can never hope to tarnish Psydonia's beauty."
+	icon_state = "truill_flowerbladesil"
+	sheathe_icon = "truill_flowerbladesil"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+	bigboy = TRUE
+	is_silver = TRUE
+
+/obj/item/rogueweapon/sword/long/psysword/donator_triull/pickup(mob/living/user)
+	. = ..()
+	to_chat(user, span_warning ("The thorns prick me."))
+	user.adjustBruteLoss(1)
