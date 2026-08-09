@@ -836,3 +836,28 @@
 	name = "Donator Kit - Beflowered Longsword"
 	path = /obj/item/enchantingkit/truill_flowerblade
 	ckeywhitelist = list("truill")
+
+/datum/loadout_item/donator/rhynnrhynn_staff
+	name = "Donator Kit - Celestial Staff"
+	path = /obj/item/enchantingkit/rhynnrhynn_staff
+	ckeywhitelist = list("rhynnrhynn")
+
+/datum/loadout_item/donator/rhynnrhynn_staff_crested
+	name = "Donator Kit - Celestial Staff, Crested"
+	path = /obj/item/enchantingkit/rhynnrhynn_staff_crested
+	ckeywhitelist = list("rhynnrhynn")
+
+/datum/loadout_item/donator/rhynnrhynn_staff_winged
+	name = "Donator Kit - Celestial Staff, Winged"
+	path = /obj/item/enchantingkit/rhynnrhynn_staff_winged
+	ckeywhitelist = list("rhynnrhynn")
+
+/datum/loadout_item/donator/rhynnrhynn_staff_solar
+	name = "Donator Kit - Celestial Staff, Solar"
+	path = /obj/item/enchantingkit/rhynnrhynn_staff_solar
+	ckeywhitelist = list("rhynnrhynn")
+
+/datum/loadout_item/donator/lamprey_stechhelm
+	name = "Donator Kit - Stechhelms"
+	path = /obj/item/enchantingkit/lamprey_stechhelm
+	ckeywhitelist = list("lampreyshark")

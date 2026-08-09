@@ -1016,3 +1016,50 @@
 	)
 	result_item = null
 	exact_type = TRUE
+
+//RhynnRhynn
+/obj/item/enchantingkit/rhynnrhynn_staff
+	name = "'Celestial Staff' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance either a regular or refined Blacksteel Staff."
+	target_items = list(
+		/obj/item/rogueweapon/woodstaff/implement/greater/blacksteel		= /obj/item/rogueweapon/woodstaff/implement/greater/blacksteel/donator_rhynn,
+		/obj/item/rogueweapon/woodstaff/implement/grand/blacksteel			= /obj/item/rogueweapon/woodstaff/implement/grand/blacksteel/donator_rhynn
+	)
+	result_item = null
+
+/obj/item/enchantingkit/rhynnrhynn_staff_crested
+	name = "'Celestial Staff, Crested' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance either a regular or refined Blacksteel Staff."
+	target_items = list(
+		/obj/item/rogueweapon/woodstaff/implement/greater/blacksteel		= /obj/item/rogueweapon/woodstaff/implement/greater/blacksteel/donator_rhynn/crested,
+		/obj/item/rogueweapon/woodstaff/implement/grand/blacksteel			= /obj/item/rogueweapon/woodstaff/implement/grand/blacksteel/donator_rhynn/crested
+	)
+	result_item = null
+
+/obj/item/enchantingkit/rhynnrhynn_staff_winged
+	name = "'Celestial Staff, Winged' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance either a regular or refined Blacksteel Staff."
+	target_items = list(
+		/obj/item/rogueweapon/woodstaff/implement/greater/blacksteel		= /obj/item/rogueweapon/woodstaff/implement/greater/blacksteel/donator_rhynn/winged,
+		/obj/item/rogueweapon/woodstaff/implement/grand/blacksteel			= /obj/item/rogueweapon/woodstaff/implement/grand/blacksteel/donator_rhynn/winged
+	)
+	result_item = null
+
+/obj/item/enchantingkit/rhynnrhynn_staff_solar
+	name = "'Celestial Staff, Solar' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance either a regular or refined Blacksteel Staff."
+	target_items = list(
+		/obj/item/rogueweapon/woodstaff/implement/greater/blacksteel		= /obj/item/rogueweapon/woodstaff/implement/greater/blacksteel/donator_rhynn/solar,
+		/obj/item/rogueweapon/woodstaff/implement/grand/blacksteel			= /obj/item/rogueweapon/woodstaff/implement/grand/blacksteel/donator_rhynn/solar
+	)
+	result_item = null
+
+/obj/item/enchantingkit/lamprey_stechhelm
+	name = "'Stechhelm' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance either an Aventailed Bascinet or an Iron \
+	Aventailed Bascinet."
+	target_items = list(
+		/obj/item/clothing/head/roguetown/helmet/heavy/aventail/iron 	= /obj/item/clothing/head/roguetown/helmet/heavy/aventail/iron/donator_lamprey,
+		/obj/item/clothing/head/roguetown/helmet/heavy/aventail 		= /obj/item/clothing/head/roguetown/helmet/heavy/aventail/donator_lamprey
+	)
+	result_item = null

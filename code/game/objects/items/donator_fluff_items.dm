@@ -2560,3 +2560,73 @@ As Excaliber."
 	. = ..()
 	to_chat(user, span_warning ("The thorns prick me."))
 	user.adjustBruteLoss(1)
+
+//RhynnRhynn
+/obj/item/rogueweapon/woodstaff/implement/greater/blacksteel/donator_rhynn
+	base_implement_name = "celestial staff"
+	name = "celestial staff"
+	desc = "Celestial Staves, or Himmelsstäbe, are often awarded to Gefechtsgelehrter who have completed at least two \
+	military campaigns. The possession of one marks the wielder as an individual who has not only seen the horrors of \
+	war, but delivered them firsthand. This one happens to be crested with a special ornament."
+	icon_state = "celestialstaff"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+
+/obj/item/rogueweapon/woodstaff/implement/greater/blacksteel/donator_rhynn/crested
+	icon_state = "celestialstaffcrest"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+
+/obj/item/rogueweapon/woodstaff/implement/greater/blacksteel/donator_rhynn/winged
+	icon_state = "celestialstaffeagle"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+
+/obj/item/rogueweapon/woodstaff/implement/greater/blacksteel/donator_rhynn/solar
+	icon_state = "celestialstaffsun"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+
+/obj/item/rogueweapon/woodstaff/implement/grand/blacksteel/donator_rhynn
+	base_implement_name = "refined celestial staff"
+	name = "refined celestial staff"
+	desc = "Celestial Staves, or Himmelsstäbe, are often awarded to Gefechtsgelehrter who have completed at least two \
+	military campaigns. The possession of one marks the wielder as an individual who has not only seen the horrors of \
+	war, but delivered them firsthand. This one happens to be crested with a special ornament."
+	icon_state = "celestialstaff"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+
+/obj/item/rogueweapon/woodstaff/implement/grand/blacksteel/donator_rhynn/crested
+	icon_state = "celestialstaffcrest"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+
+/obj/item/rogueweapon/woodstaff/implement/grand/blacksteel/donator_rhynn/winged
+	icon_state = "celestialstaffeagle"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+
+/obj/item/rogueweapon/woodstaff/implement/grand/blacksteel/donator_rhynn/solar
+	icon_state = "celestialstaffsun"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+
+//Lamprey
+/obj/item/clothing/head/roguetown/helmet/heavy/aventail/donator_lamprey
+	name = "stechhelm"
+	desc = "The froggemund's battle-ready brother from another mother, offering excellent protection at the cost of less-than-excellent visibility."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	icon_state = "lamprey_stechhelm"
+
+/obj/item/clothing/head/roguetown/helmet/heavy/aventail/iron/donator_lamprey
+	name = "iron stechhelm"
+	desc = "The froggemund's battle-ready brother from another mother, offering excellent protection at the cost of less-than-excellent visibility. This \
+	particular variant happens to be wrought from iron."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	icon_state = "lamprey_istechhelm"
+
+//Squidqueen
+/obj/item/clothing/suit/roguetown/armor/leather/heavy/coat/gravecoat
+	name = "gravetender's coat"
+	desc = "A padded coat bearing the same hues one would find on a Necran. Small steel braces adorn the wrists, a symbol of Necra's grasp on those who serve her."
+	icon_state = "squid_fraycoat"
+	item_state = "squid_fraycoat"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+	allowed_sex = list(FEMALE)
