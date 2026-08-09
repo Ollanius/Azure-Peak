@@ -2345,7 +2345,7 @@ As Excaliber."
 
 // ATICIUS
 /obj/item/rogueweapon/sword/long/aticius
-	name = "\improper For Love's Sake"
+	name = "For Love's Sake"
 	desc = "An oversized cleaver, fashioned out of polished gilbranze. A psycruciform starguard fits at the hilt, where a strip of cloth has been tied, dyed in Eoran pink.<br>\
 	The metal is not alive. Perhaps it never will be. Perhaps that is the point. A blade for a tyme that is not now, and may never be - yet it is here, and undeniable.<br>\
 	'Liebe. Do you know how long forever is?'<br>\
@@ -2383,12 +2383,6 @@ As Excaliber."
 	item_state = "chiv_halo"
 	smeltresult = /obj/item/ingot/gold
 	max_integrity = 777
-
-/obj/item/clothing/head/roguetown/halo/aasimar
-	name = "ornamental halo"
-	desc = "A gilded wafer, meticulously artificed to mimic the aureoles of anointed saints. Unknown mechanisms work to ensure that it \
-	always envelops the head of the crowned, no matter the angle they're viewed from."
-	smeltresult = /obj/item/ingot/aaslag
 
 /obj/item/rogueweapon/sword/long/aasimar
 	name = "solar longsword"
