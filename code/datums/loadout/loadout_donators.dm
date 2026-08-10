@@ -858,6 +858,16 @@
 	ckeywhitelist = list("rhynnrhynn")
 
 /datum/loadout_item/donator/lamprey_stechhelm
-	name = "Donator Kit - Stechhelms"
+	name = "Donator Kit - Stechhelm"
 	path = /obj/item/enchantingkit/lamprey_stechhelm
-	ckeywhitelist = list("lampreyshark")
+	ckeywhitelist = list("derpi559")
+
+/datum/loadout_item/donator/squidqueen_longcoat
+	name = "Donator Kit - Ragged Longcoat"
+	path = /obj/item/enchantingkit/squidqueen_longcoat
+	ckeywhitelist = list("lmwevil")
+
+/datum/loadout_item/donator/squidqueen_longcoat_alt
+	name = "Donator Kit - Frayed Longcoat"
+	path = /obj/item/enchantingkit/squidqueen_longcoat_alt
+	ckeywhitelist = list("lmwevil")

@@ -1054,6 +1054,7 @@
 	)
 	result_item = null
 
+//Lamprey
 /obj/item/enchantingkit/lamprey_stechhelm
 	name = "'Stechhelm' morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance either an Aventailed Bascinet or an Iron \
@@ -1063,3 +1064,47 @@
 		/obj/item/clothing/head/roguetown/helmet/heavy/aventail 		= /obj/item/clothing/head/roguetown/helmet/heavy/aventail/donator_lamprey
 	)
 	result_item = null
+
+//Squidqueen
+/obj/item/enchantingkit/squidqueen_longcoat
+	name = "'Ragged Longcoat' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance either a Longcoat, or a Hardened Leather Coat. This \
+	variant happens to be more dirty than the Frayed Longcoat."
+	target_items = list(
+		/obj/item/clothing/suit/roguetown/armor/leather/heavy/coat 			= /obj/item/clothing/suit/roguetown/armor/leather/heavy/coat/donator_squidqueen,
+		/obj/item/clothing/suit/roguetown/armor/longcoat 					= /obj/item/clothing/suit/roguetown/armor/longcoat/donator_squidqueen
+	)
+	result_item = null
+	exact_type = TRUE
+
+/obj/item/enchantingkit/squidqueen_longcoat_alt
+	name = "'Frayed Longcoat' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance either a Longcoat, or a Hardened Leather Coat."
+	target_items = list(
+		/obj/item/clothing/suit/roguetown/armor/leather/heavy/coat 			= /obj/item/clothing/suit/roguetown/armor/leather/heavy/coat/donator_squidqueen_alt,
+		/obj/item/clothing/suit/roguetown/armor/longcoat 					= /obj/item/clothing/suit/roguetown/armor/longcoat/donator_squidqueen_alt
+	)
+	result_item = null
+	exact_type = TRUE
+
+//Squidqueen
+/obj/item/enchantingkit/squidqueen_longcoat
+	name = "'Ragged Longcoat' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance either a Longcoat, or a Hardened Leather Coat. This \
+	variant happens to be more dirty than the Frayed Longcoat."
+	target_items = list(
+		/obj/item/clothing/suit/roguetown/armor/leather/heavy/coat 			= /obj/item/clothing/suit/roguetown/armor/leather/heavy/coat/donator_squidqueen,
+		/obj/item/clothing/suit/roguetown/armor/longcoat 					= /obj/item/clothing/suit/roguetown/armor/longcoat/donator_squidqueen
+	)
+	result_item = null
+	exact_type = TRUE
+
+/obj/item/enchantingkit/squidqueen_longcoat_alt
+	name = "'Frayed Longcoat' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance either a Longcoat, or a Hardened Leather Coat."
+	target_items = list(
+		/obj/item/clothing/suit/roguetown/armor/leather/heavy/coat 			= /obj/item/clothing/suit/roguetown/armor/leather/heavy/coat/donator_squidqueen_alt,
+		/obj/item/clothing/suit/roguetown/armor/longcoat 					= /obj/item/clothing/suit/roguetown/armor/longcoat/donator_squidqueen_alt
+	)
+	result_item = null
+	exact_type = TRUE

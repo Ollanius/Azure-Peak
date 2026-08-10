@@ -2610,6 +2610,7 @@ As Excaliber."
 	desc = "The froggemund's battle-ready brother from another mother, offering excellent protection at the cost of less-than-excellent visibility."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDESNOUT
 	icon_state = "lamprey_stechhelm"
 
 /obj/item/clothing/head/roguetown/helmet/heavy/aventail/iron/donator_lamprey
@@ -2618,14 +2619,49 @@ As Excaliber."
 	particular variant happens to be wrought from iron."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDESNOUT
 	icon_state = "lamprey_istechhelm"
 
 //Squidqueen
-/obj/item/clothing/suit/roguetown/armor/leather/heavy/coat/gravecoat
-	name = "gravetender's coat"
-	desc = "A padded coat bearing the same hues one would find on a Necran. Small steel braces adorn the wrists, a symbol of Necra's grasp on those who serve her."
+/obj/item/clothing/suit/roguetown/armor/longcoat/donator_squidqueen_alt
+	name = "frayed longcoat"
+	desc = "A longcoat that has been languishing without proper care for longer than you'd dare to \
+	imagine."
 	icon_state = "squid_fraycoat"
 	item_state = "squid_fraycoat"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+	allowed_sex = list(FEMALE)
+
+/obj/item/clothing/suit/roguetown/armor/leather/heavy/donator_squidqueen_alt
+	name = "frayed longcoat"
+	desc = "A longcoat that has been languishing without proper care for longer than you'd dare to \
+	imagine. </br>'Had I tried to be your friend, would it have made a difference?'"
+	icon_state = "squid_fraycoat"
+	item_state = "squid_fraycoat"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+	allowed_sex = list(FEMALE)
+
+/obj/item/clothing/suit/roguetown/armor/longcoat/donator_squidqueen
+	name = "ragged longcoat"
+	desc = "A longcoat that has been languishing without proper care for longer than you'd dare to \
+	imagine. It's hard to tell whether those brown splotches were born from sullied dyes or disturbed soil. </br>'The pain does not end in death; so get back up and go to work again.'"
+	icon_state = "squid_grimecoat"
+	item_state = "squid_grimecoat"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+	allowed_sex = list(FEMALE)
+
+/obj/item/clothing/suit/roguetown/armor/leather/heavy/coat/donator_squidqueen
+	name = "ragged longcoat"
+	desc = "A longcoat that has been languishing without proper care for longer than you'd dare to \
+	imagine. It's hard to tell whether those brown splotches were born from sullied dyes or disturbed soil."
+	icon_state = "squid_grimecoat"
+	item_state = "squid_grimecoat"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
