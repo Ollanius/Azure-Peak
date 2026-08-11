@@ -2712,21 +2712,6 @@ As Excaliber."
 	boobed_detail = FALSE
 	color = null
 	detail_color = CLOTHING_WHITE
-	var/picked = FALSE
-
-/obj/item/clothing/suit/roguetown/armor/plate/fluted/cuirass/robed/attack_right(mob/user)
-	..()
-	if(!picked)
-		var/choice = input(user, "Choose a color.", "HUES OF THE FINAL HOUR.") as anything in COLOR_MAP
-		var/playerchoice = COLOR_MAP[choice]
-		picked = TRUE
-		detail_color = playerchoice
-		detail_tag = "_detail"
-		update_icon()
-		if(loc == user && ishuman(user))
-			var/mob/living/carbon/H = user
-			H.update_inv_armor()
-			H.update_icon()
 
 /obj/item/clothing/suit/roguetown/armor/plate/fluted/cuirass/robed/Initialize()
 	. = ..()
@@ -2754,21 +2739,6 @@ As Excaliber."
 	boobed_detail = FALSE
 	color = null
 	detail_color = CLOTHING_WHITE
-	var/picked = FALSE
-
-/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/robed/attack_right(mob/user)
-	..()
-	if(!picked)
-		var/choice = input(user, "Choose a color.", "HUES OF THE FINAL HOUR.") as anything in COLOR_MAP
-		var/playerchoice = COLOR_MAP[choice]
-		picked = TRUE
-		detail_color = playerchoice
-		detail_tag = "_detail"
-		update_icon()
-		if(loc == user && ishuman(user))
-			var/mob/living/carbon/H = user
-			H.update_inv_armor()
-			H.update_icon()
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/robed/Initialize()
 	. = ..()
@@ -2796,21 +2766,6 @@ As Excaliber."
 	boobed_detail = FALSE
 	color = null
 	detail_color = CLOTHING_WHITE
-	var/picked = FALSE
-
-/obj/item/clothing/suit/roguetown/armor/plate/full/robed/attack_right(mob/user)
-	..()
-	if(!picked)
-		var/choice = input(user, "Choose a color.", "HUES OF THE FINAL HOUR.") as anything in COLOR_MAP
-		var/playerchoice = COLOR_MAP[choice]
-		picked = TRUE
-		detail_color = playerchoice
-		detail_tag = "_detail"
-		update_icon()
-		if(loc == user && ishuman(user))
-			var/mob/living/carbon/H = user
-			H.update_inv_armor()
-			H.update_icon()
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/robed/Initialize()
 	. = ..()
