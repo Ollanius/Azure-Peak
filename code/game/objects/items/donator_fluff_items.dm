@@ -2683,6 +2683,7 @@ As Excaliber."
 	flags_inv = HIDECROTCH
 	allowed_sex = list(MALE)
 	color = null
+	custom_design = TRUE
 
 //Hellpossum
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/apostle
