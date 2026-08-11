@@ -2666,3 +2666,246 @@ As Excaliber."
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	allowed_sex = list(FEMALE)
+
+/obj/item/clothing/cloak/tabard/donator_squidqueen_harlottoga
+	name = "\improper Tathlyn's toga"
+	desc = "Strips of fabric held together at the side with nothing but a few thorns, this entire thing could be ripped off in an \
+	instant for dramatic naked wrestling, or to be a harlot. </br>It leaves literally nothing to the imagination besides one's \
+	groin, exposing their abs, chest, and thighs to the world around them. </br>It might actually be a fanciful tablecloth repurposed."
+	icon_state = "squidqueen_harlottoga"
+	item_state = "squidqueen_harlottoga"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	flags_inv = HIDECROTCH
+	allowed_sex = list(MALE)
+
+//Hellpossum
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/apostle
+	name = "apostolic cuirass"
+	desc = "A regal steel cuirass, decorated with motifs of the psycross. These breastplates unmistakably originate from Blackholt, where-in \
+	they're forged for service within the Order of the Final Hour."
+	icon_state = "apostlecuirass"
+	item_state = "apostlecuirass"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+
+/obj/item/clothing/suit/roguetown/armor/plate/full/apostle
+	name = "apostolic plate armor"
+	desc = "A regal set of steel plate armor, decorated with motifs of the psycross. Layered beneath the tassets and fronstman's pauldron are \
+	weaves of scalemail, helping to further protect the Order of the Final Hour's knights from harm."
+	icon_state = "apostleplate"
+	item_state = "apostleplate"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+
+/obj/item/clothing/suit/roguetown/armor/plate/fluted/cuirass/robed
+	name = "\improper Knight-Apostle's battle raiment"
+	desc = "A regal steel cuirass, decorated with motifs of the psycross and worn atop a robe. These breastplates unmistakably \
+	originate from Blackholt, where-in they're forged for service within the Order of the Final Hour."
+	icon_state = "robedcuirass"
+	item_state = "robedcuirass"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+	detail_tag = "_detail"
+	boobed_detail = FALSE
+	color = null
+	detail_color = CLOTHING_WHITE
+	var/picked = FALSE
+
+/obj/item/clothing/suit/roguetown/armor/plate/fluted/cuirass/robed/attack_right(mob/user)
+	..()
+	if(!picked)
+		var/choice = input(user, "Choose a color.", "HUES OF THE FINAL HOUR.") as anything in COLOR_MAP
+		var/playerchoice = COLOR_MAP[choice]
+		picked = TRUE
+		detail_color = playerchoice
+		detail_tag = "_detail"
+		update_icon()
+		if(loc == user && ishuman(user))
+			var/mob/living/carbon/H = user
+			H.update_inv_armor()
+			H.update_icon()
+
+/obj/item/clothing/suit/roguetown/armor/plate/fluted/cuirass/robed/Initialize()
+	. = ..()
+	update_icon()
+
+/obj/item/clothing/suit/roguetown/armor/plate/fluted/cuirass/robed/update_icon()
+	cut_overlays()
+	if(get_detail_tag())
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/robed
+	name = "\improper Knight-Apostle's scaled raiment"
+	desc = "A regal steel cuirass, decorated with motifs of the psycross and worn atop a robe. Layered beneath the tassets and fronstman's pauldron are \
+	weaves of scalemail, helping to further protect the Order of the Final Hour's knights from harm."
+	item_state = "robedplate"
+	icon_state = "robedplate"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+	detail_tag = "_detail"
+	boobed_detail = FALSE
+	color = null
+	detail_color = CLOTHING_WHITE
+	var/picked = FALSE
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/robed/attack_right(mob/user)
+	..()
+	if(!picked)
+		var/choice = input(user, "Choose a color.", "HUES OF THE FINAL HOUR.") as anything in COLOR_MAP
+		var/playerchoice = COLOR_MAP[choice]
+		picked = TRUE
+		detail_color = playerchoice
+		detail_tag = "_detail"
+		update_icon()
+		if(loc == user && ishuman(user))
+			var/mob/living/carbon/H = user
+			H.update_inv_armor()
+			H.update_icon()
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/robed/Initialize()
+	. = ..()
+	update_icon()
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/robed/update_icon()
+	cut_overlays()
+	if(get_detail_tag())
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)
+
+/obj/item/clothing/suit/roguetown/armor/plate/full/robed
+	name = "\improper Knight-Apostle's scaled raiment"
+	desc = "A regal steel cuirass, decorated with motifs of the psycross and worn atop a robe. Layered beneath the tassets and fronstman's pauldron are \
+	weaves of scalemail, helping to further protect the Order of the Final Hour's knights from harm."
+	item_state = "robedplate"
+	icon_state = "robedplate"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+	detail_tag = "_detail"
+	boobed_detail = FALSE
+	color = null
+	detail_color = CLOTHING_WHITE
+	var/picked = FALSE
+
+/obj/item/clothing/suit/roguetown/armor/plate/full/robed/attack_right(mob/user)
+	..()
+	if(!picked)
+		var/choice = input(user, "Choose a color.", "HUES OF THE FINAL HOUR.") as anything in COLOR_MAP
+		var/playerchoice = COLOR_MAP[choice]
+		picked = TRUE
+		detail_color = playerchoice
+		detail_tag = "_detail"
+		update_icon()
+		if(loc == user && ishuman(user))
+			var/mob/living/carbon/H = user
+			H.update_inv_armor()
+			H.update_icon()
+
+/obj/item/clothing/suit/roguetown/armor/plate/full/robed/Initialize()
+	. = ..()
+	update_icon()
+
+/obj/item/clothing/suit/roguetown/armor/plate/full/robed/update_icon()
+	cut_overlays()
+	if(get_detail_tag())
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)
+
+/obj/item/clothing/head/roguetown/helmet/bascinet/pigface/apostle
+	name = "\improper Knight-Apostle's burgeonet"
+	desc = "A regal steel helmet, forged for service within the Order of the Final Hour. The angled visor, more akin to a slab than anything \
+	else, ensures that the eyes are rarely exposed to piercing blows."
+	item_state = "apostleburgeonet"
+	icon_state = "apostleburgeonet"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+
+/obj/item/clothing/head/roguetown/helmet/bascinet/pigface/burgeonet
+	name = "gothic burgeonet"
+	desc = "A magnificent steel helmet, and the newest of the venerable armet's lineage. The intricate fluting serves as a clear sign of its \
+	Grenzelhoftian heritage; ornate, but not obnoxiously so."
+	item_state = "burgeonet"
+	icon_state = "burgeonet"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+
+/obj/item/clothing/suit/roguetown/armor/plate/fluted/cuirass/robed/grandmaster
+	name = "\improper Knight-Abbess's scaled raiment"
+	desc = "A regal set of steel plate armor, further guarded with layers of scalemaille and worn atop a thick robe. The golden fluting and \
+	silvered finish indicates it to be custom-fitted to its intended wearer; the Order of the Final Hour's leading Abbess."
+	item_state = "dasfox_robedplate"
+	icon_state = "dasfox_robedplate"
+	allowed_sex = list(FEMALE)
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/robed/grandmaster
+	name = "\improper Knight-Abbess's scaled raiment"
+	desc = "A regal set of steel plate armor, further guarded with layers of scalemaille and worn atop a thick robe. The golden fluting and \
+	silvered finish indicates it to be custom-fitted to its intended wearer; the Order of the Final Hour's leading Abbess."
+	item_state = "dasfox_robedplate"
+	icon_state = "dasfox_robedplate"
+	allowed_sex = list(FEMALE)
+
+/obj/item/clothing/head/roguetown/helmet/bascinet/pigface/apostle/grandmaster
+	name = "\improper Knight-Abbess's burgeonet"
+	desc = "A regal steel bascinet, adorned with flanking wings. The golden fluting and silvered finish indicates it to be custom-fitted \
+	to its intended wearer; the Order of the Final Hour's leading Abbess."
+	item_state = "dasfox_apostleburgeonet"
+	icon_state = "dasfox_apostleburgeonet"
+
+/obj/item/clothing/head/roguetown/helmet/bascinet/pigface/apostle/habit
+	name = "\improper Knight-Abbess's habited burgonet"
+	desc = "A regal steel bascinet, worn underneath the thick habit of a Knight-Abbess."
+	item_state = "dasfox_habitburgeonet"
+	icon_state = "dasfox_habitburgeonet"
+	detail_tag = "_detail"
+	altdetail_tag = "_detailalt"
+	var/picked = FALSE
+	detail_color = "#FFFFFF"
+	altdetail_color = "#363737"
+
+/obj/item/clothing/head/roguetown/helmet/bascinet/pigface/apostle/habit/attack_right(mob/user)
+	..()
+	if(!picked)
+		var/choice = input(user, "Choose a color.", "Grenzelhoft colors") as anything in COLOR_MAP
+		var/playerchoice = COLOR_MAP[choice]
+		picked = TRUE
+		detail_color = playerchoice
+		detail_tag = "_detail"
+		update_icon()
+		if(loc == user && ishuman(user))
+			var/mob/living/carbon/H = user
+			H.update_inv_head()
+
+/obj/item/clothing/head/roguetown/helmet/bascinet/pigface/apostle/habit/Initialize()
+	. = ..()
+	update_icon()
+
+/obj/item/clothing/head/roguetown/helmet/bascinet/pigface/apostle/habit/update_icon()
+	cut_overlays()
+	if(get_detail_tag())
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[get_detail_state(icon_state)][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)
+
+	if(get_altdetail_tag())
+		var/mutable_appearance/pic2 = mutable_appearance(icon(icon, "[get_detail_state(icon_state)][altdetail_tag]"))
+		pic2.appearance_flags = RESET_COLOR
+		if(get_altdetail_color())
+			pic2.color = get_altdetail_color()
+		add_overlay(pic2)
