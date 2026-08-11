@@ -2672,7 +2672,7 @@ As Excaliber."
 	color = null
 
 /obj/item/clothing/cloak/tabard/donator_squidqueen_harlottoga
-	name = "Tathlyn's toga"
+	name = "harlot's toga"
 	desc = "Strips of fabric held together at the side with nothing but a few thorns, this entire thing could be ripped off in an \
 	instant for dramatic naked wrestling, or to be a harlot. </br>It leaves literally nothing to the imagination besides one's \
 	groin, exposing their abs, chest, and thighs to the world around them. </br>It might actually be a fanciful tablecloth repurposed."
