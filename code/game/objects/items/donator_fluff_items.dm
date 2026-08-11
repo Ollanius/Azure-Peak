@@ -2687,8 +2687,8 @@ As Excaliber."
 //Hellpossum
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/apostle
 	name = "apostolic cuirass"
-	desc = "A regal steel cuirass, decorated with motifs of the psycross. These breastplates unmistakably originate from Blackholt, where-in \
-	they're forged for service within the Order of the Final Hour."
+	desc = "A regal steel cuirass, decorated with motifs of the psycross. </br>To my God, I will go willingly unto death. Can you say the \
+	same, heathen?"
 	icon_state = "apostlecuirass"
 	item_state = "apostlecuirass"
 	icon = 'icons/clothing/donor_clothes.dmi'
@@ -2696,8 +2696,7 @@ As Excaliber."
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/apostle
 	name = "apostolic plate armor"
-	desc = "A regal set of steel plate armor, decorated with motifs of the psycross. Layered beneath the tassets and fronstman's pauldron are \
-	weaves of scalemail, helping to further protect the Order of the Final Hour's knights from harm."
+	desc = "A regal set of steel plate armor, decorated with motifs of the psycross. </br>Thy will be done, thy kingdom come."
 	icon_state = "apostleplate"
 	item_state = "apostleplate"
 	icon = 'icons/clothing/donor_clothes.dmi'
@@ -2705,9 +2704,9 @@ As Excaliber."
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/robed
-	name = "\improper Knight-Apostle's battle raiment"
-	desc = "A regal steel cuirass, decorated with motifs of the psycross and worn atop a robe. These breastplates unmistakably \
-	originate from Blackholt, where-in they're forged for service within the Order of the Final Hour."
+    name = "\improper Knight-Apostle's raiment"
+    desc = "The one whom repents, whom has faith. </br> They whom remain unshaken, by the darkness of the world. </br> \
+    They are whom shall know true peace."
 	icon_state = "robedcuirass"
 	item_state = "robedcuirass"
 	icon = 'icons/clothing/donor_clothes.dmi'
@@ -2732,9 +2731,9 @@ As Excaliber."
 		add_overlay(pic)
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/robed
-	name = "\improper Knight-Apostle's scaled raiment"
-	desc = "A regal steel cuirass, decorated with motifs of the psycross and worn atop a robe. Layered beneath the tassets and fronstman's pauldron are \
-	weaves of scalemail, helping to further protect the Order of the Final Hour's knights from harm."
+    name = "\improper Knight-Apostle's heavy raiment"
+    desc = "Let thy blade pass upon mine flesh. </br>Let mine blood be spill't 'pon the ground. </br>\
+    Let my cries touch the hearts of those I stand a'fore. </br>Let mine be the last sacrifice."
 	item_state = "robedplate"
 	icon_state = "robedplate"
 	icon = 'icons/clothing/donor_clothes.dmi'
@@ -2759,9 +2758,9 @@ As Excaliber."
 		add_overlay(pic)
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/robed
-	name = "\improper Knight-Apostle's scaled raiment"
-	desc = "A regal steel cuirass, decorated with motifs of the psycross and worn atop a robe. Layered beneath the tassets and fronstman's pauldron are \
-	weaves of scalemail, helping to further protect the Order of the Final Hour's knights from harm."
+    name = "\improper Knight-Apostle's heavy raiment"
+    desc = "Let thy blade pass upon mine flesh. </br>Let mine blood be spill't 'pon the ground. </br>\
+    Let my cries touch the hearts of those I stand a'fore. </br>Let mine be the last sacrifice."
 	item_state = "robedplate"
 	icon_state = "robedplate"
 	icon = 'icons/clothing/donor_clothes.dmi'
@@ -2786,9 +2785,10 @@ As Excaliber."
 		add_overlay(pic)
 
 /obj/item/clothing/head/roguetown/helmet/bascinet/apostle
-	name = "\improper Knight-Apostle's burgeonet"
-	desc = "A regal steel helmet, forged for service within the Order of the Final Hour. The angled visor, more akin to a slab than anything \
-	else, ensures that the eyes are rarely exposed to piercing blows."
+    name = "\improper Knight-Apostle's heavy burgonet"
+    desc = "O' Father, hear my cry! Seat me by Your side as my death comes! </br> \
+    Make of me one within Your glories as I fall! </br> \
+    Let the world, through my deeds, once more see Your favor!"
 	item_state = "apostleburgeonet"
 	icon_state = "apostleburgeonet"
 	icon = 'icons/clothing/donor_clothes.dmi'
@@ -2805,11 +2805,91 @@ As Excaliber."
 
 /obj/item/clothing/head/roguetown/helmet/bascinet/apostle/ComponentInitialize()
 	..()
-	AddComponent(/datum/component/adjustable_clothing, (HEAD|EARS|HAIR), (HIDEEARS|HIDEHAIR), null, 'sound/items/visor.ogg', null, UPD_HEAD)	//Standard helmet
+	AddComponent(/datum/component/adjustable_clothing, (HEAD|EARS|HAIR), (HIDEEARS|HIDEHAIR), null, 'sound/items/visor.ogg', null, UPD_HEAD)
 	AddComponent(/datum/component/armour_filtering/negative, TRAIT_HONORBOUND)
 	AddComponent(/datum/component/armour_filtering/negative, TRAIT_FENCERDEXTERITY)
 
 /obj/item/clothing/head/roguetown/helmet/bascinet/apostle/attackby(obj/item/W, mob/living/user, params)
+	..()
+	if(!(istype(W, /obj/item/natural/feather) && !detail_tag))
+		return
+	var/choice = input(user, "Choose a color.", "Wings") as anything in COLOR_MAP
+	user.visible_message(span_warning("[user] adds [W] to [src]."))
+	user.transferItemToLoc(W, src, FALSE, FALSE)
+	detail_color = COLOR_MAP[choice]
+	detail_tag = "_detail"
+	update_icon()
+	if(loc == user && ishuman(user))
+		var/mob/living/carbon/H = user
+		H.update_inv_head()
+
+/obj/item/clothing/head/roguetown/helmet/bascinet/apostle_winged
+    name = "\improper Knight-Apostle's winged burgonet"
+    desc = "O' Psydon, see of Your servant. For I walk only where You have bid of me to. </br> \
+    Stand only within the places that You have blessed of me to. </br> \
+    And sing only the hymn and word You have gifted me to."
+	item_state = "wingedburgeonet"
+	icon_state = "wingedburgeonet"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	adjustable = CAN_CADJUST
+	emote_environment = 3
+	body_parts_covered = FULL_HEAD
+	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDESNOUT
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	block2add = FOV_BEHIND
+	smeltresult = /obj/item/ingot/steel
+	smelt_bar_num = 2
+	stack_fovs = TRUE
+
+/obj/item/clothing/head/roguetown/helmet/bascinet/apostle_winged/ComponentInitialize()
+	..()
+	AddComponent(/datum/component/adjustable_clothing, (HEAD|EARS|HAIR), (HIDEEARS|HIDEHAIR), null, 'sound/items/visor.ogg', null, UPD_HEAD)
+	AddComponent(/datum/component/armour_filtering/negative, TRAIT_HONORBOUND)
+	AddComponent(/datum/component/armour_filtering/negative, TRAIT_FENCERDEXTERITY)
+
+/obj/item/clothing/head/roguetown/helmet/bascinet/apostle_winged/attackby(obj/item/W, mob/living/user, params)
+	..()
+	if(!(istype(W, /obj/item/natural/feather) && !detail_tag))
+		return
+	var/choice = input(user, "Choose a color.", "Wings") as anything in COLOR_MAP
+	user.visible_message(span_warning("[user] adds [W] to [src]."))
+	user.transferItemToLoc(W, src, FALSE, FALSE)
+	detail_color = COLOR_MAP[choice]
+	detail_tag = "_detail"
+	update_icon()
+	if(loc == user && ishuman(user))
+		var/mob/living/carbon/H = user
+		H.update_inv_head()
+
+/obj/item/clothing/head/roguetown/helmet/sallet_winged
+    name = "\improper Knight-Apostle's winged sallet"
+    desc = "O' Lord, hear of my call. Guide me through the blackest of nights. </b> \
+    Steel my heart against the temptations of the damned and wicked. </b> \
+    Make of me to rest, within the warmest of places."
+	item_state = "wingedsallet"
+	icon_state = "wingedsallet"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	adjustable = CAN_CADJUST
+	emote_environment = 3
+	body_parts_covered = FULL_HEAD
+	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDESNOUT
+	flags_cover = HEADCOVERSEYES
+	body_parts_covered = HEAD|EARS|HAIR|NOSE|EYES
+	block2add = FOV_BEHIND
+	smeltresult = /obj/item/ingot/steel
+	smelt_bar_num = 2
+	stack_fovs = TRUE
+	armor = ARMOR_PLATE
+
+/obj/item/clothing/head/roguetown/helmet/sallet_winged/ComponentInitialize()
+	..()
+	AddComponent(/datum/component/adjustable_clothing, (HEAD|EARS|HAIR), (HIDEEARS|HIDEHAIR), null, 'sound/items/visor.ogg', null, UPD_HEAD)
+	AddComponent(/datum/component/armour_filtering/negative, TRAIT_HONORBOUND)
+	AddComponent(/datum/component/armour_filtering/negative, TRAIT_FENCERDEXTERITY)
+
+/obj/item/clothing/head/roguetown/helmet/sallet_winged/attackby(obj/item/W, mob/living/user, params)
 	..()
 	if(!(istype(W, /obj/item/natural/feather) && !detail_tag))
 		return
@@ -2833,33 +2913,34 @@ As Excaliber."
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 
 /obj/item/clothing/suit/roguetown/armor/plate/fluted/cuirass/robed/grandmaster
-	name = "\improper Knight-Abbess's scaled raiment"
-	desc = "A regal set of steel plate armor, further guarded with layers of scalemaille and worn atop a thick robe. The golden fluting and \
-	silvered finish indicates it to be custom-fitted to its intended wearer; the Order of the Final Hour's leading Abbess."
+    name = "\improper Knight-Abbot's plated raiment"
+    desc = "At the Demon's word, the sky grew crimson from flame. At our Lord's, the sound of ten thousand swords rang from their scabbards.</br> \
+    A great hymn rose over the blood-slaked fields, muddy from corpse and rain alike:</br> 'To Endure is to be Holy, as Our Lord is. Be as Him!'"
 	item_state = "dasfox_robedplate"
 	icon_state = "dasfox_robedplate"
 	allowed_sex = list(FEMALE)
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/robed/grandmaster
-	name = "\improper Knight-Abbess's scaled raiment"
-	desc = "A regal set of steel plate armor, further guarded with layers of scalemaille and worn atop a thick robe. The golden fluting and \
-	silvered finish indicates it to be custom-fitted to its intended wearer; the Order of the Final Hour's leading Abbess."
+    name = "\improper Knight-Abbot's plated raiment"
+    desc = "At the Demon's word, the sky grew crimson from flame. At our Lord's, the sound of ten thousand swords rang from their scabbards.</br> \
+    A great hymn rose over the blood-slaked fields, muddy from corpse and rain alike:</br> 'To Endure is to be Holy, as Our Lord is. Be as Him!'"
 	item_state = "dasfox_robedplate"
 	icon_state = "dasfox_robedplate"
 	allowed_sex = list(FEMALE)
 
 /obj/item/clothing/head/roguetown/helmet/bascinet/apostle/grandmaster
-	name = "\improper Knight-Abbess's burgeonet"
-	desc = "A regal steel bascinet, adorned with flanking wings. The golden fluting and silvered finish indicates it to be custom-fitted \
-	to its intended wearer; the Order of the Final Hour's leading Abbess."
+    name = "\improper Knight-Abbot's heavy burgonet"
+    desc = "The Demon's Legion fell before them, like wheat before the swinging scythe.</br However, the Demon's armies were numberless.</br> \
+    A sea of death, forever coming and marching in flame-borne fervour, crashed upon the Lord and his army in waves."
 	item_state = "dasfox_apostleburgeonet"
 	icon_state = "dasfox_apostleburgeonet"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 
 /obj/item/clothing/head/roguetown/helmet/grandmaster_habit
-	name = "\improper Knight-Abbess's habited burgonet"
-	desc = "A regal steel bascinet, worn underneath the thick habit of a Knight-Abbess."
+	name = "\improper Knight-Abbot's habited burgonet"
+    desc = "The Demon's Legion fell before them, like wheat before the swinging scythe.</br However, the Demon's armies were numberless.</br> \
+    A sea of death, forever coming and marching in flame-borne fervour, crashed upon the Lord and his army in waves."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	icon_state = "dasfox_habitburgeonet"
