@@ -2865,6 +2865,7 @@ As Excaliber."
 	smeltresult = /obj/item/ingot/steel
 	smelt_bar_num = 2
 	stack_fovs = TRUE
+	color = null
 
 /obj/item/clothing/head/roguetown/helmet/bascinet/grandmaster/ComponentInitialize()
 	..()
@@ -2895,9 +2896,8 @@ As Excaliber."
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	detail_tag = "_detail"
 	altdetail_tag = "_detailalt"
-	color = null
-	detail_color = "#FFFFFF"
-	altdetail_color = "#363737"
+	detail_color = CLOTHING_WHITE
+	altdetail_color = CLOTHING_WHITE
 	adjustable = CAN_CADJUST
 	emote_environment = 3
 	body_parts_covered = FULL_HEAD
