@@ -1156,7 +1156,9 @@
 /obj/item/enchantingkit/hellpossum_apostle_wingsallet
 	name = "'Apostolic Winged Sallet' morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Pigface Bascinet, Hounskull Bascinet, or Roundface Bascinet."
-	target_items = list(/obj/item/clothing/head/roguetown/helmet/sallet/visored)
+	target_items = list(
+		/obj/item/clothing/head/roguetown/helmet/sallet/visored
+	)
 	result_item = /obj/item/clothing/head/roguetown/helmet/sallet_winged
 	exact_type = TRUE
 
