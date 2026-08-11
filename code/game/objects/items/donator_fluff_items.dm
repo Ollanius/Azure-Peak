@@ -2881,7 +2881,7 @@ As Excaliber."
 	smeltresult = /obj/item/ingot/steel
 	smelt_bar_num = 2
 	stack_fovs = TRUE
-	armor = ARMOR_PLATE
+	detail_tag = "_detail"
 
 /obj/item/clothing/head/roguetown/helmet/sallet_winged/ComponentInitialize()
 	..()
