@@ -2633,6 +2633,7 @@ As Excaliber."
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	allowed_sex = list(FEMALE)
+	color = null
 
 /obj/item/clothing/suit/roguetown/armor/leather/heavy/coat/donator_squidqueen_alt
 	name = "frayed longcoat"
@@ -2644,6 +2645,7 @@ As Excaliber."
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	allowed_sex = list(FEMALE)
+	color = null
 
 /obj/item/clothing/suit/roguetown/armor/longcoat/donator_squidqueen
 	name = "ragged longcoat"
@@ -2655,6 +2657,7 @@ As Excaliber."
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	allowed_sex = list(FEMALE)
+	color = null
 
 /obj/item/clothing/suit/roguetown/armor/leather/heavy/coat/donator_squidqueen
 	name = "ragged longcoat"
@@ -2666,6 +2669,7 @@ As Excaliber."
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	allowed_sex = list(FEMALE)
+	color = null
 
 /obj/item/clothing/cloak/tabard/donator_squidqueen_harlottoga
 	name = "\improper Tathlyn's toga"
@@ -2678,9 +2682,10 @@ As Excaliber."
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	flags_inv = HIDECROTCH
 	allowed_sex = list(MALE)
+	color = null
 
 //Hellpossum
-/obj/item/clothing/suit/roguetown/armor/plate/cuirass/apostle
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/apostle
 	name = "apostolic cuirass"
 	desc = "A regal steel cuirass, decorated with motifs of the psycross. These breastplates unmistakably originate from Blackholt, where-in \
 	they're forged for service within the Order of the Final Hour."
@@ -2699,7 +2704,7 @@ As Excaliber."
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 
-/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/apostle
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/robed
 	name = "\improper Knight-Apostle's battle raiment"
 	desc = "A regal steel cuirass, decorated with motifs of the psycross and worn atop a robe. These breastplates unmistakably \
 	originate from Blackholt, where-in they're forged for service within the Order of the Final Hour."
@@ -2789,6 +2794,20 @@ As Excaliber."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 
+/obj/item/clothing/head/roguetown/helmet/bascinet/pigface/apostle/attackby(obj/item/W, mob/living/user, params)
+	..()
+	if(!(istype(W, /obj/item/natural/feather) && !detail_tag))
+		return
+	var/choice = input(user, "Choose a color.", "Wings") as anything in COLOR_MAP
+	user.visible_message(span_warning("[user] adds [W] to [src]."))
+	user.transferItemToLoc(W, src, FALSE, FALSE)
+	detail_color = COLOR_MAP[choice]
+	detail_tag = "_detail"
+	update_icon()
+	if(loc == user && ishuman(user))
+		var/mob/living/carbon/H = user
+		H.update_inv_head()
+
 /obj/item/clothing/head/roguetown/helmet/bascinet/pigface/burgeonet
 	name = "gothic burgeonet"
 	desc = "A magnificent steel helmet, and the newest of the venerable armet's lineage. The intricate fluting serves as a clear sign of its \
@@ -2828,22 +2847,9 @@ As Excaliber."
 	icon_state = "dasfox_habitburgeonet"
 	detail_tag = "_detail"
 	altdetail_tag = "_detailalt"
-	var/picked = FALSE
+	color = null
 	detail_color = "#FFFFFF"
 	altdetail_color = "#363737"
-
-/obj/item/clothing/head/roguetown/helmet/bascinet/pigface/apostle/habit/attack_right(mob/user)
-	..()
-	if(!picked)
-		var/choice = input(user, "Choose a color.", "Grenzelhoft colors") as anything in COLOR_MAP
-		var/playerchoice = COLOR_MAP[choice]
-		picked = TRUE
-		detail_color = playerchoice
-		detail_tag = "_detail"
-		update_icon()
-		if(loc == user && ishuman(user))
-			var/mob/living/carbon/H = user
-			H.update_inv_head()
 
 /obj/item/clothing/head/roguetown/helmet/bascinet/pigface/apostle/habit/Initialize()
 	. = ..()
@@ -2857,7 +2863,6 @@ As Excaliber."
 		if(get_detail_color())
 			pic.color = get_detail_color()
 		add_overlay(pic)
-
 	if(get_altdetail_tag())
 		var/mutable_appearance/pic2 = mutable_appearance(icon(icon, "[get_detail_state(icon_state)][altdetail_tag]"))
 		pic2.appearance_flags = RESET_COLOR
