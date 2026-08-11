@@ -2860,10 +2860,10 @@ As Excaliber."
 /obj/item/clothing/head/roguetown/helmet/grandmaster_habit
 	name = "\improper Knight-Abbess's habited burgonet"
 	desc = "A regal steel bascinet, worn underneath the thick habit of a Knight-Abbess."
-	item_state = "dasfox_habitburgeonet"
-	icon_state = "dasfox_habitburgeonet"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	icon_state = "dasfox_habitburgeonet"
+	item_state = "dasfox_habitburgeonet"
 	detail_tag = "_detail"
 	altdetail_tag = "_detailalt"
 	detail_color = CLOTHING_WHITE
