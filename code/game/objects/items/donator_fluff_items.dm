@@ -2930,7 +2930,7 @@ As Excaliber."
 
 /obj/item/clothing/head/roguetown/helmet/bascinet/apostle/grandmaster
 	name = "\improper Knight-Abbot's heavy burgonet"
-	desc = "The Demon's Legion fell before them, like wheat before the swinging scythe.</br However, the Demon's armies were numberless.</br> \
+	desc = "The Demon's Legion fell before them, like wheat before the swinging scythe. </br>However, the Demon's armies were numberless.</br> \
 	A sea of death, forever coming and marching in flame-borne fervour, crashed upon the Lord and his army in waves."
 	item_state = "dasfox_apostleburgeonet"
 	icon_state = "dasfox_apostleburgeonet"
@@ -2939,7 +2939,7 @@ As Excaliber."
 
 /obj/item/clothing/head/roguetown/helmet/grandmaster_habit
 	name = "\improper Knight-Abbot's habited burgonet"
-	desc = "The Demon's Legion fell before them, like wheat before the swinging scythe.</br However, the Demon's armies were numberless.</br> \
+	desc = "The Demon's Legion fell before them, like wheat before the swinging scythe. </br>However, the Demon's armies were numberless.</br> \
 	A sea of death, forever coming and marching in flame-borne fervour, crashed upon the Lord and his army in waves."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
