@@ -2878,15 +2878,15 @@ As Excaliber."
 	smelt_bar_num = 2
 	stack_fovs = TRUE
 
+/obj/item/clothing/head/roguetown/helmet/grandmaster_habit/Initialize()
+	. = ..()
+	update_icon()
+
 /obj/item/clothing/head/roguetown/helmet/grandmaster_habit/ComponentInitialize()
 	..()
 	AddComponent(/datum/component/adjustable_clothing, (HEAD|EARS|HAIR), (HIDEEARS|HIDEHAIR), null, 'sound/items/visor.ogg', null, UPD_HEAD)	//Standard helmet
 	AddComponent(/datum/component/armour_filtering/negative, TRAIT_HONORBOUND)
 	AddComponent(/datum/component/armour_filtering/negative, TRAIT_FENCERDEXTERITY)
-
-/obj/item/clothing/head/roguetown/helmet/grandmaster_habit/Initialize()
-	. = ..()
-	update_icon()
 
 /obj/item/clothing/head/roguetown/helmet/grandmaster_habit/update_icon()
 	cut_overlays()
