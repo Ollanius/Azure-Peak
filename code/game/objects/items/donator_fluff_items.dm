@@ -2656,7 +2656,7 @@ As Excaliber."
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	allowed_sex = list(FEMALE)
 
-/obj/item/clothing/suit/roguetown/armor/leather/heavy/coat/donator_squidqueen_alt
+/obj/item/clothing/suit/roguetown/armor/leather/heavy/coat/donator_squidqueen
 	name = "ragged longcoat"
 	desc = "A longcoat that has been languishing without proper care for longer than you'd dare to \
 	imagine. It's hard to tell whether those brown splotches were born from sullied dyes or disturbed soil."
