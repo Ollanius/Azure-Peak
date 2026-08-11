@@ -2634,7 +2634,7 @@ As Excaliber."
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	allowed_sex = list(FEMALE)
 
-/obj/item/clothing/suit/roguetown/armor/leather/heavy/donator_squidqueen_alt
+/obj/item/clothing/suit/roguetown/armor/leather/heavy/coat/donator_squidqueen_alt
 	name = "frayed longcoat"
 	desc = "A longcoat that has been languishing without proper care for longer than you'd dare to \
 	imagine. </br>'Had I tried to be your friend, would it have made a difference?'"
@@ -2656,7 +2656,7 @@ As Excaliber."
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	allowed_sex = list(FEMALE)
 
-/obj/item/clothing/suit/roguetown/armor/leather/heavy/coat/donator_squidqueen
+/obj/item/clothing/suit/roguetown/armor/leather/heavy/coat/donator_squidqueen_alt
 	name = "ragged longcoat"
 	desc = "A longcoat that has been languishing without proper care for longer than you'd dare to \
 	imagine. It's hard to tell whether those brown splotches were born from sullied dyes or disturbed soil."
@@ -2699,7 +2699,7 @@ As Excaliber."
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 
-/obj/item/clothing/suit/roguetown/armor/plate/fluted/cuirass/robed
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/apostle
 	name = "\improper Knight-Apostle's battle raiment"
 	desc = "A regal steel cuirass, decorated with motifs of the psycross and worn atop a robe. These breastplates unmistakably \
 	originate from Blackholt, where-in they're forged for service within the Order of the Final Hour."
@@ -2909,3 +2909,17 @@ As Excaliber."
 		if(get_altdetail_color())
 			pic2.color = get_altdetail_color()
 		add_overlay(pic2)
+
+// ROSYSATURNIIDAE
+/obj/item/clothing/mask/rogue/facemask/steel/maille/birdmask
+	name = "Beaked Mask"
+	desc = "A plated steel mask made to resemble a bird's beak.<br> \
+	While similar to the long masks of Pestra's faithful, this is designed to protect against far less insidious dangers. Namely, bladed weapons.<br> \
+	<font color='3399FF'>The light in your past will be your enemy, and whenever it catches you, it will burn you.</font><br>  \
+	<font color='3399FF'>But first, it must catch you. Go into the dark ahead, and do not look back.</font>"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	icon_state = "birdmask"
+
+/obj/item/clothing/mask/rogue/facemask/steel/maille/birdmask/ComponentInitialize()
+    pass() // *flips the bird at you* (this isnt meant to be adjustable)
