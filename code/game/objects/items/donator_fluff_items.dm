@@ -2848,7 +2848,7 @@ As Excaliber."
 	icon_state = "dasfox_robedplate"
 	allowed_sex = list(FEMALE)
 
-/obj/item/clothing/head/roguetown/helmet/bascinet/grandmaster
+/obj/item/clothing/head/roguetown/helmet/bascinet/apostle/grandmaster
 	name = "\improper Knight-Abbess's burgeonet"
 	desc = "A regal steel bascinet, adorned with flanking wings. The golden fluting and silvered finish indicates it to be custom-fitted \
 	to its intended wearer; the Order of the Final Hour's leading Abbess."
@@ -2856,38 +2856,8 @@ As Excaliber."
 	icon_state = "dasfox_apostleburgeonet"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
-	adjustable = CAN_CADJUST
-	emote_environment = 3
-	body_parts_covered = FULL_HEAD
-	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDESNOUT
-	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	block2add = FOV_BEHIND
-	smeltresult = /obj/item/ingot/steel
-	smelt_bar_num = 2
-	stack_fovs = TRUE
-	color = null
 
-/obj/item/clothing/head/roguetown/helmet/bascinet/grandmaster/ComponentInitialize()
-	..()
-	AddComponent(/datum/component/adjustable_clothing, (HEAD|EARS|HAIR), (HIDEEARS|HIDEHAIR), null, 'sound/items/visor.ogg', null, UPD_HEAD)	//Standard helmet
-	AddComponent(/datum/component/armour_filtering/negative, TRAIT_HONORBOUND)
-	AddComponent(/datum/component/armour_filtering/negative, TRAIT_FENCERDEXTERITY)
-
-/obj/item/clothing/head/roguetown/helmet/bascinet/grandmaster/attackby(obj/item/W, mob/living/user, params)
-	..()
-	if(!(istype(W, /obj/item/natural/feather) && !detail_tag))
-		return
-	var/choice = input(user, "Choose a color.", "Wings") as anything in COLOR_MAP
-	user.visible_message(span_warning("[user] adds [W] to [src]."))
-	user.transferItemToLoc(W, src, FALSE, FALSE)
-	detail_color = COLOR_MAP[choice]
-	detail_tag = "_detail"
-	update_icon()
-	if(loc == user && ishuman(user))
-		var/mob/living/carbon/H = user
-		H.update_inv_head()
-
-/obj/item/clothing/head/roguetown/helmet/bascinet/grandmaster_habit
+/obj/item/clothing/head/roguetown/helmet/grandmaster_habit
 	name = "\improper Knight-Abbess's habited burgonet"
 	desc = "A regal steel bascinet, worn underneath the thick habit of a Knight-Abbess."
 	item_state = "dasfox_habitburgeonet"
@@ -2908,17 +2878,17 @@ As Excaliber."
 	smelt_bar_num = 2
 	stack_fovs = TRUE
 
-/obj/item/clothing/head/roguetown/helmet/bascinet/grandmaster_habit/ComponentInitialize()
+/obj/item/clothing/head/roguetown/helmet/grandmaster_habit/ComponentInitialize()
 	..()
 	AddComponent(/datum/component/adjustable_clothing, (HEAD|EARS|HAIR), (HIDEEARS|HIDEHAIR), null, 'sound/items/visor.ogg', null, UPD_HEAD)	//Standard helmet
 	AddComponent(/datum/component/armour_filtering/negative, TRAIT_HONORBOUND)
 	AddComponent(/datum/component/armour_filtering/negative, TRAIT_FENCERDEXTERITY)
 
-/obj/item/clothing/head/roguetown/helmet/bascinet/grandmaster_habit/Initialize()
+/obj/item/clothing/head/roguetown/helmet/grandmaster_habit/Initialize()
 	. = ..()
 	update_icon()
 
-/obj/item/clothing/head/roguetown/helmet/bascinet/grandmaster_habit/update_icon()
+/obj/item/clothing/head/roguetown/helmet/grandmaster_habit/update_icon()
 	cut_overlays()
 	if(get_detail_tag())
 		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[get_detail_state(icon_state)][detail_tag]"))
