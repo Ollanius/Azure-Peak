@@ -2518,7 +2518,7 @@ As Excaliber."
 	allowed_sex = list(FEMALE)
 
 //Truill
-/obj/item/rogueweapon/sword/long/oldpsysword/donator_triull
+/obj/item/rogueweapon/sword/long/oldpsysword/donator_truill
 	name = "beflowered longsword"
 	desc = "A longsword belonging to the Order of Saint Eora, wrapped in thorny vines that prickle the hand-that-grasps. Rosas, calendulas, and \
 	matricarias decorate the blade like a steel-edged bouquet; a colorful reminder that evil can never hope to tarnish Psydonia's beauty."
@@ -2527,12 +2527,12 @@ As Excaliber."
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
 	bigboy = TRUE
 
-/obj/item/rogueweapon/sword/long/oldpsysword/donator_triull/pickup(mob/living/user)
+/obj/item/rogueweapon/sword/long/oldpsysword/donator_truill/pickup(mob/living/user)
 	. = ..()
 	to_chat(user, span_warning ("The thorns prick me."))
 	user.adjustBruteLoss(1)
 
-/obj/item/rogueweapon/sword/long/cleric/donator_triull
+/obj/item/rogueweapon/sword/long/cleric/donator_truill
 	name = "beflowered longsword"
 	desc = "A longsword belonging to the Order of Saint Eora, wrapped in thorny vines that prickle the hand-that-grasps. Rosas, calendulas, and \
 	matricarias decorate the blade like a steel-edged bouquet; a colorful reminder that evil can never hope to tarnish Psydonia's beauty."
@@ -2541,12 +2541,12 @@ As Excaliber."
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
 	bigboy = TRUE
 
-/obj/item/rogueweapon/sword/long/cleric/donator_triull/pickup(mob/living/user)
+/obj/item/rogueweapon/sword/long/cleric/donator_truill/pickup(mob/living/user)
 	. = ..()
 	to_chat(user, span_warning ("The thorns prick me."))
 	user.adjustBruteLoss(1)
 
-/obj/item/rogueweapon/sword/long/psysword/donator_triull
+/obj/item/rogueweapon/sword/long/psysword/donator_truill
 	name = "beflowered silver longsword"
 	desc = "A longsword belonging to the Order of Saint Eora, wrapped in thorny vines that prickle the hand-that-grasps. Rosas, calendulas, and \
 	matricarias decorate the blade like a silver-edged bouquet; a colorful reminder that evil can never hope to tarnish Psydonia's beauty."
@@ -2556,7 +2556,7 @@ As Excaliber."
 	bigboy = TRUE
 	is_silver = TRUE
 
-/obj/item/rogueweapon/sword/long/psysword/donator_triull/pickup(mob/living/user)
+/obj/item/rogueweapon/sword/long/psysword/donator_truill/pickup(mob/living/user)
 	. = ..()
 	to_chat(user, span_warning ("The thorns prick me."))
 	user.adjustBruteLoss(1)
