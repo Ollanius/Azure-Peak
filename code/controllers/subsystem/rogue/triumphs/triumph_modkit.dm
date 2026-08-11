@@ -1011,7 +1011,7 @@
 	icon_state = "classicbeakhelm"
 	item_state = "classicbeakhelm"
 	icon = 'icons/roguetown/clothing/head.dmi'
-	mob_overlay_icon = 'icons/clothing/onmob/head.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/head.dmi'
 
 /obj/item/clothing/head/roguetown/helmet/heavy/ravoxhelm/triumph
 	name = "valorian beak helmet"
