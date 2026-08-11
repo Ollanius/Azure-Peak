@@ -2697,8 +2697,8 @@ As Excaliber."
 //Hellpossum
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/apostle
 	name = "apostolic cuirass"
-	desc = "A regal steel cuirass, decorated with motifs of the psycross. </br>To my God, I will go willingly unto death. Can you say the \
-	same, heathen?"
+	desc = "The one whom repents, whom has faith. </br> They whom remain unshaken, by the darkness of the world. </br> \
+	They are whom shall know true peace."
 	icon_state = "apostlecuirass"
 	item_state = "apostlecuirass"
 	icon = 'icons/clothing/donor_clothes.dmi'
@@ -2706,7 +2706,8 @@ As Excaliber."
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/apostle
 	name = "apostolic plate armor"
-	desc = "A regal set of steel plate armor, decorated with motifs of the psycross. </br>Thy will be done, thy kingdom come."
+	desc = "Let thy blade pass upon mine flesh. </br>Let mine blood be spill't 'pon the ground. </br>\
+	Let my cries touch the hearts of those I stand a'fore. </br>Let mine be the last sacrifice."
 	icon_state = "apostleplate"
 	item_state = "apostleplate"
 	icon = 'icons/clothing/donor_clothes.dmi'
