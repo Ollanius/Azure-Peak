@@ -2854,6 +2854,8 @@ As Excaliber."
 	to its intended wearer; the Order of the Final Hour's leading Abbess."
 	item_state = "dasfox_apostleburgeonet"
 	icon_state = "dasfox_apostleburgeonet"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	adjustable = CAN_CADJUST
 	emote_environment = 3
 	body_parts_covered = FULL_HEAD
@@ -2889,6 +2891,8 @@ As Excaliber."
 	desc = "A regal steel bascinet, worn underneath the thick habit of a Knight-Abbess."
 	item_state = "dasfox_habitburgeonet"
 	icon_state = "dasfox_habitburgeonet"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	detail_tag = "_detail"
 	altdetail_tag = "_detailalt"
 	color = null
