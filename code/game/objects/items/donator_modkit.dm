@@ -1155,14 +1155,13 @@
 
 /obj/item/enchantingkit/hellpossum_apostle_wingsallet
 	name = "'Apostolic Winged Sallet' morphing elixir"
-	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Pigface Bascinet, Hounskull Bascinet, or Roundface Bascinet."
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Visored Sallet."
 	target_items = list(
 		/obj/item/clothing/head/roguetown/helmet/sallet/visored
 	)
 	result_item = /obj/item/clothing/head/roguetown/helmet/sallet_winged
-	exact_type = TRUE
 
-/obj/item/enchantingkit/hellpossum_grandmaster_habit
+/obj/item/enchantingkit/hellpossum_grandmaster_helm
 	name = "'Grandmaster's Burgeonet' morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Pigface Bascinet, Hounskull Bascinet, or Roundface Bascinet."
 	target_items = list(
@@ -1173,7 +1172,7 @@
 	result_item = null
 	exact_type = TRUE
 
-/obj/item/enchantingkit/hellpossum_grandmaster_helm
+/obj/item/enchantingkit/hellpossum_grandmaster_habit
 	name = "'Grandmaster's Habit' morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Pigface Bascinet, Hounskull Bascinet, or Roundface Bascinet."
 	target_items = list(
