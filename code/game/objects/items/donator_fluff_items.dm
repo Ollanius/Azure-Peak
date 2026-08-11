@@ -2704,9 +2704,9 @@ As Excaliber."
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/robed
-    name = "\improper Knight-Apostle's raiment"
-    desc = "The one whom repents, whom has faith. </br> They whom remain unshaken, by the darkness of the world. </br> \
-    They are whom shall know true peace."
+	name = "\improper Knight-Apostle's raiment"
+	desc = "The one whom repents, whom has faith. </br> They whom remain unshaken, by the darkness of the world. </br> \
+	They are whom shall know true peace."
 	icon_state = "robedcuirass"
 	item_state = "robedcuirass"
 	icon = 'icons/clothing/donor_clothes.dmi'
@@ -2731,9 +2731,9 @@ As Excaliber."
 		add_overlay(pic)
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/robed
-    name = "\improper Knight-Apostle's heavy raiment"
-    desc = "Let thy blade pass upon mine flesh. </br>Let mine blood be spill't 'pon the ground. </br>\
-    Let my cries touch the hearts of those I stand a'fore. </br>Let mine be the last sacrifice."
+	name = "\improper Knight-Apostle's heavy raiment"
+	desc = "Let thy blade pass upon mine flesh. </br>Let mine blood be spill't 'pon the ground. </br>\
+	Let my cries touch the hearts of those I stand a'fore. </br>Let mine be the last sacrifice."
 	item_state = "robedplate"
 	icon_state = "robedplate"
 	icon = 'icons/clothing/donor_clothes.dmi'
@@ -2758,9 +2758,9 @@ As Excaliber."
 		add_overlay(pic)
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/robed
-    name = "\improper Knight-Apostle's heavy raiment"
-    desc = "Let thy blade pass upon mine flesh. </br>Let mine blood be spill't 'pon the ground. </br>\
-    Let my cries touch the hearts of those I stand a'fore. </br>Let mine be the last sacrifice."
+	name = "\improper Knight-Apostle's heavy raiment"
+	desc = "Let thy blade pass upon mine flesh. </br>Let mine blood be spill't 'pon the ground. </br>\
+	Let my cries touch the hearts of those I stand a'fore. </br>Let mine be the last sacrifice."
 	item_state = "robedplate"
 	icon_state = "robedplate"
 	icon = 'icons/clothing/donor_clothes.dmi'
@@ -2785,10 +2785,10 @@ As Excaliber."
 		add_overlay(pic)
 
 /obj/item/clothing/head/roguetown/helmet/bascinet/apostle
-    name = "\improper Knight-Apostle's heavy burgonet"
-    desc = "O' Father, hear my cry! Seat me by Your side as my death comes! </br> \
-    Make of me one within Your glories as I fall! </br> \
-    Let the world, through my deeds, once more see Your favor!"
+	name = "\improper Knight-Apostle's heavy burgonet" //Note; rebuilding these helmets were the only way - to my knowledge - to make these custom details work.
+	desc = "O' Father, hear my cry! Seat me by Your side as my death comes! </br> \
+	Make of me one within Your glories as I fall! </br> \
+	Let the world, through my deeds, once more see Your favor!" //A bit messy, but it works. Might be worth revisiting to properly optimize, later.
 	item_state = "apostleburgeonet"
 	icon_state = "apostleburgeonet"
 	icon = 'icons/clothing/donor_clothes.dmi'
@@ -2824,10 +2824,10 @@ As Excaliber."
 		H.update_inv_head()
 
 /obj/item/clothing/head/roguetown/helmet/bascinet/apostle_winged
-    name = "\improper Knight-Apostle's winged burgonet"
-    desc = "O' Psydon, see of Your servant. For I walk only where You have bid of me to. </br> \
-    Stand only within the places that You have blessed of me to. </br> \
-    And sing only the hymn and word You have gifted me to."
+	name = "\improper Knight-Apostle's winged burgonet"
+	desc = "O' Psydon, see of Your servant. For I walk only where You have bid of me to. </br> \
+	Stand only within the places that You have blessed of me to. </br> \
+	And sing only the hymn and word You have gifted me to."
 	item_state = "wingedburgeonet"
 	icon_state = "wingedburgeonet"
 	icon = 'icons/clothing/donor_clothes.dmi'
@@ -2863,12 +2863,12 @@ As Excaliber."
 		H.update_inv_head()
 
 /obj/item/clothing/head/roguetown/helmet/sallet_winged
-    name = "\improper Knight-Apostle's winged sallet"
-    desc = "O' Lord, hear of my call. Guide me through the blackest of nights. </b> \
-    Steel my heart against the temptations of the damned and wicked. </b> \
-    Make of me to rest, within the warmest of places."
-	item_state = "wingedsallet"
-	icon_state = "wingedsallet"
+	name = "\improper Knight-Apostle's winged sallet"
+	desc = "O' Lord, hear of my call. Guide me through the blackest of nights. </b> \
+	Steel my heart against the temptations of the damned and wicked. </b> \
+	Make of me to rest, within the warmest of places."
+	item_state = "psyallet"
+	icon_state = "psyallet"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	adjustable = CAN_CADJUST
@@ -2913,25 +2913,25 @@ As Excaliber."
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 
 /obj/item/clothing/suit/roguetown/armor/plate/fluted/cuirass/robed/grandmaster
-    name = "\improper Knight-Abbot's plated raiment"
-    desc = "At the Demon's word, the sky grew crimson from flame. At our Lord's, the sound of ten thousand swords rang from their scabbards.</br> \
-    A great hymn rose over the blood-slaked fields, muddy from corpse and rain alike:</br> 'To Endure is to be Holy, as Our Lord is. Be as Him!'"
+	name = "\improper Knight-Abbot's plated raiment"
+	desc = "At the Demon's word, the sky grew crimson from flame. At our Lord's, the sound of ten thousand swords rang from their scabbards.</br> \
+	A great hymn rose over the blood-slaked fields, muddy from corpse and rain alike:</br> 'To Endure is to be Holy, as Our Lord is. Be as Him!'"
 	item_state = "dasfox_robedplate"
 	icon_state = "dasfox_robedplate"
 	allowed_sex = list(FEMALE)
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/robed/grandmaster
-    name = "\improper Knight-Abbot's plated raiment"
-    desc = "At the Demon's word, the sky grew crimson from flame. At our Lord's, the sound of ten thousand swords rang from their scabbards.</br> \
-    A great hymn rose over the blood-slaked fields, muddy from corpse and rain alike:</br> 'To Endure is to be Holy, as Our Lord is. Be as Him!'"
+	name = "\improper Knight-Abbot's plated raiment"
+	desc = "At the Demon's word, the sky grew crimson from flame. At our Lord's, the sound of ten thousand swords rang from their scabbards.</br> \
+	A great hymn rose over the blood-slaked fields, muddy from corpse and rain alike:</br> 'To Endure is to be Holy, as Our Lord is. Be as Him!'"
 	item_state = "dasfox_robedplate"
 	icon_state = "dasfox_robedplate"
 	allowed_sex = list(FEMALE)
 
 /obj/item/clothing/head/roguetown/helmet/bascinet/apostle/grandmaster
-    name = "\improper Knight-Abbot's heavy burgonet"
-    desc = "The Demon's Legion fell before them, like wheat before the swinging scythe.</br However, the Demon's armies were numberless.</br> \
-    A sea of death, forever coming and marching in flame-borne fervour, crashed upon the Lord and his army in waves."
+	name = "\improper Knight-Abbot's heavy burgonet"
+	desc = "The Demon's Legion fell before them, like wheat before the swinging scythe.</br However, the Demon's armies were numberless.</br> \
+	A sea of death, forever coming and marching in flame-borne fervour, crashed upon the Lord and his army in waves."
 	item_state = "dasfox_apostleburgeonet"
 	icon_state = "dasfox_apostleburgeonet"
 	icon = 'icons/clothing/donor_clothes.dmi'
@@ -2939,8 +2939,8 @@ As Excaliber."
 
 /obj/item/clothing/head/roguetown/helmet/grandmaster_habit
 	name = "\improper Knight-Abbot's habited burgonet"
-    desc = "The Demon's Legion fell before them, like wheat before the swinging scythe.</br However, the Demon's armies were numberless.</br> \
-    A sea of death, forever coming and marching in flame-borne fervour, crashed upon the Lord and his army in waves."
+	desc = "The Demon's Legion fell before them, like wheat before the swinging scythe.</br However, the Demon's armies were numberless.</br> \
+	A sea of death, forever coming and marching in flame-borne fervour, crashed upon the Lord and his army in waves."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	icon_state = "dasfox_habitburgeonet"
