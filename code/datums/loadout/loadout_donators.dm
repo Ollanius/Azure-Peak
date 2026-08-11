@@ -882,27 +882,27 @@
 	ckeywhitelist = list("lmwevil")
 
 /datum/loadout_item/donator/hellpossum_apostle_armor
-	name = "Donator Kit - Apostolic Armor"
+	name = "Donator Kit - Apostle's Armor"
 	path = /obj/item/enchantingkit/hellpossum_apostle_armor
 	ckeywhitelist = list("dasfox, purplepineapple, bigfoot02, ryan180602, oddbomber3768")
 
 /datum/loadout_item/donator/hellpossum_robed_apostle_armor
-	name = "Donator Kit - Apostolic Armor, Robed"
+	name = "Donator Kit - Apostle's Armor, Robed"
 	path = /obj/item/enchantingkit/hellpossum_robed_apostle_armor
 	ckeywhitelist = list("dasfox, purplepineapple, bigfoot02, ryan180602, oddbomber3768")
 
 /datum/loadout_item/donator/hellpossum_apostle_helm
-	name = "Donator Kit - Apostolic Burgeonet, Heavy"
+	name = "Donator Kit - Apostle's Burgeonet"
 	path = /obj/item/enchantingkit/hellpossum_apostle_helm
 	ckeywhitelist = list("dasfox, purplepineapple, bigfoot02, ryan180602, oddbomber3768")
 
 /datum/loadout_item/donator/hellpossum_apostle_winghelm
-	name = "Donator Kit - Apostolic Burgeonet, Winged"
+	name = "Donator Kit - Apostle's Burgeonet, Winged"
 	path = /obj/item/enchantingkit/hellpossum_apostle_winghelm
 	ckeywhitelist = list("dasfox, purplepineapple, bigfoot02, ryan180602, oddbomber3768")
 
 /datum/loadout_item/donator/hellpossum_apostle_wingsallet
-	name = "Donator Kit - Apostolic Sallet, Winged"
+	name = "Donator Kit - Apostle's Sallet, Winged"
 	path = /obj/item/enchantingkit/hellpossum_apostle_wingsallet
 	ckeywhitelist = list("dasfox, purplepineapple, bigfoot02, ryan180602, oddbomber3768")
 
