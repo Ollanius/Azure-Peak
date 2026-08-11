@@ -2893,10 +2893,9 @@ As Excaliber."
 	..()
 	if(!(istype(W, /obj/item/natural/feather) && !detail_tag))
 		return
-	var/choice = input(user, "Choose a color.", "Wings") as anything in COLOR_MAP
 	user.visible_message(span_warning("[user] adds [W] to [src]."))
 	user.transferItemToLoc(W, src, FALSE, FALSE)
-	detail_color = COLOR_MAP[choice]
+	detail_color = COLOR_WHITE
 	detail_tag = "_detail"
 	update_icon()
 	if(loc == user && ishuman(user))
