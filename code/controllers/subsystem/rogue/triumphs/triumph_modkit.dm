@@ -404,6 +404,16 @@
 	result_item = null
 	exact_type = TRUE
 
+/obj/item/enchantingkit/triumph_weaponkit_psymace
+	name = "'Classic Psydonic Handmace' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Psydonic Handmace or Enduring Handmace."
+	target_items = list(
+		/obj/item/rogueweapon/mace/cudgel/psy/old						= /obj/item/rogueweapon/mace/cudgel/psy/old/triumph_classic,
+		/obj/item/rogueweapon/mace/cudgel/psy	  						= /obj/item/rogueweapon/mace/cudgel/psy/triumph_classic
+		)
+	result_item = null
+	exact_type = TRUE
+
 //////////////////////////////
 // TRIUMPH-RESKIN EXAMPLES! //
 //////////////////////////////
@@ -1006,3 +1016,9 @@
 	desc = "All it takes is the will of one to change the world; be it for the better or worse."
 	icon_state = "classicbeakhelm"
 	item_state = "classicbeakhelm"
+
+/obj/item/rogueweapon/mace/cudgel/psy/triumph_classic
+	icon_state = "psyflangedmacelegacy"
+
+/obj/item/rogueweapon/mace/cudgel/psy/old/triumph_classic
+	icon_state = "opsyflangedmacelegacy"
