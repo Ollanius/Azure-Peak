@@ -2881,7 +2881,6 @@ As Excaliber."
 	smeltresult = /obj/item/ingot/steel
 	smelt_bar_num = 2
 	stack_fovs = TRUE
-	detail_tag = "_detail"
 
 /obj/item/clothing/head/roguetown/helmet/sallet_winged/ComponentInitialize()
 	..()
@@ -2893,14 +2892,24 @@ As Excaliber."
 	..()
 	if(!(istype(W, /obj/item/natural/feather) && !detail_tag))
 		return
+	var/choice = input(user, "Choose a color.", "Wings") as anything in COLOR_MAP
 	user.visible_message(span_warning("[user] adds [W] to [src]."))
 	user.transferItemToLoc(W, src, FALSE, FALSE)
-	detail_color = COLOR_WHITE
+	detail_color = COLOR_MAP[choice]
 	detail_tag = "_detail"
 	update_icon()
 	if(loc == user && ishuman(user))
 		var/mob/living/carbon/H = user
 		H.update_inv_head()
+
+/obj/item/clothing/head/roguetown/helmet/sallet_winged/update_icon()
+	cut_overlays()
+	if(get_detail_tag())
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[get_detail_state(icon_state)][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)
 
 /obj/item/clothing/head/roguetown/helmet/bascinet/pigface/burgeonet
 	name = "gothic burgeonet"
