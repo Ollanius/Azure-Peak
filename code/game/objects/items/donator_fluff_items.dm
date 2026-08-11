@@ -2740,7 +2740,7 @@ As Excaliber."
 			pic.color = get_detail_color()
 		add_overlay(pic)
 
-/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/robed
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/fluted/robed
 	name = "\improper Knight-Apostle's heavy raiment"
 	desc = "Let thy blade pass upon mine flesh. </br>Let mine blood be spill't 'pon the ground. </br>\
 	Let my cries touch the hearts of those I stand a'fore. </br>Let mine be the last sacrifice."
@@ -2754,11 +2754,11 @@ As Excaliber."
 	color = null
 	detail_color = CLOTHING_WHITE
 
-/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/robed/Initialize()
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/fluted/robed/Initialize()
 	. = ..()
 	update_icon()
 
-/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/robed/update_icon()
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/fluted/robed/update_icon()
 	cut_overlays()
 	if(get_detail_tag())
 		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
@@ -2941,7 +2941,7 @@ As Excaliber."
 			pic.color = get_detail_color()
 		add_overlay(pic)
 
-/obj/item/clothing/suit/roguetown/armor/plate/fluted/cuirass/robed/grandmaster
+/obj/item/clothing/suit/roguetown/armor/plate/full/robed/grandmaster
 	name = "\improper Knight-Abbot's plated raiment"
 	desc = "At the Demon's word, the sky grew crimson from flame. At our Lord's, the sound of ten thousand swords rang from their scabbards.</br> \
 	A great hymn rose over the blood-slaked fields, muddy from corpse and rain alike:</br> 'To Endure is to be Holy, as Our Lord is. Be as Him!'"
@@ -2949,7 +2949,7 @@ As Excaliber."
 	icon_state = "dasfox_robedplate"
 	allowed_sex = list(FEMALE)
 
-/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/robed/grandmaster
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/fluted/robed/grandmaster
 	name = "\improper Knight-Abbot's plated raiment"
 	desc = "At the Demon's word, the sky grew crimson from flame. At our Lord's, the sound of ten thousand swords rang from their scabbards.</br> \
 	A great hymn rose over the blood-slaked fields, muddy from corpse and rain alike:</br> 'To Endure is to be Holy, as Our Lord is. Be as Him!'"
