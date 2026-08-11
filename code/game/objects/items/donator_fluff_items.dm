@@ -2672,7 +2672,7 @@ As Excaliber."
 	color = null
 
 /obj/item/clothing/cloak/tabard/donator_squidqueen_harlottoga
-	name = "\improper Tathlyn's toga"
+	name = "Tathlyn's toga"
 	desc = "Strips of fabric held together at the side with nothing but a few thorns, this entire thing could be ripped off in an \
 	instant for dramatic naked wrestling, or to be a harlot. </br>It leaves literally nothing to the imagination besides one's \
 	groin, exposing their abs, chest, and thighs to the world around them. </br>It might actually be a fanciful tablecloth repurposed."
@@ -2785,7 +2785,7 @@ As Excaliber."
 			pic.color = get_detail_color()
 		add_overlay(pic)
 
-/obj/item/clothing/head/roguetown/helmet/bascinet/pigface/apostle
+/obj/item/clothing/head/roguetown/helmet/bascinet/apostle
 	name = "\improper Knight-Apostle's burgeonet"
 	desc = "A regal steel helmet, forged for service within the Order of the Final Hour. The angled visor, more akin to a slab than anything \
 	else, ensures that the eyes are rarely exposed to piercing blows."
@@ -2793,8 +2793,23 @@ As Excaliber."
 	icon_state = "apostleburgeonet"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	adjustable = CAN_CADJUST
+	emote_environment = 3
+	body_parts_covered = FULL_HEAD
+	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDESNOUT
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
+	block2add = FOV_BEHIND
+	smeltresult = /obj/item/ingot/steel
+	smelt_bar_num = 2
+	stack_fovs = TRUE
 
-/obj/item/clothing/head/roguetown/helmet/bascinet/pigface/apostle/attackby(obj/item/W, mob/living/user, params)
+/obj/item/clothing/head/roguetown/helmet/bascinet/apostle/ComponentInitialize()
+	..()
+	AddComponent(/datum/component/adjustable_clothing, (HEAD|EARS|HAIR), (HIDEEARS|HIDEHAIR), null, 'sound/items/visor.ogg', null, UPD_HEAD)	//Standard helmet
+	AddComponent(/datum/component/armour_filtering/negative, TRAIT_HONORBOUND)
+	AddComponent(/datum/component/armour_filtering/negative, TRAIT_FENCERDEXTERITY)
+
+/obj/item/clothing/head/roguetown/helmet/bascinet/apostle/attackby(obj/item/W, mob/living/user, params)
 	..()
 	if(!(istype(W, /obj/item/natural/feather) && !detail_tag))
 		return
@@ -2833,14 +2848,14 @@ As Excaliber."
 	icon_state = "dasfox_robedplate"
 	allowed_sex = list(FEMALE)
 
-/obj/item/clothing/head/roguetown/helmet/bascinet/pigface/apostle/grandmaster
+/obj/item/clothing/head/roguetown/helmet/bascinet/apostle/grandmaster
 	name = "\improper Knight-Abbess's burgeonet"
 	desc = "A regal steel bascinet, adorned with flanking wings. The golden fluting and silvered finish indicates it to be custom-fitted \
 	to its intended wearer; the Order of the Final Hour's leading Abbess."
 	item_state = "dasfox_apostleburgeonet"
 	icon_state = "dasfox_apostleburgeonet"
 
-/obj/item/clothing/head/roguetown/helmet/bascinet/pigface/apostle/habit
+/obj/item/clothing/head/roguetown/helmet/bascinet/apostle/habit
 	name = "\improper Knight-Abbess's habited burgonet"
 	desc = "A regal steel bascinet, worn underneath the thick habit of a Knight-Abbess."
 	item_state = "dasfox_habitburgeonet"
@@ -2851,11 +2866,11 @@ As Excaliber."
 	detail_color = "#FFFFFF"
 	altdetail_color = "#363737"
 
-/obj/item/clothing/head/roguetown/helmet/bascinet/pigface/apostle/habit/Initialize()
+/obj/item/clothing/head/roguetown/helmet/bascinet/apostle/habit/Initialize()
 	. = ..()
 	update_icon()
 
-/obj/item/clothing/head/roguetown/helmet/bascinet/pigface/apostle/habit/update_icon()
+/obj/item/clothing/head/roguetown/helmet/bascinet/apostle/habit/update_icon()
 	cut_overlays()
 	if(get_detail_tag())
 		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[get_detail_state(icon_state)][detail_tag]"))
