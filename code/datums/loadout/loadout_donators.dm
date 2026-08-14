@@ -952,7 +952,7 @@
 /datum/loadout_item/donator/nero_woodlandcloak_noire
 	name = "Gift - Collared Woodland Mantle"
 	path = /obj/item/clothing/cloak/furcloak/woodland/noire
-	ckeywhitelist = list("nerocavalier","yeeteryieter","irlcatgirl","wickedcybs","spartanbobby","eirenxiv","freestylalt","lagomorphica","purplepineapple","stalkerino","shadowradar1212","omicega")
+	ckeywhitelist = list("nerocavalier")
 
 /datum/loadout_item/donator/nero_woodlandbrig
 	name = "Donator Kit - Woodland Brigandine"
