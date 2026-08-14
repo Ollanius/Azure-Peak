@@ -3119,14 +3119,16 @@ As Excaliber."
 	sleevetype = "shirt"
 
 /obj/item/clothing/cloak/furcloak/woodland/dye
-	name = "woodlande mantle"
+	name = "woodland mantle"
 	desc = "A flowing cloak that can be worn tighter or looser as the wearer deems fit. More than suitable for protection from the \
-	elements, the concealment of one's identity or as a warm blanket during those cold nitees."
+	elements, the concealment of one's identity or as a warm blanket during those cold nites."
 	icon_state = "woodwalkcloak"
 	item_state = "woodwalkcloak"
-	color = CLOTHING_WHITE
 	detail_tag = "_detail"
 	detail_color = CLOTHING_WHITE
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_clothes.dmi'
 
 /obj/item/clothing/cloak/furcloak/woodland/dye/Initialize()
 	. = ..()
