@@ -3126,9 +3126,6 @@ As Excaliber."
 	item_state = "woodwalkcloak"
 	detail_tag = "_detail"
 	detail_color = CLOTHING_WHITE
-	icon = 'icons/clothing/donor_clothes.dmi'
-	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
-	sleeved = 'icons/clothing/onmob/donor_clothes.dmi'
 
 /obj/item/clothing/cloak/furcloak/woodland/dye/Initialize()
 	. = ..()
@@ -3284,15 +3281,19 @@ As Excaliber."
 /obj/item/clothing/suit/roguetown/armor/brigandine/light/woodland/custom
 	item_state = "woodwalkerbrig"
 	icon_state = "woodwalkerbrig"
+	detail_color = #7C6956
 
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/woodland/custom
 	item_state = "woodwalkerbrig"
 	icon_state = "woodwalkerbrig"
+	detail_color = #7C6956
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/woodland/custom
 	item_state = "woodwalkerbrig"
 	icon_state = "woodwalkerbrig"
+	detail_color = #7C6956
 
 /obj/item/clothing/suit/roguetown/armor/leather/studded/woodland/custom
 	item_state = "woodwalkerbrig"
 	icon_state = "woodwalkerbrig"
+	detail_color = #7C6956
