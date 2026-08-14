@@ -3098,3 +3098,5 @@ As Excaliber."
 
 /obj/item/clothing/mask/rogue/facemask/steel/maille/birdmask/ComponentInitialize()
     pass() // *flips the bird at you* (this isnt meant to be adjustable)
+
+// NOIRE + CO.
