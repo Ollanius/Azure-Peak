@@ -958,8 +958,3 @@
 	name = "Donator Kit - Woodland Brigandine"
 	path = /obj/item/enchantingkit/nero_woodlandbrig
 	ckeywhitelist = list("nerocavalier","yeeteryieter","irlcatgirl","wickedcybs","spartanbobby","eirenxiv","freestylalt","lagomorphica","purplepineapple","stalkerino","shadowradar1212","omicega")
-
-/datum/loadout_item/donator/nero_woodlandbrig_dye
-	name = "Donator Kit - Woodland Brigandine, Dyeable"
-	path = /obj/item/enchantingkit/nero_woodlandbrig
-	ckeywhitelist = list("nerocavalier","yeeteryieter","irlcatgirl","wickedcybs","spartanbobby","eirenxiv","freestylalt","lagomorphica","purplepineapple","stalkerino","shadowradar1212","omicega")
