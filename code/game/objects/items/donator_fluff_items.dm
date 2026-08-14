@@ -3107,14 +3107,16 @@ As Excaliber."
 	icon_state = "woodwalkercloak"
 	item_state = "woodwalkercloak"
 	boobed = FALSE
+	nodismemsleeves = TRUE
+	inhand_mod = TRUE
 	flags_inv = HIDECROTCH|HIDEBOOB
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_clothes.dmi'
 	color = CLOTHING_WHITE
-	detail_tag = "_detail"
-	detail_color = CLOTHING_WHITE
 	allowed_sex = list(MALE, FEMALE)
+	alternate_worn_layer = CLOAK_BEHIND_LAYER
+	sleevetype = "shirt"
 
 /obj/item/clothing/cloak/furcloak/woodland/dye
 	name = "woodland mantle"
@@ -3122,6 +3124,8 @@ As Excaliber."
 	elements, the concealment of one's identity or as a warm blanket during those cold nites."
 	icon_state = "woodwalkcloak"
 	item_state = "woodwalkcloak"
+	detail_tag = "_detail"
+	detail_color = CLOTHING_WHITE
 
 /obj/item/clothing/cloak/furcloak/woodland/noire
 	name = "collared woodland mantle"
