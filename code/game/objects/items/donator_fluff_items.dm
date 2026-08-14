@@ -3118,7 +3118,7 @@ As Excaliber."
 	alternate_worn_layer = CLOAK_BEHIND_LAYER
 	sleevetype = "shirt"
 
-/obj/item/clothing/cloak/furcloak/woodland/dye
+/obj/item/clothing/cloak/woodland_dye
 	name = "woodland mantle"
 	desc = "A flowing cloak that can be worn tighter or looser as the wearer deems fit. More than suitable for protection from the \
 	elements, the concealment of one's identity or as a warm blanket during those cold nites."
@@ -3126,8 +3126,19 @@ As Excaliber."
 	item_state = "woodwalkcloak"
 	detail_tag = "_detail"
 	detail_color = CLOTHING_WHITE
+	boobed = FALSE
+	nodismemsleeves = TRUE
+	inhand_mod = TRUE
+	flags_inv = HIDECROTCH|HIDEBOOB
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_clothes.dmi'
+	color = CLOTHING_WHITE
+	allowed_sex = list(MALE, FEMALE)
+	alternate_worn_layer = CLOAK_BEHIND_LAYER
+	sleevetype = "shirt"
 
-/obj/item/clothing/cloak/furcloak/woodland/dye/Initialize()
+/obj/item/clothing/cloak/woodland_dye/Initialize()
 	. = ..()
 	update_icon()
 

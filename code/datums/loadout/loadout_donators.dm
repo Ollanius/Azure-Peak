@@ -946,7 +946,7 @@
 
 /datum/loadout_item/donator/nero_woodlandcloak_dye
 	name = "Gift - Woodland Mantle, Dyeable"
-	path = /obj/item/clothing/cloak/furcloak/woodland/dye
+	path = /obj/item/clothing/cloak/woodland_dye
 	ckeywhitelist = list("nerocavalier","yeeteryieter","irlcatgirl","wickedcybs","spartanbobby","eirenxiv","freestylalt","lagomorphica","purplepineapple","stalkerino","shadowradar1212","omicega")
 
 /datum/loadout_item/donator/nero_woodlandhood
