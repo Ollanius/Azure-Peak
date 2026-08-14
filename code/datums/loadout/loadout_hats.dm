@@ -224,3 +224,8 @@
 	name = "Flamboyant Hat"
 	path = /obj/item/clothing/head/roguetown/flamboyant
 	sort_category = "Hats"
+
+/datum/loadout_item/shawl
+	name = "Shawl"
+	path = /obj/item/clothing/head/roguetown/roguehood/shawl
+	sort_category = "Hats"
