@@ -3142,6 +3142,7 @@ As Excaliber."
 	block2add = null
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	color = null
 
 /obj/item/clothing/head/roguetown/roguehood/shawl/woodland
 	name = "woodland shawl"
