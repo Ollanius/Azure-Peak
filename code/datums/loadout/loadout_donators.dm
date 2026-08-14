@@ -944,32 +944,17 @@
 	path = /obj/item/clothing/cloak/furcloak/woodland
 	ckeywhitelist = list("nerocavalier","yeeteryieter","irlcatgirl","wickedcybs","spartanbobby","eirenxiv","freestylalt","lagomorphica","purplepineapple","stalkerino","shadowradar1212","omicega")
 
-/datum/loadout_item/donator/nero_woodlandcloak_dye
-	name = "Gift - Woodland Mantle, Dyeable"
-	path = /obj/item/clothing/cloak/furcloak/woodland/dye
-	ckeywhitelist = list("nerocavalier","yeeteryieter","irlcatgirl","wickedcybs","spartanbobby","eirenxiv","freestylalt","lagomorphica","purplepineapple","stalkerino","shadowradar1212","omicega")
-
 /datum/loadout_item/donator/nero_woodlandhood
 	name = "Gift - Woodland Shawl"
 	path = /obj/item/clothing/head/roguetown/roguehood/shawl/woodland
 	ckeywhitelist = list("nerocavalier","yeeteryieter","irlcatgirl","wickedcybs","spartanbobby","eirenxiv","freestylalt","lagomorphica","purplepineapple","stalkerino","shadowradar1212","omicega")
 
-/datum/loadout_item/donator/nero_woodlandhood_dye
-	name = "Gift - Woodland Shawl, Dyeable"
-	path = /obj/item/clothing/head/roguetown/roguehood/shawl
-	ckeywhitelist = list("nerocavalier","yeeteryieter","irlcatgirl","wickedcybs","spartanbobby","eirenxiv","freestylalt","lagomorphica","purplepineapple","stalkerino","shadowradar1212","omicega")
-
 /datum/loadout_item/donator/nero_woodlandcloak_noire
 	name = "Gift - Collared Woodland Mantle"
 	path = /obj/item/clothing/cloak/furcloak/woodland/noire
-	ckeywhitelist = list("nerocavalier","yeeteryieter","irlcatgirl","wickedcybs","spartanbobby","eirenxiv","freestylalt","lagomorphica","purplepineapple","stalkerino","shadowradar1212","omicega")
+	ckeywhitelist = list("nerocavalier")
 
 /datum/loadout_item/donator/nero_woodlandbrig
 	name = "Donator Kit - Woodland Brigandine"
-	path = /obj/item/enchantingkit/nero_woodlandbrig
-	ckeywhitelist = list("nerocavalier","yeeteryieter","irlcatgirl","wickedcybs","spartanbobby","eirenxiv","freestylalt","lagomorphica","purplepineapple","stalkerino","shadowradar1212","omicega")
-
-/datum/loadout_item/donator/nero_woodlandbrig_dye
-	name = "Donator Kit - Woodland Brigandine, Dyeable"
 	path = /obj/item/enchantingkit/nero_woodlandbrig
 	ckeywhitelist = list("nerocavalier","yeeteryieter","irlcatgirl","wickedcybs","spartanbobby","eirenxiv","freestylalt","lagomorphica","purplepineapple","stalkerino","shadowradar1212","omicega")
