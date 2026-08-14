@@ -3164,7 +3164,7 @@ As Excaliber."
 	icon_state = "woodwalkbrig"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
-	sleeved = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/woodland
 	name = "woodland brigandine"
@@ -3175,7 +3175,7 @@ As Excaliber."
 	icon_state = "woodwalkbrig"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
-	sleeved = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/woodland/attack_right(mob/user)
 	if(detail_tag)
@@ -3211,7 +3211,7 @@ As Excaliber."
 	icon_state = "woodwalkbrig"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
-	sleeved = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/woodland/attack_right(mob/user)
 	if(detail_tag)
@@ -3247,7 +3247,7 @@ As Excaliber."
 	icon_state = "woodwalkbrig"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
-	sleeved = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 
 /obj/item/clothing/suit/roguetown/armor/leather/studded/woodland/attack_right(mob/user)
 	if(detail_tag)
