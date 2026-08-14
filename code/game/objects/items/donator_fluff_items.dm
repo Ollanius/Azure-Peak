@@ -3281,19 +3281,19 @@ As Excaliber."
 /obj/item/clothing/suit/roguetown/armor/brigandine/light/woodland/custom
 	item_state = "woodwalkerbrig"
 	icon_state = "woodwalkerbrig"
-	detail_color = #7C6956
+	detail_color = "#7c6965"
 
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/woodland/custom
 	item_state = "woodwalkerbrig"
 	icon_state = "woodwalkerbrig"
-	detail_color = #7C6956
+	detail_color = "#7c6965"
 
 /obj/item/clothing/suit/roguetown/armor/chainmail/woodland/custom
 	item_state = "woodwalkerbrig"
 	icon_state = "woodwalkerbrig"
-	detail_color = #7C6956
+	detail_color = "#7c6965"
 
 /obj/item/clothing/suit/roguetown/armor/leather/studded/woodland/custom
 	item_state = "woodwalkerbrig"
 	icon_state = "woodwalkerbrig"
-	detail_color = #7C6956
+	detail_color = "#7c6965"
