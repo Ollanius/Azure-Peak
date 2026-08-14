@@ -3127,6 +3127,10 @@ As Excaliber."
 	detail_tag = "_detail"
 	detail_color = CLOTHING_WHITE
 
+/obj/item/clothing/cloak/furcloak/woodland/dye/Initialize()
+	. = ..()
+	update_icon()
+
 /obj/item/clothing/cloak/furcloak/woodland/noire
 	name = "collared woodland mantle"
 	desc = "A flowing cloak that can be worn tighter or looser as the wearer deems fit. More than suitable for protection from the \
