@@ -23,15 +23,16 @@
 /datum/component/storage/concrete/roguetown/surgery_bag/New(datum/P, ...)
 	. = ..()
 	can_hold = typecacheof(list(
-	/obj/item/rogueweapon/surgery,
 	/obj/item/needle,
+	/obj/item/rogueweapon/surgery,
 	/obj/item/rogueweapon/huntingknife/stoneknife,
-	/obj/item/reagent_containers/glass/bottle/rogue/beer,
-	/obj/item/reagent_containers/glass/bottle/alchemical/fermented_crab,
-	/obj/item/reagent_containers/glass/bottle/rogue/healthpot/zarum,
-	/obj/item/natural/worms/leech,
 	/obj/item/reagent_containers/lux,
 	/obj/item/reagent_containers/lux_impure,
+	/obj/item/reagent_containers/glass/bottle/rogue/beer,
+	/obj/item/reagent_containers/glass/bottle/rogue/healthpot/zarum,
+	/obj/item/reagent_containers/glass/bottle/alchemical,
+	/obj/item/reagent_containers/glass/bottle/alchemical/fermented_crab,
+	/obj/item/natural/worms/leech,
 	/obj/item/natural/bundle/cloth/bandage,
 	/obj/item/natural/cloth))
 
