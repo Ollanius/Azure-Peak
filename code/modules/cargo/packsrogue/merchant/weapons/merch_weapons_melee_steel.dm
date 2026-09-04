@@ -155,6 +155,11 @@
 	cost = 75 // 2 Steel Ingot, 1 Small Log
 	contains = list(/obj/item/rogueweapon/greataxe/steel)
 
+/datum/supply_pack/rogue/steel_weapons/greatflail
+	name = "Greatflail"
+	cost = 85 // 2 Steel Ingots, 1 Small Log, 1 Chain.
+	contains = list(/obj/item/rogueweapon/flail/peasantwarflail/iron/steel)
+
 /datum/supply_pack/rogue/steel_weapons/greataxeknight
 	name = "Steel Poleaxe"
 	cost = 85 // 2 Steel Ingot, 1 Small Log

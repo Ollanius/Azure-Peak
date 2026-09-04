@@ -1859,6 +1859,22 @@ As Excaliber."
 	icon_state = "drd_shield"
 	icon = 'icons/obj/items/donor_weapons.dmi'
 
+/obj/item/rogueweapon/sword/donator_smallsword/drd_maere
+	name = "'Mære'"
+	desc = "Ivory-gripped, golden-guarded. For a blade that's outlasted generations of wielders, the tip remains impossibly sharp. One can only \
+	wonder if it's courtesy of a dilligent and skillful hand, or if it's a consequence of disuse beyond decorating the waistline."
+	icon_state = "drd_decsmallsword"
+	sheathe_icon = "drd_decsmallsword"
+
+/obj/item/clothing/head/roguetown/nyle/consortcrown/drd
+	name = "ornate coronet"
+	desc = "A mimicry of the antlered inheritor's guise; golden branches, twisting inwards to form a suitably delicate tiara. Though \
+	it fits perfectly atop heads-of-velvet, those without protrusions might struggle to keep this coronet in place."
+	icon_state = "drd_tiara"
+	item_state = "drd_tiara"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+
 //LMWEVIL
 /obj/item/clothing/mask/rogue/courtphysician/brassbeak
 	name = "\improper Society of the Brass Beak mask"
@@ -3703,4 +3719,8 @@ As Excaliber."
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	smeltresult = /obj/item/ingot/drow
 
-a
+// FlyBrokenWings
+/obj/item/rogueweapon/mace/parasol/noble/donator_flybrokenwings
+	name = "skikuldic slurbow"
+	desc = "A lightweight, practically made parasol using the seldom-used skikudic metal with accents of gold in its structure. Looking past the other present materials, what is also of note is the fungal-flesh, carefully stretched and made into the canopy. Though its eyes do not seem to longer move."
+	icon = 'icons/obj/items/donor_weapons.dmi'

@@ -702,6 +702,14 @@
 	)
 	result_item = /obj/item/rogueweapon/drd/shield
 
+//DRD21 - Princely Implements
+/obj/item/enchantingkit/drd_rapier
+	name = "'Mære' morphing elixir"
+	target_items = list(
+		/obj/item/rogueweapon/sword/rapier
+	)
+	result_item = /obj/item/rogueweapon/sword/donator_smallsword/drd_maere
+
 //Lmwevil - Beak Mask
 /obj/item/enchantingkit/lmwevil_brassbeak
 	name = "brass beak mask morphing elixir"
@@ -1404,3 +1412,5 @@
 		/obj/item/clothing/head/roguetown/helmet/heavy/guard					= /obj/item/clothing/head/roguetown/helmet/bascinet/pigface/donator_stalkerino
 	)
 	result_item = null
+
+// FlyBrokenWings

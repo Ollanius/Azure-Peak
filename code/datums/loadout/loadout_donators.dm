@@ -612,6 +612,14 @@
 	name = "Donator Kit - House Woerden Shield"
 	path = /obj/item/enchantingkit/weapon/drd_shield
 
+/datum/loadout_item/donator/drd/tiara
+	name = "Donator Item - Ornate Coronet"
+	path = /obj/item/clothing/head/roguetown/nyle/consortcrown/drd
+
+/datum/loadout_item/donator/drd/smallsword
+	name = "Donator Kit - 'Mære'"
+	path = /obj/item/enchantingkit/drd_rapier
+
 /datum/loadout_item/donator/lmwevil/brassbeak
 	name = "Donator Item - Brass Beak Mask"
 	path = /obj/item/enchantingkit/lmwevil_brassbeak

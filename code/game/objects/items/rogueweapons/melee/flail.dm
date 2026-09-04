@@ -329,6 +329,11 @@
 	minstr = 12
 	anvilrepair = /datum/skill/craft/weaponsmithing
 
+/obj/item/rogueweapon/flail/peasantwarflail/iron/steel
+	name = "steel greatflail"
+	desc = "The greatflail's noblehearted brother, rebuking levyman-and-knight alike with a triple-spiked countermeasure."
+	icon_state = "sgreatflail" //Purely cosmetic, for the more noblehearted handlers.
+
 /obj/item/rogueweapon/flail/peasantwarflail/matthios
 	name = "gilded flail"
 	desc = "Weight of wealth in a deadly striking end."
