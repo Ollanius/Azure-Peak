@@ -297,6 +297,13 @@
 	target_items = list(/obj/item/storage/belt/rogue/leather)
 	result_item = /obj/item/storage/belt/rogue/leather/donator_steel
 
+/obj/item/enchantingkit/beltedbackpack
+	name = "'Belted Backpack' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Backpack. Note \
+	that this will dissolve any items stored inside the chosen Backpack; make sure to empty it out, beforehand!"
+	target_items = list(/obj/item/storage/backpack/rogue/backpack)
+	result_item = /obj/item/storage/backpack/rogue/backpack/donator_beltpack
+
 /obj/item/enchantingkit/triheartfelt
 	name = "'Azurian Plate Armor' morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of either a set of Steel Plate Armor, or a set of Fluted Plate Armor."

@@ -239,6 +239,14 @@
 	name = "Gift - Kit, Long Jacketed Gambeson"
 	path = /obj/item/enchantingkit/donator_jacketed_gambeson_long
 
+/datum/loadout_item/donator/universal/shadedhat
+	name = "Gift - Shaded Hat"
+	path = /obj/item/clothing/head/roguetown/roguehood/shadedhat
+
+/datum/loadout_item/donator/universal/beltedbackpackkit
+	name = "Gift - Kit, Belted Backpack"
+	path = /obj/item/enchantingkit/beltedbackpack
+
 // --- GRENZEL REGIONAL ---
 
 /datum/loadout_item/donator/universal/regional/grenzelhat

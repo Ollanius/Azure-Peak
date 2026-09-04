@@ -1018,7 +1018,19 @@
 		else
 			user.visible_message(span_warning("[user] stops fitting [W] inside the [src]."))
 		return
-
+	if(istype(W, /obj/item/clothing/suit/roguetown/armor/plate/full/fluted/ornate/ordinator))
+		user.visible_message(span_warning("[user] starts to fit [W] inside the [src]."))
+		if(do_after(user, 12 SECONDS))
+			var/obj/item/clothing/suit/roguetown/armor/plate/scale/inqcoat/armored/heavy/P = new /obj/item/clothing/suit/roguetown/armor/plate/scale/inqcoat/armored/heavy(get_turf(src.loc))
+			if(user.is_holding(src))
+				user.dropItemToGround(src)
+			user.put_in_hands(P)
+			P.obj_integrity = src.obj_integrity
+			qdel(src)
+			qdel(W)
+		else
+			user.visible_message(span_warning("[user] stops fitting [W] inside the [src]."))
+		return
 
 /obj/item/clothing/suit/roguetown/armor/plate/scale/inqcoat/armored
 	slot_flags = ITEM_SLOT_ARMOR
@@ -1040,6 +1052,21 @@
 /obj/item/clothing/suit/roguetown/armor/plate/scale/inqcoat/armored/ComponentInitialize()
 	AddComponent(/datum/component/item_equipped_movement_rustle, SFX_PLATE_STEP, 12)
 	return
+
+/obj/item/clothing/suit/roguetown/armor/plate/scale/inqcoat/armored/heavy
+	name = "plated inquisitorial duster"
+	desc = "A heavy longcoat that's fitted atop a set of blessed plate armor, donned by the Holy Psydonic Inquisition's finest."
+	icon_state = "ordinatorplatecoat"
+	item_state = "ordinatorplatecoat"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+	equip_delay_self = 8 SECONDS
+	armor_class = ARMOR_CLASS_HEAVY
+	armor = ARMOR_PLATE
+	max_integrity = ARMOR_INT_CHEST_PLATE_PSYDON
+	is_silver = TRUE
+	is_lesser_silver = TRUE
 
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/fencer/decorated
 	name = "decorated chestplate"
