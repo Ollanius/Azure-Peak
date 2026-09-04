@@ -1099,7 +1099,7 @@
 	detail_color = CLOTHING_WHITE
 	detail_tag = "_detail"
 
-/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/decoratedInitialize(mapload)
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/decorated/Initialize(mapload)
 	. = ..()
 	update_icon()
 
