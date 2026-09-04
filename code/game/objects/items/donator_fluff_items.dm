@@ -372,6 +372,19 @@
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	item_state = "plackarts"
 	icon_state = "plackarts"
+	body_parts_covered = CHEST | VITALS
+	flags_inv = null
+
+/obj/item/clothing/suit/roguetown/armor/plate/fluted/donator_girdle
+	name = "fluted plackart"
+	desc = "A curious - and particularly revealing - variant of a fluted cuirass. It's said that the intentionally provocative design \
+	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "plackarts"
+	icon_state = "plackarts"
+	body_parts_covered = CHEST | VITALS
+	flags_inv = null
 
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/iron/donator_girdle
 	name = "iron plackart"
@@ -381,15 +394,8 @@
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	item_state = "plackarti"
 	icon_state = "plackarti"
-
-/obj/item/clothing/suit/roguetown/armor/leather/donator_girdle
-	name = "leather plackart"
-	desc = "A curious - and particularly revealing - variant of a common leather cuirass. It's said that the intentionally provocative design \
-	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
-	icon = 'icons/clothing/donor_clothes.dmi'
-	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
-	item_state = "plackartleather"
-	icon_state = "plackartleather"
+	body_parts_covered = CHEST | VITALS
+	flags_inv = null
 
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/bronze/donator_girdle
 	name = "bronze plackart"
@@ -399,6 +405,41 @@
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	item_state = "plackartb"
 	icon_state = "plackartb"
+	body_parts_covered = CHEST | VITALS
+	flags_inv = null
+
+/obj/item/clothing/suit/roguetown/armor/leather/donator_girdle
+	name = "leather plackart"
+	desc = "A curious - and particularly revealing - variant of a common leather cuirass. It's said that the intentionally provocative design \
+	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "plackartleather"
+	icon_state = "plackartleather"
+	body_parts_covered = CHEST | VITALS
+	flags_inv = null
+
+/obj/item/clothing/suit/roguetown/armor/leather/studded/donator_girdle
+	name = "leather plackart"
+	desc = "A curious - and particularly revealing - variant of a studded leather cuirass. It's said that the intentionally provocative design \
+	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "plackartleather"
+	icon_state = "plackartleather"
+	body_parts_covered = CHEST | VITALS
+	flags_inv = null
+
+/obj/item/clothing/suit/roguetown/armor/leather/heavy/donator_girdle
+	name = "leather plackart"
+	desc = "A curious - and particularly revealing - variant of a heavy leather cuirass. It's said that the intentionally provocative design \
+	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "plackartleather"
+	icon_state = "plackartleather"
+	body_parts_covered = CHEST | VITALS
+	flags_inv = null
 
 /obj/item/clothing/head/roguetown/helmet/bascinet/pigface/burgeonet
 	name = "gothic burgeonet"
@@ -1113,6 +1154,14 @@
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
 	bigboy = TRUE
 
+/obj/item/rogueweapon/sword/long/ap/donator_elegant
+	name = "elegant stecher"
+	desc = "An elegant armor-piercing longsword for an elegant wielder."
+	icon_state = "donatorestoc"
+	sheathe_icon = "donatorestoc"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+	bigboy = TRUE
+
 /obj/item/rogueweapon/woodstaff/quarterstaff/steel/donator_elegant
 	name = "elegant quarterstaff"
 	desc = "An elegant quarterstaff for an elegant wielder."
@@ -1131,6 +1180,13 @@
 /obj/item/rogueweapon/spear/boar/donator_elegant
 	name = "elegant spear"
 	desc = "An elegant spear for an elegant wielder."
+	icon_state = "donatorspear"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+	bigboy = TRUE
+
+/obj/item/rogueweapon/spear/psyspear/old/donator_elegant
+	name = "elegant winged spear"
+	desc = "An elegant wingedspear for an elegant wielder."
 	icon_state = "donatorspear"
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
 	bigboy = TRUE
@@ -2190,7 +2246,7 @@ As Excaliber."
 	item_state = "river_tabi"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
-	allowed_sex = list(FEMALE)
+	allowed_sex = list(MALE, FEMALE)
 	salvage_result = /obj/item/natural/hide/cured
 	salvage_amount = 1
 
@@ -3726,7 +3782,7 @@ As Excaliber."
 	carefully stretched and made into the canopy. Though its eyes do not seem to longer move."
 	icon_state = "skikuldic64"
 	item_state = "skikuldic64"
-	icon = 'icons/obj/items/donor_weapons64.dmi'
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
 	smeltresult = /obj/item/ingot/drow
 
 /obj/item/clothing/head/roguetown/roguehood/shadedhat
@@ -3790,3 +3846,136 @@ As Excaliber."
 	item_state = "beltedpackl"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+
+// Naman
+/obj/item/clothing/suit/roguetown/armor/brigandine/heavy/decorated
+	name = "decorated coat of plates"
+	desc = "An ornate coat-of-plates, adorned with a pair of steel vambraces and decorated with golden fluting. For when 'commanding by saigaback' is both a tactically unsound yet tempting option."
+	icon_state = "gildedcoat_of_plates"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+	//smeltresult = /obj/item/ingot/gold
+	//smelt_bar_num = 1
+	color = null
+	detail_color = CLOTHING_WHITE
+	detail_tag = "_detail"
+
+/obj/item/clothing/suit/roguetown/armor/brigandine/heavy/decorated/Initialize(mapload)
+	. = ..()
+	update_icon()
+
+/obj/item/clothing/suit/roguetown/armor/brigandine/heavy/decorated/update_icon()
+	cut_overlays()
+	if(get_detail_tag())
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)
+
+/obj/item/clothing/cloak/half/rider/donator_naman
+	name = "rider's scarfed cloak"
+	desc = "'The past is the past. All that matters is the future we make for ourselves.'"
+	icon_state = "naman_cloak"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	allowed_sex = list(MALE) //Character-specific.
+	detail_color = CLOTHING_RED
+	detail_tag = "_detail"
+
+/obj/item/clothing/cloak/half/rider/donator_naman/Initialize(mapload)
+	. = ..()
+	update_icon()
+
+/obj/item/clothing/cloak/half/rider/donator_naman/update_icon()
+	cut_overlays()
+	if(get_detail_tag())
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)
+
+/obj/item/storage/belt/rogue/leather/steel/tasset/donator_naman
+	name = "tasseted beltpack"
+	desc = "A fine leather belt that's been sleeved with many steel segments, adorned with the tassets of a fluted cuirass, and further \
+	improved with a stitched-on satchel. It feels like there's a bit less room than usual."
+	icon_state = "naman_tassetbuttpack"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	detail_color = CLOTHING_WHITE
+	detail_tag = "_detail"
+
+/obj/item/storage/belt/rogue/leather/steel/tasset/donator_naman/Initialize(mapload)
+	. = ..()
+	update_icon()
+
+/obj/item/storage/belt/rogue/leather/steel/tasset/donator_naman/update_icon()
+	cut_overlays()
+	if(get_detail_tag())
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)
+
+/obj/item/storage/backpack/rogue/satchel/beltpack/donator_naman
+	name = "tasseted beltpack"
+	desc = "A fine leather belt that's been sleeved with many steel segments, adorned with the tassets of a fluted cuirass, and further \
+	improved with a stitched-on satchel."
+	icon_state = "naman_tassetbuttpack"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	detail_color = CLOTHING_WHITE
+	detail_tag = "_detail"
+
+/obj/item/storage/backpack/rogue/satchel/beltpack/donator_naman/Initialize(mapload)
+	. = ..()
+	update_icon()
+
+/obj/item/storage/backpack/rogue/satchel/beltpack/donator_naman/update_icon()
+	cut_overlays()
+	if(get_detail_tag())
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)
+
+/obj/item/rogueweapon/spear/lance/donator_naman
+	name = "noble lance"
+	desc = "'I've got nothing against Heaven, but I'm right here if you want someone to thank.'"
+	icon_state = "naman_lance"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+
+/obj/item/rogueweapon/sword/sabre/donator_naman
+	name = "noble sabre"
+	desc = "'One miracle after another has made this possible. Now it's time for one more!'"
+	icon_state = "naman_sabre"
+	sheathe_icon = "naman_sabre"
+	icon = 'icons/obj/items/donor_weapons.dmi'
+
+// Sanshroom
+/obj/item/clothing/mask/rogue/shepherd/shadowmask/donator_sanshoom
+	name = "prowler halfmask"
+	icon_state = "sanshoom_prowlermask"
+	desc = "For when your actions must be hidden from godly eyes."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+
+/obj/item/clothing/suit/roguetown/armor/gambeson/heavy/shadowrobe/donator_sanshoom
+	name = "prowler robe"
+	desc = "Crimson silk, flowing outwards like entrails from a gouged belly. It cleans up remarkably well, all things considered."
+	icon_state = "sanshoom_prowlerrobe"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+
+/obj/item/clothing/suit/roguetown/armor/gambeson/shadowrobe/donator_sanshoom
+	name = "thin prowler robe"
+	desc = "Crimson silk, flowing outwards like entrails from a gouged belly. As light as it may be, it'll never unburden those shackles of sin 'pon thine wrists."
+	icon_state = "sanshoom_prowlerrobe"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'

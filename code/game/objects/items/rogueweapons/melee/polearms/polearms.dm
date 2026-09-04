@@ -432,7 +432,6 @@
 	smeltresult = /obj/item/ingot/aaslag
 	icon_state = "ancient_spear"
 
-
 /obj/item/rogueweapon/spear/psyspear
 	name = "psydonic spear"
 	desc = "An ornate spear, plated in a ceremonial veneer of silver. The barbs pierce your palm, and - for just a moment - you see red. Never \
