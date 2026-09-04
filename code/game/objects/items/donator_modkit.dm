@@ -360,7 +360,7 @@
 	result_item = null
 
 /obj/item/enchantingkit/donator_universal_armory
-	name = "'Elegant Armory' morphing elixir" //Small compromise to avoid bloating the Loadout tab.
+	name = "'Elegant Armory' morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of most Steel weapons, including their Decorated variants. Note that while this can be used on Silver weapons \
 	as well, doing so will permanently transmute them into their Steel variants."
 	target_items = list(
@@ -373,7 +373,7 @@
 		/obj/item/rogueweapon/sword/short/messer							= /obj/item/rogueweapon/sword/short/messer/donator_elegant,
 		/obj/item/rogueweapon/sword/long/exe								= /obj/item/rogueweapon/sword/long/exe/donator_elegant,
 		/obj/item/rogueweapon/sword/long/dec								= /obj/item/rogueweapon/sword/long/dec/donator_elegant,
-		/obj/item/rogueweapon/sword/long/ap									= /obj/item/rogueweapon/sword/long/ap/donator_elegant
+		/obj/item/rogueweapon/sword/long/ap									= /obj/item/rogueweapon/sword/long/ap/donator_elegant,
 		/obj/item/rogueweapon/sword/sabre/dec								= /obj/item/rogueweapon/sword/sabre/dec/donator_elegant,
 		/obj/item/rogueweapon/sword/rapier/dec								= /obj/item/rogueweapon/sword/rapier/dec/donator_elegant,
 		/obj/item/clothing/gloves/roguetown/knuckles						= /obj/item/clothing/gloves/roguetown/knuckles/donator_elegant,
