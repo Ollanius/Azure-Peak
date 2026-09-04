@@ -1006,7 +1006,7 @@
 			icon_state = "greatcoatalt"
 			item_state = "greatcoatalt"
 			flags_inv = null
-			open_wear = FALSE
+			open_wear = TRUE
 			to_chat(usr, span_warning("You adjust the greatcoat to hang from your shoulders, letting it tastefully trail in the wind."))
 		if(TRUE)
 			name = "greatcoat"
@@ -1014,7 +1014,7 @@
 			duelists, privateers, and the likes of Etrusca all over. It now has been seen in the hands of many others across Psydonia."
 			icon_state = "greatcoat"
 			item_state = "greatcoat"
-			open_wear = TRUE
+			open_wear = FALSE
 			flags_inv = HIDEBOOB
 			to_chat(usr, span_warning("You adjust the greatcoat to wear it properly, tucking your arms back into its sleeves."))
 	update_icon()
@@ -1072,7 +1072,7 @@
 			icon_state = "dgreatcoatalt"
 			item_state = "dgreatcoatalt"
 			flags_inv = null
-			open_wear = FALSE
+			open_wear = TRUE
 			to_chat(usr, span_warning("You adjust the greatcoat to hang from your shoulders, letting it tastefully trail in the wind."))
 		if(TRUE)
 			name = "greatcoat"
@@ -1080,7 +1080,7 @@
 			duelists, privateers, and the likes of Etrusca all over. It now has been seen in the hands of many others across Psydonia."
 			icon_state = "dgreatcoat"
 			item_state = "dgreatcoat"
-			open_wear = TRUE
+			open_wear = FALSE
 			flags_inv = HIDEBOOB
 			to_chat(usr, span_warning("You adjust the greatcoat to wear it properly, tucking your arms back into its sleeves."))
 	update_icon()
@@ -3897,9 +3897,8 @@ As Excaliber."
 	name = "skikuldic parasol"
 	desc = "A lightweight, practically made parasol using the seldom-used skikudic metal with accents of gold in its structure. Looking past the other present materials, what is also of note is the fungal-flesh, \
 	carefully stretched and made into the canopy. Though its eyes do not seem to longer move."
-	icon_state = "skikuldic64"
-	item_state = "skikuldic64"
-	icon = 'icons/obj/items/donor_weapons_64.dmi'
+	icon_state = "parasol_skikuldic"
+	item_state = "parasol_skikuldic"
 	smeltresult = /obj/item/ingot/drow
 
 /obj/item/clothing/head/roguetown/roguehood/shadedhat
@@ -3969,11 +3968,10 @@ As Excaliber."
 	name = "decorated coat of plates"
 	desc = "An ornate coat-of-plates, adorned with a pair of steel vambraces and decorated with golden fluting. For when 'commanding by saigaback' is both a tactically unsound yet tempting option."
 	icon_state = "gildedcoat_of_plates"
+	item_state = "gildedcoat_of_plates"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
-	//smeltresult = /obj/item/ingot/gold
-	//smelt_bar_num = 1
 	color = null
 	detail_color = CLOTHING_WHITE
 	detail_tag = "_detail"
@@ -3997,6 +3995,7 @@ As Excaliber."
 	icon_state = "naman_cloak"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	allowed_sex = list(MALE) //Character-specific.
 	detail_color = CLOTHING_RED
 	detail_tag = "_detail"
