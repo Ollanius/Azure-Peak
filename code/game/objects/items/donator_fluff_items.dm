@@ -990,7 +990,6 @@
 	nodismemsleeves = TRUE
 	inhand_mod = TRUE
 	hoodtype = null
-	toggle_icon_state = FALSE
 	flags_inv = HIDEBOOB
 	salvage_result = /obj/item/natural/hide/cured
 	salvage_amount = 1
