@@ -1055,7 +1055,7 @@
 
 /datum/loadout_item/donator/flybrokenwings_drowparasol
 	name = "Donator Item - Skikuldic Parasol"
-	path = /obj/item/rogueweapon/mace/parasol/noble/donator_flybrokenwings
+	path = /obj/item/rogueweapon/mace/donator_flybrokenwings_parasol
 	ckeywhitelist = list("flybrokenwings")
 
 /datum/loadout_item/donator/naman_lance

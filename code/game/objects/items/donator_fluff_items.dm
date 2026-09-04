@@ -3893,13 +3893,52 @@ As Excaliber."
 	smeltresult = /obj/item/ingot/drow
 
 // FlyBrokenWings
-/obj/item/rogueweapon/mace/parasol/noble/donator_flybrokenwings
+/obj/item/rogueweapon/mace/donator_flybrokenwings_parasol
+	force = 6
+	force_wielded = 6
 	name = "skikuldic parasol"
 	desc = "A lightweight, practically made parasol using the seldom-used skikudic metal with accents of gold in its structure. Looking past the other present materials, what is also of note is the fungal-flesh, \
 	carefully stretched and made into the canopy. Though its eyes do not seem to longer move."
 	icon_state = "parasol_skikuldic"
 	item_state = "parasol_skikuldic"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
 	smeltresult = /obj/item/ingot/drow
+	wbalance = WBALANCE_SWIFT
+	wdefense = 1
+	possible_item_intents = list(/datum/intent/mace/strike/wood)
+	gripped_intents = null
+	anvilrepair = /datum/skill/craft/sewing
+	max_integrity = 75
+	minstr = 1
+	resistance_flags = FLAMMABLE
+	slot_flags = null
+	wlength = WLENGTH_SHORT
+	w_class = WEIGHT_CLASS_SMALL
+	grid_width = 32
+	grid_height = 64
+	dropshrink = 0.75
+	inhand_x_dimension = 64
+	inhand_y_dimension = 64
+	var/active_item = FALSE
+
+/obj/item/rogueweapon/mace/donator_flybrokenwings_parasol/pickup(mob/living/user, slot)
+	. = ..()
+	active_item = TRUE
+	ADD_TRAIT(user, TRAIT_WEATHER_PROTECTED, "[type]")
+
+/obj/item/rogueweapon/mace/donator_flybrokenwings_parasol/dropped(mob/living/user)
+	. = ..()
+	if(!active_item)
+		return
+	active_item = FALSE
+	REMOVE_TRAIT(user, TRAIT_WEATHER_PROTECTED, "[type]")
+
+/obj/item/rogueweapon/mace/donator_flybrokenwings_parasol/getonmobprop(tag)
+	. = ..()
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.6,"sx" = -6,"sy" = 8,"nx" = 6,"ny" = 9,"wx" = 0,"wy" = 7,"ex" = -1,"ey" = 9,"northabove" = 1,"southabove" = 1,"eastabove" = 1,"westabove" = 1,"nturn" = -50,"sturn" = 40,"wturn" = 50,"eturn" = -50,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
 
 /obj/item/clothing/head/roguetown/roguehood/shadedhat
 	name = "shaded hat"
@@ -3967,8 +4006,8 @@ As Excaliber."
 /obj/item/clothing/suit/roguetown/armor/brigandine/heavy/decorated
 	name = "decorated coat of plates"
 	desc = "An ornate coat-of-plates, adorned with a pair of steel vambraces and decorated with golden fluting. For when 'commanding by saigaback' is both a tactically unsound yet tempting option."
-	icon_state = "gildedcoat_of_plates"
-	item_state = "gildedcoat_of_plates"
+	icon_state = "gildedcoatofplates"
+	item_state = "gildedcoatofplates"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
