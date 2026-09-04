@@ -3834,7 +3834,7 @@ As Excaliber."
 	divine sanction. To draw it is to act in the name of the Sun-Tyrants order itself, and to know that you are just."
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
 	icon_state = "lago_zestysword"
-	sheathe_icon = "donator_decsword"
+	sheathe_icon = "lago_zestysword"
 	bigboy = TRUE
 
 /obj/item/rogueweapon/example/lagomorphica_delirante
@@ -3843,7 +3843,7 @@ As Excaliber."
 	war. To draw it is to act in the name of the Justiciar, if one can convince themselves of that."
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
 	icon_state = "lago_zestycleaver"
-	sheathe_icon = "donatordeclongsword"
+	sheathe_icon = "lago_zestycleaver"
 	bigboy = TRUE
 
 /obj/item/rogueweapon/example/lagomorphica_traitresse
@@ -3860,7 +3860,7 @@ As Excaliber."
 	threatening it may be, it won't make your ears longer."
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
 	icon_state = "stalkerino_drowsword"
-	sheathe_icon = "nscabbard_spidersabre"
+	sheathe_icon = "stalkerino_drowsword"
 	bigboy = TRUE
 	smeltresult = /obj/item/ingot/drow
 
