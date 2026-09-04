@@ -283,10 +283,8 @@
 	armor' is favored by cuirassiers all across Psydonia, alongside fledging barons who've - up until now - waged their fiercest \
 	battles upon a chamberpot."
 	icon_state = "ornatehalfplate"
-
 	equip_delay_self = 6 SECONDS
 	unequip_delay_self = 6 SECONDS
-
 	max_integrity = ARMOR_INT_CHEST_PLATE_STEEL
 	body_parts_covered = CHEST | VITALS | LEGS // Less durability than proper plate, more expensive to manufacture, and accurate to the sprite.
 	armor_class = ARMOR_CLASS_MEDIUM
@@ -441,7 +439,6 @@
 	traditionally reserved for the higher echelons of nobility; seasoned knights, venerated kings, and pot-bellied \
 	councilmen that wish to flaunt their opulence towards the unwashed masses."
 	icon_state = "ornateplate"
-
 	max_integrity = ARMOR_INT_CHEST_PLATE_STEEL
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/fluted/ornate
@@ -451,7 +448,6 @@
 	wore."
 	icon_state = "ornateplate"
 	smeltresult = /obj/item/ingot/silverblessed
-
 	max_integrity = ARMOR_INT_CHEST_PLATE_PSYDON
 
 	/// Whether the user has the Heavy Armour Trait prior to donning.

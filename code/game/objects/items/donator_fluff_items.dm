@@ -973,6 +973,123 @@
 	name = "doublet"
 	desc = "A snug-fitting tunic, favored by Azurians during the chillier daes of autumn. It has been dyed with a pale, green tone."
 
+/obj/item/clothing/cloak/tabard/donator_greatcoat
+	name = "greatcoat"
+	desc = "A product of fashionable apparel originating from the Island Nation of Etrusca's Tailor Society. Popularized by renowned \
+	duelists, privateers, and the likes of Etrusca all over. It now has been seen in the hands of many others across Psydonia."
+	icon_state = "greatcoat"
+	item_state = "greatcoat"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+	custom_design = TRUE
+	var/open_wear = FALSE
+
+/obj/item/clothing/cloak/tabard/donator_greatcoat/alt
+	name = "opened greatcoat"
+	desc = "A product of fashionable apparel originating from the Island Nation of Etrusca's Tailor Society, shuffled to hang like a cape \
+	from the wearer's shoulders. Popularized by renowned duelists, privateers, and the likes of Etrusca all over. It now has been seen in \
+	the hands of many others across Psydonia."
+	icon_state = "greatcoatalt"
+	item_state = "greatcoatalt"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	open_wear = TRUE
+
+/obj/item/clothing/cloak/tabard/donator_greatcoat/attack_right(mob/user)
+	switch(open_wear)
+		if(FALSE)
+			name = "opened greatcoat"
+			desc = "A product of fashionable apparel originating from the Island Nation of Etrusca's Tailor Society, shuffled to hang like a cape \
+			from the wearer's shoulders. Popularized by renowned duelists, privateers, and the likes of Etrusca all over. It now has been seen in \
+			the hands of many others across Psydonia."
+			icon_state = "greatcoatalt"
+			item_state = "greatcoatalt"
+			flags_inv = null
+			open_wear = FALSE
+			to_chat(usr, span_warning("You adjust the greatcoat to hang from your shoulders, letting it tastefully trail in the wind."))
+		if(TRUE)
+			name = "greatcoat"
+			desc = "A product of fashionable apparel originating from the Island Nation of Etrusca's Tailor Society. Popularized by renowned \
+			duelists, privateers, and the likes of Etrusca all over. It now has been seen in the hands of many others across Psydonia."
+			icon_state = "greatcoat"
+			item_state = "greatcoat"
+			open_wear = TRUE
+			flags_inv = HIDEBOOB
+			to_chat(usr, span_warning("You adjust the greatcoat to wear it properly, tucking your arms back into its sleeves."))
+	update_icon()
+	if(user)
+		if(ishuman(user))
+			var/mob/living/carbon/H = user
+			H.update_inv_cloak()
+			H.update_inv_armor()
+
+/obj/item/clothing/cloak/tabard/donator_greatcoat/dyeable
+	name = "greatcoat"
+	desc = "A product of fashionable apparel originating from the Island Nation of Etrusca's Tailor Society. Popularized by renowned \
+	duelists, privateers, and the likes of Etrusca all over. It now has been seen in the hands of many others across Psydonia."
+	icon_state = "dgreatcoat"
+	item_state = "dgreatcoat"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+	custom_design = TRUE
+	detail_tag = "_detail"
+	detail_color = CLOTHING_WHITE
+
+/obj/item/clothing/cloak/tabard/donator_greatcoat/dyeable/alt
+	name = "opened greatcoat"
+	desc = "A product of fashionable apparel originating from the Island Nation of Etrusca's Tailor Society, shuffled to hang like a cape \
+	from the wearer's shoulders. Popularized by renowned duelists, privateers, and the likes of Etrusca all over. It now has been seen in \
+	the hands of many others across Psydonia."
+	icon_state = "dgreatcoatalt"
+	item_state = "dgreatcoatalt"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	detail_tag = "_detail"
+	detail_color = CLOTHING_WHITE
+
+/obj/item/clothing/cloak/tabard/donator_greatcoat/dyeable/Initialize(mapload)
+	. = ..()
+	update_icon()
+
+/obj/item/clothing/cloak/tabard/donator_greatcoat/dyeable/update_icon()
+	cut_overlays()
+	if(get_detail_tag())
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)
+
+/obj/item/clothing/cloak/tabard/donator_greatcoat/dyeable/attack_right(mob/user)
+	switch(open_wear)
+		if(FALSE)
+			name = "opened greatcoat"
+			desc = "A product of fashionable apparel originating from the Island Nation of Etrusca's Tailor Society, shuffled to hang like a cape \
+			from the wearer's shoulders. Popularized by renowned duelists, privateers, and the likes of Etrusca all over. It now has been seen in \
+			the hands of many others across Psydonia."
+			icon_state = "dgreatcoatalt"
+			item_state = "dgreatcoatalt"
+			flags_inv = null
+			open_wear = FALSE
+			to_chat(usr, span_warning("You adjust the greatcoat to hang from your shoulders, letting it tastefully trail in the wind."))
+		if(TRUE)
+			name = "greatcoat"
+			desc = "A product of fashionable apparel originating from the Island Nation of Etrusca's Tailor Society. Popularized by renowned \
+			duelists, privateers, and the likes of Etrusca all over. It now has been seen in the hands of many others across Psydonia."
+			icon_state = "dgreatcoat"
+			item_state = "dgreatcoat"
+			open_wear = TRUE
+			flags_inv = HIDEBOOB
+			to_chat(usr, span_warning("You adjust the greatcoat to wear it properly, tucking your arms back into its sleeves."))
+	update_icon()
+	if(user)
+		if(ishuman(user))
+			var/mob/living/carbon/H = user
+			H.update_inv_cloak()
+			H.update_inv_armor()
+
 //
 
 /obj/item/rogueweapon/huntingknife/idagger/steel/donator
@@ -3979,3 +4096,38 @@ As Excaliber."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+
+//TrueTerrydactyl
+/obj/item/undies/bikini/shibari
+	name = "shibari ropes"
+	desc = "Strange smallclothes from stranger lands, consisting of a thin silk ropes that's decoratively wound across the body's more immodest points."
+	icon_state = "shibariropes"
+	covers_breasts = TRUE
+	sprite_acc = /datum/sprite_accessory/underwear/bikini/shibari
+
+/datum/sprite_accessory/underwear/bikini/shibari
+	name = "shibari ropes"
+	icon_state = "female_shibari"
+	preview_states = list("shibari_f_0")
+	underwear_type = /obj/item/undies/bikini/shibari
+	hides_breasts = TRUE
+
+/datum/sprite_accessory/underwear/bikini/shibari/get_icon_state(obj/item/organ/organ, obj/item/bodypart/bodypart, mob/living/carbon/owner)
+	if(owner.getorganslot(ORGAN_SLOT_BREASTS))
+		var/obj/item/organ/breasts/breasts = owner.getorganslot(ORGAN_SLOT_BREASTS)
+		var/tag = "shibari_f"
+		if(breasts.breast_size == 0)
+			tag = tag + "_0"
+		if(breasts.breast_size == 1)
+			tag = tag + "_0"
+		if(breasts.breast_size == 2)
+			tag = tag + "_0"
+		if(breasts.breast_size == 3)
+			tag = tag + "_0"
+		if(breasts.breast_size == 4)
+			tag = tag + "_0"
+		if(breasts.breast_size == 5)
+			tag = tag + "_0"
+		return tag
+	else
+		return "shibari_f_0"

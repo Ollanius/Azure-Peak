@@ -166,6 +166,14 @@
 	name = "Gift - Helmet Cosmetic, Orle"
 	path = /obj/item/clothing/head/roguetown/decoration/orle/donator_dyeable
 
+/datum/loadout_item/donator/universal/greatcoat
+	name = "Gift - Greatcoat"
+	path = /obj/item/clothing/cloak/tabard/donator_greatcoat
+
+/datum/loadout_item/donator/universal/greatcoat_dyeable
+	name = "Gift - Greatcoat, Dyeable"
+	path = /obj/item/clothing/cloak/tabard/donator_greatcoat/dyeable
+
 //Brief explanation - as Spear found out, using a Morphing Elixir on a storage item works.. but permenantly deletes -anything- stored inside.
 //To prevent any chance of someone accidentally destroying a round-important item, I'm replacing the kits with the main thing..
 // ..for now(?). If someone else comes around and adds a check that prevents belts with stored items inside from being transformed, then they can -
@@ -1084,3 +1092,8 @@
 	name = "Donator Kit - Prowler Mask"
 	path = /obj/item/enchantingkit/donator_sanshoom_prowlermask
 	ckeywhitelist = list("sanshoom")
+
+/datum/loadout_item/donator/trueterrydactyl_shibari
+	name = "Donator Item - Smallclothes, Shibari"
+	path = /obj/item/undies/bikini/shibari
+	ckeywhitelist = list("trueterrydactyl")

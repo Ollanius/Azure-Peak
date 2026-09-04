@@ -169,6 +169,7 @@
 	name = "silk stockings"
 	icon_state = "silk"
 	legwear_type = /obj/item/legwears/silk
+
 //Fishnets
 /datum/sprite_accessory/legwear/stockings/fishnet
 	name = "fishnet stockings"
