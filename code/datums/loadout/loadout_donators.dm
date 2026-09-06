@@ -571,6 +571,10 @@
 	name = "Donator Kit - Unorthodoxist Psydonite Helm"
 	path = /obj/item/enchantingkit/ryan_psyhelm
 
+/datum/loadout_item/donator/ryan/naginata
+	name = "Donator Kit - +5 Common Profane Naginata"
+	path = /obj/item/enchantingkit/weapon/ryan_naginata
+
 /datum/loadout_item/donator/koruu
 	name = "Donator Item - Well-Worn Bamboo Hat"
 	path = /obj/item/clothing/head/roguetown/mentorhat/koruu

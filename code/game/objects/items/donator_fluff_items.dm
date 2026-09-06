@@ -1818,6 +1818,21 @@
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes64.dmi'
 
+/obj/item/rogueweapon/example/ryan_naginata
+	name = "+5 common profane naginata"
+	desc = "A traditional Kazengunite polearm, tarnished with profane iconography. A caged slave of a weapon under new management."
+	icon_state = "naginata_ryan"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+	inhand_x_dimension = 64
+	inhand_y_dimension = 64
+	grid_height = 64
+	grid_width = 64
+	bigboy = TRUE
+	examine_highlight_severity = EXAMINEHIGHLIGHT_HERESYSEVERITY_ALARMING
+	examine_highlight_desc = HERESYDESC_ZIZO_WEAPON
+	twirly = SKILL_LEVEL_JOURNEYMAN
+	twirl_speed = 6
+
 //KORUU
 /obj/item/clothing/head/roguetown/mentorhat/koruu
 	name = "well-worn bamboo hat"
