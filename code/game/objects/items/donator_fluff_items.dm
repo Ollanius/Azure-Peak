@@ -995,7 +995,7 @@
 
 /obj/item/clothing/cloak/donator_greatcoat/attack_right(mob/user)
 	if(!flipped)
-		icon_state += "_alt"
+		icon_state += "alt"
 		flipped = TRUE
 		flags_inv = null
 	else
@@ -1022,6 +1022,56 @@
 		if(get_detail_color())
 			pic.color = get_detail_color()
 		add_overlay(pic)
+
+
+/obj/item/clothing/cloak/donator_greatcoata
+	name = "greatcoat"
+	desc = "A product of fashionable apparel originating from the Island Nation of Etrusca's Tailor Society. Popularized by renowned \
+	duelists, privateers, and the likes of Etrusca all over. It now has been seen in the hands of many others across Psydonia."
+	icon_state = "greatcoat"
+	item_state = "greatcoat"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+	color = null
+	sleevetype = "shirt"
+	nodismemsleeves = TRUE
+	inhand_mod = FALSE
+	alternate_worn_layer = TABARD_LAYER
+	slot_flags = ITEM_SLOT_CLOAK|ITEM_SLOT_BACK_R
+	flags_inv = HIDEBOOB
+	salvage_result = /obj/item/natural/hide/cured
+	salvage_amount = 1
+	open_wear = TRUE
+
+/obj/item/clothing/cloak/donator_greatcoata/MiddleClick(mob/user)
+	..()
+	user.update_inv_shirt()
+
+/obj/item/clothing/cloak/donator_greatcoata/attack_right(mob/user)
+	switch(open_wear)
+		if(FALSE)
+			name = "opened greatcoat"
+			desc = "A product of fashionable apparel originating from the Island Nation of Etrusca's Tailor Society. Popularized by renowned \
+			duelists, privateers, and the likes of Etrusca all over. It now has been seen in the hands of many others across Psydonia."
+			icon_state = "greatcoatalt"
+			item_state = "greatcoatalt"
+			open_wear = TRUE
+			to_chat(usr, span_warning("ENDURING, like the MARTYRS who'll guide the faithful-and-pious to PARADISE."))
+		if(TRUE)
+			name = "greatcoat"
+			desc = "A product of fashionable apparel originating from the Island Nation of Etrusca's Tailor Society. Popularized by renowned \
+			duelists, privateers, and the likes of Etrusca all over. It now has been seen in the hands of many others across Psydonia."
+			icon_state = "greatcoat"
+			item_state = "greatcoat"
+			open_wear = FALSE
+			to_chat(usr, span_warning("VEILED, like the CORPSES who've been shepherded by your steel to the AFTERLYFE."))
+	update_icon()
+	if(user)
+		if(ishuman(user))
+			var/mob/living/carbon/H = user
+			H.update_inv_cloak()
+			H.update_inv_armor()
 
 //
 
@@ -1817,21 +1867,6 @@
 	icon_state = "ryan_maimedhelm"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes64.dmi'
-
-/obj/item/rogueweapon/example/ryan_naginata
-	name = "+5 common profane naginata"
-	desc = "A traditional Kazengunite polearm, tarnished with profane iconography. A caged slave of a weapon under new management."
-	icon_state = "naginata_ryan"
-	icon = 'icons/obj/items/donor_weapons_64.dmi'
-	inhand_x_dimension = 64
-	inhand_y_dimension = 64
-	grid_height = 64
-	grid_width = 64
-	bigboy = TRUE
-	examine_highlight_severity = EXAMINEHIGHLIGHT_HERESYSEVERITY_ALARMING
-	examine_highlight_desc = HERESYDESC_ZIZO_WEAPON
-	twirly = SKILL_LEVEL_JOURNEYMAN
-	twirl_speed = 6
 
 //KORUU
 /obj/item/clothing/head/roguetown/mentorhat/koruu
