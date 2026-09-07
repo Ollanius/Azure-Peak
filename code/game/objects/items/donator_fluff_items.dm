@@ -995,7 +995,7 @@
 
 /obj/item/clothing/cloak/donator_greatcoat/attack_right(mob/user)
 	if(!flipped)
-		icon_state += "alt"
+		icon_state += "_alt"
 		flipped = TRUE
 		flags_inv = null
 	else
