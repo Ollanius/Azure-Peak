@@ -1042,7 +1042,7 @@
 	flags_inv = HIDEBOOB
 	salvage_result = /obj/item/natural/hide/cured
 	salvage_amount = 1
-	open_wear = TRUE
+	var/open_wear = TRUE
 
 /obj/item/clothing/cloak/donator_greatcoata/MiddleClick(mob/user)
 	..()
