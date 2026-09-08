@@ -134,6 +134,10 @@
 	name = "Gift - Oathtaker's Orle"
 	path = /obj/item/clothing/head/roguetown/decoration/orle
 
+/datum/loadout_item/donator/universal/headpiece_oathkeeperdeclone
+	name = "Gift - Oathtaker's Decoration, Standalone"
+	path = /obj/item/clothing/head/roguetown/decoration/orle/donator_oathkeeper/crest
+
 /datum/loadout_item/donator/universal/cloak_oathkeeperlong
 	name = "Gift - Oathtaker's Noble Longcoat"
 	path = /obj/item/clothing/cloak/tabard/stabard/surcoat/donator_oathkeeper

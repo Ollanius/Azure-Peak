@@ -750,6 +750,12 @@
 	worn_offsets = list("x" = 0, "y" = 7) // X is a horizontal offset, Y is a vertical offset. In this case, it's offset to be seven pixels north.
 	alternate_worn_layer = 8.9
 
+/obj/item/clothing/head/roguetown/decoration/orle/donator_oathkeeper/crest
+	name = "oathkeeper's noble crest"
+	desc = "A decoration that takes the form of a golden winged shield; an unofficial coat-of-arms used to represent Azuria's many noble houses. To wear such garments is to command respect from those that've come after you; hopefully, not undue."
+	item_state = "d_oathtaker_lone"
+	icon_state = "d_oathtaker_lone"
+
 /obj/item/clothing/head/roguetown/decoration/orle/donator_dyeable
 	name = "orle"
 	desc = "A delicate weaving of striped fabric, intended to be dyed in contrasting colors and worn atop a helmet. Perfect for tournaments."

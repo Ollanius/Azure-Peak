@@ -1471,11 +1471,8 @@
 /obj/item/enchantingkit/donator_naman_deccoatofplates
 	name = "'Decorated Coat Of Plates' morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Steel Coat-Of-Plates."
-	target_items = list(
-		/obj/item/clothing/suit/roguetown/armor/brigandine/heavy
-	)
+	target_items = list(/obj/item/clothing/suit/roguetown/armor/brigandine/heavy)
 	result_item = /obj/item/clothing/suit/roguetown/armor/brigandine/heavy/decorated
-	exact_type = TRUE
 
 /obj/item/enchantingkit/donator_naman_tassetedbeltpack
 	name = "'Tasseted Beltpack' morphing elixir"
