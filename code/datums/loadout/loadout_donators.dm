@@ -1101,3 +1101,13 @@
 	name = "Donator Item - Smallclothes, Shibari"
 	path = /obj/item/undies/bikini/shibari
 	ckeywhitelist = list("trueterrydactyl")
+
+/datum/loadout_item/donator/guidesa_bonebuckler
+    name = "Donator Kit - Bone Buckler"
+    path = /obj/item/enchantingkit/weapon/guidesa_bonebuckler
+    ckeywhitelist = list("guidesu")
+
+/datum/loadout_item/donator/guidesa_bonesickle
+    name = "Donator Kit - Bone Sickle"
+    path = /obj/item/enchantingkit/weapon/guidesa_bonesickle
+    ckeywhitelist = list("guidesu")

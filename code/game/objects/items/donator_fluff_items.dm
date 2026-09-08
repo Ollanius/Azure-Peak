@@ -4126,3 +4126,17 @@ As Excaliber."
 		return tag
 	else
 		return "shibari_f_0"
+
+//Guidesa
+/obj/item/rogueweapon/shield/buckler/guidesa_bonebuckler
+    name = "bone buckler"
+    desc = "A buckler adorned with an intricate arrangement of bones."
+    icon = 'icons/obj/items/donor_weapons.dmi'
+    icon_state = "guidesa_bonebuckler"
+
+/obj/item/rogueweapon/huntingknife/combat/guidesa_bonesickle
+    name = "bone sickle"
+    desc = "A curved knife fashioned to resemble a sickle made out of bones."
+    icon = 'icons/obj/items/donor_weapons.dmi'
+    icon_state = "guidesa_bonesickle"
+    sheathe_icon = "guidesa_bonesickle"
