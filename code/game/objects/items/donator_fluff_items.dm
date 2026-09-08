@@ -4139,4 +4139,4 @@ As Excaliber."
     desc = "A curved knife fashioned to resemble a sickle made out of bones."
     icon = 'icons/obj/items/donor_weapons.dmi'
     icon_state = "guidesa_bonesickle"
-    sheathe_icon = "guidesa_bonesickle"
+    sheathe_icon = "bonedagger"
