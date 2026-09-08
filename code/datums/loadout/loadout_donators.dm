@@ -1103,11 +1103,26 @@
 	ckeywhitelist = list("trueterrydactyl")
 
 /datum/loadout_item/donator/guidesa_bonebuckler
-    name = "Donator Kit - Bone Buckler"
-    path = /obj/item/enchantingkit/weapon/guidesa_bonebuckler
-    ckeywhitelist = list("guidesu")
+  name = "Donator Kit - Bone Buckler"
+  path = /obj/item/enchantingkit/weapon/guidesa_bonebuckler
+  ckeywhitelist = list("guidesu")
 
 /datum/loadout_item/donator/guidesa_bonesickle
-    name = "Donator Kit - Bone Sickle"
-    path = /obj/item/enchantingkit/weapon/guidesa_bonesickle
-    ckeywhitelist = list("guidesu")
+  name = "Donator Kit - Bone Sickle"
+  path = /obj/item/enchantingkit/weapon/guidesa_bonesickle
+  ckeywhitelist = list("guidesu")
+
+/datum/loadout_item/donator/glassfeddockterr_bighat
+	name = "Donator Item - Eryn's Archwyzardry Hat"
+	path = /obj/item/clothing/head/roguetown/wizhat/bighat
+	ckeywhitelist = list("glassfeddockterr")
+
+/datum/loadout_item/donator/koruu_cadwyncloak
+	name = "Donator Item - Sefirot's Cloak"
+	path = /obj/item/clothing/cloak/templar/ravoxcleric/koruu
+	ckeywhitelist = list("koruu")
+
+/datum/loadout_item/donator/koruu_cadwynhelm
+	name = "Donator Item - Gebura"
+	path = /obj/item/enchantingkit/donator_koruu_ravoxclerichelm
+	ckeywhitelist = list("koruu")

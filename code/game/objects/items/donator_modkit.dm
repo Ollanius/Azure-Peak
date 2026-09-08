@@ -1525,13 +1525,22 @@
 
 //Guidesa
 /obj/item/enchantingkit/weapon/guidesa_bonebuckler
-    name = "'Bone Buckler' morphing elixir"
-    desc = "A small container of morphing dust. It can alter the appearance of a Buckler."
-    target_items = list(/obj/item/rogueweapon/shield/buckler)
-    result_item = /obj/item/rogueweapon/shield/buckler/guidesa_bonebuckler
+  name = "'Bone Buckler' morphing elixir"
+  desc = "A small container of morphing dust. It can alter the appearance of a Buckler."
+  target_items = list(/obj/item/rogueweapon/shield/buckler)
+  result_item = /obj/item/rogueweapon/shield/buckler/guidesa_bonebuckler
 
 /obj/item/enchantingkit/weapon/guidesa_bonesickle
-    name = "'Bone Sickle' morphing elixir"
-    desc = "A small container of morphing dust. It can alter the appearance of a Combat Knife."
-    target_items = list(/obj/item/rogueweapon/huntingknife/combat)
-    result_item = /obj/item/rogueweapon/huntingknife/combat/guidesa_bonesickle
+  name = "'Bone Sickle' morphing elixir"
+  desc = "A small container of morphing dust. It can alter the appearance of a Combat Knife."
+  target_items = list(/obj/item/rogueweapon/huntingknife/combat)
+  result_item = /obj/item/rogueweapon/huntingknife/combat/guidesa_bonesickle
+
+/obj/item/enchantingkit/donator_koruu_ravoxclerichelm
+	name = "'Gebura' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Justice Eagle."
+	target_items = list(
+		/obj/item/clothing/head/roguetown/helmet/heavy/ravoxhelm		= /obj/item/clothing/head/roguetown/helmet/heavy/ravoxhelm/cleric/koruu,
+	)
+	result_item = null
+	exact_type = TRUE

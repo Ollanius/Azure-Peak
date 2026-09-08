@@ -4129,14 +4129,28 @@ As Excaliber."
 
 //Guidesa
 /obj/item/rogueweapon/shield/buckler/guidesa_bonebuckler
-    name = "bone buckler"
-    desc = "A buckler adorned with an intricate arrangement of bones."
-    icon = 'icons/obj/items/donor_weapons.dmi'
-    icon_state = "guidesa_bonebuckler"
+  name = "bone buckler"
+  desc = "A buckler adorned with an intricate arrangement of bones."
+  icon = 'icons/obj/items/donor_weapons.dmi'   
+  icon_state = "guidesa_bonebuckler"
 
 /obj/item/rogueweapon/huntingknife/combat/guidesa_bonesickle
-    name = "bone sickle"
-    desc = "A curved knife fashioned to resemble a sickle made out of bones."
-    icon = 'icons/obj/items/donor_weapons.dmi'
-    icon_state = "guidesa_bonesickle"
-    sheathe_icon = "bonedagger"
+  name = "bone sickle"
+  desc = "A curved knife fashioned to resemble a sickle made out of bones."
+  icon = 'icons/obj/items/donor_weapons.dmi'
+  icon_state = "guidesa_bonesickle"
+  sheathe_icon = "bonedagger"
+
+/obj/item/clothing/head/roguetown/wizhat/bighat
+	name = "Eryn’s archwyzardly hat"
+	desc = "In the oldest days, a magos’s mastery of the Arcyne was documented by the size of their hat. This one is comically large."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	icon_state = "bighat"
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes64.dmi'
+	bloody_icon = 'icons/effects/blood64.dmi'
+	detail_tag = "_detail"
+	altdetail_tag = "_detailalt"
+	dynamic_hair_suffix = "+generic"
+	color = "#660fcc"
+	detail_color = CLOTHING_GOLD
+	altdetail_color = CLOTHING_GOLD
