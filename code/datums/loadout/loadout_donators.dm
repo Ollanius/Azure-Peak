@@ -1081,6 +1081,12 @@
 	path = /obj/item/enchantingkit/donator_naman_tassetedbeltpack
 	ckeywhitelist = list("copperwilson")
 
+/datum/loadout_item/donator/naman_triumph_tassetedbeltpack
+	name = "Donator Item - Tasseted Beltpack"
+	path = /obj/item/storage/backpack/rogue/satchel/beltpack/donator_naman
+	triumph_cost = 7 //Player-requested alternative.
+	ckeywhitelist = list("copperwilson")
+
 /datum/loadout_item/donator/naman_deccoatofplates
 	name = "Donator Kit - Decorated Coat Of Plates"
 	path = /obj/item/enchantingkit/donator_naman_deccoatofplates
