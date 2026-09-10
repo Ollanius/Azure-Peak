@@ -131,7 +131,7 @@
 		// extra note: we only do this for mobs with a mind, aka not NPCS. npcs always get insta-decapped as before
 		if (owner?.client && !vorpal && !guillotine_execution && two_stage_death && !grievously_wounded)
 			if (HAS_TRAIT(owner, TRAIT_IRONMAN))
-				C.visible_message(span_danger("<B>[C] is <span class='crit'>[pick("ENDED", "TERMINATED", "DEPRECATED","SCRAPPED","DESTROYED","UNDONE","WRECKED","REKT","FRAGGED")]</span> as [C.p_their()] ravaged neck <span class='crit'>BLOSSOMS</span> into wisps of <span class='crit'>SCRAP and MAGIC DUST!</span></B>"))
+				C.visible_message(span_danger("<B>[C] is <span class='crit'>[pick("ENDED", "TERMINATED", "DEPRECATED","SCRAPPED","DESTROYED","UNDONE","WRECKED","REKT","FRAGGED","KIRKED")]</span> as [C.p_their()] ravaged neck <span class='crit'>BLOSSOMS</span> into wisps of <span class='crit'>SCRAP and MAGIC DUST!</span></B>"))
 				C.death()
 				return
 
@@ -140,7 +140,7 @@
 				C.death()
 				return
 			else
-				C.visible_message(span_danger("<B>[C] is <span class='crit'>[pick("ENDED", "SLAIN", "SLAUGHTERED","MURDERED","SNUFFED","BUTCHERED","FELLED","FINISHED","FRAGGED")]</span> as [C.p_their()] ravaged neck <span class='crit'>BLOSSOMS</span> into petals of <span class='crit'>GORE and BONE!</span></B>"))
+				C.visible_message(span_danger("<B>[C] is <span class='crit'>[pick("ENDED", "SLAIN", "SLAUGHTERED","MURDERED","SNUFFED","BUTCHERED","FELLED","FINISHED","FRAGGED","KIRKED")]</span> as [C.p_their()] ravaged neck <span class='crit'>BLOSSOMS</span> into petals of <span class='crit'>GORE and BONE!</span></B>"))
 				add_wound(/datum/wound/grievous/pre_decapitation_sharp) // this causes a bigass wound, marks the limb as greviously wounded and instantly kills the affected user.
 				return
 		else
