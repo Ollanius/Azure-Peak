@@ -4268,3 +4268,5 @@ As Excaliber."
 	line was added across the other side of the handle. \"Except the Conqueror.\""
 	icon_state = "rezasword"
 	icon = 'icons/obj/items/donor_weapons.dmi'
+
+jarona !
