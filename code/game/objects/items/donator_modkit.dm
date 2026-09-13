@@ -244,14 +244,16 @@
 	name = "'Heartplate' morphing elixir"
 	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Bronze Cuirass, an Iron Breastplate, a Steel Cuirass, or a set of Leather Armor."
 	target_items = list(
-		/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/holysee = /obj/item/clothing/suit/roguetown/armor/plate/cuirass/donator,
-		/obj/item/clothing/suit/roguetown/armor/plate/cuirass/bronze		= /obj/item/clothing/suit/roguetown/armor/plate/cuirass/bronze/donator,
-		/obj/item/clothing/suit/roguetown/armor/plate/cuirass/iron			= /obj/item/clothing/suit/roguetown/armor/plate/cuirass/iron/donator,
-		/obj/item/clothing/suit/roguetown/armor/plate/cuirass				= /obj/item/clothing/suit/roguetown/armor/plate/cuirass/donator,
-		/obj/item/clothing/suit/roguetown/armor/leather						= /obj/item/clothing/suit/roguetown/armor/leather/donator
+		/obj/item/clothing/suit/roguetown/armor/plate/cuirass/fluted/holysee 	= /obj/item/clothing/suit/roguetown/armor/plate/cuirass/heartplate,
+		/obj/item/clothing/suit/roguetown/armor/plate/cuirass/bronze			= /obj/item/clothing/suit/roguetown/armor/plate/cuirass/bronze/heartplate,
+		/obj/item/clothing/suit/roguetown/armor/plate/cuirass/iron				= /obj/item/clothing/suit/roguetown/armor/plate/cuirass/iron/heartplate,
+		/obj/item/clothing/suit/roguetown/armor/plate/cuirass					= /obj/item/clothing/suit/roguetown/armor/plate/cuirass/heartplate,
+		/obj/item/clothing/suit/roguetown/armor/leather/studded					= /obj/item/clothing/suit/roguetown/armor/leather/studded/heartplate,
+		/obj/item/clothing/suit/roguetown/armor/leather/heavy					= /obj/item/clothing/suit/roguetown/armor/leather/heavy/heartplate,
+		/obj/item/clothing/suit/roguetown/armor/leather							= /obj/item/clothing/suit/roguetown/armor/leather/heartplate
+		/obj/item/clothing/suit/roguetown/armor/plate							= /obj/item/clothing/suit/roguetown/armor/plate/heartplate
 	)
 	result_item = null
-	exact_type = TRUE
 
 /obj/item/enchantingkit/elvenchainmail
 	name = "'Elven Haubergeon' morphing elixir"
@@ -369,7 +371,7 @@
 		/obj/item/clothing/suit/roguetown/armor/plate/fluted					= /obj/item/clothing/suit/roguetown/armor/plate/fluted/donator_girdle,
 		/obj/item/clothing/suit/roguetown/armor/plate/iron						= /obj/item/clothing/suit/roguetown/armor/plate/cuirass/iron/donator_girdle,
 		/obj/item/clothing/suit/roguetown/armor/leather							= /obj/item/clothing/suit/roguetown/armor/leather/donator_girdle,
-		/obj/item/clothing/suit/roguetown/armor/plate							= /obj/item/clothing/suit/roguetown/armor/plate/cuirass/donator_girdle
+		/obj/item/clothing/suit/roguetown/armor/plate							= /obj/item/clothing/suit/roguetown/armor/plate/donator_girdle
 	)
 	result_item = null
 
@@ -410,6 +412,7 @@
 		/obj/item/rogueweapon/katar											= /obj/item/rogueweapon/katar/donator_elegant,
 		/obj/item/rogueweapon/halberd										= /obj/item/rogueweapon/halberd/donator_elegant,
 		/obj/item/rogueweapon/eaglebeak										= /obj/item/rogueweapon/eaglebeak/donator_elegant,
+		/obj/item/rogueweapon/estoc											= /obj/item/rogueweapon/estoc/donator_elegant,
 		/obj/item/rogueweapon/sword											= /obj/item/rogueweapon/sword/donator_elegant
 	)
 	result_item = null
@@ -483,6 +486,41 @@
 	)
 	result_item = null
 
+/obj/item/clothing/wrists/roguetown/bracers/donator_decapauldron
+	name = "decablessed pauldrons"
+	desc = "Oversized blessed steel pauldrons that protect the forearms and upper-arms. Surprisingly protective and regal, but heavy...!"
+	item_state = "decapauldron"
+	icon_state = "decapauldron"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+
+/obj/item/clothing/wrists/roguetown/bracers/donator_steelpauldron
+	name = "steel pauldrons"
+	desc = "Oversized steel pauldrons that protect the forearms and upper-arms. Surprisingly protective and durable, but heavy...!"
+	item_state = "steelpauldron"
+	icon_state = "steelpauldron"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+
+/obj/item/enchantingkit/donator_case
+	name = "'Cased Satchel' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Satchel. Note \
+	that this will dissolve any items stored inside the chosen Satchel; make sure to empty it out, beforehand!"
+	target_items = list(
+		/obj/item/storage/backpack/rogue/backpack			= /obj/item/storage/backpack/rogue/backpack/case,
+		/obj/item/storage/backpack/rogue/satchel			= /obj/item/storage/backpack/rogue/satchel/case
+	)
+	result_item = null
+
+/obj/item/enchantingkit/donator_avantynehelm
+	name = "'Avantyne-Threaded Barbute' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Barbute. Note \
+	that this will flag the chosen Barbute as an openly heretical item; use this at your risk!"
+	target_items = list(/obj/item/clothing/head/roguetown/helmet/heavy/barbute)
+	result_item = /obj/item/clothing/head/roguetown/helmet/heavy/barbute/avantyne
+
 /////////////////////////////
 // ! Player / Donor Kits ! //
 /////////////////////////////
@@ -523,7 +561,7 @@
 	result_item = /obj/item/clothing/cloak/poncho/dittocloak
 
 /obj/item/enchantingkit/strudel4
-	name = "'Form-fitting Padded Gambeson' morphing elixir"
+	name = "'Form-Fitting Padded Gambeson' morphing elixir"
 	target_items = list(/obj/item/clothing/suit/roguetown/armor/gambeson/heavy)
 	result_item = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/strudels
 

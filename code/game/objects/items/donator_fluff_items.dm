@@ -260,7 +260,7 @@
 	item_state = "elven_chain"
 	icon_state = "elven_chain"
 
-/obj/item/clothing/suit/roguetown/armor/plate/cuirass/donator
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/heartplate
 	name = "steel heartplate"
 	desc = "A curious - and particularly revealing - variant of a common cuirass. It's said that the intentionally provocative design \
 	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
@@ -269,7 +269,16 @@
 	item_state = "heartplates"
 	icon_state = "heartplates"
 
-/obj/item/clothing/suit/roguetown/armor/plate/cuirass/iron/donator
+/obj/item/clothing/suit/roguetown/armor/plate/heartplate
+	name = "heavy steel heartplate"
+	desc = "A curious - and particularly revealing - variant of a half-plated cuirass. It's said that the intentionally provocative design \
+	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "heartplates"
+	icon_state = "heartplates"
+
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/iron/heartplate
 	name = "iron heartplate"
 	desc = "A curious - and particularly revealing - variant of an iron cuirass. It's said that the intentionally provocative design \
 	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
@@ -278,7 +287,7 @@
 	item_state = "heartplatei"
 	icon_state = "heartplatei"
 
-/obj/item/clothing/suit/roguetown/armor/plate/cuirass/bronze/donator
+/obj/item/clothing/suit/roguetown/armor/plate/cuirass/bronze/heartplate
 	name = "bronze heartplate"
 	desc = "A curious - and particularly revealing - variant of a bronze cuirass. It's said that the intentionally provocative design \
 	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
@@ -287,7 +296,7 @@
 	item_state = "heartplateb"
 	icon_state = "heartplateb"
 
-/obj/item/clothing/suit/roguetown/armor/leather/donator
+/obj/item/clothing/suit/roguetown/armor/leather/heartplate
 	name = "leather heartplate"
 	desc = "A curious - and particularly revealing - variant of a leather vest. It's said that the intentionally provocative design \
 	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
@@ -295,6 +304,24 @@
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	item_state = "heartplatel"
 	icon_state = "heartplatel"
+
+/obj/item/clothing/suit/roguetown/armor/leather/heavy/heartplate
+	name = "heavy leather heartplate"
+	desc = "A curious - and particularly revealing - variant of a heavy leather vest. It's said that the intentionally provocative design \
+	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "leathercuirass"
+	icon_state = "leathercuirass"
+
+/obj/item/clothing/suit/roguetown/armor/leather/studded/heartplate
+	name = "studded leather heartplate"
+	desc = "A curious - and particularly revealing - variant of a studded leather vest. It's said that the intentionally provocative design \
+	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "leathercuirass"
+	icon_state = "leathercuirass"
 
 /obj/item/clothing/suit/roguetown/armor/leather/donator_cuirass
 	name = "heroic leather cuirass"
@@ -367,6 +394,17 @@
 /obj/item/clothing/suit/roguetown/armor/plate/cuirass/donator_girdle
 	name = "steel plackart"
 	desc = "A curious - and particularly revealing - variant of a common cuirass. It's said that the intentionally provocative design \
+	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	item_state = "plackarts"
+	icon_state = "plackarts"
+	body_parts_covered = CHEST | VITALS
+	flags_inv = null
+
+/obj/item/clothing/suit/roguetown/armor/plate/donator_girdle
+	name = "heavy steel plackart"
+	desc = "A curious - and particularly revealing - variant of a half-plated cuirass. It's said that the intentionally provocative design \
 	excels at diverting strikes that'd otherwise pierce the wearer's unprotected regions."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
@@ -1029,6 +1067,42 @@
 			pic.color = get_detail_color()
 		add_overlay(pic)
 
+/obj/item/clothing/mask/rogue/spectacles/iron/drow
+	name = "skikuldic-framed goggles"
+	desc = "Spectacles with double-layered lenses, wide enough to bring focus to even the most minute details in darkened workshops."
+	icon_state = "dgoggles"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	smeltresult = /obj/item/ingot/drow
+
+/obj/item/storage/backpack/rogue/satchel/case
+	name = "cased satchel"
+	desc = "A satchel with a harder, leather-wrapped shell."
+	icon_state = "case"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+
+/obj/item/storage/backpack/rogue/backpack/case
+	name = "cased backpack"
+	desc = "A heavy satchel with a harder, leather-wrapped shell. Deceptively capacious, courtesy of excess padding being removed from the inside."
+	icon_state = "case"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+
+/obj/item/clothing/head/roguetown/helmet/heavy/barbute/avantyne
+	name = "avantyne-threaded barbute"
+	desc = "A barbute that seems to be more avantyne than steel. Some might assume that the presence of yet-uncovered steel means this helmet \
+	can be saved, but rest assured.. </br> <font color='FF0000'>..that it has already been corrupted from the inside-out.</font>"
+	icon_state = "dakken_zizhelm"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes64.dmi'
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+	bloody_icon = 'icons/effects/blood64.dmi'
+
+/obj/item/clothing/head/roguetown/helmet/heavy/barbute/avantyne/get_examine_highlight_status()
+	return list(EXAMINEHIGHLIGHT_HERESYSEVERITY_ALARMING, HERESYDESC_ZIZO_ARMOR)
+
 //
 
 /obj/item/rogueweapon/huntingknife/idagger/steel/donator
@@ -1170,6 +1244,13 @@
 	desc = "An elegant armor-piercing longsword for an elegant wielder."
 	icon_state = "donatorestoc"
 	sheathe_icon = "donatorestoc"
+	icon = 'icons/obj/items/donor_weapons_64.dmi'
+	bigboy = TRUE
+
+/obj/item/rogueweapon/estoc/donator_elegant
+	name = "elegant estoc"
+	desc = "An elegant estoc for an elegant wielder."
+	icon_state = "donatorestoc"
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
 	bigboy = TRUE
 
@@ -1348,6 +1429,8 @@
 	icon_state = "katzbalger"
 	sheathe_icon = "katzbalger"
 	icon = 'icons/obj/items/donor_weapons.dmi'
+
+//
 
 ///////////////////
 // CKEY SPECIFIC //
@@ -1945,14 +2028,14 @@ As Excaliber."
 	bloody_icon = 'icons/effects/blood64.dmi'
 
 /obj/item/rogueweapon/sword/dakken_sword
-	name = "avantyne threaded sword"
+	name = "avantyne-threaded sword"
 	desc = "'Threads of dark metal wind through what was formerly a simple steel blade. Cracks and chips are filled in as the weapon of war is reshaped into a symbol of faith.'"
 	icon = 'icons/obj/items/donor_weapons.dmi'
 	icon_state = "alloybsword_32"
 	sheathe_icon = "alloybsword"
 
 /obj/item/rogueweapon/sword/long/dakken_longsword
-	name = "avantyne threaded longsword"
+	name = "avantyne-threaded longsword"
 	desc = "'Threads of dark metal wind through what was formerly a simple steel blade. Cracks and chips are filled in as the weapon of war is reshaped into a symbol of faith.'"
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
 	icon_state = "alloyblongsword"
@@ -3408,7 +3491,7 @@ As Excaliber."
 
 // ROSYSATURNIIDAE
 /obj/item/clothing/mask/rogue/facemask/steel/maille/birdmask
-	name = "Beaked Mask"
+	name = "beaked mask"
 	desc = "A plated steel mask made to resemble a bird's beak.<br> \
 	While similar to the long masks of Pestra's faithful, this is designed to protect against far less insidious dangers. Namely, bladed weapons.<br> \
 	<font color='3399FF'>'The magpie's song, a fleeting flight, guides the heart through the encroaching night.'</font>"
@@ -4000,6 +4083,59 @@ As Excaliber."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 
+/obj/item/clothing/under/roguetown/trou/artipants/donator_thistle
+	name = "underdwelling artificer's trousers"
+	desc = "Sturdy trousers with skikuldic buttons, fitted for a smaller-statured artificer's physique. In lieu of silks, it's common for \
+	those of the Underdark to instead use crushed-up plump helmets to gift their garbs with that unique purplish hue."
+	icon_state = "thistlepants"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+	allowed_sex = list(FEMALE) //Character-specific.
+	allowed_race = list(/datum/species/dwarf, /datum/species/dwarf/gnome, /datum/species/dwarf/mountain) //Likewise.
+
+/obj/item/clothing/suit/roguetown/shirt/undershirt/artificer/donator_thistle
+	name = "underdwelling artificer's shirt"
+	desc = "Soft fabrics, interwoven to cradle both the bosom and neck. Colloquially termed as a 'turtleneck', both due to its coverage and the \
+	fact that only those of shorter stature can properly wear it. It almost feels like wearing nothing at all.. <i>nothing at all!</i>"
+	icon_state = "thistleturtleneck"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+	allowed_sex = list(FEMALE)
+	allowed_race = list(/datum/species/dwarf, /datum/species/dwarf/gnome, /datum/species/dwarf/mountain)
+	adjustable = CAN_CADJUST
+	toggle_icon_state = TRUE
+
+/obj/item/clothing/suit/roguetown/shirt/undershirt/artificer/donator_thistle/ComponentInitialize()
+	..()
+	AddComponent(/datum/component/adjustable_clothing, CHEST, null, null, 'sound/foley/cloth_wipe (1).ogg', null, UPD_CHEST)
+
+/obj/item/clothing/suit/roguetown/shirt/undershirt/artificer/donator_thistle/get_mechanics_examine(mob/user)
+	. = ..()
+	. += span_info("RMB to adjust the undershirt's coverage; it can either cover the entire torso, or be tightened up to just cover the chest.")
+
+/obj/item/clothing/gloves/roguetown/angle/grenzelgloves/blacksmith/donator_thistle
+	name = "underdwelling artificer's gloves"
+	desc = "Leather gloves, skikuldic cuffs, and silk padding. That last part's probably not ideal <i>(considering the fact that artificers work \
+	quite a lot with incendiary materials)</i>, but the ensuing lack of callouses makes it absolutely worth it."
+	icon_state = "thistlegloves"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+	allowed_sex = list(FEMALE)
+	allowed_race = list(/datum/species/dwarf, /datum/species/dwarf/gnome, /datum/species/dwarf/mountain)
+
+/obj/item/clothing/cloak/apron/blacksmith/donator_thistle
+	name = "underdwelling artificer's apron"
+	desc = "A thick smock, impregnated with incendiary-snuffing powder and studded with skikuldic buckles. The only reason that the Town's blacksmiths \
+	haven't killed for this apron is because they're all far too large to actually wear it."
+	icon_state = "thistleapron"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	allowed_sex = list(FEMALE)
+	allowed_race = list(/datum/species/dwarf, /datum/species/dwarf/gnome, /datum/species/dwarf/mountain)
+
 // Naman
 /obj/item/clothing/cloak/half/rider/donator_naman
 	name = "rider's scarfed cloak"
@@ -4228,8 +4364,8 @@ As Excaliber."
 			pic.color = get_detail_color()
 		add_overlay(pic)
 
-/obj/item/clothing/head/roguetown/duelhat/donator_rezathedwarf
-	name = "Noah Enclave's hat"
+/obj/item/clothing/head/roguetown/duelhat/donator_brimmedhat
+	name = "brimmed hat"
 	desc = "A well-made hat, trimmed with gold and silver, plumed with a rare feather. Rumored to be copied across the world by a \
 	merchant selling its likeness and using the wearer's name. Much to the original wearer's chagrin."
 	icon_state = "rezahat"
@@ -4241,11 +4377,11 @@ As Excaliber."
 	altdetail_tag = "_detailalt"
 	altdetail_color = CLOTHING_PURPLE
 
-/obj/item/clothing/head/roguetown/duelhat/donator_rezathedwarf/Initialize(mapload)
+/obj/item/clothing/head/roguetown/duelhat/donator_brimmedhat/Initialize(mapload)
 	. = ..()
 	update_icon()
 
-/obj/item/clothing/head/roguetown/duelhat/donator_rezathedwarf/update_icon()
+/obj/item/clothing/head/roguetown/duelhat/donator_brimmedhat/update_icon()
 	cut_overlays()
 	if(get_detail_tag())
 		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
@@ -4269,4 +4405,20 @@ As Excaliber."
 	icon_state = "rezasword"
 	icon = 'icons/obj/items/donor_weapons.dmi'
 
-jarona !
+/obj/item/clothing/wrists/roguetown/bracers/donator_decapauldron
+	name = "decablessed pauldrons"
+	desc = "Oversized blessed steel pauldrons that protect the forearms and upper-arms. Surprisingly protective and regal, but heavy...!"
+	item_state = "decapauldron"
+	icon_state = "decapauldron"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+
+/obj/item/clothing/wrists/roguetown/bracers/donator_steelpauldron
+	name = "steel pauldrons"
+	desc = "Oversized steel pauldrons that protect the forearms and upper-arms. Surprisingly protective and durable, but heavy...!"
+	item_state = "steelpauldron"
+	icon_state = "steelpauldron"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
