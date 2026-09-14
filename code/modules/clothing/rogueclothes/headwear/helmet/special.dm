@@ -89,6 +89,7 @@
 	color = "#FFFFFF"
 	detail_color = "#262927"
 	altdetail_color = "#FFFFFF"
+	max_integrity = ARMOR_INT_HELMET_STEEL + 15
 
 /obj/item/clothing/head/roguetown/helmet/sallet/visored/grenzelhoft/Initialize(mapload)
 	. = ..()
