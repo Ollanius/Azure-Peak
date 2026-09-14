@@ -4203,7 +4203,7 @@ As Excaliber."
 
 /obj/item/clothing/suit/roguetown/shirt/undershirt/artificer/donator_thistle/ComponentInitialize()
 	..()
-	AddComponent(/datum/component/adjustable_clothing, CHEST, null, null, 'sound/foley/cloth_wipe (1).ogg', null, UPD_CHEST)
+	AddComponent(/datum/component/adjustable_clothing, (CHEST|VITALS), null, null, 'sound/foley/cloth_wipe (1).ogg', null, UPD_CHEST)
 
 /obj/item/clothing/suit/roguetown/shirt/undershirt/artificer/donator_thistle/get_mechanics_examine(mob/user)
 	. = ..()
