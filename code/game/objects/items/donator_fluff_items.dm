@@ -3203,11 +3203,11 @@ As Excaliber."
 	altdetail_color = CLOTHING_RED
 	allowed_sex = list(FEMALE)
 
-/obj/item/clothing/suit/roguetown/armor/brigandine/light/woodland/Initialize(mapload)
+/obj/item/clothing/suit/roguetown/armor/brigandine/light/donator_rhynn/Initialize(mapload)
 	. = ..()
 	update_icon()
 
-/obj/item/clothing/suit/roguetown/armor/brigandine/light/woodland/update_icon()
+/obj/item/clothing/suit/roguetown/armor/brigandine/light/donator_rhynn/update_icon()
 	cut_overlays()
 	if(get_detail_tag())
 		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
@@ -4178,7 +4178,7 @@ As Excaliber."
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	allowed_sex = list(FEMALE) //Character-specific.
-	allowed_race = list(/datum/species/dwarf, /datum/species/dwarf/gnome, /datum/species/dwarf/mountain) //Likewise.
+	allowed_race = RACES_SMALL
 
 /obj/item/clothing/suit/roguetown/shirt/undershirt/artificer/donator_thistle
 	name = "underdwelling artificer's shirt"
@@ -4189,7 +4189,7 @@ As Excaliber."
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	allowed_sex = list(FEMALE)
-	allowed_race = list(/datum/species/dwarf, /datum/species/dwarf/gnome, /datum/species/dwarf/mountain)
+	allowed_race = RACES_SMALL
 	adjustable = CAN_CADJUST
 	toggle_icon_state = TRUE
 
@@ -4210,7 +4210,7 @@ As Excaliber."
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	allowed_sex = list(FEMALE)
-	allowed_race = list(/datum/species/dwarf, /datum/species/dwarf/gnome, /datum/species/dwarf/mountain)
+	allowed_race = RACES_SMALL
 
 /obj/item/clothing/shoes/roguetown/boots/leather/donator_thistle
 	name = "underdwelling artificer's boots"
@@ -4220,7 +4220,7 @@ As Excaliber."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	allowed_sex = list(FEMALE)
-	allowed_race = list(/datum/species/dwarf, /datum/species/dwarf/gnome, /datum/species/dwarf/mountain)
+	allowed_race = RACES_SMALL
 
 /obj/item/clothing/cloak/apron/blacksmith/donator_thistle
 	name = "underdwelling artificer's apron"
@@ -4230,7 +4230,7 @@ As Excaliber."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	allowed_sex = list(FEMALE)
-	allowed_race = list(/datum/species/dwarf, /datum/species/dwarf/gnome, /datum/species/dwarf/mountain)
+	allowed_race = RACES_SMALL
 
 // Naman
 /obj/item/clothing/cloak/half/rider/donator_naman
