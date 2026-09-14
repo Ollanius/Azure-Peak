@@ -4178,7 +4178,7 @@ As Excaliber."
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	allowed_sex = list(FEMALE) //Character-specific.
-	allowed_race = RACES_SMALL
+	allowed_race = DWARVEN_RACE_TYPES
 
 /obj/item/clothing/suit/roguetown/shirt/undershirt/artificer/donator_thistle
 	name = "underdwelling artificer's shirt"
@@ -4189,7 +4189,7 @@ As Excaliber."
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	allowed_sex = list(FEMALE)
-	allowed_race = RACES_SMALL
+	allowed_race = DWARVEN_RACE_TYPES
 	adjustable = CAN_CADJUST
 	toggle_icon_state = TRUE
 
@@ -4210,7 +4210,7 @@ As Excaliber."
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	allowed_sex = list(FEMALE)
-	allowed_race = RACES_SMALL
+	allowed_race = DWARVEN_RACE_TYPES
 
 /obj/item/clothing/shoes/roguetown/boots/leather/donator_thistle
 	name = "underdwelling artificer's boots"
@@ -4220,7 +4220,7 @@ As Excaliber."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	allowed_sex = list(FEMALE)
-	allowed_race = RACES_SMALL
+	allowed_race = DWARVEN_RACE_TYPES
 
 /obj/item/clothing/cloak/apron/blacksmith/donator_thistle
 	name = "underdwelling artificer's apron"
@@ -4230,7 +4230,7 @@ As Excaliber."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	allowed_sex = list(FEMALE)
-	allowed_race = RACES_SMALL
+	allowed_race = DWARVEN_RACE_TYPES
 
 // Naman
 /obj/item/clothing/cloak/half/rider/donator_naman
