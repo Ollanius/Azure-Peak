@@ -246,10 +246,6 @@
 	name = "Gift - Armor Cosmetic, Heelification Elixir"
 	path = /obj/item/heelkit
 
-/datum/loadout_item/donator/universal/donator_case
-	name = "Gift - Kit, Cased Satchel"
-	path = /obj/item/enchantingkit/donator_case
-
 /datum/loadout_item/donator/universal/donator_cropped_gambeson
 	name = "Gift - Kit, Cropped Gambeson"
 	path = /obj/item/enchantingkit/donator_cropped_gambeson
@@ -1128,6 +1124,11 @@
 /datum/loadout_item/donator/flybrokenwings_drowapron
 	name = "Donator Item - Underdweller's Apron"
 	path = /obj/item/clothing/cloak/apron/blacksmith/donator_thistle
+	ckeywhitelist = list("flybrokenwings")
+
+/datum/loadout_item/donator/flybrokenwings_case
+	name = "Gift - Kit, Cased Satchel"
+	path = /obj/item/enchantingkit/donator_case
 	ckeywhitelist = list("flybrokenwings")
 
 /datum/loadout_item/donator/naman_lance
