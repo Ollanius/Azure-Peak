@@ -486,23 +486,17 @@
 	)
 	result_item = null
 
-/obj/item/clothing/wrists/roguetown/bracers/donator_decapauldron
-	name = "decablessed pauldrons"
-	desc = "Oversized blessed steel pauldrons that protect the forearms and upper-arms. Surprisingly protective and regal, but heavy...!"
-	item_state = "decapauldron"
-	icon_state = "decapauldron"
-	icon = 'icons/clothing/donor_clothes.dmi'
-	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
-	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+/obj/item/enchantingkit/donator_universal_decapauldron
+	name = "'Decablessed Pauldrons' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a pair of Steel Bracers."
+	target_items = list(/obj/item/clothing/wrists/roguetown/bracers)
+	result_item = /obj/item/clothing/wrists/roguetown/bracers/donator_decapauldron
 
-/obj/item/clothing/wrists/roguetown/bracers/donator_steelpauldron
-	name = "steel pauldrons"
-	desc = "Oversized steel pauldrons that protect the forearms and upper-arms. Surprisingly protective and durable, but heavy...!"
-	item_state = "steelpauldron"
-	icon_state = "steelpauldron"
-	icon = 'icons/clothing/donor_clothes.dmi'
-	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
-	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+/obj/item/enchantingkit/donator_universal_steelpauldron
+	name = "'Steel Pauldrons' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a pair of Steel Bracers."
+	target_items = list(/obj/item/clothing/wrists/roguetown/bracers)
+	result_item = /obj/item/clothing/wrists/roguetown/bracers/donator_steelpauldron
 
 /obj/item/enchantingkit/donator_case
 	name = "'Cased Satchel' morphing elixir"
