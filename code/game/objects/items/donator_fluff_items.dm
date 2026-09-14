@@ -1081,7 +1081,6 @@
 	icon_state = "case"
 	item_state = "case"
 	icon = 'icons/clothing/donor_clothes.dmi'
-	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 
 /obj/item/storage/backpack/rogue/backpack/case
 	name = "cased backpack"
@@ -1089,7 +1088,6 @@
 	icon_state = "case"
 	item_state = "case"
 	icon = 'icons/clothing/donor_clothes.dmi'
-	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 
 /obj/item/clothing/head/roguetown/helmet/heavy/barbute/avantyne
 	name = "avantyne-threaded barbute"
@@ -3162,8 +3160,10 @@ As Excaliber."
 	fashion-minded from flaunting their Grenzelhoftian silks at any given opportunity."
 	color = CLOTHING_WHITE
 	icon_state = "rhynncloak"
+	item_state = "rhynncloak"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	allowed_sex = list(FEMALE) //Character-specific.
 	detail_tag = "_detail"
 	detail_color = COLOR_RED
@@ -4490,11 +4490,4 @@ As Excaliber."
 	founder of the house in his days as a slave. On its handle reads, originally read, \"The Chosen Have Nothing to Fear,\" but a new \
 	line was added across the other side of the handle. \"Except the Conqueror.\""
 	icon_state = "rezasword"
-	icon = 'icons/obj/items/donor_weapons.dmi'
-
-// Limetease
-/obj/item/rogueweapon/sword/sabre/donator_limetease
-	name = "Malignant Sabre"
-	desc = "A sinister-looking saber with a dark aura. Its blade seems to pulse with an otherworldly energy."
-	icon_state = "limesaber"
 	icon = 'icons/obj/items/donor_weapons.dmi'
