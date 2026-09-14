@@ -1103,6 +1103,68 @@
 /obj/item/clothing/head/roguetown/helmet/heavy/barbute/avantyne/get_examine_highlight_status()
 	return list(EXAMINEHIGHLIGHT_HERESYSEVERITY_ALARMING, HERESYDESC_ZIZO_ARMOR)
 
+/obj/item/clothing/head/roguetown/roguehood/shadedhat
+	name = "shaded hat"
+	desc = "A friend to travelers across antique and distant lands; the sort where Astrata's light is bright enough to blind the unprepared, specifically."
+	color = null
+	icon_state = "shadedhat"
+	item_state = "shadedhat"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	body_parts_covered = HEAD|HAIR
+	block2add = null
+	flags_inv = HIDEHAIR
+
+/obj/item/clothing/head/roguetown/roguehood/shadedhat/attackby(obj/item/W, mob/living/user, params)
+	..()
+	if(istype(W, /obj/item/natural/fur) && !detail_tag)
+		var/choice = input(user, "Choose a color.", "Fur") as anything in COLOR_MAP
+		detail_color = COLOR_MAP[choice]
+		detail_tag = "_detail"
+		user.visible_message(span_warning("[user] adds [W] to [src]."))
+		user.transferItemToLoc(W, src, FALSE, FALSE)
+		update_icon()
+		if(loc == user && ishuman(user))
+			var/mob/living/carbon/H = user
+			H.update_inv_head()
+	if(istype(W, /obj/item/natural/cloth) && !altdetail_tag)
+		var/choice = input(user, "Choose a color.", "Cloth") as anything in COLOR_MAP
+		detail_color = COLOR_MAP[choice]
+		detail_tag = "_detailalt"
+		user.visible_message(span_warning("[user] adds [W] to [src]."))
+		user.transferItemToLoc(W, src, FALSE, FALSE)
+		update_icon()
+		if(loc == user && ishuman(user))
+			var/mob/living/carbon/H = user
+			H.update_inv_head()
+
+/obj/item/clothing/head/roguetown/roguehood/shadedhat/update_icon()
+	cut_overlays()
+	if(get_detail_tag())
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[get_detail_state(icon_state)][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)
+	if(get_altdetail_tag())
+		var/mutable_appearance/pic2 = mutable_appearance(icon(icon, "[get_detail_state(icon_state)][altdetail_tag]"))
+		pic2.appearance_flags = RESET_COLOR
+		if(get_altdetail_color())
+			pic2.color = get_altdetail_color()
+		add_overlay(pic2)
+
+/obj/item/clothing/head/roguetown/roguehood/shadedhat/dyeable
+	icon_state = "dshadedhat"
+	item_state = "dshadedhat"
+
+/obj/item/storage/backpack/rogue/backpack/donator_beltpack
+	name = "belted backpack"
+	desc = "A backpack that is neither worn on the back, nor happens to function as a belt. It certainly beats dealing with more shoulder-strain, however."
+	icon_state = "beltedpackl"
+	item_state = "beltedpackl"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+
 //
 
 /obj/item/rogueweapon/huntingknife/idagger/steel/donator
@@ -3074,6 +3136,74 @@ As Excaliber."
 	icon_state = "celestialstaffsun"
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
 
+/obj/item/clothing/cloak/lordcloak/ladycloak/donator_rhynn
+	name = "ladylike longcloak"
+	desc = "Ermine trimmed, dusted with fyritus. A siege mage's mantle is <i>traditionally</i> cermeonial, but that seldom keeps the more \
+	fashion-minded from flaunting their Grenzelhoftian silks at any given opportunity."
+	color = CLOTHING_WHITLE
+	icon_state = "rhynncloak"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	allowed_sex = list(FEMALE) //Character-specific.
+	detail_tag = "_detail"
+	detail_color = COLOR_RED
+	altdetail_tag = "_detailalt"
+	altdetail_color = CLOTHING_WHITE
+
+/obj/item/clothing/cloak/lordcloak/ladycloak/donator_rhynn/Initialize(mapload)
+	. = ..()
+	update_icon()
+
+/obj/item/clothing/cloak/lordcloak/ladycloak/donator_rhynn/update_icon()
+	cut_overlays()
+	if(get_detail_tag())
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)
+	if(get_altdetail_tag())
+		var/mutable_appearance/pic2 = mutable_appearance(icon(icon, "[icon_state][altdetail_tag]"))
+		pic2.appearance_flags = RESET_COLOR
+		if(get_altdetail_color())
+			pic2.color = get_altdetail_color()
+		add_overlay(pic2)
+
+/obj/item/clothing/suit/roguetown/armor/brigandine/light/donator_rhynn
+	name = "jacketed brigandine"
+	desc = "A lightweight jacket of studded brigandine, worn beneath a steel cuirass that's been custom-fitted to someone's bosom. While more \
+	expensive than a siege mage's traditional vest, this Grenzelhoftian garbpiece offers much finer protection against one's own incendiary \
+	magicks."
+	item_state = "rhynnbrigandine"
+	icon_state = "rhynnbrigandine"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+	detail_tag = "_detail"
+	detail_color = CLOTHING_WHITE
+	altdetail_tag = "_detail"
+	altdetail_color = CLOTHING_RED
+	allowed_sex = list(FEMALE)
+
+/obj/item/clothing/suit/roguetown/armor/brigandine/light/woodland/Initialize(mapload)
+	. = ..()
+	update_icon()
+
+/obj/item/clothing/suit/roguetown/armor/brigandine/light/woodland/update_icon()
+	cut_overlays()
+	if(get_detail_tag())
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)
+	if(get_altdetail_tag())
+		var/mutable_appearance/pic2 = mutable_appearance(icon(icon, "[icon_state][altdetail_tag]"))
+		pic2.appearance_flags = RESET_COLOR
+		if(get_altdetail_color())
+			pic2.color = get_altdetail_color()
+		add_overlay(pic2)
+
 //Lamprey
 /obj/item/clothing/head/roguetown/helmet/heavy/aventail/donator_lamprey
 	name = "stechhelm"
@@ -4021,68 +4151,6 @@ As Excaliber."
 			if("gen")
 				return list("shrink" = 0.6,"sx" = -6,"sy" = 8,"nx" = 6,"ny" = 9,"wx" = 0,"wy" = 7,"ex" = -1,"ey" = 9,"northabove" = 1,"southabove" = 1,"eastabove" = 1,"westabove" = 1,"nturn" = -50,"sturn" = 40,"wturn" = 50,"eturn" = -50,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
 
-/obj/item/clothing/head/roguetown/roguehood/shadedhat
-	name = "shaded hat"
-	desc = "A friend to travelers across antique and distant lands; the sort where Astrata's light is bright enough to blind the unprepared, specifically."
-	color = null
-	icon_state = "shadedhat"
-	item_state = "shadedhat"
-	icon = 'icons/clothing/donor_clothes.dmi'
-	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
-	body_parts_covered = HEAD|HAIR
-	block2add = null
-	flags_inv = HIDEHAIR
-
-/obj/item/clothing/head/roguetown/roguehood/shadedhat/attackby(obj/item/W, mob/living/user, params)
-	..()
-	if(istype(W, /obj/item/natural/fur) && !detail_tag)
-		var/choice = input(user, "Choose a color.", "Fur") as anything in COLOR_MAP
-		detail_color = COLOR_MAP[choice]
-		detail_tag = "_detail"
-		user.visible_message(span_warning("[user] adds [W] to [src]."))
-		user.transferItemToLoc(W, src, FALSE, FALSE)
-		update_icon()
-		if(loc == user && ishuman(user))
-			var/mob/living/carbon/H = user
-			H.update_inv_head()
-	if(istype(W, /obj/item/natural/cloth) && !altdetail_tag)
-		var/choice = input(user, "Choose a color.", "Cloth") as anything in COLOR_MAP
-		detail_color = COLOR_MAP[choice]
-		detail_tag = "_detailalt"
-		user.visible_message(span_warning("[user] adds [W] to [src]."))
-		user.transferItemToLoc(W, src, FALSE, FALSE)
-		update_icon()
-		if(loc == user && ishuman(user))
-			var/mob/living/carbon/H = user
-			H.update_inv_head()
-
-/obj/item/clothing/head/roguetown/roguehood/shadedhat/update_icon()
-	cut_overlays()
-	if(get_detail_tag())
-		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[get_detail_state(icon_state)][detail_tag]"))
-		pic.appearance_flags = RESET_COLOR
-		if(get_detail_color())
-			pic.color = get_detail_color()
-		add_overlay(pic)
-	if(get_altdetail_tag())
-		var/mutable_appearance/pic2 = mutable_appearance(icon(icon, "[get_detail_state(icon_state)][altdetail_tag]"))
-		pic2.appearance_flags = RESET_COLOR
-		if(get_altdetail_color())
-			pic2.color = get_altdetail_color()
-		add_overlay(pic2)
-
-/obj/item/clothing/head/roguetown/roguehood/shadedhat/dyeable
-	icon_state = "dshadedhat"
-	item_state = "dshadedhat"
-
-/obj/item/storage/backpack/rogue/backpack/donator_beltpack
-	name = "belted backpack"
-	desc = "A backpack that is neither worn on the back, nor happens to function as a belt. It certainly beats dealing with more shoulder-strain, however."
-	icon_state = "beltedpackl"
-	item_state = "beltedpackl"
-	icon = 'icons/clothing/donor_clothes.dmi'
-	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
-
 /obj/item/clothing/under/roguetown/trou/artipants/donator_thistle
 	name = "underdwelling artificer's trousers"
 	desc = "Sturdy trousers with skikuldic buttons, fitted for a smaller-statured artificer's physique. In lieu of silks, it's common for \
@@ -4331,7 +4399,6 @@ As Excaliber."
 	item_state = "astrataclerichelm"
 
 // REZATHEDWARF
-
 /obj/item/clothing/cloak/half/donator_rezathedwarf
 	name = "Noah's Glimmering Cloak"
 	desc = "Cloak from the infamous Redcloaks, said to have dyed their cloaks in the blood of their first kills. Even now, it pulses \
@@ -4405,20 +4472,9 @@ As Excaliber."
 	icon_state = "rezasword"
 	icon = 'icons/obj/items/donor_weapons.dmi'
 
-/obj/item/clothing/wrists/roguetown/bracers/donator_decapauldron
-	name = "decablessed pauldrons"
-	desc = "Oversized blessed steel pauldrons that protect the forearms and upper-arms. Surprisingly protective and regal, but heavy...!"
-	item_state = "decapauldron"
-	icon_state = "decapauldron"
-	icon = 'icons/clothing/donor_clothes.dmi'
-	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
-	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
-
-/obj/item/clothing/wrists/roguetown/bracers/donator_steelpauldron
-	name = "steel pauldrons"
-	desc = "Oversized steel pauldrons that protect the forearms and upper-arms. Surprisingly protective and durable, but heavy...!"
-	item_state = "steelpauldron"
-	icon_state = "steelpauldron"
-	icon = 'icons/clothing/donor_clothes.dmi'
-	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
-	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+// Limetease
+/obj/item/rogueweapon/sword/sabre/donator_limetease
+	name = "Malignant Sabre"
+	desc = "A sinister-looking saber with a dark aura. Its blade seems to pulse with an otherworldly energy."
+	icon_state = "limesaber"
+	icon = 'icons/obj/items/donor_weapons.dmi'

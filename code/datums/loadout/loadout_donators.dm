@@ -936,6 +936,16 @@
 	path = /obj/item/enchantingkit/truill_flowerblade
 	ckeywhitelist = list("truill")
 
+/datum/loadout_item/donator/rhynnrhynn_brigandine
+	name = "Donator Kit - Jacketed Brigandine"
+	path = /obj/item/enchantingkit/rhynnrhynn_brigandine
+	ckeywhitelist = list("rhynnrhynn")
+
+/datum/loadout_item/donator/rhynnrhynn_longcloak
+	name = "Donator Item - Ladylike Longcloak"
+	path = /obj/item/clothing/cloak/lordcloak/ladycloak/donator_rhynn
+	ckeywhitelist = list("rhynnrhynn")
+
 /datum/loadout_item/donator/rhynnrhynn_staff
 	name = "Donator Kit - Celestial Staff"
 	path = /obj/item/enchantingkit/rhynnrhynn_staff
@@ -1091,6 +1101,31 @@
 	path = /obj/item/rogueweapon/mace/donator_flybrokenwings_parasol
 	ckeywhitelist = list("flybrokenwings")
 
+/datum/loadout_item/donator/flybrokenwings_drowpants
+	name = "Donator Item - Underdweller's Trousers"
+	path =/obj/item/clothing/under/roguetown/trou/artipants/donator_thistle
+	ckeywhitelist = list("flybrokenwings")
+
+/datum/loadout_item/donator/flybrokenwings_drowshirt
+	name = "Donator Item - Underdweller's Shirt"
+	path = /obj/item/clothing/suit/roguetown/shirt/undershirt/artificer/donator_thistle
+	ckeywhitelist = list("flybrokenwings")
+
+/datum/loadout_item/donator/flybrokenwings_drowgloves
+	name = "Donator Item - Underdweller's Gloves"
+	path = /obj/item/clothing/gloves/roguetown/angle/grenzelgloves/blacksmith/donator_thistle
+	ckeywhitelist = list("flybrokenwings")
+
+/datum/loadout_item/donator/flybrokenwings_drowboots
+	name = "Donator Item - Underdweller's Shoes"
+	path = /obj/item/clothing/cloak/apron/blacksmith/donator_thistle
+	ckeywhitelist = list("flybrokenwings")
+
+/datum/loadout_item/donator/flybrokenwings_drowapron
+	name = "Donator Item - Underdweller's Apron"
+	path = /obj/item/clothing/cloak/apron/blacksmith/donator_thistle
+	ckeywhitelist = list("flybrokenwings")
+
 /datum/loadout_item/donator/naman_lance
 	name = "Donator Kit - Noble Lance"
 	path = /obj/item/enchantingkit/donator_naman_lance
@@ -1190,3 +1225,7 @@
 /datum/loadout_item/donator/rezathedwarf/blade
 	name = "Donator Kit - The Enclave Blade"
 	path = /obj/item/enchantingkit/weapon/donator_rezathedwarf_blade
+
+/datum/loadout_item/donator/limetease/limesaber
+	name = "Donator Kit - Malignant Blade"
+	path = /obj/item/enchantingkit/weapon/limetease_limesaber

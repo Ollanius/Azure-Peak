@@ -1225,6 +1225,12 @@
 	)
 	result_item = null
 
+/obj/item/enchantingkit/rhynnrhynn_brigandine
+	name = "'Jacketed Brigandine' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Lightweight Brigandine vest."
+	target_items = list(/obj/item/clothing/suit/roguetown/armor/brigandine/light)
+	result_item = /obj/item/clothing/suit/roguetown/armor/brigandine/light/donator_rhynn
+
 //Lamprey
 /obj/item/enchantingkit/lamprey_stechhelm
 	name = "'Stechhelm' morphing elixir"
