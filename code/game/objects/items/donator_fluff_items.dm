@@ -1079,6 +1079,7 @@
 	name = "cased satchel"
 	desc = "A satchel with a harder, leather-wrapped shell."
 	icon_state = "case"
+	item_state = "case"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 
@@ -1086,6 +1087,7 @@
 	name = "cased backpack"
 	desc = "A heavy satchel with a harder, leather-wrapped shell. Deceptively capacious, courtesy of excess padding being removed from the inside."
 	icon_state = "case"
+	item_state = "case"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 
@@ -3199,7 +3201,7 @@ As Excaliber."
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	detail_tag = "_detail"
 	detail_color = CLOTHING_WHITE
-	altdetail_tag = "_detail"
+	altdetail_tag = "_detailalt"
 	altdetail_color = CLOTHING_RED
 	allowed_sex = list(FEMALE)
 
@@ -4202,6 +4204,7 @@ As Excaliber."
 	desc = "Leather gloves, skikuldic cuffs, and silk padding. That last part's probably not ideal <i>(considering the fact that artificers work \
 	quite a lot with incendiary materials)</i>, but the ensuing lack of callouses makes it absolutely worth it."
 	icon_state = "thistlegloves"
+	item_state = "thistlegloves"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 
