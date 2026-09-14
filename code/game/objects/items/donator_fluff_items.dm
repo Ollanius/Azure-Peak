@@ -4204,7 +4204,6 @@ As Excaliber."
 	icon_state = "thistlegloves"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
-	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 
 /obj/item/clothing/shoes/roguetown/boots/leather/donator_thistle
 	name = "underdwelling artificer's boots"
