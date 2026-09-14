@@ -500,9 +500,10 @@
 
 /obj/item/enchantingkit/donator_case
 	name = "'Cased Satchel' morphing elixir"
-	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Satchel. Note \
-	that this will dissolve any items stored inside the chosen Satchel; make sure to empty it out, beforehand!"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Satchel, Backpack \
+	or Rucksack. Note that this will dissolve any items stored inside the chosen Satchel; make sure to empty it out, beforehand!"
 	target_items = list(
+		/obj/item/storage/backpack/rogue/backpack/bagpack 	= /obj/item/storage/backpack/rogue/backpack/case/donator_thistle,
 		/obj/item/storage/backpack/rogue/backpack			= /obj/item/storage/backpack/rogue/backpack/case,
 		/obj/item/storage/backpack/rogue/satchel			= /obj/item/storage/backpack/rogue/satchel/case
 	)

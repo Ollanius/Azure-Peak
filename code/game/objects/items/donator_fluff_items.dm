@@ -1076,23 +1076,9 @@
 	smeltresult = /obj/item/ingot/drow
 
 /obj/item/clothing/head/roguetown/shawl/donator
-	name = "shawl"
+	name = "scarfed shawl"
 	desc = "Keeps the hair in check, and looks proper."
 	icon_state = "clothheadveil"
-
-/obj/item/storage/backpack/rogue/satchel/case
-	name = "cased satchel"
-	desc = "A satchel with a harder, leather-wrapped shell."
-	icon_state = "case"
-	item_state = "case"
-	icon = 'icons/clothing/donor_clothes.dmi'
-
-/obj/item/storage/backpack/rogue/backpack/case
-	name = "cased backpack"
-	desc = "A heavy satchel with a harder, leather-wrapped shell. Deceptively capacious, courtesy of excess padding being removed from the inside."
-	icon_state = "case"
-	item_state = "case"
-	icon = 'icons/clothing/donor_clothes.dmi'
 
 /obj/item/clothing/head/roguetown/helmet/heavy/barbute/avantyne
 	name = "avantyne-threaded barbute"
@@ -3210,9 +3196,9 @@ As Excaliber."
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	detail_tag = "_detail"
-	detail_color = CLOTHING_WHITE
+	detail_color = CLOTHING_RED
 	altdetail_tag = "_detailalt"
-	altdetail_color = CLOTHING_RED
+	altdetail_color = CLOTHING_WHITE
 	allowed_sex = list(FEMALE)
 
 /obj/item/clothing/suit/roguetown/armor/brigandine/light/donator_rhynn/Initialize(mapload)
@@ -4209,14 +4195,15 @@ As Excaliber."
 	. = ..()
 	. += span_info("RMB to adjust the undershirt's coverage; it can either cover the entire torso, or be tightened up to just cover the chest.")
 
-/obj/item/clothing/gloves/roguetown/leather/donator_thistle
+/obj/item/clothing/gloves/roguetown/cloth/donator_thistle
 	name = "underdwelling artificer's gloves"
 	desc = "Leather gloves, skikuldic cuffs, and silk padding. That last part's probably not ideal <i>(considering the fact that artificers work \
 	quite a lot with incendiary materials)</i>, but the ensuing lack of callouses makes it absolutely worth it."
-	icon_state = "thistlegloves"
-	item_state = "thistlegloves"
+	icon_state = "thistlegrippers"
+	item_state = "thistlegrippers"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	color = null
 
 /obj/item/clothing/shoes/roguetown/boots/leather/donator_thistle
 	name = "underdwelling artificer's boots"
@@ -4225,6 +4212,7 @@ As Excaliber."
 	icon_state = "thistleboots"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	allowed_race = list(/datum/species/dwarf)
 
 /obj/item/clothing/cloak/apron/blacksmith/donator_thistle
 	name = "underdwelling artificer's apron"
@@ -4233,6 +4221,62 @@ As Excaliber."
 	icon_state = "thistleapron"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+
+/obj/item/storage/backpack/rogue/satchel/case
+	name = "cased satchel"
+	desc = "A satchel with a harder, leather-wrapped shell."
+	icon_state = "case"
+	item_state = "case"
+	icon = 'icons/clothing/donor_clothes.dmi'
+
+/obj/item/storage/backpack/rogue/backpack/case
+	name = "cased backpack"
+	desc = "A heavy satchel with a harder, leather-wrapped shell. Deceptively capacious, courtesy of excess padding being removed from the inside."
+	icon_state = "case"
+	item_state = "case"
+	icon = 'icons/clothing/donor_clothes.dmi'
+
+/obj/item/storage/backpack/rogue/backpack/case/donator_thistle
+	name = "cased pack"
+	desc = "A heavy satchel with a harder, leather-wrapped shell. Deceptively capacious, courtesy of excess padding being removed from the inside."
+	icon_state = "case_open"
+	item_state = "case"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	component_type = /datum/component/storage/concrete/roguetown/sack/bag
+	max_integrity = 100
+	sewrepair = TRUE
+	var/tied = FALSE
+
+/obj/item/storage/backpack/rogue/backpack/case/donator_thistle/attack_right(mob/user)
+	tied = !tied
+	to_chat(user, span_info("I [tied ? "buckle" : "unbuckle"] the cased pack."))
+	playsound(src, 'sound/foley/equip/rummaging-01.ogg', 100)
+	update_icon()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	if(tied)
+		STR.click_gather = FALSE
+		STR.allow_quick_gather = FALSE
+		STR.allow_quick_empty = FALSE
+	else
+		STR.click_gather = TRUE
+		STR.allow_quick_gather = TRUE
+		STR.allow_quick_empty = TRUE
+
+/obj/item/storage/backpack/rogue/backpack/case/donator_thistle/equipped(mob/living/carbon/human/user, slot)
+	. = ..()
+	if(!tied && (slot == SLOT_BACK_L || slot == SLOT_BACK_R))
+		var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+		var/list/things = STR.contents()
+		if(length(things))
+			visible_message(span_warning("The unbuckled cased pack empties as it is swung around [user]'s shoulder!"))
+			STR.quick_empty(user)
+
+/obj/item/storage/backpack/rogue/backpack/case/donator_thistle/update_icon()
+	. = ..()
+	if(tied)
+		icon_state = "case"
+	else
+		icon_state = "case_open"
 
 // Naman
 /obj/item/clothing/cloak/half/rider/donator_naman

@@ -275,7 +275,7 @@
 	path = /obj/item/enchantingkit/donator_avantynehelm
 
 /datum/loadout_item/donator/universal/donator_shawl
-	name = "Gift - Cloth Shawl"
+	name = "Gift - Scarfed Shawl"
 	path = /obj/item/clothing/head/roguetown/shawl/donator
 
 // --- GRENZEL REGIONAL ---
@@ -1117,7 +1117,7 @@
 
 /datum/loadout_item/donator/flybrokenwings_drowgloves
 	name = "Donator Item - Underdweller's Gloves"
-	path = /obj/item/clothing/gloves/roguetown/leather/donator_thistle
+	path = /obj/item/clothing/gloves/roguetown/cloth/donator_thistle
 	ckeywhitelist = list("flybrokenwings")
 
 /datum/loadout_item/donator/flybrokenwings_drowboots
