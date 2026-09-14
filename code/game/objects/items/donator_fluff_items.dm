@@ -3154,11 +3154,16 @@ As Excaliber."
 	icon_state = "celestialstaffsun"
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
 
-/obj/item/clothing/cloak/lordcloak/ladycloak/donator_rhynn
+/obj/item/clothing/cloak/donator_rhynn
 	name = "ladylike longcloak"
 	desc = "Ermine trimmed, dusted with fyritus. A siege mage's mantle is <i>traditionally</i> cermeonial, but that seldom keeps the more \
 	fashion-minded from flaunting their Grenzelhoftian silks at any given opportunity."
 	color = CLOTHING_WHITE
+	alternate_worn_layer = CLOAK_BEHIND_LAYER
+	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK
+	boobed = TRUE
+	sleevetype = "shirt"
+	nodismemsleeves = TRUE
 	icon_state = "rhynncloak"
 	item_state = "rhynncloak"
 	icon = 'icons/clothing/donor_clothes.dmi'
@@ -3170,11 +3175,11 @@ As Excaliber."
 	altdetail_tag = "_detailalt"
 	altdetail_color = CLOTHING_WHITE
 
-/obj/item/clothing/cloak/lordcloak/ladycloak/donator_rhynn/Initialize(mapload)
+/obj/item/clothing/cloak/donator_rhynn/Initialize(mapload)
 	. = ..()
 	update_icon()
 
-/obj/item/clothing/cloak/lordcloak/ladycloak/donator_rhynn/update_icon()
+/obj/item/clothing/cloak/donator_rhynn/update_icon()
 	cut_overlays()
 	if(get_detail_tag())
 		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))

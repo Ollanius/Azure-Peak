@@ -947,7 +947,7 @@
 
 /datum/loadout_item/donator/rhynnrhynn_longcloak
 	name = "Donator Item - Ladylike Longcloak"
-	path = /obj/item/clothing/cloak/lordcloak/ladycloak/donator_rhynn
+	path = /obj/item/clothing/cloak/donator_rhynn
 	ckeywhitelist = list("rhynnrhynn")
 
 /datum/loadout_item/donator/rhynnrhynn_staff
