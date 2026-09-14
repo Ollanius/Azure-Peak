@@ -4175,6 +4175,7 @@ As Excaliber."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+	allowed_sex = list(FEMALE)
 
 /obj/item/clothing/suit/roguetown/shirt/undershirt/artificer/donator_thistle
 	name = "underdwelling artificer's shirt"
@@ -4186,6 +4187,7 @@ As Excaliber."
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	adjustable = CAN_CADJUST
 	toggle_icon_state = TRUE
+	allowed_sex = list(FEMALE)
 
 /obj/item/clothing/suit/roguetown/shirt/undershirt/artificer/donator_thistle/ComponentInitialize()
 	..()
@@ -4204,6 +4206,7 @@ As Excaliber."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	color = null
+	allowed_sex = list(FEMALE)
 
 /obj/item/clothing/shoes/roguetown/boots/leather/donator_thistle
 	name = "underdwelling artificer's boots"
@@ -4212,7 +4215,7 @@ As Excaliber."
 	icon_state = "thistleboots"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
-	allowed_race = list(/datum/species/dwarf)
+	allowed_sex = list(FEMALE)
 
 /obj/item/clothing/cloak/apron/blacksmith/donator_thistle
 	name = "underdwelling artificer's apron"
@@ -4221,6 +4224,7 @@ As Excaliber."
 	icon_state = "thistleapron"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	allowed_sex = list(FEMALE)
 
 /obj/item/storage/backpack/rogue/satchel/case
 	name = "cased satchel"
