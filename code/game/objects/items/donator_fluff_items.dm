@@ -4194,6 +4194,16 @@ As Excaliber."
 	allowed_sex = list(FEMALE)
 	allowed_race = list(/datum/species/dwarf, /datum/species/dwarf/gnome, /datum/species/dwarf/mountain)
 
+/obj/item/clothing/shoes/roguetown/boots/leather/donator_thistle
+	name = "underdwelling artificer's boots"
+	desc = "Leather boots with thin skikuldic plates layered within the soles. Such makes it far easier to tread through mud, or - in more civilized \
+	locales - stand in place for three hours straight while whittling down brass-and-bronze."
+	icon_state = "thistleboots"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	allowed_sex = list(FEMALE)
+	allowed_race = list(/datum/species/dwarf, /datum/species/dwarf/gnome, /datum/species/dwarf/mountain)
+
 /obj/item/clothing/cloak/apron/blacksmith/donator_thistle
 	name = "underdwelling artificer's apron"
 	desc = "A thick smock, impregnated with incendiary-snuffing powder and studded with skikuldic buckles. The only reason that the Town's blacksmiths \
