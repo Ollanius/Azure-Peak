@@ -1165,6 +1165,24 @@
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 
+/obj/item/clothing/wrists/roguetown/bracers/donator_decapauldron
+	name = "decablessed pauldrons"
+	desc = "Oversized blessed steel pauldrons that protect the forearms and upper-arms. Surprisingly protective and regal, but heavy...!"
+	item_state = "decapauldron"
+	icon_state = "decapauldron"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+
+/obj/item/clothing/wrists/roguetown/bracers/donator_steelpauldron
+	name = "steel pauldrons"
+	desc = "Oversized steel pauldrons that protect the forearms and upper-arms. Surprisingly protective and durable, but heavy...!"
+	item_state = "steelpauldron"
+	icon_state = "steelpauldron"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
+
 //
 
 /obj/item/rogueweapon/huntingknife/idagger/steel/donator
@@ -3140,7 +3158,7 @@ As Excaliber."
 	name = "ladylike longcloak"
 	desc = "Ermine trimmed, dusted with fyritus. A siege mage's mantle is <i>traditionally</i> cermeonial, but that seldom keeps the more \
 	fashion-minded from flaunting their Grenzelhoftian silks at any given opportunity."
-	color = CLOTHING_WHITLE
+	color = CLOTHING_WHITE
 	icon_state = "rhynncloak"
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
