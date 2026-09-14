@@ -274,6 +274,10 @@
 	name = "Gift - Kit, Avantyne-Threaded Barbute"
 	path = /obj/item/enchantingkit/donator_avantynehelm
 
+/datum/loadout_item/donator/universal/donator_shawl
+	name = "Gift - Cloth Shawl"
+	path = /obj/item/clothing/head/roguetown/shawl/donator
+
 // --- GRENZEL REGIONAL ---
 
 /datum/loadout_item/donator/universal/regional/grenzelhat

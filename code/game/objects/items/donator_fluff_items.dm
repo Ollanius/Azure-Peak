@@ -1075,6 +1075,11 @@
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	smeltresult = /obj/item/ingot/drow
 
+/obj/item/clothing/head/roguetown/shawl/donator
+	name = "shawl"
+	desc = "Keeps the hair in check, and looks proper."
+	icon_state = "clothheadveil"
+
 /obj/item/storage/backpack/rogue/satchel/case
 	name = "cased satchel"
 	desc = "A satchel with a harder, leather-wrapped shell."
