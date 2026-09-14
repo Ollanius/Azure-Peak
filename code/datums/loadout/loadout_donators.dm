@@ -1117,7 +1117,7 @@
 
 /datum/loadout_item/donator/flybrokenwings_drowgloves
 	name = "Donator Item - Underdweller's Gloves"
-	path = /obj/item/clothing/gloves/roguetown/angle/grenzelgloves/blacksmith/donator_thistle
+	path = /obj/item/clothing/gloves/roguetown/leather/donator_thistle
 	ckeywhitelist = list("flybrokenwings")
 
 /datum/loadout_item/donator/flybrokenwings_drowboots

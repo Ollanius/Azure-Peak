@@ -4197,7 +4197,7 @@ As Excaliber."
 	. = ..()
 	. += span_info("RMB to adjust the undershirt's coverage; it can either cover the entire torso, or be tightened up to just cover the chest.")
 
-/obj/item/clothing/gloves/roguetown/angle/grenzelgloves/blacksmith/donator_thistle
+/obj/item/clothing/gloves/roguetown/leather/donator_thistle
 	name = "underdwelling artificer's gloves"
 	desc = "Leather gloves, skikuldic cuffs, and silk padding. That last part's probably not ideal <i>(considering the fact that artificers work \
 	quite a lot with incendiary materials)</i>, but the ensuing lack of callouses makes it absolutely worth it."
