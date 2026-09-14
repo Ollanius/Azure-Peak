@@ -3149,7 +3149,6 @@ As Excaliber."
 	name = "ladylike longcloak"
 	desc = "Ermine trimmed, dusted with fyritus. A siege mage's mantle is <i>traditionally</i> cermeonial, but that seldom keeps the more \
 	fashion-minded from flaunting their Grenzelhoftian silks at any given opportunity."
-	color = CLOTHING_WHITE
 	alternate_worn_layer = CLOAK_BEHIND_LAYER
 	slot_flags = ITEM_SLOT_BACK_R|ITEM_SLOT_CLOAK
 	boobed = TRUE
@@ -3161,10 +3160,9 @@ As Excaliber."
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 	allowed_sex = list(FEMALE) //Character-specific.
+	color = null
 	detail_tag = "_detail"
-	detail_color = COLOR_RED
-	altdetail_tag = "_detailalt"
-	altdetail_color = CLOTHING_WHITE
+	detail_color = COLOR_WHITE
 
 /obj/item/clothing/cloak/donator_rhynn/Initialize(mapload)
 	. = ..()
@@ -3178,12 +3176,6 @@ As Excaliber."
 		if(get_detail_color())
 			pic.color = get_detail_color()
 		add_overlay(pic)
-	if(get_altdetail_tag())
-		var/mutable_appearance/pic2 = mutable_appearance(icon(icon, "[icon_state][altdetail_tag]"))
-		pic2.appearance_flags = RESET_COLOR
-		if(get_altdetail_color())
-			pic2.color = get_altdetail_color()
-		add_overlay(pic2)
 
 /obj/item/clothing/suit/roguetown/armor/brigandine/light/donator_rhynn
 	name = "jacketed brigandine"
@@ -3195,30 +3187,8 @@ As Excaliber."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
-	detail_tag = "_detail"
-	detail_color = CLOTHING_RED
-	altdetail_tag = "_detailalt"
-	altdetail_color = CLOTHING_WHITE
+	color = null
 	allowed_sex = list(FEMALE)
-
-/obj/item/clothing/suit/roguetown/armor/brigandine/light/donator_rhynn/Initialize(mapload)
-	. = ..()
-	update_icon()
-
-/obj/item/clothing/suit/roguetown/armor/brigandine/light/donator_rhynn/update_icon()
-	cut_overlays()
-	if(get_detail_tag())
-		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
-		pic.appearance_flags = RESET_COLOR
-		if(get_detail_color())
-			pic.color = get_detail_color()
-		add_overlay(pic)
-	if(get_altdetail_tag())
-		var/mutable_appearance/pic2 = mutable_appearance(icon(icon, "[icon_state][altdetail_tag]"))
-		pic2.appearance_flags = RESET_COLOR
-		if(get_altdetail_color())
-			pic2.color = get_altdetail_color()
-		add_overlay(pic2)
 
 //Lamprey
 /obj/item/clothing/head/roguetown/helmet/heavy/aventail/donator_lamprey
