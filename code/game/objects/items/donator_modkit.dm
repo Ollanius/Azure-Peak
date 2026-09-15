@@ -516,6 +516,24 @@
 	target_items = list(/obj/item/clothing/head/roguetown/helmet/heavy/barbute)
 	result_item = /obj/item/clothing/head/roguetown/helmet/heavy/barbute/avantyne
 
+/obj/item/enchantingkit/donator_rockhillarmet
+	name = "'Knight-Errant's Armet' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Steel Knight's Armet."
+	target_items = list(
+		/obj/item/clothing/head/roguetown/helmet/heavy/knight/old				= /obj/item/clothing/head/roguetown/helmet/heavy/knight/rockhill,
+		/obj/item/clothing/head/roguetown/helmet/heavy/knight					= /obj/item/clothing/head/roguetown/helmet/heavy/knight/rockhill
+	)
+	result_item = null
+	exact_type = TRUE
+
+/obj/item/enchantingkit/donator_rockhillmaille
+	name = "'Jacketed Plate-And-Maille' morphing elixir"
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a set of \
+	Steel Plate-and-Maille."
+	target_items = list(/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/heavy)
+	result_item = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/heavy/rockhill
+	exact_type = TRUE
+
 /////////////////////////////
 // ! Player / Donor Kits ! //
 /////////////////////////////

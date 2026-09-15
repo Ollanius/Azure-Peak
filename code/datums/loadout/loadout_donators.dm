@@ -278,6 +278,14 @@
 	name = "Gift - Scarfed Shawl"
 	path = /obj/item/clothing/head/roguetown/shawl/donator
 
+/datum/loadout_item/donator/universal/donator_rockhillarmet
+	name = "Gift - Kit, Knight-Errant's Armet"
+	path = /obj/item/enchantingkit/donator_rockhillarmet
+
+/datum/loadout_item/donator/universal/donator_rockhillmaile
+	name = "Gift - Kit, Jacketed Plate-and-Maille"
+	path = /obj/item/enchantingkit/donator_rockhillmaille
+
 // --- GRENZEL REGIONAL ---
 
 /datum/loadout_item/donator/universal/regional/grenzelhat
@@ -1234,3 +1242,8 @@
 /datum/loadout_item/donator/rezathedwarf/blade
 	name = "Donator Kit - The Enclave Blade"
 	path = /obj/item/enchantingkit/weapon/donator_rezathedwarf_blade
+
+/datum/loadout_item/donator/rezathedwarf
+	name = "Donator Item - Radiant Golden Mask"
+	path = /obj/item/clothing/mask/rogue/facemask/goldmask/radiant
+	ckeywhitelist = list("mystoganzi")

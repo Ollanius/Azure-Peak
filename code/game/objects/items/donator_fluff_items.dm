@@ -1174,6 +1174,54 @@
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
 
+/obj/item/clothing/head/roguetown/helmet/heavy/knight/rockhill
+	name = "knight-errant's armet"
+	desc = "Originating in Rockhill's armories, this particular helmet - truthfully closer to a burgonet than an armet - was borne to further \
+	plate its men-at-arms against rising perils. A wider visor offers better vision in a torch-snuffed street, and small studs along the neckguard \
+	allow for it to be scarfed with ducal colors."
+	icon_state = "rockhillarmet"
+	item_state = "rockhillarmet"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+
+/obj/item/clothing/head/roguetown/helmet/heavy/knight/rockhill/attackby(obj/item/W, mob/living/user, params)
+	..()
+	if(istype(W, /obj/item/natural/cloth) && !altdetail_tag)
+		var/choicealt = input(user, "Choose a color.", "Scarf") as anything in COLOR_MAP + GLOB.pridelist
+		user.visible_message(span_warning("[user] adds [W] to [src]."))
+		user.transferItemToLoc(W, src, FALSE, FALSE)
+		altdetail_color = COLOR_MAP[choicealt]
+		altdetail_tag = "_detailalt"
+		update_icon()
+		if(loc == user && ishuman(user))
+			var/mob/living/carbon/H = user
+			H.update_inv_head()
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/heavy/rockhill
+	name = "jacketed plate-and-maille"
+	desc = "A maille-aketon of steel, comfortably fitted beneath a matching cuirass and a thick clothspun jacket. Originating from Rockhill's \
+	armories, this slightly-less-expensive alternative to plate armor was fashioned to ensure every man-at-arms could stand and face the fief's \
+	rising perils. The fabric can be dyed in ducal colors, to avert cases of 'friendly fireballing'."
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	icon_state = "rockhillmaille"
+	item_state = "rockhillmaille"
+	detail_tag = "_detail"
+	detail_color = COLOR_WHITE
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/heavy/rockhill/Initialize(mapload)
+	. = ..()
+	update_icon()
+
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/heavy/rockhill/update_icon()
+	cut_overlays()
+	if(get_detail_tag())
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)
+
 //
 
 /obj/item/rogueweapon/huntingknife/idagger/steel/donator
@@ -4519,3 +4567,13 @@ As Excaliber."
 	line was added across the other side of the handle. \"Except the Conqueror.\""
 	icon_state = "rezasword"
 	icon = 'icons/obj/items/donor_weapons.dmi'
+
+// Mystogen
+/obj/item/clothing/mask/rogue/facemask/goldmask/radiant
+	name = "radiant gold mask"
+	desc = "A ceremonial mask that mimics Astrata's solar might. Relics like these were once commonplace across the Holy See's plains, as \
+	garments to be worn by village-acolytes during the summer solstice's many festivals. Nowadaes, they're a rare sight to see - at least, \
+	beyond the hands of wandering zealots and priests."
+	icon_state = "radiantgoldmask"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
