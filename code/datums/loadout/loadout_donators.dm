@@ -1242,8 +1242,3 @@
 /datum/loadout_item/donator/rezathedwarf/blade
 	name = "Donator Kit - The Enclave Blade"
 	path = /obj/item/enchantingkit/weapon/donator_rezathedwarf_blade
-
-/datum/loadout_item/donator/rezathedwarf
-	name = "Donator Item - Radiant Golden Mask"
-	path = /obj/item/clothing/mask/rogue/facemask/goldmask/radiant
-	ckeywhitelist = list("mystoganzi")
