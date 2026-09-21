@@ -874,3 +874,4 @@
 	icon_state = "iklappvisier"
 	smeltresult = /obj/item/ingot/iron
 	max_integrity = ARMOR_INT_HELMET_IRON
+a
