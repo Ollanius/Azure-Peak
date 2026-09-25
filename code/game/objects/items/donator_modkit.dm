@@ -70,7 +70,7 @@
 
 	if(custom_name == FALSE)
 		R.name += " <font size = 1>([I.name])</font>"
-	else
+	if(custom_name == TRUE)
 		R.name = R
 
 	qdel(I)
