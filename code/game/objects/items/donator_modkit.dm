@@ -67,6 +67,12 @@
 
 	var/obj/item/R = new R_type(T)
 	to_chat(user, span_notice("You apply the [src] to [I], using the enchanting dust and tools to turn it into [R]."))
+
+	if(custom_name == FALSE)
+		R.name += " <font size = 1>([I.name])</font>"
+	else
+		R.name = R.name
+
 	qdel(I)
 	if(!user.put_in_hands(R))
 		R.forceMove(get_turf(user))
@@ -119,7 +125,6 @@
 	TI.fumble_chance = RI::fumble_chance
 
 	to_chat(user, span_notice("You apply the [src] to [I], using the enchanting dust and tools to turn it into [RI::name]."))
-	I.name = "[RI::name] <font size = 1>([I.name])</font>"
 	I.desc = RI::desc
 	I.update_transform()
 
