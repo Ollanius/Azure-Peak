@@ -71,7 +71,7 @@
 	if(custom_name == FALSE)
 		R.name += " <font size = 1>([I.name])</font>"
 	else
-		continue
+		R.name = R.name
 
 	qdel(I)
 	if(!user.put_in_hands(R))
