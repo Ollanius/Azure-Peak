@@ -67,10 +67,12 @@
 
 	var/obj/item/R = new R_type(T)
 	to_chat(user, span_notice("You apply the [src] to [I], using the enchanting dust and tools to turn it into [R]."))
+
 	if(custom_name == FALSE)
 		R.name += " <font size = 1>([I.name])</font>"
 	else
-		null
+		R.name = R
+
 	qdel(I)
 	if(!user.put_in_hands(R))
 		R.forceMove(get_turf(user))
