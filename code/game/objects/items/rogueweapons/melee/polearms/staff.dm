@@ -318,25 +318,15 @@
 	icon_state = "quarterstaff_noc"
 	max_integrity = 230
 
-/obj/item/rogueweapon/woodstaff/quarterstaff/blacksteel
-	name = "blacksteel quarterstaff"
-	desc = "A quarterstaff reinforced with blacksteel tips. One might imagine that the elegance of such a design hardly befits the people \
-	who'd traditionally wield such a weapon; then again, who are we to judge?"
-	force = 20
-	force_wielded = 30
-	icon_state = "quarterstaff_blacksteel"
-	max_integrity = 350
-	smeltresult = /obj/item/ingot/blacksteel
-	wdefense_wbonus = 7	//12 when wielded.
-
 /obj/item/rogueweapon/woodstaff/quarterstaff/silver
 	name = "silver quarterstaff"
 	desc = "A quarterstaff reinforced with silver tips. A relatively new design, purportedly inspired by the warstaffs oft-carried by Naledian \
 	warscholars. Durable enough to catch-and-disarm avantyne to the shaft, without so much as a splinter - or so, they say."
 	force = 20
 	force_wielded = 27
+	wdefense = 7
 	icon_state = "quarterstaff_silver"
-	max_integrity = 250
+	max_integrity = 250 //+50
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silver
 
@@ -346,18 +336,20 @@
 		pre_blessed = BLESSING_NONE,\
 		silver_type = SILVER_TENNITE,\
 		added_force = 0,\
-		added_blade_int = 50,\
-		added_int = 50,\
-		added_def = 2,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/woodstaff/quarterstaff/psy
 	name = "psydonic quarterstaff"
 	desc = "A quarterstaff reinforced with silver tips. A relatively new design, purportedly inspired by the warstaffs \
 	oft-carried by Naledian warscholars. Durable enough to catch avantyne to the shaft, without so much as a splinter - or so, they say."
+	force = 20
 	force_wielded = 27
+	wdefense = 7
 	icon_state = "quarterstaff_silver"
-	max_integrity = 250
+	max_integrity = 250 //+50
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silverblessed
 
@@ -367,9 +359,9 @@
 		pre_blessed = BLESSING_NONE,\
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
-		added_blade_int = 50,\
-		added_int = 50,\
-		added_def = 2,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/woodstaff/quarterstaff/psy/preblessed/ComponentInitialize()
@@ -378,10 +370,21 @@
 		pre_blessed = BLESSING_PSYDONIAN,\
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
-		added_blade_int = 50,\
-		added_int = 50,\
-		added_def = 2,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
+
+/obj/item/rogueweapon/woodstaff/quarterstaff/blacksteel
+	name = "blacksteel quarterstaff"
+	desc = "A quarterstaff reinforced with blacksteel tips. One might imagine that the elegance of such a design hardly befits the people \
+	who'd traditionally wield such a weapon; then again, who are we to judge?"
+	force = 23
+	force_wielded = 30
+	icon_state = "quarterstaff_blacksteel"
+	max_integrity = 350
+	smeltresult = /obj/item/ingot/blacksteel
+	wdefense_wbonus = 7	//12 when wielded.
 
 /obj/item/rogueweapon/woodstaff/quarterstaff/gold
 	name = "golden quarterstaff"
@@ -395,4 +398,3 @@
 	sellprice = 80
 	no_loot_taint = TRUE
 	max_integrity = 250 //equal to psydonite; putting it at half of this was a neat little experiment but agonizing
-

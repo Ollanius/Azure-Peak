@@ -210,6 +210,8 @@
 	force_wielded = 25
 	minstr = 11
 	wdefense = 6
+	max_integrity = 300 //+50
+	max_blade_int = 350 //+50
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silver
 
@@ -220,8 +222,8 @@
 		silver_type = SILVER_TENNITE,\
 		added_force = 0,\
 		added_blade_int = 0,\
-		added_int = 50,\
-		added_def = 2,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/greatsword/psygsword
@@ -233,6 +235,8 @@
 	force_wielded = 25
 	minstr = 11
 	wdefense = 6
+	max_integrity = 300 //+50
+	max_blade_int = 350 //+50
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silverblessed
 
@@ -243,8 +247,8 @@
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
 		added_blade_int = 0,\
-		added_int = 50,\
-		added_def = 2,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/greatsword/psygsword/relic
@@ -254,6 +258,8 @@
 	will nevertheless command even the greatest foes to fall. Stand fast, childe o' God, and drive the unforgivable back to Hell."
 	force = 25
 	force_wielded = 30
+	max_integrity = 400 //+150
+	max_blade_int = 450 //+150
 	icon_state = "psygsword"
 	possible_item_intents = list(/datum/intent/sword/cut/zwei, /datum/intent/sword/thrust/exe, /datum/intent/sword/chop/heavy, /datum/intent/sword/strike)
 	gripped_intents = list(/datum/intent/sword/cut/zwei, /datum/intent/sword/thrust/heavy, /datum/intent/sword/chop/cleave, /datum/intent/rend)
@@ -266,9 +272,9 @@
 		pre_blessed = BLESSING_PSYDONIAN,\
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
-		added_blade_int = 100,\
-		added_int = 100,\
-		added_def = 2,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/greatsword/psygsword/relic/getonmobprop(tag)
@@ -294,7 +300,9 @@
 	force = 15
 	force_wielded = 25
 	minstr = 11
-	wdefense = 6
+	max_integrity = 200 //-50
+	max_blade_int = 250 //-50
+	wdefense = 4 //-2
 	possible_item_intents = list(/datum/intent/sword/cut, /datum/intent/sword/chop/heavy, /datum/intent/sword/thrust/long, /datum/intent/rend/krieg)
 	gripped_intents = list(/datum/intent/sword/cut/zwei, /datum/intent/sword/chop/heavy, /datum/intent/sword/thrust/estoc/lunge, /datum/intent/sword/thrust/estoc)
 	alt_grips = list(/datum/alt_grip/mordhau/broadsword/forgotten_blade)
@@ -307,8 +315,8 @@
 		pre_blessed = BLESSING_NONE,\
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 10,\
-		added_blade_int = 50,\
-		added_int = 50,\
+		added_blade_int = 100,\
+		added_int = 100,\
 		added_def = 2,\
 	)
 
@@ -327,8 +335,8 @@
 		pre_blessed = BLESSING_NONE,\
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 10,\
-		added_blade_int = 50,\
-		added_int = 50,\
+		added_blade_int = 100,\
+		added_int = 100,\
 		added_def = 2,\
 	)
 
@@ -339,6 +347,8 @@
 	icon_state = "psybroadsword"
 	force = 25
 	force_wielded = 25
+	max_integrity = 400 //+150
+	max_blade_int = 450 //+150
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silver
 
@@ -357,9 +367,9 @@
 		pre_blessed = BLESSING_PSYDONIAN,\
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
-		added_blade_int = 100,\
-		added_int = 100,\
-		added_def = 2,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/greatsword/avantyne

@@ -437,6 +437,8 @@
 	force_wielded = 25
 	minstr = 11
 	wdefense = 6
+	max_blade_int = 230 //+50
+	max_integrity = 300 //+50
 	resistance_flags = FIRE_PROOF	//It's meant to be smacked by a "lamptern", and is special enough to warrant overriding the spear weakness
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silverblessed
@@ -472,6 +474,8 @@
 	force_wielded = 25
 	minstr = 11
 	wdefense = 6
+	max_blade_int = 230 //+50
+	max_integrity = 300 //+50
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silver
 
@@ -497,6 +501,8 @@
 	is_silver = FALSE
 	smeltresult = /obj/item/ingot/steel
 	color = COLOR_FLOORTILE_GRAY
+	max_blade_int = 180 //Standard.
+	max_integrity = 250 //Standard.
 
 /obj/item/rogueweapon/spear/psyspear/old/ComponentInitialize()
 	return
@@ -972,6 +978,8 @@
 	force_wielded = 25
 	minstr = 11
 	wdefense = 5.5
+	max_blade_int = 320 //+50
+	max_integrity = 300 //+50
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silverblessed
 
@@ -1005,7 +1013,8 @@
 	icon_state = "psyhalberd"
 	force = 25
 	force_wielded = 25
-	max_blade_int = 280
+	max_blade_int = 400 //+150
+	max_integrity = 400 //+150
 
 /obj/item/rogueweapon/halberd/psyhalberd/relic/ComponentInitialize()
 	AddComponent(\
@@ -1013,9 +1022,9 @@
 		pre_blessed = BLESSING_PSYDONIAN,\
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
-		added_blade_int = 100,\
-		added_int = 100,\
-		added_def = 2,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/halberd/silver
@@ -1027,6 +1036,8 @@
 	force_wielded = 25
 	minstr = 11
 	wdefense = 5
+	max_blade_int = 320 //+50
+	max_integrity = 300 //+50
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silver
 
@@ -1037,8 +1048,8 @@
 		silver_type = SILVER_TENNITE,\
 		added_force = 0,\
 		added_blade_int = 0,\
-		added_int = 50,\
-		added_def = 2,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/halberd/glaive

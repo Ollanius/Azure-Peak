@@ -406,6 +406,8 @@
 	sheathe_icon = "silverseax"
 	smeltresult = /obj/item/ingot/silver
 	wdefense = 6
+	max_blade_int = 250 //+50
+	max_integrity = 225 //+50
 	is_silver = TRUE
 
 /obj/item/rogueweapon/huntingknife/combat/silver/ComponentInitialize()
@@ -414,9 +416,9 @@
 		pre_blessed = BLESSING_NONE,\
 		silver_type = SILVER_TENNITE,\
 		added_force = 0,\
-		added_blade_int = 50,\
-		added_int = 50,\
-		added_def = 2,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/huntingknife/combat/silver/preblessed/ComponentInitialize()
@@ -425,9 +427,9 @@
 		pre_blessed = BLESSING_TENNITE,\
 		silver_type = SILVER_TENNITE,\
 		added_force = 0,\
-		added_blade_int = 50,\
-		added_int = 50,\
-		added_def = 2,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /datum/intent/dagger/thrust/combat
@@ -693,9 +695,9 @@
 		pre_blessed = BLESSING_NONE,\
 		silver_type = SILVER_TENNITE,\
 		added_force = 0,\
-		added_blade_int = 50,\
-		added_int = 50,\
-		added_def = 2,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/huntingknife/idagger/steel/pestrasickle
@@ -851,6 +853,8 @@
 	sheathe_icon = "sildagger"
 	force = 15
 	wdefense = 6
+	max_blade_int = 250 //+50
+	max_integrity = 150 //+50
 	smeltresult = /obj/item/ingot/silver
 	last_used = 0
 	is_silver = TRUE
@@ -861,9 +865,9 @@
 		pre_blessed = BLESSING_NONE,\
 		silver_type = SILVER_TENNITE,\
 		added_force = 0,\
-		added_blade_int = 50,\
-		added_int = 50,\
-		added_def = 2,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/huntingknife/idagger/stake
@@ -916,7 +920,7 @@
 		pre_blessed = BLESSING_NONE,\
 		silver_type = SILVER_TENNITE,\
 		added_force = 0,\
-		added_blade_int = 100,\
+		added_blade_int = 0,\
 		added_int = 0,\
 		added_def = 0,\
 	)
@@ -928,7 +932,7 @@
 		pre_blessed = BLESSING_TENNITE,\
 		silver_type = SILVER_TENNITE,\
 		added_force = 0,\
-		added_blade_int = 100,\
+		added_blade_int = 0,\
 		added_int = 0,\
 		added_def = 0,\
 	)
@@ -949,7 +953,7 @@
 		pre_blessed = BLESSING_NONE,\
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
-		added_blade_int = 100,\
+		added_blade_int = 0,\
 		added_int = 0,\
 		added_def = 0,\
 	)
@@ -961,7 +965,7 @@
 		pre_blessed = BLESSING_PSYDONIAN,\
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
-		added_blade_int = 100,\
+		added_blade_int = 0,\
 		added_int = 0,\
 		added_def = 0,\
 	)
@@ -988,8 +992,8 @@
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
 		added_blade_int = 0,\
-		added_int = 100,\
-		added_def = 2,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 	sellprice += 200
 
@@ -1000,6 +1004,8 @@
 	icon_state = "psydaggerheavy"
 	sheathe_icon = "psydagger"
 	force = 20 //In essence, a Silver Stake without many of the drawbacks.
+	max_blade_int = 300 //+100
+	max_integrity = 200 //+100
 
 /obj/item/rogueweapon/huntingknife/idagger/silver/psydagger/heavy/ComponentInitialize()
 	AddComponent(\
@@ -1007,9 +1013,9 @@
 		pre_blessed = BLESSING_PSYDONIAN,\
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
-		added_blade_int = 50,\
-		added_int = 150,\
-		added_def = 2,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 	sellprice += 200
 
@@ -1210,11 +1216,11 @@
 	name = "silver tossblade"
 	desc = "A relative to the silver dagger; thinner, flimsier, but capable of being thrown with exceptional accuracy. Seasoned pursuers of unholy creechers oft-keep one hidden on themselves, just in case. </br>This dagger can be stowed away inside a pair of boots, permitting it to be quickly drawn when needed."
 	item_state = "bone_dagger"
-	force = 10
 	throwforce = 20
 	armor_penetration = PEN_HEAVY
-	max_integrity = 150
-	wdefense = 3
+	max_integrity = 150 //+50
+	max_blade_int = 250 //+50
+	wdefense = 2
 	icon_state = "throw_knifesil"
 	embedding = list("embedded_pain_multiplier" = 4, "embed_chance" = 50, "embedded_fall_chance" = 0)
 	is_silver = TRUE
@@ -1226,8 +1232,8 @@
 		silver_type = SILVER_TENNITE,\
 		added_force = 0,\
 		added_blade_int = 0,\
-		added_int = 100,\
-		added_def = 3,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/huntingknife/throwingknife/silver/preblessed/ComponentInitialize()
@@ -1237,23 +1243,22 @@
 		silver_type = SILVER_TENNITE,\
 		added_force = 0,\
 		added_blade_int = 0,\
-		added_int = 100,\
-		added_def = 3,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/huntingknife/throwingknife/psydon
 	name = "psydonic tossblade"
 	desc = "An unconventional method of delivering silver to a heretic; but one PSYDON smiles at, all the same. Doubles as an actual knife in a pinch, though obviously not as well. </br>This dagger can be stowed away inside a pair of boots, permitting it to be quickly drawn when needed."
 	item_state = "bone_dagger"
-	force = 10
 	throwforce = 20
 	armor_penetration = PEN_HEAVY
-	max_integrity = 150
-	wdefense = 3
+	max_integrity = 150 //+50
+	max_blade_int = 250 //+50
+	wdefense = 2
 	icon_state = "throw_knifep"
 	embedding = list("embedded_pain_multiplier" = 4, "embed_chance" = 50, "embedded_fall_chance" = 0)
 	is_silver = TRUE
-	sellprice = 6
 
 /obj/item/rogueweapon/huntingknife/throwingknife/psydon/ComponentInitialize()
 	AddComponent(\
@@ -1262,8 +1267,8 @@
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
 		added_blade_int = 0,\
-		added_int = 100,\
-		added_def = 3,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/huntingknife/throwingknife/psydon/preblessed/ComponentInitialize()
@@ -1273,8 +1278,8 @@
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
 		added_blade_int = 0,\
-		added_int = 100,\
-		added_def = 3,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/huntingknife/throwingknife/triumph
