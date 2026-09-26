@@ -831,7 +831,7 @@
 	name = "bronze warclub"
 	desc = "The warhammer's ancestral link, carved from a weightsome log and studded with bronze. Elven natureguards carry it to both honor their forefathers, and as a way to sunder those who'd ravage Dendor's bounties without thought-or-restraint; a toss from afar turns into a sundering hurlbat."
 	icon_state = "bronzeclub"
-		force = 25
+	force = 25
 	possible_item_intents = list(/datum/intent/mace/strike, /datum/intent/sword/cut, /datum/intent/mace/warhammer/pick, /datum/intent/mace/smash/lesser)
 	max_blade_int = 150
 	wbalance = WBALANCE_HEAVY
