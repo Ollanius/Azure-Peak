@@ -379,8 +379,8 @@
 	name = "psydonic katar"
 	desc = "An exotic weapon taken from the hands of wandering monks, an esoteric design to the Otavan Orthodoxy. Special care was taken into account towards the user's knuckles: silver-tipped steel from tip to edges, and His holy cross reinforcing the heart of the weapon, with curved shoulders to allow its user to deflect incoming blows - provided they lead it in with the blade."
 	icon_state = "psykatar"
-	force = 21
-	wdefense = 2
+	force = 22
+	wdefense = 1
 	max_blade_int = 250 //+50
 	max_integrity = 80
 	is_silver = TRUE
@@ -415,8 +415,8 @@
 	psicrucifix. After praying for guidence, the preacher was said to've been guided by a ray of daelight to the silvered steeple - and through divine heat, melted it into a hand-dagger that would soon \
 	rip the verebeaste apart."
 	icon_state = "silverkatar"
-	force = 21
-	wdefense = 2
+	force = 22
+	wdefense = 1
 	max_blade_int = 250 //+50
 	max_integrity = 80
 	is_silver = TRUE

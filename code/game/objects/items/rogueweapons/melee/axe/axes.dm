@@ -217,9 +217,9 @@
 
 // Copper Hatchet
 /obj/item/rogueweapon/stoneaxe/handaxe/copper
-	force = 13
 	name = "copper hatchet"
 	desc = "A handheld cleaver with a copper axhead. Flecklets of green cling to its flake-touched edge."
+	force = 13
 	max_integrity = 100
 	icon_state = "chatchet"
 	smeltresult = /obj/item/ingot/copper
@@ -266,8 +266,8 @@
 	gripped_intents = null
 	thrown_damage_flag = "piercing"
 	minstr = 8
-	force = 21
-	throwforce = 36
+	force = 22
+	throwforce = 32
 	max_blade_int = 400 //+50
 	max_integrity = 225 //+50
 	wdefense = 4
@@ -298,8 +298,8 @@
 	embedding = list("embedded_pain_multiplier" = 6, "embed_chance" = 100, "embedded_fall_chance" = 30) //high chance at embed, high chance to fall out on its own.
 	gripped_intents = null
 	thrown_damage_flag = "piercing"
-	force = 21
-	throwforce = 36
+	force = 22
+	throwforce = 32
 	max_blade_int = 400 //+50
 	max_integrity = 225 //+50
 	smeltresult = /obj/item/ingot/silverblessed

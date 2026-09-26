@@ -852,7 +852,7 @@
 	icon_state = "sildagger"
 	sheathe_icon = "sildagger"
 	force = 15
-	wdefense = 6
+	wdefense = 5
 	max_blade_int = 250 //+50
 	max_integrity = 150 //+50
 	smeltresult = /obj/item/ingot/silver
@@ -876,7 +876,7 @@
 	sunder those who bear greater curses, it nevertheless channels enough power to dispell the lesser curses of mindless fiends-and-foes."
 	icon_state = "crusaderdagger"
 	sheathe_icon = "crusaderdagger"
-	wdefense = 6
+	wdefense = 5
 	max_blade_int = 250 //+50
 	max_integrity = 150 //+50
 	smeltresult = /obj/item/ingot/iron
@@ -1015,6 +1015,7 @@
 	sheaths of Otava's most knightly delegates."
 	icon_state = "psydaggerheavy"
 	sheathe_icon = "psydagger"
+	wdefense = 6
 	force = 20 //In essence, a Silver Stake without many of the drawbacks.
 	max_blade_int = 300 //+100
 	max_integrity = 200 //+100
