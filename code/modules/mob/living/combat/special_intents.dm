@@ -835,37 +835,6 @@ SPECIALS START HERE
 /datum/special_intent/axe_swing/graggarite
 	requires_wielding = FALSE
 
-
-/datum/special_intent/shin_swipe
-	name = "Shin Prod"
-	desc = "A hasty attack at the legs, extending ourselves. Slows down the opponent if hit. Always targets the legs."
-	tile_coordinates = list(list(0,0), list(1,0), list(-1,0))
-	post_icon_state = "sweep_fx"
-	pre_icon = 'icons/effects/telegraph.dmi'
-	pre_icon_state = "warning"
-	sfx_post_delay = 'sound/combat/shin_swipe.ogg'
-	delay = 0.5 SECONDS
-	cooldown = 20 SECONDS
-	stamcost = 15
-	var/eff_dur = 5	//We do NOT want to use SECONDS macro here.
-	var/dam
-
-/datum/special_intent/shin_swipe/process_attack()
-	var/obj/item/rogueweapon/W = iparent
-	dam = W.force_dynamic * max((1 + (((howner.STASPD - 10) + (howner.STAPER - 10)) / 10)), 0.1)
-	. = ..()
-
-/datum/special_intent/shin_swipe/apply_hit(turf/T)	//This is applied PER tile, so we don't need to do a big check.
-	for(var/mob/living/L in get_hearers_in_view(0, T))
-		if(L != howner)
-
-			L.Slowdown(eff_dur)
-			L.apply_status_effect(/datum/status_effect/debuff/hobbled)	//-2 SPD for 8 seconds
-			if(L.mobility_flags & MOBILITY_STAND)
-				apply_generic_weapon_damage(L, dam, "stab", pick(BODY_ZONE_L_LEG, BODY_ZONE_R_LEG), bclass = BCLASS_CUT)
-			L.apply_status_effect(/datum/status_effect/debuff/vulnerable, 3 SECONDS)
-	..()
-
 #undef AXE_SWING_GRID_DEFAULT
 #undef AXE_SWING_GRID_MIRROR
 
@@ -880,7 +849,6 @@ SPECIALS START HERE
 	post_icon_state = "sweep_fx"
 	pre_icon = 'icons/effects/telegraph.dmi'
 	pre_icon_state = "warning"
-	requires_wielding = FALSE
 	respect_adjacency = FALSE
 	delay = 0.5 SECONDS
 	cooldown = 25 SECONDS
@@ -937,7 +905,6 @@ SPECIALS START HERE
 	post_icon_state = "sweep_fx"
 	pre_icon = 'icons/effects/telegraph.dmi'
 	pre_icon_state = "warning"
-	requires_wielding = FALSE
 	respect_adjacency = FALSE
 	delay = 0.5 SECONDS
 	cooldown = 25 SECONDS
