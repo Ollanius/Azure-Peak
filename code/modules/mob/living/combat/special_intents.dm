@@ -885,9 +885,9 @@ SPECIALS START HERE
 	delay = 0.5 SECONDS
 	cooldown = 25 SECONDS
 	stamcost = 20
-	var/immob_dur = 1.5 SECONDS
-	var/exposed_dur = 3 SECONDS
-	var/dam
+	var/lesserimmob_dur = 1.5 SECONDS
+	var/lesserexposed_dur = 3 SECONDS
+	var/lesserdam
 
 /datum/special_intent/hatchet_twirl/npc_use_chance(mob/living/user, atom/target)
 	return npc_front_chance(user)
@@ -898,7 +898,7 @@ SPECIALS START HERE
 /datum/special_intent/hatchet_twirl/process_attack()
 	tile_coordinates = list()
 	var/obj/item/rogueweapon/W = iparent
-	dam = (W.force_dynamic * (howner.STASPD / 10)) + 25
+	lesserdam = (W.force_dynamic * (howner.STASPD / 10)) + 25
 	if(howner.used_hand == 1)
 		tile_coordinates += HATCHET_TWIRL_GRID_MIRROR
 	else
@@ -915,10 +915,10 @@ SPECIALS START HERE
 	for(var/mob/living/L in get_hearers_in_view(0, T))
 		if(L != howner)
 
-			L.Immobilize(immob_dur)
+			L.Immobilize(lesserimmob_dur)
 			if(L.mobility_flags & MOBILITY_STAND)
 				apply_generic_weapon_damage(L, dam, "slash", pick(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM), bclass = BCLASS_CHOP)
-			L.apply_status_effect(/datum/status_effect/debuff/exposed, exposed_dur)
+			L.apply_status_effect(/datum/status_effect/debuff/exposed, lesserexposed_dur)
 	var/sfx = pick('sound/combat/sp_axe_swing1.ogg','sound/combat/sp_axe_swing2.ogg','sound/combat/sp_axe_swing3.ogg')
 	playsound(T, sfx, 100, TRUE)
 	..()
@@ -942,9 +942,9 @@ SPECIALS START HERE
 	delay = 0.5 SECONDS
 	cooldown = 25 SECONDS
 	stamcost = 20
-	var/slow_dur = 3
-	var/daze_dur = 5 SECONDS
-	var/dam
+	var/lesserslow_dur = 3
+	var/lesserdaze_dur = 5 SECONDS
+	var/lesserbluntdam
 
 /datum/special_intent/warhammer_swing/npc_use_chance(mob/living/user, atom/target)
 	return npc_front_chance(user)
@@ -955,7 +955,7 @@ SPECIALS START HERE
 /datum/special_intent/warhammer_swing/process_attack()
 	tile_coordinates = list()
 	var/obj/item/rogueweapon/W = iparent
-	dam = (W.force_dynamic * (howner.STASTR / 10)) + 25
+	lesserbluntdam = (W.force_dynamic * (howner.STASTR / 10)) + 25
 	if(howner.used_hand == 1)
 		tile_coordinates += WARHAMMER_SWING_GRID_MIRROR
 	else
@@ -974,8 +974,8 @@ SPECIALS START HERE
 
 			if(L.mobility_flags & MOBILITY_STAND)
 				apply_generic_weapon_damage(L, dam, "blunt", BODY_ZONE_HEAD, BCLASS_BLUNT, no_pen = TRUE)
-			L.apply_status_effect(/datum/status_effect/debuff/dazed, daze_dur)
-			L.Slowdown(slow_dur)
+			L.apply_status_effect(/datum/status_effect/debuff/dazed, lesserdaze_dur)
+			L.Slowdown(lesserslow_dur)
 	var/sfx = pick('sound/combat/flail_sweep_hit_minor.ogg')
 	playsound(T, sfx, 100, TRUE)
 	..()
