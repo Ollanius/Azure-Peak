@@ -428,7 +428,6 @@
 	smeltresult = /obj/item/ingot/aaslag
 	icon_state = "ancient_spear"
 
-
 /obj/item/rogueweapon/spear/psyspear
 	name = "psydonic spear"
 	desc = "An ornate spear, plated in a ceremonial veneer of silver. The barbs pierce your palm, and - for just a moment - you see red. Never \
@@ -448,9 +447,9 @@
 		pre_blessed = BLESSING_NONE,\
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
-		added_blade_int = 50,\
-		added_int = 50,\
-		added_def = 2,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/spear/psyspear/preblessed/ComponentInitialize()
@@ -459,9 +458,9 @@
 		pre_blessed = BLESSING_PSYDONIAN,\
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
-		added_blade_int = 50,\
-		added_int = 50,\
-		added_def = 1,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/spear/silver
@@ -482,9 +481,9 @@
 		pre_blessed = BLESSING_NONE,\
 		silver_type = SILVER_TENNITE,\
 		added_force = 0,\
-		added_blade_int = 50,\
-		added_int = 50,\
-		added_def = 2,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/spear/psyspear/old
@@ -964,6 +963,40 @@
 	force_wielded = 33 // +3
 	max_integrity = 300 // +50
 
+/obj/item/rogueweapon/halberd/psyhalberd
+	name = "psydonic halberd"
+	desc = "A blessed polearm that has guarded the walls of kingdoms-a-plenty, ever since the first castles of mortar-and-stone arose in Syon's wake. It \
+	not only professes the elegance of its knightly wielder, but also their vow to keep the innocent guarded from the guilty."
+	icon_state = "silverhalberd"
+	force = 15
+	force_wielded = 25
+	minstr = 11
+	wdefense = 5.5
+	is_silver = TRUE
+	smeltresult = /obj/item/ingot/silverblessed
+
+/obj/item/rogueweapon/halberd/psyhalberd/ComponentInitialize()
+	AddComponent(\
+		/datum/component/silverbless,\
+		pre_blessed = BLESSING_NONE,\
+		silver_type = SILVER_PSYDONIAN,\
+		added_force = 0,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
+	)
+
+/obj/item/rogueweapon/halberd/psyhalberd/preblessed/ComponentInitialize()
+	AddComponent(\
+		/datum/component/silverbless,\
+		pre_blessed = BLESSING_PSYDONIAN,\
+		silver_type = SILVER_PSYDONIAN,\
+		added_force = 0,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
+	)
+
 /obj/item/rogueweapon/halberd/psyhalberd/relic
 	name = "\"Stigmata\""
 	desc = "Christened in the Siege of Lirvas, these silver-tipped poleaxes - wielded by a lonesome contingent of Saint Eora's \
@@ -972,6 +1005,7 @@
 	icon_state = "psyhalberd"
 	force = 25
 	force_wielded = 25
+	max_blade_int = 280
 
 /obj/item/rogueweapon/halberd/psyhalberd/relic/ComponentInitialize()
 	AddComponent(\
@@ -1001,40 +1035,6 @@
 		/datum/component/silverbless,\
 		pre_blessed = BLESSING_NONE,\
 		silver_type = SILVER_TENNITE,\
-		added_force = 0,\
-		added_blade_int = 0,\
-		added_int = 50,\
-		added_def = 2,\
-	)
-
-/obj/item/rogueweapon/halberd/psyhalberd
-	name = "psydonic halberd"
-	desc = "A blessed polearm that has guarded the walls of kingdoms-a-plenty, ever since the first castles of mortar-and-stone arose in Syon's wake. It \
-	not only professes the elegance of its knightly wielder, but also their vow to keep the innocent guarded from the guilty."
-	icon_state = "silverhalberd"
-	force = 15
-	force_wielded = 25
-	minstr = 11
-	wdefense = 5.5
-	is_silver = TRUE
-	smeltresult = /obj/item/ingot/silverblessed
-
-/obj/item/rogueweapon/halberd/psyhalberd/ComponentInitialize()
-	AddComponent(\
-		/datum/component/silverbless,\
-		pre_blessed = BLESSING_NONE,\
-		silver_type = SILVER_PSYDONIAN,\
-		added_force = 0,\
-		added_blade_int = 0,\
-		added_int = 50,\
-		added_def = 2,\
-	)
-
-/obj/item/rogueweapon/halberd/psyhalberd/preblessed/ComponentInitialize()
-	AddComponent(\
-		/datum/component/silverbless,\
-		pre_blessed = BLESSING_PSYDONIAN,\
-		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
 		added_blade_int = 0,\
 		added_int = 50,\

@@ -1,5 +1,5 @@
 //intent datums ฅ^•ﻌ•^ฅ
-a
+
 /datum/intent/mace/strike
 	name = "strike"
 	blade_class = BCLASS_BLUNT
@@ -282,8 +282,6 @@ a
 	smeltresult = /obj/item/ingot/aaslag
 
 /obj/item/rogueweapon/mace/steel/silver
-	force = 30
-	force_wielded = 35
 	name = "silver mace"
 	desc = "A long and heavy flanged mace, forged from pure silver. For a lord, it's the perfect symbol of authority; a decorative piece for the courts. For a paladin, however, there's no better implement for shattering avantyne-maille into a putrid pile of debris."
 	icon_state = "silvermace"
@@ -293,6 +291,7 @@ a
 	smelt_bar_num = 2
 	swingsound = BLUNTWOOSH_LARGE
 	is_silver = TRUE
+	max_integrity = 400 //+50
 
 /obj/item/rogueweapon/mace/steel/silver/ComponentInitialize()
 	AddComponent(\
@@ -300,9 +299,9 @@ a
 		pre_blessed = BLESSING_NONE,\
 		silver_type = SILVER_TENNITE,\
 		added_force = 0,\
-		added_blade_int = 100,\
-		added_int = 50,\
-		added_def = 2,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/mace/steel/silver/decorated
@@ -322,9 +321,9 @@ a
 		pre_blessed = BLESSING_NONE,\
 		silver_type = SILVER_TENNITE,\
 		added_force = 0,\
-		added_blade_int = 100,\
-		added_int = 50,\
-		added_def = 2,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/mace/gold
@@ -448,7 +447,6 @@ a
 	swingsound = BLUNTWOOSH_LARGE
 	minstr = 7
 	wdefense = 3
-
 	smeltresult = /obj/item/ingot/steel
 	icon_state = "flangedmace"
 
@@ -467,7 +465,6 @@ a
 	for the world you love. </br>'Please do not wait for me..' \ </br>'For though I depart, my magic will never die..' </br>'Listen to my laughter in the babbling brook..' \
 	</br>'Hear my song being sung by the bards..' </br>'Feel my warmth in the rays of the morning sun..' </br>'See my light in the twinkling stars at night..' \
 	</br>'..and know that my spirit will always be with you..' </br>'..woven into the very fabric of the world we cherished together.'"
-	force = 30
 	minstr = 9
 	wdefense = 5
 	resistance_flags = FIRE_PROOF
@@ -475,6 +472,7 @@ a
 	swingsound = BLUNTWOOSH_LARGE
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silver
+	max_integrity = 400 //+50
 
 /obj/item/rogueweapon/mace/cudgel/flanged/silver/ComponentInitialize()
 	AddComponent(\
@@ -482,9 +480,9 @@ a
 		pre_blessed = BLESSING_NONE,\
 		silver_type = SILVER_TENNITE,\
 		added_force = 0,\
-		added_blade_int = 100,\
-		added_int = 50,\
-		added_def = 1,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/mace/cudgel/shellrungu
@@ -500,7 +498,6 @@ a
 	no matter the weather nor odds. </br>'Please do not wait for me..' \ </br>'For though I depart, my magic will never die..' </br>'Listen to my laughter in the babbling brook..' \
 	</br>'Hear my song being sung by the bards..' </br>'Feel my warmth in the rays of the morning sun..' </br>'See my light in the twinkling stars at night..' \
 	</br>'..and know that my spirit will always be with you..' </br>'..woven into the very fabric of the world we cherished together.'"
-	force = 30
 	minstr = 9
 	wdefense = 5
 	resistance_flags = FIRE_PROOF
@@ -508,6 +505,7 @@ a
 	swingsound = BLUNTWOOSH_LARGE
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silverblessed
+	max_integrity = 400 //+50
 
 /obj/item/rogueweapon/mace/cudgel/flanged/psy/ComponentInitialize()
 	AddComponent(\
@@ -515,9 +513,9 @@ a
 		pre_blessed = BLESSING_NONE,\
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
-		added_blade_int = 100,\
-		added_int = 50,\
-		added_def = 1,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/mace/cudgel/flanged/psy/preblessed/ComponentInitialize()
@@ -526,9 +524,9 @@ a
 		pre_blessed = BLESSING_PSYDONIAN,\
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
-		added_blade_int = 100,\
-		added_int = 50,\
-		added_def = 1,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/mace/cudgel/flanged/psy/getonmobprop(tag)
@@ -550,6 +548,7 @@ a
 	wbalance = WBALANCE_NORMAL
 	icon_state = "opsyflangedmace"
 	smeltresult = /obj/item/ingot/iron
+	max_integrity = 350 //Standard.
 
 /obj/item/rogueweapon/mace/cudgel/flanged/psy/old/ComponentInitialize()
 	return
@@ -561,8 +560,6 @@ a
 	desc = "A shorter variant of the flanged silver mace, rebalanced for one-handed usage. It isn't uncommon for these sidearms to mysteriously 'vanish' from an Adjudicator's belt, only to be 'rediscovered' - and subsequently kept - by a Confessor."
 	possible_item_intents = list(/datum/intent/mace/strike, /datum/intent/mace/strike/wallop)
 	gripped_intents = list(/datum/intent/mace/strike, /datum/intent/mace/strike/wallop, /datum/intent/mace/smash, /datum/intent/effect/daze)
-	force = 25
-	force_wielded = 30
 	minstr = 7
 	wdefense = 5
 	wbalance = WBALANCE_SWIFT
@@ -570,6 +567,7 @@ a
 	icon_state = "psycudgel"
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silverblessed
+	max_integrity = 400 //+50
 
 /obj/item/rogueweapon/mace/cudgel/psy/ComponentInitialize()
 	AddComponent(\
@@ -577,9 +575,9 @@ a
 		pre_blessed = BLESSING_NONE,\
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
-		added_blade_int = 100,\
-		added_int = 50,\
-		added_def = 1,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/mace/cudgel/psy/preblessed/ComponentInitialize()
@@ -588,9 +586,9 @@ a
 		pre_blessed = BLESSING_PSYDONIAN,\
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
-		added_blade_int = 100,\
-		added_int = 50,\
-		added_def = 1,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/mace/cudgel/psy/old
@@ -602,6 +600,7 @@ a
 	icon_state = "opsycudgel"
 	is_silver = FALSE
 	smeltresult = /obj/item/ingot/steel
+	max_integrity = 350 //Standard.
 
 /obj/item/rogueweapon/mace/cudgel/psy/old/ComponentInitialize()
 	return
@@ -763,14 +762,13 @@ a
 	name = "psydonic mace"
 	desc = "An ornate mace, plated in a ceremonial veneer of silver. Do not go quietly into the darkness; shatter your chains, roar with all your might, and bring the whole damndable temple down with you. </br>Even the unholy aren't immune to discombobulation."
 	icon_state = "psymace"
-	force = 30
-	force_wielded = 35
 	minstr = 12
 	wdefense = 6
 	wbalance = WBALANCE_HEAVY
 	smelt_bar_num = 2
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silverblessed
+	max_integrity = 350 //+50
 
 /obj/item/rogueweapon/mace/goden/psymace/ComponentInitialize()
 	AddComponent(\
@@ -779,8 +777,8 @@ a
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
 		added_blade_int = 0,\
-		added_int = 50,\
-		added_def = 1,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/mace/goden/psymace/preblessed/ComponentInitialize()
@@ -790,8 +788,8 @@ a
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
 		added_blade_int = 0,\
-		added_int = 50,\
-		added_def = 1,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/mace/spiked
@@ -860,6 +858,7 @@ a
 	smeltresult = /obj/item/ingot/silver
 	wdefense = 4
 	is_silver = TRUE
+	max_integrity = 250 //+50
 
 /obj/item/rogueweapon/mace/warhammer/bronze/decorated
 	force = 30 // this requires GOLD to make, its going to be a bit more heavy.
@@ -924,13 +923,12 @@ a
 	name = "silver warhammer"
 	desc = "A heavy warhammer, forged from pure silver. It follows the Otavan design of a 'lucerene'; a shortened polehammer with a pronounced spike, rebalanced for one-handed usage. Resplendent in presentation, righteous in purpose."
 	icon_state = "silverhammer"
-	force = 30
-	force_wielded = 30
 	minstr = 10
 	wdefense = 5
 	smeltresult = /obj/item/ingot/silver
 	smelt_bar_num = 2
 	is_silver = TRUE
+	max_integrity = 250 //+50
 
 /obj/item/rogueweapon/mace/warhammer/steel/silver/ComponentInitialize()
 	AddComponent(\
@@ -938,9 +936,9 @@ a
 		pre_blessed = BLESSING_NONE,\
 		silver_type = SILVER_TENNITE,\
 		added_force = 0,\
-		added_blade_int = 100,\
-		added_int = 50,\
-		added_def = 2,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 
@@ -1071,16 +1069,16 @@ a
 	desc = "A rune-forged maul inspired by dwarven rock-hammers. Created as the faithful's answer to heretics hiding behind walls, it provides the impure with a sermon of exceptional concussive clarity. A good hit with this is guaranteed to give even the most peppy of heretics some deserved 'respite', and in best scenarios, send them to confess directly to HIM."
 	icon_state = "psyhammer"
 	smeltresult = /obj/item/ingot/silverblessed
-	minstr = 8
-	wdefense_wbonus = 8
+	minstr = 10
+	wdefense_wbonus = 7
 	is_silver = TRUE
 	max_integrity = 600 // need a lil more cause destroying walls takes a bit of this
 
 /obj/item/rogueweapon/mace/maul/grand/psy/pickup(mob/living/user)
 	if(HAS_TRAIT(user, TRAIT_PSYDONITE))
-		src.minstr = 8//-10, if you have the ability to use this.
+		src.minstr = 10//-10, if you have the ability to use this.
 	else
-		src.minstr = 18
+		src.minstr = 20
 	..()
 
 /obj/item/rogueweapon/mace/maul/grand/psy/ComponentInitialize()
@@ -1089,9 +1087,9 @@ a
 		pre_blessed = BLESSING_NONE,\
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
-		added_blade_int = 100,\
-		added_int = 50,\
-		added_def = 2,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/mace/maul/grand/psy/preblessed/ComponentInitialize()
@@ -1100,9 +1098,9 @@ a
 		pre_blessed = BLESSING_PSYDONIAN,\
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
-		added_blade_int = 100,\
-		added_int = 50,\
-		added_def = 2,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/mace/attack_turf(turf/T, mob/living/user, multiplier)
@@ -1301,7 +1299,7 @@ a
 	damfactor = 1
 
 /obj/item/rogueweapon/mace/mushroom
-	name = "Lithmyc Mace"
+	name = "lithmyc mace"
 	desc = "A heavy mace forged from fungal-infused metals. Looks spiky!"
 	icon_state = "mushroom"
 	force = 18
@@ -1316,7 +1314,7 @@ a
 	AddComponent(/datum/component/mushroom_mace)
 
 /obj/item/rogueweapon/contraption/linker/mace //roughly equivalent to a blacksmith hammer in damage and carryability
-	name = "Bronze-Reinforced Wrench"
+	name = "bronze-reinforced wrench"
 	desc = "A wrench, reinforced with bronze. It'd hurt to get smacked with this."
 	icon_state = "2hbronze"
 	wlength = WLENGTH_SHORT
@@ -1346,7 +1344,7 @@ a
 	current_charge = 80
 
 /obj/item/rogueweapon/contraption/linker/mace/big
-	name = "Massive Bronze Wrench"
+	name = "massive bronze wrench"
 	desc = "A wrench with a massive handle, for the toughest of bolts. Clumsy to handle, but weighted for breaking down structures with ease."
 	icon_state = "bronzewrench"
 	icon = 'icons/roguetown/weapons/blunt64.dmi'
@@ -1384,25 +1382,25 @@ a
 	current_charge = 80
 
 /obj/item/rogueweapon/contraption/linker/mace/iron
-	name = "Iron-Reinforced Wrench"
+	name = "iron-reinforced wrench"
 	desc = "A wrench, reinforced with iron. It'd hurt to get smacked with this."
 	icon_state = "2hiron"
 	smeltresult = /obj/item/ingot/iron
 
 /obj/item/rogueweapon/contraption/linker/mace/big/iron
-	name = "Massive Iron Wrench"
+	name = "massive iron wrench"
 	icon_state = "ironwrench"
 	smeltresult = /obj/item/ingot/iron
 
 /obj/item/rogueweapon/contraption/linker/mace/steel
-	name = "Steel-Reinforced Wrench"
+	name = "steel-reinforced wrench"
 	desc = "A wrench, reinforced with steel. It'd hurt to get smacked with this."
 	icon_state = "2hsteel"
 	smeltresult = /obj/item/ingot/steel
 	force = 24
 
 /obj/item/rogueweapon/contraption/linker/mace/big/steel
-	name = "Massive Steel Wrench"
+	name = "massive steel wrench"
 	icon_state = "steelwrench"
 	smeltresult = /obj/item/ingot/steel
 	force = 15
@@ -1412,7 +1410,7 @@ a
 	current_charge = 80
 
 /obj/item/rogueweapon/contraption/linker/mace/silver
-	name = "Silver-Reinforced Wrench"
+	name = "silver-reinforced wrench"
 	desc = "A wrench, reinforced with silver. Whilst the metal does the tool's integrity no favors, it serves as a charm of good luck for those who work under moonlight."
 	icon_state = "2hsilver"
 	max_integrity = 150
@@ -1420,7 +1418,7 @@ a
 	is_silver = TRUE
 
 /obj/item/rogueweapon/contraption/linker/mace/big/silver
-	name = "Massive Silver Wrench"
+	name = "massive silver wrench"
 	desc = "A massive wrench, plated with silver. Well-weighted for smashing troublesome furniture and nite-creatures alike."
 	icon_state = "silverwrench"
 	max_integrity = 200
@@ -1428,7 +1426,7 @@ a
 	is_silver = TRUE
 
 /obj/item/rogueweapon/contraption/linker/mace/master
-	name = "Gold-Reinforced Wrench"
+	name = "gold-reinforced wrench"
 	desc = "A wrench, adorned with gold. The badge of an accomplished guildmaster. Capable of advanced linkages, and marvelously heavy"
 	icon_state = "2hgold"
 	max_integrity = 100
@@ -1437,7 +1435,7 @@ a
 	force = 24
 
 /obj/item/rogueweapon/contraption/linker/mace/big/master
-	name = "Massive Gold Wrench"
+	name = "massive gold wrench"
 	desc = "A massive wrench, plated and gold. The badge of an accomplished guildmaster. Capable of delightfully advanced linkages."
 	icon_state = "goldwrench"
 	smeltresult = /obj/item/ingot/gold
@@ -1446,7 +1444,7 @@ a
 	force_wielded = 28
 
 /obj/item/rogueweapon/contraption/linker/mace/master/bsteel
-	name = "Blacksteel-Reinforced Wrench"
+	name = "blacksteel-reinforced wrench"
 	desc = "A wrench, reinforced with blacksteel. Capable of terrifyingly advanced linkage."
 	icon_state = "2hbsteel"
 	max_integrity = 350
@@ -1454,7 +1452,7 @@ a
 	force = 24
 
 /obj/item/rogueweapon/contraption/linker/mace/big/master/bsteel
-	name = "Massive Blacksteel Wrench"
+	name = "massive blacksteel wrench"
 	desc = "A massive wrench of blacksteel. The durable alloy affords more complex machinations."
 	icon_state = "bsteelwrench"
 	smeltresult = /obj/item/ingot/blacksteel
@@ -1464,7 +1462,7 @@ a
 	force_wielded = 28
 
 /obj/item/rogueweapon/contraption/linker/mace/decrepit
-	name = "Decrepit Wrench"
+	name = "decrepit wrench"
 	desc = "An ancient wrench, reinforced with rotted metal. Once a tool of progress, repurposed into little more than a cudgel"
 	max_integrity = 150
 	icon_state = "2hdecrepit"
@@ -1477,7 +1475,7 @@ a
 	current_charge = rand(0, max_stored_charge) // it's an ancient artifact, rather than crafted. might have some charge left
 
 /obj/item/rogueweapon/contraption/linker/mace/big/decrepit
-	name = "Massive Decrepit Wrench"
+	name = "massive decrepit wrench"
 	desc = "A massive tool of ancient, rotted metal. The teeth at its head have been stripped clean from countless years of pointless toil, maintaining a great construct of no clear purpose"
 	max_integrity = 200
 	icon_state = "decrepitwrench"
