@@ -887,7 +887,6 @@ SPECIALS START HERE
 	stamcost = 20
 	var/lesserimmob_dur = 1.5 SECONDS
 	var/lesserexposed_dur = 3 SECONDS
-	var/lesserdam
 
 /datum/special_intent/hatchet_twirl/npc_use_chance(mob/living/user, atom/target)
 	return npc_front_chance(user)
@@ -898,7 +897,7 @@ SPECIALS START HERE
 /datum/special_intent/hatchet_twirl/process_attack()
 	tile_coordinates = list()
 	var/obj/item/rogueweapon/W = iparent
-	lesserdam = (W.force_dynamic * (howner.STASPD / 10)) + 25
+	dam = (W.force_dynamic * (howner.STASPD / 10)) + 25
 	if(howner.used_hand == 1)
 		tile_coordinates += HATCHET_TWIRL_GRID_MIRROR
 	else
@@ -917,7 +916,7 @@ SPECIALS START HERE
 
 			L.Immobilize(lesserimmob_dur)
 			if(L.mobility_flags & MOBILITY_STAND)
-				apply_generic_weapon_damage(L, lesserdam, "slash", pick(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM), bclass = BCLASS_CHOP)
+				apply_generic_weapon_damage(L, dam, "slash", pick(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM), bclass = BCLASS_CHOP)
 			L.apply_status_effect(/datum/status_effect/debuff/exposed, lesserexposed_dur)
 	var/sfx = pick('sound/combat/sp_axe_swing1.ogg','sound/combat/sp_axe_swing2.ogg','sound/combat/sp_axe_swing3.ogg')
 	playsound(T, sfx, 100, TRUE)
@@ -944,7 +943,6 @@ SPECIALS START HERE
 	stamcost = 20
 	var/lesserslow_dur = 3
 	var/lesserdaze_dur = 5 SECONDS
-	var/lesserbluntdam
 
 /datum/special_intent/warhammer_swing/npc_use_chance(mob/living/user, atom/target)
 	return npc_front_chance(user)
@@ -955,7 +953,7 @@ SPECIALS START HERE
 /datum/special_intent/warhammer_swing/process_attack()
 	tile_coordinates = list()
 	var/obj/item/rogueweapon/W = iparent
-	lesserbluntdam = (W.force_dynamic * (howner.STASTR / 10)) + 25
+	dam = (W.force_dynamic * (howner.STASTR / 10)) + 25
 	if(howner.used_hand == 1)
 		tile_coordinates += WARHAMMER_SWING_GRID_MIRROR
 	else
@@ -973,7 +971,7 @@ SPECIALS START HERE
 		if(L != howner)
 
 			if(L.mobility_flags & MOBILITY_STAND)
-				apply_generic_weapon_damage(L, lesserbluntdam, "blunt", BODY_ZONE_HEAD, BCLASS_BLUNT, no_pen = TRUE)
+				apply_generic_weapon_damage(L, dam, "blunt", BODY_ZONE_HEAD, BCLASS_BLUNT, no_pen = TRUE)
 			L.apply_status_effect(/datum/status_effect/debuff/dazed, lesserdaze_dur)
 			L.Slowdown(lesserslow_dur)
 	var/sfx = pick('sound/combat/flail_sweep_hit_minor.ogg')
