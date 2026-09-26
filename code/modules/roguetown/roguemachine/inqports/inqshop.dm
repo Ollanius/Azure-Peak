@@ -79,10 +79,10 @@
 	marquescost = 12
 
 /datum/inqports/supplies/litany
-	name = "The Archbishop's Litany - Singular Blessing Of Psydonic Weaponry"
+	name = "The Archbishop's Litany - Blessing Of Psydonic Silver"
 	item_type = /obj/item/inqarticles/litany
-	maximum = 5
-	marquescost = 6
+	maximum = 3
+	marquescost = 12
 
 /datum/inqports/supplies/psybuns
 	name = "The 'Otavan Bakery Special' Crate"
