@@ -1,5 +1,5 @@
 //intent datums ฅ^•ﻌ•^ฅ
-
+a
 /datum/intent/mace/strike
 	name = "strike"
 	blade_class = BCLASS_BLUNT
