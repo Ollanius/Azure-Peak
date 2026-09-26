@@ -887,6 +887,7 @@ SPECIALS START HERE
 	stamcost = 20
 	var/lesserimmob_dur = 1.5 SECONDS
 	var/lesserexposed_dur = 3 SECONDS
+	var/dam
 
 /datum/special_intent/hatchet_twirl/npc_use_chance(mob/living/user, atom/target)
 	return npc_front_chance(user)
@@ -943,6 +944,7 @@ SPECIALS START HERE
 	stamcost = 20
 	var/lesserslow_dur = 3
 	var/lesserdaze_dur = 5 SECONDS
+	var/dam
 
 /datum/special_intent/warhammer_swing/npc_use_chance(mob/living/user, atom/target)
 	return npc_front_chance(user)
