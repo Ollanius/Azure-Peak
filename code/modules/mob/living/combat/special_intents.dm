@@ -610,7 +610,7 @@ SPECIALS START HERE
 //Hard to hit, freezes you in place. Offbalances & slows the targets hit. If they're already offbalanced they get knocked down.
 /datum/special_intent/ground_smash
 	name = "Ground Smash"
-	desc = "Swings downward, leaving a traveling quake for a few tiles. Anyone struck by it will be slowed and offbalanced, or knocked down if they're already off-balanced. Always targets the chest."
+	desc = "Swings downward, leaving a traveling quake for a few tiles. Anyone struck by it will be slowed and off-balanced, or knocked down if they're already off-balanced. Always targets the chest."
 	tile_coordinates = list(list(0,0), list(0,1, 0.1 SECONDS), list(0,2, 0.2 SECONDS))
 	post_icon_state = "kick_fx"
 	pre_icon = 'icons/effects/telegraph.dmi'
@@ -835,8 +835,153 @@ SPECIALS START HERE
 /datum/special_intent/axe_swing/graggarite
 	requires_wielding = FALSE
 
+
+/datum/special_intent/shin_swipe
+	name = "Shin Prod"
+	desc = "A hasty attack at the legs, extending ourselves. Slows down the opponent if hit. Always targets the legs."
+	tile_coordinates = list(list(0,0), list(1,0), list(-1,0))
+	post_icon_state = "sweep_fx"
+	pre_icon = 'icons/effects/telegraph.dmi'
+	pre_icon_state = "warning"
+	sfx_post_delay = 'sound/combat/shin_swipe.ogg'
+	delay = 0.5 SECONDS
+	cooldown = 20 SECONDS
+	stamcost = 15
+	var/eff_dur = 5	//We do NOT want to use SECONDS macro here.
+	var/dam
+
+/datum/special_intent/shin_swipe/process_attack()
+	var/obj/item/rogueweapon/W = iparent
+	dam = W.force_dynamic * max((1 + (((howner.STASPD - 10) + (howner.STAPER - 10)) / 10)), 0.1)
+	. = ..()
+
+/datum/special_intent/shin_swipe/apply_hit(turf/T)	//This is applied PER tile, so we don't need to do a big check.
+	for(var/mob/living/L in get_hearers_in_view(0, T))
+		if(L != howner)
+
+			L.Slowdown(eff_dur)
+			L.apply_status_effect(/datum/status_effect/debuff/hobbled)	//-2 SPD for 8 seconds
+			if(L.mobility_flags & MOBILITY_STAND)
+				apply_generic_weapon_damage(L, dam, "stab", pick(BODY_ZONE_L_LEG, BODY_ZONE_R_LEG), bclass = BCLASS_CUT)
+			L.apply_status_effect(/datum/status_effect/debuff/vulnerable, 3 SECONDS)
+	..()
+
 #undef AXE_SWING_GRID_DEFAULT
 #undef AXE_SWING_GRID_MIRROR
+
+#define HATCHET_TWIRL_GRID_DEFAULT	list(list(-1,-1), list(1,-1, 0.2 SECONDS), list(0,0, 0.3 SECONDS))
+#define HATCHET_TWIRL_GRID_MIRROR	list(list(-1,-1, 0.3 SECONDS), list(1,-1, 0.2 SECONDS), list(0,0))
+
+/datum/special_intent/hatchet_twirl
+	name = "Hefty Flourish"
+	desc = "A defensive floursh that sweeps to the side, before finishing up front. Briefly stuns and exposes the opponent if hit. Always \
+	targets the arms."
+	tile_coordinates = HATCHET_TWIRL_GRID_DEFAULT
+	post_icon_state = "sweep_fx"
+	pre_icon = 'icons/effects/telegraph.dmi'
+	pre_icon_state = "warning"
+	requires_wielding = FALSE
+	respect_adjacency = FALSE
+	delay = 0.5 SECONDS
+	cooldown = 25 SECONDS
+	stamcost = 20
+	var/immob_dur = 1.5 SECONDS
+	var/exposed_dur = 3 SECONDS
+	var/dam
+
+/datum/special_intent/hatchet_twirl/npc_use_chance(mob/living/user, atom/target)
+	return npc_front_chance(user)
+
+/datum/special_intent/hatchet_twirl/_reset()
+	. = ..()
+
+/datum/special_intent/hatchet_twirl/process_attack()
+	tile_coordinates = list()
+	var/obj/item/rogueweapon/W = iparent
+	dam = (W.force_dynamic * (howner.STASPD / 10)) + 25
+	if(howner.used_hand == 1)
+		tile_coordinates += HATCHET_TWIRL_GRID_MIRROR
+	else
+		tile_coordinates += HATCHET_TWIRL_GRID_DEFAULT
+	. = ..()
+
+/datum/special_intent/hatchet_twirl/on_create()
+	if(howner)
+		howner.Immobilize(0.8 SECONDS)
+		howner.apply_status_effect(/datum/status_effect/debuff/clickcd, 0.8 SECONDS)
+	playsound(howner, 'sound/combat/polearm_woosh.ogg', 100, TRUE)
+
+/datum/special_intent/hatchet_twirl/apply_hit(turf/T)
+	for(var/mob/living/L in get_hearers_in_view(0, T))
+		if(L != howner)
+
+			L.Immobilize(immob_dur)
+			if(L.mobility_flags & MOBILITY_STAND)
+				apply_generic_weapon_damage(L, dam, "slash", pick(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM), bclass = BCLASS_CHOP)
+			L.apply_status_effect(/datum/status_effect/debuff/exposed, exposed_dur)
+	var/sfx = pick('sound/combat/sp_axe_swing1.ogg','sound/combat/sp_axe_swing2.ogg','sound/combat/sp_axe_swing3.ogg')
+	playsound(T, sfx, 100, TRUE)
+	..()
+
+#undef HATCHET_TWIRL_GRID_DEFAULT
+#undef HATCHET_TWIRL_GRID_MIRROR
+
+#define WARHAMMER_SWING_GRID_DEFAULT	list(list(0,0), list(-1,0, 0.2 SECONDS), list(-1,-1, 0.3 SECONDS))
+#define WARHAMMER_SWING_GRID_MIRROR	list(list(0,0, 0.3 SECONDS), list(-1,0, 0.2 SECONDS), list(-1,-1))
+
+/datum/special_intent/warhammer_swing
+	name = "Dazing Swing"
+	desc = "A wide strike that swings through the nearest quadrant at a high angle. Briefly dazes and slows the opponent if hit. Always \
+	targets the head."
+	tile_coordinates = WARHAMMER_SWING_GRID_DEFAULT
+	post_icon_state = "sweep_fx"
+	pre_icon = 'icons/effects/telegraph.dmi'
+	pre_icon_state = "warning"
+	requires_wielding = FALSE
+	respect_adjacency = FALSE
+	delay = 0.5 SECONDS
+	cooldown = 25 SECONDS
+	stamcost = 20
+	var/slow_dur = 3
+	var/daze_dur = 5 SECONDS
+	var/dam
+
+/datum/special_intent/warhammer_swing/npc_use_chance(mob/living/user, atom/target)
+	return npc_front_chance(user)
+
+/datum/special_intent/warhammer_swing/_reset()
+	. = ..()
+
+/datum/special_intent/warhammer_swing/process_attack()
+	tile_coordinates = list()
+	var/obj/item/rogueweapon/W = iparent
+	dam = (W.force_dynamic * (howner.STASTR / 10)) + 25
+	if(howner.used_hand == 1)
+		tile_coordinates += WARHAMMER_SWING_GRID_MIRROR
+	else
+		tile_coordinates += WARHAMMER_SWING_GRID_DEFAULT
+	. = ..()
+
+/datum/special_intent/warhammer_swing/on_create()
+	if(howner)
+		howner.Immobilize(0.8 SECONDS)
+		howner.apply_status_effect(/datum/status_effect/debuff/clickcd, 0.8 SECONDS)
+	playsound(howner, 'sound/combat/ground_smash_start.ogg', 100, TRUE)
+
+/datum/special_intent/warhammer_swing/apply_hit(turf/T)
+	for(var/mob/living/L in get_hearers_in_view(0, T))
+		if(L != howner)
+
+			if(L.mobility_flags & MOBILITY_STAND)
+				apply_generic_weapon_damage(L, dam, "blunt", BODY_ZONE_HEAD, BCLASS_BLUNT, no_pen = TRUE)
+			L.apply_status_effect(/datum/status_effect/debuff/dazed, daze_dur)
+			L.Slowdown(slow_dur)
+	var/sfx = pick('sound/combat/flail_sweep_hit_minor.ogg')
+	playsound(T, sfx, 100, TRUE)
+	..()
+
+#undef WARHAMMER_SWING_GRID_DEFAULT
+#undef WARHAMMER_SWING_GRID_MIRROR
 
 /datum/special_intent/whip_coil
 	name = "Whip Coil"

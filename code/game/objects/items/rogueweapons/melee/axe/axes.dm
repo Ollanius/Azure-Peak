@@ -214,19 +214,6 @@
 	wlength = WLENGTH_NORMAL
 	toolspeed = 2
 
-
-// Copper Hatchet
-/obj/item/rogueweapon/stoneaxe/handaxe/copper
-	name = "copper hatchet"
-	desc = "A handheld cleaver with a copper axhead. Flecklets of green cling to its flake-touched edge."
-	force = 13
-	max_integrity = 100
-	icon_state = "chatchet"
-	smeltresult = /obj/item/ingot/copper
-	throwforce = 20 //You ever had an axe thrown at you?
-	throw_speed = 3
-	armor_penetration = PEN_LIGHT
-
 /obj/item/rogueweapon/stoneaxe/handaxe
 	name = "hatchet"
 	desc = "For those who seek to be a little more discrete with their carving, chopping, and cleaving."
@@ -245,6 +232,7 @@
 	wlength = WLENGTH_SHORT
 	w_class = WEIGHT_CLASS_SMALL
 	wbalance = WBALANCE_SWIFT
+	special = /datum/special_intent/hatchet_twirl
 	grid_height = 96 //Can be stowed in the belt as a larger - if slightly more intimidating - counterpart to the Hunting Knife.
 	grid_width = 32
 	throw_speed = 3
@@ -255,6 +243,17 @@
 /datum/intent/axe/cut/handaxe
 	damfactor = 1.1
 	clickcd = CLICK_CD_QUICK
+
+/obj/item/rogueweapon/stoneaxe/handaxe/copper
+	name = "copper hatchet"
+	desc = "A handheld cleaver with a copper axhead. Flecklets of green cling to its flake-touched edge."
+	force = 13
+	max_integrity = 100
+	icon_state = "chatchet"
+	smeltresult = /obj/item/ingot/copper
+	throwforce = 20 //You ever had an axe thrown at you?
+	throw_speed = 3
+	armor_penetration = PEN_LIGHT
 
 /obj/item/rogueweapon/stoneaxe/handaxe/silver
 	name = "silver tomahawk"
@@ -272,7 +271,6 @@
 	max_integrity = 225 //+50
 	wdefense = 4
 	smeltresult = /obj/item/ingot/silver
-	special = /datum/special_intent/axe_swing //Cannot be wielded, otherwise.
 	is_tool = FALSE
 	is_silver = TRUE
 	resistance_flags = FIRE_PROOF
@@ -303,7 +301,6 @@
 	max_blade_int = 400 //+50
 	max_integrity = 225 //+50
 	smeltresult = /obj/item/ingot/silverblessed
-	special = /datum/special_intent/axe_swing //Cannot be wielded, otherwise.
 	is_tool = FALSE
 	is_silver = TRUE
 	resistance_flags = FIRE_PROOF
