@@ -838,8 +838,8 @@ SPECIALS START HERE
 #undef AXE_SWING_GRID_DEFAULT
 #undef AXE_SWING_GRID_MIRROR
 
-#define HATCHET_TWIRL_GRID_DEFAULT	list(list(1,-1), list(-1,-1, 0.2 SECONDS), list(0,0, 0.4 SECONDS))
-#define HATCHET_TWIRL_GRID_MIRROR	list(list(1,-1, 0.4 SECONDS), list(-1,-1, 0.2 SECONDS), list(0,0))
+#define HATCHET_TWIRL_GRID_DEFAULT	list(list(-1,-1), list(1,-1, 0.2 SECONDS), list(0,0, 0.4 SECONDS))
+#define HATCHET_TWIRL_GRID_MIRROR	list(list(-1,-1, 0.4 SECONDS), list(1,-1, 0.2 SECONDS), list(0,0))
 
 /datum/special_intent/hatchet_twirl
 	name = "Hefty Flourish"
@@ -894,8 +894,8 @@ SPECIALS START HERE
 #undef HATCHET_TWIRL_GRID_DEFAULT
 #undef HATCHET_TWIRL_GRID_MIRROR
 
-#define WARHAMMER_SWING_GRID_DEFAULT	list(list(0,0), list(0,-1, 0.2 SECONDS), list(-1,-1, 0.4 SECONDS))
-#define WARHAMMER_SWING_GRID_MIRROR		list(list(0,0, 0.4 SECONDS), list(0,-1, 0.2 SECONDS), list(-1,-1))
+#define WARHAMMER_SWING_GRID_DEFAULT	list(list(0,0), list(-1,0, 0.2 SECONDS), list(-1,-1, 0.4 SECONDS))
+#define WARHAMMER_SWING_GRID_MIRROR		list(list(0,0, 0.4 SECONDS), list(-1,0, 0.2 SECONDS), list(-1,-1))
 
 /datum/special_intent/warhammer_swing
 	name = "Dazing Swing"
