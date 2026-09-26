@@ -792,7 +792,7 @@ SPECIALS START HERE
 	respect_adjacency = FALSE
 	delay = 0.5 SECONDS
 	cooldown = 25 SECONDS
-	stamcost = 15
+	stamcost = 20
 	var/immob_dur = 3.5 SECONDS
 	var/exposed_dur = 6 SECONDS
 	var/dam
@@ -908,7 +908,7 @@ SPECIALS START HERE
 	respect_adjacency = FALSE
 	delay = 0.5 SECONDS
 	cooldown = 25 SECONDS
-	stamcost = 20
+	stamcost = 15
 	var/lesserslow_dur = 3
 	var/lesserdaze_dur = 5 SECONDS
 	var/dam
