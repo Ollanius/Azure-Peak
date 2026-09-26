@@ -267,7 +267,7 @@
 	thrown_damage_flag = "piercing"
 	minstr = 8
 	force = 21
-	throwforce = 32
+	throwforce = 36
 	max_blade_int = 400 //+50
 	max_integrity = 225 //+50
 	wdefense = 4
@@ -299,7 +299,7 @@
 	gripped_intents = null
 	thrown_damage_flag = "piercing"
 	force = 21
-	throwforce = 32
+	throwforce = 36
 	max_blade_int = 400 //+50
 	max_integrity = 225 //+50
 	smeltresult = /obj/item/ingot/silverblessed
@@ -533,8 +533,7 @@
 	name = "anointed war axe"
 	icon_state = "crusaderaxe"
 	desc = "A crusader's spear, adorned with a blade of cold iron and blessed to smite evil. Though this blessed alloy lacks the strength to \
-	sunder those who bear greater curses, it nevertheless channels enough power to dispell the lesser curses of mindless fiends-and-foes. </br>'Stick \
-	to the light! Hold fast, and do not falter!'"
+	sunder those who bear greater curses, it nevertheless channels enough power to dispell the lesser curses of mindless fiends-and-foes."
 	force = 25
 	force_wielded = 27
 	max_blade_int = 450 //+50

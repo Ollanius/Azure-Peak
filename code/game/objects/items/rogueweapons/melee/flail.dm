@@ -196,6 +196,16 @@
 	smeltresult = /obj/item/ingot/steel
 	minstr = 5
 
+/obj/item/rogueweapon/flail/cleric
+	name = "anointed flail"
+	icon_state = "crusaderflail"
+	desc = "A crusader's morning star, adorned with a head of cold iron and blessed to smite evil. Though this blessed alloy lacks the strength to \
+	sunder those who bear greater curses, it nevertheless channels enough power to dispell the lesser curses of mindless fiends-and-foes."
+	possible_item_intents = list(/datum/intent/flail/strike, /datum/intent/flail/smash/ranged, /datum/intent/flail/bash)
+	max_integrity = 200 //+50
+	minstr = 12
+	is_even_lesser_silver = TRUE // adv paladin exclusive weapon, works like unblessed silver but only in pve
+
 /obj/item/rogueweapon/flail/sflail/silver
 	icon_state = "silverflail"
 	name = "silver morningstar"

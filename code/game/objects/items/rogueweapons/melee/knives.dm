@@ -870,6 +870,18 @@
 		added_def = 0,\
 	)
 
+/obj/item/rogueweapon/huntingknife/idagger/cleric
+	name = "anointed dagger"
+	desc = "A crusader's dagger, adorned with a blade of cold iron and blessed to smite evil. Though this blessed alloy lacks the strength to \
+	sunder those who bear greater curses, it nevertheless channels enough power to dispell the lesser curses of mindless fiends-and-foes."
+	icon_state = "crusaderdagger"
+	sheathe_icon = "crusaderdagger"
+	wdefense = 6
+	max_blade_int = 250 //+50
+	max_integrity = 150 //+50
+	smeltresult = /obj/item/ingot/iron
+	is_even_lesser_silver = TRUE // adv paladin exclusive weapon, works like unblessed silver but only in pve
+
 /obj/item/rogueweapon/huntingknife/idagger/stake
 	name = "sharpened stake"
 	desc = "A branch that has been broken off of an azurielve tree, sharpened to a fine point. It can lay some unholy creechers to rest, but only by piercing their hearts."

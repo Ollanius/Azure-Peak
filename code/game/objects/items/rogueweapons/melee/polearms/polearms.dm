@@ -519,8 +519,7 @@
 /obj/item/rogueweapon/spear/cleric
 	name = "anointed spear"
 	desc = "A crusader's spear, adorned with a blade of cold iron and blessed to smite evil. Though this blessed alloy lacks the strength to \
-	sunder those who bear greater curses, it nevertheless channels enough power to dispell the lesser curses of mindless fiends-and-foes. </br>'Stick \
-	to the light! Hold fast, and do not falter!'"
+	sunder those who bear greater curses, it nevertheless channels enough power to dispell the lesser curses of mindless fiends-and-foes."
 	icon_state = "crusaderspear"
 	force = 20
 	force_wielded = 25

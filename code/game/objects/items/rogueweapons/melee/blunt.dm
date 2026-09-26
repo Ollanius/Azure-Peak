@@ -304,6 +304,18 @@
 		added_def = 0,\
 	)
 
+/obj/item/rogueweapon/mace/cleric
+	name = "anointed mace"
+	desc = "A crusader's mace, adorned with a head of cold iron and blessed to smite evil. Though this blessed alloy lacks the strength to \
+	sunder those who bear greater curses, it nevertheless channels enough power to dispell the lesser curses of mindless fiends-and-foes."
+	icon_state = "crusadermace"
+	smeltresult = /obj/item/ingot/silver
+	minstr = 10
+	wdefense = 5
+	swingsound = BLUNTWOOSH_LARGE
+	max_integrity = 400 //+50
+	is_even_lesser_silver = TRUE // adv paladin exclusive weapon, works like unblessed silver but only in pve
+
 /obj/item/rogueweapon/mace/steel/silver/decorated
 	name = "decorated mace"
 	desc = "An ornate mace, inlayed with silver and decorated with golden heraldries. Formally known as a 'gada' amongst the nobility of Naledi, this heftsome scepter \

@@ -188,7 +188,7 @@
 	icon_state = "silverwhip"
 	force = 23 //Experimental change - adds a +2 to force, as a bridge between handweapons and blunt weapons. Higher strength minimum. Do not raise above 25, unless you want to resurrect maille-shatterers.
 	possible_item_intents = list(/datum/intent/whip/lash/master, /datum/intent/whip/crack, /datum/intent/whip/punish)
-	minstr = 91
+	minstr = 9
 	max_integrity = 300 //+50
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silver
@@ -203,6 +203,18 @@
 		added_int = 0,\
 		added_def = 0,\
 	)
+
+/obj/item/rogueweapon/whip/cleric
+	name = "anointed whip"
+	desc = "A crusader's whip, adorned with a tip of cold iron and blessed to smite evil. Though this blessed alloy lacks the strength to \
+	sunder those who bear greater curses, it nevertheless channels enough power to dispell the lesser curses of mindless fiends-and-foes."
+	icon_state = "crusaderwhip"
+	force = 23
+	possible_item_intents = list(/datum/intent/whip/lash/master, /datum/intent/whip/crack, /datum/intent/whip/punish)
+	minstr = 9
+	max_integrity = 300 //+50
+	smeltresult = /obj/item/ingot/iron
+	is_even_lesser_silver = TRUE // adv paladin exclusive weapon, works like unblessed silver but only in pve
 
 /obj/item/rogueweapon/whip/psywhip_lesser
 	name = "psydonic whip"
