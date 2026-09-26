@@ -838,8 +838,8 @@ SPECIALS START HERE
 #undef AXE_SWING_GRID_DEFAULT
 #undef AXE_SWING_GRID_MIRROR
 
-#define HATCHET_TWIRL_GRID_DEFAULT	list(list(-1,-1), list(1,-1, 0.2 SECONDS), list(0,0, 0.3 SECONDS))
-#define HATCHET_TWIRL_GRID_MIRROR	list(list(-1,-1, 0.3 SECONDS), list(1,-1, 0.2 SECONDS), list(0,0))
+#define HATCHET_TWIRL_GRID_DEFAULT	list(list(-1,-1), list(1,-1, 0.2 SECONDS), list(0,0, 0.4 SECONDS))
+#define HATCHET_TWIRL_GRID_MIRROR	list(list(1,1, 0.4 SECONDS), list(-1,1, 0.2 SECONDS), list(0,0))
 
 /datum/special_intent/hatchet_twirl
 	name = "Hefty Flourish"
@@ -875,8 +875,8 @@ SPECIALS START HERE
 
 /datum/special_intent/hatchet_twirl/on_create()
 	if(howner)
-		howner.Immobilize(0.8 SECONDS)
-		howner.apply_status_effect(/datum/status_effect/debuff/clickcd, 0.8 SECONDS)
+		howner.Immobilize(0.9 SECONDS)
+		howner.apply_status_effect(/datum/status_effect/debuff/clickcd, 0.9 SECONDS)
 	playsound(howner, 'sound/combat/polearm_woosh.ogg', 100, TRUE)
 
 /datum/special_intent/hatchet_twirl/apply_hit(turf/T)
@@ -894,8 +894,8 @@ SPECIALS START HERE
 #undef HATCHET_TWIRL_GRID_DEFAULT
 #undef HATCHET_TWIRL_GRID_MIRROR
 
-#define WARHAMMER_SWING_GRID_DEFAULT	list(list(0,0), list(-1,0, 0.2 SECONDS), list(-1,-1, 0.3 SECONDS))
-#define WARHAMMER_SWING_GRID_MIRROR	list(list(0,0, 0.3 SECONDS), list(-1,0, 0.2 SECONDS), list(-1,-1))
+#define WARHAMMER_SWING_GRID_DEFAULT	list(list(1,1), list(1,0, 0.2 SECONDS), list(0,0, 0.4 SECONDS))
+#define WARHAMMER_SWING_GRID_MIRROR		list(list(-1,-1, 0.4 SECONDS), list(-1,0, 0.2 SECONDS), list(0,0))
 
 /datum/special_intent/warhammer_swing
 	name = "Dazing Swing"
@@ -931,8 +931,8 @@ SPECIALS START HERE
 
 /datum/special_intent/warhammer_swing/on_create()
 	if(howner)
-		howner.Immobilize(0.8 SECONDS)
-		howner.apply_status_effect(/datum/status_effect/debuff/clickcd, 0.8 SECONDS)
+		howner.Immobilize(0.9 SECONDS)
+		howner.apply_status_effect(/datum/status_effect/debuff/clickcd, 0.9 SECONDS)
 	playsound(howner, 'sound/combat/ground_smash_start.ogg', 100, TRUE)
 
 /datum/special_intent/warhammer_swing/apply_hit(turf/T)
