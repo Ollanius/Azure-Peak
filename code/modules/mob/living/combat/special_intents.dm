@@ -917,7 +917,7 @@ SPECIALS START HERE
 
 			L.Immobilize(lesserimmob_dur)
 			if(L.mobility_flags & MOBILITY_STAND)
-				apply_generic_weapon_damage(L, dam, "slash", pick(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM), bclass = BCLASS_CHOP)
+				apply_generic_weapon_damage(L, lesserdam, "slash", pick(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM), bclass = BCLASS_CHOP)
 			L.apply_status_effect(/datum/status_effect/debuff/exposed, lesserexposed_dur)
 	var/sfx = pick('sound/combat/sp_axe_swing1.ogg','sound/combat/sp_axe_swing2.ogg','sound/combat/sp_axe_swing3.ogg')
 	playsound(T, sfx, 100, TRUE)
@@ -973,7 +973,7 @@ SPECIALS START HERE
 		if(L != howner)
 
 			if(L.mobility_flags & MOBILITY_STAND)
-				apply_generic_weapon_damage(L, dam, "blunt", BODY_ZONE_HEAD, BCLASS_BLUNT, no_pen = TRUE)
+				apply_generic_weapon_damage(L, lesserbluntdam, "blunt", BODY_ZONE_HEAD, BCLASS_BLUNT, no_pen = TRUE)
 			L.apply_status_effect(/datum/status_effect/debuff/dazed, lesserdaze_dur)
 			L.Slowdown(lesserslow_dur)
 	var/sfx = pick('sound/combat/flail_sweep_hit_minor.ogg')
