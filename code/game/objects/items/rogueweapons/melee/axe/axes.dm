@@ -266,6 +266,11 @@
 	gripped_intents = null
 	thrown_damage_flag = "piercing"
 	minstr = 8
+	force = 21
+	throwforce = 32
+	max_blade_int = 400 //+50
+	max_integrity = 225 //+50
+	wdefense = 4
 	smeltresult = /obj/item/ingot/silver
 	special = /datum/special_intent/axe_swing //Cannot be wielded, otherwise.
 	is_tool = FALSE
@@ -278,9 +283,9 @@
 		pre_blessed = BLESSING_NONE,\
 		silver_type = SILVER_TENNITE,\
 		added_force = 0,\
-		added_blade_int = 50,\
-		added_int = 50,\
-		added_def = 2,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/stoneaxe/handaxe/psy
@@ -293,7 +298,10 @@
 	embedding = list("embedded_pain_multiplier" = 6, "embed_chance" = 100, "embedded_fall_chance" = 30) //high chance at embed, high chance to fall out on its own.
 	gripped_intents = null
 	thrown_damage_flag = "piercing"
-	minstr = 8
+	force = 21
+	throwforce = 32
+	max_blade_int = 400 //+50
+	max_integrity = 225 //+50
 	smeltresult = /obj/item/ingot/silverblessed
 	special = /datum/special_intent/axe_swing //Cannot be wielded, otherwise.
 	is_tool = FALSE
@@ -306,9 +314,9 @@
 		pre_blessed = BLESSING_NONE,\
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
-		added_blade_int = 50,\
-		added_int = 50,\
-		added_def = 2,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/stoneaxe/handaxe/psy/preblessed/ComponentInitialize()
@@ -317,9 +325,9 @@
 		pre_blessed = BLESSING_PSYDONIAN,\
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
-		added_blade_int = 50,\
-		added_int = 50,\
-		added_def = 2,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/stoneaxe/woodcut/bronze
@@ -462,7 +470,8 @@
 	possible_item_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, /datum/intent/axe/chop/heavy, /datum/intent/axe/bash/battle)
 	gripped_intents = null
 	minstr = 11
-	max_blade_int = 400
+	max_blade_int = 450 //+50
+	max_integrity = 300 //+50
 	smeltresult = /obj/item/ingot/silver
 	wdefense = 5
 	is_silver = TRUE
@@ -476,9 +485,9 @@
 		pre_blessed = BLESSING_NONE,\
 		silver_type = SILVER_TENNITE,\
 		added_force = 0,\
-		added_blade_int = 50,\
-		added_int = 50,\
-		added_def = 2,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/stoneaxe/battle/psyaxe
@@ -490,6 +499,8 @@
 	possible_item_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, /datum/intent/axe/chop/heavy, /datum/intent/axe/bash/battle)
 	minstr = 11
 	wdefense = 6
+	max_blade_int = 350 //+50
+	max_integrity = 300 //+50
 	blade_dulling = DULLING_SHAFT_METAL
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silverblessed
@@ -502,9 +513,9 @@
 		pre_blessed = BLESSING_NONE,\
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
-		added_blade_int = 50,\
-		added_int = 50,\
-		added_def = 1,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/stoneaxe/battle/psyaxe/preblessed/ComponentInitialize()
@@ -513,9 +524,9 @@
 		pre_blessed = BLESSING_PSYDONIAN,\
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
-		added_blade_int = 50,\
-		added_int = 50,\
-		added_def = 1,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/stoneaxe/battle/steppesman
@@ -663,6 +674,7 @@
 	icon_state = "steelpoleaxe"
 	special = /datum/special_intent/side_sweep
 	max_blade_int = 300
+	secondary_skills = list(/datum/skill/combat/polearms = 0.8)
 
 /obj/item/rogueweapon/greataxe/steel/knight/attackby(obj/item/W, mob/living/user, params)
 	..()
@@ -681,17 +693,18 @@
 	. = ..()
 	update_icon()
 
-
 /obj/item/rogueweapon/greataxe/steel/knight/silver
-	force_wielded = 25
 	name = "silver poleaxe"
 	desc = "A poleaxe, fitted with a reinforced shaft and a beaked axhead of pure silver. It may not stop the darkness; but it will halt \
 	its march, long enough, to shepherd away the defenseless. </br>'O'er the Horizon, the stars and spirals I see; and below it, the horrors \
 	that've been felled by me. Through the darkness, I see my home and its beautiful light; and it will continue to shimmer, as long as I \
 	fight. Forever I stand, forever I'll hold - 'til the Horizon grows still, and my spirit trails home..'"
 	icon_state = "silverpolearm"
+	force_wielded = 25
 	minstr = 11
-	max_blade_int = 350
+	wdefense = 6
+	max_blade_int = 350 //+50
+	max_integrity = 300 //+50
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silver
 	resistance_flags = FIRE_PROOF
@@ -702,20 +715,21 @@
 		pre_blessed = BLESSING_NONE,\
 		silver_type = SILVER_TENNITE,\
 		added_force = 0,\
-		added_blade_int = 100,\
-		added_int = 50,\
-		added_def = 2,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/greataxe/steel/knight/psy
-	force_wielded = 25
 	name = "psydonic poleaxe"
 	desc = "A poleaxe, fitted with a reinforced shaft and a beaked axhead of alloyed silver. As the fragility of swords've \
 	become more apparent, the Psydonic Orders - following the disastrous Massacre of Blastenghyll - have shifted their focus \
 	towards arming their paladins with longer-lasting greatweapons."
 	icon_state = "silverpolearm"
+	force_wielded = 25
 	minstr = 11
-	max_blade_int = 350
+	max_blade_int = 350 //+50
+	max_integrity = 300 //+50
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silverblessed
 	resistance_flags = FIRE_PROOF
@@ -726,9 +740,9 @@
 		pre_blessed = BLESSING_NONE,\
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
-		added_blade_int = 100,\
-		added_int = 50,\
-		added_def = 2,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/greataxe/steel/knight/psy/preblessed/ComponentInitialize()
@@ -737,20 +751,20 @@
 		pre_blessed = BLESSING_PSYDONIAN,\
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
-		added_blade_int = 100,\
-		added_int = 50,\
-		added_def = 2,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 /obj/item/rogueweapon/greataxe/steel/doublehead
-	force = 15
-	force_wielded = 35
 	possible_item_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, SPEAR_BASH) //bash is for nonlethal takedowns, only targets limbs
 	gripped_intents = list(/datum/intent/axe/cut/long, /datum/intent/axe/chop/long, /datum/intent/axe/sweep)
 	name = "double-headed steel greataxe"
 	desc = "A large axe with a twinned axhead of steel, requiring both hands to properly swing. It carves, chops, and cleaves from \
 	afar. </br>'Crush your enemies, see them driven before you, and hear the lamentations of the women..'"
 	icon_state = "doublegreataxe"
+	force = 15
+	force_wielded = 35
 	max_blade_int = 230
 	wdefense = 3
 	minstr = 13

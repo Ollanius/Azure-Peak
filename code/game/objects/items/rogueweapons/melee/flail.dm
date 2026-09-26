@@ -197,13 +197,12 @@
 	minstr = 5
 
 /obj/item/rogueweapon/flail/sflail/silver
-	force = 35
 	icon_state = "silverflail"
 	name = "silver morningstar"
 	possible_item_intents = list(/datum/intent/flail/strike, /datum/intent/flail/smash/ranged, /datum/intent/flail/bash)
 	desc = "A heavy, silver flail. It follows the Grenzelhoftian design of a 'morning star', utilizing a longer chain to extend its reach. While stronger than a steel flail, it requires far more strength to effectively swing."
 	smeltresult = /obj/item/ingot/silver
-	max_integrity = 200 //Same value as before, for reference.
+	max_integrity = 200 //+50
 	minstr = 12
 	is_silver = TRUE
 
@@ -214,7 +213,7 @@
 		silver_type = SILVER_TENNITE,\
 		added_force = 0,\
 		added_blade_int = 0,\
-		added_int = 50,\
+		added_int = 0,\
 		added_def = 0,\
 	)
 
@@ -222,7 +221,7 @@
 	name = "swift journey"
 	desc = "The striking head is full of teeth, rattling viciously with every strike, with every rotation. Each set coming from one the wielder has laid to rest. Carried alongside them as a great show of respect."
 	icon_state = "necraflail"
-	force = 35
+	max_integrity = 200 //+50
 	is_silver = TRUE
 
 /obj/item/rogueweapon/flail/sflail/necraflail/ComponentInitialize()
@@ -232,7 +231,7 @@
 		silver_type = SILVER_TENNITE,\
 		added_force = 0,\
 		added_blade_int = 0,\
-		added_int = 50,\
+		added_int = 0,\
 		added_def = 0,\
 	)
 
@@ -240,9 +239,8 @@
 	name = "psydonic flail"
 	desc = "An ornate flail, plated in a ceremonial veneer of silver. Its flanged head can crumple even the toughest of darksteel-maille."
 	icon_state = "psyflail"
-	force = 35
-	minstr = 11
-	wdefense = 0
+	minstr = 10
+	max_integrity = 200 //+50
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silverblessed
 
@@ -273,6 +271,7 @@
 	desc = "The weight of His anguish, His pain, His hope and His love for humenkind - all hanging on the ornamental silver-steel head chained to this arm. <br><br>A declaration of love for all that Psydon lives for, and a crushing reminder to the arch-nemesis that they will not triumph as long as He endures."
 	icon_state = "psymorningstar"
 	possible_item_intents = list(/datum/intent/flail/strike, /datum/intent/flail/smash/ranged, /datum/intent/flail/bash)
+	max_integrity = 350 //+150
 
 /obj/item/rogueweapon/flail/sflail/psyflail/relic/ComponentInitialize()
 	AddComponent(\
@@ -280,8 +279,8 @@
 		pre_blessed = BLESSING_PSYDONIAN,\
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
-		added_blade_int = 100,\
-		added_int = 100,\
+		added_blade_int = 0,\
+		added_int = 0,\
 		added_def = 0,\
 	)
 

@@ -82,6 +82,7 @@
 	icon_state = "instrike"
 	item_d_type = "blunt"
 	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR
+
 /datum/intent/flail/smash/ranged/psywhip
 	name = "Meteor Strike"
 	desc = "Swing the weight of your whip around your body, using the angular momentum to deliver a devastating strike, propelling your enemy back and savaging them at the same time."
@@ -164,10 +165,11 @@
 	is_silver = TRUE
 	force = 25
 	possible_item_intents = list(/datum/intent/whip/lash/master, /datum/intent/whip/crack, /datum/intent/whip/punish, /datum/intent/flail/smash/ranged/psywhip)
-	minstr = 11
+	minstr = 9
 	wdefense = 0
 	anvilrepair = /datum/skill/craft/weaponsmithing
 	smeltresult = /obj/item/ingot/silver
+	max_integrity = 400 //+150
 
 /obj/item/rogueweapon/whip/antique/psywhip/ComponentInitialize()
 	AddComponent(\
@@ -176,7 +178,7 @@
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
 		added_blade_int = 0,\
-		added_int = 100,\
+		added_int = 0,\
 		added_def = 0,\
 	)
 
@@ -186,8 +188,8 @@
 	icon_state = "silverwhip"
 	force = 23 //Experimental change - adds a +2 to force, as a bridge between handweapons and blunt weapons. Higher strength minimum. Do not raise above 25, unless you want to resurrect maille-shatterers.
 	possible_item_intents = list(/datum/intent/whip/lash/master, /datum/intent/whip/crack, /datum/intent/whip/punish)
-	minstr = 11
-	wdefense = 0
+	minstr = 91
+	max_integrity = 300 //+50
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silver
 
@@ -198,7 +200,7 @@
 		silver_type = SILVER_TENNITE,\
 		added_force = 0,\
 		added_blade_int = 0,\
-		added_int = 50,\
+		added_int = 0,\
 		added_def = 0,\
 	)
 
@@ -209,7 +211,7 @@
 	possible_item_intents = list(/datum/intent/whip/lash/master, /datum/intent/whip/crack, /datum/intent/whip/punish)
 	force = 23
 	minstr = 11
-	wdefense = 0
+	max_integrity = 300 //+50
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silverblessed
 
@@ -220,7 +222,7 @@
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
 		added_blade_int = 0,\
-		added_int = 50,\
+		added_int = 0,\
 		added_def = 0,\
 	)
 
@@ -231,6 +233,6 @@
 		silver_type = SILVER_PSYDONIAN,\
 		added_force = 0,\
 		added_blade_int = 0,\
-		added_int = 50,\
+		added_int = 0,\
 		added_def = 0,\
 	)

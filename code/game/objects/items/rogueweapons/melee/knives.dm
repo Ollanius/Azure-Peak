@@ -1216,7 +1216,6 @@
 	name = "silver tossblade"
 	desc = "A relative to the silver dagger; thinner, flimsier, but capable of being thrown with exceptional accuracy. Seasoned pursuers of unholy creechers oft-keep one hidden on themselves, just in case. </br>This dagger can be stowed away inside a pair of boots, permitting it to be quickly drawn when needed."
 	item_state = "bone_dagger"
-	throwforce = 20
 	armor_penetration = PEN_HEAVY
 	max_integrity = 150 //+50
 	max_blade_int = 250 //+50

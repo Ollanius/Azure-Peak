@@ -57,11 +57,11 @@
 	smeltresult = null // 1 Ingot = 2 Javelins
 
 /obj/item/ammo_casing/caseless/rogue/javelin/steel
-	force = 16
 	armor_penetration = PEN_HEAVY
 	name = "steel javelin"
 	desc = "A tool used for centuries, as early as recorded history. This one is tipped with a steel head; perfect for piercing armor!"
 	icon_state = "javelin"
+	force = 16
 	max_integrity = 100						//In-line with other stabbing weapons.
 	throwforce = 28							//Equal to steel knife BUT this has peircing damage type so..
 	thrown_bclass = BCLASS_PICK				//Bypasses crit protection better than stabbing. Makes it better against heavy-targets.
@@ -79,8 +79,10 @@
 	desc = "A tool used for centuries, as early as recorded history. This one is tipped with a silver head, perfect for sundering the supernatural from a safe distance."
 	icon_state = "sjavelin"
 	is_silver = TRUE
-	throwforce = 25							//Less than steel because it's.. silver. Good at killing vampires/WW's still.
-	armor_penetration = PEN_HEAVY
+	force = 12
+	throwforce = 24							//Less than steel because it's.. silver. Good at killing vampires/WW's still.
+	max_integrity = 150 //+50
+	armor_penetration = PEN_BSTEEL
 	thrown_bclass = BCLASS_PICK				//Bypasses crit protection better than stabbing. Makes it better against heavy-targets.
 	smeltresult = null
 
@@ -90,10 +92,10 @@
 		/datum/component/silverbless,\
 		pre_blessed = BLESSING_NONE,\
 		silver_type = SILVER_TENNITE,\
-		added_force = -3,\
-		added_blade_int = 50,\
-		added_int = 50,\
-		added_def = 3,\
+		added_force = 0,\
+		added_blade_int = 0,\
+		added_int = 0,\
+		added_def = 0,\
 	)
 
 //Snowflake code to make sure the silver-bane is applied on hit to targeted mob. Thanks to Aurorablade for getting this code to work.
@@ -106,7 +108,7 @@
 	name = "blacksteel javelin"
 	desc = "A tool used for centuries, as early as recorded history. This one is tipped with a blacksteel head; unstoppable by even the finest plate armor!"
 	icon_state = "bs_javelin"
-	max_integrity = 50						//In-line with other stabbing weapons.
+	max_integrity = 100
 	force = 18
 	throwforce = 36
 	armor_penetration = PEN_BSTEEL //The main appeal.
