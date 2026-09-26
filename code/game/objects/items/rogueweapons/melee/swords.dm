@@ -1302,8 +1302,6 @@
 	in favor of a hollow beak to hook and draw harm away from its user. Short in length, yet lethally light in weight."
 	icon_state = "psyswordshort"
 	sheathe_icon = "psyswordshort"
-	force = 20
-	force_wielded = 20
 	minstr = 7
 	wdefense = 4
 	max_integrity = 200 //+50
@@ -1341,8 +1339,6 @@
 	icon = 'icons/roguetown/weapons/daggers32.dmi'
 	icon_state = "silverswordshort"
 	sheathe_icon = "psyswordshort"
-	force = 20
-	force_wielded = 20
 	minstr = 7
 	wdefense = 4
 	max_integrity = 200 //+50
@@ -1865,8 +1861,6 @@
 	sheathe_icon = "silverrapier"
 	max_integrity = 200 //+50
 	max_blade_int = 280 //+50
-	force = 20
-	force_wielded = 20
 	minstr = 8
 	wdefense = 8
 	smeltresult = /obj/item/ingot/silver
@@ -1891,8 +1885,6 @@
 	sheathe_icon = "silverrapier"
 	max_integrity = 200 //+50
 	max_blade_int = 280 //+50
-	force = 20
-	force_wielded = 20
 	minstr = 8
 	wdefense = 8
 	smeltresult = /obj/item/ingot/silverblessed

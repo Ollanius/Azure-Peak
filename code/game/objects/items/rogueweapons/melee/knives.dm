@@ -405,7 +405,7 @@
 	icon_state = "silverseax"
 	sheathe_icon = "silverseax"
 	smeltresult = /obj/item/ingot/silver
-	wdefense = 6
+	wdefense = 5
 	max_blade_int = 250 //+50
 	max_integrity = 225 //+50
 	is_silver = TRUE
