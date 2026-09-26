@@ -79,7 +79,7 @@
 	marquescost = 12
 
 /datum/inqports/supplies/litany
-	name = "The Archbishop's Litany - Blessing Of Psydonic Silver"
+	name = "The Archbishop's Litanies - Blessing Of Psydonic Silver"
 	item_type = /obj/item/inqarticles/litany
 	maximum = 3
 	marquescost = 12
