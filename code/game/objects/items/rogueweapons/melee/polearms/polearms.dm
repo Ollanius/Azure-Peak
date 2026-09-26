@@ -433,7 +433,7 @@
 	desc = "An ornate spear, plated in a ceremonial veneer of silver. The barbs pierce your palm, and - for just a moment - you see red. Never \
 	forget that you are why Psydon wept."
 	icon_state = "psyspear"
-	force = 15
+	force = 20
 	force_wielded = 25
 	minstr = 11
 	wdefense = 6
@@ -470,7 +470,7 @@
 	desc = "A winged staff, tipped with a silver spearhead. It bears a resemblenece to the 'boar spear', but with a critical difference; instead \
 	of stopping hogs, it halts charging deadites from spreading their sickness any further."
 	icon_state = "silverspear"
-	force = 15
+	force = 20
 	force_wielded = 25
 	minstr = 11
 	wdefense = 6
@@ -515,6 +515,20 @@
 				return list("shrink" = 0.6,"sx" = -7,"sy" = 2,"nx" = 7,"ny" = 3,"wx" = -2,"wy" = 1,"ex" = 1,"ey" = 1,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -38,"sturn" = 37,"wturn" = 30,"eturn" = -30,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
 			if("wielded")
 				return list("shrink" = 0.6,"sx" = 5,"sy" = -3,"nx" = -5,"ny" = -2,"wx" = -5,"wy" = -1,"ex" = 3,"ey" = -2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 7,"sturn" = -7,"wturn" = 16,"eturn" = -22,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
+
+/obj/item/rogueweapon/spear/cleric
+	name = "anointed spear"
+	desc = "A crusader's spear, adorned with a blade of cold iron and blessed to smite evil. Though this blessed alloy lacks the strength to \
+	sunder those who bear greater curses, it nevertheless channels enough power to dispell the lesser curses of mindless fiends-and-foes. </br>'Stick \
+	to the light! Hold fast, and do not falter!'"
+	icon_state = "crusaderspear"
+	force = 20
+	force_wielded = 25
+	wdefense = 6
+	max_blade_int = 230
+	max_integrity = 300
+	smeltresult = /obj/item/ingot/iron
+	is_even_lesser_silver = TRUE // adv paladin exclusive weapon, works like unblessed silver but only in pve
 
 /obj/item/rogueweapon/spear/bonespear
 	force = 18
@@ -877,7 +891,7 @@
 	desc = "A beautiful variant of the halberd. Its reinforced shaft provides it with greater durability against attacks."
 	icon_state = "bardiche"
 	anvilrepair = /datum/skill/craft/weaponsmithing
-	smeltresult = /obj/item/ingot/steel //this is a steel weapon.
+	smeltresult = /obj/item/ingot/steel
 	max_blade_int = 300
 	wdefense = 5
 	wbalance = WBALANCE_HEAVY

@@ -529,6 +529,20 @@
 		added_def = 0,\
 	)
 
+/obj/item/rogueweapon/stoneaxe/woodcut/cleric
+	name = "anointed war axe"
+	icon_state = "crusaderaxe"
+	desc = "A crusader's spear, adorned with a blade of cold iron and blessed to smite evil. Though this blessed alloy lacks the strength to \
+	sunder those who bear greater curses, it nevertheless channels enough power to dispell the lesser curses of mindless fiends-and-foes. </br>'Stick \
+	to the light! Hold fast, and do not falter!'"
+	force = 25
+	force_wielded = 27
+	max_blade_int = 450 //+50
+	max_integrity = 300 //+50
+	wdefense = 5
+	smeltresult = /obj/item/ingot/iron
+	is_even_lesser_silver = TRUE // adv paladin exclusive weapon, works like unblessed silver but only in pve
+
 /obj/item/rogueweapon/stoneaxe/battle/steppesman
 	name = "aavnic valaška"
 	desc = "A steel axe of Aavnic make that combines a deadly weapon with a walking stick - hence its pointed end. It has a flat head that \

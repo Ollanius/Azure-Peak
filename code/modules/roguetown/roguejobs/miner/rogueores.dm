@@ -401,6 +401,18 @@
 	icon_state = "copperslag"
 	sellprice = 3
 
+/obj/item/ingot/ironslag
+	name = "iron-speckled slag"
+	desc = "A mass of smoldered iron, rendered lame from the forge's heat. Civilized wards, crippled beyond repair."
+	icon_state = "ironslag"
+	sellprice = 3
+
+/obj/item/ingot/steelslag
+	name = "steel-speckled slag"
+	desc = "A mass of smoldered steel, rendered lame from the forge's heat. Alloyed heights, toppled over."
+	icon_state = "steelslag"
+	sellprice = 3
+
 //Anomalous Smeltings
 /obj/item/ingot/weeping
 	name = "enduring ingot"
