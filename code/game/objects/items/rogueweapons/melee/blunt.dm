@@ -1081,16 +1081,16 @@
 	desc = "A rune-forged maul inspired by dwarven rock-hammers. Created as the faithful's answer to heretics hiding behind walls, it provides the impure with a sermon of exceptional concussive clarity. A good hit with this is guaranteed to give even the most peppy of heretics some deserved 'respite', and in best scenarios, send them to confess directly to HIM."
 	icon_state = "psyhammer"
 	smeltresult = /obj/item/ingot/silverblessed
-	minstr = 10
+	minstr = 12
 	wdefense_wbonus = 7
 	is_silver = TRUE
 	max_integrity = 600 // need a lil more cause destroying walls takes a bit of this
 
 /obj/item/rogueweapon/mace/maul/grand/psy/pickup(mob/living/user)
 	if(HAS_TRAIT(user, TRAIT_PSYDONITE))
-		src.minstr = 10//-10, if you have the ability to use this.
+		src.minstr = 12//-6, if you have the ability to use this.
 	else
-		src.minstr = 20
+		src.minstr = 18
 	..()
 
 /obj/item/rogueweapon/mace/maul/grand/psy/ComponentInitialize()
