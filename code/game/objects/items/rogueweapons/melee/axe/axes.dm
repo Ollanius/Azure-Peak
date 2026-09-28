@@ -463,9 +463,10 @@
 	name = "silver war axe"
 	desc = "A hefty battle axe, fashioned from pure silver. Even with a one-handed grasp, an efforted swing carries enough momentum to cleave through maille-and-flesh alike."
 	icon_state = "silveraxe"
-	force = 25 //Forgot this is forced to only be one-handed. My bad.
+	force = 25
+	force_wielded = 25 //Intended to be one-handed, for all practical purpsoes. You can two-hand it for a special attack, however.
 	possible_item_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, /datum/intent/axe/chop/heavy, /datum/intent/axe/bash/battle)
-	gripped_intents = null
+	gripped_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, /datum/intent/axe/chop/heavy, /datum/intent/axe/bash/battle)
 	minstr = 11
 	max_blade_int = 450 //+50
 	max_integrity = 300 //+50
@@ -473,7 +474,7 @@
 	wdefense = 5
 	is_silver = TRUE
 	blade_dulling = DULLING_SHAFT_METAL
-	special = /datum/special_intent/axe_swing //Cannot be wielded, otherwise.
+	special = /datum/special_intent/axe_swing
 	resistance_flags = FIRE_PROOF
 
 /obj/item/rogueweapon/stoneaxe/woodcut/silver/ComponentInitialize()
@@ -492,8 +493,9 @@
 	desc = "An ornate battle axe, plated in a ceremonial veneer of silver. Even with a one-handed grasp, an efforted swing carries enough momentum to cleave through maille-and-flesh alike. </br>The premiere instigator of conflict against elven attachees."
 	icon_state = "psyaxe"
 	force = 25
-	force_wielded = 25
+	force_wielded = 25 //Intended to be one-handed, for all practical purpsoes. You can two-hand it for a special attack, however.
 	possible_item_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, /datum/intent/axe/chop/heavy, /datum/intent/axe/bash/battle)
+	gripped_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, /datum/intent/axe/chop/heavy, /datum/intent/axe/bash/battle)
 	minstr = 11
 	wdefense = 6
 	max_blade_int = 350 //+50

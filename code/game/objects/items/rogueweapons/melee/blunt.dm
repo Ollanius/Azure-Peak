@@ -141,7 +141,7 @@
 	name = "demolish"
 	attack_verb = list("demolishes", "crushes", "wrecks")
 	icon_state = "incrush"
-	desc = "A titanic blow that delivers Strength-scaling knockback to living targets, and massive damage to structural targets. The amount of inflicted knockback scales off your Strength, ranging from X (1 tile) to XV (5 tiles). </br>Actively drains stamina while being charged up. </br>Cannot inflict any knockback or slowdown if your Strength is below X. </br>Cannot be used consecutively more than every 5 seconds on the same target. </br>Prone targets halve the knockback distance. </br>Not fully charging the attack limits knockback to 1 tile. </br>Against structures, this intent can deal up to 15% of their maximum health in bonus damage."
+	desc = "A titanic blow that delivers Strength-scaling knockback to living targets, and massive damage to structural targets. The amount of inflicted knockback scales off your Strength, ranging from X (1 tile) to XV (5 tiles). </br>Actively drains stamina while being charged up. </br>Cannot inflict any knockback or slowdown if your Strength is below X. </br>Cannot be used consecutively more than every 5 seconds on the same target. </br>Prone targets halve the knockback distance. </br>Not fully charging the attack limits knockback to 1 tile. </br>Against structures, each attack reduces at least 15% of its maximum integrity."
 	demolition_mod = 3.5
 
 /datum/intent/mace/strike/poleaxe
@@ -1136,7 +1136,6 @@
 	var/bonus_damage = round(T.max_integrity * 0.15)
 
 	T.take_damage(bonus_damage, BRUTE, d_type, 1)
-	to_chat(user, span_warning("Your blow expertly caves into [T]! (+[bonus_damage])"))
 	return TRUE
 
 /obj/item/rogueweapon/mace/proc/demolish_obj(obj/O, mob/living/user)
@@ -1153,7 +1152,6 @@
 	var/bonus_damage = round(O.max_integrity * 0.15)
 
 	O.take_damage(bonus_damage, BRUTE, d_type, 1)
-	to_chat(user, span_warning("Your blow expertly caves into [O]! (+[bonus_damage])"))
 	return TRUE
 
 /datum/intent/mace/sweep
