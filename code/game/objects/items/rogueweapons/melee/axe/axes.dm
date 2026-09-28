@@ -529,7 +529,7 @@
 /obj/item/rogueweapon/stoneaxe/woodcut/cleric
 	name = "anointed war axe"
 	icon_state = "crusaderaxe"
-	desc = "A crusader's spear, adorned with a blade of cold iron and blessed to smite evil. Though this blessed alloy lacks the strength to \
+	desc = "A crusader's axe, adorned with a blade of cold iron and blessed to smite evil. Though this blessed alloy lacks the strength to \
 	sunder those who bear greater curses, it nevertheless channels enough power to dispell the lesser curses of mindless fiends-and-foes."
 	force = 25
 	force_wielded = 27
