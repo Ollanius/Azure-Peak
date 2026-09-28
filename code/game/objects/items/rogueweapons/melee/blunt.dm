@@ -60,22 +60,8 @@
 	maxrange = 3
 
 /datum/intent/mace/demolish
-	name = "demolish"
-	desc = "A deliberate structure-breaking blow. Deals bonus damage equal to 15% of a target structure's maximum integrity."
-	icon_state = "incrush"
-	blade_class = BCLASS_SMASH
-	attack_verb = list("demolishes", "crushes", "wrecks")
-	animname = "strike"
-	hitsound = list('sound/combat/hits/blunt/metalblunt (1).ogg', 'sound/combat/hits/blunt/metalblunt (2).ogg', 'sound/combat/hits/blunt/metalblunt (3).ogg')
-	item_d_type = "blunt"
-	penfactor = PEN_NONE
-	demolition_mod = 3.5
-	clickcd = CLICK_CD_HEAVY
-	swingdelay = 10
-
-/datum/intent/mace/lesserdemolish
 	name = "break"
-	desc = "A deliberate structure-breaking blow. Deals triple the damage to structures"
+	desc = "A deliberate strike that is much more effective at demolishing structures."
 	icon_state = "incrush"
 	blade_class = BCLASS_SMASH
 	attack_verb = list("demolishes", "crushes", "wrecks")
@@ -150,6 +136,13 @@
 	chargetime = 10
 	desc = "A titanic blow that delivers Strength-scaling knockback and slowdown to the target. The amount of inflicted knockback scales off your Strength, ranging from X (1 tile) to XV (5 tiles). </br>Actively drains stamina while being charged up. </br>Cannot inflict any knockback or slowdown if your Strength is below X. </br>Cannot be used consecutively more than every 5 seconds on the same target. </br>Prone targets halve the knockback distance. </br>Not fully charging the attack limits knockback to 1 tile."
 	maxrange = 5
+
+/datum/intent/mace/smash/crush/demolish
+	name = "demolish"
+	attack_verb = list("demolishes", "crushes", "wrecks")
+	icon_state = "incrush"
+	desc = "A titanic blow that delivers Strength-scaling knockback to living targets, and massive damage to structural targets. The amount of inflicted knockback scales off your Strength, ranging from X (1 tile) to XV (5 tiles). </br>Actively drains stamina while being charged up. </br>Cannot inflict any knockback or slowdown if your Strength is below X. </br>Cannot be used consecutively more than every 5 seconds on the same target. </br>Prone targets halve the knockback distance. </br>Not fully charging the attack limits knockback to 1 tile. </br>Against structures, this intent can deal up to 15% of their maximum health in bonus damage."
+	demolition_mod = 3.5
 
 /datum/intent/mace/strike/poleaxe
 	damfactor = 1.2
@@ -355,7 +348,7 @@
 	name = "bogbark club"
 	desc = "A primitive cudgel carved of a stout piece of treefall, from the deepest parts of the Terrorbog. An unmistakable aura of power surrounds it. This thing looks dangerously strong."
 	aura_color = "#00ff00"
-	gripped_intents = list(/datum/intent/mace/strike/wood/, /datum/intent/mace/smash/wood, /datum/intent/effect/daze, /datum/intent/mace/lesserdemolish)
+	gripped_intents = list(/datum/intent/mace/strike/wood/, /datum/intent/mace/smash/wood, /datum/intent/effect/daze, /datum/intent/mace/demolish)
 	w_class = WEIGHT_CLASS_NORMAL // it's just a stick, can put it in your backpack
 
 /obj/item/rogueweapon/mace/woodclub
@@ -1079,8 +1072,10 @@
 //Psydonite reliquary maul. Intended for FUCKING SHIT UP.
 /obj/item/rogueweapon/mace/maul/grand/psy
 	name = "psydonic maul"
-	gripped_intents = list(/datum/intent/mace/strike/reach, /datum/intent/mace/sweep, /datum/intent/mace/demolish, /datum/intent/effect/hobble)
-	desc = "A rune-forged maul inspired by dwarven rock-hammers. Created as the faithful's answer to heretics hiding behind walls, it provides the impure with a sermon of exceptional concussive clarity. A good hit with this is guaranteed to give even the most peppy of heretics some deserved 'respite', and in best scenarios, send them to confess directly to HIM."
+	gripped_intents = list(/datum/intent/mace/smash/crush/demolish, /datum/intent/mace/strike/grand, /datum/intent/mace/sweep, /datum/intent/effect/hobble)
+	desc = "A massive silver maul, rune-forged and inspired by dwarven rock-hammers. Created as the faithful's answer to heretics hiding behind walls, it provides the \
+	impure with a sermon of exceptional concussive clarity. A good hit with this is guaranteed to give even the most peppy of heretics some deserved 'respite', and in \
+	the best scenarios, send them to confess directly to HIM."
 	icon_state = "psyhammer"
 	smeltresult = /obj/item/ingot/silverblessed
 	minstr = 12
@@ -1119,12 +1114,12 @@
 
 /obj/item/rogueweapon/mace/attack_turf(turf/T, mob/living/user, multiplier)
 	. = ..()
-	if(. && istype(user?.used_intent, /datum/intent/mace/demolish))
+	if(. && istype(user?.used_intent, /datum/intent/mace/smash/crush/demolish))
 		demolish_turf(T, user)
 
 /obj/item/rogueweapon/mace/attack_obj(obj/O, mob/living/user)
 	. = ..()
-	if(. && istype(user?.used_intent, /datum/intent/mace/demolish))
+	if(. && istype(user?.used_intent, /datum/intent/mace/smash/crush/demolish))
 		demolish_obj(O, user)
 
 /obj/item/rogueweapon/mace/proc/demolish_turf(turf/T, mob/living/user)
@@ -1365,7 +1360,7 @@
 	force = 13
 	force_wielded = 25
 	possible_item_intents = list(/datum/intent/mace/strike, /datum/intent/mace/bash/ranged)
-	gripped_intents = list(/datum/intent/mace/strike, /datum/intent/use, /datum/intent/mace/strike/dislocate, /datum/intent/mace/lesserdemolish)
+	gripped_intents = list(/datum/intent/mace/strike, /datum/intent/use, /datum/intent/mace/strike/dislocate, /datum/intent/mace/demolish)
 	minstr = 8
 	max_integrity = 350
 	w_class = WEIGHT_CLASS_BULKY
