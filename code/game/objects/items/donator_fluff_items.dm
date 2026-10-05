@@ -1247,7 +1247,7 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/knight/rockhill
 	name = "knight-errant's armet"
-	desc = "Originating in Rockhill's armories, this particular helmet - truthfully closer to a burgonet than an armet - was borne to further \
+	desc = "Originating in Rockhill's armories, this particular helmet - truthfully closer to a burgeonet than an armet - was borne to further \
 	plate its men-at-arms against rising perils. A wider visor offers better vision in a torch-snuffed street, and small studs along the neckguard \
 	allow for it to be scarfed with ducal colors."
 	icon_state = "rockhillarmet"
@@ -1270,7 +1270,7 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/knight/rockhill/iron
 	name = "knight-errant's armet"
-	desc = "Originating in Rockhill's armories, this particular helmet - truthfully closer to a burgonet than an armet - was borne to further \
+	desc = "Originating in Rockhill's armories, this particular helmet - truthfully closer to a burgeonet than an armet - was borne to further \
 	plate its men-at-arms against rising perils. A wider visor offers better vision in a torch-snuffed street, and small studs along the neckguard \
 	allow for it to be scarfed with ducal colors."
 	icon_state = "irockhillarmet"
@@ -3616,7 +3616,7 @@ As Excaliber."
 		add_overlay(pic)
 
 /obj/item/clothing/head/roguetown/helmet/bascinet/apostle
-	name = "\improper Knight-Apostle's heavy burgonet" //Note; rebuilding these helmets were the only way - to my knowledge - to make these custom details work.
+	name = "\improper Knight-Apostle's heavy burgeonet" //Note; rebuilding these helmets were the only way - to my knowledge - to make these custom details work.
 	desc = "O' Father, hear my cry! Seat me by Your side as my death comes! </br> \
 	Make of me one within Your glories as I fall! </br> \
 	Let the world, through my deeds, once more see Your favor!" //A bit messy, but it works. Might be worth revisiting to properly optimize, later.
@@ -3675,7 +3675,7 @@ As Excaliber."
 	icon_state = "dasfox_apostleburgeonet"
 
 /obj/item/clothing/head/roguetown/helmet/bascinet/apostle_winged
-	name = "\improper Knight-Apostle's winged burgonet"
+	name = "\improper Knight-Apostle's winged burgeonet"
 	desc = "O' Psydon, see of Your servant. For I walk only where You have bid of me to. </br> \
 	Stand only within the places that You have blessed of me to. </br> \
 	And sing only the hymn and word You have gifted me to."
@@ -3779,14 +3779,14 @@ As Excaliber."
 	allowed_sex = list(FEMALE)
 
 /obj/item/clothing/head/roguetown/helmet/bascinet/apostle/grandmaster
-	name = "\improper Knight-Abbot's heavy burgonet"
+	name = "\improper Knight-Abbot's heavy burgeonet"
 	desc = "The Demon's Legion fell before them, like wheat before the swinging scythe. </br>However, the Demon's armies were numberless.</br> \
 	A sea of death, forever coming and marching in flame-borne fervour, crashed upon the Lord and his army in waves."
 	item_state = "dasfox_apostleburgeonet"
 	icon_state = "dasfox_apostleburgeonet"
 
 /obj/item/clothing/head/roguetown/helmet/grandmaster_habit
-	name = "\improper Knight-Abbot's habited burgonet"
+	name = "\improper Knight-Abbot's habited burgeonet"
 	desc = "The Demon's Legion fell before them, like wheat before the swinging scythe. </br>However, the Demon's armies were numberless.</br> \
 	A sea of death, forever coming and marching in flame-borne fervour, crashed upon the Lord and his army in waves."
 	icon = 'icons/clothing/donor_clothes.dmi'
