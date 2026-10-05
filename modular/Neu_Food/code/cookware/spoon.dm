@@ -5,6 +5,7 @@
 	icon_state = "spoon"
 	force = 0
 	w_class = WEIGHT_CLASS_TINY
+	secondary_skills = list(/datum/skill/craft/cooking = 0.8)
 
 /obj/item/kitchen/spoon/get_mechanics_examine(mob/user)
 	. = ..()

@@ -144,12 +144,12 @@
 //blunt objs ฅ^•ﻌ•^ฅ
 
 /obj/item/rogueweapon/mace
+	name = "mace"
+	desc = "Carved wood, cold iron. </br>Crushing down upon thine foe. </br>Cracking plate, bone, soul."
 	force = 22
 	force_wielded = 27
 	possible_item_intents = list(/datum/intent/mace/strike, /datum/intent/mace/strike/dislocate)
 	gripped_intents = list(/datum/intent/mace/strike, /datum/intent/mace/smash, /datum/intent/effect/daze, /datum/intent/mace/strike/dislocate)
-	name = "mace"
-	desc = "Carved wood, cold iron. </br>Crushing down upon thine foe. </br>Cracking plate, bone, soul."
 	icon_state = "mace"
 	icon = 'icons/roguetown/weapons/blunt32.dmi'
 	item_state = "mace_greyscale"
@@ -184,10 +184,10 @@
 				return list("shrink" = 0.45,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/rogueweapon/mace/bronze
-	force = 23
-	force_wielded = 29
 	name = "bronze mace"
 	icon_state = "bronzemace"
+	force = 23
+	force_wielded = 29
 	desc = "An antiquital staff, crested with a studded sphere of bronze. Bludgeons were the first implements made for the explicit purpose of killing another; fittingly, this was the second."
 	smeltresult = /obj/item/ingot/bronze
 	max_integrity = 250
@@ -205,14 +205,15 @@
 	anvilrepair = null
 
 /obj/item/rogueweapon/mace/church
-	force = 25
-	force_wielded = 30
 	name = "bell ringer"
 	desc = "Each man's death diminishes me, for I am involved in mankind. </br>Therefore, send not to know for whom the bell tolls. </br>It tolls for thee."
+	force = 25
+	force_wielded = 30
 	icon_state = "bellringer"
 	wbalance = WBALANCE_HEAVY
 	smeltresult = /obj/item/ingot/steel
 	wdefense = 3
+	secondary_skills = list(/datum/skill/magic/holy = 0.6)
 
 /obj/item/rogueweapon/mace/church/get_mechanics_examine(mob/user)
 	. = ..()
@@ -242,21 +243,21 @@
 	wdefense = 5
 
 /obj/item/rogueweapon/mace/steel
-	force = 25
-	force_wielded = 32
 	name = "steel mace"
 	desc = "Cold steel, royal might. </br>Crushing down upon thine foe. </br>Cracking plate, bone, soul."
+	force = 25
+	force_wielded = 32
 	icon_state = "smace"
 	smeltresult = /obj/item/ingot/steel
 	wdefense = 3
 	smelt_bar_num = 2
 
 /obj/item/rogueweapon/mace/blacksteel
+	name = "blacksteel mace"
+	desc = "A magnificent mace of blacksteel. Tied around the handle is crimson silk, which was the style at the tyme."
 	force = 30
 	force_wielded = 35
 	max_integrity = 300
-	name = "blacksteel mace"
-	desc = "A magnificent mace of blacksteel. Tied around the handle is crimson silk, which was the style at the tyme."
 	icon_state = "bs_mace"
 	smeltresult = /obj/item/ingot/blacksteel
 	wdefense = 3
@@ -334,10 +335,10 @@
 	w_class = WEIGHT_CLASS_NORMAL // it's just a stick, can put it in your backpack
 
 /obj/item/rogueweapon/mace/woodclub
-	force = 15
-	force_wielded = 18
 	name = "wooden club"
 	desc = "A primitive cudgel carved of a stout piece of treefall."
+	force = 15
+	force_wielded = 18
 	icon_state = "club1"
 	//dropshrink = 0.75
 	wbalance = WBALANCE_NORMAL
@@ -630,12 +631,12 @@
 				return list("shrink" = 0.5,"sx" = -4,"sy" = -6,"nx" = 5,"ny" = -6,"wx" = 0,"wy" = -6,"ex" = -1,"ey" = -6,"nturn" = 100,"sturn" = 156,"wturn" = 90,"eturn" = 180,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 /obj/item/rogueweapon/mace/goden
+	name = "goedendag"
+	desc = "Good morning."
 	force = 15
 	force_wielded = 30
 	possible_item_intents = list(/datum/intent/mace/strike, /datum/intent/mace/bash/ranged) //Fluffed as either buttstroking with the Grand Mace, or ineffectually swinging it.
 	gripped_intents = list(/datum/intent/mace/strike/grand, /datum/intent/mace/smash/grand, /datum/intent/mace/rangedthrust/short, /datum/intent/effect/daze)
-	name = "goedendag"
-	desc = "Good morning."
 	icon_state = "goedendag"
 	icon = 'icons/roguetown/weapons/blunt64.dmi'
 	sharpness = IS_BLUNT
@@ -654,6 +655,7 @@
 	inhand_y_dimension = 64
 	bigboy = TRUE
 	gripsprite = TRUE
+	secondary_skills = list(/datum/skill/combat/polearms = 0.8)
 
 /obj/item/rogueweapon/mace/goden/getonmobprop(tag)
 	. = ..()
@@ -759,11 +761,11 @@
 	wdefense = 5
 
 /obj/item/rogueweapon/mace/warhammer
+	name = "warhammer"
+	desc = "A one-handed derivative of the mace, purpose-made to defeat armored opponents in battle. Paired nicely with a mug of Azuria's finest zenny-liqour and a heater shield."
 	force = 20
 	possible_item_intents = list(/datum/intent/mace/strike, /datum/intent/mace/smash/lesser, /datum/intent/mace/warhammer/pick, /datum/intent/mace/warhammer/stab/lesser)
 	gripped_intents = null //Warhammers are purpose-made to kill. Smaller maceheads lock them out from the 'Dislocate' intent and 'Smash' intent's full knockback. Still, their boon comes from being a 'jack of all trades'.
-	name = "warhammer"
-	desc = "A one-handed derivative of the mace, purpose-made to defeat armored opponents in battle. Paired nicely with a mug of Azuria's finest zenny-liqour and a heater shield."
 	icon_state = "iwarhammer"
 	wbalance = WBALANCE_HEAVY
 	smeltresult = /obj/item/ingot/iron
@@ -772,10 +774,10 @@
 	special = /datum/special_intent/warhammer_swing
 
 /obj/item/rogueweapon/mace/warhammer/bronze
-	force = 25
-	possible_item_intents = list(/datum/intent/mace/strike, /datum/intent/sword/cut, /datum/intent/mace/warhammer/pick, /datum/intent/mace/smash/lesser)
 	name = "bronze warclub"
 	desc = "The warhammer's ancestral link, carved from a weightsome log and studded with bronze. Elven natureguards carry it to both honor their forefathers, and as a way to sunder those who'd ravage Dendor's bounties without thought-or-restraint; a toss from afar turns into a sundering hurlbat."
+	force = 25
+	possible_item_intents = list(/datum/intent/mace/strike, /datum/intent/sword/cut, /datum/intent/mace/warhammer/pick, /datum/intent/mace/smash/lesser)
 	icon_state = "bronzeclub"
 	max_blade_int = 150
 	wbalance = WBALANCE_HEAVY
@@ -787,9 +789,9 @@
 	sharpness = IS_SHARP
 
 /obj/item/rogueweapon/mace/warhammer/bronze/iron
-	force = 20 //just a tad weaker than the bronze to balance it out, this weapon has some versatile intents and i dont want it to be TOO strong.
 	name = "iron warclub"
 	desc = "The warhammer's ancestral link, carved from a weightsome log and studded with iron. Elven natureguards carry it to both honor their forefathers, and as a way to sunder those who'd ravage Dendor's bounties without thought-or-restraint; a toss from afar turns into a sundering hurlbat."
+	force = 20 //just a tad weaker than the bronze to balance it out, this weapon has some versatile intents and i dont want it to be TOO strong.
 	icon_state = "iclub"
 	max_blade_int = 100
 	throwforce = 20 // still hurts, just less
@@ -798,9 +800,9 @@
 	max_integrity = 120
 
 /obj/item/rogueweapon/mace/warhammer/bronze/steel
-	force = 28 //just a little better than the bronze club but barely
 	name = "steel warclub"
 	desc = "The warhammer's ancestral link, carved from a weightsome log and studded with steel. Elven natureguards carry it to both honor their forefathers, and as a way to sunder those who'd ravage Dendor's bounties without thought-or-restraint; a toss from afar turns into a sundering hurlbat."
+	force = 28 //just a little better than the bronze club but barely
 	icon_state = "steelclub"
 	max_blade_int = 175
 	throwforce = 25
@@ -821,9 +823,9 @@
 	max_blade_int = 175
 
 /obj/item/rogueweapon/mace/warhammer/bronze/decorated
-	force = 30 // this requires GOLD to make, its going to be a bit more heavy.
 	name = "decorated bronze warclub"
 	desc = "Beads, silk, and gold caress this carved-and-spiked log; a honored totem who's roots trace back to the daes before Syon's impact. Myths speak of ancient elve-and-humen alike, wielding such bronzen bludgeons against the Archdevil's rampaging hordes."
+	force = 30 // this requires GOLD to make, its going to be a bit more heavy.
 	icon_state = "bronzeclubdec"
 	smeltresult = /obj/item/ingot/gold
 	wdefense = 5
@@ -843,10 +845,10 @@
 	anvilrepair = null
 
 /obj/item/rogueweapon/mace/warhammer/steel
-	force = 25
-	possible_item_intents = list(/datum/intent/mace/strike, /datum/intent/mace/smash/lesser, /datum/intent/mace/warhammer/pick, /datum/intent/mace/warhammer/stab)
 	name = "steel warhammer"
 	desc = "A one-handed lucerne with a steel hammerhead, perfectly balanced for a gauntlet's grasp. The unique hook-shaped spike sprouting from its rear is better known as a 'saigaman's pick', which excels at gouging wounds through the gaps in an armored opponent's maille."
+	force = 25
+	possible_item_intents = list(/datum/intent/mace/strike, /datum/intent/mace/smash/lesser, /datum/intent/mace/warhammer/pick, /datum/intent/mace/warhammer/stab)
 	icon_state = "swarhammer"
 	smeltresult = /obj/item/ingot/steel
 	wdefense = 4
@@ -1286,6 +1288,7 @@
 	parrysound = list('sound/combat/parry/parrygen.ogg')
 	swingsound = BLUNTWOOSH_MED
 	//special = /datum/special_intent/dissassemble
+	secondary_skills = list(/datum/skill/craft/engineering = 0.8)
 
 /obj/item/rogueweapon/contraption/linker/mace/precharged
 	current_charge = 80

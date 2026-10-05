@@ -1,12 +1,12 @@
 /obj/item/rogueweapon/greatsword
+	name = "greatsword"
+	desc = "Might be able to chop anything in half!"
 	force = 12
 	force_wielded = 30
 	possible_item_intents = list(/datum/intent/sword/chop, /datum/intent/sword/strike) //bash is for nonlethal takedowns, only targets limbs
 	// Design Intent: I have a big fucking sword and I want to cut everything in sight.
 	gripped_intents = list(/datum/intent/sword/cut/zwei, /datum/intent/sword/thrust/zwei, /datum/intent/sword/cut/zwei/cleave, /datum/intent/sword/cut/zwei/sweep)
 	alt_grips = list(/datum/alt_grip/mordhau/greatsword, /datum/alt_grip/halfsword/greatsword)
-	name = "greatsword"
-	desc = "Might be able to chop anything in half!"
 	icon_state = "gsw"
 	parrysound = list(
 		'sound/combat/parry/bladed/bladedlarge (1).ogg',
@@ -30,6 +30,7 @@
 	wdefense = 5
 	smelt_bar_num = 3
 	special = /datum/special_intent/greatsword_swing
+	secondary_skills = list(/datum/skill/combat/polearms = 0.6)
 
 /obj/item/rogueweapon/greatsword/getonmobprop(tag)
 	. = ..()

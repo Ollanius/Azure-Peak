@@ -212,13 +212,13 @@
 	associated_skill = /datum/skill/combat/polearms
 
 /obj/item/rogueweapon/spear
+	name = "spear"
+	desc = "One of the oldest weapons still in use today, second only to the club. The lack of reinforcements along the \
+	shaft leaves it vulnerable to being split in two."
 	force = 22
 	force_wielded = 30
 	possible_item_intents = list(SPEAR_THRUST_1H, SPEAR_CUT_1H)
 	gripped_intents = list(SPEAR_THRUST, SPEAR_CUT, SPEAR_BASH) //bash is for nonlethal takedowns, only targets limbs
-	name = "spear"
-	desc = "One of the oldest weapons still in use today, second only to the club. The lack of reinforcements along the \
-	shaft leaves it vulnerable to being split in two."
 	icon_state = "spear"
 	icon = 'icons/roguetown/weapons/polearms64.dmi'
 	pixel_y = -16
@@ -242,15 +242,17 @@
 	special = /datum/special_intent/polearm_backstep
 	twirly = SKILL_LEVEL_EXPERT // safely twirling like, a halberd, is going to be harder than a blunt staff
 	twirl_speed = 6
+	secondary_skills = list(/datum/skill/combat/staves = 0.6)
 
 /obj/item/rogueweapon/spear/short
+	name = "short spear"
+	icon_state = "short_spear"
+	wlength = WLENGTH_LONG
 	force = 25
 	force_wielded = 25
 	possible_item_intents = list(SHORT_SPEAR_THRUST, SHORT_SPEAR_CUT)
 	gripped_intents = list(SHORT_SPEAR_THRUST, SHORT_SPEAR_CUT, SPEAR_BASH)
-	name = "short spear"
-	icon_state = "short_spear"
-	wlength = WLENGTH_LONG
+	secondary_skills = list(/datum/skill/combat/swords = 0.8)
 
 // ---- Azurean Shortspear intents ----
 /datum/intent/spear/thrust/azurean
@@ -1392,6 +1394,7 @@
 	unequip_delay_self = 2 SECONDS
 	inv_storage_delay = 1 SECONDS
 	icon_angle_wielded = null
+	secondary_skills = list(/datum/skill/combat/swords = 0.8)
 
 /obj/item/rogueweapon/spear/partizan/baotha/Initialize(mapload)
 	. = ..()

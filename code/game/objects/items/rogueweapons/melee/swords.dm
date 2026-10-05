@@ -92,6 +92,7 @@
 	gripped_intents = null
 	minstr = 4
 	wdefense = 6
+	secondary_skills = list(/datum/skill/combat/axes = 0.8)
 
 /obj/item/rogueweapon/sword/falx/stalker
 	name = "stalker falx"
@@ -812,6 +813,7 @@
 	max_blade_int = 330
 	smelt_bar_num = 2 // 1 bar loss
 	vorpal = TRUE // snicker snack this shit cuts heads off effortlessly (DO NOT PUT THIS ON ANYTHING ELSE UNLESS IT'S SUPER FUCKING RARE!!!)
+	secondary_skills = list(/datum/skill/combat/axes = 0.8)
 
 /datum/intent/sword/thrust/exe
 	swingdelay = 4	//Slight delay to stab; big and heavy.
@@ -1280,6 +1282,7 @@
 	possible_item_intents = list(/datum/intent/sword/cut/sabre, /datum/intent/axe/chop, /datum/intent/sword/strike)
 	minstr = 6
 	wdefense = 4
+	secondary_skills = list(/datum/skill/combat/axes = 0.8)
 
 /obj/item/rogueweapon/sword/short/messer/duelist
 	name = "dueling messer"
@@ -1965,6 +1968,7 @@
 	wdefense = 5
 	is_silver = TRUE
 	max_integrity = 200
+	secondary_skills = list(/datum/skill/combat/axes = 0.8)
 
 /obj/item/rogueweapon/sword/silver/decorated/ComponentInitialize()
 	AddComponent(\
@@ -1982,6 +1986,7 @@
 	gripped_intents = list(/datum/intent/sword/cut/falx, /datum/intent/sword/chop/falx, /datum/intent/sword/cut/falx/heavy, /datum/intent/sword/cut/zwei/sweep)
 	icon_state = "rhomphaia"
 	smeltresult = /obj/item/ingot/steel
+	secondary_skills = list(/datum/skill/combat/axes = 0.8)
 
 /obj/item/rogueweapon/sword/long/rhomphaia/getonmobprop(tag)
 	. = ..()
@@ -2183,6 +2188,7 @@
 	gripped_intents = list(/datum/intent/sword/cut/krieg, /datum/intent/sword/thrust/long/deep, /datum/intent/sword/strike, /datum/intent/rend/krieg)
 	alt_grips = null
 	smeltresult = /obj/item/ingot/steel
+	secondary_skills = list(/datum/skill/combat/axes = 0.8)
 
 /obj/item/rogueweapon/sword/long/kriegmesser/noc
 	name = "moonlight kriegmesser"

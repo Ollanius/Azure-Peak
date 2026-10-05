@@ -298,6 +298,7 @@
 	dropshrink = 0.9
 	wdefense = 4
 	resistance_flags = FLAMMABLE
+	secondary_skills = list(/datum/skill/combat/polearms = 0.8)
 
 /obj/item/rogueweapon/flail/peasantwarflail/getonmobprop(tag)
 	. = ..()

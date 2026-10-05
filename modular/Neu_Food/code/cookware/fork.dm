@@ -1,5 +1,5 @@
 /obj/item/kitchen/fork
-	name = "wooden fork"	
+	name = "wooden fork"
 	icon = 'modular/Neu_Food/icons/cookware/fork.dmi'
 	icon_state = "fork_wooden"
 	flags_1 = CONDUCT_1
@@ -13,6 +13,7 @@
 	thrown_bclass = BCLASS_STAB
 	possible_item_intents = list(/datum/intent/use, /datum/intent/dagger/thrust/fork)
 	swingsound = list('sound/combat/wooshes/bladed/wooshsmall (1).ogg','sound/combat/wooshes/bladed/wooshsmall (2).ogg','sound/combat/wooshes/bladed/wooshsmall (3).ogg')
+	secondary_skills = list(/datum/skill/craft/cooking = 0.8)
 
 /obj/item/kitchen/fork/get_mechanics_examine(mob/user)
 	. = ..()
@@ -57,7 +58,7 @@
 /obj/item/kitchen/fork/carved/shell
 	name = "shell fork"
 	icon_state = "fork_shell"
-	
+
 /obj/item/kitchen/fork/carved/rose
 	name = "rosestone fork"
 	icon_state = "fork_rose"
