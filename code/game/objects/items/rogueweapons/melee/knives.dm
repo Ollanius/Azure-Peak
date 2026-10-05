@@ -285,10 +285,10 @@
 //
 
 /obj/item/rogueweapon/huntingknife/cleaver //Now-unused variant. Avoid using this, going forward - you'll want to use the chefknife-forked variant instead.
-	force = 15
 	name = "cleaver"
 	desc = "Chop, chop, chop!"
 	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/chop/cleaver)
+	force = 15
 	icon_state = "cleaver"
 	icon = 'icons/roguetown/weapons/daggers32.dmi'
 	parrysound = list('sound/combat/parry/bladed/bladedmedium (1).ogg','sound/combat/parry/bladed/bladedmedium (2).ogg','sound/combat/parry/bladed/bladedmedium (3).ogg')
@@ -304,10 +304,10 @@
 //
 
 /obj/item/rogueweapon/huntingknife/chefknife
-	force = 15
 	name = "chef's knife"
 	desc = "Keep it in the kitchen!"
 	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/chop/cleaver, /datum/intent/dagger/thrust)
+	force = 15
 	icon_state = "chefsknife"
 	icon = 'icons/roguetown/weapons/daggers32.dmi'
 	parrysound = list('sound/combat/parry/bladed/bladedmedium (1).ogg','sound/combat/parry/bladed/bladedmedium (2).ogg','sound/combat/parry/bladed/bladedmedium (3).ogg')
@@ -1260,20 +1260,21 @@
 	is_tool = TRUE
 
 /obj/item/rogueweapon/huntingknife/scissors
-	possible_item_intents = list(/datum/intent/snip, /datum/intent/dagger/thrust, /datum/intent/dagger/cut)
-	max_integrity = 100
 	name = "iron scissors"
 	desc = "Scissors made of iron that may be used to salvage usable materials from clothing."
+	possible_item_intents = list(/datum/intent/snip, /datum/intent/dagger/thrust, /datum/intent/dagger/cut)
+	max_integrity = 100
 	icon = 'icons/roguetown/weapons/misc32.dmi'
 	icon_state = "iscissors"
 	inv_storage_delay = null
 	is_tool = TRUE
+	secondary_skills = list(/datum/skill/craft/sewing = 0.8, /datum/skill/craft/tanning = 0.8)
 
 /obj/item/rogueweapon/huntingknife/scissors/steel
-	force = 14
-	max_integrity = 150
 	name = "steel scissors"
 	desc = "Scissors made of solid steel that may be used to salvage usable materials from clothing, more durable and a tad more deadly than their iron conterpart."
+	force = 14
+	max_integrity = 150
 	icon_state = "sscissors"
 	smeltresult = /obj/item/ingot/steel
 	is_tool = TRUE
