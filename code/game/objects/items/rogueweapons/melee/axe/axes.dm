@@ -642,6 +642,7 @@
 	icon_state = "steelpoleaxe"
 	special = /datum/special_intent/side_sweep
 	max_blade_int = 300
+	secondary_skills = list(/datum/skill/combat/polearms = 0.8, /datum/skill/combat/maces = 0.6)
 
 /obj/item/rogueweapon/greataxe/steel/knight/attackby(obj/item/W, mob/living/user, params)
 	..()
