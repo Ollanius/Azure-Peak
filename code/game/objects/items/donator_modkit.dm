@@ -491,8 +491,9 @@
 
 /obj/item/enchantingkit/weapon/donator_universal_grenzshortsword
 	name = "'Katzbalger Shortsword' morphing elixir"
-	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Steel Shortsword, or a Steel Arming Sword."
+	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Steel Shortsword, Steel Messer, or a Steel Arming Sword."
 	target_items = list(
+		/obj/item/rogueweapon/sword/short/messer,
 		/obj/item/rogueweapon/sword/short,
 		/obj/item/rogueweapon/sword
 	)
