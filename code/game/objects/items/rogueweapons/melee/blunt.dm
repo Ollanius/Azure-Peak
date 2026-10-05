@@ -938,12 +938,12 @@
 
 //Mauls. Woe.
 /obj/item/rogueweapon/mace/maul
+	name = "maul"
+	desc = "Who would need something this large? It looks like it was made for tearing down walls, rather than men."
 	force = 12 //Don't one-hand this.
 	force_wielded = 32 //-3 compared to grand mace(steel goden). Better intents.
 	possible_item_intents = list(/datum/intent/mace/strike, /datum/intent/mace/bash/ranged)
 	gripped_intents = list(/datum/intent/mace/smash/crush, /datum/intent/mace/strike/grand, /datum/intent/mace/sweep, /datum/intent/effect/hobble)
-	name = "maul"
-	desc = "Who would need something this large? It looks like it was made for tearing down walls, rather than men."
 	icon_state = "sledge"
 	icon = 'icons/roguetown/weapons/blunt64.dmi'
 	wlength = WLENGTH_LONG
@@ -959,6 +959,7 @@
 	//dropshrink = 0.6
 	bigboy = TRUE
 	gripsprite = TRUE
+	secondary_skills = list(/datum/skill/labor/mining = 0.8)
 
 /obj/item/rogueweapon/mace/maul/getonmobprop(tag)
 	. = ..()
