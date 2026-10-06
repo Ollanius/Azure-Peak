@@ -94,6 +94,7 @@
 	name = "halfsword lunge"
 	icon_state = "inlunge"
 	penfactor = PEN_HEAVY
+	clickcd = CLICK_CD_CHARGED
 	damfactor = 0.8
 	swingdelay = 0.6 SECONDS
 	intent_intdamage_factor = 0.5
