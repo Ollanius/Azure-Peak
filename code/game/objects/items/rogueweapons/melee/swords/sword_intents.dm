@@ -30,6 +30,7 @@
 /datum/intent/sword/cut/halfsword
 	damfactor = 1.2
 	clickcd = CLICK_CD_QUICK
+	intent_intdamage_factor = 0.5
 
 /datum/intent/sword/chop/militia
 	penfactor = PEN_MEDIUM
@@ -95,6 +96,7 @@
 	penfactor = PEN_HEAVY
 	damfactor = 0.8
 	swingdelay = 0.6 SECONDS
+	intent_intdamage_factor = 0.5
 
 /datum/intent/sword/thrust/long/deep/halfsword/frei
 	name = "stoccato profondo"
