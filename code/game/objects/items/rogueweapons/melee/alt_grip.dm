@@ -741,6 +741,7 @@
 // Alternates!
 /datum/alt_grip/poleaxe
 	two_handed = TRUE
+	grip_skill = list(/datum/skill/combat/axes = 1.0, /datum/skill/combat/polearms = 1.0, /datum/skill/combat/maces = 0.6)
 
 /datum/alt_grip/poleaxe/kurzhau
 	name = "kurzhau" //Butchered (and probably historically inaccurate) version of the 'Mordhau' technique, but for poleaxes. Allows them to double as battle axes, essentially.
@@ -893,6 +894,7 @@
 
 /datum/alt_grip/grandmace
 	two_handed = TRUE
+	grip_skill = list(/datum/skill/combat/maces = 1.0, /datum/skill/combat/polearms = 0.8)
 
 /datum/alt_grip/grandmace/ranged
 	name = "posta di coda" //Soft-restores the classic wielding style. Reduced striking damage, but two tiles of thrusting range and dazing.
