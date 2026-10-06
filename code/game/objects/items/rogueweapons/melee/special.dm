@@ -1208,7 +1208,7 @@
 	force_wielded = 30
 	throwforce = 10 //No
 	possible_item_intents = list(SPEAR_BASH)
-	gripped_intents = list(/datum/intent/spear/thrust, /datum/intent/spear/bash/ranged, /datum/intent/mace/smash/eaglebeak) // GET THEM OFF OF ME!!! OOOUGH!!!
+	gripped_intents = list(/datum/intent/spear/thrust, /datum/intent/spear/bash/ranged, /datum/intent/mace/smash/polehammer) // GET THEM OFF OF ME!!! OOOUGH!!!
 	icon = 'icons/roguetown/weapons/polearms64.dmi'
 	icon_state = "standard"
 	max_blade_int = 200
