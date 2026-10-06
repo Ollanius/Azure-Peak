@@ -21,6 +21,7 @@
 	defendable. Only effective at exactly two paces."
 	swingdelay_type = SWINGDELAY_PENALTY
 	swingdelay = 0.5 SECONDS
+	damfactor = 0.9
 
 /datum/intent/spear/thrust/training
 	name = "blunted thrust"
