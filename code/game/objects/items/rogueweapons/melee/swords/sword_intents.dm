@@ -27,6 +27,10 @@
 	clickcd = 9
 	damfactor = 1
 
+/datum/intent/sword/cut/halfsword
+	damfactor = 1.2
+	clickcd = CLICK_CD_QUICK
+
 /datum/intent/sword/chop/militia
 	penfactor = PEN_MEDIUM
 	clickcd = CLICK_CD_CHARGED
@@ -82,6 +86,13 @@
 	name = "deep lunge"
 	icon_state = "inlunge"
 	penfactor = PEN_MEDIUM
+	damfactor = 0.8
+	swingdelay = 0.6 SECONDS
+
+/datum/intent/sword/thrust/long/deep/halfsword/ochs
+	name = "halfsword lunge"
+	icon_state = "inlunge"
+	penfactor = PEN_HEAVY
 	damfactor = 0.8
 	swingdelay = 0.6 SECONDS
 
@@ -142,10 +153,18 @@
 	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR
 
 /datum/intent/sword/strike/bash/mordhau
-	damfactor = 0.8
 	name = "mordhau bash"
 	icon_state = "inbash"
 	attack_verb = list("bashes", "clubs")
+	damfactor = 0.8
+
+/datum/intent/sword/strike/heavy
+	name = "heavy pommel strike"
+	icon_state = "instrike"
+	attack_verb = list("strikes", "slams")
+	damfactor = 1.2
+	intent_intdamage_factor = 0.8
+	swingdelay = 0.5 SECONDS
 
 /datum/intent/sword/strike/bash/mordhau/smash
 	name = "mordhau smash"
@@ -154,7 +173,7 @@
 	chargedrain = 1.8
 	chargetime = 12
 	damfactor = 1
-	desc = "A powerful strike that delivers STR scaling knockback and slowdown to the target. The amount of inflicted knockback scales off your Strength, ranging from X (1 tile) to XII (2 tiles). </br>Cannot inflict any knockback or slowdown if your Strength is below X. </br>Cannot be used consecutively more than every 5 seconds on the same target. </br>Prone targets halve the knockback distance. </br>Not fully charging the attack limits knockback to 1 tile."
+	desc = "A powerful blow that delivers Strength-scaling knockback and slowdown to the target. The amount of inflicted knockback scales off your Strength, ranging from X (1 tile) to XII (2 tiles). </br>Cannot inflict any knockback or slowdown if your Strength is below X. </br>Cannot be used consecutively more than every 5 seconds on the same target. </br>Prone targets halve the knockback distance. </br>Not fully charging the attack limits knockback to 1 tile."
 	var/maxrange = 2
 
 /datum/intent/sword/strike/bash/mordhau/smash/spec_on_apply_effect(mob/living/H, mob/living/user, params)

@@ -541,38 +541,6 @@
 		"wdefense" = -2
 	)
 
-/datum/alt_grip/mordhau/broadsword
-	grip_intents = list(
-		/datum/intent/sword/strike/bash/mordhau,
-		/datum/intent/sword/strike/bash/mordhau/smash,
-		/datum/intent/effect/daze
-	)
-	onmobprop_overrides = list(
-		"altgrip" = list(
-			"shrink" = 0.6,
-			"sx" = 2,
-			"sy" = 3,
-			"nx" = -7,
-			"ny" = 1,
-			"wx" = -8,
-			"wy" = 0,
-			"ex" = 8,
-			"ey" = -1,
-			"northabove" = 0,
-			"southabove" = 1,
-			"eastabove" = 1,
-			"westabove" = 0,
-			"nturn" = -135,
-			"sturn" = -35,
-			"wturn" = 45,
-			"eturn" = 145,
-			"nflip" = 8,
-			"sflip" = 8,
-			"wflip" = 1,
-			"eflip" = 0,
-		),
-	)
-
 /datum/alt_grip/mordhau/greatsword
 	grip_intents = list(
 		/datum/intent/sword/strike/bash/mordhau,
@@ -607,72 +575,6 @@
 	var_overrides = list(
 		"wlength" = WLENGTH_NORMAL
 	)
-
-/datum/alt_grip/mordhau/broadsword/forgotten_blade
-	grip_intents = list(
-		/datum/intent/sword/strike/bash/mordhau,
-		/datum/intent/sword/strike/bash/mordhau/smash,
-		/datum/intent/effect/daze
-	)
-	onmobprop_overrides = list(
-		"altgrip" = list(
-			"shrink" = 0.6,
-			"sx" = 4,
-			"sy" = 0,
-			"nx" = -7,
-			"ny" = 1,
-			"wx" = -8,
-			"wy" = 0,
-			"ex" = 8,
-			"ey" = -1,
-			"northabove" = 0,
-			"southabove" = 1,
-			"eastabove" = 1,
-			"westabove" = 0,
-			"nturn" = -135,
-			"sturn" = -35,
-			"wturn" = 45,
-			"eturn" = 145,
-			"nflip" = 8,
-			"sflip" = 8,
-			"wflip" = 1,
-			"eflip" = 0,
-		),
-	)
-	var_overrides = null
-
-/datum/alt_grip/mordhau/broadsword/dream_broadsword
-	grip_intents = list(
-		SWORD_BASH,
-		/datum/intent/sword/strike/bash/mordhau/smash,
-		/datum/intent/effect/daze
-	)
-	onmobprop_overrides = list(
-		"altgrip" = list(
-			"shrink" = 0.6,
-			"sx" = 4,
-			"sy" = 0,
-			"nx" = -7,
-			"ny" = 1,
-			"wx" = -8,
-			"wy" = 0,
-			"ex" = 8,
-			"ey" = -1,
-			"northabove" = 0,
-			"southabove" = 1,
-			"eastabove" = 1,
-			"westabove" = 0,
-			"nturn" = -135,
-			"sturn" = -35,
-			"wturn" = 45,
-			"eturn" = 145,
-			"nflip" = 8,
-			"sflip" = 8,
-			"wflip" = 1,
-			"eflip" = 0,
-		),
-	)
-	var_overrides = null
 
 /datum/alt_grip/halfsword
 	name = "halfsword"
@@ -760,6 +662,8 @@
 
 /datum/alt_grip/halfsword/greatsword
 	grip_intents = list(
+		/datum/intent/sword/cut/halfsword,
+		/datum/intent/sword/thrust/long/halfsword/jab,
 		/datum/intent/sword/thrust/long/halfsword
 	)
 	onmobprop_overrides = list(
@@ -787,9 +691,243 @@
 			"eflip" = 0,
 		),
 	)
-	additive_var_overrides = list(
-		"wdefense" = 2,
+	var_overrides = list(
+		"wlength" = WLENGTH_LONG
+	)
+
+/datum/alt_grip/broadsword
+	two_handed = TRUE
+
+/datum/alt_grip/broadsword/ochshau
+	name = "ochshau" //Bastardized translation of 'Ox's stroke". Opts for a much more aggressive stance, sacrificing active defense for harder-hitting (or easier-to-land) attacks.
+	grip_intents = list(
+		/datum/intent/sword/cut/halfsword,
+		/datum/intent/sword/thrust/long/deep/halfsword/ochs,
+		/datum/intent/sword/strike/heavy,
+		/datum/intent/effect/daze/longsword/clinch
+	)
+	onmobprop_overrides = list(
+		"altgrip" = list(
+			"shrink" = 0.65,
+			"sx" = 5,
+			"sy" = -7,
+			"nx" = -7,
+			"ny" = 1,
+			"wx" = -9,
+			"wy" = 2,
+			"ex" = 10,
+			"ey" = 2,
+			"northabove" = 0,
+			"southabove" = 1,
+			"eastabove" = 1,
+			"westabove" = 0,
+			"nturn" = 5,
+			"sturn" = -179,
+			"wturn" = -170,
+			"eturn" = -10,
+			"nflip" = 8,
+			"sflip" = 8,
+			"wflip" = 1,
+			"eflip" = 0,
+		),
 	)
 	var_overrides = list(
-		"wlength" = WLENGTH_NORMAL
+		"wlength" = WLENGTH_SHORT
+	)
+	additive_var_overrides = list(
+		"wdefense" = -1
+	)
+
+// Alternates!
+/datum/alt_grip/poleaxe
+	two_handed = TRUE
+
+/datum/alt_grip/poleaxe/kurzhau
+	name = "kurzhau" //Butchered (and probably historically inaccurate) version of the 'Mordhau' technique, but for poleaxes. Allows them to double as battle axes, essentially.
+	skill_req = SKILL_LEVEL_JOURNEYMAN
+	grip_intents = list(
+		/datum/intent/axe/cut,
+		/datum/intent/axe/chop,
+		/datum/intent/axe/chop/heavy,
+		/datum/intent/axe/thrust
+	)
+	onmobprop_overrides = list(
+		"altgrip" = list(
+			"shrink" = 0.6,
+			"sx" = 5,
+			"sy" = -4,
+			"nx" = -5,
+			"ny" = -3,
+			"wx" = -5,
+			"wy" = -2,
+			"ex" = 3,
+			"ey" = -3,
+			"northabove" = 0,
+			"southabove" = 1,
+			"eastabove" = 1,
+			"westabove" = 1,
+			"nturn" = 7,
+			"sturn" = 6,
+			"wturn" = 29,
+			"eturn" = -9,
+			"nflip" = 21,
+			"sflip" = 0,
+			"wflip" = 8,
+			"eflip" = 0,
+		),
+	)
+	var_overrides = list(
+		"wlength" = WLENGTH_LONG
+	)
+	additive_var_overrides = list(
+		"wdefense" = 2 //More defense to account for the closer-gripped stance.
+	)
+
+/datum/alt_grip/poleaxe/reverse
+	name = "staut verkert" //It only took me a year to find this out! Flips the scaling to make it work like a lesser polemace. Fencing-originated term for "reversed stance".
+	skill_req = SKILL_LEVEL_JOURNEYMAN
+	grip_intents = list(
+		/datum/intent/mace/strike/poleaxe,
+		/datum/intent/mace/smash/lesser,
+		/datum/intent/axe/thrust/ranged
+	) //Restricted to one-tile range and loses the cutting edge, but comes with a very good Strike subintent alongside a variant of Smash with reduced knockback.
+	onmobprop_overrides = list(
+		"altgrip" = list(
+			"shrink" = 0.6,
+			"sx" = 5,
+			"sy" = -3,
+			"nx" = -5,
+			"ny" = -2,
+			"wx" = -5,
+			"wy" = -1,
+			"ex" = 5,
+			"ey" = -2,
+			"northabove" = 0,
+			"southabove" = 1,
+			"eastabove" = 1,
+			"westabove" = 0,
+			"nturn" = 187,
+			"sturn" = -7,
+			"wturn" = 196,
+			"eturn" = -22,
+			"nflip" = 0,
+			"sflip" = 2,
+			"wflip" = 0,
+			"eflip" = 2
+		),
+	)
+
+/datum/alt_grip/bardiche
+	two_handed = TRUE
+
+/datum/alt_grip/bardiche/hackenhau
+	name = "hackenhau" //Would you believe me if I said I took three years of German in High School? No? Fair enough. Butchered translation of "hacking stroke".
+	skill_req = SKILL_LEVEL_JOURNEYMAN
+	grip_intents = list(
+		/datum/intent/axe/cut/long,
+		/datum/intent/axe/chop/long,
+		/datum/intent/spear/thrust/polearm
+	) //Swaps the AOE-centric Cleave intents for more single target-oriented attacks. Hybrid of the poleaxe and halberd. Note; hacking is, conversely, not included.
+	onmobprop_overrides = list(
+		"altgrip" = list(
+			"shrink" = 0.6,
+			"sx" = 5,
+			"sy" = -4,
+			"nx" = -5,
+			"ny" = -3,
+			"wx" = -5,
+			"wy" = -2,
+			"ex" = 3,
+			"ey" = -3,
+			"northabove" = 0,
+			"southabove" = 1,
+			"eastabove" = 1,
+			"westabove" = 1,
+			"nturn" = 7,
+			"sturn" = 6,
+			"wturn" = 29,
+			"eturn" = -9,
+			"nflip" = 21,
+			"sflip" = 0,
+			"wflip" = 8,
+			"eflip" = 0,
+		),
+	)
+
+/datum/alt_grip/polehammer
+	two_handed = TRUE
+
+/datum/alt_grip/polehammer/reverse
+	name = "staut verkert" //Exchanges the high integrity damage and knockback for high armor-penetrating damage (and reduced integrity damage).
+	skill_req = SKILL_LEVEL_JOURNEYMAN
+	grip_intents = list(
+		/datum/intent/spear/polehammer/stab,
+		/datum/intent/spear/polehammer/pick,
+		/datum/intent/spear/thrust/polearm
+	) //
+	onmobprop_overrides = list(
+		"altgrip" = list(
+			"shrink" = 0.6,
+			"sx" = 5,
+			"sy" = -3,
+			"nx" = -5,
+			"ny" = -2,
+			"wx" = -5,
+			"wy" = -1,
+			"ex" = 5,
+			"ey" = -2,
+			"northabove" = 0,
+			"southabove" = 1,
+			"eastabove" = 1,
+			"westabove" = 0,
+			"nturn" = 187,
+			"sturn" = -7,
+			"wturn" = 196,
+			"eturn" = -22,
+			"nflip" = 0,
+			"sflip" = 2,
+			"wflip" = 0,
+			"eflip" = 2
+		),
+	)
+
+/datum/alt_grip/grandmace
+	two_handed = TRUE
+
+/datum/alt_grip/grandmace/ranged
+	name = "posta di coda" //Soft-restores the classic wielding style. Reduced striking damage, but two tiles of thrusting range and dazing.
+	skill_req = SKILL_LEVEL_JOURNEYMAN
+	grip_intents = list(
+		/datum/intent/mace/strike,
+		/datum/intent/mace/smash,
+		/datum/intent/mace/rangedthrust,
+		/datum/intent/effect/daze/ranged
+	) //
+	onmobprop_overrides = list(
+		"altgrip" = list(
+			"shrink" = 0.6,
+			"sx" = 5,
+			"sy" = -4,
+			"nx" = -5,
+			"ny" = -3,
+			"wx" = -5,
+			"wy" = -2,
+			"ex" = 3,
+			"ey" = -3,
+			"northabove" = 0,
+			"southabove" = 1,
+			"eastabove" = 1,
+			"westabove" = 1,
+			"nturn" = 7,
+			"sturn" = 6,
+			"wturn" = 29,
+			"eturn" = -9,
+			"nflip" = 21,
+			"sflip" = 0,
+			"wflip" = 8,
+			"eflip" = 0,
+		),
+	)
+	additive_var_overrides = list(
+		"wdefense" = -1 //Slightly reduced.
 	)

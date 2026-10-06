@@ -12,7 +12,7 @@
 	slot_flags = ITEM_SLOT_HIP
 	w_class = WEIGHT_CLASS_NORMAL
 	associated_skill = /datum/skill/combat/maces
-	secondary_skills = list(/datum/skill/craft/blacksmithing = 0.8)
+	secondary_skills = list(/datum/skill/craft/blacksmithing = 0.6, /datum/skill/craft/masonry = 0.6, /datum/skill/craft/carpentry = 0.6, /datum/skill/craft/engineering = 0.6)
 	smeltresult = /obj/item/ash
 	grid_width = 32
 	grid_height = 64
@@ -491,10 +491,10 @@
 	force = 28
 
 /obj/item/rogueweapon/tongs
-	force = 10
-	possible_item_intents = list(/datum/intent/mace/strike)
 	name = "tongs"
 	desc = "A pair of iron tongs that'll hold onto Psydonia's hottest metal, betwixt a hammering and an anvil's song to forge masterworks of craft."
+	force = 10
+	possible_item_intents = list(/datum/intent/mace/strike)
 	icon_state = "tongs"
 	icon = 'icons/roguetown/weapons/tools.dmi'
 	sharpness = IS_BLUNT

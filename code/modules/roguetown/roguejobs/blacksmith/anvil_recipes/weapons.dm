@@ -790,6 +790,14 @@
 	created_item = /obj/item/rogueweapon/spear/spellblade
 	display_category = ITEM_CAT_WEAPONS_POLEARMS
 
+/datum/anvil_recipe/weapons/iron/ibardiche
+	name = "Bardiche, Iron (+1 Iron, +1 Small Log)"
+	category = "Iron"
+	req_bar = /obj/item/ingot/iron
+	additional_items = list(/obj/item/ingot/iron, /obj/item/grown/log/tree/small)
+	created_item = /obj/item/rogueweapon/halberd/bardiche/iron
+	display_category = ITEM_CAT_WEAPONS_POLEARMS
+
 /datum/anvil_recipe/weapons/iron/lucerne
 	name = "Lucerne, Iron (+1 Iron, +1 Small Log)"
 	category = "Iron"
@@ -1151,7 +1159,7 @@
 	display_category = ITEM_CAT_WEAPONS_POLEARMS
 
 /datum/anvil_recipe/weapons/steel/bardiche
-	name = "Bardiche, Steel (+1 Steel, +1 Small Log)" //This thing inherits directly from the steel halberd with neutral-to-positive changes. It is thus firmly steel tier.
+	name = "Bardiche, Steel (+1 Steel, +1 Small Log)"
 	category = "Steel"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel, /obj/item/grown/log/tree/small)

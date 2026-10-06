@@ -299,7 +299,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	smeltresult = /obj/item/ingot/steel
 	is_tool = TRUE
-	secondary_skills = list(/datum/skill/craft/cooking = 0.8)
+	secondary_skills = list(/datum/skill/craft/cooking = 0.6)
 
 //
 
@@ -318,7 +318,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	smeltresult = /obj/item/ingot/steel
 	is_tool = TRUE
-	secondary_skills = list(/datum/skill/craft/cooking = 0.8)
+	secondary_skills = list(/datum/skill/craft/cooking = 0.6)
 
 /obj/item/rogueweapon/huntingknife/chefknife/cleaver
 	name = "cleaver"
@@ -454,11 +454,11 @@
 	intent_intdamage_factor = 0.05
 
 /obj/item/rogueweapon/huntingknife/idagger
+	name = "iron dagger"
+	desc = "This is a common dagger of iron."
 	possible_item_intents = list(/datum/intent/dagger/thrust, /datum/intent/dagger/cut, /datum/intent/dagger/thrust/pick, /datum/intent/dagger/sucker_punch)
 	force = 15
 	max_integrity = 100
-	name = "iron dagger"
-	desc = "This is a common dagger of iron."
 	icon_state = "idagger"
 	sheathe_icon = "idagger"
 	smeltresult = /obj/item/ingot/iron
@@ -467,14 +467,14 @@
 // Standard dagger for wardens, or for any other forester-styled class. While a pick-dagger penetrates
 // armour, this is more focused on breaking *through* it and then dealing a lot of damage via REND.
 /obj/item/rogueweapon/huntingknife/idagger/warden_machete
-	possible_item_intents = list(/datum/intent/dagger/cut/heavy, /datum/intent/dagger/thrust/weak, /datum/intent/dagger/cut/rend, /datum/intent/dagger/sucker_punch)
-	force = 22 // Slightly more damage than a steel dagger.
-	max_integrity = 130 // Slightly less integrity than a steel dagger.
 	name = "warden's seax"
 	desc = "A well-worn seax utilised by the Fraternity of Wardens both as a tool and weapon. Nearly as effective for hacking \
 	down men as it is foiliage, but not quite as durable as more modern steel tools. More suitable for cutting than for thrusting."
 	icon_state = "warden_machete"
 	sheathe_icon = "warden_machete"
+	possible_item_intents = list(/datum/intent/dagger/cut/heavy, /datum/intent/dagger/thrust/weak, /datum/intent/dagger/cut/rend, /datum/intent/dagger/sucker_punch)
+	force = 22 // Slightly more damage than a steel dagger.
+	max_integrity = 130 // Slightly less integrity than a steel dagger.
 
 /obj/item/rogueweapon/huntingknife/combat/messser //Just as Grenzelhoft intended
 	name = "kampfmesser"
@@ -488,16 +488,16 @@
 	special = /datum/special_intent/shin_swipe
 
 /obj/item/rogueweapon/huntingknife/idagger/virtue
-	possible_item_intents = list(/datum/intent/dagger/thrust,/datum/intent/dagger/cut, /datum/intent/dagger/thrust/pick, /datum/intent/dagger/sucker_punch)
-	force = 12
-	throwforce = 12
-	max_integrity = 100
 	name = "parrying dagger"
 	desc = "A dagger with an enlongated crossguard, curved upwards on both ends to catch oncoming strikes."
 	icon_state = "ddagger"
 	sheathe_icon = "idagger"
 	smeltresult = /obj/item/ingot/iron
 	wdefense = 7
+	possible_item_intents = list(/datum/intent/dagger/thrust,/datum/intent/dagger/cut, /datum/intent/dagger/thrust/pick, /datum/intent/dagger/sucker_punch)
+	force = 12
+	throwforce = 12
+	max_integrity = 100
 
 /obj/item/rogueweapon/huntingknife/idagger/adagger
 	name = "decrepit dagger"
@@ -781,9 +781,9 @@
 
 /obj/item/rogueweapon/huntingknife/idagger/steel/parrying/vaquero
 	name = "sail dagger"
+	desc = "An exceptionally protective parrying dagger popular in the Etruscan Isles, this dagger features a plain metal guard in the shape of a ship's sail."
 	force = 15
 	throwforce = 15
-	desc = "An exceptionally protective parrying dagger popular in the Etruscan Isles, this dagger features a plain metal guard in the shape of a ship's sail."
 	max_integrity = 200
 	wdefense = 9		//This way with expert dagger skill you'd have ~13 defense. 2 higher than a kiteshield, but no arrow protection.
 	icon_state = "sail_dagger"
@@ -998,9 +998,9 @@
 	sellprice += 200
 
 /obj/item/rogueweapon/huntingknife/stoneknife
-	possible_item_intents = list(/datum/intent/dagger/cut,/datum/intent/dagger/chop)
 	name = "stone knife"
 	desc = "A crudely crafted knife made of stone."
+	possible_item_intents = list(/datum/intent/dagger/cut,/datum/intent/dagger/chop)
 	icon_state = "stone_knife"
 	smeltresult = null
 	max_integrity = 50
@@ -1053,9 +1053,9 @@
 	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/chop/bronze, /datum/intent/dagger/sucker_punch, /datum/intent/dagger/thrust/combat) //Seax's intents, for self-explanatory reasons.
 
 /obj/item/rogueweapon/huntingknife/idagger/navaja
-	possible_item_intents = list(/datum/intent/dagger/thrust,/datum/intent/dagger/cut,	/datum/intent/dagger/thrust/pick)
 	name = "navaja"
 	desc = "A folding Etruscan knife valued by merchants, mercenaries and peasants for its convenience. It possesses a long hilt, allowing for a sizeable blade with good reach."
+	possible_item_intents = list(/datum/intent/dagger/thrust,/datum/intent/dagger/cut,	/datum/intent/dagger/thrust/pick)
 	force = 5
 	icon_state = "navaja_c"
 	item_state = "elfdag"
@@ -1095,10 +1095,10 @@
 		inv_storage_delay = 0 SECONDS
 
 /obj/item/rogueweapon/huntingknife/idagger/navaja/freifechter
-	possible_item_intents = list(/datum/intent/dagger/thrust,/datum/intent/dagger/cut, /datum/intent/dagger/chop, /datum/intent/dagger/thrust/pick)
 	name = "mountaineer's navaja"
 	icon = 'icons/roguetown/weapons/special/freifechter32.dmi'
 	desc = "A folding Etruscan knife valued by merchants, mercenaries and peasants for its convenience. This specific kind of ornate navaja is endemic to Szöréndnížina."
+	possible_item_intents = list(/datum/intent/dagger/thrust,/datum/intent/dagger/cut, /datum/intent/dagger/chop, /datum/intent/dagger/thrust/pick)
 	force = 5
 	icon_state = "mtnavaja_c"
 	item_state = "elfdag"
@@ -1268,7 +1268,7 @@
 	icon_state = "iscissors"
 	inv_storage_delay = null
 	is_tool = TRUE
-	secondary_skills = list(/datum/skill/craft/sewing = 0.8, /datum/skill/craft/tanning = 0.8)
+	secondary_skills = list(/datum/skill/craft/sewing = 0.6, /datum/skill/craft/tanning = 0.6)
 
 /obj/item/rogueweapon/huntingknife/scissors/steel
 	name = "steel scissors"

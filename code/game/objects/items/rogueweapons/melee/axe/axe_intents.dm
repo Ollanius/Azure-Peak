@@ -42,7 +42,7 @@
 	blade_class = BCLASS_STAB
 	attack_verb = list("thrusts")
 
-/datum/intent/axe/rangedthrust
+/datum/intent/axe/thrust/ranged
 	name = "thrust"
 	blade_class = BCLASS_STAB
 	attack_verb = list("thrusts")
@@ -50,14 +50,10 @@
 	icon_state = "instab"
 	reach = 2
 	clickcd = CLICK_CD_CHARGED
-	recovery = 30
-	warnie = "mobwarning"
 	hitsound = list('sound/combat/hits/bladed/genstab (1).ogg', 'sound/combat/hits/bladed/genstab (2).ogg', 'sound/combat/hits/bladed/genstab (3).ogg')
 	penfactor = PEN_MEDIUM
 	item_d_type = "stab"
-	desc = "A committed thrust with the poleaxe's spike. It only bites through armor at full extension, exactly two paces away, and leaves you vulnerable as you recover the swing."
-	swingdelay = 8
-	swingdelay_type = SWINGDELAY_PENALTY
+	desc = "A committed thrust with the poleaxe's spike. It only bites through armor at full extension, exactly two paces away."
 	effective_range = 2
 	effective_range_type = EFF_RANGE_EXACT
 
@@ -68,7 +64,6 @@
 	damfactor = 1.5
 	swingdelay = 1.3 SECONDS
 	clickcd = 1.4 SECONDS
-
 	candodge = FALSE
 	canparry = FALSE
 	swingdelay_type = SWINGDELAY_CANCEL
@@ -80,8 +75,17 @@
 	penfactor = PEN_NONE
 
 /datum/intent/axe/chop/halberd
-	damfactor = 1.3
+	name = "heavy chop"
+	desc = "Leverage your halberd's weight to drive its axehead through maille, at the cost of a slower follow-through that makes it harder to intercept \
+	incoming strikes. Only effective at exactly two paces."
+	penfactor = PEN_HEAVY
+	clickcd = CLICK_CD_HEAVY
+	swingdelay = 0.5 SECONDS
+	damfactor = 1.1
 	reach = 2
+	effective_range = 2
+	effective_range_type = EFF_RANGE_EXACT
+	swingdelay_type = SWINGDELAY_PENALTY
 
 /datum/intent/axe/cut/long
 	reach = 2

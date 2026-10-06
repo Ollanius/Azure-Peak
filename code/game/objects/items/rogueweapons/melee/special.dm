@@ -150,12 +150,12 @@
 				return
 
 /obj/item/rogueweapon/mace/stunmace
-	force = 15
-	force_wielded = 15
 	name = "stunmace"
 	icon = 'icons/roguetown/weapons/misc32.dmi'
 	icon_state = "stunmace0"
 	desc = "Pain is our currency here."
+	force = 15
+	force_wielded = 15
 	gripped_intents = null
 	w_class = WEIGHT_CLASS_NORMAL
 	possible_item_intents = list(/datum/intent/mace/strike/stunner, /datum/intent/mace/smash/stunner)
@@ -258,11 +258,11 @@
 		playsound(src, pick('sound/items/stunmace_toggle (1).ogg','sound/items/stunmace_toggle (2).ogg','sound/items/stunmace_toggle (3).ogg'), 100, TRUE)
 
 /obj/item/rogueweapon/katar
+	name = "katar"
+	desc = "A steel blade that sits above the user's fist. Commonly used by those proficient at unarmed fighting."
 	slot_flags = ITEM_SLOT_HIP
 	force = 24
 	possible_item_intents = list(/datum/intent/katar/cut, /datum/intent/katar/thrust)
-	name = "katar"
-	desc = "A steel blade that sits above the user's fist. Commonly used by those proficient at unarmed fighting."
 	icon_state = "katar"
 	icon = 'icons/roguetown/weapons/unarmed32.dmi'
 	gripsprite = FALSE
@@ -814,7 +814,7 @@
 	wdefense = 2
 	wdefense_wbonus = 4
 	wbalance = WBALANCE_NORMAL
-	secondary_skills = list(/datum/skill/combat/maces = 0.8)
+	secondary_skills = list(/datum/skill/combat/axes = 0.8)
 
 /obj/item/rogueweapon/pick/militia/getonmobprop(tag)
 	. = ..()

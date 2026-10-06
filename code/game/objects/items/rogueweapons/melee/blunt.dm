@@ -171,6 +171,7 @@
 	max_integrity = 350
 	icon_angle_wielded = 50
 	special = /datum/special_intent/ground_smash
+	secondary_skills = list(/datum/skill/combat/axes = 0.8)
 
 /obj/item/rogueweapon/mace/getonmobprop(tag)
 	. = ..()
@@ -289,6 +290,8 @@
 	name = "anointed mace"
 	desc = "A crusader's mace, adorned with a head of cold iron and blessed to smite evil. Though this blessed alloy lacks the strength to \
 	sunder those who bear greater curses, it nevertheless channels enough power to dispell the lesser curses of mindless fiends-and-foes."
+	possible_item_intents = list(/datum/intent/mace/strike, /datum/intent/mace/strike/dislocate)
+	gripped_intents = list(/datum/intent/mace/strike, /datum/intent/mace/smash, /datum/intent/effect/daze, /datum/intent/mace/strike/dislocate)
 	icon_state = "crusadermace"
 	is_even_lesser_silver = TRUE // adv paladin exclusive weapon, works like unblessed silver but only in pve
 
@@ -656,6 +659,7 @@
 	bigboy = TRUE
 	gripsprite = TRUE
 	secondary_skills = list(/datum/skill/combat/polearms = 0.8)
+	alt_grips = list(/datum/alt_grip/grandmace/ranged)
 
 /obj/item/rogueweapon/mace/goden/getonmobprop(tag)
 	. = ..()
@@ -714,6 +718,7 @@
 	icon_state = "kanabo"
 	slot_flags = ITEM_SLOT_BACK
 	gripped_intents = list(/datum/intent/mace/strike/grand, /datum/intent/mace/smash/grand, /datum/intent/effect/daze)
+	alt_grips = null
 
 /obj/item/rogueweapon/mace/goden/steel/ravox
 	name = "duel settler"
@@ -721,6 +726,7 @@
 	icon_state = "ravoxhammer"
 	gripped_intents = list(/datum/intent/mace/strike, /datum/intent/mace/smash, /datum/intent/effect/daze, /datum/intent/mace/bash/ranged) // It loses the Goden stab so I give it daze
 	max_integrity = 400 // I am reluctant to give a steel goden more force as it breaks weapon so durability it is.
+	alt_grips = null
 
 /obj/item/rogueweapon/mace/goden/psymace
 	name = "psydonic mace"
@@ -959,7 +965,7 @@
 	//dropshrink = 0.6
 	bigboy = TRUE
 	gripsprite = TRUE
-	secondary_skills = list(/datum/skill/labor/mining = 0.8)
+	secondary_skills = list(/datum/skill/labor/mining = 0.6)
 
 /obj/item/rogueweapon/mace/maul/getonmobprop(tag)
 	. = ..()
@@ -1289,7 +1295,7 @@
 	parrysound = list('sound/combat/parry/parrygen.ogg')
 	swingsound = BLUNTWOOSH_MED
 	//special = /datum/special_intent/dissassemble
-	secondary_skills = list(/datum/skill/craft/engineering = 0.8)
+	secondary_skills = list(/datum/skill/craft/engineering = 0.6)
 
 /obj/item/rogueweapon/contraption/linker/mace/precharged
 	current_charge = 80
