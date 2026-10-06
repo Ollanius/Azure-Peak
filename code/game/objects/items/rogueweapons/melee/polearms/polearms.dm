@@ -212,8 +212,8 @@
 
 /datum/intent/spear/polehammer/pick
 	name = "impale with eagle's beak"
-	desc = "Swing your polehammer's picoise at a farther distance, allowing the added momentum to let it punch through plate. The wider stance leaves you \
-	vulnerable to interruptions, however. Only effective at exactly two paces."
+	desc = "Swing your polehammer's picoise at a farther distance, allowing the added momentum to let it punch through plate. The wider stance makes it harder \
+	to intercept incoming attacks, however. Only effective at exactly two paces."
 	icon_state = "inimpale"
 	attack_verb = list("stabs", "impales", "smashes through")
 	hitsound = list('sound/combat/hits/bladed/genstab (1).ogg', 'sound/combat/hits/bladed/genstab (2).ogg', 'sound/combat/hits/bladed/genstab (3).ogg')
@@ -222,7 +222,7 @@
 	swingdelay = 1.0 SECONDS
 	damfactor = 1.2
 	blade_class = BCLASS_PICK
-	swingdelay_type = SWINGDELAY_CANCEL
+	swingdelay_type = SWINGDELAY_PENALTY
 	effective_range = 2
 	effective_range_type = EFF_RANGE_EXACT
 
