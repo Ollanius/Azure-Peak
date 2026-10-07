@@ -219,6 +219,7 @@
 	icon_state = "inimpale"
 	attack_verb = list("stabs", "impales", "smashes through")
 	hitsound = list('sound/combat/hits/pick/genpick (1).ogg', 'sound/combat/hits/pick/genpick (2).ogg')
+	animname = "strike"
 	penfactor = PEN_BSTEEL
 	clickcd = CLICK_CD_HEAVY
 	swingdelay = 1.0 SECONDS
