@@ -218,7 +218,7 @@
 	to intercept incoming attacks, however. Only effective at exactly two paces."
 	icon_state = "inimpale"
 	attack_verb = list("stabs", "impales", "smashes through")
-	hitsound = list('sound/combat/hits/bladed/genstab (1).ogg', 'sound/combat/hits/bladed/genstab (2).ogg', 'sound/combat/hits/bladed/genstab (3).ogg')
+	hitsound = list('sound/combat/hits/pick/genpick (1).ogg', 'sound/combat/hits/pick/genpick (2).ogg')
 	penfactor = PEN_BSTEEL
 	clickcd = CLICK_CD_HEAVY
 	swingdelay = 1.0 SECONDS
