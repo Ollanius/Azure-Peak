@@ -43,7 +43,7 @@
 	penfactor = PEN_MEDIUM
 	swingdelay = 6
 	damfactor = 1.3
-	hitsound = list('sound/combat/hits/bladed/genthrust (1).ogg.ogg', 'sound/combat/hits/bladed/genthrust (2).ogg.ogg')
+	hitsound = list('sound/combat/hits/bladed/genthrust (1).ogg', 'sound/combat/hits/bladed/genthrust (2).ogg')
 
 /datum/intent/sword/thrust
 	name = "stab"
