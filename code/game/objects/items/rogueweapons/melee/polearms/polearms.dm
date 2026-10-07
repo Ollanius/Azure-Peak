@@ -209,6 +209,8 @@
 	warnie = "mobwarning"
 	intent_intdamage_factor = 0.8 //Intended for the alternative grips. Halved integrity damage, compared to the dedicated smashing intents.
 	reach = 2
+	animname = "stab"
+	item_d_type = "stab"
 
 /datum/intent/spear/polehammer/pick
 	name = "impale with eagle's beak"
