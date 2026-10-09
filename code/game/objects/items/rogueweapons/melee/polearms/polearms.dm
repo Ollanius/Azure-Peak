@@ -151,6 +151,9 @@
 	cleave = /datum/cleave_pattern/horizontal_sweep
 	desc = "A sweep that cuts through targets to the front."
 
+/datum/intent/spear/cut/glaive/sweep/halbschilt
+	sharpness_penalty = 1
+
 /datum/intent/spear/cut/short
 	reach = 1
 

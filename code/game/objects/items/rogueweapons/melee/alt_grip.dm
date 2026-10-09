@@ -944,7 +944,7 @@
 		/datum/intent/spear/thrust/short,
 		/datum/intent/axe/cut,
 		/datum/intent/axe/chop,
-		/datum/intent/spear/cut/glaive/sweep
+		/datum/intent/spear/cut/glaive/sweep/halbschilt
 	)
 	onmobprop_overrides = list(
 		"altgrip" = list(
