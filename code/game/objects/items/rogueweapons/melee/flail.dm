@@ -222,10 +222,10 @@
 	is_even_lesser_silver = TRUE // adv paladin exclusive weapon, works like unblessed silver but only in pve
 
 /obj/item/rogueweapon/flail/sflail/silver
-	icon_state = "silverflail"
 	name = "silver morningstar"
 	possible_item_intents = list(/datum/intent/flail/strike, /datum/intent/flail/smash/ranged, /datum/intent/flail/bash, /datum/intent/flail/smash/heavy)
 	desc = "A heavy, silver flail. It follows the Grenzelhoftian design of a 'morning star', utilizing a longer chain to extend its reach."
+	icon_state = "silverflail"
 	smeltresult = /obj/item/ingot/silver
 	is_silver = TRUE
 

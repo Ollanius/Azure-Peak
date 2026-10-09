@@ -784,8 +784,8 @@
 	icon_state = "iceaxe"
 	smeltresult = null
 	special = /datum/special_intent/permafrost
-	var/active_intents = list(/datum/intent/axe/cut/frost, /datum/intent/axe/chop/frost, /datum/intent/axe/bash)
-	var/active_gripped_intents = list(/datum/intent/axe/cut/frost, /datum/intent/axe/chop/frost, /datum/intent/axe/bash)
+	var/active_intents = list(/datum/intent/axe/cut/frost, /datum/intent/axe/chop/frost, /datum/intent/axe/chop/heavy, /datum/intent/axe/bash)
+	var/active_gripped_intents = list(/datum/intent/axe/cut/frost, /datum/intent/axe/chop/frost, /datum/intent/axe/chop/heavy, /datum/intent/axe/bash)
 	var/inactive_intents = list()
 	var/inactive_gripped_intents = list()
 
