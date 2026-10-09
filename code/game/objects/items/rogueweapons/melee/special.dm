@@ -1129,3 +1129,6 @@
 /obj/item/rogueweapon/spear/keep_standard/Destroy()
 	GLOB.lordcolor -= src
 	return ..()
+
+/obj/item/rogueweapon/knuckledusters
+//This is a temporary load-bearing thing, in order to prevent more file conflicts (without having to add a bunch of unrelated changes. Remove if-or-after merged.)
