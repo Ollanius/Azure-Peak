@@ -41,6 +41,7 @@
 	hitsound = list('sound/combat/hits/bladed/genstab (1).ogg', 'sound/combat/hits/bladed/genstab (2).ogg', 'sound/combat/hits/bladed/genstab (3).ogg')
 	blade_class = BCLASS_STAB
 	attack_verb = list("thrusts")
+	reach = 1
 
 /datum/intent/axe/thrust/ranged
 	name = "thrust"
