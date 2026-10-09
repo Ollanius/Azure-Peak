@@ -74,20 +74,8 @@
 /datum/intent/axe/chop/stone
 	penfactor = PEN_NONE
 
-/datum/intent/axe/chop/halberd
-	name = "heavy chop"
-	desc = "Leverage your halberd's weight to drive its axehead through maille, at the cost of a slower follow-through that makes it harder to intercept \
-	incoming strikes. Only effective at exactly two paces."
-	penfactor = PEN_HEAVY
-	clickcd = CLICK_CD_HEAVY
-	swingdelay = 0.5 SECONDS
-	damfactor = 1.1
-	reach = 2
-	effective_range = 2
-	effective_range_type = EFF_RANGE_EXACT
-	swingdelay_type = SWINGDELAY_PENALTY
-
 /datum/intent/axe/cut/long
+	name = "ranged cut"
 	reach = 2
 	damfactor = 1.3
 	demolition_mod = 1
@@ -97,10 +85,27 @@
 	demolition_mod = 1.3
 
 /datum/intent/axe/chop/long
+	name = "ranged chop"
 	reach = 2
 	damfactor = 1.3
 	demolition_mod = 1.5
 	swingdelay = 0.5 SECONDS
+
+/datum/intent/axe/cut/long/halberd
+	damfactor = 1.2
+
+/datum/intent/axe/chop/long/halberd
+	name = "heavy ranged chop"
+	desc = "Leverage your halberd's weight to drive its axehead through maille, at the cost of a slower follow-through that makes it harder to intercept \
+	incoming strikes. Only effective at exactly two paces."
+	penfactor = PEN_HEAVY
+	clickcd = CLICK_CD_HEAVY
+	swingdelay = 0.3 SECONDS //Lower than regular chops, in order to account for the Sweetspot mechanic.
+	damfactor = 1.1
+	reach = 2
+	effective_range = 2
+	effective_range_type = EFF_RANGE_EXACT
+	swingdelay_type = SWINGDELAY_PENALTY
 
 /datum/intent/axe/bash
 	name = "bash"

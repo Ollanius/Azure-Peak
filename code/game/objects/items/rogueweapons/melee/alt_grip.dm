@@ -735,7 +735,7 @@
 		"wlength" = WLENGTH_SHORT
 	)
 	additive_var_overrides = list(
-		"wdefense" = -1
+		"wdefense" = -2
 	)
 
 // Alternates!
@@ -786,12 +786,12 @@
 
 /datum/alt_grip/poleaxe/reverse
 	name = "staut verkert" //It only took me a year to find this out! Flips the scaling to make it work like a lesser polemace. Fencing-originated term for "reversed stance".
-	skill_req = SKILL_LEVEL_JOURNEYMAN
+	skill_req = SKILL_LEVEL_JOURNEYMAN //Restricted to one-tile range and loses the cutting edge, but comes with a very good Strike subintent alongside a variant of Smash with reduced knockback.
 	grip_intents = list(
 		/datum/intent/mace/strike/poleaxe,
 		/datum/intent/mace/smash/lesser,
 		/datum/intent/axe/thrust/ranged
-	) //Restricted to one-tile range and loses the cutting edge, but comes with a very good Strike subintent alongside a variant of Smash with reduced knockback.
+	)
 	onmobprop_overrides = list(
 		"altgrip" = list(
 			"shrink" = 0.6,
@@ -823,12 +823,12 @@
 
 /datum/alt_grip/bardiche/hackenhau
 	name = "hackenhau" //Would you believe me if I said I took three years of German in High School? No? Fair enough. Butchered translation of "hacking stroke".
-	skill_req = SKILL_LEVEL_JOURNEYMAN
+	skill_req = SKILL_LEVEL_JOURNEYMAN //Swaps the AOE-centric Cleave intents for more single target-oriented attacks. Hybrid of the poleaxe and halberd. Note; hacking is, conversely, not included.
 	grip_intents = list(
 		/datum/intent/axe/cut/long,
 		/datum/intent/axe/chop/long,
 		/datum/intent/spear/thrust/polearm
-	) //Swaps the AOE-centric Cleave intents for more single target-oriented attacks. Hybrid of the poleaxe and halberd. Note; hacking is, conversely, not included.
+	)
 	onmobprop_overrides = list(
 		"altgrip" = list(
 			"shrink" = 0.6,
@@ -865,7 +865,7 @@
 		/datum/intent/spear/polehammer/stab,
 		/datum/intent/spear/polehammer/pick,
 		/datum/intent/spear/thrust/polearm
-	) //
+	)
 	onmobprop_overrides = list(
 		"altgrip" = list(
 			"shrink" = 0.6,
@@ -902,9 +902,9 @@
 	grip_intents = list(
 		/datum/intent/mace/strike,
 		/datum/intent/mace/smash,
-		/datum/intent/mace/rangedthrust,
+		/datum/intent/mace/thrust/ranged,
 		/datum/intent/effect/daze/ranged
-	) //
+	)
 	onmobprop_overrides = list(
 		"altgrip" = list(
 			"shrink" = 0.6,
@@ -932,4 +932,92 @@
 	)
 	additive_var_overrides = list(
 		"wdefense" = -1 //Slightly reduced.
+	)
+
+/datum/alt_grip/halberd
+	two_handed = TRUE
+
+/datum/alt_grip/halberd/halbschilt
+	name = "halbschilt" //Spiritual alternative to the Poleaxe. More defense, reduced range, and - uniquely - a sweeping AOE intent!
+	skill_req = SKILL_LEVEL_JOURNEYMAN
+	grip_intents = list(
+		/datum/intent/spear/thrust/short,
+		/datum/intent/axe/cut,
+		/datum/intent/axe/chop,
+		/datum/intent/spear/cut/glaive/sweep
+	)
+	onmobprop_overrides = list(
+		"altgrip" = list(
+			"shrink" = 0.6,
+			"sx" = 5,
+			"sy" = -4,
+			"nx" = -5,
+			"ny" = -3,
+			"wx" = -5,
+			"wy" = -2,
+			"ex" = 3,
+			"ey" = -3,
+			"northabove" = 0,
+			"southabove" = 1,
+			"eastabove" = 1,
+			"westabove" = 1,
+			"nturn" = 7,
+			"sturn" = 6,
+			"wturn" = 29,
+			"eturn" = -9,
+			"nflip" = 21,
+			"sflip" = 0,
+			"wflip" = 8,
+			"eflip" = 0,
+		),
+	)
+	var_overrides = list(
+		"wlength" = WLENGTH_LONG
+	)
+	additive_var_overrides = list(
+		"wdefense" = 2
+	)
+
+/datum/alt_grip/spear
+	two_handed = FALSE //One-handed spears?! Classical spear-and-shield combat?! Egads!
+
+/datum/alt_grip/spear/ebenhau
+	name = "ebenhau" //'Overhead stroke'. Nukes the defensive values and forces extra sharpness loss, but allows for two-tile combat in combination with a shield.
+	skill_req = SKILL_LEVEL_JOURNEYMAN // Two-tiled thrusts and cuts have 0.9x FORCE + -1 AP (MEDIUM > HEAVY, NONE > NONE). Still pretty good.
+	grip_intents = list( //One-tiled thrusts and cuts (fluffed as 'lunges' and 'slashes') retain their high AP and FORCE, with reduced swing- and click-delays.
+		/datum/intent/spear/thrust/short/ebenhau,
+		/datum/intent/spear/cut/short/ebenhau,
+		/datum/intent/spear/thrust/oneh/ebenhau,
+		/datum/intent/spear/cut/oneh/ebenhau
+	)
+	onmobprop_overrides = list(
+		"altgrip" = list(
+			"shrink" = 0.6,
+			"sx" = -14,
+			"sy" = -8,
+			"nx" = 9,
+			"ny" = -6,
+			"wx" = -6,
+			"wy" = -6,
+			"ex" = -1,
+			"ey" = -4,
+			"northabove" = 0,
+			"southabove" = 1,
+			"eastabove" = 1,
+			"westabove" = 0,
+			"nturn" = -10,
+			"sturn" = 108,
+			"wturn" = -72,
+			"eturn" = -10,
+			"nflip" = 1,
+			"sflip" = 1,
+			"wflip" = 8,
+			"eflip" = 1,
+		),
+	)
+	var_overrides = list(
+		"wlength" = WLENGTH_LONG
+	)
+	additive_var_overrides = list(
+		"wdefense" = -4 // Most spears get reduced to 0-1 DEF. Very, very risky to employ without a shield.
 	)

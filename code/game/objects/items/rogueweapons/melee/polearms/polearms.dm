@@ -40,6 +40,11 @@
 	effective_range_type = EFF_RANGE_NONE
 	sharpness_penalty = 3
 
+/datum/intent/spear/thrust/oneh/ebenhau
+	name = "balanced one-handed thrust"
+	swingdelay = 0.7 SECONDS //Halved swing delay.
+	clickcd = CLICK_CD_HEAVY //Reduced click delay.
+
 /datum/intent/spear/thrust/oneh/training
 	name = "blunted one-handed thrust"
 	penfactor = PEN_NONE
@@ -78,6 +83,13 @@
 	effective_range = null
 	effective_range_type = EFF_RANGE_NONE
 
+/datum/intent/spear/thrust/short/ebenhau
+	name = "one-handed lunge"
+	reach = 2
+	icon_state = "inlunge"
+	attack_verb = list("thrusts", "stabs", "lunges into")
+	sharpness_penalty = 1
+
 /datum/intent/spear/bash
 	name = "bash"
 	blade_class = BCLASS_BLUNT
@@ -106,6 +118,13 @@
 	reach = 1
 	swingdelay = 6
 	sharpness_penalty = 2
+	warnie = "mobwarning"
+
+/datum/intent/spear/cut/oneh/ebenhau
+	name = "balanced one-handed cut"
+	swingdelay = 0.3 SECONDS //Halved swing delay.
+	damfactor = 1.3 //Half the damage bonus of its thrusting counterpart. Remember that this is chiefly used for one-handed
+	sharpness_penalty = 3
 
 /datum/intent/spear/cut/scythe
 	reach = 3
@@ -134,6 +153,16 @@
 
 /datum/intent/spear/cut/short
 	reach = 1
+
+/datum/intent/spear/cut/short/ebenhau
+	name = "one-handed slash"
+	icon_state = "inslash"
+	reach = 2
+	damfactor = 0.9
+	effective_range = 2
+	effective_range_type = EFF_RANGE_EXACT
+	penfactor = PEN_LIGHT
+	sharpness_penalty = 1
 
 /datum/intent/spear/cast
 	name = "cast"
@@ -289,6 +318,7 @@
 	twirly = SKILL_LEVEL_EXPERT // safely twirling like, a halberd, is going to be harder than a blunt staff
 	twirl_speed = 6
 	secondary_skills = list(/datum/skill/combat/staves = 0.6)
+	alt_grips = list(/datum/alt_grip/spear/ebenhau)
 
 /obj/item/rogueweapon/spear/short
 	name = "short spear"
@@ -299,6 +329,7 @@
 	possible_item_intents = list(SHORT_SPEAR_THRUST, SHORT_SPEAR_CUT)
 	gripped_intents = list(SHORT_SPEAR_THRUST, SHORT_SPEAR_CUT, SPEAR_BASH)
 	secondary_skills = list(/datum/skill/combat/swords = 0.8)
+	alt_grips = null
 
 // ---- Azurean Shortspear intents ----
 /datum/intent/spear/thrust/azurean
@@ -338,6 +369,7 @@
 	effective_range_type = EFF_RANGE_NONE
 
 //
+
 /obj/item/rogueweapon/spear/spellblade
 	name = "dory"
 	icon_state = "short_spear"
@@ -362,6 +394,7 @@
 	throwforce = 22
 	resistance_flags = FLAMMABLE
 	armor_penetration = PEN_NONE
+	alt_grips = null
 
 /obj/item/rogueweapon/spear/trainer
 	name = "sparring spear"
@@ -386,8 +419,7 @@
 
 
 /obj/item/rogueweapon/spear/trident
-	// Better one handed & throwing weapon, flimsier.
-	name = "bronze trident"
+	name = "bronze trident" 	// Better one handed & throwing weapon, flimsier.
 	desc = "A bronze trident from the seas designed to pierce fish upon its hooked teeth. Feels balanced in your hand, like you could throw it quite easily."
 	icon_state = "bronzetri"
 	force = 25
@@ -825,7 +857,7 @@
 	force = 15
 	force_wielded = 30
 	possible_item_intents = list(SPEAR_THRUST_1H, SPEAR_BASH) //bash is for nonlethal takedowns, only targets limbs
-	gripped_intents = list(SPEAR_THRUST, SPEAR_CUT, /datum/intent/axe/chop/halberd, SPEAR_BASH)
+	gripped_intents = list(SPEAR_THRUST, /datum/intent/axe/cut/long/halberd, /datum/intent/axe/chop/long/halberd, SPEAR_BASH)
 	icon_state = "halberd"
 	icon = 'icons/roguetown/weapons/polearms64.dmi'
 	pixel_y = -16
@@ -845,6 +877,7 @@
 	walking_stick = TRUE
 	wdefense = 4
 	special = /datum/special_intent/polearm_backstep
+	alt_grips = list(/datum/alt_grip/halberd/halbschilt)
 
 /obj/item/rogueweapon/halberd/getonmobprop(tag)
 	. = ..()
@@ -908,6 +941,7 @@
 	desc = "A Lingyuese dagger-axe. A spearhead crowns the shaft, while a crescent side-blade hooks outwards - equally suited to thrusting, hooking a mounted foe out of his saddle, or shearing through a footman's guard."
 	icon_state = "ji"
 	gripped_intents = list(SPEAR_THRUST, SPEAR_CUT, /datum/intent/axe/chop/halberd, /datum/intent/spear/dismount)
+	alt_grips = null
 
 /obj/item/rogueweapon/halberd/ji/iron
 	name = "iron ji"
@@ -1159,11 +1193,9 @@
 	if(tag)
 		switch(tag)
 			if("gen")
-				return list("shrink" = 0.6,"sx" = -6,"sy" = 6,"nx" = 6,"ny" = 7,"wx" = 0,"wy" = 5,"ex" = -1,"ey" = 7,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -50,"sturn" = 40,"wturn" = 50,"eturn" = -50,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
+				return list("shrink" = 0.6,"sx" = -7,"sy" = 2,"nx" = 7,"ny" = 3,"wx" = -2,"wy" = 1,"ex" = 1,"ey" = 1,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -38,"sturn" = 37,"wturn" = 30,"eturn" = -30,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
 			if("wielded")
-				return list("shrink" = 0.6,"sx" = 3,"sy" = -1,"nx" = -5,"ny" = 0,"wx" = -5,"wy" = 1,"ex" = 3,"ey" = -2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 7,"sturn" = -7,"wturn" = 16,"eturn" = -22,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
-			if("onbelt")
-				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
+				return list("shrink" = 0.6,"sx" = 5,"sy" = -3,"nx" = -5,"ny" = -2,"wx" = -5,"wy" = -1,"ex" = 3,"ey" = -2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 7,"sturn" = -7,"wturn" = 16,"eturn" = -22,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
 
 /obj/item/rogueweapon/eaglebeak/blacksteel
 	name = "blacksteel polehammer"
@@ -1449,6 +1481,7 @@
 	inv_storage_delay = 1 SECONDS
 	icon_angle_wielded = null
 	secondary_skills = list(/datum/skill/combat/swords = 0.8)
+	alt_grips = null // Already a hybrid. No need for alternate grips, unless you can think of something cool. Animated reflected spins, maybe?
 
 /obj/item/rogueweapon/spear/partizan/baotha/Initialize(mapload)
 	. = ..()

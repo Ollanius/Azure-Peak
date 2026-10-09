@@ -73,25 +73,27 @@
 	clickcd = CLICK_CD_HEAVY
 	swingdelay = 10
 
-/datum/intent/mace/rangedthrust
+/datum/intent/mace/thrust
 	name = "thrust"
 	blade_class = BCLASS_STAB
 	attack_verb = list("thrusts")
 	animname = "stab"
 	icon_state = "instab"
-	reach = 2
+	reach = 1
 	clickcd = CLICK_CD_CHARGED
 	recovery = 30
 	warnie = "mobwarning"
 	hitsound = list('sound/combat/hits/bladed/genstab (1).ogg', 'sound/combat/hits/bladed/genstab (2).ogg', 'sound/combat/hits/bladed/genstab (3).ogg')
 	penfactor = PEN_MEDIUM
-	damfactor = 0.9
-	item_d_type = "stab"
-
-/datum/intent/mace/rangedthrust/short
-	reach = 1
-	swingdelay = 8
 	damfactor = 0.5
+	item_d_type = "stab"
+	swingdelay = 8
+
+/datum/intent/mace/thrust/ranged
+	name = "ranged thrust"
+	reach = 2
+	damfactor = 0.9
+	swingdelay = null //Same behavior as before, just swapped to account for the reparenting.
 
 /datum/intent/mace/bash
 	name = "bash"
@@ -639,7 +641,7 @@
 	force = 15
 	force_wielded = 30
 	possible_item_intents = list(/datum/intent/mace/strike, /datum/intent/mace/bash/ranged) //Fluffed as either buttstroking with the Grand Mace, or ineffectually swinging it.
-	gripped_intents = list(/datum/intent/mace/strike/grand, /datum/intent/mace/smash/grand, /datum/intent/mace/rangedthrust/short, /datum/intent/effect/daze)
+	gripped_intents = list(/datum/intent/mace/strike/grand, /datum/intent/mace/smash/grand, /datum/intent/mace/thrust, /datum/intent/effect/daze)
 	icon_state = "goedendag"
 	icon = 'icons/roguetown/weapons/blunt64.dmi'
 	sharpness = IS_BLUNT
