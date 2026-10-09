@@ -92,7 +92,7 @@
 /datum/intent/mace/thrust/ranged
 	name = "ranged thrust"
 	reach = 2
-	damfactor = 0.9
+	damfactor = 0.75 //Roughly emulates the result of a (30 + 0.9x) damage multiplier. Lowest damage of the bunch, but still pretty servicable.
 	swingdelay = null //Same behavior as before, just swapped to account for the reparenting.
 
 /datum/intent/mace/bash

@@ -1016,7 +1016,7 @@
 		),
 	)
 	var_overrides = list(
-		"wlength" = WLENGTH_LONG
+		"wlength" = WLENGTH_LONG //Parity with actual shortspears. Not too important, otherwise; the big change comes with the new intents.
 	)
 	additive_var_overrides = list(
 		"wdefense" = -4 // Most spears get reduced to 0-1 DEF. Very, very risky to employ without a shield.

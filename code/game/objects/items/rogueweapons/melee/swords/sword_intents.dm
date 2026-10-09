@@ -94,10 +94,13 @@
 /datum/intent/sword/thrust/long/deep/halfsword/ochs
 	name = "halfsword lunge"
 	icon_state = "inlunge"
+	desc = "A forceful thrust that relies on power, instead of precision, to punch through maille. While this requires an offensive stance \
+	that makes it harder to parry oncoming attacks, your strikes land much faster in exchange."
 	penfactor = PEN_HEAVY
 	clickcd = CLICK_CD_CHARGED
 	damfactor = 0.8
-	swingdelay = 0.6 SECONDS
+	swingdelay = 0.5 SECONDS
+	swingdelay_type = SWINGDELAY_PENALTY
 	intent_intdamage_factor = 0.5
 
 /datum/intent/sword/thrust/long/deep/halfsword/frei
