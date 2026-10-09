@@ -646,7 +646,7 @@
 	special = /datum/special_intent/side_sweep
 	max_blade_int = 300
 	secondary_skills = list(/datum/skill/combat/polearms = 1.0, /datum/skill/combat/maces = 0.6)
-	alt_grips = list(/datum/alt_grip/poleaxe/kurzhau, /datum/alt_grip/poleaxe/reverse)
+	alt_grips = list(/datum/alt_grip/poleaxe/hochhalt, /datum/alt_grip/poleaxe/reverse)
 
 /obj/item/rogueweapon/greataxe/steel/knight/attackby(obj/item/W, mob/living/user, params)
 	..()

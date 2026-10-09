@@ -40,7 +40,7 @@
 	effective_range_type = EFF_RANGE_NONE
 	sharpness_penalty = 3
 
-/datum/intent/spear/thrust/oneh/ebenhau
+/datum/intent/spear/thrust/oneh/unterhaend
 	name = "balanced one-handed thrust"
 	swingdelay = 0.7 SECONDS //Halved swing delay.
 	clickcd = CLICK_CD_HEAVY //Reduced click delay.
@@ -83,7 +83,7 @@
 	effective_range = null
 	effective_range_type = EFF_RANGE_NONE
 
-/datum/intent/spear/thrust/short/ebenhau
+/datum/intent/spear/thrust/short/unterhaend
 	name = "one-handed lunge"
 	reach = 2
 	icon_state = "inlunge"
@@ -120,7 +120,7 @@
 	sharpness_penalty = 2
 	warnie = "mobwarning"
 
-/datum/intent/spear/cut/oneh/ebenhau
+/datum/intent/spear/cut/oneh/unterhaend
 	name = "balanced one-handed cut"
 	swingdelay = 0.3 SECONDS //Halved swing delay.
 	damfactor = 1.3 //Half the damage bonus of its thrusting counterpart. Remember that this is chiefly used for one-handed
@@ -157,7 +157,7 @@
 /datum/intent/spear/cut/short
 	reach = 1
 
-/datum/intent/spear/cut/short/ebenhau
+/datum/intent/spear/cut/short/unterhaend
 	name = "one-handed slash"
 	icon_state = "inslash"
 	reach = 2
@@ -321,7 +321,7 @@
 	twirly = SKILL_LEVEL_EXPERT // safely twirling like, a halberd, is going to be harder than a blunt staff
 	twirl_speed = 6
 	secondary_skills = list(/datum/skill/combat/staves = 0.6)
-	alt_grips = list(/datum/alt_grip/spear/ebenhau)
+	alt_grips = list(/datum/alt_grip/spear/unterhaendig)
 
 /obj/item/rogueweapon/spear/short
 	name = "short spear"
@@ -964,7 +964,7 @@
 	max_blade_int = 300
 	wdefense = 5
 	wbalance = WBALANCE_HEAVY
-	alt_grips = list(/datum/alt_grip/bardiche/hackenhau)
+	alt_grips = list(/datum/alt_grip/bardiche/hochhalt)
 
 /obj/item/rogueweapon/halberd/bardiche/iron
 	name = "iron bardiche"

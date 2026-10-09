@@ -743,8 +743,8 @@
 	two_handed = TRUE
 	grip_skill = list(/datum/skill/combat/axes = 1.0, /datum/skill/combat/polearms = 1.0, /datum/skill/combat/maces = 0.6)
 
-/datum/alt_grip/poleaxe/kurzhau
-	name = "kurzhau" //Butchered (and probably historically inaccurate) version of the 'Mordhau' technique, but for poleaxes. Allows them to double as battle axes, essentially.
+/datum/alt_grip/poleaxe/hochhalt
+	name = "hochhalt" // Allows them to double as battle axes, essentially.
 	skill_req = SKILL_LEVEL_JOURNEYMAN
 	grip_intents = list(
 		/datum/intent/axe/cut,
@@ -821,8 +821,8 @@
 /datum/alt_grip/bardiche
 	two_handed = TRUE
 
-/datum/alt_grip/bardiche/hackenhau
-	name = "hackenhau" //Would you believe me if I said I took three years of German in High School? No? Fair enough. Butchered translation of "hacking stroke".
+/datum/alt_grip/bardiche/hochhalt
+	name = "hochhalt" //Would you believe me if I said I took three years of German in High School? No? Fair enough. Butchered translation of "hacking stroke".
 	skill_req = SKILL_LEVEL_JOURNEYMAN //Swaps the AOE-centric Cleave intents for more single target-oriented attacks. Hybrid of the poleaxe and halberd. Note; hacking is, conversely, not included.
 	grip_intents = list(
 		/datum/intent/axe/cut/long,
@@ -981,14 +981,14 @@
 /datum/alt_grip/spear
 	two_handed = FALSE //One-handed spears?! Classical spear-and-shield combat?! Egads!
 
-/datum/alt_grip/spear/ebenhau
-	name = "ebenhau" //'Overhead stroke'. Nukes the defensive values and forces extra sharpness loss, but allows for two-tile combat in combination with a shield.
+/datum/alt_grip/spear/unterhaendig
+	name = "unterhaendig" //'Underhanded'. Nukes the defensive values and forces extra sharpness loss, but allows for two-tile combat in combination with a shield.
 	skill_req = SKILL_LEVEL_JOURNEYMAN // Two-tiled thrusts and cuts have 0.9x FORCE + -1 AP (MEDIUM > HEAVY, NONE > NONE). Still pretty good.
 	grip_intents = list( //One-tiled thrusts and cuts (fluffed as 'lunges' and 'slashes') retain their high AP and FORCE, with reduced swing- and click-delays.
-		/datum/intent/spear/thrust/short/ebenhau,
-		/datum/intent/spear/cut/short/ebenhau,
-		/datum/intent/spear/thrust/oneh/ebenhau,
-		/datum/intent/spear/cut/oneh/ebenhau
+		/datum/intent/spear/thrust/short/unterhaend,
+		/datum/intent/spear/cut/short/unterhaend,
+		/datum/intent/spear/thrust/oneh/unterhaend,
+		/datum/intent/spear/cut/oneh/unterhaend
 	)
 	onmobprop_overrides = list(
 		"altgrip" = list(
