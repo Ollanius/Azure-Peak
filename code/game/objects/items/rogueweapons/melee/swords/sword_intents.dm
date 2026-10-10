@@ -56,11 +56,10 @@
 	desc = "Naturally has a higher chance to inflict decapitations on a successful critical hit to the neck."
 	icon_state = "inhack"
 	blade_class = BCLASS_CHOP
-	damfactor = 1.5
-	penfactor = PEN_HEAVY
-	demolition_mod = 2
-	swingdelay = 1.2 SECONDS
-	clickcd = 1.3 SECONDS
+	damfactor = 1.3
+	penfactor = PEN_BSTEEL
+	swingdelay = 1.3 SECONDS
+	clickcd = 1.4 SECONDS
 	swingdelay_type = SWINGDELAY_CANCEL
 	canparry = FALSE
 	candodge = FALSE
