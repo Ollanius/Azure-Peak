@@ -44,6 +44,55 @@
 	swingdelay = 6
 	damfactor = 1.3
 
+/datum/intent/sword/chop/exe
+	name = "decapitating chop"
+	desc = "Naturally has a higher chance to inflict decapitations on a successful critical hit to the neck."
+	penfactor = PEN_MEDIUM
+	swingdelay = 6
+	damfactor = 1.3
+
+/datum/intent/sword/chop/heavy/exe
+	name = "decapitating swing"
+	desc = "Naturally has a higher chance to inflict decapitations on a successful critical hit to the neck."
+	icon_state = "inhack"
+	blade_class = BCLASS_CHOP
+	damfactor = 1.5
+	penfactor = PEN_HEAVY
+	demolition_mod = 2
+	swingdelay = 1.2 SECONDS
+	clickcd = 1.3 SECONDS
+	swingdelay_type = SWINGDELAY_CANCEL
+	canparry = FALSE
+	candodge = FALSE
+
+/datum/intent/sword/chop/ranged
+	reach = 2
+
+/datum/intent/sword/chop/ranged/zornhut
+	name = "ranged chop"
+	desc = "Leverage the full length of your sword to deliver a powerful, ranged swipe. Only effective at exactly two paces."
+	damfactor = 1.3
+	intent_intdamage_factor = 1.2
+	swingdelay = 0.5 SECONDS
+	effective_range = 2
+	effective_range_type = EFF_RANGE_EXACT
+	sharpness_penalty = 1
+
+/datum/intent/sword/chop/heavy/zornhut
+	name = "unevadable swing"
+	desc = "Close the distance with your opponent and overwhelm them with a powerful, overhead strike. While perfect for countering pikemen, the slow follow-through \
+	and exposed stance leaves you vulnerable to interruption."
+	icon_state = "inhack"
+	penfactor = PEN_HEAVY
+	damfactor = 1.5
+	intent_intdamage_factor = 1.2
+	swingdelay = 1.1 SECONDS
+	clickcd = CLICK_CD_HEAVY
+	swingdelay_type = SWINGDELAY_CANCEL
+	canparry = FALSE
+	candodge = FALSE
+	sharpness_penalty = 1
+
 /datum/intent/sword/thrust
 	name = "stab"
 	icon_state = "instab"
@@ -91,6 +140,16 @@
 	damfactor = 0.8
 	swingdelay = 0.6 SECONDS
 
+/datum/intent/sword/thrust/long/deep/ranged
+	name = "defensive ranged lunge"
+	desc = "Briefly swerve from a defensive-to-offensive stance when lunging, allowing your greatsword to thrust through softer armor. Only effective \
+	at exactly two paces, as all of the blade's force is concentrated into its tip."
+	clickcd = CLICK_CD_CHARGED
+	penfactor = PEN_MEDIUM
+	effective_range = 2
+	effective_range_type = EFF_RANGE_EXACT
+	swingdelay_type = SWINGDELAY_PENALTY
+
 /datum/intent/sword/thrust/long/deep/halfsword/ochs
 	name = "halfsword lunge"
 	icon_state = "inlunge"
@@ -127,7 +186,7 @@
 
 /datum/intent/sword/thrust/long/halfsword/jab
 	name = "jab"
-	icon_state = "instab"
+	icon_state = "injab"
 	attack_verb = list("jabs")
 	penfactor = PEN_LIGHT
 	damfactor = 0.8
@@ -136,6 +195,11 @@
 	candodge = TRUE
 	canparry = TRUE
 	swingdelay_type = SWINGDELAY_NORMAL
+
+/datum/intent/sword/thrust/long/halfsword/greatsword
+	name = "defensive halfsword thrust"
+	clickcd = CLICK_CD_HEAVY //To account for greatswords generally being more unwieldy at close range.
+	damfactor = 0.8
 
 /datum/intent/sword/thrust/blunt
 	blade_class = BCLASS_BLUNT
@@ -480,6 +544,17 @@
 /datum/intent/sword/thrust/zwei
 	reach = 2
 
+/datum/intent/sword/thrust/zwei/halfsword
+	name = "defensive ranged jab"
+	desc = "Hike your grip up on the greatsword in order to deliver a quicker, ranged jab. The defensive posture allows you to \
+	better parry incoming attacks, at the cost of lesser damage."
+	reach = 2
+	damfactor = 0.8
+	intent_intdamage_factor = 0.8
+	clickcd = CLICK_CD_FAST
+	icon_state = "injab"
+	attack_verb = list("skewers", "impales")
+
 // Zhanmadao
 /datum/intent/sword/cut/zhanmadao
 	reach = 2
@@ -549,3 +624,114 @@
 	damfactor = 2.17	//Base damage of 15
 	max_intent_damage = 16 //Never better than ANY real sword
 	min_intent_damage = 7.5	//I've decided after testing that even with the big sharpness buff you'll still get cucked out of your damage pretty fast. This is a stopgap that leaves you at ~50% minimum damage.
+
+//Executioner-specific intents.
+/datum/intent/sword/thrust/exe
+	swingdelay = 4	//Slight delay to stab; big and heavy.
+	penfactor = PEN_NONE //Flat tip? I don't know, man. This intent is won't penetrate anything but it damages armor more.
+	intent_intdamage_factor = 1.3 //This is basically like getting hit by a mace.
+
+/datum/intent/sword/cut/exe/cleave
+	name = "cleaving cut"
+	icon_state = "incleave"
+	attack_verb = list("cleaves", "carves through")
+	clickcd = CLICK_CD_MASSIVE // Distinguished from GSword by being sluggish
+	damfactor = 1.2
+	cleave = /datum/cleave_pattern/forward_cleave
+	desc = "A heavy cleave that cuts through a second target behind the first."
+
+/datum/intent/sword/cut/exe/sweep
+	name = "sweeping cut"
+	icon_state = "insweep"
+	attack_verb = list("sweeps through", "cuts across")
+	clickcd = CLICK_CD_GLACIAL
+	damfactor = 1.2 // Hits harder but clunkier
+	cleave = /datum/cleave_pattern/horizontal_sweep
+	desc = "A heavy sweep that cuts through targets to the front."
+
+//Sabre-specific intents.
+/datum/intent/sword/cut/sabre
+	clickcd = 8		//Faster than sword by 4
+	damfactor = 1.25	//Better than rapier (Base is 1.1 for swords)
+	penfactor = PEN_NONE
+
+/datum/intent/sword/cut/sabre/heavy
+	name = "precise swing"
+	icon_state = "inhack"
+	blade_class = BCLASS_CHOP
+	damfactor = 1.5
+	penfactor = PEN_HEAVY
+	swingdelay = 1.1 SECONDS
+	clickcd = 1.3 SECONDS
+	swingdelay_type = SWINGDELAY_CANCEL
+	canparry = FALSE
+	candodge = FALSE
+
+/datum/intent/sword/thrust/sabre
+	clickcd = 9			//Fast but still not as fast as rapier n' shittier.
+	damfactor = 0.9		//10% worse	than base
+	penfactor = PEN_LIGHT	//Curved blade — can poke through cloth but not mail.
+
+/datum/intent/sword/cut/sabre/master
+	name = "pokrajać"
+	desc = "Perform a masterful wide-arc cut that's strong enough to penetrate gambesons and light leathers."
+	attack_verb = list("masterfully cuts", "deftly slits", "quarts")
+	clickcd = 7
+	damfactor = 1.25
+	penfactor = PEN_MEDIUM
+	max_intent_damage = 25
+
+/datum/intent/effect/daze/freisabre
+	name = "uszkodzić"
+	desc = "After a few misleading strikes, suddenly slash at your opponent's wrist to affect their speed and strength, preventing them from using their weapon effectively. This move can be parried, but not dodged."
+	attack_verb = list("deftly wrist-slits")
+	intent_effect = /datum/status_effect/debuff/dazed/freisabre
+	target_parts = list(BODY_ZONE_PRECISE_L_HAND, BODY_ZONE_PRECISE_R_HAND)
+	blade_class = BCLASS_CUT
+	damfactor = 1.25
+	clickcd = 12
+	recovery = 8
+	swingdelay = 8
+	canparry = TRUE
+	candodge = FALSE
+
+//Rapier-specific intents.
+/datum/intent/sword/cut/rapier
+	clickcd = CLICK_CD_QUICK
+	damfactor = 0.75
+
+/datum/intent/sword/thrust/rapier
+	clickcd = 8
+	damfactor = 1.1
+	penfactor = PEN_MEDIUM
+
+/datum/intent/sword/thrust/rapier/lunge
+	name = "deep lunge"
+	icon_state = "inlunge"
+	damfactor = 1.3
+	penfactor = PEN_BSTEEL
+
+	swingdelay_type = SWINGDELAY_CANCELSLOW
+	canparry = FALSE
+	candodge = FALSE
+
+	swingdelay = 1.1 SECONDS
+	clickcd = 1.5 SECONDS
+
+//Shotel / Disarming Sword-specific intents.
+/datum/intent/sword/thrust/hook
+	damfactor = 0.9
+
+/datum/intent/sword/disarm
+	name = "disarm"
+	desc = "A precise, sweeping strike that aims for the target's weapon. While it deals no damage on its own, successfully striking the target while they're off-balanced will disarm them in a grand flourish."
+	icon_state = "intake"
+	animname = "strike"
+	hitsound = list('sound/combat/hits/blunt/metalblunt (1).ogg', 'sound/combat/hits/blunt/metalblunt (2).ogg', 'sound/combat/hits/blunt/metalblunt (3).ogg')
+	penfactor = PEN_NONE
+	swingdelay = 2	//Small delay to hook
+	clickcd = 22	//Can't spam this; long delay.
+	attack_verb = list("hooks", "pries")
+	blade_class = BCLASS_DISARM
+	damfactor = 0
+	item_d_type = "blunt"

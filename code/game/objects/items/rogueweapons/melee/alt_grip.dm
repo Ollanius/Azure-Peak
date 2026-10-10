@@ -498,7 +498,7 @@
 /datum/alt_grip/proc/remove_from(obj/item/source)
 	return
 
-
+//Mordhau (or "murderstroke") grips for swords.
 /datum/alt_grip/mordhau
 	name = "mordhau"
 	two_handed = TRUE
@@ -541,41 +541,26 @@
 		"wdefense" = -2
 	)
 
-/datum/alt_grip/mordhau/greatsword
+/datum/alt_grip/mordhau/sword/lesser
+	grip_intents = list(
+		SWORD_BASH,
+		/datum/intent/effect/daze
+	)
+
+/datum/alt_grip/mordhau/sword/frei
+	name = "abrazare"
+	two_handed = TRUE
+	additive_var_overrides = list(
+		"wdefense" = -4
+	)
+	trait_applied = list(TRAIT_LONGSWORDSMAN, TRAIT_FREEBLADE)
 	grip_intents = list(
 		/datum/intent/sword/strike/bash/mordhau,
 		/datum/intent/sword/strike/bash/mordhau/smash,
-		/datum/intent/effect/daze
-	)
-	onmobprop_overrides = list(
-		"altgrip" = list(
-			"shrink" = 0.6,
-			"sx" = 4,
-			"sy" = 0,
-			"nx" = -7,
-			"ny" = 1,
-			"wx" = -8,
-			"wy" = 0,
-			"ex" = 8,
-			"ey" = -1,
-			"northabove" = 0,
-			"southabove" = 1,
-			"eastabove" = 1,
-			"westabove" = 0,
-			"nturn" = -135,
-			"sturn" = -35,
-			"wturn" = 45,
-			"eturn" = 145,
-			"nflip" = 8,
-			"sflip" = 8,
-			"wflip" = 1,
-			"eflip" = 0,
-		),
-	)
-	var_overrides = list(
-		"wlength" = WLENGTH_NORMAL
+		/datum/intent/effect/daze/longsword
 	)
 
+//Halfsworded grips for (as you'd imagine) swords.
 /datum/alt_grip/halfsword
 	name = "halfsword"
 	two_handed = TRUE
@@ -618,20 +603,11 @@
 		"wdefense" = 2
 	)
 
-// Certain swords are especially nuclear like the Martyr and ZIZO swords.
-// The swords have 40 force. I cannot give it the 0.8x damage blunt or it's just a grand mace.
-// Instead, you get to keep new daze and the new stabs but not the new blunt intents or plate pen halfswording.
-/datum/alt_grip/halfsword/lesser
-	grip_intents = list(
-		/datum/intent/sword/thrust/long/halfsword/jab,
+/datum/alt_grip/halfsword/lesser // Certain swords are especially nuclear like the Martyr and ZIZO swords.
+	grip_intents = list( // The swords have 40 force. I cannot give it the 0.8x damage blunt or it's just a grand mace.
+		/datum/intent/sword/thrust/long/halfsword/jab, // Instead, you get to keep new daze and the new stabs but not the new blunt intents or plate pen halfswording.
 		SWORD_BASH,
 		/datum/intent/sword/thrust/long/deep/halfsword
-	)
-
-/datum/alt_grip/mordhau/sword/lesser
-	grip_intents = list(
-		SWORD_BASH,
-		/datum/intent/effect/daze
 	)
 
 /datum/alt_grip/halfsword/frei
@@ -647,24 +623,12 @@
 		/datum/intent/sword/thrust/long/halfsword/frei
 	)
 
-/datum/alt_grip/mordhau/sword/frei
-	name = "abrazare"
-	two_handed = TRUE
-	additive_var_overrides = list(
-		"wdefense" = -4
-	)
-	trait_applied = list(TRAIT_LONGSWORDSMAN, TRAIT_FREEBLADE)
-	grip_intents = list(
-		/datum/intent/sword/strike/bash/mordhau,
-		/datum/intent/sword/strike/bash/mordhau/smash,
-		/datum/intent/effect/daze/longsword
-	)
-
 /datum/alt_grip/halfsword/greatsword
 	grip_intents = list(
-		/datum/intent/sword/cut/halfsword,
-		/datum/intent/sword/thrust/long/halfsword/jab,
-		/datum/intent/sword/thrust/long/halfsword
+		/datum/intent/sword/cut/halfsword, //Quicker but lower-damaging cuts and ranged thrusts. Impaling takes a little longer, in exchange.
+		/datum/intent/sword/thrust/zwei/halfsword,
+		/datum/intent/sword/thrust/long/deep/ranged,
+		/datum/intent/sword/thrust/long/halfsword/greatsword
 	)
 	onmobprop_overrides = list(
 		"altgrip" = list(
@@ -695,6 +659,7 @@
 		"wlength" = WLENGTH_LONG
 	)
 
+//Broadsword-specific alternative grips.
 /datum/alt_grip/broadsword
 	two_handed = TRUE
 
@@ -738,7 +703,7 @@
 		"wdefense" = -2
 	)
 
-// Alternates!
+//Poleaxe-specific alternative grips.
 /datum/alt_grip/poleaxe
 	two_handed = TRUE
 	grip_skill = list(/datum/skill/combat/axes = 1.0, /datum/skill/combat/polearms = 1.0, /datum/skill/combat/maces = 0.6)
@@ -818,6 +783,7 @@
 		),
 	)
 
+//Bardiche-specific alternative grips.
 /datum/alt_grip/bardiche
 	two_handed = TRUE
 
@@ -855,6 +821,7 @@
 		),
 	)
 
+//Polehammers-specific alternative grips.
 /datum/alt_grip/polehammer
 	two_handed = TRUE
 
@@ -892,6 +859,7 @@
 		),
 	)
 
+//Grand mace-specific alternative grips.
 /datum/alt_grip/grandmace
 	two_handed = TRUE
 	grip_skill = list(/datum/skill/combat/maces = 1.0, /datum/skill/combat/polearms = 0.8)
@@ -934,6 +902,7 @@
 		"wdefense" = -1 //Slightly reduced.
 	)
 
+//Halberd-specific alternative grips.
 /datum/alt_grip/halberd
 	two_handed = TRUE
 
@@ -978,6 +947,7 @@
 		"wdefense" = 2
 	)
 
+//Spear-specific alternative grips.
 /datum/alt_grip/spear
 	two_handed = FALSE //One-handed spears?! Classical spear-and-shield combat?! Egads!
 
@@ -1020,4 +990,81 @@
 	)
 	additive_var_overrides = list(
 		"wdefense" = -4 // Most spears get reduced to 0-1 DEF. Very, very risky to employ without a shield.
+	)
+
+//Greatsword-specific alternative grips.
+/datum/alt_grip/greatsword
+	two_handed = TRUE
+
+/datum/alt_grip/greatsword/zornhut
+	name = "zornhut" //Translates to "wrathful posture". Trades the greatsword's AOE-centric attacks for oppressive single-target damage.
+	skill_req = SKILL_LEVEL_EXPERT //Experimental. Big swords require big minds, especially when used in such proactive manners.
+	grip_intents = list( //To be specific, this technique - like in real life - counters guards and polearms. Mind the low defense, however.
+		/datum/intent/sword/thrust/zwei,
+		/datum/intent/sword/chop/ranged/zornhut,
+		/datum/intent/sword/chop/heavy/zornhut,
+		/datum/intent/sword/cut/rend
+	)
+	onmobprop_overrides = list(
+		"altgrip" = list(
+			"shrink" = 0.6,
+			"sx" = 5,
+			"sy" = -4,
+			"nx" = -5,
+			"ny" = -3,
+			"wx" = -5,
+			"wy" = -2,
+			"ex" = 3,
+			"ey" = -3,
+			"northabove" = 0,
+			"southabove" = 1,
+			"eastabove" = 1,
+			"westabove" = 1,
+			"nturn" = 7,
+			"sturn" = 6,
+			"wturn" = 29,
+			"eturn" = -9,
+			"nflip" = 21,
+			"sflip" = 0,
+			"wflip" = 8,
+			"eflip" = 0,
+		),
+	)
+	additive_var_overrides = list(
+		"wdefense" = -2
+	)
+
+/datum/alt_grip/greatsword/scharfrichter
+	name = "scharfrichter" //Roughly translates to "edged judge" - "executioner", more bluntly.
+	skill_req = SKILL_LEVEL_JOURNEYMAN //Intended as an alternate grip for Executioner Swords. Pathed under the '/greatsword' altgrip for organization.
+	grip_intents = list( //Pseudoinverse of Zornhut, exchanging raw single-target damage for broader multi-target attacks.
+		/datum/intent/sword/cut,
+		/datum/intent/sword/cut/exe/cleave,
+		/datum/intent/sword/cut/exe/sweep,
+		/datum/intent/sword/cut/rend
+	)
+	onmobprop_overrides = list(
+		"altgrip" = list(
+			"shrink" = 0.6,
+			"sx" = 5,
+			"sy" = -4,
+			"nx" = -5,
+			"ny" = -3,
+			"wx" = -5,
+			"wy" = -2,
+			"ex" = 3,
+			"ey" = -3,
+			"northabove" = 0,
+			"southabove" = 1,
+			"eastabove" = 1,
+			"westabove" = 1,
+			"nturn" = 7,
+			"sturn" = 6,
+			"wturn" = 29,
+			"eturn" = -9,
+			"nflip" = 21,
+			"sflip" = 0,
+			"wflip" = 8,
+			"eflip" = 0,
+		),
 	)

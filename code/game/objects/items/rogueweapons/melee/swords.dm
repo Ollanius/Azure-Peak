@@ -37,7 +37,6 @@
 	wdefense = 4
 	grid_width = 32
 	grid_height = 64
-
 	equip_delay_self = 1.5 SECONDS
 	unequip_delay_self = 1.5 SECONDS
 	inv_storage_delay = 1.5 SECONDS
@@ -56,7 +55,6 @@
 /obj/item/rogueweapon/sword/ComponentInitialize()
 	.=..()
 	AddComponent(/datum/component/skill_blessed, TRAIT_FREEBLADE, /datum/skill/combat/swords, SKILL_LEVEL_MASTER)
-
 
 /obj/item/rogueweapon/sword/iron
 	name = "iron arming sword"
@@ -812,8 +810,7 @@
 	justice, it lacks the piercing tips that befit most battle-ready broadswords. If you're strong enough to wield such a weapon, however, \
 	then that probably won't stop you from finding a way."
 	possible_item_intents = list(/datum/intent/sword/cut, /datum/intent/sword/chop/heavy, /datum/intent/sword/thrust/exe, /datum/intent/sword/strike)
-	gripped_intents = list(/datum/intent/sword/chop/heavy, /datum/intent/sword/cut/exe/cleave, /datum/intent/sword/cut/exe/sweep,	/datum/intent/sword/cut/rend)
-	alt_grips = null
+	gripped_intents = list(/datum/intent/sword/chop/exe, /datum/intent/sword/chop/heavy/exe, /datum/intent/sword/thrust/exe, /datum/intent/sword/cut/rend)
 	icon_state = "exe"
 	minstr = 12
 	slot_flags = ITEM_SLOT_BACK
@@ -822,30 +819,8 @@
 	max_blade_int = 330
 	smelt_bar_num = 2 // 1 bar loss
 	vorpal = TRUE // snicker snack this shit cuts heads off effortlessly (DO NOT PUT THIS ON ANYTHING ELSE UNLESS IT'S SUPER FUCKING RARE!!!)
-	secondary_skills = list(/datum/skill/combat/axes = 0.8)
-
-/datum/intent/sword/thrust/exe
-	swingdelay = 4	//Slight delay to stab; big and heavy.
-	penfactor = PEN_NONE //Flat tip? I don't know, man. This intent is won't penetrate anything but it damages armor more.
-	intent_intdamage_factor = 1.3 //This is basically like getting hit by a mace.
-
-/datum/intent/sword/cut/exe/cleave
-	name = "cleaving cut"
-	icon_state = "incleave"
-	attack_verb = list("cleaves", "carves through")
-	clickcd = CLICK_CD_MASSIVE // Distinguished from GSword by being sluggish
-	damfactor = 1.2
-	cleave = /datum/cleave_pattern/forward_cleave
-	desc = "A heavy cleave that cuts through a second target behind the first."
-
-/datum/intent/sword/cut/exe/sweep
-	name = "sweeping cut"
-	icon_state = "insweep"
-	attack_verb = list("sweeps through", "cuts across")
-	clickcd = CLICK_CD_GLACIAL
-	damfactor = 1.2 // Hits harder but clunkier
-	cleave = /datum/cleave_pattern/horizontal_sweep
-	desc = "A heavy sweep that cuts through targets to the front."
+	secondary_skills = list(/datum/skill/combat/axes = 1.0) //It's basically an axe with the head horrifically enlongated.
+	alt_grips = list(/datum/alt_grip/greatsword/scharfrichter)
 
 /obj/item/rogueweapon/sword/long/exe/astrata
 	name = "\"Solar Judge\""
@@ -871,11 +846,11 @@
 				return list("shrink" = 0.45,"sx" = 2,"sy" = 3,"nx" = -7,"ny" = 1,"wx" = -8,"wy" = 0,"ex" = 8,"ey" = -1,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -135,"sturn" = -35,"wturn" = 45,"eturn" = 145,"nflip" = 8,"sflip" = 8,"wflip" = 1,"eflip" = 0)
 
 /obj/item/rogueweapon/sword/long/exe/cloth
-	icon_state = "terminusest"
 	name = "\"Terminus Est\""
 	desc = "An ornate executioner's sword, decorated with a golden pommel and crossguard. A bloody rag \
 	winds around the ricasso, ever-present to keep its edge spotless for the executionee's final \
 	judgement. The stout-angled blade bears an enscription along its length; </br>'WHEN THIS SWORDE I DOTH LYFT, I WISH THE SINNER ETERNAL LYFE AS THINE GYFT.'"
+	icon_state = "terminusest"
 	smeltresult = /obj/item/ingot/gold // It is the most valuable component
 	max_blade_int = 363
 	smelt_bar_num = 2
@@ -1416,28 +1391,6 @@
 	wbalance = WBALANCE_SWIFT
 	special = /datum/special_intent/shin_swipe
 
-/datum/intent/sword/cut/sabre
-	clickcd = 8		//Faster than sword by 4
-	damfactor = 1.25	//Better than rapier (Base is 1.1 for swords)
-	penfactor = PEN_NONE
-
-/datum/intent/sword/cut/sabre/heavy
-	name = "precise swing"
-	icon_state = "inhack"
-	blade_class = BCLASS_CHOP
-	damfactor = 1.5
-	penfactor = PEN_HEAVY
-	swingdelay = 1.1 SECONDS
-	clickcd = 1.3 SECONDS
-	swingdelay_type = SWINGDELAY_CANCEL
-	canparry = FALSE
-	candodge = FALSE
-
-/datum/intent/sword/thrust/sabre
-	clickcd = 9			//Fast but still not as fast as rapier n' shittier.
-	damfactor = 0.9		//10% worse	than base
-	penfactor = PEN_LIGHT	//Curved blade — can poke through cloth but not mail.
-
 /obj/item/rogueweapon/sword/sabre/dec
 	icon_state = "decsabre"
 	sheathe_icon = "decsabre"
@@ -1459,29 +1412,6 @@
 	minstr = 6
 	icon_state = "shashka"
 	sheathe_icon = "shashka"
-
-/datum/intent/sword/cut/sabre/master
-	name = "pokrajać"
-	desc = "Perform a masterful wide-arc cut that's strong enough to penetrate gambesons and light leathers."
-	attack_verb = list("masterfully cuts", "deftly slits", "quarts")
-	clickcd = 7
-	damfactor = 1.25
-	penfactor = PEN_MEDIUM
-	max_intent_damage = 25
-
-/datum/intent/effect/daze/freisabre
-	name = "uszkodzić"
-	desc = "After a few misleading strikes, suddenly slash at your opponent's wrist to affect their speed and strength, preventing them from using their weapon effectively. This move can be parried, but not dodged."
-	attack_verb = list("deftly wrist-slits")
-	intent_effect = /datum/status_effect/debuff/dazed/freisabre
-	target_parts = list(BODY_ZONE_PRECISE_L_HAND, BODY_ZONE_PRECISE_R_HAND)
-	blade_class = BCLASS_CUT
-	damfactor = 1.25
-	clickcd = 12
-	recovery = 8
-	swingdelay = 8
-	canparry = TRUE
-	candodge = FALSE
 
 /obj/item/rogueweapon/sword/sabre/freifechter
 	name = "szöréndnížine sabre"
@@ -1702,28 +1632,6 @@
 				"eastabove" = 1,
 				"westabove" = 0,
 				)
-
-/datum/intent/sword/cut/rapier
-	clickcd = CLICK_CD_QUICK
-	damfactor = 0.75
-
-/datum/intent/sword/thrust/rapier
-	clickcd = 8
-	damfactor = 1.1
-	penfactor = PEN_MEDIUM
-
-/datum/intent/sword/thrust/rapier/lunge
-	name = "deep lunge"
-	icon_state = "inlunge"
-	damfactor = 1.3
-	penfactor = PEN_BSTEEL
-
-	swingdelay_type = SWINGDELAY_CANCELSLOW
-	canparry = FALSE
-	candodge = FALSE
-
-	swingdelay = 1.1 SECONDS
-	clickcd = 1.5 SECONDS
 
 /obj/item/rogueweapon/sword/rapier/dec
 	name = "decorated rapier"
@@ -2354,24 +2262,6 @@
 				"eastabove" = 1,
 				"westabove" = 0,
 				)
-
-/datum/intent/sword/thrust/hook
-	damfactor = 0.9
-
-//Snowflake version of hand-targeting disarm intent.
-/datum/intent/sword/disarm
-	name = "disarm"
-	desc = "A precise, sweeping strike that aims for the target's weapon. While it deals no damage on its own, successfully striking the target while they're off-balanced will disarm them in a grand flourish."
-	icon_state = "intake"
-	animname = "strike"
-	hitsound = list('sound/combat/hits/blunt/metalblunt (1).ogg', 'sound/combat/hits/blunt/metalblunt (2).ogg', 'sound/combat/hits/blunt/metalblunt (3).ogg')
-	penfactor = PEN_NONE
-	swingdelay = 2	//Small delay to hook
-	clickcd = 22	//Can't spam this; long delay.
-	attack_verb = list("hooks", "pries")
-	blade_class = BCLASS_DISARM
-	damfactor = 0
-	item_d_type = "blunt"
 
 /obj/item/rogueweapon/sword/long/shotel
 	name = "steel shotel"

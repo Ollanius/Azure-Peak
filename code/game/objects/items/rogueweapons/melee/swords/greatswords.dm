@@ -2,11 +2,10 @@
 	name = "greatsword"
 	desc = "Might be able to chop anything in half!"
 	force = 12
-	force_wielded = 30
+	force_wielded = 30 	// Design Intent: I have a big fucking sword and I want to cut everything in sight.
 	possible_item_intents = list(/datum/intent/sword/chop, /datum/intent/sword/strike) //bash is for nonlethal takedowns, only targets limbs
-	// Design Intent: I have a big fucking sword and I want to cut everything in sight.
 	gripped_intents = list(/datum/intent/sword/cut/zwei, /datum/intent/sword/thrust/zwei, /datum/intent/sword/cut/zwei/cleave, /datum/intent/sword/cut/zwei/sweep)
-	alt_grips = list(/datum/alt_grip/mordhau/greatsword, /datum/alt_grip/halfsword/greatsword)
+	alt_grips = list(/datum/alt_grip/greatsword/zornhut, /datum/alt_grip/halfsword/greatsword)
 	icon_state = "gsw"
 	parrysound = list(
 		'sound/combat/parry/bladed/bladedlarge (1).ogg',
@@ -95,7 +94,6 @@
 	smeltresult = /obj/item/ingot/aaslag
 	anvilrepair = null
 	randomize_blade_int_on_init = TRUE
-
 
 /obj/item/rogueweapon/greatsword/paalloy
 	name = "ancient greatsword"
@@ -242,6 +240,7 @@
 	icon_state = "psygsword"
 	possible_item_intents = list(/datum/intent/sword/cut/zwei, /datum/intent/sword/thrust/exe, /datum/intent/sword/chop/heavy, /datum/intent/sword/strike)
 	gripped_intents = list(/datum/intent/sword/cut/zwei, /datum/intent/sword/thrust/heavy, /datum/intent/sword/chop/cleave, /datum/intent/rend)
+	alt_grips = list(/datum/alt_grip/greatsword/scharfrichter)
 	minstr = 13
 	minstr_req = TRUE
 	wdefense = 8
@@ -281,7 +280,7 @@
 	wdefense = 6
 	possible_item_intents = list(/datum/intent/sword/cut, /datum/intent/sword/chop/heavy, /datum/intent/sword/thrust/long, /datum/intent/rend/krieg)
 	gripped_intents = list(/datum/intent/sword/cut/zwei, /datum/intent/sword/chop/heavy, /datum/intent/sword/thrust/estoc/lunge, /datum/intent/sword/thrust/estoc)
-	alt_grips = list(/datum/alt_grip/broadsword/ochshau)
+	alt_grips = list(/datum/alt_grip/greatsword/scharfrichter, /datum/alt_grip/greatsword/zornhut, /datum/alt_grip/halfsword/greatsword) //They're calling it "the most curious implement of all time."
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silver
 	/// Whether a blessing awakens this blade, raising its force, defense and integrity.
