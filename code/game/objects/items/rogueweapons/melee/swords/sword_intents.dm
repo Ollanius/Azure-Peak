@@ -49,7 +49,7 @@
 	desc = "Naturally has a higher chance to inflict decapitations on a successful critical hit to the neck."
 	penfactor = PEN_MEDIUM
 	swingdelay = 6
-	damfactor = 1.3
+	damfactor = 1.5
 
 /datum/intent/sword/chop/heavy/exe
 	name = "decapitating swing"
