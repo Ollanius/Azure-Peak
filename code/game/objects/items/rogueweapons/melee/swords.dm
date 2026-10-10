@@ -819,7 +819,7 @@
 	max_blade_int = 330
 	smelt_bar_num = 2 // 1 bar loss
 	vorpal = TRUE // snicker snack this shit cuts heads off effortlessly (DO NOT PUT THIS ON ANYTHING ELSE UNLESS IT'S SUPER FUCKING RARE!!!)
-	secondary_skills = list(/datum/skill/combat/axes = 1) //It's basically an axe with the head horrifically enlongated.
+	secondary_skills = list(/datum/skill/combat/axes = 0.8) //It's basically an axe with the head horrifically enlongated.
 	alt_grips = list(/datum/alt_grip/greatsword/scharfrichter)
 
 /obj/item/rogueweapon/sword/long/exe/astrata
