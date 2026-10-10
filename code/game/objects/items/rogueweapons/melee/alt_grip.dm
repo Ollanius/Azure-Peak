@@ -1036,6 +1036,7 @@
 
 /datum/alt_grip/greatsword/scharfrichter
 	name = "scharfrichter" //Roughly translates to "edged judge" - "executioner", more bluntly.
+	grip_skill = list(/datum/skill/combat/swords = 1.0, /datum/skill/combat/axes = 0.8)
 	skill_req = SKILL_LEVEL_JOURNEYMAN //Intended as an alternate grip for Executioner Swords. Pathed under the '/greatsword' altgrip for organization.
 	grip_intents = list( //Pseudoinverse of Zornhut, exchanging raw single-target damage for broader multi-target attacks.
 		/datum/intent/sword/cut,
