@@ -56,6 +56,17 @@
 	wdefense = 4
 	anvilrepair = /datum/skill/craft/weaponsmithing
 
+/obj/item/rogueweapon/stoneaxe/battle/holyseeaxe
+	name = "holy see axe"
+	desc = "A blessed axe, wielded by the Holy See's crusaders to keep the forces of evil at bay, \
+			it is oft rumored these axes are commonplace amongst the greater crusades of the See against \
+			Heathenry and Heretic alyke, often used to tear down walls and fortifications that heretics hide within, \
+			a ceremonial manifestation of Malum's destruction and Astrata's all-reaching grasp of authority."
+	icon_state = "churchaxe"
+	wdefense = 5
+	max_blade_int = 260
+	max_integrity = 150
+
 /obj/item/rogueweapon/stoneaxe/battle/blacksteel
 	name = "blacksteel axe"
 	desc = "A magnificent battle axe of blacksteel, fitted to counter both unarmored assailants and heavy infantry. The edge might be fluted with nobler alloys, but it is no less wicked when introduced to maille-and-bone."
@@ -67,41 +78,6 @@
 	wdefense_wbonus = 4 //Increased defense when wielded.
 	max_blade_int = 500 //Sharper than sharp.
 	resistance_flags = FIRE_PROOF
-
-/obj/item/rogueweapon/stoneaxe/oath
-	name = "oath"
-	desc = "A hefty, steel-forged axe marred by the touch of countless Wardens. Despite its weathered etchings and worn grip, the blade has been honed to a razor's edge and you can see your reflection in the finely polished metal."
-	force = 30
-	force_wielded = 40
-	wbalance = WBALANCE_HEAVY
-	possible_item_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, /datum/intent/axe/bash/battle)
-	gripped_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, /datum/intent/axe/bash/battle)
-	icon_state = "oath"
-	icon = 'icons/roguetown/weapons/axes64.dmi'
-	max_blade_int = 500
-	dropshrink = 0.75
-	wlength = WLENGTH_LONG
-	slot_flags = ITEM_SLOT_BACK
-	pixel_y = -16
-	pixel_x = -16
-	inhand_x_dimension = 64
-	inhand_y_dimension = 64
-	bigboy = TRUE
-	gripsprite = TRUE
-	smeltresult = /obj/item/ingot/steel
-	minstr = 12
-	wdefense = 5
-	anvilrepair = /datum/skill/craft/weaponsmithing
-
-/obj/item/rogueweapon/stoneaxe/oath/getonmobprop(tag)
-	if(tag)
-		switch(tag)
-			if("gen")
-				return list("shrink" = 0.5,"sx" = -8,"sy" = -1,"nx" = 9,"ny" = -1,"wx" = -4,"wy" = -1,"ex" = 3,"ey" = -1,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -45,"sturn" = 45,"wturn" = 45,"eturn" = -45,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0,"wielded")
-			if("wielded")
-				return list("shrink" = 0.5,"sx" = 4,"sy" = -4,"nx" = -6,"ny" = -3,"wx" = -8,"wy" = -4,"ex" = 8,"ey" = -4,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0,"onback")
-			if("onbelt")
-				return list("shrink" = 0.5,"sx" = 1,"sy" = -1,"nx" = 1,"ny" = -1,"wx" = 4,"wy" = -1,"ex" = -1,"ey" = -1,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 8,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0,)
 
 /obj/item/rogueweapon/stoneaxe/woodcut
 	name = "iron axe"
@@ -253,10 +229,6 @@
 	is_tool = TRUE
 	anvilrepair = /datum/skill/craft/weaponsmithing
 	special = /datum/special_intent/hatchet_twirl
-
-/datum/intent/axe/cut/handaxe
-	damfactor = 1.1
-	clickcd = CLICK_CD_QUICK
 
 /obj/item/rogueweapon/stoneaxe/handaxe/silver
 	name = "silver tomahawk"
@@ -525,41 +497,6 @@
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
 
-/datum/intent/axe/cut/lunge
-	name = "ćiupaga lunge"
-	desc = "Grip your ćiupaga by the tail-end of the handle and swing in a circular motion to reach further ahead. It will deal extra damage if perfectly positioned, otherwise you'll just hit them with the handle."
-	damfactor = 1.75
-	penfactor = PEN_HEAVY
-	effective_range = 2
-	effective_range_type = EFF_RANGE_EXACT
-	sharpness_penalty = 2
-	blade_class = BCLASS_CHOP
-	reach = 2
-	swingdelay = 2
-	icon_state = "inchop"
-	attack_verb = list("lunges and chops", "lunges and hacks")
-	animname = "chop"
-	hitsound = list('sound/combat/hits/bladed/genchop (1).ogg', 'sound/combat/hits/bladed/genchop (2).ogg', 'sound/combat/hits/bladed/genchop (3).ogg')
-	clickcd = 14
-	item_d_type = "slash"
-
-
-/datum/intent/axe/sweep
-	name = "sweeping cut"
-	icon_state = "insweep"
-	blade_class = BCLASS_CUT
-	attack_verb = list("sweeps through", "cuts across")
-	animname = "cut"
-	hitsound = list('sound/combat/hits/bladed/smallslash (1).ogg', 'sound/combat/hits/bladed/smallslash (2).ogg', 'sound/combat/hits/bladed/smallslash (3).ogg')
-	penfactor = PEN_NONE
-	damfactor = 1.1
-	demolition_mod = 2
-	clickcd = CLICK_CD_MASSIVE
-	chargetime = 0
-	item_d_type = "slash"
-	cleave = /datum/cleave_pattern/frontal_arc
-	desc = "A heavy sweep that cuts through targets to the sides and front."
-
 /obj/item/rogueweapon/greataxe
 	name = "greataxe"
 	desc = "A large axe, requiring both hands to properly swing. It carves, chops, and cleaves from afar."
@@ -614,11 +551,12 @@
 	force_wielded = 35
 	smeltresult = /obj/item/ingot/blacksteel
 	possible_item_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, /datum/intent/axe/thrust, SPEAR_BASH)
-	gripped_intents = list(/datum/intent/axe/cut/long, /datum/intent/axe/chop/long, /datum/intent/axe/thrust/ranged, /datum/intent/axe/sweep)
+	gripped_intents = list(/datum/intent/axe/cut/long, /datum/intent/axe/chop/long, /datum/intent/axe/chop/heavy, /datum/intent/axe/sweep)
 	max_blade_int = 500
 	wdefense_wbonus = 4 //Increased defense when wielded.
 	special = /datum/special_intent/axe_swing //Weapon specials on a non-greatsword? How scandalous!
 	resistance_flags = FIRE_PROOF
+	alt_grips = list(/datum/alt_grip/poleaxe/vomtag) //Only poleaxe to get an alternate grip. Chiefly, to account for all unique intents.
 
 /obj/item/rogueweapon/greataxe/bronze
 	name = "bronze greataxe"
@@ -664,7 +602,6 @@
 /obj/item/rogueweapon/greataxe/steel/knight/attack_self(mob/living/user)
 	. = ..()
 	update_icon()
-
 
 /obj/item/rogueweapon/greataxe/steel/knight/silver
 	name = "silver poleaxe"
@@ -789,13 +726,37 @@
 	var/inactive_intents = list()
 	var/inactive_gripped_intents = list()
 
-/obj/item/rogueweapon/stoneaxe/battle/holyseeaxe
-	name = "holy see axe"
-	desc = "A blessed axe, wielded by the Holy See's crusaders to keep the forces of evil at bay, \
-			it is oft rumored these axes are commonplace amongst the greater crusades of the See against \
-			Heathenry and Heretic alyke, often used to tear down walls and fortifications that heretics hide within, \
-			a ceremonial manifestation of Malum's destruction and Astrata's all-reaching grasp of authority."
-	icon_state = "churchaxe"
+/obj/item/rogueweapon/stoneaxe/oath
+	name = "oath"
+	desc = "A hefty, steel-forged axe marred by the touch of countless Wardens. Despite its weathered etchings and worn grip, the blade has been honed to a razor's edge and you can see your reflection in the finely polished metal."
+	force = 30
+	force_wielded = 40
+	wbalance = WBALANCE_HEAVY
+	possible_item_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, /datum/intent/axe/bash/battle)
+	gripped_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, /datum/intent/axe/bash/battle)
+	icon_state = "oath"
+	icon = 'icons/roguetown/weapons/axes64.dmi'
+	max_blade_int = 500
+	dropshrink = 0.75
+	wlength = WLENGTH_LONG
+	slot_flags = ITEM_SLOT_BACK
+	pixel_y = -16
+	pixel_x = -16
+	inhand_x_dimension = 64
+	inhand_y_dimension = 64
+	bigboy = TRUE
+	gripsprite = TRUE
+	smeltresult = /obj/item/ingot/steel
+	minstr = 12
 	wdefense = 5
-	max_blade_int = 260
-	max_integrity = 150
+	anvilrepair = /datum/skill/craft/weaponsmithing
+
+/obj/item/rogueweapon/stoneaxe/oath/getonmobprop(tag)
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.5,"sx" = -8,"sy" = -1,"nx" = 9,"ny" = -1,"wx" = -4,"wy" = -1,"ex" = 3,"ey" = -1,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = -45,"sturn" = 45,"wturn" = 45,"eturn" = -45,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0,"wielded")
+			if("wielded")
+				return list("shrink" = 0.5,"sx" = 4,"sy" = -4,"nx" = -6,"ny" = -3,"wx" = -8,"wy" = -4,"ex" = 8,"ey" = -4,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0,"onback")
+			if("onbelt")
+				return list("shrink" = 0.5,"sx" = 1,"sy" = -1,"nx" = 1,"ny" = -1,"wx" = 4,"wy" = -1,"ex" = -1,"ey" = -1,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 8,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0,)

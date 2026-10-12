@@ -734,3 +734,41 @@
 	blade_class = BCLASS_DISARM
 	damfactor = 0
 	item_d_type = "blunt"
+
+//Special alternative grip attacks for high-end swords.
+/datum/intent/sword/cut/special
+	name = "sweeping blow"
+	desc = "Swing your blade in a wide arc, allowing you to strike multiple opponents in one stroke. The wide follow-through leaves you exposed, \
+	however, and will cause your blade to chip quicker."
+	icon_state = "insweep"
+	attack_verb = list("grazes","sweeps across")
+	hitsound = list('sound/combat/hits/bladed/genslash (1).ogg', 'sound/combat/hits/bladed/genslash (2).ogg', 'sound/combat/hits/bladed/genslash (3).ogg')
+	damfactor = 1
+	penfactor = PEN_LIGHT
+	clickcd = CLICK_CD_MASSIVE
+	swingdelay = 0.5 SECONDS
+	swingdelay_type = SWINGDELAY_PENALTY
+	cleave = /datum/cleave_pattern/frontal_arc
+	sharpness_penalty = 1
+
+/datum/intent/sword/cut/special/quick
+	name = "light sweeping blow"
+	desc = "Quickly slash your blade along a less taxing path, allowing you to strike several opponents in one stroke."
+	icon_state = "inslash"
+	attack_verb = list("grazes","sweeps across")
+	damfactor = 0.8
+	clickcd = CLICK_CD_CHARGED
+	swingdelay_type = null
+	cleave = /datum/cleave_pattern/horizontal_sweep
+
+/datum/intent/sword/thrust/long/deep/special
+	name = "piercing lunge"
+	desc = "Thrust with enough force to pierce another opponent, back-to-back. Quicker to strike, but harsher on both the blade and your \
+	own defensive stance."
+	icon_state = "inlunge"
+	clickcd = CLICK_CD_CHARGED
+	swingdelay = 0.5 SECONDS
+	damfactor = 1
+	swingdelay_type = SWINGDELAY_PENALTY
+	cleave = /datum/cleave_pattern/horizontal_sweep
+	sharpness_penalty = 1

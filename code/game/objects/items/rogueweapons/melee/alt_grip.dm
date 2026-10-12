@@ -541,12 +541,6 @@
 		"wdefense" = -2
 	)
 
-/datum/alt_grip/mordhau/sword/lesser
-	grip_intents = list(
-		SWORD_BASH,
-		/datum/intent/effect/daze
-	)
-
 /datum/alt_grip/mordhau/sword/frei
 	name = "abrazare"
 	two_handed = TRUE
@@ -603,13 +597,6 @@
 		"wdefense" = 2
 	)
 
-/datum/alt_grip/halfsword/lesser // Certain swords are especially nuclear like the Martyr and ZIZO swords.
-	grip_intents = list( // The swords have 40 force. I cannot give it the 0.8x damage blunt or it's just a grand mace.
-		/datum/intent/sword/thrust/long/halfsword/jab, // Instead, you get to keep new daze and the new stabs but not the new blunt intents or plate pen halfswording.
-		SWORD_BASH,
-		/datum/intent/sword/thrust/long/deep/halfsword
-	)
-
 /datum/alt_grip/halfsword/frei
 	name = "mezza spada"
 	trait_applied = list(TRAIT_LONGSWORDSMAN, TRAIT_FREEBLADE)
@@ -654,6 +641,46 @@
 			"wflip" = 1,
 			"eflip" = 0,
 		),
+	)
+	var_overrides = list(
+		"wlength" = WLENGTH_LONG
+	)
+
+/datum/alt_grip/halfsword/special
+	name = "montante" //A unique alternative to the 'lesser' stances specifically given to the Avantyne Kriegmesser and Divine Longsword.
+	skill_req = SKILL_LEVEL_EXPERT //Befitting the wielders, it's a slew of AOE intents - at the cost of reduced defense and yellow-intentedness.
+	grip_intents = list( //Penetration doesn't exceed MEDIUM AP, and damage multipliers don't exceed 1x. They get high-enough damage as-is.
+		/datum/intent/sword/cut/special,
+		/datum/intent/sword/cut/special/quick,
+		/datum/intent/sword/thrust/long/deep/special
+	)
+	onmobprop_overrides = list(
+		"altgrip" = list(
+			"shrink" = 0.65,
+			"sx" = 5,
+			"sy" = -7,
+			"nx" = -7,
+			"ny" = 1,
+			"wx" = -9,
+			"wy" = 2,
+			"ex" = 10,
+			"ey" = 2,
+			"northabove" = 0,
+			"southabove" = 1,
+			"eastabove" = 1,
+			"westabove" = 0,
+			"nturn" = 5,
+			"sturn" = -179,
+			"wturn" = -170,
+			"eturn" = -10,
+			"nflip" = 8,
+			"sflip" = 8,
+			"wflip" = 1,
+			"eflip" = 0,
+		),
+	)
+	additive_var_overrides = list(
+		"wdefense" = -2
 	)
 	var_overrides = list(
 		"wlength" = WLENGTH_LONG
@@ -749,6 +776,44 @@
 		"wdefense" = 2 //More defense to account for the closer-gripped stance.
 	)
 
+/datum/alt_grip/poleaxe/vomtag
+	name = "vom tag" // Repurposed to be a Blacksteel Greataxe-specific grip (to ensure all grips fit), but can be added to other poleaxes. Maybe?
+	skill_req = SKILL_LEVEL_JOURNEYMAN // Translates, most literally, to 'guard of the ceiling'. Low defense, but more delicious two-tile attacks.
+	grip_intents = list(
+		/datum/intent/axe/cut/long,
+		/datum/intent/axe/chop/long,
+		/datum/intent/axe/chop/long/halberd,
+		/datum/intent/axe/thrust/ranged
+	)
+	onmobprop_overrides = list(
+		"altgrip" = list(
+			"shrink" = 0.6,
+			"sx" = 5,
+			"sy" = -4,
+			"nx" = -5,
+			"ny" = -3,
+			"wx" = -5,
+			"wy" = -2,
+			"ex" = 3,
+			"ey" = -3,
+			"northabove" = 0,
+			"southabove" = 1,
+			"eastabove" = 1,
+			"westabove" = 1,
+			"nturn" = 7,
+			"sturn" = 6,
+			"wturn" = 29,
+			"eturn" = -9,
+			"nflip" = 21,
+			"sflip" = 0,
+			"wflip" = 8,
+			"eflip" = 0,
+		),
+	)
+	additive_var_overrides = list(
+		"wdefense" = -3
+	)
+
 /datum/alt_grip/poleaxe/reverse
 	name = "staut verkert" //It only took me a year to find this out! Flips the scaling to make it work like a lesser polemace. Fencing-originated term for "reversed stance".
 	skill_req = SKILL_LEVEL_JOURNEYMAN //Restricted to one-tile range and loses the cutting edge, but comes with a very good Strike subintent alongside a variant of Smash with reduced knockback.
@@ -821,7 +886,7 @@
 		),
 	)
 
-//Polehammers-specific alternative grips.
+//Polehammer-specific alternative grips.
 /datum/alt_grip/polehammer
 	two_handed = TRUE
 
@@ -998,7 +1063,7 @@
 
 /datum/alt_grip/greatsword/zornhut
 	name = "zornhut" //Translates to "wrathful posture". Trades the greatsword's AOE-centric attacks for oppressive single-target damage.
-	skill_req = SKILL_LEVEL_EXPERT //Experimental. Big swords require big minds, especially when used in such proactive manners.
+	skill_req = SKILL_LEVEL_JOURNEYMAN
 	grip_intents = list( //To be specific, this technique - like in real life - counters guards and polearms. Mind the low defense, however.
 		/datum/intent/sword/thrust/zwei,
 		/datum/intent/sword/chop/ranged/zornhut,

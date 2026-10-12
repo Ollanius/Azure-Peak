@@ -99,6 +99,7 @@
 	name = "heavy ranged chop"
 	desc = "Leverage your halberd's weight to drive its axehead through maille, at the cost of a slower follow-through that makes it harder to intercept \
 	incoming strikes. Only effective at exactly two paces."
+	icon_state = "inslash"
 	penfactor = PEN_HEAVY
 	clickcd = CLICK_CD_HEAVY
 	swingdelay = 0.3 SECONDS //Lower than regular chops, in order to account for the Sweetspot mechanic.
@@ -125,3 +126,41 @@
 /datum/intent/axe/bash/battle
 	name = "heavy bash"
 	damfactor = 0.8 //Buttstrokes, in essence. +20% damage over the standard variant.
+
+/datum/intent/axe/cut/lunge
+	name = "ćiupaga lunge"
+	desc = "Grip your ćiupaga by the tail-end of the handle and swing in a circular motion to reach further ahead. It will deal extra damage if perfectly positioned, otherwise you'll just hit them with the handle."
+	damfactor = 1.75
+	penfactor = PEN_HEAVY
+	effective_range = 2
+	effective_range_type = EFF_RANGE_EXACT
+	sharpness_penalty = 2
+	blade_class = BCLASS_CHOP
+	reach = 2
+	swingdelay = 2
+	icon_state = "inchop"
+	attack_verb = list("lunges and chops", "lunges and hacks")
+	animname = "chop"
+	hitsound = list('sound/combat/hits/bladed/genchop (1).ogg', 'sound/combat/hits/bladed/genchop (2).ogg', 'sound/combat/hits/bladed/genchop (3).ogg')
+	clickcd = 14
+	item_d_type = "slash"
+
+/datum/intent/axe/sweep
+	name = "sweeping cut"
+	icon_state = "insweep"
+	blade_class = BCLASS_CUT
+	attack_verb = list("sweeps through", "cuts across")
+	animname = "cut"
+	hitsound = list('sound/combat/hits/bladed/smallslash (1).ogg', 'sound/combat/hits/bladed/smallslash (2).ogg', 'sound/combat/hits/bladed/smallslash (3).ogg')
+	penfactor = PEN_NONE
+	damfactor = 1.1
+	demolition_mod = 2
+	clickcd = CLICK_CD_MASSIVE
+	chargetime = 0
+	item_d_type = "slash"
+	cleave = /datum/cleave_pattern/frontal_arc
+	desc = "A heavy sweep that cuts through targets to the sides and front."
+
+/datum/intent/axe/cut/handaxe
+	damfactor = 1.1
+	clickcd = CLICK_CD_QUICK

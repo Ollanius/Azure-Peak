@@ -4,9 +4,7 @@ Standalone browser tool for inspecting a DMI iconstate, simulating the in-game o
 
 ## Run It
 
-You can right-click [index.html](index.html)'s tab while it's opened in [VSC](https://code.visualstudio.com/) and select 'Open In Integrated Browser' to access it.
-
-Otherwise, if you're using a different client or alternative means of coding, open [index.html](index.html) in a browser.
+Open [index.html](index.html) in a browser.
 
 If your browser blocks local file features, serve the folder with a simple static server:
 
@@ -16,6 +14,8 @@ python -m http.server 8000 --bind 127.0.0.1
 ```
 
 Then open `http://localhost:8000`.
+
+Alternatively, you can right-click [index.html](index.html)'s tab while it's opened in [VSC](https://code.visualstudio.com/) and select 'Open In Integrated Browser' to access it.
 
 ## What The Tool Does
 
