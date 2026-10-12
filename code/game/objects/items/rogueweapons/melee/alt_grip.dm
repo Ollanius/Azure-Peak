@@ -1134,3 +1134,5 @@
 			"eflip" = 0,
 		),
 	)
+
+/datum/alt_grip/mordhau/broadsword/forgotten_blade //Load-bearing for now; will remove later.
