@@ -1047,7 +1047,8 @@
 
 /datum/intent/effect/daze
 	name = "dazing strike"
-	desc = "A heavy strike aimed at the head to daze them."
+	desc = "A heavy strike that causes temporary disorientation, but only when successfully landed on the head. The slower follow-through makes it \
+	harder to complete without risking an interruption."
 	icon_state = "indaze"
 	attack_verb = list("dazes")
 	animname = "strike"
@@ -1060,5 +1061,13 @@
 	target_parts = list(BODY_ZONE_HEAD)
 	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR
 	candodge = FALSE
-	canparry = FALSE
+	canparry = FALSEw
 	swingdelay_type = SWINGDELAY_CANCEL
+
+/datum/intent/effect/daze/ranged
+	name = "ranged dazing strike"
+	desc = "A heavy strike that causes temporary disorientation, but only when successfully landed on the head. The slower follow-through makes it \
+	harder to complete without risking an interruption. Only effective at exactly two paces."
+	reach = 2
+	effective_range = 2
+	effective_range_type = EFF_RANGE_EXACT

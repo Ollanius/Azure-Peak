@@ -1,27 +1,11 @@
-/datum/intent/spear/bash/staff
-	name = "staff bash"
-	damfactor = 1
-	reach = 1
-
-/datum/intent/spear/bash/ranged/quarterstaff
-	damfactor = 1
-
-/datum/intent/spear/thrust/quarterstaff
-	blade_class = BCLASS_BLUNT
-	hitsound = list('sound/combat/hits/blunt/bluntsmall (1).ogg', 'sound/combat/hits/blunt/bluntsmall (2).ogg')
-	penfactor = PEN_NONE
-	damfactor = 1.3 // Adds up to be slightly stronger than an unenhanced ebeak strike.
-	clickcd = CLICK_CD_CHARGED
-	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR
-
 /obj/item/rogueweapon/woodstaff
+	name = "wooden staff"
+	desc = "A solid dependable walking stick that allows one to traverse rough terrain with ease, keep the weight off an \
+	injured leg, or reliably fend off incoming blows. Perfect for beggars, pilgrims, and mages."
 	force = 10
 	force_wielded = 15
 	possible_item_intents = list(SPEAR_BASH)
 	gripped_intents = list(/datum/intent/spear/bash/ranged, /datum/intent/mace/smash/wood/ranged)
-	name = "wooden staff"
-	desc = "A solid dependable walking stick that allows one to traverse rough terrain with ease, keep the weight off an \
-	injured leg, or reliably fend off incoming blows. Perfect for beggars, pilgrims, and mages."
 	icon_state = "woodstaff"
 	icon = 'icons/roguetown/weapons/polearms64.dmi'
 	wlength = WLENGTH_LONG
@@ -42,6 +26,7 @@
 	resistance_flags = FLAMMABLE
 	twirly = SKILL_LEVEL_JOURNEYMAN
 	twirl_speed = 6
+	secondary_skills = list(/datum/skill/combat/polearms = 0.8)
 
 /obj/item/rogueweapon/woodstaff/getonmobprop(tag)
 	. = ..()
@@ -53,6 +38,22 @@
 				return list("shrink" = 0.6,"sx" = 4,"sy" = -2,"nx" = -3,"ny" = -2,"wx" = -5,"wy" = -1,"ex" = 3,"ey" = -2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 7,"sturn" = -7,"wturn" = 16,"eturn" = -22,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
 			if("onbelt")
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
+
+/datum/intent/spear/bash/staff
+	name = "staff bash"
+	damfactor = 1
+	reach = 1
+
+/datum/intent/spear/bash/ranged/quarterstaff
+	damfactor = 1
+
+/datum/intent/spear/thrust/quarterstaff
+	blade_class = BCLASS_BLUNT
+	hitsound = list('sound/combat/hits/blunt/bluntsmall (1).ogg', 'sound/combat/hits/blunt/bluntsmall (2).ogg')
+	penfactor = PEN_NONE
+	damfactor = 1.3 // Adds up to be slightly stronger than an unenhanced ebeak strike.
+	clickcd = CLICK_CD_CHARGED
+	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR
 
 /obj/item/rogueweapon/woodstaff/wise
 	name = "wise staff"
@@ -71,6 +72,7 @@
 	pixel_x = -22
 	possible_item_intents = list(SPEAR_BASH, /datum/intent/bless)
 	gripped_intents = list(/datum/intent/spear/bash/ranged, /datum/intent/mace/smash/wood/ranged, /datum/intent/bless)
+	secondary_skills = list(/datum/skill/combat/polearms = 0.8, /datum/skill/magic/holy = 0.6)
 
 /obj/item/rogueweapon/woodstaff/aries/icarus // more boisterous with aura
 	name = "staff of the guide"
@@ -341,4 +343,3 @@
 	sellprice = 80
 	no_loot_taint = TRUE
 	max_integrity = 250 //equal to psydonite; putting it at half of this was a neat little experiment but agonizing
-
