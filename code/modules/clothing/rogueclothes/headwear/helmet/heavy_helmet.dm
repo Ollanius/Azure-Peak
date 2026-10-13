@@ -1,4 +1,4 @@
-/obj/item/clothing/head/roguetown/helmet/heavy
+/obj/item/clothing/head/roguetown/helmet/heavy a
 	name = "barbute"
 	desc = "A simple helmet with a visor in the shape of a Y."
 	body_parts_covered = FULL_HEAD
