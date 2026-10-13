@@ -1465,22 +1465,19 @@
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDESNOUT
 	adjustable = CANT_CADJUST
 
-/*
 /obj/item/clothing/head/roguetown/helmet/heavy/avantyne
 	name = "avantyne-threaded veil"
 	desc = "A veil threaded from an otherworldly alloy, perpetually backlit with an eerie crimson haze. Glimpse into the abyss for too \
 	long.. </br>‎	<font color='FF0000'>..and something will look back.</font>."
 	body_parts_covered = FULL_HEAD|NECK
-	icon_state = "zizoplatehelm_med"
-	item_state = "zizoplatehelm_med"
+	icon_state = "zizobascinet"
+	item_state = "zizobascinet"
 	flags_inv = HIDEFACE|HIDESNOUT|HIDEEARS
 	body_parts_covered = HEAD|EARS|HAIR
 	adjustable = CANT_CADJUST
 	smeltresult = /obj/item/ingot/avantyne
 	armor = ARMOR_PLATE_BSTEEL
 	armor_class = ARMOR_CLASS_LIGHT
-
-*/
 
 /obj/item/clothing/head/roguetown/helmet/heavy/bucket/iron
 	name = "iron bucket helm"

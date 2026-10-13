@@ -1255,7 +1255,7 @@
 /obj/item/clothing/head/roguetown/helmet/heavy/knight/rockhill/attackby(obj/item/W, mob/living/user, params)
 	..()
 	if(istype(W, /obj/item/natural/cloth) && !altdetail_tag)
-		var/choicealt = input(user, "Choose a color.", "Scarf") as anything in COLOR_MAP + GLOB.pridelist
+		var/choicealt = input(user, "Choose a color.", "Scarf") as anything in COLOR_MAP
 		user.visible_message(span_warning("[user] adds [W] to [src]."))
 		user.transferItemToLoc(W, src, FALSE, FALSE)
 		altdetail_color = COLOR_MAP[choicealt]
