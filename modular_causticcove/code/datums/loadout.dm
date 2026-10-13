@@ -126,7 +126,7 @@
 //Accessability of most Universal Donor-type items for regular players, with all necessary permissions granted.
 
 /datum/loadout_item/verified
-	verified_cost = 1
+	triumph_cost = 1
 	sort_category = "Verified"
 
 /datum/loadout_item/verified/cackledagger

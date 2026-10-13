@@ -1162,9 +1162,6 @@
 	worn_y_dimension = 64
 	bloody_icon = 'icons/effects/blood64.dmi'
 
-/obj/item/clothing/head/roguetown/helmet/heavy/barbute/avantyne/get_examine_highlight_status()
-	return list(EXAMINEHIGHLIGHT_HERESYSEVERITY_ALARMING, HERESYDESC_ZIZO_ARMOR)
-
 /obj/item/clothing/head/roguetown/roguehood/shadedhat
 	name = "shaded hat"
 	desc = "A friend to travelers across antique and distant lands; the sort where Astrata's light is bright enough to blind the unprepared, specifically."
@@ -2159,10 +2156,6 @@
 	grid_height = 64
 	grid_width = 64
 	bigboy = TRUE
-	examine_highlight_severity = EXAMINEHIGHLIGHT_HERESYSEVERITY_ALARMING
-	examine_highlight_desc = HERESYDESC_ZIZO_WEAPON
-	twirly = SKILL_LEVEL_JOURNEYMAN
-	twirl_speed = 6
 
 //KORUU
 /obj/item/clothing/head/roguetown/mentorhat/koruu
@@ -2269,15 +2262,6 @@ As Excaliber."
 	worn_y_dimension = 64
 	bloody_icon = 'icons/effects/blood64.dmi'
 
-/obj/item/clothing/head/roguetown/helmet/bascinet/pigface/hounskull/dakken/get_examine_highlight_status()
-	return list(EXAMINEHIGHLIGHT_HERESYSEVERITY_ALARMING, HERESYDESC_ZIZO_AVANTYNE)
-
-/obj/item/clothing/head/roguetown/helmet/heavy/knight/armet/dakken/get_examine_highlight_status()
-	return list(EXAMINEHIGHLIGHT_HERESYSEVERITY_ALARMING, HERESYDESC_ZIZO_AVANTYNE)
-
-/obj/item/clothing/head/roguetown/helmet/heavy/barbute/visor/dakken/get_examine_highlight_status()
-	return list(EXAMINEHIGHLIGHT_HERESYSEVERITY_ALARMING, HERESYDESC_ZIZO_AVANTYNE)
-
 /obj/item/rogueweapon/sword/dakken_sword
 	name = "avantyne-threaded sword"
 	desc = "'Threads of dark metal wind through what was formerly a simple steel blade. Cracks and chips are filled in as the weapon of war is reshaped into a symbol of faith.'"
@@ -2285,18 +2269,12 @@ As Excaliber."
 	icon_state = "alloybsword_32"
 	sheathe_icon = "alloybsword"
 
-/obj/item/rogueweapon/sword/dakken_sword/get_examine_highlight_status()
-	return list(EXAMINEHIGHLIGHT_HERESYSEVERITY_ALARMING, HERESYDESC_ZIZO_AVANTYNE)
-
 /obj/item/rogueweapon/sword/long/dakken_longsword
 	name = "avantyne-threaded longsword"
 	desc = "'Threads of dark metal wind through what was formerly a simple steel blade. Cracks and chips are filled in as the weapon of war is reshaped into a symbol of faith.'"
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
 	icon_state = "alloyblongsword"
 	sheathe_icon = "alloybsword"
-
-/obj/item/rogueweapon/sword/long/dakken_longsword/get_examine_highlight_status()
-	return list(EXAMINEHIGHLIGHT_HERESYSEVERITY_ALARMING, HERESYDESC_ZIZO_AVANTYNE)
 
 /obj/item/rogueweapon/spear/boar/frei/pike/stinketh
 	name = "Kindness of Ravens Standard"
@@ -3062,9 +3040,6 @@ As Excaliber."
 	sheathe_icon = "fls"
 	icon = 'icons/obj/items/donor_weapons_64.dmi'
 	swingsound = BLADEWOOSH_HUGE
-
-/obj/item/rogueweapon/sword/long/aticius/get_examine_highlight_status()
-	return list(EXAMINEHIGHLIGHT_HERESYSEVERITY_ODD, HERESYDESC_GILBRANZE_ARTIFICE)
 
 // OCTUS
 /obj/item/rogueweapon/greatsword/falling_star
