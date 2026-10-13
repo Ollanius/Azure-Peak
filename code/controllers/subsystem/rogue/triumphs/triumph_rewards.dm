@@ -196,3 +196,13 @@
 	name = "bottle of beer"
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer = 50)
 	desc = "A glass bottle with a laced cork-seal. It swishes with fizzled goodness; a cure to the parched throat, a remedy to the sleepless nites, and a toast for the journey ahead."
+
+// Caustic Cove Edit Start
+/obj/item/clothing/mask/rogue/lordmask/naledi/triumph
+	name = "tarnished war scholar's mask"
+	item_state = "naledimask"
+	icon_state = "naledimask"
+	desc = "Runes and wards, meant for daemons; the gold has somehow rusted in unnatural, impossible agony. The most prominent of these etchings is in the shape of the Naledian psycross. This one will not provide armor to the wearer's face."
+	armor = null
+	sellprice = 25
+// Caustic Cove Edit End
