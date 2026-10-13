@@ -19,7 +19,6 @@
 	..()
 	AddComponent(/datum/component/armour_filtering/negative, TRAIT_HONORBOUND)
 	AddComponent(/datum/component/armour_filtering/negative, TRAIT_FENCERDEXTERITY)
-	AddComponent(/datum/component/armour_filtering/negative, TRAIT_FREEBLADEDEXTERITY)
 
 /obj/item/clothing/head/roguetown/helmet/heavy/bronze
 	name = "bronze barbute"
@@ -1198,6 +1197,12 @@
 	name = "volfskulle bascinet"
 	armor_class = null	//Needs no armor class, snowflake merc gear.
 
+/obj/item/clothing/head/roguetown/helmet/heavy/volfplate/puritan
+	name = "volfskulle bascinet"
+	desc = "A steel bascinet helmet with a snarling visor that protects the entire head and face. It mimics the \
+	guise of a terrible nitebeast; intimidating to the levyman, inspiring to the hunter."
+	armor_class = null	//Needs no armor class, snowflake merc gear.
+
 /obj/item/clothing/head/roguetown/helmet/heavy/volfplate/berserker
 	name = "stripped volfskulle bascinet"
 	desc = "A steel bascinet helmet with a snarling visor that protects the entire head and face. Just like the nitebeasts it mimics, so too does the helmet's teeth glisten with flesh-sundering sharpness."
@@ -1402,9 +1407,6 @@
 	. = ..()
 	AddComponent(/datum/component/cursed_item, TRAIT_FREEMAN, "ARMOR")
 
-/obj/item/clothing/head/roguetown/helmet/heavy/matthios/get_examine_highlight_status()
-	return list(EXAMINEHIGHLIGHT_HERESYSEVERITY_ALARMING, HERESYDESC_MATTHIOS_ARMOR)
-
 /obj/item/clothing/head/roguetown/helmet/heavy/graggar
 	name = "vicious helmet"
 	desc = "Snarled teeth gnash the unholy bascinet's visor, drenched in scarlet. Your beluxed invocation; the dinnerbell for a feast of blood and steel."
@@ -1417,9 +1419,6 @@
 /obj/item/clothing/head/roguetown/helmet/heavy/graggar/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/cursed_item, TRAIT_HORDE, "HELM", "RENDERED ASUNDER")
-
-/obj/item/clothing/head/roguetown/helmet/heavy/graggar/get_examine_highlight_status()
-	return list(EXAMINEHIGHLIGHT_HERESYSEVERITY_ALARMING, HERESYDESC_GRAGGAR_ARMOR)
 
 /obj/item/clothing/head/roguetown/helmet/heavy/graggar/equipped(mob/living/user, slot)
 	. = ..()
@@ -1469,8 +1468,6 @@
 	. = ..()
 	AddComponent(/datum/component/adjustable_clothing, (HEAD|EARS|HAIR), (HIDEEARS|HIDEHAIR), null, 'sound/items/visor.ogg', null, UPD_HEAD)	//Standard helmet
 
-/obj/item/clothing/head/roguetown/helmet/heavy/zizo/get_examine_highlight_status()
-	return list(EXAMINEHIGHLIGHT_HERESYSEVERITY_ALARMING, HERESYDESC_ZIZO_ARMOR)
 
 /obj/item/clothing/head/roguetown/helmet/heavy/zizo/frogge
 	name = "avantyne froggemund"
@@ -1511,8 +1508,6 @@
 	armor = ARMOR_PLATE_BSTEEL
 	armor_class = ARMOR_CLASS_LIGHT
 
-/obj/item/clothing/head/roguetown/helmet/heavy/avantyne/get_examine_highlight_status()
-	return list(EXAMINEHIGHLIGHT_HERESYSEVERITY_ALARMING, HERESYDESC_ZIZO_ARMOR)
 */
 
 /obj/item/clothing/head/roguetown/helmet/heavy/bucket/iron

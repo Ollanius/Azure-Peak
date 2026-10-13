@@ -112,15 +112,6 @@
 	TI.righthand_file = RI::righthand_file
 	TI.sheathe_icon = RI::sheathe_icon ? RI::sheathe_icon : TI.sheathe_icon
 	TI.bigboy = RI::bigboy
-	TI.examine_highlight_severity = RI::examine_highlight_severity
-	TI.examine_highlight_desc = RI::examine_highlight_desc
-	TI.twirly = RI::twirly
-	TI.twirl_speed = RI::twirl_speed
-	TI.twirl_verb = RI::twirl_verb
-	TI.twirl_sound = RI::twirl_sound
-	TI.twirl_flourish_sound = RI::twirl_flourish_sound
-	TI.twirl_cmode = RI::twirl_cmode
-	TI.fumble_chance = RI::fumble_chance
 
 	to_chat(user, span_notice("You apply the [src] to [I], using the enchanting dust and tools to turn it into [RI::name]."))
 	if(custom_name == FALSE)

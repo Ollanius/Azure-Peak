@@ -2964,18 +2964,6 @@ As Excaliber."
 	color = null
 	allowed_sex = list(FEMALE)
 
-/obj/item/clothing/head/roguetown/crown/serpcrown/mortosuncrown
-	name = "sun crown"
-	article = null // prevents it becoming the the sun crown.
-	desc = "A far too extravagant crown made of gold, sporting a rontz at the center. The metal has been shaped to resemble sunrays."
-	replace_existing_roguemachine_crown = TRUE
-	icon_state = "mortosasye_suncrown"
-	item_state = "mortosasye_suncrown"
-	icon = 'icons/clothing/donor_clothes.dmi'
-	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes64.dmi'
-	worn_x_dimension = 64
-	worn_y_dimension = 64
-
 /obj/item/clothing/head/roguetown/circlet/donator_mortosasye_golddiadem
 	name = "gold diadem"
 	desc = "A simple diadem sporting a diamond-shape at the center, made of gold. It is a simple, yet elegant piece of jewelry - passed down through generations of the Xulu noble house."
@@ -4628,42 +4616,6 @@ As Excaliber."
 	icon = 'icons/clothing/donor_clothes.dmi'
 	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
 	sleeved = 'icons/clothing/onmob/donor_sleeves_armor.dmi'
-
-//TrueTerrydactyl
-/obj/item/undies/bikini/shibari
-	name = "shibari ropes"
-	desc = "Strange smallclothes from stranger lands, consisting of a thin silk ropes that's decoratively wound across the body's more immodest points."
-	icon = 'icons/mob/sprite_accessory/underwear.dmi'
-	icon_state = "shibariropes"
-	covers_breasts = TRUE
-	sprite_acc = /datum/sprite_accessory/underwear/bikini/shibari
-
-/datum/sprite_accessory/underwear/bikini/shibari
-	name = "shibari ropes"
-	icon_state = "female_shibari"
-	preview_states = list("shibari_f_0")
-	underwear_type = /obj/item/undies/bikini/shibari
-	hides_breasts = TRUE
-
-/datum/sprite_accessory/underwear/bikini/shibari/get_icon_state(obj/item/organ/organ, obj/item/bodypart/bodypart, mob/living/carbon/owner)
-	if(owner.getorganslot(ORGAN_SLOT_BREASTS))
-		var/obj/item/organ/breasts/breasts = owner.getorganslot(ORGAN_SLOT_BREASTS)
-		var/tag = "shibari_f"
-		if(breasts.breast_size == 0)
-			tag = tag + "_0"
-		if(breasts.breast_size == 1)
-			tag = tag + "_0"
-		if(breasts.breast_size == 2)
-			tag = tag + "_0"
-		if(breasts.breast_size == 3)
-			tag = tag + "_0"
-		if(breasts.breast_size == 4)
-			tag = tag + "_0"
-		if(breasts.breast_size == 5)
-			tag = tag + "_0"
-		return tag
-	else
-		return "shibari_f_0"
 
 //Guidesa
 /obj/item/rogueweapon/shield/buckler/guidesa_bonebuckler
