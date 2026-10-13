@@ -1011,7 +1011,7 @@
 	wdefense = 6
 	possible_item_intents = list(/datum/intent/sword/cut, /datum/intent/sword/chop/heavy, /datum/intent/sword/thrust/long, /datum/intent/rend/krieg)
 	gripped_intents = list(/datum/intent/sword/cut/zwei, /datum/intent/sword/chop/heavy, /datum/intent/sword/thrust/estoc/lunge, /datum/intent/sword/thrust/estoc)
-	alt_grips = list(/datum/alt_grip/mordhau/broadsword/forgotten_blade)
+	alt_grips = list(/datum/alt_grip/greatsword/zornhut, /datum/alt_grip/halfsword/special)
 	swingsound = BLADEWOOSH_HUGE
 	wlength = WLENGTH_GREAT
 	w_class = WEIGHT_CLASS_BULKY

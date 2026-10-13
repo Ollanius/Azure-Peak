@@ -1061,7 +1061,7 @@
 	target_parts = list(BODY_ZONE_HEAD)
 	intent_intdamage_factor = BLUNT_DEFAULT_INT_DAMAGEFACTOR
 	candodge = FALSE
-	canparry = FALSEw
+	canparry = FALSE
 	swingdelay_type = SWINGDELAY_CANCEL
 
 /datum/intent/effect/daze/ranged
