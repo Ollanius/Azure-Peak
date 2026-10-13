@@ -615,12 +615,12 @@
 	bitesize = 1
 	list_reagents = list(/datum/reagent/consumable/nutriment = 2, /datum/reagent/toxin/fyritiusnectar = 5)
 	grind_results = list(/datum/reagent/toxin/fyritiusnectar = 10)
+	materia = list(/datum/materia_aspect/plant, /datum/materia_aspect/fire)
 	dropshrink = 0.8
 	rotprocess = null
 	w_class = WEIGHT_CLASS_TINY
 	throw_speed = 1
 	throw_range = 3
-	materia = list(/datum/materia_aspect/plant, /datum/materia_aspect/fire)
 	//CC Edit Begin
 	diet_types = list("Vegetables")
 	diet_change_amount = FOOD_DIETARY_VALUE_POOR - 1.5 //This shit is literally burning your guts lol
