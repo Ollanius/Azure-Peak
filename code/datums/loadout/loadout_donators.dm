@@ -4,7 +4,7 @@
 //Please make sure to NOT create a subtype of donator_x/item unless there's a parent type, else it will show up as parent loadout datum due to the implicitly defined parent
 
 /datum/loadout_item/donator
-	sort_category = "Verified"
+	sort_category = "Donator"
 
 /////////////////////////////
 // ! Unlocked Donor Kits ! //
