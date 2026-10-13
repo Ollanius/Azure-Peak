@@ -764,6 +764,7 @@
 	icon_state = "morningstar"
 	desc = "Royalty. </br>An uncommon derivative of the mace, studded with spikes and seated upon a serpentine shaft. When raised aloft, the macehead mimics a stylized imitation of Astrata's glare; ergo, 'morning star'."
 	wdefense = 5
+	secondary_skills = list(/datum/skill/combat/whipsflails = 0.8)
 
 /obj/item/rogueweapon/mace/warhammer
 	name = "warhammer"
