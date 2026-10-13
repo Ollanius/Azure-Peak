@@ -898,22 +898,6 @@
 			pic.color = get_detail_color()
 		add_overlay(pic)
 
-/obj/item/clothing/head/roguetown/helmet/heavy/volfplate/psydonic
-	name = "psydonic volfskulle bascinet"
-	desc = "An Otavan re-creation of the generic volfskulle bascinet. Far more protective than a muzzle, that's for certain."
-	icon_state = "psyhelm_s"
-	item_state = "psyhelm_s"
-	mob_overlay_icon = 'icons/roguetown/clothing/onmob/32x40/head.dmi'
-	worn_x_dimension = 32
-	worn_y_dimension = 40
-	adjustable = CANT_CADJUST
-	max_integrity = ARMOR_INT_HELMET_HEAVY_STEEL
-	smeltresult = /obj/item/ingot/silver
-
-/obj/item/clothing/head/roguetown/helmet/heavy/volfplate/psydonic/ComponentInitialize()
-	AddComponent(/datum/component/armour_filtering/negative, TRAIT_HONORBOUND)
-	AddComponent(/datum/component/armour_filtering/negative, TRAIT_FENCERDEXTERITY)
-
 /obj/item/clothing/head/roguetown/helmet/heavy/ordinatorhelm
 	name = "ordinator's blessed froggemund"
 	desc = "A design suggested by a Grenzelhoftian smith, an avid follower of Saint Abyssor - implying to base it on the templar's \

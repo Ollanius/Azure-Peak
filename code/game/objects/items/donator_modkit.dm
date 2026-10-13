@@ -463,7 +463,7 @@
 		/obj/item/rogueweapon/whip/bronze,
 		/obj/item/rogueweapon/whip/blacksteel,
 		/obj/item/rogueweapon/whip/silver,
-		/obj/item/rogueweapon/whip/silver/psy
+		/obj/item/rogueweapon/whip/psywhip_lesser
 	)
 	result_item = /obj/item/rogueweapon/example/donator_elegant_urumi
 
@@ -701,17 +701,6 @@
 		/obj/item/rogueweapon/sword/long
 	)
 	result_item = /obj/item/rogueweapon/eirenxiv/eirensword
-
-//waffai - silver for monsters, steel for men
-/obj/item/enchantingkit/weapon/waff
-	name = "'Weeper's Lathe' morphing elixir"
-	target_items = list(/obj/item/rogueweapon/sword/long/broadsword/silver)
-	result_item = /obj/item/rogueweapon/example/waffai_broadsword // silver broadsword is actually a kriegmesser subtype, who knew?
-
-/obj/item/enchantingkit/weapon/wafflamberge
-	name = "'Xenolalia' morphing elixir"
-	target_items = list(/obj/item/rogueweapon/greatsword/grenz/flamberge)
-	result_item = /obj/item/rogueweapon/example/waffai_flamberge
 
 //inverserun claymore
 /obj/item/enchantingkit/weapon/inverserun
@@ -960,8 +949,8 @@
 /obj/item/enchantingkit/weapon/koruu_kukri_silver
 	name = "'Psydonic Leachwhacker' morphing elixir"
 	target_items = list(
-		/obj/item/rogueweapon/huntingknife/idagger/steel/silver/psy,
-		/obj/item/rogueweapon/huntingknife/idagger/steel/silver
+		/obj/item/rogueweapon/huntingknife/idagger/silver/psydagger,
+		/obj/item/rogueweapon/huntingknife/idagger/silver
 
 	)
 	result_item = /obj/item/rogueweapon/koruu/kukri/silver
@@ -1032,17 +1021,6 @@
 		/obj/item/rogueweapon/eaglebeak
 	)
 	result_item = /obj/item/rogueweapon/example/des_gaebolg
-
-// inverserun
-/obj/item/enchantingkit/weapon/arra_amdir
-	name = "'Amdir' morphing elixir"
-	target_items = list(
-	/obj/item/rogueweapon/greataxe/steel/knight,
-	/obj/item/rogueweapon/greataxe/steel/knight/silver,
-	/obj/item/rogueweapon/greataxe/steel/knight/silver/psy
-
-	)
-	result_item = /obj/item/rogueweapon/example/arra_amdir
 
 //sakuyzo
 /obj/item/enchantingkit/weapon/sakuyzo
@@ -1121,13 +1099,6 @@
 		/obj/item/rogueweapon/woodstaff/implement/amethyst			=	/obj/item/rogueweapon/woodstaff/implement/amethyst/morto
 	)
 	result_item = null
-
-/obj/item/enchantingkit/morto_crown
-	name = "'Sun Crown' morphing elixir"
-	target_items = list(
-		/obj/item/clothing/head/roguetown/crown/serpcrown
-	)
-	result_item = /obj/item/clothing/head/roguetown/crown/serpcrown/mortosuncrown
 
 //Tyesca
 
@@ -1597,13 +1568,6 @@
 		/obj/item/clothing/head/roguetown/helmet/heavy/guard					= /obj/item/clothing/head/roguetown/helmet/bascinet/pigface/donator_stalkerino
 	)
 	result_item = null
-
-// Naman - Emblems of Fyre
-/obj/item/enchantingkit/donator_naman_deccoatofplates
-	name = "'Decorated Coat Of Plates' morphing elixir"
-	desc = "A small container of special morphing dust, perfect to make a specific item. It can be used to alter the appearance of a Steel Coat-Of-Plates."
-	target_items = list(/obj/item/clothing/suit/roguetown/armor/brigandine/heavy)
-	result_item = /obj/item/clothing/suit/roguetown/armor/brigandine/heavy/decorated
 
 /obj/item/enchantingkit/donator_naman_tassetedbeltpack
 	name = "'Tasseted Beltpack' morphing elixir"
