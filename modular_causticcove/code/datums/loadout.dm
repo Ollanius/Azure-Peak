@@ -6,7 +6,7 @@
 	name = "scroll of enlarge and reduce"
 	path = /obj/item/book/granter/spell/sizespell/loadout
 
-/datum/loadout_item/mirror_transform 
+/datum/loadout_item/mirror_transform
     name = "scroll of mirrored transform"
     path = /obj/item/book/granter/spell/mirror_transform/loadout
 
@@ -63,7 +63,7 @@
 /datum/loadout_item/kitsunemask
 	name = "kitsune mask"
 	path = /obj/item/clothing/mask/rogue/facemask/yoruku_kitsune/loadout
-	
+
 /datum/loadout_item/onimask
 	name = "oni mask"
 	path = /obj/item/clothing/mask/rogue/facemask/yoruku_oni/loadout
@@ -213,6 +213,18 @@
 	name = "Gift - Kit, Gothic Steel Armor"
 	path = /obj/item/enchantingkit/gothicsteelarmor
 
+/datum/loadout_item/verified/armor_gothic_burgeonet
+	name = "Gift - Kit, Gothic Burgeonet"
+	path = /obj/item/enchantingkit/gothicburgeonet
+
+/datum/loadout_item/verified/armor_gothic_psydonic
+	name = "Gift - Kit, Gothic Psydonic Cuirass"
+	path = /obj/item/enchantingkit/gothicpsydoniccuirass
+
+/datum/loadout_item/verified/armor_gothic_sallet
+	name = "Gift - Kit, Gothic Sallet"
+	path = /obj/item/enchantingkit/gothicsallet
+
 /datum/loadout_item/verified/cuirass_throwback
 	name = "Gift - Kit, Heroic Leather Cuirass"
 	path = /obj/item/enchantingkit/heroicleathercuirass
@@ -267,7 +279,7 @@
 
 /datum/loadout_item/verified/belt_bronze
 	name = "Gift - Belt of Bronze Maille"
-	path = /obj/item/storage/belt/rogue/leather/donator_bronze 
+	path = /obj/item/storage/belt/rogue/leather/donator_bronze
 
 /datum/loadout_item/verified/belt_iron
 	name = "Gift - Belt of Iron Maille"
@@ -296,3 +308,71 @@
 /datum/loadout_item/verified/heelkit
 	name = "Gift - Armor Cosmetic, Heelification Elixir"
 	path = /obj/item/heelkit
+
+/datum/loadout_item/verified/armorpiece_armharness
+	name = "Gift - Armor Cosmetic, Arm Harness"
+	path = /obj/item/enchantingkit/donator_universal_armharness
+
+/datum/loadout_item/verified/donator_cropped_gambeson
+	name = "Gift - Kit, Cropped Gambeson"
+	path = /obj/item/enchantingkit/donator_cropped_gambeson
+
+/datum/loadout_item/verified/donator_jacketed_gambeson_short
+	name = "Gift - Kit, Short Jacketed Gambeson"
+	path = /obj/item/enchantingkit/donator_jacketed_gambeson_short
+
+/datum/loadout_item/verified/donator_jacketed_gambeson_long
+	name = "Gift - Kit, Long Jacketed Gambeson"
+	path = /obj/item/enchantingkit/donator_jacketed_gambeson_long
+
+/datum/loadout_item/verified/donator_heavybrig
+	name = "Gift - Brigandine with Plate"
+	path = /obj/item/enchantingkit/triumph_armorkit_heavybrig
+
+/datum/loadout_item/verified/armorpiece_decapauldron
+	name = "Gift - Armor Cosmetic, Decablessed Pauldrons"
+	path = /obj/item/enchantingkit/donator_universal_decapauldron
+
+/datum/loadout_item/verified/armorpiece_steelpauldron
+	name = "Gift - Armor Cosmetic, Steel Pauldrons"
+	path = /obj/item/enchantingkit/donator_universal_steelpauldron
+
+/datum/loadout_item/verified/donator_brimmedhat
+	name = "Gift - Brimmed Hat"
+	path = /obj/item/clothing/head/roguetown/duelhat/donator_brimmedhat
+
+/datum/loadout_item/verified/donator_avantynehelm
+	name = "Gift - Kit, Avantyne-Threaded Barbute"
+	path = /obj/item/enchantingkit/donator_avantynehelm
+
+/datum/loadout_item/verified/donator_shawl
+	name = "Gift - Scarfed Shawl"
+	path = /obj/item/clothing/head/roguetown/shawl/donator
+
+/datum/loadout_item/verified/donator_rockhillarmet
+	name = "Gift - Kit, Knight-Errant's Armet"
+	path = /obj/item/enchantingkit/donator_rockhillarmet
+
+/datum/loadout_item/verified/donator_rockhillmaile
+	name = "Gift - Kit, Jacketed Plate-and-Maille"
+	path = /obj/item/enchantingkit/donator_rockhillmaille
+
+/datum/loadout_item/verified/donator_drowgoggles
+	name = "Gift - Kit, Skikuldic Goggles"
+	path = /obj/item/clothing/mask/rogue/spectacles/iron/drow
+
+/datum/loadout_item/verified/azurosa
+	name = "Gift - Azurosa Flower"
+	path = /obj/item/alch/rosa/azure
+
+/datum/loadout_item/verified/azurosa_seeds
+	name = "Gift - Azurosa Flower, Seeds"
+	path = /obj/item/storage/belt/rogue/pouch/azurosa_seeds
+
+/datum/loadout_item/verified/azurosa_crown
+	name = "Gift - Azurosa Flowers, Crown"
+	path = /obj/item/flowercrown/rosa/azure
+
+/datum/loadout_item/verified/azurosa_bouquet
+	name = "Gift - Azurosa Flowers, Bouquet"
+	path = /obj/item/bouquet/rosa/azure
