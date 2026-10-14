@@ -59,7 +59,7 @@
 	desc = "A powerful blow that delivers Strength-scaling knockback and slowdown to the target. The amount of inflicted knockback scales off your Strength, ranging from X (1 tile) to XIII (3 tiles). </br>Cannot inflict any knockback or slowdown if your Strength is below X. </br>Cannot be used consecutively more than every 5 seconds on the same target. </br>Prone targets halve the knockback distance. </br>Not fully charging the attack limits knockback to 1 tile."
 	maxrange = 3
 
-/datum/intent/mace/demolish
+/datum/intent/mace/lesserdemolish
 	name = "break"
 	desc = "A deliberate structure-breaking blow. Deals triple the damage to structures."
 	icon_state = "incrush"
