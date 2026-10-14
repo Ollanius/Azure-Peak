@@ -131,6 +131,11 @@
 	damfactor = 1.3 //Half the damage bonus of its thrusting counterpart. Remember that this is chiefly used for one-handed
 	sharpness_penalty = 3
 
+/datum/intent/spear/cut/oneh/pike
+	name = "weak cut"
+	desc = "An awkward one-handed slash with a pike too long to swing properly."
+	damfactor = 0.6
+
 /datum/intent/spear/cut/scythe
 	reach = 3
 	damfactor = 1
