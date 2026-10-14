@@ -332,7 +332,7 @@
 	unenchantable = TRUE
 	no_loot_taint = TRUE
 
-/obj/item/rogueweapon/mace/woodclub/militia // it literally just has an aura, and demolish intent
+/obj/item/rogueweapon/mace/woodclub/militia // it literally just has an aura, and demolish intent.
 	name = "bogbark club"
 	desc = "A primitive cudgel carved of a stout piece of treefall, from the deepest parts of the Terrorbog. An unmistakable aura of power surrounds it. This thing looks dangerously strong."
 	aura_color = "#00ff00"
