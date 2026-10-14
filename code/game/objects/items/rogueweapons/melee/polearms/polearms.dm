@@ -89,6 +89,8 @@
 	icon_state = "inlunge"
 	attack_verb = list("thrusts", "stabs", "lunges into")
 	sharpness_penalty = 1
+	effective_range = 2
+	effective_range_type = EFF_RANGE_EXACT
 
 /datum/intent/spear/bash
 	name = "bash"
@@ -284,6 +286,7 @@
 	blade_class = BCLASS_STAB
 	effective_range = null
 	effective_range_type = EFF_RANGE_NONE
+	reach = 1
 
 /datum/intent/mace/smash/polehammer
 	reach = 2
