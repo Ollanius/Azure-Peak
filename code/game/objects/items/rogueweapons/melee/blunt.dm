@@ -412,7 +412,7 @@
 // Non-lethal mace-striking (Made for cudgel specifically. Don't put this on everything. Yeah, I mean you.)
 /datum/intent/mace/strike/wallop
 	name = "wallop"
-	blade_class = BCLASS_TWIST	//I know, it's weird, but this lets you dislocate limbs and works fine w/ -100 pen factor of blunt weapons.
+	blade_class = BCLASS_TWIST	//I know, it's weird, but this lets you dislocate limbs and works fine w/ NONPEN factor of blunt weapons.
 	attack_verb = list("twamps", "thwacks", "wallops")
 	damfactor = 1.3		// High damage mod to give high chance of dislocation against unarmored targets.
 	intent_intdamage_factor = 0.4	// Purposefully bad at damaging armor. Specifically deals -60% integrity damage, irregardless of the previous intent's modifiers.
