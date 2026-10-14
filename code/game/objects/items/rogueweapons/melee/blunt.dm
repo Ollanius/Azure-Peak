@@ -61,7 +61,7 @@
 
 /datum/intent/mace/demolish
 	name = "break"
-	desc = "A deliberate strike that is much more effective at demolishing structures."
+	desc = "A deliberate structure-breaking blow. Deals triple the damage to structures."
 	icon_state = "incrush"
 	blade_class = BCLASS_SMASH
 	attack_verb = list("demolishes", "crushes", "wrecks")
@@ -73,7 +73,7 @@
 	clickcd = CLICK_CD_HEAVY
 	swingdelay = 10
 
-/datum/intent/mace/thrust
+/datum/intent/mace/rangedthrust
 	name = "thrust"
 	blade_class = BCLASS_STAB
 	attack_verb = list("thrusts")
@@ -336,7 +336,7 @@
 	name = "bogbark club"
 	desc = "A primitive cudgel carved of a stout piece of treefall, from the deepest parts of the Terrorbog. An unmistakable aura of power surrounds it. This thing looks dangerously strong."
 	aura_color = "#00ff00"
-	gripped_intents = list(/datum/intent/mace/strike/wood/, /datum/intent/mace/smash/wood, /datum/intent/effect/daze, /datum/intent/mace/demolish)
+	gripped_intents = list(/datum/intent/mace/strike/wood/, /datum/intent/mace/smash/wood, /datum/intent/effect/daze, /datum/intent/mace/lesserdemolish)
 	w_class = WEIGHT_CLASS_NORMAL // it's just a stick, can put it in your backpack
 
 /obj/item/rogueweapon/mace/woodclub
@@ -1308,7 +1308,7 @@
 	force = 13
 	force_wielded = 25
 	possible_item_intents = list(/datum/intent/mace/strike, /datum/intent/mace/bash/ranged)
-	gripped_intents = list(/datum/intent/mace/strike, /datum/intent/use, /datum/intent/mace/strike/dislocate, /datum/intent/mace/demolish)
+	gripped_intents = list(/datum/intent/mace/strike, /datum/intent/use, /datum/intent/mace/strike/dislocate, /datum/intent/mace/lesserdemolish)
 	minstr = 8
 	max_integrity = 350
 	w_class = WEIGHT_CLASS_BULKY
