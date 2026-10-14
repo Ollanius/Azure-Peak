@@ -70,9 +70,10 @@
 /datum/intent/sword/chop/ranged/zornhut
 	name = "ranged chop"
 	desc = "Leverage the full length of your sword to deliver a powerful, ranged swipe. Only effective at exactly two paces."
-	damfactor = 1.3
+	damfactor = 1.2
 	intent_intdamage_factor = 1.2
 	swingdelay = 0.5 SECONDS
+	reach = 2
 	effective_range = 2
 	effective_range_type = EFF_RANGE_EXACT
 	sharpness_penalty = 1
@@ -145,6 +146,7 @@
 	at exactly two paces, as all of the blade's force is concentrated into its tip."
 	clickcd = CLICK_CD_CHARGED
 	penfactor = PEN_MEDIUM
+	reach = 2
 	effective_range = 2
 	effective_range_type = EFF_RANGE_EXACT
 	swingdelay_type = SWINGDELAY_PENALTY

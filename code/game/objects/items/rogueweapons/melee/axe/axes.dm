@@ -532,7 +532,7 @@
 	force_wielded = 35
 	smeltresult = /obj/item/ingot/blacksteel
 	possible_item_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop, /datum/intent/axe/thrust, SPEAR_BASH)
-	gripped_intents = list(/datum/intent/axe/cut/long, /datum/intent/axe/chop/long, /datum/intent/axe/chop/heavy/lesser, /datum/intent/axe/sweep)
+	gripped_intents = list(/datum/intent/axe/cut/long, /datum/intent/axe/chop/long, /datum/intent/axe/thrust/ranged, /datum/intent/axe/sweep)
 	max_blade_int = 500
 	wdefense_wbonus = 4 //Increased defense when wielded.
 	special = /datum/special_intent/axe_swing //Weapon specials on a non-greatsword? How scandalous!

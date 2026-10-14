@@ -69,10 +69,6 @@
 	canparry = FALSE
 	swingdelay_type = SWINGDELAY_CANCEL
 
-/datum/intent/axe/chop/heavy/lesser
-	name = "lesser hack"
-	penfactor = PEN_HEAVY
-
 /datum/intent/axe/chop/scythe
 	reach = 2
 
