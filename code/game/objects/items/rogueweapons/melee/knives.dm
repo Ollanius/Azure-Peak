@@ -778,7 +778,6 @@
 	max_integrity = 200
 	wdefense = 9
 
-
 /obj/item/rogueweapon/huntingknife/idagger/steel/parrying/vaquero
 	name = "sail dagger"
 	desc = "An exceptionally protective parrying dagger popular in the Etruscan Isles, this dagger features a plain metal guard in the shape of a ship's sail."
