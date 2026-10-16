@@ -433,7 +433,7 @@
 
 /obj/item/rogueweapon/mace/cudgel/flanged
 	name = "flanged mace"
-	desc = "Chivalry. </br>A one-handed derivative of the mace, purpose-made to dazzle armored opponents. Quartered into four symmetrical ridges, its flanged macehead can comfortably carve maille-and-bone behind the safety of an accompying shield."
+	desc = "A one-handed derivative of the mace, purpose-made to dazzle armored opponents. Quartered into four symmetrical ridges, its flanged macehead can comfortably carve maille-and-bone behind the safety of an accompying shield."
 	force = 27 //+2 (1H) but -5 (2H), compared to the Steel Mace.
 	possible_item_intents = list(/datum/intent/mace/strike, /datum/intent/mace/strike/dislocate, /datum/intent/effect/daze, /datum/intent/mace/warhammer/stab)
 	gripped_intents = null //One-handed. Pseudo-sidegrade between the Mace and Warhammer, offering more damage and dislocations at the cost of no Picking or Smashing.
@@ -762,7 +762,7 @@
 /obj/item/rogueweapon/mace/steel/morningstar
 	name = "morning star"
 	icon_state = "morningstar"
-	desc = "Royalty. </br>An uncommon derivative of the mace, studded with spikes and seated upon a serpentine shaft. When raised aloft, the macehead mimics a stylized imitation of Astrata's glare; ergo, 'morning star'."
+	desc = "An uncommon derivative of the mace, studded with spikes and seated upon a serpentine shaft. When raised aloft, the macehead mimics a stylized imitation of Astrata's glare; ergo, 'morning star'."
 	wdefense = 5
 	secondary_skills = list(/datum/skill/combat/whipsflails = 0.8)
 
