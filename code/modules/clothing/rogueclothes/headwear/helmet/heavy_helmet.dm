@@ -912,8 +912,6 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/ordinatorhelm/ComponentInitialize()
 	AddComponent(/datum/component/adjustable_clothing, (HEAD|EARS|HAIR), (HIDEEARS|HIDEHAIR), null, 'sound/items/visor.ogg', null, UPD_HEAD)	//Standard helmet
-	AddComponent(/datum/component/armour_filtering/negative, TRAIT_HONORBOUND)
-	AddComponent(/datum/component/armour_filtering/negative, TRAIT_FENCERDEXTERITY)
 
 /obj/item/clothing/head/roguetown/helmet/heavy/ordinatorhelm/attackby(obj/item/W, mob/living/user, params)
 	..()
@@ -944,7 +942,7 @@
 /obj/item/clothing/head/roguetown/helmet/heavy/ordinatorhelm/update_icon()
 	cut_overlays()
 	if(get_detail_tag())
-		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[get_detail_state(icon_state)][detail_tag]"))
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
 		pic.appearance_flags = RESET_COLOR
 		if(get_detail_color())
 			pic.color = get_detail_color()
@@ -954,7 +952,7 @@
 	icon_state = "ordinatorhelmplume"
 	item_state = "ordinatorhelmplume"
 
-/obj/item/clothing/head/roguetown/helmet/heavy/ordinatorhelm/attackby(obj/item/W, mob/living/user, params)
+/obj/item/clothing/head/roguetown/helmet/heavy/ordinatorhelm/plume/attackby(obj/item/W, mob/living/user, params)
 	if(istype(W, /obj/item/natural/inqfeather))
 		return
 	..()
