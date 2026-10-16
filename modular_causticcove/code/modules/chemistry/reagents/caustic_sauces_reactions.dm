@@ -26,9 +26,9 @@
 	name = "Melted Sugar"
 	wildcard_requirements = list(/obj/item/reagent_containers/food/snacks/sugar = 1)
 	created_reagent = /datum/reagent/consumable/soup/melted_sugar
-	water_conversion = 6 //This will multiply the reagent requirements (5 water) by 6 to give 30 units of melted sugar output
+//	water_conversion = 6 //This will multiply the reagent requirements (5 water) by 6 to give 30 units of melted sugar output
 	reagent_requirements = list(
-		/datum/reagent/water = 5
+		/datum/reagent/water = STEW_WATER_REQUIRED
 	)
 
 /datum/chemical_reaction/mix_tomato_sauce //for fantasy italian cooking
