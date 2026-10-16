@@ -247,6 +247,7 @@
 	name = "shillelagh"
 	desc = "A particularly long and sturdy walking stick with a variety of uses. It's heavier at one end, making it a little unbalanced."
 	associated_skill = /datum/skill/combat/polearms
+	is_implement = FALSE
 
 /datum/intent/spear/polehammer
 	name = "polehammer's strike"
