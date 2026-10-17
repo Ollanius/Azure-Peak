@@ -46,6 +46,15 @@
 /obj/item/clothing/shoes/roguetown/grenzelhoft/loadout
 	armor = ARMOR_LOADOUT_CLOTHING
 
+/obj/item/clothing/suit/roguetown/armor/brigandine/heavy/triumph
+	name = "brigandine with plate"
+	desc = "A brigandine cuirass covered with an additional layer of plate armor. </br><i>'Henry's \
+	come to see us!'</i>"
+	icon_state = "heavybrig"
+	icon = 'icons/clothing/donor_clothes.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/donor_clothes.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
+
 //Eastern
 
 /datum/loadout_item/mentorhat
