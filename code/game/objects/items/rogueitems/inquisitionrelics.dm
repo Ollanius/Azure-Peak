@@ -10,7 +10,7 @@
 
 /obj/item/roguekey/psydonkey
 	icon_state = "birdkey"
-	name = "Reliquary Key"
+	name = "reliquary key"
 	desc = "The single use key with which to unleash woe. Choose wisely."
 
 /obj/structure/reliquarybox/attackby(obj/item/W, mob/user, params)
