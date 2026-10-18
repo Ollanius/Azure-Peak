@@ -592,7 +592,7 @@
 	light_color = "#db892b"
 	var/is_loaded = FALSE
 	var/list/hay_types = list(/obj/structure/fluff/nest, /obj/structure/composter, /obj/structure/flora/roguegrass, /obj/item/reagent_containers/food/snacks/grown/wheat)
-	secondary_skills = list(/datum/skill/labor/farming = 0.8)
+	secondary_skills = list(/datum/skill/labor/farming = 0.6)
 
 /obj/item/rogueweapon/spear/militia/ComponentInitialize()
 	. = ..()
@@ -890,7 +890,6 @@
 	wbalance = WBALANCE_HEAVY
 
 /obj/item/rogueweapon/handclaw
-	slot_flags = ITEM_SLOT_HIP
 	name = "iron hound claws"
 	desc = "A pair of heavily curved claws, styled after beasts of the wilds for rending bare flesh, \
 			A show of the continual worship and veneration of beasts of strength in Gronn."
@@ -900,6 +899,7 @@
 	force = 25
 	possible_item_intents = list(/datum/intent/claw/cut, /datum/intent/claw/chop)
 	wbalance = WBALANCE_NORMAL
+	slot_flags = ITEM_SLOT_HIP
 	max_blade_int = 150
 	max_integrity = 200
 	gripsprite = FALSE
@@ -1129,6 +1129,3 @@
 /obj/item/rogueweapon/spear/keep_standard/Destroy()
 	GLOB.lordcolor -= src
 	return ..()
-
-/obj/item/rogueweapon/knuckledusters
-//This is a temporary load-bearing thing, in order to prevent more file conflicts (without having to add a bunch of unrelated changes. Remove if-or-after merged.)
