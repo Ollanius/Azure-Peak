@@ -1,4 +1,4 @@
-// Reliquary Box and key - The Box Which contains these
+// Reliquary Key + Box - Precursor to the Marquette and Absolver, allowing for the selection of a single relic.
 /obj/structure/reliquarybox
 	name = "otavan reliquary"
 	desc = "A foreboding red chest with a intricate lock design. It seems to only fit a very specific key. Choose wisely."
@@ -17,10 +17,10 @@
 	if(ishuman(user))
 		if(istype(W, /obj/item/roguekey/psydonkey))
 			if(opened)
-				to_chat(user, span_info("The reliquary box has already been opened.."))
+				to_chat(user, span_info("The reliquary box has already been opened."))
 				return
 			qdel(W)
-			to_chat(user, span_info("The reliquary lock takes my key as it opens, I take a moment to ponder what power was delivered to us.."))
+			to_chat(user, span_info("The reliquary lock takes my key as it opens. I take a moment to ponder what power was delivered to us.."))
 			playsound(loc, 'sound/foley/doors/lock.ogg', 60)
 			to_chat(user,)
 			var/relics = list("Melancholic Crankbox - Antimagic", "Daybreak - Silver Whip", "Stigmata - Silver Halberd", "Apocrypha - Silver Greatsword", "Golgatha - SYON Shard Censer")
@@ -44,8 +44,6 @@
 			realchest.PopulateContents()
 			choice = new choice(realchest)
 			qdel(src)
-
-
 
 // Soul Churner - Music box which applies magic resistance to Inquisition members, greatly mood debuffs everyone not a Psydon worshipper.
 /obj/item/psydonmusicbox
