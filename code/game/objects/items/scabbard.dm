@@ -706,7 +706,6 @@
 /obj/item/rogueweapon/scabbard/sheath/courtphysician/hand/ComponentInitialize()
 	AddComponent(/datum/component/holster/handstaff, valid_blade, null, null, sheathe_time)
 
-
 ///////////////////////
 //	GREATWEP. STRAPS //
 ///////////////////////
