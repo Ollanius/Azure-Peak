@@ -13,7 +13,6 @@
 	thrown_bclass = BCLASS_STAB
 	possible_item_intents = list(/datum/intent/use, /datum/intent/dagger/thrust/cutlery)
 	swingsound = list('sound/combat/wooshes/bladed/wooshsmall (1).ogg','sound/combat/wooshes/bladed/wooshsmall (2).ogg','sound/combat/wooshes/bladed/wooshsmall (3).ogg')
-	secondary_skills = list(/datum/skill/craft/cooking = 0.8)
 
 /obj/item/kitchen/fork/get_mechanics_examine(mob/user)
 	. = ..()
@@ -21,8 +20,12 @@
 	. += span_info("Nobler appetites prefer utensils over simply eating and drinking with one's bare hands.")
 
 /datum/intent/dagger/thrust/cutlery
+	name = "shallow thrust"
 	penfactor = PEN_LIGHT
+	icon_state = "ingouge"
 	attack_verb = list("thrusts","gouges")
+
+//
 
 /obj/item/kitchen/fork/aalloy
 	name = "decrepit fork"
