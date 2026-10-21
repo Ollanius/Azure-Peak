@@ -1044,7 +1044,7 @@
 			"sturn" = 34,
 			"wturn" = -34,
 			"eturn" = 34,
-			"nflip" = 0,
+			"nflip" = 8,
 			"sflip" = 0,
 			"wflip" = 8,
 			"eflip" = 0,

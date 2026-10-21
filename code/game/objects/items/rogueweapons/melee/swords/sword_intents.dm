@@ -46,14 +46,16 @@
 
 /datum/intent/sword/chop/exe
 	name = "decapitating chop"
-	desc = "Naturally has a higher chance to inflict decapitations on a successful critical hit to the neck."
+	desc = "Leverage the weight of your Executioner's Sword to cleave straight through cartilage. Uniquely capable of decapitating a target without \
+	needing to previously inflict a 'neckblossoming' critical hit."
 	penfactor = PEN_MEDIUM
 	swingdelay = 6
 	damfactor = 1.5
 
 /datum/intent/sword/chop/heavy/exe
-	name = "decapitating swing"
-	desc = "Naturally has a higher chance to inflict decapitations on a successful critical hit to the neck."
+	name = "decapitating strike"
+	desc = "Leverage the weight of your Executioner's Sword to cleave straight through cartilage. Uniquely capable of decapitating a target without \
+	needing to previously inflict a 'neckblossoming' critical hit."
 	icon_state = "inhack"
 	blade_class = BCLASS_CHOP
 	damfactor = 1.3
@@ -63,6 +65,7 @@
 	swingdelay_type = SWINGDELAY_CANCEL
 	canparry = FALSE
 	candodge = FALSE
+	sharpness_penalty = 2
 
 /datum/intent/sword/chop/ranged
 	reach = 2
@@ -86,12 +89,12 @@
 	penfactor = PEN_HEAVY
 	damfactor = 1.5
 	intent_intdamage_factor = 1.2
-	swingdelay = 1.1 SECONDS
+	swingdelay = 1.3 SECONDS
 	clickcd = CLICK_CD_HEAVY
 	swingdelay_type = SWINGDELAY_CANCEL
 	canparry = FALSE
 	candodge = FALSE
-	sharpness_penalty = 1
+	sharpness_penalty = 2
 
 /datum/intent/sword/thrust
 	name = "stab"
