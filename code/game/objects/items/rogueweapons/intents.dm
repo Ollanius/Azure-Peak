@@ -1069,8 +1069,4 @@
 
 /datum/intent/effect/daze/ranged
 	name = "ranged dazing strike"
-	desc = "A heavy strike that causes temporary disorientation, but only when successfully landed on the head. The slower follow-through makes it \
-	harder to complete without risking an interruption. Only effective at exactly two paces."
 	reach = 2
-	effective_range = 2
-	effective_range_type = EFF_RANGE_EXACT

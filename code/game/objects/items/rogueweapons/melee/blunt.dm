@@ -77,7 +77,7 @@
 	clickcd = CLICK_CD_HEAVY
 	swingdelay = 10
 
-/datum/intent/mace/rangedthrust
+/datum/intent/mace/thrust
 	name = "thrust"
 	blade_class = BCLASS_STAB
 	attack_verb = list("thrusts")
