@@ -741,7 +741,7 @@
 	grip_intents = list(
 		/datum/intent/axe/cut,
 		/datum/intent/axe/chop,
-		/datum/intent/axe/chop/heavy,
+		/datum/intent/axe/chop/heavy/hochhalt,
 		/datum/intent/axe/thrust
 	)
 	onmobprop_overrides = list(

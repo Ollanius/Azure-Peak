@@ -68,6 +68,10 @@
 	canparry = FALSE
 	swingdelay_type = SWINGDELAY_CANCEL
 
+/datum/intent/axe/chop/heavy/hochhalt
+	name = "hack with tightened grip"
+	penfactor = PEN_HEAVY
+
 /datum/intent/axe/chop/scythe
 	reach = 2
 
