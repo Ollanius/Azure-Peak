@@ -164,7 +164,10 @@
 	desc = "A sweep that cuts through targets to the front."
 
 /datum/intent/spear/cut/glaive/sweep/halbschilt
+	name = "defensive sweeping cut"
 	sharpness_penalty = 1
+	damfactor = 1.1
+	reach = 1
 
 /datum/intent/spear/cut/short
 	reach = 1

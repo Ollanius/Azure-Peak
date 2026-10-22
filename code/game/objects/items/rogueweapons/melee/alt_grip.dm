@@ -646,46 +646,6 @@
 		"wlength" = WLENGTH_LONG
 	)
 
-/datum/alt_grip/halfsword/special
-	name = "montante" //A unique alternative to the 'lesser' stances specifically given to the Avantyne Kriegmesser and Divine Longsword.
-	skill_req = SKILL_LEVEL_EXPERT //Befitting the wielders, it's a slew of AOE intents - at the cost of reduced defense and yellow-intentedness.
-	grip_intents = list( //Penetration doesn't exceed MEDIUM AP, and damage multipliers don't exceed 1x. They get high-enough damage as-is.
-		/datum/intent/sword/cut/special,
-		/datum/intent/sword/cut/special/quick,
-		/datum/intent/sword/thrust/long/deep/special
-	)
-	onmobprop_overrides = list(
-		"altgrip" = list(
-			"shrink" = 0.65,
-			"sx" = 5,
-			"sy" = -7,
-			"nx" = -7,
-			"ny" = 1,
-			"wx" = -9,
-			"wy" = 2,
-			"ex" = 10,
-			"ey" = 2,
-			"northabove" = 0,
-			"southabove" = 1,
-			"eastabove" = 1,
-			"westabove" = 0,
-			"nturn" = 5,
-			"sturn" = -179,
-			"wturn" = -170,
-			"eturn" = -10,
-			"nflip" = 8,
-			"sflip" = 8,
-			"wflip" = 1,
-			"eflip" = 0,
-		),
-	)
-	additive_var_overrides = list(
-		"wdefense" = -2
-	)
-	var_overrides = list(
-		"wlength" = WLENGTH_LONG
-	)
-
 //Broadsword-specific alternative grips.
 /datum/alt_grip/broadsword
 	two_handed = TRUE
@@ -773,7 +733,7 @@
 		"wlength" = WLENGTH_LONG
 	)
 	additive_var_overrides = list(
-		"wdefense" = 2 //More defense to account for the closer-gripped stance.
+		"wdefense" = 1
 	)
 
 /datum/alt_grip/poleaxe/vomtag
@@ -1009,7 +969,7 @@
 		"wlength" = WLENGTH_LONG
 	)
 	additive_var_overrides = list(
-		"wdefense" = 2
+		"wdefense" = 1
 	)
 
 //Spear-specific alternative grips.
@@ -1133,4 +1093,48 @@
 			"wflip" = 8,
 			"eflip" = 0,
 		),
+	)
+
+//Special grips, for weapons too unique (or otherwise too powerful) to settle with less.
+/datum/alt_grip/special
+	two_handed = TRUE
+
+/datum/alt_grip/special/montante
+	name = "montante" //A unique alternative to the 'lesser' stances specifically given to the Avantyne Kriegmesser and Divine Longsword.
+	skill_req = SKILL_LEVEL_EXPERT //Befitting the wielders, it's a slew of AOE intents - at the cost of reduced defense and yellow-intentedness.
+	grip_intents = list( //Penetration doesn't exceed MEDIUM AP, and damage multipliers don't exceed 1x. They get high-enough damage as-is.
+		/datum/intent/sword/cut/special,
+		/datum/intent/sword/cut/special/quick,
+		/datum/intent/sword/thrust/long/deep/special
+	)
+	onmobprop_overrides = list(
+		"altgrip" = list(
+			"shrink" = 0.65,
+			"sx" = 5,
+			"sy" = -7,
+			"nx" = -7,
+			"ny" = 1,
+			"wx" = -9,
+			"wy" = 2,
+			"ex" = 10,
+			"ey" = 2,
+			"northabove" = 0,
+			"southabove" = 1,
+			"eastabove" = 1,
+			"westabove" = 0,
+			"nturn" = 5,
+			"sturn" = -179,
+			"wturn" = -170,
+			"eturn" = -10,
+			"nflip" = 8,
+			"sflip" = 8,
+			"wflip" = 1,
+			"eflip" = 0,
+		),
+	)
+	additive_var_overrides = list(
+		"wdefense" = -2
+	)
+	var_overrides = list(
+		"wlength" = WLENGTH_LONG
 	)

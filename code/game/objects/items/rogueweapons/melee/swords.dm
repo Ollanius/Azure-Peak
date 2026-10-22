@@ -605,7 +605,7 @@
 	unequip_delay_self = 0
 	wdefense_wbonus = 7
 	smeltresult = /obj/item/ingot/component/zizo
-	alt_grips = list(/datum/alt_grip/halfsword/special)
+	alt_grips = list(/datum/alt_grip/special/montante)
 
 /obj/item/rogueweapon/sword/long/zizo/Initialize(mapload)
 	. = ..()
@@ -971,6 +971,8 @@
 	blow to crack the deadite's leg in twain; and a heartbeat later, another to splatter the soil with bile and teeth."
 	icon_state = "silverbroadsword"
 	sheathe_icon = "silverlongsword"
+	possible_item_intents = list(/datum/intent/sword/cut/rend, /datum/intent/sword/chop/heavy, /datum/intent/sword/thrust/heavy, /datum/intent/sword/strike)
+	gripped_intents = list(/datum/intent/sword/cut/rend, /datum/intent/sword/chop/heavy, /datum/intent/sword/thrust/heavy, /datum/intent/sword/strike)
 	smeltresult = /obj/item/ingot/silver
 	is_silver = TRUE
 
@@ -992,7 +994,7 @@
 	wdefense = 6
 	possible_item_intents = list(/datum/intent/sword/cut, /datum/intent/sword/chop/heavy, /datum/intent/sword/thrust/long, /datum/intent/rend/krieg)
 	gripped_intents = list(/datum/intent/sword/cut/zwei, /datum/intent/sword/chop/heavy, /datum/intent/sword/thrust/estoc/lunge, /datum/intent/sword/thrust/estoc)
-	alt_grips = list(/datum/alt_grip/greatsword/zornhut, /datum/alt_grip/halfsword/special)
+	alt_grips = list(/datum/alt_grip/greatsword/zornhut, /datum/alt_grip/special/montante)
 	swingsound = BLADEWOOSH_HUGE
 	wlength = WLENGTH_GREAT
 	w_class = WEIGHT_CLASS_BULKY

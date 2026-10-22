@@ -214,7 +214,7 @@
 	icon_state = "psygsword"
 	possible_item_intents = list(/datum/intent/sword/cut/zwei, /datum/intent/sword/thrust/exe, /datum/intent/sword/chop/heavy, /datum/intent/sword/strike)
 	gripped_intents = list(/datum/intent/sword/cut/zwei, /datum/intent/sword/thrust/heavy, /datum/intent/sword/chop/cleave, /datum/intent/rend)
-	alt_grips = list(/datum/alt_grip/greatsword/scharfrichter, /datum/alt_grip/greatsword/zornhut, /datum/alt_grip/halfsword/special)
+	alt_grips = list(/datum/alt_grip/greatsword/scharfrichter, /datum/alt_grip/greatsword/zornhut, /datum/alt_grip/special/montante)
 	minstr = 13
 	minstr_req = TRUE
 	wdefense = 8

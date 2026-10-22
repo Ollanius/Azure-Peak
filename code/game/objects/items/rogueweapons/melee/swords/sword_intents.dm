@@ -124,7 +124,6 @@
 	damfactor = 1.3
 	swingdelay = 0.9 SECONDS
 	swingdelay_type = SWINGDELAY_PENALTY
-	hitsound = list('sound/combat/hits/bladed/genthrust (1).ogg', 'sound/combat/hits/bladed/genthrust (2).ogg')
 
 /datum/intent/sword/thrust/long
 	penfactor = PEN_LIGHT // Longsword thrust — same pen tier, higher base damage
@@ -158,7 +157,7 @@
 /datum/intent/sword/thrust/long/deep/halfsword/ochs
 	name = "halfsword lunge"
 	icon_state = "inlunge"
-	desc = "A forceful thrust that relies on power, instead of precision, to punch through maille. While this requires an offensive stance \
+	desc = "A forceful, close-ranged thrust that bypasses maille through brute force. While this requires an offensive stance \
 	that's easy to interrupt, your strikes land much faster in exchange."
 	penfactor = PEN_HEAVY
 	clickcd = CLICK_CD_CHARGED
@@ -557,7 +556,7 @@
 	name = "defensive jab"
 	desc = "Hike your grip up on the greatsword in order to deliver a quicker jab. The defensive posture allows you to \
 	better parry incoming attacks, at the cost of lesser damage."
-	penfactor = PEN_LIGHT
+	penfactor = PEN_NONE
 	damfactor = 0.8
 	intent_intdamage_factor = 0.8
 	clickcd = CLICK_CD_QUICK //Important note; 'QUICK' = Quick, 'FAST' = Very Quick.
@@ -754,9 +753,9 @@
 	attack_verb = list("grazes","sweeps across")
 	hitsound = list('sound/combat/hits/bladed/genslash (1).ogg', 'sound/combat/hits/bladed/genslash (2).ogg', 'sound/combat/hits/bladed/genslash (3).ogg')
 	damfactor = 1
-	penfactor = PEN_LIGHT
+	penfactor = PEN_NONE
 	clickcd = CLICK_CD_MASSIVE
-	swingdelay = 0.5 SECONDS
+	swingdelay = 1.1 SECONDS
 	swingdelay_type = SWINGDELAY_PENALTY
 	cleave = /datum/cleave_pattern/frontal_arc
 	sharpness_penalty = 1
@@ -780,5 +779,5 @@
 	swingdelay = 0.5 SECONDS
 	damfactor = 1
 	swingdelay_type = SWINGDELAY_PENALTY
-	cleave = /datum/cleave_pattern/horizontal_sweep
+	cleave = /datum/cleave_pattern/forward_cleave
 	sharpness_penalty = 1
