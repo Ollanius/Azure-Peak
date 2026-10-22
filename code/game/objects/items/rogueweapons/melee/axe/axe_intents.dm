@@ -105,7 +105,7 @@
 	icon_state = "inslash"
 	penfactor = PEN_HEAVY
 	clickcd = CLICK_CD_HEAVY
-	swingdelay = 1.1 SECONDS
+	swingdelay = 0.9 SECONDS
 	damfactor = 0.9
 	reach = 2
 	effective_range = 2
