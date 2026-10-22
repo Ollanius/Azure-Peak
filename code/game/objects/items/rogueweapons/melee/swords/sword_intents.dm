@@ -637,6 +637,7 @@
 /datum/intent/sword/thrust/exe
 	swingdelay = 4	//Slight delay to stab; big and heavy.
 	penfactor = PEN_NONE //Flat tip? I don't know, man. This intent is won't penetrate anything but it damages armor more.
+	blade_class = BCLASS_BLUNT
 	intent_intdamage_factor = 1.3 //This is basically like getting hit by a mace.
 
 /datum/intent/sword/cut/exe/cleave
@@ -760,6 +761,7 @@
 	cleave = /datum/cleave_pattern/frontal_arc //A harsher version of the Greataxe's sweeping cut.
 	sharpness_penalty = 1
 	intent_intdamage_factor = 0.8
+	warnie = "mobwarning"
 
 /datum/intent/sword/cut/special/quick
 	name = "light sweeping blow"
