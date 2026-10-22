@@ -161,8 +161,9 @@
 	chargedrain = 3 //Discourages the "pre-charging your flail in a safe position" method of cheese. Get up close and personal!
 	icon_state = "incrush"
 	attack_verb = list("smashes through")
-	chargetime = 1.5 SECONDS //The main meat of the intent. Longest charge time and heaviest stamina cost.
-	swingdelay = 0.5 SECONDS //Much shorter compared to the Axe's 1.3 SECOND delay (with HACK), in turn. Active parries (via DEFEND) should be much harder to land.
+	damfactor = 1.3
+	chargetime = 1.6 SECONDS //The main meat of the intent. Longest charge time and heaviest stamina cost.
+	swingdelay = 0.6 SECONDS //Much shorter compared to the Axe's 1.3 SECOND delay (with HACK), in turn. Active parries (via DEFEND) should be much harder to land.
 	candodge = FALSE
 	canparry = FALSE
 	swingdelay_type = SWINGDELAY_CANCEL

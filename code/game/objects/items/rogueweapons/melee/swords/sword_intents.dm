@@ -755,10 +755,11 @@
 	damfactor = 1
 	penfactor = PEN_NONE
 	clickcd = CLICK_CD_MASSIVE
-	swingdelay = 1.1 SECONDS
+	swingdelay = 0.8 SECONDS
 	swingdelay_type = SWINGDELAY_PENALTY
-	cleave = /datum/cleave_pattern/frontal_arc
+	cleave = /datum/cleave_pattern/frontal_arc //A harsher version of the Greataxe's sweeping cut.
 	sharpness_penalty = 1
+	intent_intdamage_factor = 0.8
 
 /datum/intent/sword/cut/special/quick
 	name = "light sweeping blow"
