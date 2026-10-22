@@ -105,8 +105,8 @@
 	icon_state = "inslash"
 	penfactor = PEN_HEAVY
 	clickcd = CLICK_CD_HEAVY
-	swingdelay = 0.3 SECONDS //Lower than regular chops, in order to account for the Sweetspot mechanic.
-	damfactor = 1.1
+	swingdelay = 1.1 SECONDS
+	damfactor = 0.9
 	reach = 2
 	effective_range = 2
 	effective_range_type = EFF_RANGE_EXACT
