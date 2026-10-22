@@ -149,6 +149,7 @@
 	at exactly two paces, as all of the blade's force is concentrated into its tip."
 	clickcd = CLICK_CD_CHARGED
 	penfactor = PEN_MEDIUM
+	damfactor = 0.8
 	reach = 2
 	effective_range = 2
 	effective_range_type = EFF_RANGE_EXACT
@@ -553,13 +554,13 @@
 	reach = 2
 
 /datum/intent/sword/thrust/zwei/halfsword
-	name = "defensive ranged jab"
-	desc = "Hike your grip up on the greatsword in order to deliver a quicker, ranged jab. The defensive posture allows you to \
+	name = "defensive jab"
+	desc = "Hike your grip up on the greatsword in order to deliver a quicker jab. The defensive posture allows you to \
 	better parry incoming attacks, at the cost of lesser damage."
-	reach = 2
+	penfactor = PEN_LIGHT
 	damfactor = 0.8
 	intent_intdamage_factor = 0.8
-	clickcd = CLICK_CD_FAST
+	clickcd = CLICK_CD_QUICK //Important note; 'QUICK' = Quick, 'FAST' = Very Quick.
 	icon_state = "injab"
 	attack_verb = list("skewers", "impales")
 
