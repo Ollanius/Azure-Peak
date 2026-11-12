@@ -1,4 +1,4 @@
-//sword objs ฅ^•ﻌ•^ฅ
+//sword objs ฅ^•ﻌ•^ฅ a
 /obj/item/rogueweapon/sword
 	name = "arming sword"
 	desc = "A long steel blade attached to a hilt, separated by a crossguard. The arming sword has been Psydonia's implement of war by excellence for generations."
